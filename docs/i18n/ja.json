@@ -422,5 +422,7 @@
  "see_it_in_90_seconds_8e6416": "90秒で紹介",
  "a_made_up_team_standup_5d541f": "架空のチームのスタンドアップを最初から最後まで：通話前のブリーフィング、通話中のヒントとリマインダー、通話後の要約・コーチング・Ask。",
  "sample_names_companies_and_tickets_69d2ae": "サンプルです。名前・会社・チケットは架空のものです。",
- "undertone_demo_video_e14940": "Undertone デモ動画"
+ "undertone_demo_video_e14940": "Undertone デモ動画",
+ "if_you_leave_count_me_12e86d": "「ユーザーとしてカウントする」をオンのままにした場合：Undertone の初回起動時に 1 回、その後は週に 1 回まで匿名の通知を送ります。内容はランダムな ID、アプリのバージョン、macOS のバージョン、言語だけです。セットアップまたは設定でオフにすると、送信済みの内容は削除されます。",
+ "download_dmg_v1_13_1_3cdffa": ".dmgをダウンロード <span class=\"ver\">v1.13.1</span>"
 }

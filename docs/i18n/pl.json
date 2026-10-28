@@ -422,5 +422,7 @@
  "see_it_in_90_seconds_8e6416": "Zobacz w 90 sekund",
  "a_made_up_team_standup_5d541f": "Zmyślony zespołowy standup od początku do końca: briefing przed rozmową, podpowiedzi i przypomnienia w trakcie, a potem podsumowanie, coaching i Ask.",
  "sample_names_companies_and_tickets_69d2ae": "Przykład. Nazwiska, firmy i zgłoszenia są zmyślone.",
- "undertone_demo_video_e14940": "Film demonstracyjny Undertone"
+ "undertone_demo_video_e14940": "Film demonstracyjny Undertone",
+ "if_you_leave_count_me_12e86d": "Jeśli zostawisz włączone „Licz mnie jako użytkownika”: jeden anonimowy sygnał przy pierwszym otwarciu Undertone i najwyżej jeden tygodniowo, z losowym ID, wersją aplikacji, wersją macOS i językiem. Wyłączenie w konfiguracji lub Ustawieniach usuwa to, co zostało wysłane.",
+ "download_dmg_v1_13_1_3cdffa": "Pobierz .dmg <span class=\"ver\">v1.13.1</span>"
 }

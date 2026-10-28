@@ -421,5 +421,7 @@
  "see_it_in_90_seconds_8e6416": "Míralo en 90 segundos",
  "a_made_up_team_standup_5d541f": "Una reunión diaria inventada, de principio a fin: el resumen previo a la llamada, pistas y recordatorios durante ella, y el resumen, el coaching y Ask después.",
  "sample_names_companies_and_tickets_69d2ae": "Ejemplo. Los nombres, empresas y tickets son inventados.",
- "undertone_demo_video_e14940": "Video de demostración de Undertone"
+ "undertone_demo_video_e14940": "Video de demostración de Undertone",
+ "if_you_leave_count_me_12e86d": "Si dejas activado «Cuéntame como usuario»: un aviso anónimo al abrir Undertone por primera vez y como mucho uno a la semana, con un ID aleatorio, la versión de la app, la versión de macOS y el idioma. Al desactivarlo en la configuración inicial o en Ajustes se borra lo enviado.",
+ "download_dmg_v1_13_1_3cdffa": "Descargar .dmg <span class=\"ver\">v1.13.1</span>"
 }

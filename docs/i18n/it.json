@@ -421,5 +421,7 @@
  "see_it_in_90_seconds_8e6416": "Guardalo in 90 secondi",
  "a_made_up_team_standup_5d541f": "Uno standup inventato, dall’inizio alla fine: il briefing prima della chiamata, suggerimenti e promemoria durante, poi riepilogo, coaching e Ask.",
  "sample_names_companies_and_tickets_69d2ae": "Esempio. Nomi, aziende e ticket sono inventati.",
- "undertone_demo_video_e14940": "Video dimostrativo di Undertone"
+ "undertone_demo_video_e14940": "Video dimostrativo di Undertone",
+ "if_you_leave_count_me_12e86d": "Se lasci attivo «Contami come utente»: un ping anonimo alla prima apertura di Undertone e al massimo uno a settimana, con un ID casuale, la versione dell’app, la versione di macOS e la lingua. Disattivarlo nella configurazione o nelle Impostazioni elimina ciò che è stato inviato.",
+ "download_dmg_v1_13_1_3cdffa": "Scarica il .dmg <span class=\"ver\">v1.13.1</span>"
 }

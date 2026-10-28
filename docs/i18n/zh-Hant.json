@@ -421,5 +421,7 @@
  "see_it_in_90_seconds_8e6416": "90 秒了解",
  "a_made_up_team_standup_5d541f": "一場虛構的團隊站立會議，從頭到尾：通話前的簡報，通話中的提示與提醒，通話後的回顧、輔導與 Ask。",
  "sample_names_companies_and_tickets_69d2ae": "範例。姓名、公司與工單皆為虛構。",
- "undertone_demo_video_e14940": "Undertone 示範影片"
+ "undertone_demo_video_e14940": "Undertone 示範影片",
+ "if_you_leave_count_me_12e86d": "如果你保持「把我算作使用者」開啟：第一次打開 Undertone 時傳送一次匿名訊號，之後每週最多一次，只包含隨機 ID、App 版本、macOS 版本和語言。在設定流程或設定中關閉後，會刪除已傳送的內容。",
+ "download_dmg_v1_13_1_3cdffa": "下載 .dmg <span class=\"ver\">v1.13.1</span>"
 }
