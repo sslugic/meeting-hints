@@ -481,6 +481,8 @@
   .start h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.1; }
   .start p { color: var(--text-2); margin-top: 12px; }
   .film { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border-2); background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+  .hero-film { max-width: 1120px; margin: 44px auto 0; }
+  .hero-note { text-align: center; padding: 12px 0 0; }
   .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
   .askmock { max-width: 640px; margin: 0 auto; padding: 40px 36px 30px; border-radius: var(--r-lg); border: 1px solid var(--border); background: var(--surface-2); }
   .askmock h3 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; font-size: 30px; letter-spacing: -.01em; margin: 0 0 22px; }
@@ -622,151 +624,18 @@
       <h1>समझें कि सब क्या कह रहे हैं, और आगे क्या कहना है।</h1>
       <p class="sub">Undertone आपकी कॉल साथ में सुनता है। कोड नाम और संक्षिप्त शब्द आते ही समझाता है, आपसे सवाल पूछे जाने पर ज़रूरी तथ्य सामने रखता है, और कॉल के बाद सारांश, आपके काम और अगली कॉल की ब्रीफ़िंग देता है। सब आपकी टीम के अपने Slack, Notion और Jira से, आपके Mac पर ट्रांसक्राइब होकर।</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>.dmg डाउनलोड करें <span class="ver">v1.14.0</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>.dmg डाउनलोड करें <span class="ver">v1.14.1</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>रिलीज़ और इश्यूज़</a>
       </div>
       <p class="fine">बीटा के दौरान मुफ़्त · Apple सिलिकॉन पर macOS 26 या बाद का वर्शन</p>
     </div>
 
-    <div class="stage" role="region" aria-roledescription="कैरोसेल" aria-label="Undertone, पाँच सैंपल व्यू में" data-desk="call">
-      <div class="menubar" aria-hidden="true">
-        <div class="l">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>
-          <b class="keep" id="appname">zoom.us</b><span>फ़ाइल</span><span>देखें</span><span>विंडो</span>
-        </div>
-        <div class="r">
-          <span class="bulb"><svg viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><rect x="1.50" y="5.45" width="2.0" height="4.8" rx="1"/><rect x="1.50" y="12" width="2.0" height="2.8" rx="1"/><rect x="4.75" y="3.15" width="2.0" height="7.1" rx="1"/><rect x="4.75" y="12" width="2.0" height="4.2" rx="1"/><rect x="8.00" y="1.25" width="2.0" height="9.0" rx="1"/><rect x="8.00" y="12" width="2.0" height="5.0" rx="1"/><rect x="11.25" y="3.65" width="2.0" height="6.6" rx="1"/><rect x="11.25" y="12" width="2.0" height="3.7" rx="1"/><rect x="14.50" y="5.85" width="2.0" height="4.4" rx="1"/><rect x="14.50" y="12" width="2.0" height="2.5" rx="1"/><rect x="0.75" y="10.75" width="16.5" height="0.75" rx=".375"/></svg></span>
-          <svg class="opt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg>
-          <span class="opt">मंगल 12:04</span>
-        </div>
-      </div>
-      <div class="desk">
-        <div class="call" aria-hidden="true" translate="no">
-          <div class="tile talk"><div class="av" style="background:#4F46E5">M</div><span class="nm">Maya</span></div>
-          <div class="tile"><div class="av" style="background:#3730A3">D</div><span class="nm">Dev</span></div>
-          <div class="tile"><div class="av" style="background:#9D174D">S</div><span class="nm">Sam</span></div>
-          <div class="tile"><div class="av" style="background:#27272A">Y</div><span class="nm">You</span></div>
-        </div>
-        <div class="wallglow"></div>
-        <div class="slide on" role="group" aria-roledescription="स्लाइड" aria-label="5 में से 1: कॉल के दौरान लाइव हिंट्स" data-app="zoom.us" data-desk="call">
-            <div class="hud lift">
-            <div class="hud-head">
-              <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-              <div><div class="hud-title">प्लेटफ़ॉर्म सिंक</div><div class="hud-meta">12:04 · 31 टर्म लोड हुए</div></div>
-              <span class="hud-live"><span class="dot" aria-hidden="true"></span>सुन रहा है</span>
-            </div>
-            <div class="hud-body">
-              <div class="tr-col">
-                <div class="col-label">ट्रांसक्रिप्ट</div>
-                <p class="line"><span class="who"><b>Maya</b> · 12:02</span>Infra टीम चाहती है कि फ़्रीज़ से पहले <span class="term">Keystone</span> पूरा हो जाए।</p>
-                <p class="line"><span class="who"><b>Dev</b> · 12:03</span>क्या RFC में रोलबैक प्लान शामिल है?</p>
-                <p class="line to-you"><span class="who"><b>Sam</b> · 12:04 · <em>आपसे</em></span>क्या आप Keystone पर एक छोटा-सा स्टेटस दे सकते हैं?</p>
-              </div>
-              <div class="ctx-col">
-                <div class="col-label">संदर्भ</div>
-                <div class="ctx"><div class="ct">प्रोजेक्ट Keystone <small>संभवतः नया</small></div><p>Q3 में नए बिलिंग स्टैक पर माइग्रेशन, Infra टीम के नेतृत्व में।</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · RFC-402</span></div>
-                <div class="ctx answer"><div class="ct">आपके लिए संदर्भ <small>Sam ने पूछा</small></div><p>बिलिंग राइट्स पिछले हफ़्ते शिफ़्ट हो गए। रीड कटओवर 14 तारीख़ को तय है।</p><span class="src"><img src="../assets/logos/jira.png" alt="" width="13" height="13">Jira · INFRA-311</span></div>
-              </div>
-            </div>
-            <p class="sample">सैंपल मीटिंग। नाम, प्रोजेक्ट और टिकट काल्पनिक हैं।</p>
-          </div>
-        </div>
-        <div class="slide" role="group" aria-roledescription="स्लाइड" aria-label="5 में से 2: आपसे सवाल पूछे जाने पर सामने आया संदर्भ" data-app="zoom.us" data-desk="call">
-          <div class="livepanel lift">
-            <div class="hud-head"><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><div><div class="hud-title">प्लेटफ़ॉर्म सिंक</div><div class="hud-meta">12:06 · सुन रहा है</div></div><span class="hud-live"><span class="dot" aria-hidden="true"></span>लाइव</span></div>
-            <div class="heard">“Sam, Keystone कटओवर कहाँ तक पहुँचा?”</div>
-            <div class="asked">
-              <div class="lab">आपसे पूछा गया · याद रखने लायक संदर्भ</div>
-              <div class="qq">Keystone कटओवर कहाँ तक पहुँचा?</div>
-              <div class="op">राइट्स पिछले हफ़्ते शिफ़्ट हुए। रीड कटओवर 14 तारीख़ को तय है।</div>
-              <ul class="ticks sug"><li>स्टेजिंग पर रोलबैक की रिहर्सल हो चुकी है</li><li>जोखिम: स्टेजिंग डेटा रिफ़्रेश में देरी है<span class="caret" aria-hidden="true"></span></li></ul>
-            </div>
-            <div class="askbar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>इस कॉल के बारे में पूछें…</div>
-            <p class="sample" style="padding:0">सैंपल मीटिंग। रिमाइंडर, स्क्रिप्ट नहीं: जवाब आप अपने शब्दों में देते हैं।</p>
-          </div>
-        </div>
-        <div class="slide" role="group" aria-roledescription="स्लाइड" aria-label="5 में से 3: कॉल के बाद होम" data-app="Undertone" data-desk="apps">
-          <div class="app lift">
-            <aside class="app-side" aria-hidden="true">
-              <div class="lights"><i></i><i></i><i></i></div>
-              <div class="space"><span><i></i>प्लेटफ़ॉर्म टीम</span></div>
-              <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>होम</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>मीटिंग्स</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>टास्क</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>शब्दावली</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>पूछें</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>आर्टिफ़ैक्ट्स</li></ul>
-            </aside>
-            <div class="app-main">
-              <div class="hello">शुभ दोपहर, Alex</div>
-              <p class="date">मंगलवार · प्लेटफ़ॉर्म टीम</p>
-              <div class="cards">
-                <div class="card"><div class="h4">आगे क्या है <small>कैलेंडर</small></div>
-                  <div class="row"><span class="t">14:30</span><span class="grow">Northwind रिन्यूअल<span class="sub2">Priya, Jordan · 1 संबंधित मीटिंग</span></span><span class="mini">तैयारी</span></div>
-                  <div class="row"><span class="t">16:00</span><span class="grow">Maya के साथ 1:1<span class="sub2">2 खुले टास्क</span></span><span class="mini">तैयारी</span></div></div>
-                <div class="card"><div class="h4">आपके टास्क <small>3 खुले</small></div>
-                  <div class="row"><span class="box"></span><span class="grow">Sam को Keystone कटओवर प्लान भेजें<span class="sub2">प्लेटफ़ॉर्म सिंक · शुक्रवार तक · <span class="hi">हाई</span></span></span></div>
-                  <div class="row"><span class="box"></span><span class="grow">गुरुवार के लिए CAB स्लॉट कन्फ़र्म करें<span class="sub2">इंजीनियरिंग सिंक</span></span></div>
-                  <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">Q3 के NRR आँकड़े शेयर करें</span></div></div>
-                <div class="card opt"><div class="h4">सीखने लायक शब्द <small>शब्दावली</small></div>
-                  <div class="row"><span class="grow"><b>CAB</b> ×2<span class="sub2">Change Advisory Board: प्रोडक्शन बदलावों की गुरुवार वाली समीक्षा।</span></span></div>
-                  <div class="row"><span class="grow"><b>DPA</b><span class="sub2">डेटा प्रोसेसिंग एग्रीमेंट। Northwind के वर्शन में रिटेंशन की सीमा तय है।</span></span></div></div>
-                <div class="card opt"><div class="h4">जवाब कोचिंग</div></div>
-              </div>
-              <p class="sample" style="padding:12px 0 0">सैंपल डेटा। नाम और मीटिंग्स काल्पनिक हैं।</p>
-            </div>
-          </div>
-        </div>
-        <div class="slide" role="group" aria-roledescription="स्लाइड" aria-label="5 में से 4: इंटरव्यू के बाद आपके जवाबों का स्कोर" data-app="Undertone" data-desk="apps">
-          <div class="win lift">
-            <div class="bar"><div class="lights"><i></i><i></i><i></i></div>डिज़ाइन लीड इंटरव्यू<span class="t2" style="font-weight:400;color:var(--text-3)">· 45 मिनट</span></div>
-            <div class="inner">
-              <div class="seg" aria-hidden="true"><span>हिंट्स</span><span>जवाब</span><span>रीकैप</span><span class="on">कोचिंग</span><span>ट्रांसक्रिप्ट</span></div>
-              <div class="two inner" style="padding:0">
-                <div>
-                  <div class="score-top">
-                    <div class="ring" aria-hidden="true"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="31" fill="none" stroke="rgba(129,140,248,.18)" stroke-width="7"/><circle cx="36" cy="36" r="31" fill="none" stroke="#818CF8" stroke-width="7" stroke-linecap="round" stroke-dasharray="161.7 194.8"/></svg><b>83<small>/100</small></b></div>
-                    <div><div class="sc-title">इंटरव्यू स्कोर</div><span class="tag">आगे बढ़ने की संभावना</span></div>
-                  </div>
-                  <p style="font-size:14px;color:var(--text-2);line-height:1.55;margin-top:14px">मज़बूत, ठोस उदाहरण। पोर्टफ़ोलियो वॉकथ्रू नतीजे तक पहुँचने से पहले लंबा खिंच गया।</p>
-                  <div class="label">सुधार के लिए</div>
-                  <ul class="ticks"><li>हर केस की शुरुआत नतीजे से करें</li><li>वॉकथ्रू दो मिनट से कम रखें</li></ul>
-                </div>
-                <div>
-                  <div class="label" style="margin-top:0">आपसे पूछा गया</div>
-                  <div class="q">“जिस फ़ीडबैक से आप असहमत हों, उसे आप कैसे संभालते हैं?”</div>
-                  <div class="part sug"><div class="label">आपके पास जो संदर्भ था</div><ul class="ticks sug"><li>आपका उदाहरण: चेकआउट रीडिज़ाइन पर बहस</li><li>यूज़र्स के साथ दोनों को टेस्ट करके तय हुआ</li></ul></div>
-                  <div class="part you"><div class="label">आपने क्या कहा</div><ul class="ticks you"><li>मेरी कोशिश रहती है कि पहले समझूँ, बात कहाँ से आ रही है।</li><li>फिर हम आमतौर पर दोनों का प्रोटोटाइप बनाते हैं।</li></ul></div>
-                </div>
-              </div>
-              <p class="sample" style="padding:14px 0 0">सैंपल। बाकी मीटिंग्स को मीटिंग स्कोर मिलता है।</p>
-            </div>
-          </div>
-        </div>
-        <div class="slide" role="group" aria-roledescription="स्लाइड" aria-label="5 में से 5: Claude के अंदर आपकी मीटिंग्स" data-app="Claude" data-desk="apps">
-          <div class="win narrow lift">
-            <div class="bar"><div class="lights"><i></i><i></i><i></i></div>Claude</div>
-            <div class="inner">
-              <div class="chat-me">इस हफ़्ते की मीटिंग्स में मैंने क्या वादे किए, और सबसे पहले क्या ड्यू है?</div>
-              <span class="toolcall"><img src="../assets/icon-256.png" alt="" width="16" height="16"><code translate="no">undertone · list_tasks</code></span>
-              <div class="chat-ai"><b>सबसे पहले ड्यू:</b> Sam को Keystone कटओवर प्लान भेजना (शुक्रवार, प्लेटफ़ॉर्म सिंक से)।<br>ये भी खुले हैं: गुरुवार के लिए CAB स्लॉट कन्फ़र्म करना, और Q3 प्लेटफ़ॉर्म अपडेट का ड्राफ़्ट, जो रिव्यू में है।<span class="caret" aria-hidden="true"></span></div>
-              <p class="sample" style="padding:14px 0 0">सैंपल। Undertone दूसरे ऐप्स के लिए रीड-ओनली है और आपके Mac पर ही रहता है।</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="film hero-film" id="video">
+      <video controls playsinline loop preload="metadata" poster="../assets/demo-poster.jpg" aria-label="Undertone डेमो वीडियो: एक काल्पनिक टीम स्टैंडअप, कॉल से पहले की ब्रीफ़िंग से बाद के रीकैप तक">
+        <source src="../assets/demo.mp4" type="video/mp4">
+      </video>
     </div>
-    <div class="slidenav" aria-label="एक व्यू चुनें"><button type="button" data-i="0" aria-current="true"><span class="lbl">सुनते-सुनते हिंट्स</span><span class="bar"><i></i></span></button><button type="button" data-i="1"><span class="lbl">पूछे जाने पर संदर्भ</span><span class="bar"><i></i></span></button><button type="button" data-i="2"><span class="lbl">आपका हफ़्ता</span><span class="bar"><i></i></span></button><button type="button" data-i="3"><span class="lbl">आप कैसे लगे</span><span class="bar"><i></i></span></button><button type="button" data-i="4"><span class="lbl">Claude के अंदर</span><span class="bar"><i></i></span></button><button type="button" class="pause" aria-label="स्लाइडशो रोकें" data-pause="स्लाइडशो रोकें" data-play="स्लाइडशो चलाएँ"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button></div>
-  </section>
-
-  <section class="block" id="video">
-    <div class="wrap">
-      <div class="head">
-        <h2>90 सेकंड में देखें</h2>
-        <p>एक काल्पनिक टीम स्टैंडअप, शुरू से अंत तक: कॉल से पहले ब्रीफ़िंग, कॉल के दौरान हिंट और रिमाइंडर, और बाद में रीकैप, कोचिंग और Ask।</p>
-      </div>
-      <div class="film">
-        <video controls playsinline preload="none" poster="../assets/demo-poster.jpg" aria-label="Undertone डेमो वीडियो">
-          <source src="../assets/demo.mp4" type="video/mp4">
-        </video>
-      </div>
-      <p class="sample" style="padding:14px 0 0">नमूना। नाम, कंपनियाँ और टिकट काल्पनिक हैं।</p>
-    </div>
+    <p class="sample hero-note">नमूना। नाम, कंपनियाँ और टिकट काल्पनिक हैं। संगीत के लिए आवाज़ चालू करें।</p>
   </section>
 
   <section class="block" id="demo">
@@ -1344,7 +1213,7 @@
     <h2>अपनी अगली कॉल के लिए तैयार?</h2>
     <p>इंस्टॉल करें, लगभग एक मिनट में अपना AI और सोर्सेज़ कनेक्ट करें, फिर कॉल जॉइन करें। उसके बाद, आपका रीकैप, टास्क और नए टर्म होम पर आपका इंतज़ार कर रहे होंगे।</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>.dmg डाउनलोड करें <span class="ver">v1.14.0</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>.dmg डाउनलोड करें <span class="ver">v1.14.1</span></a>
     </div>
     <p class="brew">या Homebrew से: <code translate="no">brew install --cask sslugic/tap/undertone</code></p>
     <ul class="reqs">
@@ -1363,99 +1232,13 @@
 </footer>
 
 <script>
-  // Hero slideshow: five sample views on one mock desktop. Pauses on hover, focus, a hidden tab or the pause
-  // button; stays still with reduced motion.
+  // The hero video plays muted on larger screens with motion allowed; phones and data-saver get the poster and a play button.
   (function () {
-    var stage = document.querySelector(".stage");
-    var slides = stage.querySelectorAll(".slide");
-    var nav = document.querySelector(".slidenav");
-    var buttons = nav.querySelectorAll("button[data-i]");
-    var pauseBtn = nav.querySelector(".pause");
-    var appname = document.getElementById("appname");
-    var dwell = 6000, timer = null, current = 0;
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var userPaused = still, hovering = false;
-    if (still) nav.classList.add("still");
-    nav.style.setProperty("--dwell", dwell / 1000 + "s");
-    var pauseIcon = pauseBtn.innerHTML;
-    var playIcon = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg>';
-
-    function show(n) {
-      current = (n + slides.length) % slides.length;
-      slides.forEach(function (sl, k) {
-        var on = k === current;
-        sl.classList.toggle("on", on);
-        sl.setAttribute("aria-hidden", on ? "false" : "true");
-        if ("inert" in sl) sl.inert = !on;
-      });
-      buttons.forEach(function (b, k) {
-        if (k === current) {
-          b.removeAttribute("aria-current");
-          var bar = b.querySelector(".bar i");
-          bar.style.transition = "none"; bar.style.width = "0"; void bar.offsetWidth; bar.style.transition = ""; bar.style.width = "";
-          b.setAttribute("aria-current", "true");
-        } else b.removeAttribute("aria-current");
-      });
-      stage.dataset.desk = slides[current].dataset.desk;
-      appname.textContent = slides[current].dataset.app;
-      schedule();
-    }
-    function running() { return !userPaused && !hovering && !document.hidden; }
-    function schedule() {
-      clearTimeout(timer);
-      nav.classList.toggle("paused", !running());
-      if (running()) timer = setTimeout(function () { show(current + 1); }, dwell);
-    }
-    function resume() { if (running()) show(current); else schedule(); }
-    buttons.forEach(function (b) { b.addEventListener("click", function () { show(+b.dataset.i); }); });
-    pauseBtn.addEventListener("click", function () {
-      userPaused = !userPaused;
-      pauseBtn.setAttribute("aria-label", userPaused ? pauseBtn.dataset.play : pauseBtn.dataset.pause);
-      pauseBtn.innerHTML = userPaused ? playIcon : pauseIcon;
-      resume();
-    });
-    [stage, nav].forEach(function (el) {
-      el.addEventListener("mouseenter", function () { hovering = true; schedule(); });
-      el.addEventListener("mouseleave", function () { hovering = false; resume(); });
-      el.addEventListener("focusin", function () { hovering = true; schedule(); });
-      el.addEventListener("focusout", function () { hovering = false; resume(); });
-    });
-    document.addEventListener("visibilitychange", resume);
-    if (still) { pauseBtn.setAttribute("aria-label", pauseBtn.dataset.play); pauseBtn.innerHTML = playIcon; }
-    show(0);
-  })();
-
-  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
-  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
-  (function () {
-    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
-      var c = t.content, ctx = c.querySelector("[data-ctx]");
-      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
-        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
-    });
-    var tabs = document.querySelectorAll(".tab");
-    var panel = document.getElementById("panel");
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function select(n, focus) {
-      var d = data[n];
-      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
-      if (focus) tabs[n].focus();
-      panel.setAttribute("aria-labelledby", "tab-" + n);
-      document.getElementById("d-title").textContent = d.title;
-      document.getElementById("d-meta").textContent = d.meta;
-      document.getElementById("d-say").innerHTML = d.say;
-      var ctx = document.getElementById("d-ctx");
-      ctx.className = d.ctxClass;
-      ctx.innerHTML = d.ctx;
-      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
-    }
-    tabs.forEach(function (t, n) {
-      t.addEventListener("click", function () { select(n); });
-      t.addEventListener("keydown", function (e) {
-        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
-        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
-      });
-    });
+    var v = document.querySelector(".hero-film video");
+    if (!v) return;
+    var ok = matchMedia("(min-width: 820px) and (prefers-reduced-motion: no-preference)").matches
+      && !(navigator.connection && navigator.connection.saveData);
+    if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
 </script>
 <script>

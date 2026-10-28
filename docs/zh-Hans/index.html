@@ -481,6 +481,8 @@
   .start h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.1; }
   .start p { color: var(--text-2); margin-top: 12px; }
   .film { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border-2); background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+  .hero-film { max-width: 1120px; margin: 44px auto 0; }
+  .hero-note { text-align: center; padding: 12px 0 0; }
   .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
   .askmock { max-width: 640px; margin: 0 auto; padding: 40px 36px 30px; border-radius: var(--r-lg); border: 1px solid var(--border); background: var(--surface-2); }
   .askmock h3 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; font-size: 30px; letter-spacing: -.01em; margin: 0 0 22px; }
@@ -622,151 +624,18 @@
       <h1>听懂每个人的意思，也知道接下来该说什么。</h1>
       <p class="sub">Undertone 会陪你一起听通话。代号和缩写一出现就为你解释，有人问你问题时把相关事实摆在眼前，通话结束后再交给你总结、你的任务和下一场通话的简报。一切都来自你团队自己的 Slack、Notion 和 Jira，在你的 Mac 上转写。</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>下载 .dmg <span class="ver">v1.14.0</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>下载 .dmg <span class="ver">v1.14.1</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>版本发布与问题反馈</a>
       </div>
       <p class="fine">测试期间免费 · 需要 macOS 26 或更高版本，搭载 Apple 芯片</p>
     </div>
 
-    <div class="stage" role="region" aria-roledescription="轮播" aria-label="通过五个示例视图了解 Undertone" data-desk="call">
-      <div class="menubar" aria-hidden="true">
-        <div class="l">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>
-          <b class="keep" id="appname">zoom.us</b><span>文件</span><span>显示</span><span>窗口</span>
-        </div>
-        <div class="r">
-          <span class="bulb"><svg viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><rect x="1.50" y="5.45" width="2.0" height="4.8" rx="1"/><rect x="1.50" y="12" width="2.0" height="2.8" rx="1"/><rect x="4.75" y="3.15" width="2.0" height="7.1" rx="1"/><rect x="4.75" y="12" width="2.0" height="4.2" rx="1"/><rect x="8.00" y="1.25" width="2.0" height="9.0" rx="1"/><rect x="8.00" y="12" width="2.0" height="5.0" rx="1"/><rect x="11.25" y="3.65" width="2.0" height="6.6" rx="1"/><rect x="11.25" y="12" width="2.0" height="3.7" rx="1"/><rect x="14.50" y="5.85" width="2.0" height="4.4" rx="1"/><rect x="14.50" y="12" width="2.0" height="2.5" rx="1"/><rect x="0.75" y="10.75" width="16.5" height="0.75" rx=".375"/></svg></span>
-          <svg class="opt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg>
-          <span class="opt">周二 12:04</span>
-        </div>
-      </div>
-      <div class="desk">
-        <div class="call" aria-hidden="true" translate="no">
-          <div class="tile talk"><div class="av" style="background:#4F46E5">M</div><span class="nm">Maya</span></div>
-          <div class="tile"><div class="av" style="background:#3730A3">D</div><span class="nm">Dev</span></div>
-          <div class="tile"><div class="av" style="background:#9D174D">S</div><span class="nm">Sam</span></div>
-          <div class="tile"><div class="av" style="background:#27272A">Y</div><span class="nm">You</span></div>
-        </div>
-        <div class="wallglow"></div>
-        <div class="slide on" role="group" aria-roledescription="幻灯片" aria-label="第 1 页，共 5 页：通话中的实时提示" data-app="zoom.us" data-desk="call">
-            <div class="hud lift">
-            <div class="hud-head">
-              <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-              <div><div class="hud-title">平台同步会</div><div class="hud-meta">12:04 · 已载入 31 个术语</div></div>
-              <span class="hud-live"><span class="dot" aria-hidden="true"></span>正在聆听</span>
-            </div>
-            <div class="hud-body">
-              <div class="tr-col">
-                <div class="col-label">转写</div>
-                <p class="line"><span class="who"><b>Maya</b> · 12:02</span>Infra 希望在冻结期前收尾 <span class="term">Keystone</span>。</p>
-                <p class="line"><span class="who"><b>Dev</b> · 12:03</span>RFC 里包含回滚方案吗？</p>
-                <p class="line to-you"><span class="who"><b>Sam</b> · 12:04 · <em>问你</em></span>你能简单说下 Keystone 的进展吗？</p>
-              </div>
-              <div class="ctx-col">
-                <div class="col-label">背景</div>
-                <div class="ctx"><div class="ct">Keystone 项目 <small>可能是新词</small></div><p>Q3 迁移到新计费系统的项目，由 Infra 团队牵头。</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · RFC-402</span></div>
-                <div class="ctx answer"><div class="ct">给你的背景 <small>Sam 提问</small></div><p>计费写入已于上周迁移，读取切换计划在 14 日进行。</p><span class="src"><img src="../assets/logos/jira.png" alt="" width="13" height="13">Jira · INFRA-311</span></div>
-              </div>
-            </div>
-            <p class="sample">示例会议。人名、项目和工单均为虚构。</p>
-          </div>
-        </div>
-        <div class="slide" role="group" aria-roledescription="幻灯片" aria-label="第 2 页，共 5 页：有人向你提问时调出的背景信息" data-app="zoom.us" data-desk="call">
-          <div class="livepanel lift">
-            <div class="hud-head"><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><div><div class="hud-title">平台同步会</div><div class="hud-meta">12:06 · 正在聆听</div></div><span class="hud-live"><span class="dot" aria-hidden="true"></span>实时</span></div>
-            <div class="heard">“Sam，Keystone 切换进行到哪一步了？”</div>
-            <div class="asked">
-              <div class="lab">有人问你 · 值得记住的背景</div>
-              <div class="qq">Keystone 切换进展如何？</div>
-              <div class="op">写入已于上周迁移，读取切换定在 14 日。</div>
-              <ul class="ticks sug"><li>已在预发环境演练回滚</li><li>风险：预发环境的数据刷新延迟了<span class="caret" aria-hidden="true"></span></li></ul>
-            </div>
-            <div class="askbar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>就这场通话提问…</div>
-            <p class="sample" style="padding:0">示例会议。只是提醒，不是讲稿：怎么回答由你自己决定。</p>
-          </div>
-        </div>
-        <div class="slide" role="group" aria-roledescription="幻灯片" aria-label="第 3 页，共 5 页：通话结束后的主页" data-app="Undertone" data-desk="apps">
-          <div class="app lift">
-            <aside class="app-side" aria-hidden="true">
-              <div class="lights"><i></i><i></i><i></i></div>
-              <div class="space"><span><i></i>平台团队</span></div>
-              <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>主页</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>会议</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>任务</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>术语表</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>提问</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>成果</li></ul>
-            </aside>
-            <div class="app-main">
-              <div class="hello">下午好，Alex</div>
-              <p class="date">周二 · 平台团队</p>
-              <div class="cards">
-                <div class="card"><div class="h4">接下来 <small>日历</small></div>
-                  <div class="row"><span class="t">14:30</span><span class="grow">Northwind 续约<span class="sub2">Priya、Jordan · 1 场相关会议</span></span><span class="mini">准备</span></div>
-                  <div class="row"><span class="t">16:00</span><span class="grow">与 Maya 的 1:1<span class="sub2">2 项未完成任务</span></span><span class="mini">准备</span></div></div>
-                <div class="card"><div class="h4">你的任务 <small>3 项未完成</small></div>
-                  <div class="row"><span class="box"></span><span class="grow">把 Keystone 切换方案发给 Sam<span class="sub2">平台同步会 · 周五截止 · <span class="hi">高</span></span></span></div>
-                  <div class="row"><span class="box"></span><span class="grow">确认周四的 CAB 时段<span class="sub2">工程同步会</span></span></div>
-                  <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">分享 Q3 NRR 数据</span></div></div>
-                <div class="card opt"><div class="h4">待学词汇 <small>术语表</small></div>
-                  <div class="row"><span class="grow"><b>CAB</b> ×2<span class="sub2">变更咨询委员会（Change Advisory Board）：每周四审核生产变更的评审会。</span></span></div>
-                  <div class="row"><span class="grow"><b>DPA</b><span class="sub2">数据处理协议。Northwind 的版本限制了数据保留期限。</span></span></div></div>
-                <div class="card opt"><div class="h4">回答辅导</div></div>
-              </div>
-              <p class="sample" style="padding:12px 0 0">示例数据。人名和会议均为虚构。</p>
-            </div>
-          </div>
-        </div>
-        <div class="slide" role="group" aria-roledescription="幻灯片" aria-label="第 4 页，共 5 页：面试后的回答评分" data-app="Undertone" data-desk="apps">
-          <div class="win lift">
-            <div class="bar"><div class="lights"><i></i><i></i><i></i></div>设计主管面试<span class="t2" style="font-weight:400;color:var(--text-3)">· 45 分钟</span></div>
-            <div class="inner">
-              <div class="seg" aria-hidden="true"><span>提示</span><span>回答</span><span>回顾</span><span class="on">辅导</span><span>转写</span></div>
-              <div class="two inner" style="padding:0">
-                <div>
-                  <div class="score-top">
-                    <div class="ring" aria-hidden="true"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="31" fill="none" stroke="rgba(129,140,248,.18)" stroke-width="7"/><circle cx="36" cy="36" r="31" fill="none" stroke="#818CF8" stroke-width="7" stroke-linecap="round" stroke-dasharray="161.7 194.8"/></svg><b>83<small>/100</small></b></div>
-                    <div><div class="sc-title">面试评分</div><span class="tag">有望进入下一轮</span></div>
-                  </div>
-                  <p style="font-size:14px;color:var(--text-2);line-height:1.55;margin-top:14px">例子扎实具体。作品集讲解拖得太长，迟迟没讲到结果。</p>
-                  <div class="label">待改进</div>
-                  <ul class="ticks"><li>每个案例先讲结果</li><li>讲解控制在两分钟以内</li></ul>
-                </div>
-                <div>
-                  <div class="label" style="margin-top:0">你被问到</div>
-                  <div class="q">“遇到你不认同的反馈，你会怎么处理？”</div>
-                  <div class="part sug"><div class="label">你当时掌握的背景</div><ul class="ticks sug"><li>你的例子：结账流程改版之争</li><li>通过让用户测试两个方案定了下来</li></ul></div>
-                  <div class="part you"><div class="label">你说的话</div><ul class="ticks you"><li>我会先试着理解对方的出发点。</li><li>然后我们通常会把两个方案都做成原型。</li></ul></div>
-                </div>
-              </div>
-              <p class="sample" style="padding:14px 0 0">示例。其他会议会得到会议评分。</p>
-            </div>
-          </div>
-        </div>
-        <div class="slide" role="group" aria-roledescription="幻灯片" aria-label="第 5 页，共 5 页：在 Claude 中查看你的会议" data-app="Claude" data-desk="apps">
-          <div class="win narrow lift">
-            <div class="bar"><div class="lights"><i></i><i></i><i></i></div>Claude</div>
-            <div class="inner">
-              <div class="chat-me">我这周在会上答应了哪些事？哪件最先到期？</div>
-              <span class="toolcall"><img src="../assets/icon-256.png" alt="" width="16" height="16"><code translate="no">undertone · list_tasks</code></span>
-              <div class="chat-ai"><b>最先到期：</b>把 Keystone 切换方案发给 Sam（周五，来自平台同步会）。<br>另外还有：确认周四的 CAB 时段，以及起草 Q3 平台更新（正在审阅中）。<span class="caret" aria-hidden="true"></span></div>
-              <p class="sample" style="padding:14px 0 0">示例。其他应用对 Undertone 只能读取，数据始终留在你的 Mac 上。</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="film hero-film" id="video">
+      <video controls playsinline loop preload="metadata" poster="../assets/demo-poster.jpg" aria-label="Undertone 演示视频：一场虚构的团队站会，从通话前的简报到通话后的回顾">
+        <source src="../assets/demo.mp4" type="video/mp4">
+      </video>
     </div>
-    <div class="slidenav" aria-label="选择视图"><button type="button" data-i="0" aria-current="true"><span class="lbl">边听边提示</span><span class="bar"><i></i></span></button><button type="button" data-i="1"><span class="lbl">被提问时的背景</span><span class="bar"><i></i></span></button><button type="button" data-i="2"><span class="lbl">你的一周</span><span class="bar"><i></i></span></button><button type="button" data-i="3"><span class="lbl">你的表现</span><span class="bar"><i></i></span></button><button type="button" data-i="4"><span class="lbl">在 Claude 中</span><span class="bar"><i></i></span></button><button type="button" class="pause" aria-label="暂停幻灯片" data-pause="暂停幻灯片" data-play="播放幻灯片"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button></div>
-  </section>
-
-  <section class="block" id="video">
-    <div class="wrap">
-      <div class="head">
-        <h2>90 秒了解</h2>
-        <p>一场虚构的团队站会，从头到尾：通话前的简报，通话中的提示和提醒，通话后的回顾、辅导和 Ask。</p>
-      </div>
-      <div class="film">
-        <video controls playsinline preload="none" poster="../assets/demo-poster.jpg" aria-label="Undertone 演示视频">
-          <source src="../assets/demo.mp4" type="video/mp4">
-        </video>
-      </div>
-      <p class="sample" style="padding:14px 0 0">示例。姓名、公司和工单均为虚构。</p>
-    </div>
+    <p class="sample hero-note">示例。姓名、公司和工单均为虚构。取消静音即可听到音乐。</p>
   </section>
 
   <section class="block" id="demo">
@@ -1344,7 +1213,7 @@
     <h2>准备好迎接下一场通话了吗？</h2>
     <p>安装后，大约一分钟连接好你的 AI 和资料来源，然后加入通话。结束后，你的回顾、任务和新术语都在主页等着你。</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>下载 .dmg <span class="ver">v1.14.0</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>下载 .dmg <span class="ver">v1.14.1</span></a>
     </div>
     <p class="brew">或使用 Homebrew： <code translate="no">brew install --cask sslugic/tap/undertone</code></p>
     <ul class="reqs">
@@ -1363,99 +1232,13 @@
 </footer>
 
 <script>
-  // Hero slideshow: five sample views on one mock desktop. Pauses on hover, focus, a hidden tab or the pause
-  // button; stays still with reduced motion.
+  // The hero video plays muted on larger screens with motion allowed; phones and data-saver get the poster and a play button.
   (function () {
-    var stage = document.querySelector(".stage");
-    var slides = stage.querySelectorAll(".slide");
-    var nav = document.querySelector(".slidenav");
-    var buttons = nav.querySelectorAll("button[data-i]");
-    var pauseBtn = nav.querySelector(".pause");
-    var appname = document.getElementById("appname");
-    var dwell = 6000, timer = null, current = 0;
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var userPaused = still, hovering = false;
-    if (still) nav.classList.add("still");
-    nav.style.setProperty("--dwell", dwell / 1000 + "s");
-    var pauseIcon = pauseBtn.innerHTML;
-    var playIcon = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg>';
-
-    function show(n) {
-      current = (n + slides.length) % slides.length;
-      slides.forEach(function (sl, k) {
-        var on = k === current;
-        sl.classList.toggle("on", on);
-        sl.setAttribute("aria-hidden", on ? "false" : "true");
-        if ("inert" in sl) sl.inert = !on;
-      });
-      buttons.forEach(function (b, k) {
-        if (k === current) {
-          b.removeAttribute("aria-current");
-          var bar = b.querySelector(".bar i");
-          bar.style.transition = "none"; bar.style.width = "0"; void bar.offsetWidth; bar.style.transition = ""; bar.style.width = "";
-          b.setAttribute("aria-current", "true");
-        } else b.removeAttribute("aria-current");
-      });
-      stage.dataset.desk = slides[current].dataset.desk;
-      appname.textContent = slides[current].dataset.app;
-      schedule();
-    }
-    function running() { return !userPaused && !hovering && !document.hidden; }
-    function schedule() {
-      clearTimeout(timer);
-      nav.classList.toggle("paused", !running());
-      if (running()) timer = setTimeout(function () { show(current + 1); }, dwell);
-    }
-    function resume() { if (running()) show(current); else schedule(); }
-    buttons.forEach(function (b) { b.addEventListener("click", function () { show(+b.dataset.i); }); });
-    pauseBtn.addEventListener("click", function () {
-      userPaused = !userPaused;
-      pauseBtn.setAttribute("aria-label", userPaused ? pauseBtn.dataset.play : pauseBtn.dataset.pause);
-      pauseBtn.innerHTML = userPaused ? playIcon : pauseIcon;
-      resume();
-    });
-    [stage, nav].forEach(function (el) {
-      el.addEventListener("mouseenter", function () { hovering = true; schedule(); });
-      el.addEventListener("mouseleave", function () { hovering = false; resume(); });
-      el.addEventListener("focusin", function () { hovering = true; schedule(); });
-      el.addEventListener("focusout", function () { hovering = false; resume(); });
-    });
-    document.addEventListener("visibilitychange", resume);
-    if (still) { pauseBtn.setAttribute("aria-label", pauseBtn.dataset.play); pauseBtn.innerHTML = playIcon; }
-    show(0);
-  })();
-
-  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
-  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
-  (function () {
-    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
-      var c = t.content, ctx = c.querySelector("[data-ctx]");
-      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
-        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
-    });
-    var tabs = document.querySelectorAll(".tab");
-    var panel = document.getElementById("panel");
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function select(n, focus) {
-      var d = data[n];
-      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
-      if (focus) tabs[n].focus();
-      panel.setAttribute("aria-labelledby", "tab-" + n);
-      document.getElementById("d-title").textContent = d.title;
-      document.getElementById("d-meta").textContent = d.meta;
-      document.getElementById("d-say").innerHTML = d.say;
-      var ctx = document.getElementById("d-ctx");
-      ctx.className = d.ctxClass;
-      ctx.innerHTML = d.ctx;
-      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
-    }
-    tabs.forEach(function (t, n) {
-      t.addEventListener("click", function () { select(n); });
-      t.addEventListener("keydown", function (e) {
-        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
-        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
-      });
-    });
+    var v = document.querySelector(".hero-film video");
+    if (!v) return;
+    var ok = matchMedia("(min-width: 820px) and (prefers-reduced-motion: no-preference)").matches
+      && !(navigator.connection && navigator.connection.saveData);
+    if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
 </script>
 <script>
