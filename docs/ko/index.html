@@ -325,6 +325,7 @@
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .plans.one { grid-template-columns: minmax(0, 520px); }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -443,7 +444,7 @@
   .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
   .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
   .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
-  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
   .bar + .bar { margin-top: 6px; }
   .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
   .bar.new i { background: var(--accent); }
@@ -581,7 +582,7 @@
       <a href="#how">작동 방식</a>
       <a href="#features">기능</a>
       <a href="#claude">Claude</a>
-      <a href="#pricing">요금</a>
+      <a href="#pricing">무료 베타</a>
       <a href="#privacy">프라이버시</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">변경 내역</a>
@@ -791,7 +792,7 @@
           <span class="n" aria-hidden="true">1단계</span>
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div>
           <h3>백그라운드에서 들어요</h3>
-          <p>Zoom, Teams, Meet, Slack이 마이크를 쓰면 알아서 시작하고, 통화와 내 발언을 Mac에서 받아 적어요. 오디오는 절대 업로드되지 않아요.</p>
+          <p>Zoom, Teams, Meet, Slack 또는 브라우저에서 통화가 시작되면 듣기만 하더라도 자동으로 시작하고, Mac에서 받아 적습니다. 오디오는 업로드되지 않습니다.</p>
         </div>
         <div class="step">
           <span class="n" aria-hidden="true">2단계</span>
@@ -819,7 +820,7 @@
         <div class="tabs" role="tablist" aria-label="샘플 미팅">
           <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>엔지니어링 싱크</b><span>릴리스 프로세스 약어</span></button>
           <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>영업 인수인계</b><span>계약 용어</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>이사회 Q&amp;A</b><span>나에게 온 질문</span></button>
+          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>이사회 Q&amp;A</b><span>나에게 한 질문</span></button>
         </div>
         <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
           <div class="hud-head">
@@ -903,7 +904,7 @@
         <div><dt>인물</dt><dd>초대에 포함된 모든 사람의 역할, 맡은 일, 함께한 미팅, 내가 해 줘야 할 일까지.</dd></div>
         <div><dt>미리 알림</dt><dd>“금요일까지”가 날짜가 돼요. 전 영업일 9:00에 미리 알림이 오고, 기한이 지난 할 일은 빨간색으로 바뀌어요.</dd></div>
         <div><dt>용어집 가이드</dt><dd>팀 용어집을 새로 합류한 사람을 위한 공유용 가이드로 바꿔요. HTML이나 Markdown으로 바로 내보낼 수 있어요.</dd></div>
-        <div><dt>수정과 번역</dt><dd>잘못 들은 단어를 우클릭하면 Undertone이 고치고 다음부터 그 단어를 알아들어요. 어떤 구간이든 15개 언어로 번역할 수 있어요.</dd></div>
+        <div><dt>수정과 번역</dt><dd>잘못 들은 단어를 우클릭하면 Undertone이 고치고 다음부터 그 단어를 알아들어요. 어떤 구간이든 19개 언어로 번역할 수 있어요.</dd></div>
       </dl>
     </div>
   </section>
@@ -1091,7 +1092,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>몇 초 만에 답변</h2>
-          <p>1.8의 새로운 기능: Undertone이 이미 아는 것에서 빠른 모델로 답하고, 그걸로 부족할 때만 도구를 검색해요.</p>
+          <p>Undertone이 이미 아는 것에서 빠른 모델로 답하고, 그걸로 부족할 때만 도구를 검색해요.</p>
         </div>
         <ul class="ticks sug">
           <li>통화 중 답변 카드는 백그라운드 브리프와 메모리를 활용해요</li>
@@ -1103,45 +1104,14 @@
       <div class="bars" aria-label="Undertone 자체 벤치마크로 측정">
         <div>
           <h4>질문, 첫 단어까지 걸린 시간 <small>중앙값</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12.7초</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4.5초</b></div>
+          <div class="bar"><span>이전</span><i style="--w:100%"></i><b>12.7초</b></div>
+          <div class="bar new"><span>지금</span><i style="--w:35%"></i><b>4.5초</b></div>
         </div>
         <div>
           <h4>실시간 답변, 전체 응답 <small>중앙값</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16.5초</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5.1초</b></div>
+          <div class="bar"><span>이전</span><i style="--w:100%"></i><b>16.5초</b></div>
+          <div class="bar new"><span>지금</span><i style="--w:31%"></i><b>5.1초</b></div>
         </div>
-        <div>
-          <h4>실시간 답변, 첫 시도에 정답</h4>
-          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>업무는 업무대로</h2>
-          <p>1.11의 새 기능: Undertone이 업무 회의와 개인 회의를 구분합니다. 웨비나나 개인 캘린더의 통화는 업무 도구를 건드리지 않고 일반 지식으로 설명합니다.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>캘린더마다 업무 또는 개인으로 표시하세요. 회사 계정은 업무로 시작합니다</li>
-          <li>개인 회의는 업무 도구와 메모리를 쓰지 않고, 요약도 amem에 저장하지 않습니다</li>
-          <li>힌트 패널에서 어떤 회의든 업무와 개인 사이를 바꿀 수 있습니다</li>
-          <li>듣기만 하는 웨비나에서도, Comet, Vivaldi, Opera 같은 브라우저에서도 자동으로 시작합니다</li>
-          <li>질문이 누구에게 한 것인지 알려 줍니다. 나, 이름이 불린 다른 사람, 또는 모두</li>
-          <li>끊겼다가 다시 이어진 통화는 새 회의가 아니라 같은 회의로 이어집니다</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="캘린더 설정 예시">
-        <h4>캘린더</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">업무</i><i>개인</i></span></div>
-        <div class="acct"><span>개인 Gmail</span><span class="seg"><i>업무</i><i class="on">개인</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>업무</i><i class="on">개인</i></span></div>
-        <span class="chip">개인 회의 · 개인 캘린더에 있음</span>
       </div>
     </div>
   </section>
@@ -1151,7 +1121,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>바로 붙여 넣는 답변</h2>
-          <p>1.10의 새 기능: 질문은 요청한 것부터 답합니다. 초안은 바로 복사할 수 있는 메시지 하나로 오고, 빠진 것은 그 아래에 적힙니다.</p>
+          <p>질문은 요청한 것부터 답합니다. 초안은 바로 복사할 수 있는 메시지 하나로 오고, 빠진 것은 그 아래에 적힙니다.</p>
         </div>
         <ul class="ticks sug">
           <li>Slack이나 이메일용 추천 초안 하나, 전용 복사 버튼과 함께</li>
@@ -1178,12 +1148,38 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>업무는 업무대로</h2>
+          <p>Undertone이 업무 회의와 개인 회의를 구분합니다. 웨비나나 개인 캘린더의 통화는 업무 도구를 건드리지 않고 일반 지식으로 설명합니다.</p>
+        </div>
+        <ul class="ticks sug">
+          <li>캘린더마다 업무 또는 개인으로 표시하세요. 회사 계정은 업무로 시작합니다</li>
+          <li>개인 회의는 업무 도구와 메모리를 쓰지 않고, 요약도 amem에 저장하지 않습니다</li>
+          <li>힌트 패널에서 어떤 회의든 업무와 개인 사이를 바꿀 수 있습니다</li>
+          <li>듣기만 하는 웨비나에서도, Comet, Vivaldi, Opera 같은 브라우저에서도 자동으로 시작합니다</li>
+          <li>질문이 누구에게 한 것인지 알려 줍니다. 나, 이름이 불린 다른 사람, 또는 모두</li>
+          <li>끊겼다가 다시 이어진 통화는 새 회의가 아니라 같은 회의로 이어집니다</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="캘린더 설정 예시">
+        <h4>캘린더</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">업무</i><i>개인</i></span></div>
+        <div class="acct"><span>개인 Gmail</span><span class="seg"><i>업무</i><i class="on">개인</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>업무</i><i class="on">개인</i></span></div>
+        <span class="chip">개인 회의 · 개인 캘린더에 있음</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
         <div class="head" style="max-width:none">
           <h2>당신의 언어로</h2>
-          <p>1.9의 새 기능: Undertone이 17개 언어를 지원합니다. Mac의 언어를 따르며, 설정에서 다른 언어를 고를 수도 있습니다.</p>
+          <p>Undertone이 17개 언어를 지원합니다. Mac의 언어를 따르며, 설정에서 다른 언어를 고를 수도 있습니다.</p>
         </div>
         <ul class="ticks sug">
           <li>힌트, 답변, 요약은 당신의 언어로 작성되고, 회의 용어는 말한 그대로 유지됩니다</li>
@@ -1261,9 +1257,9 @@
     <div class="wrap">
       <div class="head">
         <h2>베타 기간에는 무료</h2>
-        <p>지금 Undertone이 하는 모든 것은 베타 기간 동안 내 AI로 무료예요. 유료 요금제는 나중에 나올 예정이고, 내 키를 쓰는 베타는 계속 무료예요.</p>
+        <p>베타 기간에는 이 페이지의 모든 기능이 무료입니다. 이미 쓰는 AI를 그대로 쓰고, Undertone을 함께 만들어 주세요.</p>
       </div>
-      <div class="plans">
+      <div class="plans one">
         <div class="plan now">
           <div class="when">지금 이용 가능</div>
           <h3>베타, 내 AI 사용</h3>
@@ -1277,30 +1273,7 @@
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">다운로드</a>
         </div>
-        <div class="plan">
-          <div class="when">예정</div>
-          <h3>Undertone Pro</h3>
-          <div class="price">$18<small> / 월</small></div>
-          <p>AI 키를 설정하고 싶지 않은 분을 위해.</p>
-          <ul>
-            <li>호스팅 AI 포함, 키나 설정 불필요</li>
-            <li>모든 도구를 클릭 한 번으로 연결</li>
-            <li>통화 중 더 빠른 힌트</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <div class="when">예정</div>
-          <h3>팀</h3>
-          <div class="price">$30<small> / 시트 / 월</small></div>
-          <p>팀 전체가 쓰는 하나의 공통 어휘.</p>
-          <ul>
-            <li>늘 동기화되는 팀 공유 용어집</li>
-            <li>팀 미팅으로 만드는 신규 입사자용 온보딩 가이드</li>
-            <li>약어와 코드명은 한 번 익히면 모두가 알게 돼요</li>
-          </ul>
-        </div>
       </div>
-      <p class="sample" style="padding:16px 0 0">예정된 요금제와 가격은 바뀔 수 있어요. 어떤 요금제에서도 오디오는 Mac에 머물러요.</p>
     </div>
   </section>
 

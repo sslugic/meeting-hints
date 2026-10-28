@@ -325,6 +325,7 @@
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .plans.one { grid-template-columns: minmax(0, 520px); }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -443,7 +444,7 @@
   .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
   .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
   .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
-  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
   .bar + .bar { margin-top: 6px; }
   .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
   .bar.new i { background: var(--accent); }
@@ -581,7 +582,7 @@
       <a href="#how">仕組み</a>
       <a href="#features">機能</a>
       <a href="#claude">Claude</a>
-      <a href="#pricing">料金</a>
+      <a href="#pricing">無料ベータ</a>
       <a href="#privacy">プライバシー</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">更新履歴</a>
@@ -791,7 +792,7 @@
           <span class="n" aria-hidden="true">ステップ1</span>
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div>
           <h3>バックグラウンドで聞き取る</h3>
-          <p>Zoom、Teams、Meet、Slackがマイクを使うと自動で起動し、通話とあなたの発言をMac上で文字起こしします。音声がアップロードされることはありません。</p>
+          <p>Zoom、Teams、Meet、Slack、ブラウザで通話が始まると、聞いているだけでも自動で始まり、Mac 上で文字起こしします。音声がアップロードされることはありません。</p>
         </div>
         <div class="step">
           <span class="n" aria-hidden="true">ステップ2</span>
@@ -903,7 +904,7 @@
         <div><dt>人物</dt><dd>招待に含まれる全員を、役割、担当していること、一緒に出たミーティング、あなたが対応すべきこととともに。</dd></div>
         <div><dt>リマインダー</dt><dd>「金曜までに」が日付になります。前営業日の9:00にリマインダーが届き、期限切れのタスクは赤く表示されます。</dd></div>
         <div><dt>用語集ガイド</dt><dd>チームの用語集を、新メンバー向けの共有できるガイドに。HTMLやMarkdownでそのまま書き出せます。</dd></div>
-        <div><dt>修正と翻訳</dt><dd>聞き間違えた単語を右クリックすると、Undertoneが修正し、次からはその単語を聞き取れるようにします。どの部分でも15言語に翻訳できます。</dd></div>
+        <div><dt>修正と翻訳</dt><dd>聞き間違えた単語を右クリックすると、Undertoneが修正し、次からはその単語を聞き取れるようにします。どの部分でも19言語に翻訳できます。</dd></div>
       </dl>
     </div>
   </section>
@@ -1091,7 +1092,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>数秒で回答</h2>
-          <p>1.8の新機能：Undertoneはすでに知っていることから高速モデルで答え、それで足りないときだけツールを検索します。</p>
+          <p>Undertoneはすでに知っていることから高速モデルで答え、それで足りないときだけツールを検索します。</p>
         </div>
         <ul class="ticks sug">
           <li>通話中の回答カードは、バックグラウンドのブリーフとメモリを活用</li>
@@ -1103,45 +1104,14 @@
       <div class="bars" aria-label="Undertone独自のベンチマークで測定">
         <div>
           <h4>「質問」、最初の言葉が出るまで <small>中央値</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12.7秒</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4.5秒</b></div>
+          <div class="bar"><span>以前</span><i style="--w:100%"></i><b>12.7秒</b></div>
+          <div class="bar new"><span>現在</span><i style="--w:35%"></i><b>4.5秒</b></div>
         </div>
         <div>
           <h4>ライブ回答、返信全体 <small>中央値</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16.5秒</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5.1秒</b></div>
+          <div class="bar"><span>以前</span><i style="--w:100%"></i><b>16.5秒</b></div>
+          <div class="bar new"><span>現在</span><i style="--w:31%"></i><b>5.1秒</b></div>
         </div>
-        <div>
-          <h4>ライブ回答、一度目で正解</h4>
-          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>仕事は仕事のまま</h2>
-          <p>1.11 の新機能：Undertone は仕事の会議と個人の会議を見分けます。ウェビナーや個人のカレンダーの通話は、仕事のツールに触れず一般的な知識で解説します。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>カレンダーごとに「仕事」か「個人」を設定できます。会社のアカウントは最初から「仕事」です</li>
-          <li>個人の会議は仕事のツールやメモリを使わず、まとめも amem に保存しません</li>
-          <li>ヒントパネルで、どの会議も「仕事」と「個人」を切り替えられます</li>
-          <li>聞くだけのウェビナーでも、Comet、Vivaldi、Opera などのブラウザでも自動で始まります</li>
-          <li>質問が誰へのものかを示します。あなた、名前の出た別の人、または全員</li>
-          <li>途切れて再開した通話は、新しい会議ではなく同じ会議の続きになります</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="カレンダー設定の例">
-        <h4>カレンダー</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">仕事</i><i>個人</i></span></div>
-        <div class="acct"><span>個人の Gmail</span><span class="seg"><i>仕事</i><i class="on">個人</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>仕事</i><i class="on">個人</i></span></div>
-        <span class="chip">個人の会議 · 個人のカレンダー</span>
       </div>
     </div>
   </section>
@@ -1151,7 +1121,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>そのまま貼れる回答</h2>
-          <p>1.10 の新機能：「質問」は、頼んだものから答えます。下書きはコピーしてそのまま使える 1 つのメッセージで届き、足りないものはその下に書かれます。</p>
+          <p>「質問」は、頼んだものから答えます。下書きはコピーしてそのまま使える 1 つのメッセージで届き、足りないものはその下に書かれます。</p>
         </div>
         <ul class="ticks sug">
           <li>Slack やメール用のおすすめ下書きを 1 つ、専用のコピーボタン付きで</li>
@@ -1178,12 +1148,38 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>仕事は仕事のまま</h2>
+          <p>Undertone は仕事の会議と個人の会議を見分けます。ウェビナーや個人のカレンダーの通話は、仕事のツールに触れず一般的な知識で解説します。</p>
+        </div>
+        <ul class="ticks sug">
+          <li>カレンダーごとに「仕事」か「個人」を設定できます。会社のアカウントは最初から「仕事」です</li>
+          <li>個人の会議は仕事のツールやメモリを使わず、まとめも amem に保存しません</li>
+          <li>ヒントパネルで、どの会議も「仕事」と「個人」を切り替えられます</li>
+          <li>聞くだけのウェビナーでも、Comet、Vivaldi、Opera などのブラウザでも自動で始まります</li>
+          <li>質問が誰へのものかを示します。あなた、名前の出た別の人、または全員</li>
+          <li>途切れて再開した通話は、新しい会議ではなく同じ会議の続きになります</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="カレンダー設定の例">
+        <h4>カレンダー</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">仕事</i><i>個人</i></span></div>
+        <div class="acct"><span>個人の Gmail</span><span class="seg"><i>仕事</i><i class="on">個人</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>仕事</i><i class="on">個人</i></span></div>
+        <span class="chip">個人の会議 · 個人のカレンダー</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
         <div class="head" style="max-width:none">
           <h2>あなたの言語で</h2>
-          <p>1.9 の新機能：Undertone は 17 言語に対応しました。Mac の言語に合わせて表示され、設定で別の言語も選べます。</p>
+          <p>Undertone は 17 言語に対応しました。Mac の言語に合わせて表示され、設定で別の言語も選べます。</p>
         </div>
         <ul class="ticks sug">
           <li>ヒント、回答、まとめはあなたの言語で書かれます。会議の用語は話されたままです</li>
@@ -1261,9 +1257,9 @@
     <div class="wrap">
       <div class="head">
         <h2>ベータ期間中は無料</h2>
-        <p>Undertoneの現在の機能はすべて、ベータ期間中は自分のAIを使って無料で利用できます。有料プランは今後予定していますが、自分のキーを使うベータは引き続き無料です。</p>
+        <p>このページの機能はベータ期間中すべて無料です。お使いの AI をそのまま使い、Undertone づくりに参加してください。</p>
       </div>
-      <div class="plans">
+      <div class="plans one">
         <div class="plan now">
           <div class="when">提供中</div>
           <h3>ベータ、自分のAIを使用</h3>
@@ -1277,30 +1273,7 @@
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">ダウンロード</a>
         </div>
-        <div class="plan">
-          <div class="when">予定</div>
-          <h3>Undertone Pro</h3>
-          <div class="price">$18<small> / 月</small></div>
-          <p>AIキーを設定したくない人に。</p>
-          <ul>
-            <li>ホスト型AIを搭載、キーや設定は不要</li>
-            <li>すべてのツールにワンクリックで接続</li>
-            <li>通話中のヒントがより速く</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <div class="when">予定</div>
-          <h3>チーム</h3>
-          <div class="price">$30<small> / シート / 月</small></div>
-          <p>チーム全体で、ひとつの共通語彙。</p>
-          <ul>
-            <li>常に同期されるチーム共有の用語集</li>
-            <li>チームのミーティングから作る、新メンバー向けオンボーディングガイド</li>
-            <li>略語やコードネームは、一度覚えれば全員のものに</li>
-          </ul>
-        </div>
       </div>
-      <p class="sample" style="padding:16px 0 0">予定しているプランと価格は変更される場合があります。どのプランでも、音声はMacの中にとどまります。</p>
     </div>
   </section>
 

@@ -351,6 +351,7 @@
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .plans.one { grid-template-columns: minmax(0, 520px); }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -469,7 +470,7 @@
   .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
   .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
   .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
-  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
   .bar + .bar { margin-top: 6px; }
   .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
   .bar.new i { background: var(--accent); }
@@ -607,7 +608,7 @@
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
       <a href="#claude">Claude</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#pricing">Free beta</a>
       <a href="#privacy">Privacy</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">Changelog</a>
@@ -818,7 +819,7 @@
           <span class="n" aria-hidden="true">Step 1</span>
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div>
           <h3>Listens in the background</h3>
-          <p>Starts on its own when Zoom, Teams, Meet or Slack uses your mic, and transcribes the call and your side of it on your Mac. Audio is never uploaded.</p>
+          <p>Starts on its own when a call begins in Zoom, Teams, Meet, Slack or your browser, even when you're only listening, and transcribes it on your Mac. Audio is never uploaded.</p>
         </div>
         <div class="step">
           <span class="n" aria-hidden="true">Step 2</span>
@@ -846,7 +847,7 @@
         <div class="tabs" role="tablist" aria-label="Sample meetings">
           <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>Engineering sync</b><span>A release process acronym</span></button>
           <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>Sales handover</b><span>A contract term</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Board Q&amp;A</b><span>A question aimed at you</span></button>
+          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Board Q&amp;A</b><span>A question for you</span></button>
         </div>
         <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
           <div class="hud-head">
@@ -930,7 +931,7 @@
         <div><dt>People</dt><dd>Everyone from your invites with their role and what they work on, your meetings together and what you owe them.</dd></div>
         <div><dt>Reminders</dt><dd>“By Friday” becomes a date. A reminder lands at 9:00 the working day before, and overdue tasks turn red.</dd></div>
         <div><dt>Glossary guide</dt><dd>Turn a team's glossary into a shareable guide for new joiners, ready to export as HTML or Markdown.</dd></div>
-        <div><dt>Fix and translate</dt><dd>Right-click a misheard word and Undertone corrects it and listens for it next time. Translate any passage into 15 languages.</dd></div>
+        <div><dt>Fix and translate</dt><dd>Right-click a misheard word and Undertone corrects it and listens for it next time. Translate any passage into 19 languages.</dd></div>
       </dl>
     </div>
   </section>
@@ -1118,7 +1119,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Answers in seconds</h2>
-          <p>New in 1.8: Undertone answers from what it already knows with a fast model, and only searches your tools when that isn't enough.</p>
+          <p>Undertone answers from what it already knows with a fast model, and only searches your tools when that isn't enough.</p>
         </div>
         <ul class="ticks sug">
           <li>Answer cards during a call draw on background briefs and your memory</li>
@@ -1130,45 +1131,14 @@
       <div class="bars" aria-label="Measured with Undertone's own benchmark">
         <div>
           <h4>Ask, time to first words <small>median</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12.7 s</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4.5 s</b></div>
+          <div class="bar"><span>Before</span><i style="--w:100%"></i><b>12.7 s</b></div>
+          <div class="bar new"><span>Now</span><i style="--w:35%"></i><b>4.5 s</b></div>
         </div>
         <div>
           <h4>Live answers, full reply <small>median</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16.5 s</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5.1 s</b></div>
+          <div class="bar"><span>Before</span><i style="--w:100%"></i><b>16.5 s</b></div>
+          <div class="bar new"><span>Now</span><i style="--w:31%"></i><b>5.1 s</b></div>
         </div>
-        <div>
-          <h4>Live answers, right on the first try</h4>
-          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Work stays work</h2>
-          <p>New in 1.11: Undertone tells work meetings from personal ones. A webinar or a call on your personal calendar is explained from general knowledge, without touching your work tools.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Mark each calendar Work or Personal; company accounts start as Work</li>
-          <li>Personal meetings skip your work tools and memory, and their recaps stay out of amem</li>
-          <li>Switch any meeting between Work and Personal from the hints panel</li>
-          <li>Starts on its own for webinars you only listen to, and in more browsers like Comet, Vivaldi and Opera</li>
-          <li>Says who a question was for: you, someone else by name, or the whole room</li>
-          <li>A call that drops and comes back continues the same meeting instead of starting a new one</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="Sample calendar settings">
-        <h4>Calendars</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Work</i><i>Personal</i></span></div>
-        <div class="acct"><span>Personal Gmail</span><span class="seg"><i>Work</i><i class="on">Personal</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Work</i><i class="on">Personal</i></span></div>
-        <span class="chip">Personal meeting · on a personal calendar</span>
       </div>
     </div>
   </section>
@@ -1178,7 +1148,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Answers you can paste</h2>
-          <p>New in 1.10: Ask leads with what you asked for. A draft comes as one message, ready to copy, with anything missing listed underneath.</p>
+          <p>Ask leads with what you asked for. A draft comes as one message, ready to copy, with anything missing listed underneath.</p>
         </div>
         <ul class="ticks sug">
           <li>One recommended draft for Slack or email, with its own Copy button</li>
@@ -1205,12 +1175,38 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>Work stays work</h2>
+          <p>Undertone tells work meetings from personal ones. A webinar or a call on your personal calendar is explained from general knowledge, without touching your work tools.</p>
+        </div>
+        <ul class="ticks sug">
+          <li>Mark each calendar Work or Personal; company accounts start as Work</li>
+          <li>Personal meetings skip your work tools and memory, and their recaps stay out of amem</li>
+          <li>Switch any meeting between Work and Personal from the hints panel</li>
+          <li>Starts on its own for webinars you only listen to, and in more browsers like Comet, Vivaldi and Opera</li>
+          <li>Says who a question was for: you, someone else by name, or the whole room</li>
+          <li>A call that drops and comes back continues the same meeting instead of starting a new one</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="Sample calendar settings">
+        <h4>Calendars</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Work</i><i>Personal</i></span></div>
+        <div class="acct"><span>Personal Gmail</span><span class="seg"><i>Work</i><i class="on">Personal</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Work</i><i class="on">Personal</i></span></div>
+        <span class="chip">Personal meeting · on a personal calendar</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
         <div class="head" style="max-width:none">
           <h2>Speaks your language</h2>
-          <p>New in 1.9: Undertone comes in 17 languages. It follows your Mac's language, and you can pick another in Settings.</p>
+          <p>Undertone comes in 17 languages. It follows your Mac's language, and you can pick another in Settings.</p>
         </div>
         <ul class="ticks sug">
           <li>Hints, answers and recaps are written in your language; terms from the meeting stay as they were said</li>
@@ -1288,9 +1284,9 @@
     <div class="wrap">
       <div class="head">
         <h2>Free while it's in beta</h2>
-        <p>Everything Undertone does today is free during the beta, with your own AI. Paid plans are planned for later; the beta stays free with your own key.</p>
+        <p>Every feature on this page is free during the beta. Bring the AI you already use, and help shape what Undertone becomes.</p>
       </div>
-      <div class="plans">
+      <div class="plans one">
         <div class="plan now">
           <div class="when">Available now</div>
           <h3>Beta, bring your own AI</h3>
@@ -1304,30 +1300,7 @@
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">Download</a>
         </div>
-        <div class="plan">
-          <div class="when">Planned</div>
-          <h3>Undertone Pro</h3>
-          <div class="price">$18<small> / month</small></div>
-          <p>For people who'd rather not set up an AI key.</p>
-          <ul>
-            <li>Hosted AI included, no key or setup</li>
-            <li>One-click connections for every tool</li>
-            <li>Faster hints during calls</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <div class="when">Planned</div>
-          <h3>Team</h3>
-          <div class="price">$30<small> / seat / month</small></div>
-          <p>One shared vocabulary for the whole team.</p>
-          <ul>
-            <li>A shared team glossary that stays in sync</li>
-            <li>An onboarding guide for new hires, built from the team's meetings</li>
-            <li>Acronyms and code names learned once, known by everyone</li>
-          </ul>
-        </div>
       </div>
-      <p class="sample" style="padding:16px 0 0">Planned plans and prices may change. Audio stays on your Mac on every plan.</p>
     </div>
   </section>
 

@@ -325,6 +325,7 @@
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .plans.one { grid-template-columns: minmax(0, 520px); }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -443,7 +444,7 @@
   .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
   .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
   .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
-  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
   .bar + .bar { margin-top: 6px; }
   .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
   .bar.new i { background: var(--accent); }
@@ -581,7 +582,7 @@
       <a href="#how">Як це працює</a>
       <a href="#features">Можливості</a>
       <a href="#claude">Claude</a>
-      <a href="#pricing">Ціни</a>
+      <a href="#pricing">Безкоштовна бета</a>
       <a href="#privacy">Приватність</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">Зміни</a>
@@ -791,7 +792,7 @@
           <span class="n" aria-hidden="true">Крок 1</span>
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div>
           <h3>Слухає у фоні</h3>
-          <p>Запускається сам, коли Zoom, Teams, Meet або Slack використовують мікрофон, і розшифровує дзвінок і вашу мову на вашому Mac. Аудіо ніколи не завантажується.</p>
+          <p>Запускається сам, коли починається дзвінок у Zoom, Teams, Meet, Slack чи браузері, навіть якщо ви лише слухаєте, і розшифровує його на вашому Mac. Аудіо нікуди не завантажується.</p>
         </div>
         <div class="step">
           <span class="n" aria-hidden="true">Крок 2</span>
@@ -819,7 +820,7 @@
         <div class="tabs" role="tablist" aria-label="Приклади зустрічей">
           <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>Синк інженерів</b><span>Абревіатура з релізного процесу</span></button>
           <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>Передача від продажів</b><span>Термін із договору</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Запитання ради директорів</b><span>Запитання, адресоване вам</span></button>
+          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Запитання ради директорів</b><span>Питання до вас</span></button>
         </div>
         <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
           <div class="hud-head">
@@ -903,7 +904,7 @@
         <div><dt>Люди</dt><dd>Усі з ваших запрошень — з роллю і тим, над чим вони працюють, вашими спільними зустрічами та тим, що ви їм винні.</dd></div>
         <div><dt>Нагадування</dt><dd>«До п’ятниці» стає датою. Нагадування приходить о 9:00 за робочий день до строку, а прострочені завдання червоніють.</dd></div>
         <div><dt>Гід за глосарієм</dt><dd>Перетворіть глосарій команди на гід для новачків, яким можна поділитися, — з експортом у HTML або Markdown.</dd></div>
-        <div><dt>Виправлення й переклад</dt><dd>Клацніть правою кнопкою на неправильно почутому слові — Undertone виправить його і наступного разу на нього зважатиме. Перекладайте будь-який фрагмент 15 мовами.</dd></div>
+        <div><dt>Виправлення й переклад</dt><dd>Клацніть правою кнопкою на неправильно почутому слові — Undertone виправить його і наступного разу на нього зважатиме. Перекладайте будь-який фрагмент 19 мовами.</dd></div>
       </dl>
     </div>
   </section>
@@ -1091,7 +1092,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Відповіді за секунди</h2>
-          <p>Нове в 1.8: Undertone відповідає швидкою моделлю на основі того, що вже знає, і шукає у ваших інструментах, лише якщо цього недостатньо.</p>
+          <p>Undertone відповідає швидкою моделлю на основі того, що вже знає, і шукає у ваших інструментах, лише якщо цього недостатньо.</p>
         </div>
         <ul class="ticks sug">
           <li>Картки відповідей під час дзвінка спираються на фонові зведення та вашу пам’ять</li>
@@ -1103,45 +1104,14 @@
       <div class="bars" aria-label="Виміряно власним бенчмарком Undertone">
         <div>
           <h4>«Запитати», час до перших слів <small>медіана</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12,7 с</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4,5 с</b></div>
+          <div class="bar"><span>Раніше</span><i style="--w:100%"></i><b>12,7 с</b></div>
+          <div class="bar new"><span>Зараз</span><i style="--w:35%"></i><b>4,5 с</b></div>
         </div>
         <div>
           <h4>Відповіді під час дзвінка, повна відповідь <small>медіана</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16,5 с</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5,1 с</b></div>
+          <div class="bar"><span>Раніше</span><i style="--w:100%"></i><b>16,5 с</b></div>
+          <div class="bar new"><span>Зараз</span><i style="--w:31%"></i><b>5,1 с</b></div>
         </div>
-        <div>
-          <h4>Відповіді під час дзвінка, правильні з першої спроби</h4>
-          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Робота лишається роботою</h2>
-          <p>Нове в 1.11: Undertone відрізняє робочі зустрічі від особистих. Вебінар чи дзвінок з особистого календаря пояснюються загальними знаннями, без ваших робочих інструментів.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Позначте кожен календар як «Робота» або «Особисте»; корпоративні облікові записи за замовчуванням — «Робота»</li>
-          <li>Особисті зустрічі не використовують ваші робочі інструменти й пам’ять, а їхні підсумки не потрапляють до amem</li>
-          <li>Перемикайте будь-яку зустріч між «Робота» й «Особисте» на панелі підказок</li>
-          <li>Запускається сам на вебінарах, які ви лише слухаєте, і в нових браузерах — Comet, Vivaldi та Opera</li>
-          <li>Показує, кому поставили питання: вам, іншій людині на ім’я чи всім</li>
-          <li>Якщо дзвінок перервався й відновився, це продовження тієї самої зустрічі, а не нова</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="Приклад налаштувань календарів">
-        <h4>Календарі</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Робота</i><i>Особиста</i></span></div>
-        <div class="acct"><span>Особистий Gmail</span><span class="seg"><i>Робота</i><i class="on">Особиста</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Робота</i><i class="on">Особиста</i></span></div>
-        <span class="chip">Особиста зустріч · в особистому календарі</span>
       </div>
     </div>
   </section>
@@ -1151,7 +1121,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Відповіді, які можна вставити</h2>
-          <p>Нове в 1.10: «Запитати» починає з того, про що ви просили. Чернетка надходить одним повідомленням, готовим до копіювання, а чого бракує — зазначено нижче.</p>
+          <p>«Запитати» починає з того, про що ви просили. Чернетка надходить одним повідомленням, готовим до копіювання, а чого бракує — зазначено нижче.</p>
         </div>
         <ul class="ticks sug">
           <li>Одна рекомендована чернетка для Slack чи листа, з власною кнопкою «Скопіювати»</li>
@@ -1178,12 +1148,38 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>Робота лишається роботою</h2>
+          <p>Undertone відрізняє робочі зустрічі від особистих. Вебінар чи дзвінок з особистого календаря пояснюються загальними знаннями, без ваших робочих інструментів.</p>
+        </div>
+        <ul class="ticks sug">
+          <li>Позначте кожен календар як «Робота» або «Особисте»; корпоративні облікові записи за замовчуванням — «Робота»</li>
+          <li>Особисті зустрічі не використовують ваші робочі інструменти й пам’ять, а їхні підсумки не потрапляють до amem</li>
+          <li>Перемикайте будь-яку зустріч між «Робота» й «Особисте» на панелі підказок</li>
+          <li>Запускається сам на вебінарах, які ви лише слухаєте, і в нових браузерах — Comet, Vivaldi та Opera</li>
+          <li>Показує, кому поставили питання: вам, іншій людині на ім’я чи всім</li>
+          <li>Якщо дзвінок перервався й відновився, це продовження тієї самої зустрічі, а не нова</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="Приклад налаштувань календарів">
+        <h4>Календарі</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Робота</i><i>Особиста</i></span></div>
+        <div class="acct"><span>Особистий Gmail</span><span class="seg"><i>Робота</i><i class="on">Особиста</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Робота</i><i class="on">Особиста</i></span></div>
+        <span class="chip">Особиста зустріч · в особистому календарі</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
         <div class="head" style="max-width:none">
           <h2>Розмовляє вашою мовою</h2>
-          <p>Нове в 1.9: Undertone доступний 17 мовами. Він слідує мові вашого Mac, а в налаштуваннях можна вибрати іншу.</p>
+          <p>Undertone доступний 17 мовами. Він слідує мові вашого Mac, а в налаштуваннях можна вибрати іншу.</p>
         </div>
         <ul class="ticks sug">
           <li>Підказки, відповіді й підсумки пишуться вашою мовою; терміни із зустрічі лишаються такими, як їх сказали</li>
@@ -1261,9 +1257,9 @@
     <div class="wrap">
       <div class="head">
         <h2>Безкоштовно, поки триває бета</h2>
-        <p>Усе, що Undertone вміє сьогодні, безкоштовне на час бети — з вашим власним ШІ. Платні тарифи плануються пізніше; з власним ключем бета залишиться безкоштовною.</p>
+        <p>Усе на цій сторінці безкоштовне під час бети. Користуйтеся ШІ, який у вас уже є, і допоможіть зробити Undertone кращим.</p>
       </div>
-      <div class="plans">
+      <div class="plans one">
         <div class="plan now">
           <div class="when">Доступно зараз</div>
           <h3>Бета, зі своїм ШІ</h3>
@@ -1277,30 +1273,7 @@
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">Завантажити</a>
         </div>
-        <div class="plan">
-          <div class="when">У планах</div>
-          <h3>Undertone Pro</h3>
-          <div class="price">$18<small> / місяць</small></div>
-          <p>Для тих, хто не хоче налаштовувати ключ ШІ.</p>
-          <ul>
-            <li>Хмарний ШІ включено, без ключа й налаштування</li>
-            <li>Підключення будь-яких інструментів в один клік</li>
-            <li>Швидші підказки під час дзвінків</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <div class="when">У планах</div>
-          <h3>Команда</h3>
-          <div class="price">$30<small> / місце / місяць</small></div>
-          <p>Спільний словник для всієї команди.</p>
-          <ul>
-            <li>Спільний глосарій команди, який завжди синхронізовано</li>
-            <li>Гід для онбордингу новачків, зібраний за зустрічами команди</li>
-            <li>Абревіатури й кодові назви: раз вивчили — знають усі</li>
-          </ul>
-        </div>
       </div>
-      <p class="sample" style="padding:16px 0 0">Заплановані тарифи й ціни можуть змінитися. На будь-якому тарифі аудіо залишається на вашому Mac.</p>
     </div>
   </section>
 

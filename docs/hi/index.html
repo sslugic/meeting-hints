@@ -325,6 +325,7 @@
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .plans.one { grid-template-columns: minmax(0, 520px); }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -443,7 +444,7 @@
   .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
   .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
   .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
-  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
   .bar + .bar { margin-top: 6px; }
   .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
   .bar.new i { background: var(--accent); }
@@ -581,7 +582,7 @@
       <a href="#how">यह कैसे काम करता है</a>
       <a href="#features">फ़ीचर्स</a>
       <a href="#claude">Claude</a>
-      <a href="#pricing">कीमत</a>
+      <a href="#pricing">मुफ़्त बीटा</a>
       <a href="#privacy">प्राइवेसी</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">चेंजलॉग</a>
@@ -791,7 +792,7 @@
           <span class="n" aria-hidden="true">स्टेप 1</span>
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div>
           <h3>बैकग्राउंड में सुनता है</h3>
-          <p>जब Zoom, Teams, Meet या Slack आपका माइक इस्तेमाल करते हैं, तो यह अपने आप शुरू हो जाता है और कॉल व उसमें आपकी तरफ़ की बात आपके Mac पर ट्रांसक्राइब करता है। ऑडियो कभी अपलोड नहीं होता।</p>
+          <p>Zoom, Teams, Meet, Slack या आपके ब्राउज़र में कॉल शुरू होते ही अपने आप शुरू होता है, भले आप सिर्फ़ सुन रहे हों, और आपके Mac पर ट्रांसक्राइब करता है। ऑडियो कभी अपलोड नहीं होता।</p>
         </div>
         <div class="step">
           <span class="n" aria-hidden="true">स्टेप 2</span>
@@ -819,7 +820,7 @@
         <div class="tabs" role="tablist" aria-label="सैंपल मीटिंग्स">
           <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>इंजीनियरिंग सिंक</b><span>रिलीज़ प्रोसेस का एक एक्रोनिम</span></button>
           <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>सेल्स हैंडओवर</b><span>कॉन्ट्रैक्ट का एक टर्म</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>बोर्ड Q&amp;A</b><span>आपसे पूछा गया सवाल</span></button>
+          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>बोर्ड Q&amp;A</b><span>आपसे एक सवाल</span></button>
         </div>
         <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
           <div class="hud-head">
@@ -903,7 +904,7 @@
         <div><dt>लोग</dt><dd>आपके इनवाइट्स में शामिल हर व्यक्ति, उनकी भूमिका और वे किस पर काम करते हैं, आपकी साथ की मीटिंग्स और आपको उन्हें क्या देना है।</dd></div>
         <div><dt>रिमाइंडर</dt><dd>“शुक्रवार तक” एक तारीख़ बन जाता है। पिछले वर्किंग डे पर 9:00 बजे रिमाइंडर आता है, और ओवरड्यू टास्क लाल हो जाते हैं।</dd></div>
         <div><dt>शब्दावली गाइड</dt><dd>टीम की शब्दावली को नए जुड़ने वालों के लिए शेयर करने लायक गाइड में बदलें, HTML या Markdown में एक्सपोर्ट के लिए तैयार।</dd></div>
-        <div><dt>सुधारें और अनुवाद करें</dt><dd>गलत सुने गए शब्द पर राइट-क्लिक करें, Undertone उसे ठीक करता है और अगली बार उस पर ध्यान देता है। किसी भी हिस्से का 15 भाषाओं में अनुवाद करें।</dd></div>
+        <div><dt>सुधारें और अनुवाद करें</dt><dd>गलत सुने गए शब्द पर राइट-क्लिक करें, Undertone उसे ठीक करता है और अगली बार उस पर ध्यान देता है। किसी भी हिस्से का 19 भाषाओं में अनुवाद करें।</dd></div>
       </dl>
     </div>
   </section>
@@ -1091,7 +1092,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>सेकंडों में जवाब</h2>
-          <p>1.8 में नया: Undertone एक तेज़ मॉडल के साथ उससे जवाब देता है जो उसे पहले से पता है, और आपके टूल्स में तभी खोजता है जब वह काफ़ी न हो।</p>
+          <p>Undertone एक तेज़ मॉडल के साथ उससे जवाब देता है जो उसे पहले से पता है, और आपके टूल्स में तभी खोजता है जब वह काफ़ी न हो।</p>
         </div>
         <ul class="ticks sug">
           <li>कॉल के दौरान जवाब कार्ड बैकग्राउंड ब्रीफ़ और आपकी मेमोरी से मदद लेते हैं</li>
@@ -1103,45 +1104,14 @@
       <div class="bars" aria-label="Undertone के अपने बेंचमार्क से मापा गया">
         <div>
           <h4>“पूछें”, पहले शब्दों तक का समय <small>मीडियन</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12.7 सेकंड</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4.5 सेकंड</b></div>
+          <div class="bar"><span>पहले</span><i style="--w:100%"></i><b>12.7 सेकंड</b></div>
+          <div class="bar new"><span>अब</span><i style="--w:35%"></i><b>4.5 सेकंड</b></div>
         </div>
         <div>
           <h4>लाइव जवाब, पूरा जवाब <small>मीडियन</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16.5 सेकंड</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5.1 सेकंड</b></div>
+          <div class="bar"><span>पहले</span><i style="--w:100%"></i><b>16.5 सेकंड</b></div>
+          <div class="bar new"><span>अब</span><i style="--w:31%"></i><b>5.1 सेकंड</b></div>
         </div>
-        <div>
-          <h4>लाइव जवाब, पहली बार में सही</h4>
-          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>काम, काम की जगह</h2>
-          <p>1.11 में नया: Undertone काम की मीटिंग और निजी मीटिंग को अलग पहचानता है। निजी कैलेंडर का वेबिनार या कॉल सामान्य जानकारी से समझाया जाता है, आपके काम के टूल छुए बिना।</p>
-        </div>
-        <ul class="ticks sug">
-          <li>हर कैलेंडर को काम या निजी चिह्नित करें; कंपनी खाते काम से शुरू होते हैं</li>
-          <li>निजी मीटिंग आपके काम के टूल और मेमोरी का इस्तेमाल नहीं करतीं, और उनके सारांश amem में नहीं जाते</li>
-          <li>संकेत पैनल से किसी भी मीटिंग को काम और निजी के बीच बदलें</li>
-          <li>जिन वेबिनार को आप सिर्फ़ सुनते हैं उनमें, और Comet, Vivaldi, Opera जैसे और ब्राउज़र में अपने आप शुरू होता है</li>
-          <li>बताता है कि सवाल किससे पूछा गया: आपसे, नाम लेकर किसी और से, या सभी से</li>
-          <li>कटकर फिर जुड़ने वाली कॉल नई मीटिंग नहीं, उसी मीटिंग का हिस्सा बनती है</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="कैलेंडर सेटिंग्स का उदाहरण">
-        <h4>कैलेंडर</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">काम</i><i>निजी</i></span></div>
-        <div class="acct"><span>निजी Gmail</span><span class="seg"><i>काम</i><i class="on">निजी</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>काम</i><i class="on">निजी</i></span></div>
-        <span class="chip">निजी मीटिंग · निजी कैलेंडर पर</span>
       </div>
     </div>
   </section>
@@ -1151,7 +1121,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>पेस्ट करने लायक जवाब</h2>
-          <p>1.10 में नया: पूछें अब वही पहले देता है जो आपने माँगा। ड्राफ़्ट एक ही संदेश के रूप में आता है, कॉपी के लिए तैयार, और जो कमी है वह नीचे लिखा होता है।</p>
+          <p>पूछें अब वही पहले देता है जो आपने माँगा। ड्राफ़्ट एक ही संदेश के रूप में आता है, कॉपी के लिए तैयार, और जो कमी है वह नीचे लिखा होता है।</p>
         </div>
         <ul class="ticks sug">
           <li>Slack या ईमेल के लिए एक सुझाया गया ड्राफ़्ट, अपने कॉपी बटन के साथ</li>
@@ -1178,12 +1148,38 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>काम, काम की जगह</h2>
+          <p>Undertone काम की मीटिंग और निजी मीटिंग को अलग पहचानता है। निजी कैलेंडर का वेबिनार या कॉल सामान्य जानकारी से समझाया जाता है, आपके काम के टूल छुए बिना।</p>
+        </div>
+        <ul class="ticks sug">
+          <li>हर कैलेंडर को काम या निजी चिह्नित करें; कंपनी खाते काम से शुरू होते हैं</li>
+          <li>निजी मीटिंग आपके काम के टूल और मेमोरी का इस्तेमाल नहीं करतीं, और उनके सारांश amem में नहीं जाते</li>
+          <li>संकेत पैनल से किसी भी मीटिंग को काम और निजी के बीच बदलें</li>
+          <li>जिन वेबिनार को आप सिर्फ़ सुनते हैं उनमें, और Comet, Vivaldi, Opera जैसे और ब्राउज़र में अपने आप शुरू होता है</li>
+          <li>बताता है कि सवाल किससे पूछा गया: आपसे, नाम लेकर किसी और से, या सभी से</li>
+          <li>कटकर फिर जुड़ने वाली कॉल नई मीटिंग नहीं, उसी मीटिंग का हिस्सा बनती है</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="कैलेंडर सेटिंग्स का उदाहरण">
+        <h4>कैलेंडर</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">काम</i><i>निजी</i></span></div>
+        <div class="acct"><span>निजी Gmail</span><span class="seg"><i>काम</i><i class="on">निजी</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>काम</i><i class="on">निजी</i></span></div>
+        <span class="chip">निजी मीटिंग · निजी कैलेंडर पर</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
         <div class="head" style="max-width:none">
           <h2>आपकी भाषा बोलता है</h2>
-          <p>1.9 में नया: Undertone 17 भाषाओं में उपलब्ध है। यह आपके Mac की भाषा अपनाता है, और आप Settings में कोई और भाषा चुन सकते हैं।</p>
+          <p>Undertone 17 भाषाओं में उपलब्ध है। यह आपके Mac की भाषा अपनाता है, और आप Settings में कोई और भाषा चुन सकते हैं।</p>
         </div>
         <ul class="ticks sug">
           <li>संकेत, जवाब और सारांश आपकी भाषा में लिखे जाते हैं; मीटिंग के शब्द वैसे ही रहते हैं जैसे बोले गए</li>
@@ -1261,9 +1257,9 @@
     <div class="wrap">
       <div class="head">
         <h2>बीटा के दौरान मुफ़्त</h2>
-        <p>Undertone आज जो कुछ भी करता है, वह बीटा के दौरान आपके अपने AI के साथ मुफ़्त है। पेड प्लान बाद में लाने की योजना है; बीटा आपकी अपनी API की के साथ मुफ़्त रहेगा।</p>
+        <p>बीटा के दौरान इस पेज की हर सुविधा मुफ़्त है। अपना मौजूदा AI इस्तेमाल करें और Undertone को आकार देने में मदद करें।</p>
       </div>
-      <div class="plans">
+      <div class="plans one">
         <div class="plan now">
           <div class="when">अभी उपलब्ध</div>
           <h3>बीटा, अपना AI लाएँ</h3>
@@ -1277,30 +1273,7 @@
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">डाउनलोड करें</a>
         </div>
-        <div class="plan">
-          <div class="when">योजना में</div>
-          <h3>Undertone Pro</h3>
-          <div class="price">$18<small> / माह</small></div>
-          <p>उनके लिए जो AI की सेट अप नहीं करना चाहते।</p>
-          <ul>
-            <li>होस्टेड AI शामिल, न API की, न सेटअप</li>
-            <li>हर टूल के लिए एक-क्लिक कनेक्शन</li>
-            <li>कॉल्स के दौरान तेज़ हिंट्स</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <div class="when">योजना में</div>
-          <h3>टीम</h3>
-          <div class="price">$30<small> / सीट / माह</small></div>
-          <p>पूरी टीम के लिए एक साझा शब्द-भंडार।</p>
-          <ul>
-            <li>एक साझा टीम शब्दावली जो सिंक में रहती है</li>
-            <li>नए लोगों के लिए ऑनबोर्डिंग गाइड, टीम की मीटिंग्स से बनी</li>
-            <li>एक्रोनिम और कोड नेम एक बार सीखे, सबको पता</li>
-          </ul>
-        </div>
       </div>
-      <p class="sample" style="padding:16px 0 0">योजना में शामिल प्लान और कीमतें बदल सकती हैं। हर प्लान में ऑडियो आपके Mac पर ही रहता है।</p>
     </div>
   </section>
 

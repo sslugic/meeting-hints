@@ -325,6 +325,7 @@
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .plans.one { grid-template-columns: minmax(0, 520px); }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -443,7 +444,7 @@
   .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
   .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
   .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
-  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
   .bar + .bar { margin-top: 6px; }
   .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
   .bar.new i { background: var(--accent); }
@@ -581,7 +582,7 @@
       <a href="#how">طريقة العمل</a>
       <a href="#features">الميزات</a>
       <a href="#claude">Claude</a>
-      <a href="#pricing">الأسعار</a>
+      <a href="#pricing">نسخة تجريبية مجانية</a>
       <a href="#privacy">الخصوصية</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">سجل التغييرات</a>
@@ -791,7 +792,7 @@
           <span class="n" aria-hidden="true">الخطوة 1</span>
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div>
           <h3>يستمع في الخلفية</h3>
-          <p>يبدأ تلقائيًا عندما يستخدم Zoom أو Teams أو Meet أو Slack الميكروفون، ويفرّغ المكالمة وكلامك أنت نصيًا على جهاز Mac. لا يُرفع الصوت أبدًا.</p>
+          <p>يبدأ تلقائيًا عند بدء مكالمة في Zoom أو Teams أو Meet أو Slack أو متصفحك، حتى لو كنت تستمع فقط، ويفرّغها على جهاز Mac. لا يُرفع الصوت أبدًا.</p>
         </div>
         <div class="step">
           <span class="n" aria-hidden="true">الخطوة 2</span>
@@ -819,7 +820,7 @@
         <div class="tabs" role="tablist" aria-label="اجتماعات نموذجية">
           <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>مزامنة الهندسة</b><span>اختصار في عملية الإصدار</span></button>
           <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>تسليم المبيعات</b><span>مصطلح في عقد</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>أسئلة وأجوبة مجلس الإدارة</b><span>سؤال موجَّه إليك</span></button>
+          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>أسئلة وأجوبة مجلس الإدارة</b><span>سؤال لك</span></button>
         </div>
         <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
           <div class="hud-head">
@@ -903,7 +904,7 @@
         <div><dt>الأشخاص</dt><dd>كل من في دعواتك مع دوره وما يعمل عليه، واجتماعاتكما معًا وما تدين له به.</dd></div>
         <div><dt>التذكيرات</dt><dd>«بحلول الجمعة» يصبح تاريخًا. يصلك تذكير الساعة 9:00 في يوم العمل السابق، والمهام المتأخرة تتحول إلى الأحمر.</dd></div>
         <div><dt>دليل المسرد</dt><dd>حوّل مسرد الفريق إلى دليل قابل للمشاركة للمنضمين الجدد، جاهز للتصدير بصيغة HTML أو Markdown.</dd></div>
-        <div><dt>التصحيح والترجمة</dt><dd>انقر بزر الماوس الأيمن على كلمة أُسيء سماعها فيصححها Undertone وينتبه لها في المرة القادمة. ترجم أي مقطع إلى 15 لغة.</dd></div>
+        <div><dt>التصحيح والترجمة</dt><dd>انقر بزر الماوس الأيمن على كلمة أُسيء سماعها فيصححها Undertone وينتبه لها في المرة القادمة. ترجم أي مقطع إلى 19 لغة.</dd></div>
       </dl>
     </div>
   </section>
@@ -1091,7 +1092,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>إجابات خلال ثوانٍ</h2>
-          <p>جديد في 1.8: يجيب Undertone مما يعرفه أصلًا باستخدام نموذج سريع، ولا يبحث في أدواتك إلا عندما لا يكفي ذلك.</p>
+          <p>يجيب Undertone مما يعرفه أصلًا باستخدام نموذج سريع، ولا يبحث في أدواتك إلا عندما لا يكفي ذلك.</p>
         </div>
         <ul class="ticks sug">
           <li>بطاقات الإجابة أثناء المكالمة تستند إلى موجزات الخلفية وذاكرتك</li>
@@ -1103,45 +1104,14 @@
       <div class="bars" aria-label="مقيسة بمعيار الأداء الخاص بـUndertone">
         <div>
           <h4>«اسأل»، الوقت حتى أول كلمات <small>الوسيط</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12.7 ث</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4.5 ث</b></div>
+          <div class="bar"><span>قبل</span><i style="--w:100%"></i><b>12.7 ث</b></div>
+          <div class="bar new"><span>الآن</span><i style="--w:35%"></i><b>4.5 ث</b></div>
         </div>
         <div>
           <h4>الإجابات المباشرة، الرد الكامل <small>الوسيط</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16.5 ث</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5.1 ث</b></div>
+          <div class="bar"><span>قبل</span><i style="--w:100%"></i><b>16.5 ث</b></div>
+          <div class="bar new"><span>الآن</span><i style="--w:31%"></i><b>5.1 ث</b></div>
         </div>
-        <div>
-          <h4>الإجابات المباشرة، صحيحة من المحاولة الأولى</h4>
-          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>العمل يبقى عملًا</h2>
-          <p>جديد في 1.11: يميّز Undertone اجتماعات العمل من الاجتماعات الشخصية. تُشرح الندوة أو المكالمة من تقويمك الشخصي بالمعرفة العامة، دون المساس بأدوات عملك.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>حدّد كل تقويم «عمل» أو «شخصي»؛ تبدأ حسابات الشركة «عمل»</li>
-          <li>لا تستخدم الاجتماعات الشخصية أدوات عملك أو ذاكرتك، وتبقى ملخصاتها خارج amem</li>
-          <li>بدّل أي اجتماع بين «عمل» و«شخصي» من لوحة التلميحات</li>
-          <li>يبدأ تلقائيًا في الندوات التي تستمع إليها فقط، وفي متصفحات أخرى مثل Comet وVivaldi وOpera</li>
-          <li>يوضح لمن وُجّه السؤال: لك، أو لشخص آخر باسمه، أو للجميع</li>
-          <li>المكالمة التي تنقطع ثم تعود تُكمل الاجتماع نفسه بدل بدء اجتماع جديد</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="مثال على إعدادات التقويمات">
-        <h4>التقويمات</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">عمل</i><i>شخصي</i></span></div>
-        <div class="acct"><span>Gmail الشخصي</span><span class="seg"><i>عمل</i><i class="on">شخصي</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>عمل</i><i class="on">شخصي</i></span></div>
-        <span class="chip">اجتماع شخصي · في تقويم شخصي</span>
       </div>
     </div>
   </section>
@@ -1151,7 +1121,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>إجابات جاهزة للصق</h2>
-          <p>جديد في 1.10: يبدأ «اسأل» بما طلبته. تأتي المسودة رسالةً واحدة جاهزة للنسخ، مع ذكر ما ينقص أسفلها.</p>
+          <p>يبدأ «اسأل» بما طلبته. تأتي المسودة رسالةً واحدة جاهزة للنسخ، مع ذكر ما ينقص أسفلها.</p>
         </div>
         <ul class="ticks sug">
           <li>مسودة واحدة مقترحة لـ Slack أو البريد الإلكتروني، مع زر نسخ خاص بها</li>
@@ -1178,12 +1148,38 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>العمل يبقى عملًا</h2>
+          <p>يميّز Undertone اجتماعات العمل من الاجتماعات الشخصية. تُشرح الندوة أو المكالمة من تقويمك الشخصي بالمعرفة العامة، دون المساس بأدوات عملك.</p>
+        </div>
+        <ul class="ticks sug">
+          <li>حدّد كل تقويم «عمل» أو «شخصي»؛ تبدأ حسابات الشركة «عمل»</li>
+          <li>لا تستخدم الاجتماعات الشخصية أدوات عملك أو ذاكرتك، وتبقى ملخصاتها خارج amem</li>
+          <li>بدّل أي اجتماع بين «عمل» و«شخصي» من لوحة التلميحات</li>
+          <li>يبدأ تلقائيًا في الندوات التي تستمع إليها فقط، وفي متصفحات أخرى مثل Comet وVivaldi وOpera</li>
+          <li>يوضح لمن وُجّه السؤال: لك، أو لشخص آخر باسمه، أو للجميع</li>
+          <li>المكالمة التي تنقطع ثم تعود تُكمل الاجتماع نفسه بدل بدء اجتماع جديد</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="مثال على إعدادات التقويمات">
+        <h4>التقويمات</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">عمل</i><i>شخصي</i></span></div>
+        <div class="acct"><span>Gmail الشخصي</span><span class="seg"><i>عمل</i><i class="on">شخصي</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>عمل</i><i class="on">شخصي</i></span></div>
+        <span class="chip">اجتماع شخصي · في تقويم شخصي</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
         <div class="head" style="max-width:none">
           <h2>يتحدث لغتك</h2>
-          <p>جديد في 1.9: يتوفر Undertone بـ 17 لغة. يتبع لغة جهاز Mac، ويمكنك اختيار لغة أخرى من الإعدادات.</p>
+          <p>يتوفر Undertone بـ 17 لغة. يتبع لغة جهاز Mac، ويمكنك اختيار لغة أخرى من الإعدادات.</p>
         </div>
         <ul class="ticks sug">
           <li>تُكتب التلميحات والإجابات والملخصات بلغتك، وتبقى مصطلحات الاجتماع كما قيلت</li>
@@ -1261,9 +1257,9 @@
     <div class="wrap">
       <div class="head">
         <h2>مجاني طوال الفترة التجريبية</h2>
-        <p>كل ما يفعله Undertone اليوم مجاني خلال الفترة التجريبية، مع الذكاء الاصطناعي الخاص بك. الخطط المدفوعة مخطط لها لاحقًا؛ وتبقى النسخة التجريبية مجانية مع مفتاحك الخاص.</p>
+        <p>كل ميزات هذه الصفحة مجانية خلال الفترة التجريبية. استخدم الذكاء الاصطناعي الذي لديك وساعد في تشكيل Undertone.</p>
       </div>
-      <div class="plans">
+      <div class="plans one">
         <div class="plan now">
           <div class="when">متاح الآن</div>
           <h3>نسخة تجريبية، بذكائك الاصطناعي الخاص</h3>
@@ -1277,30 +1273,7 @@
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">تنزيل</a>
         </div>
-        <div class="plan">
-          <div class="when">مخطط له</div>
-          <h3>Undertone Pro</h3>
-          <div class="price">$18<small> / شهريًا</small></div>
-          <p>لمن يفضّل عدم إعداد مفتاح ذكاء اصطناعي.</p>
-          <ul>
-            <li>ذكاء اصطناعي مستضاف مضمَّن، بلا مفتاح ولا إعداد</li>
-            <li>اتصالات بنقرة واحدة لكل أداة</li>
-            <li>تلميحات أسرع أثناء المكالمات</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <div class="when">مخطط له</div>
-          <h3>الفريق</h3>
-          <div class="price">$30<small> / مقعد / شهريًا</small></div>
-          <p>مفردات مشتركة واحدة للفريق كله.</p>
-          <ul>
-            <li>مسرد فريق مشترك يبقى متزامنًا</li>
-            <li>دليل تأهيل للموظفين الجدد، مبني من اجتماعات الفريق</li>
-            <li>اختصارات وأسماء رمزية تُتعلَّم مرة، ويعرفها الجميع</li>
-          </ul>
-        </div>
       </div>
-      <p class="sample" style="padding:16px 0 0">الخطط والأسعار المخطط لها قد تتغير. الصوت يبقى على جهاز Mac في كل خطة.</p>
     </div>
   </section>
 

@@ -325,6 +325,7 @@
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .plans.one { grid-template-columns: minmax(0, 520px); }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -443,7 +444,7 @@
   .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
   .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
   .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
-  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
   .bar + .bar { margin-top: 6px; }
   .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
   .bar.new i { background: var(--accent); }
@@ -581,7 +582,7 @@
       <a href="#how">So funktioniert’s</a>
       <a href="#features">Funktionen</a>
       <a href="#claude">Claude</a>
-      <a href="#pricing">Preise</a>
+      <a href="#pricing">Kostenlose Beta</a>
       <a href="#privacy">Datenschutz</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">Changelog</a>
@@ -791,7 +792,7 @@
           <span class="n" aria-hidden="true">Schritt 1</span>
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div>
           <h3>Hört im Hintergrund zu</h3>
-          <p>Startet von selbst, wenn Zoom, Teams, Meet oder Slack dein Mikrofon nutzt, und transkribiert den Call und deine Seite davon auf deinem Mac. Audio wird nie hochgeladen.</p>
+          <p>Startet von selbst, sobald ein Call in Zoom, Teams, Meet, Slack oder deinem Browser beginnt – auch wenn du nur zuhörst – und transkribiert ihn auf deinem Mac. Audio wird nie hochgeladen.</p>
         </div>
         <div class="step">
           <span class="n" aria-hidden="true">Schritt 2</span>
@@ -903,7 +904,7 @@
         <div><dt>Personen</dt><dd>Alle aus deinen Einladungen mit Rolle und Aufgabengebiet, euren gemeinsamen Meetings und dem, was du ihnen schuldest.</dd></div>
         <div><dt>Erinnerungen</dt><dd>„Bis Freitag“ wird zum Datum. Eine Erinnerung kommt um 9:00 am Werktag davor, und überfällige Aufgaben werden rot.</dd></div>
         <div><dt>Glossar-Guide</dt><dd>Mach aus dem Glossar eines Teams einen teilbaren Guide für Neue, bereit zum Export als HTML oder Markdown.</dd></div>
-        <div><dt>Korrigieren und übersetzen</dt><dd>Rechtsklick auf ein falsch verstandenes Wort, und Undertone korrigiert es und achtet beim nächsten Mal darauf. Übersetze jede Passage in 15 Sprachen.</dd></div>
+        <div><dt>Korrigieren und übersetzen</dt><dd>Rechtsklick auf ein falsch verstandenes Wort, und Undertone korrigiert es und achtet beim nächsten Mal darauf. Übersetze jede Passage in 19 Sprachen.</dd></div>
       </dl>
     </div>
   </section>
@@ -1091,7 +1092,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Antworten in Sekunden</h2>
-          <p>Neu in 1.8: Undertone antwortet mit einem schnellen Modell aus dem, was es schon weiß, und durchsucht deine Tools nur, wenn das nicht reicht.</p>
+          <p>Undertone antwortet mit einem schnellen Modell aus dem, was es schon weiß, und durchsucht deine Tools nur, wenn das nicht reicht.</p>
         </div>
         <ul class="ticks sug">
           <li>Antwortkarten im Call greifen auf Hintergrund-Briefings und dein Gedächtnis zurück</li>
@@ -1103,45 +1104,14 @@
       <div class="bars" aria-label="Gemessen mit Undertones eigenem Benchmark">
         <div>
           <h4>Fragen, Zeit bis zu den ersten Worten <small>Median</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12,7 s</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4,5 s</b></div>
+          <div class="bar"><span>Vorher</span><i style="--w:100%"></i><b>12,7 s</b></div>
+          <div class="bar new"><span>Jetzt</span><i style="--w:35%"></i><b>4,5 s</b></div>
         </div>
         <div>
           <h4>Live-Antworten, vollständige Antwort <small>Median</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16,5 s</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5,1 s</b></div>
+          <div class="bar"><span>Vorher</span><i style="--w:100%"></i><b>16,5 s</b></div>
+          <div class="bar new"><span>Jetzt</span><i style="--w:31%"></i><b>5,1 s</b></div>
         </div>
-        <div>
-          <h4>Live-Antworten, beim ersten Versuch richtig</h4>
-          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Arbeit bleibt Arbeit</h2>
-          <p>Neu in 1.11: Undertone unterscheidet Arbeits- von privaten Meetings. Ein Webinar oder ein Call aus deinem privaten Kalender wird mit Allgemeinwissen erklärt, ohne deine Arbeitstools anzufassen.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Markiere jeden Kalender als Arbeit oder Privat; Firmen-Accounts starten als Arbeit</li>
-          <li>Private Meetings nutzen weder deine Arbeitstools noch dein Gedächtnis, und ihre Zusammenfassungen bleiben aus amem heraus</li>
-          <li>Stelle jedes Meeting im Hinweisfenster zwischen Arbeit und Privat um</li>
-          <li>Startet von selbst bei Webinaren, denen du nur zuhörst, und in weiteren Browsern wie Comet, Vivaldi und Opera</li>
-          <li>Zeigt, an wen eine Frage ging: an dich, an jemand anderen mit Namen oder an alle</li>
-          <li>Bricht ein Call ab und geht weiter, bleibt es dasselbe Meeting statt eines neuen</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="Beispiel für Kalendereinstellungen">
-        <h4>Kalender</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Arbeit</i><i>Privat</i></span></div>
-        <div class="acct"><span>Privates Gmail</span><span class="seg"><i>Arbeit</i><i class="on">Privat</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Arbeit</i><i class="on">Privat</i></span></div>
-        <span class="chip">Privates Meeting · in einem privaten Kalender</span>
       </div>
     </div>
   </section>
@@ -1151,7 +1121,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Antworten zum Einfügen</h2>
-          <p>Neu in 1.10: Fragen beginnt mit dem, worum du gebeten hast. Ein Entwurf kommt als eine fertige Nachricht zum Kopieren, und was fehlt, steht darunter.</p>
+          <p>Fragen beginnt mit dem, worum du gebeten hast. Ein Entwurf kommt als eine fertige Nachricht zum Kopieren, und was fehlt, steht darunter.</p>
         </div>
         <ul class="ticks sug">
           <li>Ein empfohlener Entwurf für Slack oder E-Mail, mit eigenem Kopieren-Button</li>
@@ -1178,12 +1148,38 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>Arbeit bleibt Arbeit</h2>
+          <p>Undertone unterscheidet Arbeits- von privaten Meetings. Ein Webinar oder ein Call aus deinem privaten Kalender wird mit Allgemeinwissen erklärt, ohne deine Arbeitstools anzufassen.</p>
+        </div>
+        <ul class="ticks sug">
+          <li>Markiere jeden Kalender als Arbeit oder Privat; Firmen-Accounts starten als Arbeit</li>
+          <li>Private Meetings nutzen weder deine Arbeitstools noch dein Gedächtnis, und ihre Zusammenfassungen bleiben aus amem heraus</li>
+          <li>Stelle jedes Meeting im Hinweisfenster zwischen Arbeit und Privat um</li>
+          <li>Startet von selbst bei Webinaren, denen du nur zuhörst, und in weiteren Browsern wie Comet, Vivaldi und Opera</li>
+          <li>Zeigt, an wen eine Frage ging: an dich, an jemand anderen mit Namen oder an alle</li>
+          <li>Bricht ein Call ab und geht weiter, bleibt es dasselbe Meeting statt eines neuen</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="Beispiel für Kalendereinstellungen">
+        <h4>Kalender</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Arbeit</i><i>Privat</i></span></div>
+        <div class="acct"><span>Privates Gmail</span><span class="seg"><i>Arbeit</i><i class="on">Privat</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Arbeit</i><i class="on">Privat</i></span></div>
+        <span class="chip">Privates Meeting · in einem privaten Kalender</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
         <div class="head" style="max-width:none">
           <h2>Spricht deine Sprache</h2>
-          <p>Neu in 1.9: Undertone gibt es in 17 Sprachen. Es folgt der Sprache deines Macs, und in den Einstellungen kannst du eine andere wählen.</p>
+          <p>Undertone gibt es in 17 Sprachen. Es folgt der Sprache deines Macs, und in den Einstellungen kannst du eine andere wählen.</p>
         </div>
         <ul class="ticks sug">
           <li>Hinweise, Antworten und Zusammenfassungen werden in deiner Sprache geschrieben; Begriffe aus dem Meeting bleiben, wie sie gesagt wurden</li>
@@ -1261,9 +1257,9 @@
     <div class="wrap">
       <div class="head">
         <h2>Kostenlos während der Beta</h2>
-        <p>Alles, was Undertone heute kann, ist während der Beta kostenlos, mit deiner eigenen KI. Bezahlpläne sind für später geplant; die Beta bleibt mit deinem eigenen Key kostenlos.</p>
+        <p>Alles auf dieser Seite ist während der Beta kostenlos. Nutze die KI, die du schon hast, und gestalte Undertone mit.</p>
       </div>
-      <div class="plans">
+      <div class="plans one">
         <div class="plan now">
           <div class="when">Jetzt verfügbar</div>
           <h3>Beta, mit deiner eigenen KI</h3>
@@ -1277,30 +1273,7 @@
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">Download</a>
         </div>
-        <div class="plan">
-          <div class="when">Geplant</div>
-          <h3>Undertone Pro</h3>
-          <div class="price">$18<small> / Monat</small></div>
-          <p>Für alle, die keinen KI-Key einrichten möchten.</p>
-          <ul>
-            <li>Gehostete KI inklusive, ohne Key oder Einrichtung</li>
-            <li>Verbindungen mit einem Klick für jedes Tool</li>
-            <li>Schnellere Hinweise während Calls</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <div class="when">Geplant</div>
-          <h3>Team</h3>
-          <div class="price">$30<small> / Seat / Monat</small></div>
-          <p>Ein gemeinsames Vokabular fürs ganze Team.</p>
-          <ul>
-            <li>Ein gemeinsames Team-Glossar, das synchron bleibt</li>
-            <li>Ein Onboarding-Guide für neue Kolleg:innen, erstellt aus den Meetings des Teams</li>
-            <li>Akronyme und Codenamen einmal gelernt, allen bekannt</li>
-          </ul>
-        </div>
       </div>
-      <p class="sample" style="padding:16px 0 0">Geplante Pläne und Preise können sich ändern. Audio bleibt in jedem Plan auf deinem Mac.</p>
     </div>
   </section>
 

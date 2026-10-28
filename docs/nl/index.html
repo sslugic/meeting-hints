@@ -325,6 +325,7 @@
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .plans.one { grid-template-columns: minmax(0, 520px); }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -443,7 +444,7 @@
   .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
   .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
   .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
-  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
   .bar + .bar { margin-top: 6px; }
   .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
   .bar.new i { background: var(--accent); }
@@ -581,7 +582,7 @@
       <a href="#how">Hoe het werkt</a>
       <a href="#features">Functies</a>
       <a href="#claude">Claude</a>
-      <a href="#pricing">Prijzen</a>
+      <a href="#pricing">Gratis bèta</a>
       <a href="#privacy">Privacy</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">Changelog</a>
@@ -791,7 +792,7 @@
           <span class="n" aria-hidden="true">Stap 1</span>
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div>
           <h3>Luistert op de achtergrond</h3>
-          <p>Start vanzelf wanneer Zoom, Teams, Meet of Slack je microfoon gebruikt, en transcribeert de call en jouw kant ervan op je Mac. Audio wordt nooit geüpload.</p>
+          <p>Start vanzelf zodra een gesprek begint in Zoom, Teams, Meet, Slack of je browser, ook als je alleen luistert, en zet het om in tekst op je Mac. Audio wordt nooit geüpload.</p>
         </div>
         <div class="step">
           <span class="n" aria-hidden="true">Stap 2</span>
@@ -819,7 +820,7 @@
         <div class="tabs" role="tablist" aria-label="Voorbeeldmeetings">
           <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>Engineering-sync</b><span>Een afkorting uit het releaseproces</span></button>
           <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>Sales-overdracht</b><span>Een contractterm</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Board-Q&amp;A</b><span>Een vraag aan jou</span></button>
+          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Board-Q&amp;A</b><span>Een vraag voor jou</span></button>
         </div>
         <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
           <div class="hud-head">
@@ -903,7 +904,7 @@
         <div><dt>Mensen</dt><dd>Iedereen uit je uitnodigingen met hun rol en waar ze aan werken, je meetings samen en wat je ze nog verschuldigd bent.</dd></div>
         <div><dt>Herinneringen</dt><dd>‘Uiterlijk vrijdag’ wordt een datum. Een herinnering komt om 9:00 op de werkdag ervoor, en verlopen taken worden rood.</dd></div>
         <div><dt>Woordenlijstgids</dt><dd>Maak van de woordenlijst van een team een deelbare gids voor nieuwe collega’s, klaar om te exporteren als HTML of Markdown.</dd></div>
-        <div><dt>Corrigeren en vertalen</dt><dd>Klik met de rechtermuisknop op een verkeerd verstaan woord en Undertone verbetert het en let er de volgende keer op. Vertaal elke passage in 15 talen.</dd></div>
+        <div><dt>Corrigeren en vertalen</dt><dd>Klik met de rechtermuisknop op een verkeerd verstaan woord en Undertone verbetert het en let er de volgende keer op. Vertaal elke passage in 19 talen.</dd></div>
       </dl>
     </div>
   </section>
@@ -1091,7 +1092,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Antwoorden in seconden</h2>
-          <p>Nieuw in 1.8: Undertone antwoordt met een snel model vanuit wat het al weet, en doorzoekt je tools alleen als dat niet genoeg is.</p>
+          <p>Undertone antwoordt met een snel model vanuit wat het al weet, en doorzoekt je tools alleen als dat niet genoeg is.</p>
         </div>
         <ul class="ticks sug">
           <li>Antwoordkaarten tijdens een call putten uit achtergrondbriefings en je geheugen</li>
@@ -1103,45 +1104,14 @@
       <div class="bars" aria-label="Gemeten met Undertones eigen benchmark">
         <div>
           <h4>Vragen, tijd tot eerste woorden <small>mediaan</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12,7 s</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4,5 s</b></div>
+          <div class="bar"><span>Eerst</span><i style="--w:100%"></i><b>12,7 s</b></div>
+          <div class="bar new"><span>Nu</span><i style="--w:35%"></i><b>4,5 s</b></div>
         </div>
         <div>
           <h4>Live antwoorden, volledig antwoord <small>mediaan</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16,5 s</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5,1 s</b></div>
+          <div class="bar"><span>Eerst</span><i style="--w:100%"></i><b>16,5 s</b></div>
+          <div class="bar new"><span>Nu</span><i style="--w:31%"></i><b>5,1 s</b></div>
         </div>
-        <div>
-          <h4>Live antwoorden, in één keer goed</h4>
-          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Werk blijft werk</h2>
-          <p>Nieuw in 1.11: Undertone houdt werkvergaderingen en persoonlijke uit elkaar. Een webinar of een gesprek uit je persoonlijke agenda wordt met algemene kennis uitgelegd, zonder je werktools aan te raken.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Markeer elke agenda als Werk of Persoonlijk; bedrijfsaccounts beginnen als Werk</li>
-          <li>Persoonlijke vergaderingen gebruiken je werktools en geheugen niet, en hun samenvattingen blijven buiten amem</li>
-          <li>Zet elke vergadering in het hintpaneel om tussen Werk en Persoonlijk</li>
-          <li>Start vanzelf bij webinars waar je alleen naar luistert, en in meer browsers zoals Comet, Vivaldi en Opera</li>
-          <li>Laat zien voor wie een vraag was: jij, iemand anders bij naam of de hele zaal</li>
-          <li>Een gesprek dat wegvalt en terugkomt gaat verder in dezelfde vergadering in plaats van een nieuwe</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="Voorbeeld van agenda-instellingen">
-        <h4>Agenda’s</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Werk</i><i>Persoonlijk</i></span></div>
-        <div class="acct"><span>Persoonlijke Gmail</span><span class="seg"><i>Werk</i><i class="on">Persoonlijk</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Werk</i><i class="on">Persoonlijk</i></span></div>
-        <span class="chip">Persoonlijke vergadering · in een persoonlijke agenda</span>
       </div>
     </div>
   </section>
@@ -1151,7 +1121,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Antwoorden om te plakken</h2>
-          <p>Nieuw in 1.10: Vragen begint met wat je vroeg. Een concept komt als één bericht, klaar om te kopiëren, met wat ontbreekt eronder.</p>
+          <p>Vragen begint met wat je vroeg. Een concept komt als één bericht, klaar om te kopiëren, met wat ontbreekt eronder.</p>
         </div>
         <ul class="ticks sug">
           <li>Eén aanbevolen concept voor Slack of e-mail, met een eigen Kopieer-knop</li>
@@ -1178,12 +1148,38 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>Werk blijft werk</h2>
+          <p>Undertone houdt werkvergaderingen en persoonlijke uit elkaar. Een webinar of een gesprek uit je persoonlijke agenda wordt met algemene kennis uitgelegd, zonder je werktools aan te raken.</p>
+        </div>
+        <ul class="ticks sug">
+          <li>Markeer elke agenda als Werk of Persoonlijk; bedrijfsaccounts beginnen als Werk</li>
+          <li>Persoonlijke vergaderingen gebruiken je werktools en geheugen niet, en hun samenvattingen blijven buiten amem</li>
+          <li>Zet elke vergadering in het hintpaneel om tussen Werk en Persoonlijk</li>
+          <li>Start vanzelf bij webinars waar je alleen naar luistert, en in meer browsers zoals Comet, Vivaldi en Opera</li>
+          <li>Laat zien voor wie een vraag was: jij, iemand anders bij naam of de hele zaal</li>
+          <li>Een gesprek dat wegvalt en terugkomt gaat verder in dezelfde vergadering in plaats van een nieuwe</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="Voorbeeld van agenda-instellingen">
+        <h4>Agenda’s</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Werk</i><i>Persoonlijk</i></span></div>
+        <div class="acct"><span>Persoonlijke Gmail</span><span class="seg"><i>Werk</i><i class="on">Persoonlijk</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Werk</i><i class="on">Persoonlijk</i></span></div>
+        <span class="chip">Persoonlijke vergadering · in een persoonlijke agenda</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
         <div class="head" style="max-width:none">
           <h2>Spreekt jouw taal</h2>
-          <p>Nieuw in 1.9: Undertone is er in 17 talen. Het volgt de taal van je Mac, en in Instellingen kun je een andere kiezen.</p>
+          <p>Undertone is er in 17 talen. Het volgt de taal van je Mac, en in Instellingen kun je een andere kiezen.</p>
         </div>
         <ul class="ticks sug">
           <li>Hints, antwoorden en samenvattingen worden in jouw taal geschreven; termen uit de vergadering blijven zoals ze gezegd zijn</li>
@@ -1261,9 +1257,9 @@
     <div class="wrap">
       <div class="head">
         <h2>Gratis zolang het in bèta is</h2>
-        <p>Alles wat Undertone vandaag doet, is gratis tijdens de bèta, met je eigen AI. Betaalde abonnementen staan gepland voor later; de bèta blijft gratis met je eigen sleutel.</p>
+        <p>Alles op deze pagina is gratis tijdens de bèta. Gebruik de AI die je al hebt en help Undertone vorm te geven.</p>
       </div>
-      <div class="plans">
+      <div class="plans one">
         <div class="plan now">
           <div class="when">Nu beschikbaar</div>
           <h3>Bèta, met je eigen AI</h3>
@@ -1277,30 +1273,7 @@
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">Downloaden</a>
         </div>
-        <div class="plan">
-          <div class="when">Gepland</div>
-          <h3>Undertone Pro</h3>
-          <div class="price">$18<small> / maand</small></div>
-          <p>Voor wie liever geen AI-sleutel instelt.</p>
-          <ul>
-            <li>Gehoste AI inbegrepen, geen sleutel of installatie</li>
-            <li>Verbindingen met één klik voor elke tool</li>
-            <li>Snellere hints tijdens calls</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <div class="when">Gepland</div>
-          <h3>Team</h3>
-          <div class="price">$30<small> / seat / maand</small></div>
-          <p>Eén gedeeld vocabulaire voor het hele team.</p>
-          <ul>
-            <li>Een gedeelde teamwoordenlijst die gesynchroniseerd blijft</li>
-            <li>Een onboardinggids voor nieuwe collega’s, opgebouwd uit de meetings van het team</li>
-            <li>Afkortingen en codenamen één keer geleerd, bij iedereen bekend</li>
-          </ul>
-        </div>
       </div>
-      <p class="sample" style="padding:16px 0 0">Geplande abonnementen en prijzen kunnen veranderen. Audio blijft bij elk abonnement op je Mac.</p>
     </div>
   </section>
 

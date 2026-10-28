@@ -325,6 +325,7 @@
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .plans.one { grid-template-columns: minmax(0, 520px); }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -443,7 +444,7 @@
   .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
   .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
   .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
-  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
   .bar + .bar { margin-top: 6px; }
   .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
   .bar.new i { background: var(--accent); }
@@ -581,7 +582,7 @@
       <a href="#how">Nasıl çalışır</a>
       <a href="#features">Özellikler</a>
       <a href="#claude">Claude</a>
-      <a href="#pricing">Fiyatlar</a>
+      <a href="#pricing">Ücretsiz beta</a>
       <a href="#privacy">Gizlilik</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">Değişiklikler</a>
@@ -791,7 +792,7 @@
           <span class="n" aria-hidden="true">1. Adım</span>
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div>
           <h3>Arka planda dinler</h3>
-          <p>Zoom, Teams, Meet ya da Slack mikrofonunuzu kullandığında kendiliğinden başlar; görüşmeyi ve sizin tarafınızı Mac’inizde metne döker. Ses asla yüklenmez.</p>
+          <p>Zoom, Teams, Meet, Slack veya tarayıcınızda bir görüşme başladığında, yalnızca dinliyor olsanız bile kendiliğinden başlar ve Mac’inizde metne döker. Ses asla yüklenmez.</p>
         </div>
         <div class="step">
           <span class="n" aria-hidden="true">2. Adım</span>
@@ -819,7 +820,7 @@
         <div class="tabs" role="tablist" aria-label="Örnek toplantılar">
           <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>Mühendislik toplantısı</b><span>Bir sürüm süreci kısaltması</span></button>
           <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>Satış devri</b><span>Bir sözleşme terimi</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Yönetim kurulu Q&amp;A</b><span>Size yöneltilen bir soru</span></button>
+          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Yönetim kurulu Q&amp;A</b><span>Size bir soru</span></button>
         </div>
         <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
           <div class="hud-head">
@@ -903,7 +904,7 @@
         <div><dt>Kişiler</dt><dd>Davetlerinizdeki herkes; rolleri, üzerinde çalıştıkları işler, birlikte yaptığınız toplantılar ve onlara borçlu olduklarınızla.</dd></div>
         <div><dt>Anımsatıcılar</dt><dd>“Cumaya kadar” bir tarihe dönüşür. Bir önceki iş günü saat 9:00’da anımsatıcı gelir, süresi geçen görevler kırmızıya döner.</dd></div>
         <div><dt>Sözlük rehberi</dt><dd>Bir ekibin sözlüğünü yeni katılanlar için paylaşılabilir bir rehbere dönüştürün; HTML veya Markdown olarak dışa aktarmaya hazır.</dd></div>
-        <div><dt>Düzelt ve çevir</dt><dd>Yanlış duyulan bir kelimeye sağ tıklayın; Undertone onu düzeltir ve bir dahaki sefere ona kulak kabartır. Herhangi bir bölümü 15 dile çevirin.</dd></div>
+        <div><dt>Düzelt ve çevir</dt><dd>Yanlış duyulan bir kelimeye sağ tıklayın; Undertone onu düzeltir ve bir dahaki sefere ona kulak kabartır. Herhangi bir bölümü 19 dile çevirin.</dd></div>
       </dl>
     </div>
   </section>
@@ -1091,7 +1092,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Saniyeler içinde yanıtlar</h2>
-          <p>1.8’deki yenilik: Undertone, zaten bildiklerinden hızlı bir modelle yanıt verir ve yalnızca bu yetmediğinde araçlarınızda arama yapar.</p>
+          <p>Undertone, zaten bildiklerinden hızlı bir modelle yanıt verir ve yalnızca bu yetmediğinde araçlarınızda arama yapar.</p>
         </div>
         <ul class="ticks sug">
           <li>Görüşme sırasındaki yanıt kartları arka plan özetlerinden ve belleğinizden yararlanır</li>
@@ -1103,45 +1104,14 @@
       <div class="bars" aria-label="Undertone’un kendi kıyaslama testiyle ölçüldü">
         <div>
           <h4>Sor, ilk kelimelere kadar geçen süre <small>medyan</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12,7 sn</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4,5 sn</b></div>
+          <div class="bar"><span>Önce</span><i style="--w:100%"></i><b>12,7 sn</b></div>
+          <div class="bar new"><span>Şimdi</span><i style="--w:35%"></i><b>4,5 sn</b></div>
         </div>
         <div>
           <h4>Canlı yanıtlar, tam yanıt <small>medyan</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16,5 sn</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5,1 sn</b></div>
+          <div class="bar"><span>Önce</span><i style="--w:100%"></i><b>16,5 sn</b></div>
+          <div class="bar new"><span>Şimdi</span><i style="--w:31%"></i><b>5,1 sn</b></div>
         </div>
-        <div>
-          <h4>İlk denemede doğru canlı yanıtlar</h4>
-          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>İş işte kalır</h2>
-          <p>1.11’de yeni: Undertone iş toplantılarını kişisel olanlardan ayırır. Bir web semineri ya da kişisel takviminizdeki bir görüşme, iş araçlarınıza dokunmadan genel bilgiyle açıklanır.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Her takvimi İş veya Kişisel olarak işaretleyin; şirket hesapları İş olarak başlar</li>
-          <li>Kişisel toplantılar iş araçlarınızı ve belleğinizi kullanmaz, özetleri de amem’e gitmez</li>
-          <li>Herhangi bir toplantıyı ipuçları panelinden İş ile Kişisel arasında değiştirin</li>
-          <li>Yalnızca dinlediğiniz web seminerlerinde ve Comet, Vivaldi, Opera gibi daha fazla tarayıcıda kendiliğinden başlar</li>
-          <li>Bir sorunun kime sorulduğunu söyler: size, adıyla başka birine ya da herkese</li>
-          <li>Kopup geri gelen bir görüşme yeni bir toplantı değil, aynı toplantının devamı olur</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="Örnek takvim ayarları">
-        <h4>Takvimler</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">İş</i><i>Kişisel</i></span></div>
-        <div class="acct"><span>Kişisel Gmail</span><span class="seg"><i>İş</i><i class="on">Kişisel</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>İş</i><i class="on">Kişisel</i></span></div>
-        <span class="chip">Kişisel toplantı · kişisel bir takvimde</span>
       </div>
     </div>
   </section>
@@ -1151,7 +1121,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Yapıştırmaya hazır yanıtlar</h2>
-          <p>1.10’da yeni: Sor, istediğinle başlar. Taslak, kopyalamaya hazır tek bir mesaj olarak gelir; eksikler altında listelenir.</p>
+          <p>Sor, istediğinle başlar. Taslak, kopyalamaya hazır tek bir mesaj olarak gelir; eksikler altında listelenir.</p>
         </div>
         <ul class="ticks sug">
           <li>Slack veya e-posta için tek bir önerilen taslak, kendi Kopyala düğmesiyle</li>
@@ -1178,12 +1148,38 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>İş işte kalır</h2>
+          <p>Undertone iş toplantılarını kişisel olanlardan ayırır. Bir web semineri ya da kişisel takviminizdeki bir görüşme, iş araçlarınıza dokunmadan genel bilgiyle açıklanır.</p>
+        </div>
+        <ul class="ticks sug">
+          <li>Her takvimi İş veya Kişisel olarak işaretleyin; şirket hesapları İş olarak başlar</li>
+          <li>Kişisel toplantılar iş araçlarınızı ve belleğinizi kullanmaz, özetleri de amem’e gitmez</li>
+          <li>Herhangi bir toplantıyı ipuçları panelinden İş ile Kişisel arasında değiştirin</li>
+          <li>Yalnızca dinlediğiniz web seminerlerinde ve Comet, Vivaldi, Opera gibi daha fazla tarayıcıda kendiliğinden başlar</li>
+          <li>Bir sorunun kime sorulduğunu söyler: size, adıyla başka birine ya da herkese</li>
+          <li>Kopup geri gelen bir görüşme yeni bir toplantı değil, aynı toplantının devamı olur</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="Örnek takvim ayarları">
+        <h4>Takvimler</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">İş</i><i>Kişisel</i></span></div>
+        <div class="acct"><span>Kişisel Gmail</span><span class="seg"><i>İş</i><i class="on">Kişisel</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>İş</i><i class="on">Kişisel</i></span></div>
+        <span class="chip">Kişisel toplantı · kişisel bir takvimde</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
         <div class="head" style="max-width:none">
           <h2>Senin dilini konuşur</h2>
-          <p>1.9’da yeni: Undertone 17 dilde. Mac’inin dilini izler, Ayarlar’dan başka bir dil de seçebilirsin.</p>
+          <p>Undertone 17 dilde. Mac’inin dilini izler, Ayarlar’dan başka bir dil de seçebilirsin.</p>
         </div>
         <ul class="ticks sug">
           <li>İpuçları, yanıtlar ve özetler senin dilinde yazılır; toplantıdaki terimler söylendiği gibi kalır</li>
@@ -1261,9 +1257,9 @@
     <div class="wrap">
       <div class="head">
         <h2>Beta sürecinde ücretsiz</h2>
-        <p>Undertone’un bugün yaptığı her şey, kendi yapay zekânızla beta süresince ücretsiz. Ücretli planlar ileride geliyor; beta kendi anahtarınızla ücretsiz kalacak.</p>
+        <p>Bu sayfadaki her şey beta süresince ücretsiz. Zaten kullandığınız yapay zekâyı getirin ve Undertone’u birlikte şekillendirelim.</p>
       </div>
-      <div class="plans">
+      <div class="plans one">
         <div class="plan now">
           <div class="when">Şimdi kullanılabilir</div>
           <h3>Beta, kendi yapay zekânızla</h3>
@@ -1277,30 +1273,7 @@
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">İndir</a>
         </div>
-        <div class="plan">
-          <div class="when">Planlanıyor</div>
-          <h3>Undertone Pro</h3>
-          <div class="price">$18<small> / ay</small></div>
-          <p>Yapay zekâ anahtarı kurmak istemeyenler için.</p>
-          <ul>
-            <li>Barındırılan yapay zekâ dahil, anahtar ya da kurulum yok</li>
-            <li>Her araç için tek tıkla bağlantı</li>
-            <li>Görüşmelerde daha hızlı ipuçları</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <div class="when">Planlanıyor</div>
-          <h3>Ekip</h3>
-          <div class="price">$30<small> / kullanıcı / ay</small></div>
-          <p>Tüm ekip için ortak bir sözlük.</p>
-          <ul>
-            <li>Senkronize kalan ortak bir ekip sözlüğü</li>
-            <li>Ekibin toplantılarından oluşturulan, yeni çalışanlar için bir işe alıştırma rehberi</li>
-            <li>Bir kez öğrenilen, herkesin bildiği kısaltmalar ve kod adları</li>
-          </ul>
-        </div>
       </div>
-      <p class="sample" style="padding:16px 0 0">Planlanan planlar ve fiyatlar değişebilir. Her planda ses Mac’inizde kalır.</p>
     </div>
   </section>
 

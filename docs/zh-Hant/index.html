@@ -325,6 +325,7 @@
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .plans.one { grid-template-columns: minmax(0, 520px); }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -443,7 +444,7 @@
   .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
   .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
   .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
-  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
   .bar + .bar { margin-top: 6px; }
   .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
   .bar.new i { background: var(--accent); }
@@ -581,7 +582,7 @@
       <a href="#how">運作方式</a>
       <a href="#features">功能</a>
       <a href="#claude">Claude</a>
-      <a href="#pricing">價格</a>
+      <a href="#pricing">免費測試版</a>
       <a href="#privacy">隱私權</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">更新紀錄</a>
@@ -791,7 +792,7 @@
           <span class="n" aria-hidden="true">步驟 1</span>
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></div>
           <h3>在背景聆聽</h3>
-          <p>當 Zoom、Teams、Meet 或 Slack 使用你的麥克風時自動啟動，並在你的 Mac 上轉寫通話以及你這一方的發言。音訊絕不上傳。</p>
+          <p>在 Zoom、Teams、Meet、Slack 或瀏覽器中開始通話時自動啟動，即使你只是在聽，也會在你的 Mac 上轉寫。音訊從不上傳。</p>
         </div>
         <div class="step">
           <span class="n" aria-hidden="true">步驟 2</span>
@@ -819,7 +820,7 @@
         <div class="tabs" role="tablist" aria-label="範例會議">
           <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>工程同步會議</b><span>一個發布流程縮寫</span></button>
           <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>業務交接</b><span>一個合約術語</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>董事會問答</b><span>一個衝著你來的問題</span></button>
+          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>董事會問答</b><span>問你的問題</span></button>
         </div>
         <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
           <div class="hud-head">
@@ -903,7 +904,7 @@
         <div><dt>人員</dt><dd>會議邀請中的每個人：他們的角色和負責的工作、你們一起開過的會，以及你欠他們的事。</dd></div>
         <div><dt>提醒事項</dt><dd>「週五前」會變成具體日期。提醒會在前一個工作天 9:00 送達，逾期任務會變成紅色。</dd></div>
         <div><dt>詞彙指南</dt><dd>把團隊的詞彙表變成可分享的新人指南，可匯出為 HTML 或 Markdown。</dd></div>
-        <div><dt>修正與翻譯</dt><dd>在聽錯的字詞上按右鍵，Undertone 會修正它，下次也會特別留意。任何段落都能翻譯成 15 種語言。</dd></div>
+        <div><dt>修正與翻譯</dt><dd>在聽錯的字詞上按右鍵，Undertone 會修正它，下次也會特別留意。任何段落都能翻譯成 19 種語言。</dd></div>
       </dl>
     </div>
   </section>
@@ -1091,7 +1092,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>秒速回答</h2>
-          <p>1.8 新功能：Undertone 會先用快速模型根據已掌握的資訊回答，只有不夠時才搜尋你的工具。</p>
+          <p>Undertone 會先用快速模型根據已掌握的資訊回答，只有不夠時才搜尋你的工具。</p>
         </div>
         <ul class="ticks sug">
           <li>通話中的回答卡片會參考背景摘要和你的記憶</li>
@@ -1103,45 +1104,14 @@
       <div class="bars" aria-label="以 Undertone 自己的基準測試測得">
         <div>
           <h4>提問，首字出現時間 <small>中位數</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12.7 秒</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4.5 秒</b></div>
+          <div class="bar"><span>之前</span><i style="--w:100%"></i><b>12.7 秒</b></div>
+          <div class="bar new"><span>現在</span><i style="--w:35%"></i><b>4.5 秒</b></div>
         </div>
         <div>
           <h4>即時回答，完整回覆 <small>中位數</small></h4>
-          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16.5 秒</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5.1 秒</b></div>
+          <div class="bar"><span>之前</span><i style="--w:100%"></i><b>16.5 秒</b></div>
+          <div class="bar new"><span>現在</span><i style="--w:31%"></i><b>5.1 秒</b></div>
         </div>
-        <div>
-          <h4>即時回答，第一次就答對</h4>
-          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
-          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>工作歸工作</h2>
-          <p>1.11 新功能：Undertone 能區分工作會議和個人會議。網路研討會或個人行事曆上的通話會用常識解釋，不碰你的工作工具。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>把每個行事曆標為「工作」或「個人」；公司帳號預設為「工作」</li>
-          <li>個人會議不使用你的工作工具和記憶，會議摘要也不會存入 amem</li>
-          <li>在提示面板中隨時把會議在「工作」和「個人」之間切換</li>
-          <li>只收聽的網路研討會也會自動開始，並支援 Comet、Vivaldi、Opera 等更多瀏覽器</li>
-          <li>標明問題是問誰的：你、被點名的其他人，還是所有人</li>
-          <li>中斷後恢復的通話會接續同一場會議，而不是另開一場</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="行事曆設定範例">
-        <h4>行事曆</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">工作</i><i>個人</i></span></div>
-        <div class="acct"><span>個人 Gmail</span><span class="seg"><i>工作</i><i class="on">個人</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>工作</i><i class="on">個人</i></span></div>
-        <span class="chip">個人會議 · 在個人行事曆上</span>
       </div>
     </div>
   </section>
@@ -1151,7 +1121,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>可直接貼上的回答</h2>
-          <p>1.10 新功能：提問會先給出你要的東西。草稿以一則可直接拷貝的訊息呈現，缺少的內容列在下方。</p>
+          <p>提問會先給出你要的東西。草稿以一則可直接拷貝的訊息呈現，缺少的內容列在下方。</p>
         </div>
         <ul class="ticks sug">
           <li>一則推薦草稿，適用於 Slack 或電子郵件，附有自己的拷貝按鈕</li>
@@ -1178,12 +1148,38 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>工作歸工作</h2>
+          <p>Undertone 能區分工作會議和個人會議。網路研討會或個人行事曆上的通話會用常識解釋，不碰你的工作工具。</p>
+        </div>
+        <ul class="ticks sug">
+          <li>把每個行事曆標為「工作」或「個人」；公司帳號預設為「工作」</li>
+          <li>個人會議不使用你的工作工具和記憶，會議摘要也不會存入 amem</li>
+          <li>在提示面板中隨時把會議在「工作」和「個人」之間切換</li>
+          <li>只收聽的網路研討會也會自動開始，並支援 Comet、Vivaldi、Opera 等更多瀏覽器</li>
+          <li>標明問題是問誰的：你、被點名的其他人，還是所有人</li>
+          <li>中斷後恢復的通話會接續同一場會議，而不是另開一場</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="行事曆設定範例">
+        <h4>行事曆</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">工作</i><i>個人</i></span></div>
+        <div class="acct"><span>個人 Gmail</span><span class="seg"><i>工作</i><i class="on">個人</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>工作</i><i class="on">個人</i></span></div>
+        <span class="chip">個人會議 · 在個人行事曆上</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
         <div class="head" style="max-width:none">
           <h2>說你的語言</h2>
-          <p>1.9 新功能：Undertone 現已支援 17 種語言。它會跟隨你的 Mac 語言，你也可以在設定中選擇其他語言。</p>
+          <p>Undertone 現已支援 17 種語言。它會跟隨你的 Mac 語言，你也可以在設定中選擇其他語言。</p>
         </div>
         <ul class="ticks sug">
           <li>提示、回答和摘要會用你的語言撰寫；會議中的術語保持原樣</li>
@@ -1261,9 +1257,9 @@
     <div class="wrap">
       <div class="head">
         <h2>Beta 期間免費</h2>
-        <p>Beta 期間，搭配你自己的 AI，Undertone 目前的所有功能都免費。付費方案預計日後推出；使用自己金鑰的 Beta 版將維持免費。</p>
+        <p>測試期間，本頁所有功能都免費。用你已有的 AI，一起打造 Undertone。</p>
       </div>
-      <div class="plans">
+      <div class="plans one">
         <div class="plan now">
           <div class="when">現已推出</div>
           <h3>Beta 版，自備 AI</h3>
@@ -1277,30 +1273,7 @@
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">下載</a>
         </div>
-        <div class="plan">
-          <div class="when">規劃中</div>
-          <h3>Undertone Pro</h3>
-          <div class="price">$18<small> / 月</small></div>
-          <p>適合不想自己設定 AI 金鑰的人。</p>
-          <ul>
-            <li>內含代管 AI，不需金鑰或設定</li>
-            <li>每個工具都能一鍵連接</li>
-            <li>通話中提示更快</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <div class="when">規劃中</div>
-          <h3>團隊版</h3>
-          <div class="price">$30<small> / 席 / 月</small></div>
-          <p>整個團隊共用一套詞彙。</p>
-          <ul>
-            <li>保持同步的團隊共用詞彙表</li>
-            <li>根據團隊會議產生的新進同仁入職指南</li>
-            <li>縮寫和專案代號學一次，人人都知道</li>
-          </ul>
-        </div>
       </div>
-      <p class="sample" style="padding:16px 0 0">規劃中的方案和價格可能會調整。所有方案中，音訊都留在你的 Mac 上。</p>
     </div>
   </section>
 
