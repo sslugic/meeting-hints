@@ -12,6 +12,9 @@ Undertone is a macOS app that listens along to your calls, in a small panel besi
 
 Speech is transcribed on your Mac. Work and personal meetings are kept apart, and you can try it on a made-up sample meeting before your first real call.
 
+<p align="center"><a href="https://getundertone.app/#video"><img src="docs/assets/demo-panel.gif" width="420" alt="The Undertone panel during a made-up standup: terms explained as they come up, then a reminder when you're asked"></a></p>
+<p align="center"><a href="https://getundertone.app/#video">▶ Watch the 90-second demo</a> · made-up meeting, names and tickets</p>
+
 **Website and download:** https://getundertone.app · or `brew install --cask sslugic/tap/undertone` (run `brew trust sslugic/tap` once first)
 
 - Free during the beta, with your own AI: an OpenAI, Anthropic or Gemini key, a local Ollama or LM Studio model, or your Claude Code or Cursor sign-in.

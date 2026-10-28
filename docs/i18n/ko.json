@@ -417,5 +417,9 @@
  "or_with_homebrew_brew_install_1c436a": "Homebrew로 설치: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
  "updates_itself_ac2e05": "자동 업데이트",
  "feedback_c8d767": "피드백",
- "press_ea683a": "보도 자료"
+ "press_ea683a": "보도 자료",
+ "see_it_in_90_seconds_8e6416": "90초 만에 살펴보기",
+ "a_made_up_team_standup_5d541f": "가상의 팀 스탠드업을 처음부터 끝까지: 통화 전 브리핑, 통화 중 힌트와 리마인더, 통화 후 요약·코칭·Ask.",
+ "sample_names_companies_and_tickets_69d2ae": "예시입니다. 이름, 회사, 티켓은 가상입니다.",
+ "undertone_demo_video_e14940": "Undertone 데모 영상"
 }

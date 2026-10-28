@@ -417,5 +417,9 @@
  "or_with_homebrew_brew_install_1c436a": "或使用 Homebrew： <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
  "updates_itself_ac2e05": "自動更新",
  "feedback_c8d767": "意見回饋",
- "press_ea683a": "媒體"
+ "press_ea683a": "媒體",
+ "see_it_in_90_seconds_8e6416": "90 秒了解",
+ "a_made_up_team_standup_5d541f": "一場虛構的團隊站立會議，從頭到尾：通話前的簡報，通話中的提示與提醒，通話後的回顧、輔導與 Ask。",
+ "sample_names_companies_and_tickets_69d2ae": "範例。姓名、公司與工單皆為虛構。",
+ "undertone_demo_video_e14940": "Undertone 示範影片"
 }

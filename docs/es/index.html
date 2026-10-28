@@ -480,6 +480,8 @@
   .start { margin: 120px auto 0; border: 1px solid var(--border); border-radius: 20px; background: radial-gradient(80% 120% at 50% 0%, rgba(99, 102, 241, .18), transparent 65%), var(--bg-2); padding: 64px 32px; text-align: center; }
   .start h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.1; }
   .start p { color: var(--text-2); margin-top: 12px; }
+  .film { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border-2); background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+  .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
   .reqs { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 26px; }
   .brew { margin-top: 14px; font-size: 14px; color: var(--text-2); }
   .brew code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2px 7px; user-select: all; overflow-wrap: anywhere; }
@@ -736,6 +738,21 @@
       </div>
     </div>
     <div class="slidenav" aria-label="Elige una vista"><button type="button" data-i="0" aria-current="true"><span class="lbl">Pistas mientras escuchas</span><span class="bar"><i></i></span></button><button type="button" data-i="1"><span class="lbl">Contexto cuando te preguntan</span><span class="bar"><i></i></span></button><button type="button" data-i="2"><span class="lbl">Tu semana</span><span class="bar"><i></i></span></button><button type="button" data-i="3"><span class="lbl">Cómo te perciben</span><span class="bar"><i></i></span></button><button type="button" data-i="4"><span class="lbl">Dentro de Claude</span><span class="bar"><i></i></span></button><button type="button" class="pause" aria-label="Pausar la presentación" data-pause="Pausar la presentación" data-play="Reproducir la presentación"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button></div>
+  </section>
+
+  <section class="block" id="video">
+    <div class="wrap">
+      <div class="head">
+        <h2>Míralo en 90 segundos</h2>
+        <p>Una reunión diaria inventada, de principio a fin: el resumen previo a la llamada, pistas y recordatorios durante ella, y el resumen, el coaching y Ask después.</p>
+      </div>
+      <div class="film">
+        <video controls playsinline preload="none" poster="../assets/demo-poster.jpg" aria-label="Video de demostración de Undertone">
+          <source src="../assets/demo.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="sample" style="padding:14px 0 0">Ejemplo. Los nombres, empresas y tickets son inventados.</p>
+    </div>
   </section>
 
   <section class="block" id="demo">

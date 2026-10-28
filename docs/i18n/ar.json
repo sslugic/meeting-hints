@@ -417,5 +417,9 @@
  "or_with_homebrew_brew_install_1c436a": "أو عبر Homebrew: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
  "updates_itself_ac2e05": "يحدّث نفسه",
  "feedback_c8d767": "ملاحظات",
- "press_ea683a": "الصحافة"
+ "press_ea683a": "الصحافة",
+ "see_it_in_90_seconds_8e6416": "شاهده في 90 ثانية",
+ "a_made_up_team_standup_5d541f": "اجتماع فريق خيالي من البداية إلى النهاية: الإحاطة قبل المكالمة، والتلميحات والتذكيرات أثناءها، ثم الملخص والتدريب وAsk بعدها.",
+ "sample_names_companies_and_tickets_69d2ae": "مثال. الأسماء والشركات والتذاكر خيالية.",
+ "undertone_demo_video_e14940": "فيديو عرض Undertone"
 }

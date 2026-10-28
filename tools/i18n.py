@@ -338,7 +338,7 @@ def fix_paths(s):
             return m.group(0)
         v = "../" + (v[2:] if v.startswith("./") else v)
         return '%s"%s"' % (m.group(1), v)
-    return re.sub(r'(\s(?:href|src)=)"([^"]*)"', rel, s)
+    return re.sub(r'(\s(?:href|src|poster)=)"([^"]*)"', rel, s)
 
 
 def build_page(src, units, code, tr):

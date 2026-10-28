@@ -480,6 +480,8 @@
   .start { margin: 120px auto 0; border: 1px solid var(--border); border-radius: 20px; background: radial-gradient(80% 120% at 50% 0%, rgba(99, 102, 241, .18), transparent 65%), var(--bg-2); padding: 64px 32px; text-align: center; }
   .start h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.1; }
   .start p { color: var(--text-2); margin-top: 12px; }
+  .film { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border-2); background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+  .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
   .reqs { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 26px; }
   .brew { margin-top: 14px; font-size: 14px; color: var(--text-2); }
   .brew code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2px 7px; user-select: all; overflow-wrap: anywhere; }
@@ -736,6 +738,21 @@
       </div>
     </div>
     <div class="slidenav" aria-label="選擇畫面"><button type="button" data-i="0" aria-current="true"><span class="lbl">邊聽邊提示</span><span class="bar"><i></i></span></button><button type="button" data-i="1"><span class="lbl">被問到時的背景</span><span class="bar"><i></i></span></button><button type="button" data-i="2"><span class="lbl">你的一週</span><span class="bar"><i></i></span></button><button type="button" data-i="3"><span class="lbl">你的表現</span><span class="bar"><i></i></span></button><button type="button" data-i="4"><span class="lbl">在 Claude 中</span><span class="bar"><i></i></span></button><button type="button" class="pause" aria-label="暫停輪播" data-pause="暫停輪播" data-play="播放輪播"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button></div>
+  </section>
+
+  <section class="block" id="video">
+    <div class="wrap">
+      <div class="head">
+        <h2>90 秒了解</h2>
+        <p>一場虛構的團隊站立會議，從頭到尾：通話前的簡報，通話中的提示與提醒，通話後的回顧、輔導與 Ask。</p>
+      </div>
+      <div class="film">
+        <video controls playsinline preload="none" poster="../assets/demo-poster.jpg" aria-label="Undertone 示範影片">
+          <source src="../assets/demo.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="sample" style="padding:14px 0 0">範例。姓名、公司與工單皆為虛構。</p>
+    </div>
   </section>
 
   <section class="block" id="demo">

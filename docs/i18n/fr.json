@@ -417,5 +417,9 @@
  "or_with_homebrew_brew_install_1c436a": "Ou avec Homebrew : <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
  "updates_itself_ac2e05": "Se met à jour toute seule",
  "feedback_c8d767": "Avis",
- "press_ea683a": "Presse"
+ "press_ea683a": "Presse",
+ "see_it_in_90_seconds_8e6416": "Voyez-le en 90 secondes",
+ "a_made_up_team_standup_5d541f": "Un point d’équipe fictif, du début à la fin : le briefing avant l’appel, les indices et rappels pendant, puis le récapitulatif, le coaching et Ask après.",
+ "sample_names_companies_and_tickets_69d2ae": "Exemple. Les noms, entreprises et tickets sont fictifs.",
+ "undertone_demo_video_e14940": "Vidéo de démonstration d’Undertone"
 }
