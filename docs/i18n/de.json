@@ -408,7 +408,6 @@
  "translate_2be17a": "Übersetzen",
  "copy_translation_ef0c0e": "Übersetzung kopieren",
  "replace_selection_4147d9": "Auswahl ersetzen",
- "download_dmg_v1_11_0_2b614f": ".dmg laden <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "Arbeit bleibt Arbeit",
  "new_in_1_11_undertone_1a385e": "Neu in 1.11: Undertone unterscheidet Arbeits- von privaten Meetings. Ein Webinar oder ein Call aus deinem privaten Kalender wird mit Allgemeinwissen erklärt, ohne deine Arbeitstools anzufassen.",
  "mark_each_calendar_work_or_a5860d": "Markiere jeden Kalender als Arbeit oder Privat; Firmen-Accounts starten als Arbeit",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "Privates Meeting · in einem privaten Kalender",
  "calendars_944450": "Kalender",
  "work_00040b": "Arbeit",
- "personal_40f073": "Privat"
+ "personal_40f073": "Privat",
+ "download_dmg_v1_11_1_d14c39": ".dmg laden <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "Zeigt, an wen eine Frage ging: an dich, an jemand anderen mit Namen oder an alle"
 }

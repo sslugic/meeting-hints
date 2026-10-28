@@ -408,7 +408,6 @@
  "translate_2be17a": "Przetłumacz",
  "copy_translation_ef0c0e": "Kopiuj tłumaczenie",
  "replace_selection_4147d9": "Zastąp zaznaczenie",
- "download_dmg_v1_11_0_2b614f": "Pobierz .dmg <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "Praca zostaje w pracy",
  "new_in_1_11_undertone_1a385e": "Nowość w 1.11: Undertone odróżnia spotkania służbowe od prywatnych. Webinar albo rozmowa z prywatnego kalendarza jest wyjaśniana wiedzą ogólną, bez sięgania do Twoich narzędzi pracy.",
  "mark_each_calendar_work_or_a5860d": "Oznacz każdy kalendarz jako Praca lub Prywatne; konta firmowe startują jako Praca",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "Spotkanie prywatne · w kalendarzu prywatnym",
  "calendars_944450": "Kalendarze",
  "work_00040b": "Praca",
- "personal_40f073": "Prywatne"
+ "personal_40f073": "Prywatne",
+ "download_dmg_v1_11_1_d14c39": "Pobierz .dmg <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "Pokazuje, do kogo było pytanie: do Ciebie, do kogoś innego z imienia czy do wszystkich"
 }

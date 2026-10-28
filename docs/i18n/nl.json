@@ -408,7 +408,6 @@
  "translate_2be17a": "Vertaal",
  "copy_translation_ef0c0e": "Vertaling kopiëren",
  "replace_selection_4147d9": "Selectie vervangen",
- "download_dmg_v1_11_0_2b614f": "Download .dmg <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "Werk blijft werk",
  "new_in_1_11_undertone_1a385e": "Nieuw in 1.11: Undertone houdt werkvergaderingen en persoonlijke uit elkaar. Een webinar of een gesprek uit je persoonlijke agenda wordt met algemene kennis uitgelegd, zonder je werktools aan te raken.",
  "mark_each_calendar_work_or_a5860d": "Markeer elke agenda als Werk of Persoonlijk; bedrijfsaccounts beginnen als Werk",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "Persoonlijke vergadering · in een persoonlijke agenda",
  "calendars_944450": "Agenda’s",
  "work_00040b": "Werk",
- "personal_40f073": "Persoonlijk"
+ "personal_40f073": "Persoonlijk",
+ "download_dmg_v1_11_1_d14c39": "Download .dmg <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "Laat zien voor wie een vraag was: jij, iemand anders bij naam of de hele zaal"
 }

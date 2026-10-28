@@ -408,7 +408,6 @@
  "translate_2be17a": "Traduzir",
  "copy_translation_ef0c0e": "Copiar tradução",
  "replace_selection_4147d9": "Substituir seleção",
- "download_dmg_v1_11_0_2b614f": "Baixar .dmg <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "Trabalho fica no trabalho",
  "new_in_1_11_undertone_1a385e": "Novo na 1.11: o Undertone separa reuniões de trabalho das pessoais. Um webinar ou uma chamada do seu calendário pessoal é explicado com conhecimento geral, sem tocar nas suas ferramentas de trabalho.",
  "mark_each_calendar_work_or_a5860d": "Marque cada calendário como Trabalho ou Pessoal; contas da empresa começam como Trabalho",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "Reunião pessoal · em um calendário pessoal",
  "calendars_944450": "Calendários",
  "work_00040b": "Trabalho",
- "personal_40f073": "Pessoal"
+ "personal_40f073": "Pessoal",
+ "download_dmg_v1_11_1_d14c39": "Baixar .dmg <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "Mostra para quem era a pergunta: você, outra pessoa pelo nome ou a sala toda"
 }

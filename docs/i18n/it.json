@@ -408,7 +408,6 @@
  "translate_2be17a": "Traduci",
  "copy_translation_ef0c0e": "Copia traduzione",
  "replace_selection_4147d9": "Sostituisci selezione",
- "download_dmg_v1_11_0_2b614f": "Scarica il .dmg <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "Il lavoro resta lavoro",
  "new_in_1_11_undertone_1a385e": "Novità della 1.11: Undertone distingue le riunioni di lavoro da quelle personali. Un webinar o una chiamata dal tuo calendario personale viene spiegato con conoscenze generali, senza toccare i tuoi strumenti di lavoro.",
  "mark_each_calendar_work_or_a5860d": "Segna ogni calendario come Lavoro o Personale; gli account aziendali partono come Lavoro",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "Riunione personale · su un calendario personale",
  "calendars_944450": "Calendari",
  "work_00040b": "Lavoro",
- "personal_40f073": "Personale"
+ "personal_40f073": "Personale",
+ "download_dmg_v1_11_1_d14c39": "Scarica il .dmg <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "Dice a chi era rivolta una domanda: a te, a un’altra persona per nome o a tutta la sala"
 }

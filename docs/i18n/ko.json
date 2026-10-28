@@ -408,7 +408,6 @@
  "translate_2be17a": "번역",
  "copy_translation_ef0c0e": "번역 복사",
  "replace_selection_4147d9": "선택 항목 바꾸기",
- "download_dmg_v1_11_0_2b614f": ".dmg 다운로드 <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "업무는 업무대로",
  "new_in_1_11_undertone_1a385e": "1.11의 새 기능: Undertone이 업무 회의와 개인 회의를 구분합니다. 웨비나나 개인 캘린더의 통화는 업무 도구를 건드리지 않고 일반 지식으로 설명합니다.",
  "mark_each_calendar_work_or_a5860d": "캘린더마다 업무 또는 개인으로 표시하세요. 회사 계정은 업무로 시작합니다",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "개인 회의 · 개인 캘린더에 있음",
  "calendars_944450": "캘린더",
  "work_00040b": "업무",
- "personal_40f073": "개인"
+ "personal_40f073": "개인",
+ "download_dmg_v1_11_1_d14c39": ".dmg 다운로드 <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "질문이 누구에게 한 것인지 알려 줍니다. 나, 이름이 불린 다른 사람, 또는 모두"
 }

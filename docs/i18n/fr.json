@@ -408,7 +408,6 @@
  "translate_2be17a": "Traduire",
  "copy_translation_ef0c0e": "Copier la traduction",
  "replace_selection_4147d9": "Remplacer la sélection",
- "download_dmg_v1_11_0_2b614f": "Télécharger le .dmg <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "Le travail reste au travail",
  "new_in_1_11_undertone_1a385e": "Nouveau dans la 1.11 : Undertone distingue les réunions de travail des réunions personnelles. Un webinaire ou un appel de votre calendrier personnel est expliqué avec des connaissances générales, sans toucher à vos outils de travail.",
  "mark_each_calendar_work_or_a5860d": "Marquez chaque calendrier Travail ou Personnel ; les comptes d’entreprise commencent en Travail",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "Réunion personnelle · sur un calendrier personnel",
  "calendars_944450": "Calendriers",
  "work_00040b": "Travail",
- "personal_40f073": "Personnel"
+ "personal_40f073": "Personnel",
+ "download_dmg_v1_11_1_d14c39": "Télécharger le .dmg <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "Indique à qui la question s’adressait : à vous, à quelqu’un d’autre nommé, ou à toute la salle"
 }

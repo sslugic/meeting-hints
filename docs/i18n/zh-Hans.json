@@ -408,7 +408,6 @@
  "translate_2be17a": "翻译",
  "copy_translation_ef0c0e": "复制译文",
  "replace_selection_4147d9": "替换所选内容",
- "download_dmg_v1_11_0_2b614f": "下载 .dmg <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "工作归工作",
  "new_in_1_11_undertone_1a385e": "1.11 新功能：Undertone 能区分工作会议和个人会议。网络研讨会或个人日历上的通话会用常识解释，不碰你的工作工具。",
  "mark_each_calendar_work_or_a5860d": "把每个日历标为“工作”或“个人”；公司账户默认为“工作”",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "个人会议 · 在个人日历上",
  "calendars_944450": "日历",
  "work_00040b": "工作",
- "personal_40f073": "个人"
+ "personal_40f073": "个人",
+ "download_dmg_v1_11_1_d14c39": "下载 .dmg <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "标明问题是问谁的：你、被点名的其他人，还是所有人"
 }

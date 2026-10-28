@@ -408,7 +408,6 @@
  "translate_2be17a": "ترجمة",
  "copy_translation_ef0c0e": "نسخ الترجمة",
  "replace_selection_4147d9": "استبدال التحديد",
- "download_dmg_v1_11_0_2b614f": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "العمل يبقى عملًا",
  "new_in_1_11_undertone_1a385e": "جديد في 1.11: يميّز Undertone اجتماعات العمل من الاجتماعات الشخصية. تُشرح الندوة أو المكالمة من تقويمك الشخصي بالمعرفة العامة، دون المساس بأدوات عملك.",
  "mark_each_calendar_work_or_a5860d": "حدّد كل تقويم «عمل» أو «شخصي»؛ تبدأ حسابات الشركة «عمل»",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "اجتماع شخصي · في تقويم شخصي",
  "calendars_944450": "التقويمات",
  "work_00040b": "عمل",
- "personal_40f073": "شخصي"
+ "personal_40f073": "شخصي",
+ "download_dmg_v1_11_1_d14c39": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "يوضح لمن وُجّه السؤال: لك، أو لشخص آخر باسمه، أو للجميع"
 }

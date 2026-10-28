@@ -408,7 +408,6 @@
  "translate_2be17a": "Çevir",
  "copy_translation_ef0c0e": "Çeviriyi kopyala",
  "replace_selection_4147d9": "Seçimi değiştir",
- "download_dmg_v1_11_0_2b614f": ".dmg indir <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "İş işte kalır",
  "new_in_1_11_undertone_1a385e": "1.11’de yeni: Undertone iş toplantılarını kişisel olanlardan ayırır. Bir web semineri ya da kişisel takviminizdeki bir görüşme, iş araçlarınıza dokunmadan genel bilgiyle açıklanır.",
  "mark_each_calendar_work_or_a5860d": "Her takvimi İş veya Kişisel olarak işaretleyin; şirket hesapları İş olarak başlar",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "Kişisel toplantı · kişisel bir takvimde",
  "calendars_944450": "Takvimler",
  "work_00040b": "İş",
- "personal_40f073": "Kişisel"
+ "personal_40f073": "Kişisel",
+ "download_dmg_v1_11_1_d14c39": ".dmg indir <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "Bir sorunun kime sorulduğunu söyler: size, adıyla başka birine ya da herkese"
 }

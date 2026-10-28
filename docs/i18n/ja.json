@@ -408,7 +408,6 @@
  "translate_2be17a": "翻訳",
  "copy_translation_ef0c0e": "翻訳をコピー",
  "replace_selection_4147d9": "選択部分を置き換え",
- "download_dmg_v1_11_0_2b614f": ".dmgをダウンロード <span class=\"ver\">v1.11.0</span>",
  "work_stays_work_eb52cc": "仕事は仕事のまま",
  "new_in_1_11_undertone_1a385e": "1.11 の新機能：Undertone は仕事の会議と個人の会議を見分けます。ウェビナーや個人のカレンダーの通話は、仕事のツールに触れず一般的な知識で解説します。",
  "mark_each_calendar_work_or_a5860d": "カレンダーごとに「仕事」か「個人」を設定できます。会社のアカウントは最初から「仕事」です",
@@ -420,5 +419,7 @@
  "personal_meeting_on_a_personal_5967c6": "個人の会議 · 個人のカレンダー",
  "calendars_944450": "カレンダー",
  "work_00040b": "仕事",
- "personal_40f073": "個人"
+ "personal_40f073": "個人",
+ "download_dmg_v1_11_1_d14c39": ".dmgをダウンロード <span class=\"ver\">v1.11.1</span>",
+ "says_who_a_question_was_4ad923": "質問が誰へのものかを示します。あなた、名前の出た別の人、または全員"
 }
