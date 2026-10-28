@@ -484,12 +484,12 @@
   .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
   .askmock { max-width: 640px; margin: 0 auto; padding: 40px 36px 30px; border-radius: var(--r-lg); border: 1px solid var(--border); background: var(--surface-2); }
   .askmock h3 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; font-size: 30px; letter-spacing: -.01em; margin: 0 0 22px; }
-  .askmock .box { border-radius: 16px; border: 1px solid rgba(129, 140, 248, .45); box-shadow: 0 0 22px rgba(129, 140, 248, .16); background: rgba(255, 255, 255, .03); padding: 14px 14px 12px 16px; }
-  .askmock .ph { color: var(--text-3); font-size: 15px; min-height: 38px; }
-  .askmock .row { display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: var(--text-2); }
-  .askmock .row .sp { flex: 1; }
-  .askmock .send { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; color: #fff; }
-  .askmock .rec { margin-top: 26px; font-size: 13.5px; color: var(--text-3); margin-bottom: 6px; }
+  .askmock .am-box { border-radius: 16px; border: 1px solid rgba(129, 140, 248, .45); box-shadow: 0 0 22px rgba(129, 140, 248, .16); background: rgba(255, 255, 255, .03); padding: 14px 14px 12px 16px; }
+  .askmock .am-ph { color: var(--text-3); font-size: 15px; min-height: 38px; }
+  .askmock .am-row { display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: var(--text-2); white-space: nowrap; }
+  .askmock .am-row .am-sp { flex: 1; }
+  .askmock .am-send { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; color: #fff; }
+  .askmock .am-rec { margin-top: 26px; font-size: 13.5px; color: var(--text-3); margin-bottom: 6px; }
   .askmock ul { list-style: none; margin: 0; padding: 0; }
   .askmock li { display: flex; align-items: center; gap: 12px; padding: 6px 4px; font-size: 15px; }
   .askmock li i { width: 28px; height: 28px; border-radius: 7px; background: rgba(255, 255, 255, .06); display: grid; place-items: center; color: var(--text-3); font-style: normal; font-size: 13px; flex: none; }
@@ -1104,11 +1104,11 @@
       </div>
       <div class="askmock" role="img" aria-label="Ask 시작 화면 예시: 인사말, 질문 입력창, 최근 채팅 목록">
         <h3>알렉스님, 무엇이든 물어보세요</h3>
-        <div class="box">
-          <div class="ph">이번 주에 무엇을 결정했나요?</div>
-          <div class="row"><span>&#x1F4CE;&#xFE0E;</span><span>모든 회의 ⌄</span><span class="sp"></span><span class="send">↑</span></div>
+        <div class="am-box">
+          <div class="am-ph">이번 주에 무엇을 결정했나요?</div>
+          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>모든 회의 ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
         </div>
-        <div class="rec">최근 항목</div>
+        <div class="am-rec">최근 항목</div>
         <ul>
           <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>가장 최근 회의는 무엇에 관한 것이었나요?</span><small>6m</small></li>
           <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>4분기 계획 통화 후속 이메일</span><small>1d</small></li>
