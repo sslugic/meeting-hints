@@ -394,7 +394,6 @@
  "right_to_left_layout_for_cc9898": "Diseño de derecha a izquierda para el árabe",
  "languages_undertone_comes_in_a92e1e": "Idiomas en los que está disponible Undertone",
  "up_next_reads_google_calendar_7e0e0d": "«A continuación» lee Google Calendar directamente cuando está conectado, así las reuniones renombradas o canceladas no se quedan colgadas",
- "download_dmg_v1_10_0_802c62": "Descargar .dmg <span class=\"ver\">v1.10.0</span>",
  "answers_you_can_paste_9bbe85": "Respuestas listas para pegar",
  "new_in_1_10_ask_743274": "Novedad en 1.10: Preguntar empieza por lo que pediste. Un borrador llega como un solo mensaje, listo para copiar, con lo que falte indicado debajo.",
  "one_recommended_draft_for_slack_caa806": "Un único borrador recomendado para Slack o correo, con su propio botón Copiar",
@@ -408,5 +407,18 @@
  "copy_af74f7": "Copiar",
  "translate_2be17a": "Traducir",
  "copy_translation_ef0c0e": "Copiar traducción",
- "replace_selection_4147d9": "Reemplazar selección"
+ "replace_selection_4147d9": "Reemplazar selección",
+ "download_dmg_v1_11_0_2b614f": "Descargar .dmg <span class=\"ver\">v1.11.0</span>",
+ "work_stays_work_eb52cc": "El trabajo, en el trabajo",
+ "new_in_1_11_undertone_1a385e": "Novedad en 1.11: Undertone distingue las reuniones de trabajo de las personales. Un webinar o una llamada de tu calendario personal se explica con conocimiento general, sin tocar tus herramientas de trabajo.",
+ "mark_each_calendar_work_or_a5860d": "Marca cada calendario como Trabajo o Personal; las cuentas de empresa empiezan como Trabajo",
+ "personal_meetings_skip_your_work_a2b2ea": "Las reuniones personales no usan tus herramientas de trabajo ni tu memoria, y sus resúmenes no van a amem",
+ "switch_any_meeting_between_work_e91c22": "Cambia cualquier reunión entre Trabajo y Personal desde el panel de pistas",
+ "starts_on_its_own_for_93e78f": "Se inicia solo en los webinars que solo escuchas, y en más navegadores como Comet, Vivaldi y Opera",
+ "sample_calendar_settings_645142": "Ejemplo de ajustes de calendarios",
+ "personal_gmail_1e807d": "Gmail personal",
+ "personal_meeting_on_a_personal_5967c6": "Reunión personal · en un calendario personal",
+ "calendars_944450": "Calendarios",
+ "work_00040b": "Trabajo",
+ "personal_40f073": "Personal"
 }

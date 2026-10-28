@@ -394,7 +394,6 @@
  "right_to_left_layout_for_cc9898": "अरबी के लिए दाएँ-से-बाएँ लेआउट",
  "languages_undertone_comes_in_a92e1e": "भाषाएँ जिनमें Undertone उपलब्ध है",
  "up_next_reads_google_calendar_7e0e0d": "जुड़ा होने पर \"आगे\" सीधे Google Calendar पढ़ता है, ताकि नाम बदली या रद्द की गई मीटिंग अटकी न रहें",
- "download_dmg_v1_10_0_802c62": ".dmg डाउनलोड करें <span class=\"ver\">v1.10.0</span>",
  "answers_you_can_paste_9bbe85": "पेस्ट करने लायक जवाब",
  "new_in_1_10_ask_743274": "1.10 में नया: पूछें अब वही पहले देता है जो आपने माँगा। ड्राफ़्ट एक ही संदेश के रूप में आता है, कॉपी के लिए तैयार, और जो कमी है वह नीचे लिखा होता है।",
  "one_recommended_draft_for_slack_caa806": "Slack या ईमेल के लिए एक सुझाया गया ड्राफ़्ट, अपने कॉपी बटन के साथ",
@@ -408,5 +407,18 @@
  "copy_af74f7": "कॉपी करें",
  "translate_2be17a": "अनुवाद करें",
  "copy_translation_ef0c0e": "अनुवाद कॉपी करें",
- "replace_selection_4147d9": "चयन बदलें"
+ "replace_selection_4147d9": "चयन बदलें",
+ "download_dmg_v1_11_0_2b614f": ".dmg डाउनलोड करें <span class=\"ver\">v1.11.0</span>",
+ "work_stays_work_eb52cc": "काम, काम की जगह",
+ "new_in_1_11_undertone_1a385e": "1.11 में नया: Undertone काम की मीटिंग और निजी मीटिंग को अलग पहचानता है। निजी कैलेंडर का वेबिनार या कॉल सामान्य जानकारी से समझाया जाता है, आपके काम के टूल छुए बिना।",
+ "mark_each_calendar_work_or_a5860d": "हर कैलेंडर को काम या निजी चिह्नित करें; कंपनी खाते काम से शुरू होते हैं",
+ "personal_meetings_skip_your_work_a2b2ea": "निजी मीटिंग आपके काम के टूल और मेमोरी का इस्तेमाल नहीं करतीं, और उनके सारांश amem में नहीं जाते",
+ "switch_any_meeting_between_work_e91c22": "संकेत पैनल से किसी भी मीटिंग को काम और निजी के बीच बदलें",
+ "starts_on_its_own_for_93e78f": "जिन वेबिनार को आप सिर्फ़ सुनते हैं उनमें, और Comet, Vivaldi, Opera जैसे और ब्राउज़र में अपने आप शुरू होता है",
+ "sample_calendar_settings_645142": "कैलेंडर सेटिंग्स का उदाहरण",
+ "personal_gmail_1e807d": "निजी Gmail",
+ "personal_meeting_on_a_personal_5967c6": "निजी मीटिंग · निजी कैलेंडर पर",
+ "calendars_944450": "कैलेंडर",
+ "work_00040b": "काम",
+ "personal_40f073": "निजी"
 }

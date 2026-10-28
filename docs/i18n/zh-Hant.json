@@ -394,7 +394,6 @@
  "right_to_left_layout_for_cc9898": "阿拉伯文由右至左的版面",
  "languages_undertone_comes_in_a92e1e": "Undertone 支援的語言",
  "up_next_reads_google_calendar_7e0e0d": "連接 Google 日曆後，「即將開始」會直接讀取它，改名或取消的會議不會殘留",
- "download_dmg_v1_10_0_802c62": "下載 .dmg <span class=\"ver\">v1.10.0</span>",
  "answers_you_can_paste_9bbe85": "可直接貼上的回答",
  "new_in_1_10_ask_743274": "1.10 新功能：提問會先給出你要的東西。草稿以一則可直接拷貝的訊息呈現，缺少的內容列在下方。",
  "one_recommended_draft_for_slack_caa806": "一則推薦草稿，適用於 Slack 或電子郵件，附有自己的拷貝按鈕",
@@ -408,5 +407,18 @@
  "copy_af74f7": "拷貝",
  "translate_2be17a": "翻譯",
  "copy_translation_ef0c0e": "拷貝譯文",
- "replace_selection_4147d9": "取代所選內容"
+ "replace_selection_4147d9": "取代所選內容",
+ "download_dmg_v1_11_0_2b614f": "下載 .dmg <span class=\"ver\">v1.11.0</span>",
+ "work_stays_work_eb52cc": "工作歸工作",
+ "new_in_1_11_undertone_1a385e": "1.11 新功能：Undertone 能區分工作會議和個人會議。網路研討會或個人行事曆上的通話會用常識解釋，不碰你的工作工具。",
+ "mark_each_calendar_work_or_a5860d": "把每個行事曆標為「工作」或「個人」；公司帳號預設為「工作」",
+ "personal_meetings_skip_your_work_a2b2ea": "個人會議不使用你的工作工具和記憶，會議摘要也不會存入 amem",
+ "switch_any_meeting_between_work_e91c22": "在提示面板中隨時把會議在「工作」和「個人」之間切換",
+ "starts_on_its_own_for_93e78f": "只收聽的網路研討會也會自動開始，並支援 Comet、Vivaldi、Opera 等更多瀏覽器",
+ "sample_calendar_settings_645142": "行事曆設定範例",
+ "personal_gmail_1e807d": "個人 Gmail",
+ "personal_meeting_on_a_personal_5967c6": "個人會議 · 在個人行事曆上",
+ "calendars_944450": "行事曆",
+ "work_00040b": "工作",
+ "personal_40f073": "個人"
 }

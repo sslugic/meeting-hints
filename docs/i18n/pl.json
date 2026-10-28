@@ -394,7 +394,6 @@
  "right_to_left_layout_for_cc9898": "Układ od prawej do lewej dla arabskiego",
  "languages_undertone_comes_in_a92e1e": "Języki, w których dostępny jest Undertone",
  "up_next_reads_google_calendar_7e0e0d": "„Następne” odczytuje Kalendarz Google bezpośrednio, gdy jest połączony, więc przemianowane lub odwołane spotkania nie zostają na liście",
- "download_dmg_v1_10_0_802c62": "Pobierz .dmg <span class=\"ver\">v1.10.0</span>",
  "answers_you_can_paste_9bbe85": "Odpowiedzi gotowe do wklejenia",
  "new_in_1_10_ask_743274": "Nowość w 1.10: Zapytaj zaczyna od tego, o co prosisz. Szkic przychodzi jako jedna wiadomość gotowa do skopiowania, a braki są wypisane pod nią.",
  "one_recommended_draft_for_slack_caa806": "Jeden polecany szkic do Slacka lub e-maila, z własnym przyciskiem Kopiuj",
@@ -408,5 +407,18 @@
  "copy_af74f7": "Kopiuj",
  "translate_2be17a": "Przetłumacz",
  "copy_translation_ef0c0e": "Kopiuj tłumaczenie",
- "replace_selection_4147d9": "Zastąp zaznaczenie"
+ "replace_selection_4147d9": "Zastąp zaznaczenie",
+ "download_dmg_v1_11_0_2b614f": "Pobierz .dmg <span class=\"ver\">v1.11.0</span>",
+ "work_stays_work_eb52cc": "Praca zostaje w pracy",
+ "new_in_1_11_undertone_1a385e": "Nowość w 1.11: Undertone odróżnia spotkania służbowe od prywatnych. Webinar albo rozmowa z prywatnego kalendarza jest wyjaśniana wiedzą ogólną, bez sięgania do Twoich narzędzi pracy.",
+ "mark_each_calendar_work_or_a5860d": "Oznacz każdy kalendarz jako Praca lub Prywatne; konta firmowe startują jako Praca",
+ "personal_meetings_skip_your_work_a2b2ea": "Spotkania prywatne nie korzystają z Twoich narzędzi pracy ani pamięci, a ich podsumowania nie trafiają do amem",
+ "switch_any_meeting_between_work_e91c22": "Przełączaj dowolne spotkanie między Pracą a Prywatnym w panelu podpowiedzi",
+ "starts_on_its_own_for_93e78f": "Startuje sam przy webinarach, których tylko słuchasz, i w kolejnych przeglądarkach, takich jak Comet, Vivaldi i Opera",
+ "sample_calendar_settings_645142": "Przykładowe ustawienia kalendarzy",
+ "personal_gmail_1e807d": "Prywatny Gmail",
+ "personal_meeting_on_a_personal_5967c6": "Spotkanie prywatne · w kalendarzu prywatnym",
+ "calendars_944450": "Kalendarze",
+ "work_00040b": "Praca",
+ "personal_40f073": "Prywatne"
 }

@@ -394,7 +394,6 @@
  "right_to_left_layout_for_cc9898": "아랍어를 위한 오른쪽에서 왼쪽 레이아웃",
  "languages_undertone_comes_in_a92e1e": "Undertone 지원 언어",
  "up_next_reads_google_calendar_7e0e0d": "Google 캘린더가 연결되어 있으면 \"다음 일정\"이 직접 읽어 와, 이름이 바뀌거나 취소된 회의가 남지 않습니다",
- "download_dmg_v1_10_0_802c62": ".dmg 다운로드 <span class=\"ver\">v1.10.0</span>",
  "answers_you_can_paste_9bbe85": "바로 붙여 넣는 답변",
  "new_in_1_10_ask_743274": "1.10의 새 기능: 질문은 요청한 것부터 답합니다. 초안은 바로 복사할 수 있는 메시지 하나로 오고, 빠진 것은 그 아래에 적힙니다.",
  "one_recommended_draft_for_slack_caa806": "Slack이나 이메일용 추천 초안 하나, 전용 복사 버튼과 함께",
@@ -408,5 +407,18 @@
  "copy_af74f7": "복사",
  "translate_2be17a": "번역",
  "copy_translation_ef0c0e": "번역 복사",
- "replace_selection_4147d9": "선택 항목 바꾸기"
+ "replace_selection_4147d9": "선택 항목 바꾸기",
+ "download_dmg_v1_11_0_2b614f": ".dmg 다운로드 <span class=\"ver\">v1.11.0</span>",
+ "work_stays_work_eb52cc": "업무는 업무대로",
+ "new_in_1_11_undertone_1a385e": "1.11의 새 기능: Undertone이 업무 회의와 개인 회의를 구분합니다. 웨비나나 개인 캘린더의 통화는 업무 도구를 건드리지 않고 일반 지식으로 설명합니다.",
+ "mark_each_calendar_work_or_a5860d": "캘린더마다 업무 또는 개인으로 표시하세요. 회사 계정은 업무로 시작합니다",
+ "personal_meetings_skip_your_work_a2b2ea": "개인 회의는 업무 도구와 메모리를 쓰지 않고, 요약도 amem에 저장하지 않습니다",
+ "switch_any_meeting_between_work_e91c22": "힌트 패널에서 어떤 회의든 업무와 개인 사이를 바꿀 수 있습니다",
+ "starts_on_its_own_for_93e78f": "듣기만 하는 웨비나에서도, Comet, Vivaldi, Opera 같은 브라우저에서도 자동으로 시작합니다",
+ "sample_calendar_settings_645142": "캘린더 설정 예시",
+ "personal_gmail_1e807d": "개인 Gmail",
+ "personal_meeting_on_a_personal_5967c6": "개인 회의 · 개인 캘린더에 있음",
+ "calendars_944450": "캘린더",
+ "work_00040b": "업무",
+ "personal_40f073": "개인"
 }

@@ -413,6 +413,14 @@
   .speed { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; margin-top: 8px; }
   .speed .ticks { margin-top: 18px; }
   .speed .ticks li { font-size: 15.5px; color: var(--text-2); }
+  .kinds { display: grid; gap: 10px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 22px; }
+  .kinds h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .kinds .acct { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--r); background: rgba(255, 255, 255, .03); font-size: 14px; color: var(--text); }
+  .kinds .acct span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  .seg { display: inline-flex; flex-shrink: 0; border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden; font-size: 12px; }
+  .seg i { font-style: normal; padding: 4px 10px; color: var(--text-2); }
+  .seg i.on { background: var(--accent-strong); color: #fff; }
+  .kinds .chip { justify-self: start; font-size: 12.5px; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 4px 10px; margin-top: 6px; }
   .paste { display: grid; gap: 12px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 22px; }
   .paste h4 { font-size: 14px; font-weight: 600; color: var(--text); }
   .draft { border: 1px solid rgba(129, 140, 248, .4); border-radius: var(--r); background: rgba(255, 255, 255, .03); padding: 14px 16px; }
@@ -553,6 +561,7 @@
     .bars { padding: 20px 18px; }
     .langs { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 16px; }
     .paste { padding: 16px; }
+    .kinds { padding: 16px; }
     .tpop { justify-self: stretch; width: auto; }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -588,7 +597,7 @@
       <h1>Het jargon van je bedrijf, uitgelegd terwijl het valt.</h1>
       <p class="sub">Undertone luistert mee met je calls. Valt er een codenaam, afkorting of intern project, dan legt Undertone het direct naast de call uit vanuit Slack, Notion en Jira van je eigen team.</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.10.0</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.11.0</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Releases en issues</a>
       </div>
       <p class="fine">Gratis tijdens de bèta · macOS 26 of nieuwer op Apple silicon</p>
@@ -1111,6 +1120,30 @@
     </div>
   </section>
 
+  <section class="block" id="work-personal">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>Werk blijft werk</h2>
+          <p>Nieuw in 1.11: Undertone houdt werkvergaderingen en persoonlijke uit elkaar. Een webinar of een gesprek uit je persoonlijke agenda wordt met algemene kennis uitgelegd, zonder je werktools aan te raken.</p>
+        </div>
+        <ul class="ticks sug">
+          <li>Markeer elke agenda als Werk of Persoonlijk; bedrijfsaccounts beginnen als Werk</li>
+          <li>Persoonlijke vergaderingen gebruiken je werktools en geheugen niet, en hun samenvattingen blijven buiten amem</li>
+          <li>Zet elke vergadering in het hintpaneel om tussen Werk en Persoonlijk</li>
+          <li>Start vanzelf bij webinars waar je alleen naar luistert, en in meer browsers zoals Comet, Vivaldi en Opera</li>
+        </ul>
+      </div>
+      <div class="kinds" aria-label="Voorbeeld van agenda-instellingen">
+        <h4>Agenda’s</h4>
+        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Werk</i><i>Persoonlijk</i></span></div>
+        <div class="acct"><span>Persoonlijke Gmail</span><span class="seg"><i>Werk</i><i class="on">Persoonlijk</i></span></div>
+        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Werk</i><i class="on">Persoonlijk</i></span></div>
+        <span class="chip">Persoonlijke vergadering · in een persoonlijke agenda</span>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="paste">
     <div class="wrap speed">
       <div>
@@ -1273,7 +1306,7 @@
     <h2>Klaar voor je volgende call?</h2>
     <p>Installeer, koppel je AI en bronnen in ongeveer een minuut en neem deel aan een call. Daarna staan je samenvatting, taken en nieuwe termen klaar in Start.</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.10.0</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.11.0</span></a>
     </div>
     <ul class="reqs">
       <li>macOS 26 of nieuwer</li><li>Apple silicon</li><li>Eigen AI-sleutel of lokaal model</li><li>Optioneel: amem als geheugen</li><li>Toestemming voor systeemaudio en microfoon</li>

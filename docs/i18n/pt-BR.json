@@ -394,7 +394,6 @@
  "right_to_left_layout_for_cc9898": "Layout da direita para a esquerda para o árabe",
  "languages_undertone_comes_in_a92e1e": "Idiomas em que o Undertone está disponível",
  "up_next_reads_google_calendar_7e0e0d": "“A seguir” lê o Google Agenda diretamente quando ele está conectado, para que reuniões renomeadas ou canceladas não fiquem para trás",
- "download_dmg_v1_10_0_802c62": "Baixar .dmg <span class=\"ver\">v1.10.0</span>",
  "answers_you_can_paste_9bbe85": "Respostas prontas para colar",
  "new_in_1_10_ask_743274": "Novo na 1.10: Perguntar começa pelo que você pediu. Um rascunho vem como uma única mensagem, pronta para copiar, com o que faltar listado abaixo.",
  "one_recommended_draft_for_slack_caa806": "Um único rascunho recomendado para Slack ou e-mail, com seu próprio botão Copiar",
@@ -408,5 +407,18 @@
  "copy_af74f7": "Copiar",
  "translate_2be17a": "Traduzir",
  "copy_translation_ef0c0e": "Copiar tradução",
- "replace_selection_4147d9": "Substituir seleção"
+ "replace_selection_4147d9": "Substituir seleção",
+ "download_dmg_v1_11_0_2b614f": "Baixar .dmg <span class=\"ver\">v1.11.0</span>",
+ "work_stays_work_eb52cc": "Trabalho fica no trabalho",
+ "new_in_1_11_undertone_1a385e": "Novo na 1.11: o Undertone separa reuniões de trabalho das pessoais. Um webinar ou uma chamada do seu calendário pessoal é explicado com conhecimento geral, sem tocar nas suas ferramentas de trabalho.",
+ "mark_each_calendar_work_or_a5860d": "Marque cada calendário como Trabalho ou Pessoal; contas da empresa começam como Trabalho",
+ "personal_meetings_skip_your_work_a2b2ea": "Reuniões pessoais não usam suas ferramentas de trabalho nem sua memória, e os resumos ficam fora do amem",
+ "switch_any_meeting_between_work_e91c22": "Troque qualquer reunião entre Trabalho e Pessoal no painel de dicas",
+ "starts_on_its_own_for_93e78f": "Começa sozinho em webinars que você só assiste, e em mais navegadores como Comet, Vivaldi e Opera",
+ "sample_calendar_settings_645142": "Exemplo de ajustes de calendários",
+ "personal_gmail_1e807d": "Gmail pessoal",
+ "personal_meeting_on_a_personal_5967c6": "Reunião pessoal · em um calendário pessoal",
+ "calendars_944450": "Calendários",
+ "work_00040b": "Trabalho",
+ "personal_40f073": "Pessoal"
 }

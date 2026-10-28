@@ -394,7 +394,6 @@
  "right_to_left_layout_for_cc9898": "Rechts-naar-links-weergave voor Arabisch",
  "languages_undertone_comes_in_a92e1e": "Talen waarin Undertone beschikbaar is",
  "up_next_reads_google_calendar_7e0e0d": "“Hierna” leest Google Agenda direct als die gekoppeld is, zodat hernoemde of geannuleerde vergaderingen niet blijven hangen",
- "download_dmg_v1_10_0_802c62": "Download .dmg <span class=\"ver\">v1.10.0</span>",
  "answers_you_can_paste_9bbe85": "Antwoorden om te plakken",
  "new_in_1_10_ask_743274": "Nieuw in 1.10: Vragen begint met wat je vroeg. Een concept komt als één bericht, klaar om te kopiëren, met wat ontbreekt eronder.",
  "one_recommended_draft_for_slack_caa806": "Eén aanbevolen concept voor Slack of e-mail, met een eigen Kopieer-knop",
@@ -408,5 +407,18 @@
  "copy_af74f7": "Kopieer",
  "translate_2be17a": "Vertaal",
  "copy_translation_ef0c0e": "Vertaling kopiëren",
- "replace_selection_4147d9": "Selectie vervangen"
+ "replace_selection_4147d9": "Selectie vervangen",
+ "download_dmg_v1_11_0_2b614f": "Download .dmg <span class=\"ver\">v1.11.0</span>",
+ "work_stays_work_eb52cc": "Werk blijft werk",
+ "new_in_1_11_undertone_1a385e": "Nieuw in 1.11: Undertone houdt werkvergaderingen en persoonlijke uit elkaar. Een webinar of een gesprek uit je persoonlijke agenda wordt met algemene kennis uitgelegd, zonder je werktools aan te raken.",
+ "mark_each_calendar_work_or_a5860d": "Markeer elke agenda als Werk of Persoonlijk; bedrijfsaccounts beginnen als Werk",
+ "personal_meetings_skip_your_work_a2b2ea": "Persoonlijke vergaderingen gebruiken je werktools en geheugen niet, en hun samenvattingen blijven buiten amem",
+ "switch_any_meeting_between_work_e91c22": "Zet elke vergadering in het hintpaneel om tussen Werk en Persoonlijk",
+ "starts_on_its_own_for_93e78f": "Start vanzelf bij webinars waar je alleen naar luistert, en in meer browsers zoals Comet, Vivaldi en Opera",
+ "sample_calendar_settings_645142": "Voorbeeld van agenda-instellingen",
+ "personal_gmail_1e807d": "Persoonlijke Gmail",
+ "personal_meeting_on_a_personal_5967c6": "Persoonlijke vergadering · in een persoonlijke agenda",
+ "calendars_944450": "Agenda’s",
+ "work_00040b": "Werk",
+ "personal_40f073": "Persoonlijk"
 }

@@ -394,7 +394,6 @@
  "right_to_left_layout_for_cc9898": "تخطيط من اليمين إلى اليسار للعربية",
  "languages_undertone_comes_in_a92e1e": "اللغات التي يتوفر بها Undertone",
  "up_next_reads_google_calendar_7e0e0d": "يقرأ «التالي» تقويم Google مباشرةً عند ربطه، فلا تبقى الاجتماعات المُعاد تسميتها أو الملغاة",
- "download_dmg_v1_10_0_802c62": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.10.0</span>",
  "answers_you_can_paste_9bbe85": "إجابات جاهزة للصق",
  "new_in_1_10_ask_743274": "جديد في 1.10: يبدأ «اسأل» بما طلبته. تأتي المسودة رسالةً واحدة جاهزة للنسخ، مع ذكر ما ينقص أسفلها.",
  "one_recommended_draft_for_slack_caa806": "مسودة واحدة مقترحة لـ Slack أو البريد الإلكتروني، مع زر نسخ خاص بها",
@@ -408,5 +407,18 @@
  "copy_af74f7": "نسخ",
  "translate_2be17a": "ترجمة",
  "copy_translation_ef0c0e": "نسخ الترجمة",
- "replace_selection_4147d9": "استبدال التحديد"
+ "replace_selection_4147d9": "استبدال التحديد",
+ "download_dmg_v1_11_0_2b614f": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.11.0</span>",
+ "work_stays_work_eb52cc": "العمل يبقى عملًا",
+ "new_in_1_11_undertone_1a385e": "جديد في 1.11: يميّز Undertone اجتماعات العمل من الاجتماعات الشخصية. تُشرح الندوة أو المكالمة من تقويمك الشخصي بالمعرفة العامة، دون المساس بأدوات عملك.",
+ "mark_each_calendar_work_or_a5860d": "حدّد كل تقويم «عمل» أو «شخصي»؛ تبدأ حسابات الشركة «عمل»",
+ "personal_meetings_skip_your_work_a2b2ea": "لا تستخدم الاجتماعات الشخصية أدوات عملك أو ذاكرتك، وتبقى ملخصاتها خارج amem",
+ "switch_any_meeting_between_work_e91c22": "بدّل أي اجتماع بين «عمل» و«شخصي» من لوحة التلميحات",
+ "starts_on_its_own_for_93e78f": "يبدأ تلقائيًا في الندوات التي تستمع إليها فقط، وفي متصفحات أخرى مثل Comet وVivaldi وOpera",
+ "sample_calendar_settings_645142": "مثال على إعدادات التقويمات",
+ "personal_gmail_1e807d": "Gmail الشخصي",
+ "personal_meeting_on_a_personal_5967c6": "اجتماع شخصي · في تقويم شخصي",
+ "calendars_944450": "التقويمات",
+ "work_00040b": "عمل",
+ "personal_40f073": "شخصي"
 }

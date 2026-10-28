@@ -394,7 +394,6 @@
  "right_to_left_layout_for_cc9898": "Arapça için sağdan sola düzen",
  "languages_undertone_comes_in_a92e1e": "Undertone’un sunulduğu diller",
  "up_next_reads_google_calendar_7e0e0d": "“Sıradaki”, bağlıysa Google Takvim’i doğrudan okur; adı değişen ya da iptal edilen toplantılar listede kalmaz",
- "download_dmg_v1_10_0_802c62": ".dmg indir <span class=\"ver\">v1.10.0</span>",
  "answers_you_can_paste_9bbe85": "Yapıştırmaya hazır yanıtlar",
  "new_in_1_10_ask_743274": "1.10’da yeni: Sor, istediğinle başlar. Taslak, kopyalamaya hazır tek bir mesaj olarak gelir; eksikler altında listelenir.",
  "one_recommended_draft_for_slack_caa806": "Slack veya e-posta için tek bir önerilen taslak, kendi Kopyala düğmesiyle",
@@ -408,5 +407,18 @@
  "copy_af74f7": "Kopyala",
  "translate_2be17a": "Çevir",
  "copy_translation_ef0c0e": "Çeviriyi kopyala",
- "replace_selection_4147d9": "Seçimi değiştir"
+ "replace_selection_4147d9": "Seçimi değiştir",
+ "download_dmg_v1_11_0_2b614f": ".dmg indir <span class=\"ver\">v1.11.0</span>",
+ "work_stays_work_eb52cc": "İş işte kalır",
+ "new_in_1_11_undertone_1a385e": "1.11’de yeni: Undertone iş toplantılarını kişisel olanlardan ayırır. Bir web semineri ya da kişisel takviminizdeki bir görüşme, iş araçlarınıza dokunmadan genel bilgiyle açıklanır.",
+ "mark_each_calendar_work_or_a5860d": "Her takvimi İş veya Kişisel olarak işaretleyin; şirket hesapları İş olarak başlar",
+ "personal_meetings_skip_your_work_a2b2ea": "Kişisel toplantılar iş araçlarınızı ve belleğinizi kullanmaz, özetleri de amem’e gitmez",
+ "switch_any_meeting_between_work_e91c22": "Herhangi bir toplantıyı ipuçları panelinden İş ile Kişisel arasında değiştirin",
+ "starts_on_its_own_for_93e78f": "Yalnızca dinlediğiniz web seminerlerinde ve Comet, Vivaldi, Opera gibi daha fazla tarayıcıda kendiliğinden başlar",
+ "sample_calendar_settings_645142": "Örnek takvim ayarları",
+ "personal_gmail_1e807d": "Kişisel Gmail",
+ "personal_meeting_on_a_personal_5967c6": "Kişisel toplantı · kişisel bir takvimde",
+ "calendars_944450": "Takvimler",
+ "work_00040b": "İş",
+ "personal_40f073": "Kişisel"
 }
