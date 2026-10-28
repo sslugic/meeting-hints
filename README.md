@@ -39,3 +39,12 @@ Calls and your microphone are transcribed on your Mac with Apple's speech recogn
 ## Reporting a problem
 
 Open an [issue](https://github.com/sslugic/undertone/issues) with your macOS version, Undertone version (Profile & Settings) and what happened. Please don't paste meeting transcripts or anything confidential. For security issues, see [SECURITY.md](SECURITY.md).
+
+## Publishing the site
+
+The site is served at https://getundertone.app by a Cloudflare Worker (`wrangler.toml`). After editing `docs/index.html`:
+
+    python3 tools/i18n.py
+    npx wrangler deploy
+
+Pushing to GitHub only updates the old GitHub Pages address, which forwards to getundertone.app.
