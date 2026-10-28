@@ -416,5 +416,7 @@
  "pick_a_meeting_to_see_e701e3": "ミーティングを選んで、Undertoneに何が表示されるか確かめてください。アプリでは「ホーム › サンプル会議を試す」で、最初の通話の前に架空のスタンドアップを実際のパネルで再生できます。",
  "or_with_homebrew_brew_install_1c436a": "Homebrew の場合： <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
  "updates_itself_ac2e05": "自動でアップデート",
- "feedback_c8d767": "フィードバック"
+ "feedback_c8d767": "フィードバック",
+ "press_ea683a:": "プレス",
+ "press_ea683a": "プレス"
 }

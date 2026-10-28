@@ -416,5 +416,7 @@
  "pick_a_meeting_to_see_e701e3": "Undertone’un size ne göstereceğini görmek için bir toplantı seçin. Uygulamada Ana Sayfa › Örnek bir toplantıyı deneyin, ilk görüşmenizden önce uydurma bir standup’ı gerçek panelde oynatır.",
  "or_with_homebrew_brew_install_1c436a": "Ya da Homebrew ile: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
  "updates_itself_ac2e05": "Kendini günceller",
- "feedback_c8d767": "Geri bildirim"
+ "feedback_c8d767": "Geri bildirim",
+ "press_ea683a:": "Basın",
+ "press_ea683a": "Basın"
 }

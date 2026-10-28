@@ -416,5 +416,6 @@
  "pick_a_meeting_to_see_e701e3": "미팅을 골라 Undertone이 무엇을 보여 주는지 확인해 보세요. 앱에서 홈 › 샘플 회의를 체험해 보세요를 누르면 첫 통화 전에 가상의 스탠드업이 실제 패널에서 재생됩니다.",
  "or_with_homebrew_brew_install_1c436a": "Homebrew로 설치: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
  "updates_itself_ac2e05": "자동 업데이트",
- "feedback_c8d767": "피드백"
+ "feedback_c8d767": "피드백",
+ "press_ea683a": "보도 자료"
 }

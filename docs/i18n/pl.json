@@ -416,5 +416,7 @@
  "pick_a_meeting_to_see_e701e3": "Wybierz spotkanie i zobacz, co pokazałby ci Undertone. W aplikacji Start › Wypróbuj przykładowe spotkanie odtwarza zmyślony standup w prawdziwym panelu jeszcze przed pierwszą rozmową.",
  "or_with_homebrew_brew_install_1c436a": "Lub przez Homebrew: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
  "updates_itself_ac2e05": "Aktualizuje się sama",
- "feedback_c8d767": "Opinie"
+ "feedback_c8d767": "Opinie",
+ "press_ea683a:": "Dla prasy",
+ "press_ea683a": "Dla prasy"
 }

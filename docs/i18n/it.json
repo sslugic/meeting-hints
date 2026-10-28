@@ -416,5 +416,6 @@
  "pick_a_meeting_to_see_e701e3": "Scegli una riunione per vedere cosa ti mostrerebbe Undertone. Nell’app, Home › Prova una riunione di esempio fa scorrere uno standup inventato nel pannello reale prima della tua prima chiamata.",
  "or_with_homebrew_brew_install_1c436a": "Oppure con Homebrew: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
  "updates_itself_ac2e05": "Si aggiorna da sola",
- "feedback_c8d767": "Feedback"
+ "feedback_c8d767": "Feedback",
+ "press_ea683a": "Stampa"
 }

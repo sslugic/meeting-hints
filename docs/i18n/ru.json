@@ -416,5 +416,7 @@
  "pick_a_meeting_to_see_e701e3": "Выберите встречу и посмотрите, что покажет Undertone. В приложении «Главная › Попробуйте пример встречи» проигрывает выдуманную планёрку в настоящей панели ещё до первого звонка.",
  "or_with_homebrew_brew_install_1c436a": "Или через Homebrew: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
  "updates_itself_ac2e05": "Обновляется само",
- "feedback_c8d767": "Отзыв"
+ "feedback_c8d767": "Отзыв",
+ "press_ea683a:": "Для прессы",
+ "press_ea683a": "Для прессы"
 }
