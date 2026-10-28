@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- Source of docs/assets/promo.png. Render: scripts/render-promo.sh -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --bg: #09090B; --border: rgba(255, 255, 255, .08); --text: #F4F4F5; --text-2: #A1A1AA; --text-3: #8B8B94;
+    --accent: #818CF8; --accent-soft: rgba(129, 140, 248, .14); --live: #10B981;
+    --sans: Inter, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { width: 1600px; height: 900px; overflow: hidden; background: var(--bg); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; position: relative; }
+  body::before { content: ""; position: absolute; inset: 0; background: radial-gradient(50% 60% at 78% 30%, rgba(99, 102, 241, .28), transparent 70%), radial-gradient(40% 50% at 10% 100%, rgba(99, 102, 241, .12), transparent 70%); }
+  .left { position: absolute; left: 96px; top: 150px; width: 600px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 600; letter-spacing: -.01em; }
+  .brand img { width: 40px; height: 40px; }
+  .pill { font-size: 14px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 3px 11px; background: rgba(255, 255, 255, .03); }
+  h1 { margin-top: 48px; font-size: 62px; line-height: 1.03; font-weight: 600; letter-spacing: -.03em; }
+  .sub { margin-top: 24px; font-size: 24px; line-height: 1.5; color: var(--text-2); }
+  .cta { margin-top: 40px; display: inline-flex; align-items: center; gap: 12px; height: 60px; padding: 0 28px; border-radius: 999px; background: #F4F4F5; color: #09090B; font-size: 21px; font-weight: 500; }
+  .cta svg { width: 22px; height: 22px; }
+  .cta span { color: #52525B; font-size: 17px; }
+  .fine { margin-top: 16px; font-size: 16px; color: var(--text-3); }
+
+  .hud { position: absolute; right: 84px; top: 170px; width: 700px; border-radius: 18px; background: rgba(24, 25, 33, .78); border: 1px solid rgba(255, 255, 255, .12); box-shadow: 0 40px 100px -24px rgba(0, 0, 0, .8), 0 0 0 1px rgba(0, 0, 0, .4); }
+  .head { display: flex; align-items: center; gap: 14px; padding: 18px 22px; border-bottom: 1px solid var(--border); }
+  .wave { display: flex; align-items: center; gap: 3px; height: 26px; }
+  .wave i { display: block; width: 3.5px; border-radius: 2px; background: var(--live); }
+  .t { font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
+  .m { font-size: 14px; color: var(--text-3); }
+  .live { margin-left: auto; display: flex; align-items: center; gap: 8px; font-size: 14px; color: #6EE7B7; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--live); box-shadow: 0 0 0 3px rgba(16, 185, 129, .18); }
+  .body { padding: 20px 22px 22px; display: grid; gap: 12px; }
+  .line { background: rgba(255, 255, 255, .04); border: 1px solid var(--border); border-radius: 13px; padding: 13px 16px; font-size: 18px; line-height: 1.5; color: #E4E4E7; }
+  .who { display: block; font-size: 14px; color: var(--text-3); margin-bottom: 3px; }
+  .who b { color: var(--text-2); font-weight: 500; }
+  .who em { font-style: normal; color: var(--accent); }
+  .line.you { border-color: rgba(129, 140, 248, .35); }
+  .term { color: #fff; background: var(--accent-soft); box-shadow: inset 0 -2px 0 var(--accent); border-radius: 4px; padding: 0 3px; }
+  .ctx { background: rgba(255, 255, 255, .05); border: 1px solid var(--border); border-radius: 13px; padding: 15px 17px; }
+  .ctx.ans { border-color: rgba(129, 140, 248, .35); background: rgba(99, 102, 241, .1); }
+  .ct { display: flex; justify-content: space-between; font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
+  .ct small { font-size: 14px; font-weight: 500; color: var(--accent); }
+  .ctx p { margin-top: 4px; font-size: 17px; line-height: 1.5; color: #D4D4D8; }
+  .src { display: inline-flex; align-items: center; gap: 7px; margin-top: 10px; font-size: 14px; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 3px 11px 3px 8px; }
+  .src img { width: 15px; height: 15px; border-radius: 3px; background: #fff; padding: 1px; }
+</style>
+</head>
+<body>
+  <div class="left">
+    <div class="brand"><img src="assets/icon-256.png" alt="">Undertone <span class="pill">macOS</span></div>
+    <h1>Your company's jargon, explained while it's being said.</h1>
+    <p class="sub">Code names, acronyms and internal projects from your calls, explained from your team's own Slack, Notion and Jira.</p>
+    <div class="cta"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span>free during the beta</span></div>
+    <p class="fine">macOS 26 or later on Apple silicon</p>
+  </div>
+
+  <div class="hud">
+    <div class="head">
+      <span class="wave"><i style="height:30%"></i><i style="height:65%"></i><i style="height:100%"></i><i style="height:55%"></i><i style="height:35%"></i></span>
+      <div><div class="t">Platform sync</div><div class="m">12:04 · 31 terms loaded</div></div>
+      <span class="live"><span class="dot"></span>Listening</span>
+    </div>
+    <div class="body">
+      <p class="line"><span class="who"><b>Maya</b> · 12:02</span>Infra wants <span class="term">Keystone</span> wrapped before the freeze.</p>
+      <div class="ctx"><div class="ct">Project Keystone <small>Likely new</small></div><p>The Q3 migration to the new billing stack, led by the Infra team.</p><span class="src"><img src="assets/logos/notion.png" alt="">Notion · RFC-402</span></div>
+      <p class="line you"><span class="who"><b>Sam</b> · 12:04 · <em>to you</em></span>Can you give us a quick status on Keystone?</p>
+      <div class="ctx ans"><div class="ct">Context for you <small>Sam asked</small></div><p>Billing writes moved last week. Read cutover planned for the 14th.</p><span class="src"><img src="assets/logos/jira.png" alt="">Jira · INFRA-311</span></div>
+    </div>
+  </div>
+</body>
+</html>

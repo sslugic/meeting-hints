@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sslugic/undertone/schemas/meeting.schema.json",
+  "title": "Undertone meeting",
+  "description": "One meeting, stored as meetings/<id>.json.",
+  "type": "object",
+  "required": ["id", "title", "app", "startedAt", "attendees", "transcript", "hints"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "title": { "type": "string" },
+    "app": { "type": "string", "description": "Where it was detected: Zoom, Chrome, Granola, manual, replay." },
+    "startedAt": { "type": "string", "format": "date-time" },
+    "endedAt": { "type": "string", "format": "date-time" },
+    "endReason": { "type": "string", "description": "Why listening stopped, e.g. \"Call ended\"." },
+    "attendees": { "type": "array", "items": { "type": "string", "description": "As in the calendar invite, e.g. \"Maya Chen (maya@example.com)\"." } },
+    "spaceID": { "type": "string", "format": "uuid" },
+    "transcript": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["time", "text"],
+        "properties": {
+          "time": { "type": "number", "description": "Seconds from the start of the meeting." },
+          "text": { "type": "string" },
+          "speaker": { "type": "string", "description": "\"You\" for your microphone; absent for the call audio." }
+        }
+      }
+    },
+    "hints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "term", "explanation", "unfamiliarity", "status", "time"],
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "term": { "type": "string" },
+          "explanation": { "type": "string" },
+          "unfamiliarity": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "reason": { "type": "string" },
+          "source": { "type": "string", "description": "Where the explanation came from, e.g. \"Notion · RFC-402\"." },
+          "status": { "enum": ["ready", "checking", "workspace"] },
+          "time": { "type": "number" },
+          "heardAs": { "type": "string", "description": "What the transcript said when the term was misheard." },
+          "research": {
+            "type": "object",
+            "properties": {
+              "summary": { "type": "string" },
+              "details": { "type": "array", "items": { "type": "string" } },
+              "links": { "type": "array", "items": { "type": "object", "properties": { "title": { "type": "string" }, "url": { "type": "string" }, "source": { "type": "string" } } } },
+              "people": { "type": "array", "items": { "type": "string" } },
+              "researchedAt": { "type": "string", "format": "date-time" }
+            }
+          }
+        }
+      }
+    },
+    "answers": {
+      "type": "array",
+      "description": "Context brought up for questions put to you: a key fact (opener) and reminders (points), with sources.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "question": { "type": "string" },
+          "opener": { "type": "string" },
+          "points": { "type": "array", "items": { "type": "string" } },
+          "sources": { "type": "array", "items": { "type": "string" } },
+          "status": { "enum": ["drafting", "ready", "failed"] },
+          "time": { "type": "number" }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "summary": { "type": "string" },
+        "keyPoints": { "type": "array", "items": { "type": "string" } },
+        "actionItems": { "type": "array", "items": { "type": "string" } },
+        "topics": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "reviews": {
+      "type": "array",
+      "description": "Feedback on how you answered each question.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "question": { "type": "string" },
+          "at": { "type": "string" },
+          "yourAnswer": { "type": "string" },
+          "verdict": { "enum": ["strong", "okay", "weak", "missed"] },
+          "wentWell": { "type": "array", "items": { "type": "string" } },
+          "improve": { "type": "array", "items": { "type": "string" } },
+          "betterAnswer": { "type": "string" }
+        }
+      }
+    },
+    "answerScore": {
+      "type": "object",
+      "properties": {
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "isInterview": { "type": "boolean" },
+        "outlook": { "enum": ["likely", "borderline", "unlikely"] },
+        "summary": { "type": "string" },
+        "focus": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "liveChat": {
+      "type": "array",
+      "description": "Questions asked in the panel's chat during the call.",
+      "items": { "type": "object", "properties": { "id": { "type": "string" }, "role": { "enum": ["user", "assistant"] }, "text": { "type": "string" }, "date": { "type": "string", "format": "date-time" } } }
+    },
+    "followUp": {
+      "type": "object",
+      "properties": {
+        "style": { "enum": ["email", "slack"] },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

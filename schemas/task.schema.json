@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sslugic/undertone/schemas/task.schema.json",
+  "title": "Undertone tasks",
+  "description": "tasks.json: everything you have to do, from meetings or added by hand.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "title", "context", "priority", "createdAt", "done"],
+    "properties": {
+      "id": { "type": "string", "format": "uuid" },
+      "title": { "type": "string" },
+      "context": { "type": "string", "description": "Why it's needed, from the meeting." },
+      "due": { "type": "string", "description": "The deadline as it was said, e.g. \"Friday\" or \"next week\"." },
+      "priority": { "enum": ["high", "normal"] },
+      "stage": { "enum": ["todo", "inProgress", "inReview", "done"] },
+      "done": { "type": "boolean" },
+      "doneAt": { "type": "string", "format": "date-time" },
+      "meetingID": { "type": "string", "format": "uuid" },
+      "meetingTitle": { "type": "string" },
+      "spaceID": { "type": "string", "format": "uuid" },
+      "createdAt": { "type": "string", "format": "date-time" }
+    }
+  }
+}

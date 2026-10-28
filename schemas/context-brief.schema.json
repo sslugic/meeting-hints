@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sslugic/undertone/schemas/context-brief.schema.json",
+  "title": "Undertone background context",
+  "description": "context-index.json: context gathered ahead of time for open tasks and recent meetings.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "kind", "title", "brief", "gatheredAt"],
+    "properties": {
+      "id": { "type": "string", "format": "uuid", "description": "The task's or meeting's id." },
+      "kind": { "enum": ["task", "meeting"] },
+      "title": { "type": "string" },
+      "brief": { "type": "string", "description": "Short Markdown; every fact names its source in brackets, e.g. [Jira PLAT-412]." },
+      "gatheredAt": { "type": "string", "format": "date-time" }
+    }
+  }
+}
