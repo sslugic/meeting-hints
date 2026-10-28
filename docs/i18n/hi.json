@@ -386,12 +386,13 @@
  "undertone_made_by_slaven_slugic_f16090": "Undertone · <a href=\"https://sslugic.github.io\">Slaven Slugic</a> द्वारा बनाया गया · v0.9 तक इसका नाम Meeting Hints था",
  "project_f6f4da": "प्रोजेक्ट",
  "issues_30ce4c": "इश्यूज़",
- "download_dmg_v1_9_0_2d3500": ".dmg डाउनलोड करें <span class=\"ver\">v1.9.0</span>",
  "speaks_your_language_03d0c0": "आपकी भाषा बोलता है",
  "new_in_1_9_undertone_4fb81f": "1.9 में नया: Undertone 17 भाषाओं में उपलब्ध है। यह आपके Mac की भाषा अपनाता है, और आप Settings में कोई और भाषा चुन सकते हैं।",
  "hints_answers_and_recaps_are_8d27ae": "संकेत, जवाब और सारांश आपकी भाषा में लिखे जाते हैं; मीटिंग के शब्द वैसे ही रहते हैं जैसे बोले गए",
  "meetings_held_in_any_of_dc019b": "19 भाषाओं और बोलियों में से किसी में भी हुई मीटिंग आपके Mac पर ट्रांसक्राइब होती है",
  "choose_which_calendars_to_use_5c9619": "अपने सभी Google, iCloud और Outlook खातों में से चुनें कि कौन-से कैलेंडर इस्तेमाल हों",
  "right_to_left_layout_for_cc9898": "अरबी के लिए दाएँ-से-बाएँ लेआउट",
- "languages_undertone_comes_in_a92e1e": "भाषाएँ जिनमें Undertone उपलब्ध है"
+ "languages_undertone_comes_in_a92e1e": "भाषाएँ जिनमें Undertone उपलब्ध है",
+ "download_dmg_v1_9_1_48d05c": ".dmg डाउनलोड करें <span class=\"ver\">v1.9.1</span>",
+ "up_next_reads_google_calendar_7e0e0d": "जुड़ा होने पर \"आगे\" सीधे Google Calendar पढ़ता है, ताकि नाम बदली या रद्द की गई मीटिंग अटकी न रहें"
 }
