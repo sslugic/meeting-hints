@@ -390,7 +390,6 @@
  "work_00040b": "Travail",
  "personal_40f073": "Personnel",
  "says_who_a_question_was_4ad923": "Indique à qui la question s’adressait : à vous, à quelqu’un d’autre nommé, ou à toute la salle",
- "download_dmg_v1_11_2_a38207": "Télécharger le .dmg <span class=\"ver\">v1.11.2</span>",
  "a_call_that_drops_and_866862": "Un appel coupé puis repris continue la même réunion au lieu d’en créer une nouvelle",
  "undertone_answers_from_what_it_5e25d1": "Undertone répond à partir de ce qu’il sait déjà avec un modèle rapide, et ne cherche dans vos outils que si cela ne suffit pas.",
  "ask_leads_with_what_you_0a1c09": "Demander commence par ce que vous avez demandé. Un brouillon arrive en un seul message, prêt à copier, avec ce qui manque indiqué en dessous.",
@@ -411,5 +410,6 @@
  "no_account_and_no_bundled_37a26a": "Pas de compte ni de clé fournie. Vos appels, clés et réunions restent chez vous ; la seule chose que reçoit Undertone est un décompte anonyme que vous pouvez désactiver.",
  "usage_count_1b27e3": "Décompte d’utilisation",
  "if_you_leave_count_me_5c9aa8": "Si vous laissez « Me compter comme utilisateur » activé : un signal anonyme à la première ouverture d’Undertone et au plus un par semaine, avec un identifiant aléatoire, la version de l’app, la version de macOS et la langue. Désactivez-le dans la configuration ou les Réglages.",
- "to_check_what_leaves_your_51b290": "Pour vérifier ce qui sort de votre Mac, observez le trafic d’Undertone avec Little Snitch, LuLu ou Proxyman pendant un appel. Vous ne verrez que des connexions vers l’IA choisie, les outils connectés et, si vous l’avez laissé activé, le décompte anonyme hebdomadaire. Votre audio ne quitte jamais votre Mac ; seul du texte part vers votre IA."
+ "to_check_what_leaves_your_51b290": "Pour vérifier ce qui sort de votre Mac, observez le trafic d’Undertone avec Little Snitch, LuLu ou Proxyman pendant un appel. Vous ne verrez que des connexions vers l’IA choisie, les outils connectés et, si vous l’avez laissé activé, le décompte anonyme hebdomadaire. Votre audio ne quitte jamais votre Mac ; seul du texte part vers votre IA.",
+ "download_dmg_v1_12_0_e84326": "Télécharger le .dmg <span class=\"ver\">v1.12.0</span>"
 }

@@ -390,7 +390,6 @@
  "work_00040b": "Trabajo",
  "personal_40f073": "Personal",
  "says_who_a_question_was_4ad923": "Indica a quién iba la pregunta: a ti, a otra persona por su nombre o a toda la sala",
- "download_dmg_v1_11_2_a38207": "Descargar .dmg <span class=\"ver\">v1.11.2</span>",
  "a_call_that_drops_and_866862": "Una llamada que se corta y vuelve sigue siendo la misma reunión, no una nueva",
  "undertone_answers_from_what_it_5e25d1": "Undertone responde con un modelo rápido a partir de lo que ya sabe y solo busca en tus herramientas cuando no es suficiente.",
  "ask_leads_with_what_you_0a1c09": "Preguntar empieza por lo que pediste. Un borrador llega como un solo mensaje, listo para copiar, con lo que falte indicado debajo.",
@@ -411,5 +410,6 @@
  "no_account_and_no_bundled_37a26a": "Sin cuenta ni clave incluida. Tus llamadas, claves y reuniones se quedan contigo; lo único que recibe Undertone es un recuento anónimo que puedes desactivar.",
  "usage_count_1b27e3": "Recuento de uso",
  "if_you_leave_count_me_5c9aa8": "Si dejas activado «Cuéntame como usuario»: un aviso anónimo al abrir Undertone por primera vez y como mucho uno a la semana, con un ID aleatorio, la versión de la app, la versión de macOS y el idioma. Desactívalo en la configuración o en Ajustes.",
- "to_check_what_leaves_your_51b290": "Para comprobar qué sale de tu Mac, observa el tráfico de Undertone con Little Snitch, LuLu o Proxyman durante una llamada. Solo verás conexiones a la IA que elegiste, a las herramientas que conectaste y, si lo dejaste activado, el recuento anónimo semanal. Tu audio nunca sale de tu Mac; a tu IA solo le llega texto."
+ "to_check_what_leaves_your_51b290": "Para comprobar qué sale de tu Mac, observa el tráfico de Undertone con Little Snitch, LuLu o Proxyman durante una llamada. Solo verás conexiones a la IA que elegiste, a las herramientas que conectaste y, si lo dejaste activado, el recuento anónimo semanal. Tu audio nunca sale de tu Mac; a tu IA solo le llega texto.",
+ "download_dmg_v1_12_0_e84326": "Descargar .dmg <span class=\"ver\">v1.12.0</span>"
 }

@@ -390,7 +390,6 @@
  "work_00040b": "工作",
  "personal_40f073": "個人",
  "says_who_a_question_was_4ad923": "標明問題是問誰的：你、被點名的其他人，還是所有人",
- "download_dmg_v1_11_2_a38207": "下載 .dmg <span class=\"ver\">v1.11.2</span>",
  "a_call_that_drops_and_866862": "中斷後恢復的通話會接續同一場會議，而不是另開一場",
  "undertone_answers_from_what_it_5e25d1": "Undertone 會先用快速模型根據已掌握的資訊回答，只有不夠時才搜尋你的工具。",
  "ask_leads_with_what_you_0a1c09": "提問會先給出你要的東西。草稿以一則可直接拷貝的訊息呈現，缺少的內容列在下方。",
@@ -411,5 +410,6 @@
  "no_account_and_no_bundled_37a26a": "不需帳號，也沒有內建金鑰。你的通話、金鑰和會議都留在你手上；Undertone 本身收到的只有一個可以關閉的匿名計數。",
  "usage_count_1b27e3": "使用計數",
  "if_you_leave_count_me_5c9aa8": "如果你保持「把我算作使用者」開啟：第一次打開 Undertone 時傳送一次匿名訊號，之後每週最多一次，只包含隨機 ID、App 版本、macOS 版本和語言。可在設定精靈或「設定」中關閉。",
- "to_check_what_leaves_your_51b290": "想檢查哪些資料離開了你的 Mac，可以在通話期間用 Little Snitch、LuLu 或 Proxyman 監看 Undertone 的流量。你只會看到連向你選擇的 AI、你連接的工具，以及（如果保持開啟）每週匿名計數的連線。你的音訊從不離開你的 Mac；傳給 AI 的只有文字。"
+ "to_check_what_leaves_your_51b290": "想檢查哪些資料離開了你的 Mac，可以在通話期間用 Little Snitch、LuLu 或 Proxyman 監看 Undertone 的流量。你只會看到連向你選擇的 AI、你連接的工具，以及（如果保持開啟）每週匿名計數的連線。你的音訊從不離開你的 Mac；傳給 AI 的只有文字。",
+ "download_dmg_v1_12_0_e84326": "下載 .dmg <span class=\"ver\">v1.12.0</span>"
 }

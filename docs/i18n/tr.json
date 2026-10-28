@@ -390,7 +390,6 @@
  "work_00040b": "İş",
  "personal_40f073": "Kişisel",
  "says_who_a_question_was_4ad923": "Bir sorunun kime sorulduğunu söyler: size, adıyla başka birine ya da herkese",
- "download_dmg_v1_11_2_a38207": ".dmg indir <span class=\"ver\">v1.11.2</span>",
  "a_call_that_drops_and_866862": "Kopup geri gelen bir görüşme yeni bir toplantı değil, aynı toplantının devamı olur",
  "undertone_answers_from_what_it_5e25d1": "Undertone, zaten bildiklerinden hızlı bir modelle yanıt verir ve yalnızca bu yetmediğinde araçlarınızda arama yapar.",
  "ask_leads_with_what_you_0a1c09": "Sor, istediğinle başlar. Taslak, kopyalamaya hazır tek bir mesaj olarak gelir; eksikler altında listelenir.",
@@ -411,5 +410,6 @@
  "no_account_and_no_bundled_37a26a": "Hesap yok, gömülü anahtar yok. Görüşmeleriniz, anahtarlarınız ve toplantılarınız sizde kalır; Undertone’un kendisine ulaşan tek şey kapatabileceğiniz anonim bir sayımdır.",
  "usage_count_1b27e3": "Kullanım sayımı",
  "if_you_leave_count_me_5c9aa8": "“Beni kullanıcı olarak say” açık kalırsa: Undertone ilk açıldığında bir ve haftada en fazla bir anonim sinyal; rastgele bir kimlik, uygulama sürümü, macOS sürümü ve dil ile. Kurulumda veya Ayarlar’da kapatabilirsiniz.",
- "to_check_what_leaves_your_51b290": "Mac’inizden neyin çıktığını kontrol etmek için bir görüşme sırasında Undertone’un trafiğini Little Snitch, LuLu veya Proxyman ile izleyin. Yalnızca seçtiğiniz yapay zekâya, bağladığınız araçlara ve açık bıraktıysanız haftalık anonim sayıma giden bağlantıları görürsünüz. Sesiniz Mac’inizden asla çıkmaz; yapay zekânıza yalnızca metin gider."
+ "to_check_what_leaves_your_51b290": "Mac’inizden neyin çıktığını kontrol etmek için bir görüşme sırasında Undertone’un trafiğini Little Snitch, LuLu veya Proxyman ile izleyin. Yalnızca seçtiğiniz yapay zekâya, bağladığınız araçlara ve açık bıraktıysanız haftalık anonim sayıma giden bağlantıları görürsünüz. Sesiniz Mac’inizden asla çıkmaz; yapay zekânıza yalnızca metin gider.",
+ "download_dmg_v1_12_0_e84326": ".dmg indir <span class=\"ver\">v1.12.0</span>"
 }

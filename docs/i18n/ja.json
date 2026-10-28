@@ -390,7 +390,6 @@
  "work_00040b": "仕事",
  "personal_40f073": "個人",
  "says_who_a_question_was_4ad923": "質問が誰へのものかを示します。あなた、名前の出た別の人、または全員",
- "download_dmg_v1_11_2_a38207": ".dmgをダウンロード <span class=\"ver\">v1.11.2</span>",
  "a_call_that_drops_and_866862": "途切れて再開した通話は、新しい会議ではなく同じ会議の続きになります",
  "undertone_answers_from_what_it_5e25d1": "Undertoneはすでに知っていることから高速モデルで答え、それで足りないときだけツールを検索します。",
  "ask_leads_with_what_you_0a1c09": "「質問」は、頼んだものから答えます。下書きはコピーしてそのまま使える 1 つのメッセージで届き、足りないものはその下に書かれます。",
@@ -411,5 +410,6 @@
  "no_account_and_no_bundled_37a26a": "アカウントも、同梱の API キーもありません。通話、キー、会議はあなたの手元に残ります。Undertone 自体が受け取るのは、オフにできる匿名の利用カウントだけです。",
  "usage_count_1b27e3": "利用カウント",
  "if_you_leave_count_me_5c9aa8": "「ユーザーとしてカウントする」をオンのままにした場合：Undertone の初回起動時に 1 回、その後は週に 1 回まで匿名の通知を送ります。内容はランダムな ID、アプリのバージョン、macOS のバージョン、言語だけです。セットアップか設定でオフにできます。",
- "to_check_what_leaves_your_51b290": "Macから何が送信されているかは、通話中にLittle Snitch、LuLu、ProxymanでUndertoneの通信を監視すれば確認できます。見えるのは、選んだ AI と接続したツール、そしてオンのままなら週 1 回の匿名カウントへの接続だけです。音声がMacから出ることはなく、AIに送られるのはテキストだけです。"
+ "to_check_what_leaves_your_51b290": "Macから何が送信されているかは、通話中にLittle Snitch、LuLu、ProxymanでUndertoneの通信を監視すれば確認できます。見えるのは、選んだ AI と接続したツール、そしてオンのままなら週 1 回の匿名カウントへの接続だけです。音声がMacから出ることはなく、AIに送られるのはテキストだけです。",
+ "download_dmg_v1_12_0_e84326": ".dmgをダウンロード <span class=\"ver\">v1.12.0</span>"
 }

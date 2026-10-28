@@ -390,7 +390,6 @@
  "work_00040b": "Werk",
  "personal_40f073": "Persoonlijk",
  "says_who_a_question_was_4ad923": "Laat zien voor wie een vraag was: jij, iemand anders bij naam of de hele zaal",
- "download_dmg_v1_11_2_a38207": "Download .dmg <span class=\"ver\">v1.11.2</span>",
  "a_call_that_drops_and_866862": "Een gesprek dat wegvalt en terugkomt gaat verder in dezelfde vergadering in plaats van een nieuwe",
  "undertone_answers_from_what_it_5e25d1": "Undertone antwoordt met een snel model vanuit wat het al weet, en doorzoekt je tools alleen als dat niet genoeg is.",
  "ask_leads_with_what_you_0a1c09": "Vragen begint met wat je vroeg. Een concept komt als één bericht, klaar om te kopiëren, met wat ontbreekt eronder.",
@@ -411,5 +410,6 @@
  "no_account_and_no_bundled_37a26a": "Geen account en geen meegeleverde sleutel. Je gesprekken, sleutels en vergaderingen blijven bij jou; het enige dat Undertone zelf ontvangt is een anonieme telling die je kunt uitzetten.",
  "usage_count_1b27e3": "Gebruikstelling",
  "if_you_leave_count_me_5c9aa8": "Als je ‘Tel mij als gebruiker’ aan laat: één anonieme ping bij de eerste keer openen van Undertone en hooguit één per week, met een willekeurige ID, de appversie, de macOS-versie en de taal. Zet het uit in de installatie of in Instellingen.",
- "to_check_what_leaves_your_51b290": "Wil je controleren wat je Mac verlaat? Bekijk het verkeer van Undertone tijdens een call met Little Snitch, LuLu of Proxyman. Je ziet alleen verbindingen met de AI die je koos, de tools die je koppelde en, als je het aan liet, de wekelijkse anonieme telling. Je audio verlaat je Mac nooit; alleen tekst gaat naar je AI."
+ "to_check_what_leaves_your_51b290": "Wil je controleren wat je Mac verlaat? Bekijk het verkeer van Undertone tijdens een call met Little Snitch, LuLu of Proxyman. Je ziet alleen verbindingen met de AI die je koos, de tools die je koppelde en, als je het aan liet, de wekelijkse anonieme telling. Je audio verlaat je Mac nooit; alleen tekst gaat naar je AI.",
+ "download_dmg_v1_12_0_e84326": "Download .dmg <span class=\"ver\">v1.12.0</span>"
 }

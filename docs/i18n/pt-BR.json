@@ -390,7 +390,6 @@
  "work_00040b": "Trabalho",
  "personal_40f073": "Pessoal",
  "says_who_a_question_was_4ad923": "Mostra para quem era a pergunta: você, outra pessoa pelo nome ou a sala toda",
- "download_dmg_v1_11_2_a38207": "Baixar .dmg <span class=\"ver\">v1.11.2</span>",
  "a_call_that_drops_and_866862": "Uma chamada que cai e volta continua a mesma reunião em vez de começar outra",
  "undertone_answers_from_what_it_5e25d1": "o Undertone responde com um modelo rápido a partir do que já sabe e só pesquisa nas suas ferramentas quando isso não basta.",
  "ask_leads_with_what_you_0a1c09": "Perguntar começa pelo que você pediu. Um rascunho vem como uma única mensagem, pronta para copiar, com o que faltar listado abaixo.",
@@ -411,5 +410,6 @@
  "no_account_and_no_bundled_37a26a": "Sem conta e sem chave incluída. Suas chamadas, chaves e reuniões ficam com você; a única coisa que o Undertone recebe é uma contagem anônima que você pode desligar.",
  "usage_count_1b27e3": "Contagem de uso",
  "if_you_leave_count_me_5c9aa8": "Se você deixar “Contar como usuário” ligado: um ping anônimo quando o Undertone é aberto pela primeira vez e no máximo um por semana, com um ID aleatório, a versão do app, a versão do macOS e o idioma. Desligue na configuração ou em Ajustes.",
- "to_check_what_leaves_your_51b290": "Para conferir o que sai do seu Mac, observe o tráfego do Undertone com o Little Snitch, o LuLu ou o Proxyman durante uma chamada. Você só verá conexões com a IA que escolheu, as ferramentas que conectou e, se deixou ligado, a contagem anônima semanal. O seu áudio nunca sai do seu Mac; só texto vai para a sua IA."
+ "to_check_what_leaves_your_51b290": "Para conferir o que sai do seu Mac, observe o tráfego do Undertone com o Little Snitch, o LuLu ou o Proxyman durante uma chamada. Você só verá conexões com a IA que escolheu, as ferramentas que conectou e, se deixou ligado, a contagem anônima semanal. O seu áudio nunca sai do seu Mac; só texto vai para a sua IA.",
+ "download_dmg_v1_12_0_e84326": "Baixar .dmg <span class=\"ver\">v1.12.0</span>"
 }

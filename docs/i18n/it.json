@@ -390,7 +390,6 @@
  "work_00040b": "Lavoro",
  "personal_40f073": "Personale",
  "says_who_a_question_was_4ad923": "Dice a chi era rivolta una domanda: a te, a un’altra persona per nome o a tutta la sala",
- "download_dmg_v1_11_2_a38207": "Scarica il .dmg <span class=\"ver\">v1.11.2</span>",
  "a_call_that_drops_and_866862": "Una chiamata che cade e riprende continua la stessa riunione invece di crearne una nuova",
  "undertone_answers_from_what_it_5e25d1": "Undertone risponde con un modello veloce partendo da ciò che sa già, e cerca nei tuoi strumenti solo quando non basta.",
  "ask_leads_with_what_you_0a1c09": "Chiedi parte da ciò che hai chiesto. Una bozza arriva come un unico messaggio pronto da copiare, con ciò che manca indicato sotto.",
@@ -411,5 +410,6 @@
  "no_account_and_no_bundled_37a26a": "Nessun account e nessuna chiave inclusa. Chiamate, chiavi e riunioni restano tue; l’unica cosa che Undertone riceve è un conteggio anonimo che puoi disattivare.",
  "usage_count_1b27e3": "Conteggio d’uso",
  "if_you_leave_count_me_5c9aa8": "Se lasci attivo «Contami come utente»: un ping anonimo alla prima apertura di Undertone e al massimo uno a settimana, con un ID casuale, la versione dell’app, la versione di macOS e la lingua. Puoi disattivarlo nella configurazione o nelle Impostazioni.",
- "to_check_what_leaves_your_51b290": "Per verificare cosa esce dal tuo Mac, osserva il traffico di Undertone con Little Snitch, LuLu o Proxyman durante una chiamata. Vedrai solo connessioni all’IA scelta, agli strumenti collegati e, se l’hai lasciato attivo, al conteggio anonimo settimanale. Il tuo audio non lascia mai il Mac; alla tua IA va solo testo."
+ "to_check_what_leaves_your_51b290": "Per verificare cosa esce dal tuo Mac, osserva il traffico di Undertone con Little Snitch, LuLu o Proxyman durante una chiamata. Vedrai solo connessioni all’IA scelta, agli strumenti collegati e, se l’hai lasciato attivo, al conteggio anonimo settimanale. Il tuo audio non lascia mai il Mac; alla tua IA va solo testo.",
+ "download_dmg_v1_12_0_e84326": "Scarica il .dmg <span class=\"ver\">v1.12.0</span>"
 }

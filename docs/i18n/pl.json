@@ -390,7 +390,6 @@
  "work_00040b": "Praca",
  "personal_40f073": "Prywatne",
  "says_who_a_question_was_4ad923": "Pokazuje, do kogo było pytanie: do Ciebie, do kogoś innego z imienia czy do wszystkich",
- "download_dmg_v1_11_2_a38207": "Pobierz .dmg <span class=\"ver\">v1.11.2</span>",
  "a_call_that_drops_and_866862": "Rozmowa, która się zerwie i wróci, jest kontynuacją tego samego spotkania, a nie nowym",
  "undertone_answers_from_what_it_5e25d1": "Undertone odpowiada szybkim modelem na podstawie tego, co już wie, i przeszukuje twoje narzędzia tylko wtedy, gdy to nie wystarcza.",
  "ask_leads_with_what_you_0a1c09": "Zapytaj zaczyna od tego, o co prosisz. Szkic przychodzi jako jedna wiadomość gotowa do skopiowania, a braki są wypisane pod nią.",
@@ -411,5 +410,6 @@
  "no_account_and_no_bundled_37a26a": "Bez konta i bez dołączonego klucza. Twoje rozmowy, klucze i spotkania zostają u Ciebie; jedyne, co Undertone otrzymuje, to anonimowe zliczenie, które możesz wyłączyć.",
  "usage_count_1b27e3": "Liczenie użycia",
  "if_you_leave_count_me_5c9aa8": "Jeśli zostawisz włączone „Licz mnie jako użytkownika”: jeden anonimowy sygnał przy pierwszym otwarciu Undertone i najwyżej jeden tygodniowo, z losowym ID, wersją aplikacji, wersją macOS i językiem. Wyłączysz to w konfiguracji lub w Ustawieniach.",
- "to_check_what_leaves_your_51b290": "Aby sprawdzić, co opuszcza twojego Maca, obserwuj ruch Undertone w Little Snitch, LuLu lub Proxyman podczas rozmowy. Zobaczysz tylko połączenia z wybraną AI, podłączonymi narzędziami i, jeśli zostawisz to włączone, cotygodniowe anonimowe zliczenie. Dźwięk nigdy nie opuszcza twojego Maca; do AI trafia tylko tekst."
+ "to_check_what_leaves_your_51b290": "Aby sprawdzić, co opuszcza twojego Maca, obserwuj ruch Undertone w Little Snitch, LuLu lub Proxyman podczas rozmowy. Zobaczysz tylko połączenia z wybraną AI, podłączonymi narzędziami i, jeśli zostawisz to włączone, cotygodniowe anonimowe zliczenie. Dźwięk nigdy nie opuszcza twojego Maca; do AI trafia tylko tekst.",
+ "download_dmg_v1_12_0_e84326": "Pobierz .dmg <span class=\"ver\">v1.12.0</span>"
 }
