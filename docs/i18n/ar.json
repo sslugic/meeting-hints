@@ -1,8 +1,5 @@
 {
- "undertone_your_company_s_jargon_cd29ac": "Undertone — مصطلحات شركتك، مشروحةً لحظة قولها",
- "undertone_is_a_mac_app_28c090": "Undertone تطبيق Mac يستمع معك إلى مكالماتك. عندما يُذكر اسم رمزي أو اختصار أو مشروع داخلي، يشرحه من Slack وNotion وJira الخاصة بفريقك، بجانب المكالمة مباشرةً، ويعرض لك السياق الذي تحتاجه عندما يُوجَّه إليك سؤال.",
  "undertone_b2e9c7": "Undertone",
- "your_company_s_jargon_explained_8a9655": "مصطلحات شركتك، مشروحةً لحظة قولها، من Slack وNotion وJira الخاصة بفريقك.",
  "main_62bce9": "التنقل الرئيسي",
  "how_it_works_1dd6a1": "طريقة العمل",
  "features_fc338f": "الميزات",
@@ -13,8 +10,6 @@
  "language_89b86a": "اللغة",
  "download_for_macos_339bee": "تنزيل<span class=\"long\"> لنظام macOS</span>",
  "live_meeting_intelligence_for_macos_6278a3": "<span class=\"dot\" aria-hidden=\"true\"></span>ذكاء الاجتماعات المباشر لنظام macOS",
- "your_company_s_jargon_explained_ed8e66": "مصطلحات شركتك، مشروحةً لحظة قولها.",
- "undertone_listens_along_to_your_ad7bfd": "يستمع Undertone معك إلى مكالماتك. عندما يُذكر اسم رمزي أو اختصار أو مشروع داخلي، يشرحه من Slack وNotion وJira الخاصة بفريقك، بجانب المكالمة مباشرةً.",
  "releases_and_issues_8726e7": "الإصدارات والمشكلات",
  "free_during_the_beta_macos_afb94b": "مجاني خلال الفترة التجريبية · macOS 26 أو أحدث على شريحة Apple",
  "carousel_9ef0a5": "عرض دوّار",
@@ -409,5 +404,10 @@
  "a_question_for_you_ab4a3c": "سؤال لك",
  "before_74f396": "قبل",
  "now_e3b820": "الآن",
- "every_feature_on_this_page_fdfe23": "كل ميزات هذه الصفحة مجانية خلال الفترة التجريبية. استخدم الذكاء الاصطناعي الذي لديك وساعد في تشكيل Undertone."
+ "every_feature_on_this_page_fdfe23": "كل ميزات هذه الصفحة مجانية خلال الفترة التجريبية. استخدم الذكاء الاصطناعي الذي لديك وساعد في تشكيل Undertone.",
+ "know_what_everyone_means_and_e5274b": "افهم ما يقصده الجميع، وما ستقوله بعد ذلك.",
+ "undertone_know_what_everyone_means_a30b47": "Undertone — افهم ما يقصده الجميع، وما ستقوله بعد ذلك",
+ "know_what_everyone_means_and_4974b8": "افهم ما يقصده الجميع، وما ستقوله بعد ذلك: يشرح Undertone المصطلحات في مكالماتك، ويقدّم الحقائق عندما تُسأل، ويكتب الملخص ومهامك وإحاطتك التالية.",
+ "undertone_listens_along_to_your_e99562": "يستمع Undertone إلى مكالماتك. يشرح الأسماء الرمزية والاختصارات لحظة ذكرها، ويقدّم لك الحقائق عندما يُطرح عليك سؤال، وبعد المكالمة يسلّمك الملخص ومهامك وإحاطة للمكالمة التالية. كل ذلك من Slack وNotion وJira الخاصة بفريقك، مع تفريغ النص على جهاز Mac.",
+ "undertone_listens_along_to_your_f2a68e": "يستمع Undertone إلى مكالماتك. يشرح الأسماء الرمزية والاختصارات لحظة ذكرها، ويقدّم لك الحقائق عندما يُطرح عليك سؤال، وبعد المكالمة يسلّمك الملخص ومهامك وإحاطة للمكالمة التالية. كل ذلك من Slack وNotion وJira الخاصة بفريقك، مع تفريغ النص على جهاز Mac."
 }
