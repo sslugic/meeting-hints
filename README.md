@@ -21,6 +21,17 @@ The Undertone app is closed source. This public repository holds:
 - **[DATA.md](DATA.md) and [schemas/](schemas):** every file Undertone stores on your Mac and its format.
 - **[docs/](docs):** the website.
 
+## Website translations
+
+The site is available in 17 languages. `docs/index.html` is the English source; `docs/<code>/index.html` pages are generated. After editing the English page, run:
+
+```sh
+python3 tools/i18n.py          # refresh docs/i18n/en.json and rebuild every language page
+python3 tools/i18n.py check    # list missing or invalid translations
+```
+
+New or changed strings fall back to English until their keys are added to `docs/i18n/<code>.json`.
+
 ## Privacy in one paragraph
 
 Calls and your microphone are transcribed on your Mac with Apple's speech recognition; audio is never uploaded. Text from the call goes only to the AI you choose, and Undertone only reads from the tools you connect (it never sends, posts or edits). There is no Undertone server, account or telemetry. Everything Undertone keeps is stored as files in `~/Library/Application Support/Undertone`, and keys stay in your Keychain. See [SECURITY.md](SECURITY.md) for how to verify this with a network monitor.
