@@ -413,6 +413,22 @@
   .speed { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; margin-top: 8px; }
   .speed .ticks { margin-top: 18px; }
   .speed .ticks li { font-size: 15.5px; color: var(--text-2); }
+  .paste { display: grid; gap: 12px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 22px; }
+  .paste h4 { font-size: 14px; font-weight: 600; color: var(--text); }
+  .draft { border: 1px solid rgba(129, 140, 248, .4); border-radius: var(--r); background: rgba(255, 255, 255, .03); padding: 14px 16px; }
+  .draft .bar { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-3); margin-bottom: 10px; }
+  .draft .bar b { font-weight: 600; }
+  .draft .btn-copy { font-size: 12px; color: var(--text); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 3px 9px; background: rgba(255, 255, 255, .05); }
+  .draft p { font-size: 14px; line-height: 1.55; color: var(--text); white-space: pre-line; overflow-wrap: anywhere; }
+  .missing { font-size: 13px; color: var(--text-2); }
+  .tpop { justify-self: end; width: min(100%, 300px); border: 1px solid var(--border); border-radius: var(--r); background: #17181d; padding: 12px 14px; box-shadow: 0 12px 30px rgba(0, 0, 0, .35); }
+  .tpop .row { display: flex; justify-content: space-between; align-items: center; font-size: 12.5px; color: var(--text-3); }
+  .tpop .row b { color: var(--text); font-weight: 600; }
+  .tpop .pick { border: 1px solid var(--border); border-radius: var(--r-sm); padding: 2px 8px; color: var(--text-2); }
+  .tpop p { font-size: 13.5px; color: var(--text); margin: 10px 0; }
+  .tpop .acts { display: flex; justify-content: flex-end; gap: 6px; font-size: 12px; }
+  .tpop .acts span { border: 1px solid var(--border); border-radius: var(--r-sm); padding: 3px 8px; color: var(--text-2); }
+  .tpop .acts span.primary { background: var(--accent-strong); border-color: var(--accent-strong); color: #fff; }
   .langs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 22px; }
   .langs span { font-size: 14px; color: var(--text-2); padding: 8px 10px; border-radius: var(--r-sm); background: rgba(255, 255, 255, .03); border: 1px solid var(--border); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .langs span.on { color: var(--text); border-color: rgba(129, 140, 248, .45); background: var(--accent-soft); }
@@ -536,6 +552,8 @@
     .speed { grid-template-columns: 1fr; gap: 28px; }
     .bars { padding: 20px 18px; }
     .langs { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 16px; }
+    .paste { padding: 16px; }
+    .tpop { justify-self: stretch; width: auto; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -570,7 +588,7 @@
       <h1>Het jargon van je bedrijf, uitgelegd terwijl het valt.</h1>
       <p class="sub">Undertone luistert mee met je calls. Valt er een codenaam, afkorting of intern project, dan legt Undertone het direct naast de call uit vanuit Slack, Notion en Jira van je eigen team.</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.9.1</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.10.0</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Releases en issues</a>
       </div>
       <p class="fine">Gratis tijdens de bèta · macOS 26 of nieuwer op Apple silicon</p>
@@ -1093,6 +1111,38 @@
     </div>
   </section>
 
+  <section class="block" id="paste">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>Antwoorden om te plakken</h2>
+          <p>Nieuw in 1.10: Vragen begint met wat je vroeg. Een concept komt als één bericht, klaar om te kopiëren, met wat ontbreekt eronder.</p>
+        </div>
+        <ul class="ticks sug">
+          <li>Eén aanbevolen concept voor Slack of e-mail, met een eigen Kopieer-knop</li>
+          <li>Ontbrekende links en wat niet geverifieerd is staan onder het concept, nooit erin</li>
+          <li>Selecteer tekst in de chat om die te kopiëren of te vertalen; in het berichtveld vervang je hem door de vertaling</li>
+          <li>De eerste vertaling vertelt je naar welke AI de tekst gaat</li>
+        </ul>
+      </div>
+      <div class="paste" aria-label="Voorbeeldantwoord in Vragen">
+        <h4>Aanbevolen bericht</h4>
+        <div class="draft">
+          <div class="bar"><b>Klaar om te kopiëren</b><span class="btn-copy">Kopieer</span></div>
+          <p translate="no">*Keystone update*
+• Billing writes moved to the new stack last week
+• The read cutover is planned for the 14th</p>
+        </div>
+        <div class="missing">Ontbreekt: de link naar de checklist voor de overstap is niet gevonden, dus die staat niet in het bericht.</div>
+        <div class="tpop">
+          <div class="row"><b>Vertaal</b><span class="pick" translate="no">Español</span></div>
+          <p translate="no">El cambio de lectura está previsto para el día 14</p>
+          <div class="acts"><span>Vertaling kopiëren</span><span class="primary">Selectie vervangen</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="languages">
     <div class="wrap speed">
       <div>
@@ -1223,7 +1273,7 @@
     <h2>Klaar voor je volgende call?</h2>
     <p>Installeer, koppel je AI en bronnen in ongeveer een minuut en neem deel aan een call. Daarna staan je samenvatting, taken en nieuwe termen klaar in Start.</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.9.1</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.10.0</span></a>
     </div>
     <ul class="reqs">
       <li>macOS 26 of nieuwer</li><li>Apple silicon</li><li>Eigen AI-sleutel of lokaal model</li><li>Optioneel: amem als geheugen</li><li>Toestemming voor systeemaudio en microfoon</li>

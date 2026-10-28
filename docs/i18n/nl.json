@@ -393,6 +393,20 @@
  "choose_which_calendars_to_use_5c9619": "Kies welke agenda’s je gebruikt, over al je Google-, iCloud- en Outlook-accounts",
  "right_to_left_layout_for_cc9898": "Rechts-naar-links-weergave voor Arabisch",
  "languages_undertone_comes_in_a92e1e": "Talen waarin Undertone beschikbaar is",
- "download_dmg_v1_9_1_48d05c": "Download .dmg <span class=\"ver\">v1.9.1</span>",
- "up_next_reads_google_calendar_7e0e0d": "“Hierna” leest Google Agenda direct als die gekoppeld is, zodat hernoemde of geannuleerde vergaderingen niet blijven hangen"
+ "up_next_reads_google_calendar_7e0e0d": "“Hierna” leest Google Agenda direct als die gekoppeld is, zodat hernoemde of geannuleerde vergaderingen niet blijven hangen",
+ "download_dmg_v1_10_0_802c62": "Download .dmg <span class=\"ver\">v1.10.0</span>",
+ "answers_you_can_paste_9bbe85": "Antwoorden om te plakken",
+ "new_in_1_10_ask_743274": "Nieuw in 1.10: Vragen begint met wat je vroeg. Een concept komt als één bericht, klaar om te kopiëren, met wat ontbreekt eronder.",
+ "one_recommended_draft_for_slack_caa806": "Eén aanbevolen concept voor Slack of e-mail, met een eigen Kopieer-knop",
+ "missing_links_and_anything_unverified_35c667": "Ontbrekende links en wat niet geverifieerd is staan onder het concept, nooit erin",
+ "select_any_text_in_the_493624": "Selecteer tekst in de chat om die te kopiëren of te vertalen; in het berichtveld vervang je hem door de vertaling",
+ "the_first_translation_tells_you_58712b": "De eerste vertaling vertelt je naar welke AI de tekst gaat",
+ "sample_answer_in_ask_79f897": "Voorbeeldantwoord in Vragen",
+ "recommended_message_21bb29": "Aanbevolen bericht",
+ "missing_the_cutover_checklist_link_7152c1": "Ontbreekt: de link naar de checklist voor de overstap is niet gevonden, dus die staat niet in het bericht.",
+ "copy_ready_ee6322": "Klaar om te kopiëren",
+ "copy_af74f7": "Kopieer",
+ "translate_2be17a": "Vertaal",
+ "copy_translation_ef0c0e": "Vertaling kopiëren",
+ "replace_selection_4147d9": "Selectie vervangen"
 }

@@ -393,6 +393,20 @@
  "choose_which_calendars_to_use_5c9619": "Escolha quais calendários usar, em todas as suas contas Google, iCloud e Outlook",
  "right_to_left_layout_for_cc9898": "Layout da direita para a esquerda para o árabe",
  "languages_undertone_comes_in_a92e1e": "Idiomas em que o Undertone está disponível",
- "download_dmg_v1_9_1_48d05c": "Baixar .dmg <span class=\"ver\">v1.9.1</span>",
- "up_next_reads_google_calendar_7e0e0d": "“A seguir” lê o Google Agenda diretamente quando ele está conectado, para que reuniões renomeadas ou canceladas não fiquem para trás"
+ "up_next_reads_google_calendar_7e0e0d": "“A seguir” lê o Google Agenda diretamente quando ele está conectado, para que reuniões renomeadas ou canceladas não fiquem para trás",
+ "download_dmg_v1_10_0_802c62": "Baixar .dmg <span class=\"ver\">v1.10.0</span>",
+ "answers_you_can_paste_9bbe85": "Respostas prontas para colar",
+ "new_in_1_10_ask_743274": "Novo na 1.10: Perguntar começa pelo que você pediu. Um rascunho vem como uma única mensagem, pronta para copiar, com o que faltar listado abaixo.",
+ "one_recommended_draft_for_slack_caa806": "Um único rascunho recomendado para Slack ou e-mail, com seu próprio botão Copiar",
+ "missing_links_and_anything_unverified_35c667": "Links que faltam e o que não foi verificado ficam abaixo do rascunho, nunca dentro dele",
+ "select_any_text_in_the_493624": "Selecione qualquer texto do chat para copiar ou traduzir; na caixa de mensagem, substitua-o pela tradução",
+ "the_first_translation_tells_you_58712b": "A primeira tradução mostra para qual IA o texto vai",
+ "sample_answer_in_ask_79f897": "Exemplo de resposta em Perguntar",
+ "recommended_message_21bb29": "Mensagem recomendada",
+ "missing_the_cutover_checklist_link_7152c1": "Faltando: o link do checklist da migração não foi encontrado, então não está na mensagem.",
+ "copy_ready_ee6322": "Pronto para copiar",
+ "copy_af74f7": "Copiar",
+ "translate_2be17a": "Traduzir",
+ "copy_translation_ef0c0e": "Copiar tradução",
+ "replace_selection_4147d9": "Substituir seleção"
 }

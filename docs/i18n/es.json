@@ -393,6 +393,20 @@
  "choose_which_calendars_to_use_5c9619": "Elige qué calendarios usar, en todas tus cuentas de Google, iCloud y Outlook",
  "right_to_left_layout_for_cc9898": "Diseño de derecha a izquierda para el árabe",
  "languages_undertone_comes_in_a92e1e": "Idiomas en los que está disponible Undertone",
- "download_dmg_v1_9_1_48d05c": "Descargar .dmg <span class=\"ver\">v1.9.1</span>",
- "up_next_reads_google_calendar_7e0e0d": "«A continuación» lee Google Calendar directamente cuando está conectado, así las reuniones renombradas o canceladas no se quedan colgadas"
+ "up_next_reads_google_calendar_7e0e0d": "«A continuación» lee Google Calendar directamente cuando está conectado, así las reuniones renombradas o canceladas no se quedan colgadas",
+ "download_dmg_v1_10_0_802c62": "Descargar .dmg <span class=\"ver\">v1.10.0</span>",
+ "answers_you_can_paste_9bbe85": "Respuestas listas para pegar",
+ "new_in_1_10_ask_743274": "Novedad en 1.10: Preguntar empieza por lo que pediste. Un borrador llega como un solo mensaje, listo para copiar, con lo que falte indicado debajo.",
+ "one_recommended_draft_for_slack_caa806": "Un único borrador recomendado para Slack o correo, con su propio botón Copiar",
+ "missing_links_and_anything_unverified_35c667": "Los enlaces que faltan y lo que no se pudo verificar se indican debajo del borrador, nunca dentro",
+ "select_any_text_in_the_493624": "Selecciona cualquier texto del chat para copiarlo o traducirlo; en el cuadro de mensaje, reemplázalo por la traducción",
+ "the_first_translation_tells_you_58712b": "La primera traducción te dice a qué IA se envía el texto",
+ "sample_answer_in_ask_79f897": "Respuesta de ejemplo en Preguntar",
+ "recommended_message_21bb29": "Mensaje recomendado",
+ "missing_the_cutover_checklist_link_7152c1": "Falta: no se encontró el enlace a la lista de comprobación del cambio, así que no está en el mensaje.",
+ "copy_ready_ee6322": "Listo para copiar",
+ "copy_af74f7": "Copiar",
+ "translate_2be17a": "Traducir",
+ "copy_translation_ef0c0e": "Copiar traducción",
+ "replace_selection_4147d9": "Reemplazar selección"
 }

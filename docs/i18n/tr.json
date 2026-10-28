@@ -393,6 +393,20 @@
  "choose_which_calendars_to_use_5c9619": "Tüm Google, iCloud ve Outlook hesaplarındaki hangi takvimlerin kullanılacağını seç",
  "right_to_left_layout_for_cc9898": "Arapça için sağdan sola düzen",
  "languages_undertone_comes_in_a92e1e": "Undertone’un sunulduğu diller",
- "download_dmg_v1_9_1_48d05c": ".dmg indir <span class=\"ver\">v1.9.1</span>",
- "up_next_reads_google_calendar_7e0e0d": "“Sıradaki”, bağlıysa Google Takvim’i doğrudan okur; adı değişen ya da iptal edilen toplantılar listede kalmaz"
+ "up_next_reads_google_calendar_7e0e0d": "“Sıradaki”, bağlıysa Google Takvim’i doğrudan okur; adı değişen ya da iptal edilen toplantılar listede kalmaz",
+ "download_dmg_v1_10_0_802c62": ".dmg indir <span class=\"ver\">v1.10.0</span>",
+ "answers_you_can_paste_9bbe85": "Yapıştırmaya hazır yanıtlar",
+ "new_in_1_10_ask_743274": "1.10’da yeni: Sor, istediğinle başlar. Taslak, kopyalamaya hazır tek bir mesaj olarak gelir; eksikler altında listelenir.",
+ "one_recommended_draft_for_slack_caa806": "Slack veya e-posta için tek bir önerilen taslak, kendi Kopyala düğmesiyle",
+ "missing_links_and_anything_unverified_35c667": "Eksik bağlantılar ve doğrulanamayanlar taslağın altında listelenir, asla içinde değil",
+ "select_any_text_in_the_493624": "Sohbetteki herhangi bir metni seçip kopyalayın ya da çevirin; mesaj kutusunda onu çeviriyle değiştirin",
+ "the_first_translation_tells_you_58712b": "İlk çeviri, metnin hangi yapay zekâya gittiğini söyler",
+ "sample_answer_in_ask_79f897": "Sor’da örnek yanıt",
+ "recommended_message_21bb29": "Önerilen mesaj",
+ "missing_the_cutover_checklist_link_7152c1": "Eksik: geçiş kontrol listesinin bağlantısı bulunamadı, bu yüzden mesajda yok.",
+ "copy_ready_ee6322": "Kopyalamaya hazır",
+ "copy_af74f7": "Kopyala",
+ "translate_2be17a": "Çevir",
+ "copy_translation_ef0c0e": "Çeviriyi kopyala",
+ "replace_selection_4147d9": "Seçimi değiştir"
 }

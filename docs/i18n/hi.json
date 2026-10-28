@@ -393,6 +393,20 @@
  "choose_which_calendars_to_use_5c9619": "अपने सभी Google, iCloud और Outlook खातों में से चुनें कि कौन-से कैलेंडर इस्तेमाल हों",
  "right_to_left_layout_for_cc9898": "अरबी के लिए दाएँ-से-बाएँ लेआउट",
  "languages_undertone_comes_in_a92e1e": "भाषाएँ जिनमें Undertone उपलब्ध है",
- "download_dmg_v1_9_1_48d05c": ".dmg डाउनलोड करें <span class=\"ver\">v1.9.1</span>",
- "up_next_reads_google_calendar_7e0e0d": "जुड़ा होने पर \"आगे\" सीधे Google Calendar पढ़ता है, ताकि नाम बदली या रद्द की गई मीटिंग अटकी न रहें"
+ "up_next_reads_google_calendar_7e0e0d": "जुड़ा होने पर \"आगे\" सीधे Google Calendar पढ़ता है, ताकि नाम बदली या रद्द की गई मीटिंग अटकी न रहें",
+ "download_dmg_v1_10_0_802c62": ".dmg डाउनलोड करें <span class=\"ver\">v1.10.0</span>",
+ "answers_you_can_paste_9bbe85": "पेस्ट करने लायक जवाब",
+ "new_in_1_10_ask_743274": "1.10 में नया: पूछें अब वही पहले देता है जो आपने माँगा। ड्राफ़्ट एक ही संदेश के रूप में आता है, कॉपी के लिए तैयार, और जो कमी है वह नीचे लिखा होता है।",
+ "one_recommended_draft_for_slack_caa806": "Slack या ईमेल के लिए एक सुझाया गया ड्राफ़्ट, अपने कॉपी बटन के साथ",
+ "missing_links_and_anything_unverified_35c667": "छूटे लिंक और जो जाँचा नहीं जा सका, वह ड्राफ़्ट के नीचे लिखा होता है, उसके अंदर कभी नहीं",
+ "select_any_text_in_the_493624": "चैट में कोई भी टेक्स्ट चुनकर कॉपी या अनुवाद करें; संदेश बॉक्स में उसे अनुवाद से बदलें",
+ "the_first_translation_tells_you_58712b": "पहला अनुवाद बताता है कि टेक्स्ट किस AI को जाता है",
+ "sample_answer_in_ask_79f897": "पूछें में एक उदाहरण जवाब",
+ "recommended_message_21bb29": "सुझाया गया संदेश",
+ "missing_the_cutover_checklist_link_7152c1": "कमी: कटओवर चेकलिस्ट का लिंक नहीं मिला, इसलिए वह संदेश में नहीं है।",
+ "copy_ready_ee6322": "कॉपी के लिए तैयार",
+ "copy_af74f7": "कॉपी करें",
+ "translate_2be17a": "अनुवाद करें",
+ "copy_translation_ef0c0e": "अनुवाद कॉपी करें",
+ "replace_selection_4147d9": "चयन बदलें"
 }

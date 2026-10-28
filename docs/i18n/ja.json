@@ -393,6 +393,20 @@
  "choose_which_calendars_to_use_5c9619": "Google、iCloud、Outlook のすべてのアカウントから、使うカレンダーを選べます",
  "right_to_left_layout_for_cc9898": "アラビア語の右から左へのレイアウト",
  "languages_undertone_comes_in_a92e1e": "Undertone の対応言語",
- "download_dmg_v1_9_1_48d05c": ".dmgをダウンロード <span class=\"ver\">v1.9.1</span>",
- "up_next_reads_google_calendar_7e0e0d": "Google カレンダーが接続されていれば「次の予定」は直接読み込むので、名前が変わった会議やキャンセルされた会議が残りません"
+ "up_next_reads_google_calendar_7e0e0d": "Google カレンダーが接続されていれば「次の予定」は直接読み込むので、名前が変わった会議やキャンセルされた会議が残りません",
+ "download_dmg_v1_10_0_802c62": ".dmgをダウンロード <span class=\"ver\">v1.10.0</span>",
+ "answers_you_can_paste_9bbe85": "そのまま貼れる回答",
+ "new_in_1_10_ask_743274": "1.10 の新機能：「質問」は、頼んだものから答えます。下書きはコピーしてそのまま使える 1 つのメッセージで届き、足りないものはその下に書かれます。",
+ "one_recommended_draft_for_slack_caa806": "Slack やメール用のおすすめ下書きを 1 つ、専用のコピーボタン付きで",
+ "missing_links_and_anything_unverified_35c667": "足りないリンクや確認できなかったことは下書きの下に書かれ、中には入りません",
+ "select_any_text_in_the_493624": "チャットのテキストを選んでコピーや翻訳ができ、入力欄では翻訳で置き換えられます",
+ "the_first_translation_tells_you_58712b": "最初の翻訳時に、テキストがどの AI に送られるかを表示します",
+ "sample_answer_in_ask_79f897": "「質問」の回答例",
+ "recommended_message_21bb29": "おすすめのメッセージ",
+ "missing_the_cutover_checklist_link_7152c1": "不足：切り替えチェックリストのリンクが見つからなかったため、メッセージには入っていません。",
+ "copy_ready_ee6322": "そのままコピー可",
+ "copy_af74f7": "コピー",
+ "translate_2be17a": "翻訳",
+ "copy_translation_ef0c0e": "翻訳をコピー",
+ "replace_selection_4147d9": "選択部分を置き換え"
 }
