@@ -392,6 +392,18 @@
   .amem .ticks li { font-size: 15.5px; color: var(--text-2); }
   .amem .ctas { justify-content: flex-start; margin-top: 18px; }
   .amem .note { font-size: 13px; color: var(--text-3); margin-top: 12px; }
+  .speed { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; margin-top: 8px; }
+  .speed .ticks { margin-top: 18px; }
+  .speed .ticks li { font-size: 15.5px; color: var(--text-2); }
+  .bars { display: grid; gap: 22px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); padding: 26px 28px; }
+  .bars h4 { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; }
+  .bars h4 small { font-weight: 500; color: var(--text-3); font-size: 12px; }
+  .bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-3); }
+  .bar + .bar { margin-top: 6px; }
+  .bar i { display: block; height: 8px; border-radius: 4px; background: #3F3F46; width: var(--w); }
+  .bar.new i { background: var(--accent); }
+  .bar.new, .bar.new b { color: var(--text); }
+  .bar b { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
 
   /* Canvas sample */
   .cv h3 { font-size: 18px; letter-spacing: -.02em; }
@@ -466,6 +478,8 @@
     .pane { padding: 16px; }
     .code { font-size: 12px; }
     .amem { padding: 22px 18px; }
+    .speed { grid-template-columns: 1fr; gap: 28px; }
+    .bars { padding: 20px 18px; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -500,7 +514,7 @@
       <h1>Your company's jargon, explained while it's being said.</h1>
       <p class="sub">Undertone listens along to your calls. When a code name, acronym or internal project comes up, it explains it from your team's own Slack, Notion and Jira, right beside the call.</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.7.1</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.8.0</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Releases and issues</a>
       </div>
       <p class="fine">Free during the beta · macOS 26 or later on Apple silicon</p>
@@ -974,6 +988,40 @@
     </div>
   </section>
 
+  <section class="block" id="speed">
+    <div class="wrap speed">
+      <div>
+        <div class="head" style="max-width:none">
+          <h2>Answers in seconds</h2>
+          <p>New in 1.8: Undertone answers from what it already knows with a fast model, and only searches your tools when that isn't enough.</p>
+        </div>
+        <ul class="ticks sug">
+          <li>Answer cards during a call draw on background briefs and your memory</li>
+          <li>Briefs on the topics and people that keep coming up, matched to each question</li>
+          <li>When sources disagree, the newest one wins</li>
+          <li>A stalled reply hands over to the fast model instead of leaving you waiting</li>
+        </ul>
+      </div>
+      <div class="bars" aria-label="Measured with Undertone's own benchmark">
+        <div>
+          <h4>Ask, time to first words <small>median</small></h4>
+          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>12.7 s</b></div>
+          <div class="bar new"><span>1.8</span><i style="--w:35%"></i><b>4.5 s</b></div>
+        </div>
+        <div>
+          <h4>Live answers, full reply <small>median</small></h4>
+          <div class="bar"><span>1.7</span><i style="--w:100%"></i><b>16.5 s</b></div>
+          <div class="bar new"><span>1.8</span><i style="--w:31%"></i><b>5.1 s</b></div>
+        </div>
+        <div>
+          <h4>Live answers, right on the first try</h4>
+          <div class="bar"><span>1.7</span><i style="--w:50%"></i><b>50%</b></div>
+          <div class="bar new"><span>1.8</span><i style="--w:83%"></i><b>83%</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="claude">
     <div class="wrap claude">
       <div class="head">
@@ -993,7 +1041,7 @@
       <div>
         <div class="head" style="max-width:none">
           <h2>Even better with amem</h2>
-          <p>amem is a memory on your Mac that Undertone shares with Claude Code, Cursor and your other AI tools. Undertone works on its own; with amem it knows much more.</p>
+          <p>amem is a memory on your Mac that Undertone shares with Claude Code, Cursor and your other AI tools. Setup recommends it and installs it for you; a built-in memory is there if you'd rather not, and Settings can compare the two on your own data.</p>
         </div>
         <ul class="ticks sug">
           <li>What you worked on with Claude Code or Cursor is context in your next call</li>
@@ -1006,7 +1054,7 @@
         <div class="ctas">
           <a class="btn btn-ghost" href="https://getamem.com/">Get amem</a>
         </div>
-        <p class="note">Or install it from Undertone's setup guide in one click. Needs Node.js. Stays on your Mac.</p>
+        <p class="note">Or let Undertone's setup install it. Needs Node.js. Stays on your Mac.</p>
       </div>
     </div>
   </section>
@@ -1084,7 +1132,7 @@
     <h2>Ready for your next call?</h2>
     <p>Install, connect your AI and sources in about a minute, then join a call. Afterwards, your recap, tasks and new terms are waiting on Home.</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.7.1</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.8.0</span></a>
     </div>
     <ul class="reqs">
       <li>macOS 26 or later</li><li>Apple silicon</li><li>Your own AI key or local model</li><li>Optional: amem for memory</li><li>System audio and microphone permission</li>
