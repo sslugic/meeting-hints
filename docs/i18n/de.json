@@ -16,7 +16,6 @@
  "live_meeting_intelligence_for_macos_6278a3": "<span class=\"dot\" aria-hidden=\"true\"></span>Live-Meeting-Intelligenz für macOS",
  "your_company_s_jargon_explained_ed8e66": "Der Jargon deiner Firma, erklärt, während er fällt.",
  "undertone_listens_along_to_your_ad7bfd": "Undertone hört bei deinen Calls mit. Fällt ein Codename, ein Akronym oder ein internes Projekt, erklärt es Undertone direkt neben dem Call – aus Slack, Notion und Jira deines eigenen Teams.",
- "download_dmg_v1_8_0_56fd33": ".dmg laden <span class=\"ver\">v1.8.0</span>",
  "releases_and_issues_8726e7": "Releases und Issues",
  "free_during_the_beta_macos_afb94b": "Kostenlos während der Beta · macOS 26 oder neuer mit Apple Silicon",
  "carousel_9ef0a5": "Karussell",
@@ -386,5 +385,13 @@
  "system_audio_and_microphone_permission_dfbdf1": "Berechtigung für Systemaudio und Mikrofon",
  "undertone_made_by_slaven_slugic_f16090": "Undertone · Von <a href=\"https://sslugic.github.io\">Slaven Slugic</a> · Bis v0.9 hieß es Meeting Hints",
  "project_f6f4da": "Projekt",
- "issues_30ce4c": "Issues"
+ "issues_30ce4c": "Issues",
+ "download_dmg_v1_9_0_2d3500": ".dmg laden <span class=\"ver\">v1.9.0</span>",
+ "speaks_your_language_03d0c0": "Spricht deine Sprache",
+ "new_in_1_9_undertone_4fb81f": "Neu in 1.9: Undertone gibt es in 17 Sprachen. Es folgt der Sprache deines Macs, und in den Einstellungen kannst du eine andere wählen.",
+ "hints_answers_and_recaps_are_8d27ae": "Hinweise, Antworten und Zusammenfassungen werden in deiner Sprache geschrieben; Begriffe aus dem Meeting bleiben, wie sie gesagt wurden",
+ "meetings_held_in_any_of_dc019b": "Meetings in einer von 19 Sprachen und Varianten werden auf deinem Mac transkribiert",
+ "choose_which_calendars_to_use_5c9619": "Wähle, welche Kalender genutzt werden – über all deine Google-, iCloud- und Outlook-Accounts",
+ "right_to_left_layout_for_cc9898": "Rechts-nach-links-Layout für Arabisch",
+ "languages_undertone_comes_in_a92e1e": "Sprachen, in denen es Undertone gibt"
 }

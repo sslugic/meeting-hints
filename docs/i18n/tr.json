@@ -16,7 +16,6 @@
  "live_meeting_intelligence_for_macos_6278a3": "<span class=\"dot\" aria-hidden=\"true\"></span>macOS için canlı toplantı zekâsı",
  "your_company_s_jargon_explained_ed8e66": "Şirket jargonu, konuşulurken açıklanır.",
  "undertone_listens_along_to_your_ad7bfd": "Undertone görüşmelerinizi sizinle birlikte dinler. Bir kod adı, kısaltma ya da iç proje geçtiğinde, ekibinizin kendi Slack, Notion ve Jira içeriklerinden yararlanarak onu görüşmenin hemen yanında açıklar.",
- "download_dmg_v1_8_0_56fd33": ".dmg indir <span class=\"ver\">v1.8.0</span>",
  "releases_and_issues_8726e7": "Sürümler ve sorunlar",
  "free_during_the_beta_macos_afb94b": "Beta süresince ücretsiz · Apple silicon üzerinde macOS 26 veya üstü",
  "carousel_9ef0a5": "döner galeri",
@@ -386,5 +385,13 @@
  "system_audio_and_microphone_permission_dfbdf1": "Sistem sesi ve mikrofon izni",
  "undertone_made_by_slaven_slugic_f16090": "Undertone · Yapan: <a href=\"https://sslugic.github.io\">Slaven Slugic</a> · v0.9’a kadar adı Meeting Hints’ti",
  "project_f6f4da": "Proje",
- "issues_30ce4c": "Sorunlar"
+ "issues_30ce4c": "Sorunlar",
+ "download_dmg_v1_9_0_2d3500": ".dmg indir <span class=\"ver\">v1.9.0</span>",
+ "speaks_your_language_03d0c0": "Senin dilini konuşur",
+ "new_in_1_9_undertone_4fb81f": "1.9’da yeni: Undertone 17 dilde. Mac’inin dilini izler, Ayarlar’dan başka bir dil de seçebilirsin.",
+ "hints_answers_and_recaps_are_8d27ae": "İpuçları, yanıtlar ve özetler senin dilinde yazılır; toplantıdaki terimler söylendiği gibi kalır",
+ "meetings_held_in_any_of_dc019b": "19 dil ve lehçeden herhangi birinde yapılan toplantılar Mac’inde metne dökülür",
+ "choose_which_calendars_to_use_5c9619": "Tüm Google, iCloud ve Outlook hesaplarındaki hangi takvimlerin kullanılacağını seç",
+ "right_to_left_layout_for_cc9898": "Arapça için sağdan sola düzen",
+ "languages_undertone_comes_in_a92e1e": "Undertone’un sunulduğu diller"
 }

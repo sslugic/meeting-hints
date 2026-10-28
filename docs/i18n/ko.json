@@ -16,7 +16,6 @@
  "live_meeting_intelligence_for_macos_6278a3": "<span class=\"dot\" aria-hidden=\"true\"></span>macOS용 실시간 미팅 인텔리전스",
  "your_company_s_jargon_explained_ed8e66": "회사 용어를, 말하는 그 순간에 설명해요.",
  "undertone_listens_along_to_your_ad7bfd": "Undertone이 통화를 함께 들어요. 코드명, 약어, 사내 프로젝트가 언급되면 팀의 Slack, Notion, Jira를 바탕으로 통화 바로 옆에서 설명해요.",
- "download_dmg_v1_8_0_56fd33": ".dmg 다운로드 <span class=\"ver\">v1.8.0</span>",
  "releases_and_issues_8726e7": "릴리스 및 이슈",
  "free_during_the_beta_macos_afb94b": "베타 기간 무료 · macOS 26 이상, Apple 실리콘",
  "carousel_9ef0a5": "캐러셀",
@@ -386,5 +385,13 @@
  "system_audio_and_microphone_permission_dfbdf1": "시스템 오디오 및 마이크 권한",
  "undertone_made_by_slaven_slugic_f16090": "Undertone · 만든 사람 <a href=\"https://sslugic.github.io\">Slaven Slugic</a> · v0.9까지는 Meeting Hints라는 이름이었어요",
  "project_f6f4da": "프로젝트",
- "issues_30ce4c": "이슈"
+ "issues_30ce4c": "이슈",
+ "download_dmg_v1_9_0_2d3500": ".dmg 다운로드 <span class=\"ver\">v1.9.0</span>",
+ "speaks_your_language_03d0c0": "당신의 언어로",
+ "new_in_1_9_undertone_4fb81f": "1.9의 새 기능: Undertone이 17개 언어를 지원합니다. Mac의 언어를 따르며, 설정에서 다른 언어를 고를 수도 있습니다.",
+ "hints_answers_and_recaps_are_8d27ae": "힌트, 답변, 요약은 당신의 언어로 작성되고, 회의 용어는 말한 그대로 유지됩니다",
+ "meetings_held_in_any_of_dc019b": "19개 언어와 방언으로 진행된 회의를 Mac에서 받아 적습니다",
+ "choose_which_calendars_to_use_5c9619": "모든 Google, iCloud, Outlook 계정에서 사용할 캘린더를 고르세요",
+ "right_to_left_layout_for_cc9898": "아랍어를 위한 오른쪽에서 왼쪽 레이아웃",
+ "languages_undertone_comes_in_a92e1e": "Undertone 지원 언어"
 }
