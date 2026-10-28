@@ -13,7 +13,7 @@ Dates are ISO 8601 strings. IDs are UUIDs. Formats for the main files are in [sc
 | `people.json` | What your tools say about people you meet: name, email and a short note with sources. Only for people you looked up. |
 | `memory.json` | What Undertone learned from past meetings: confirmed terms and their meanings, recap points and action items, and how often each attendee came up. |
 | `spaces.json` | Your spaces: name, description and colour. |
-| `archive.json` | Documents, slide decks and canvases you made, as Markdown (and HTML for canvases). |
+| `archive.json` | Your artifacts: documents, slide decks and canvases you made, as Markdown (and HTML for canvases). |
 | `chat.json` | Your Ask conversation. |
 | `corrections.json` | Words you corrected ("Data dog" → "Datadog"), used to fix later transcripts. |
 | `profile.json` | Your name, role and the terms you marked as known. |

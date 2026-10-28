@@ -5,7 +5,7 @@ Undertone is closed source, so here is exactly what it does with your data and h
 ## What stays on your Mac
 
 - **Audio.** System audio (the call) and your microphone are transcribed on your Mac with Apple's SpeechAnalyzer. Audio is never written to disk and never uploaded. Audio or video files you attach in Ask are also transcribed on your Mac.
-- **Everything Undertone keeps.** Meetings, transcripts, recaps, tasks, the glossary, people notes, briefings, archive documents and chat are JSON files in `~/Library/Application Support/Undertone`. [DATA.md](DATA.md) lists every file and its format.
+- **Everything Undertone keeps.** Meetings, transcripts, recaps, tasks, the glossary, people notes, briefings, artifacts and chat are JSON files in `~/Library/Application Support/Undertone`. [DATA.md](DATA.md) lists every file and its format.
 - **Keys and sign-ins.** AI keys and connector tokens are stored in your macOS Keychain.
 - **Calendar.** Read through macOS Calendar to show and brief upcoming meetings. Undertone never creates or changes events.
 
