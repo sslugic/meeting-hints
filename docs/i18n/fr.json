@@ -411,5 +411,10 @@
  "usage_count_1b27e3": "Décompte d’utilisation",
  "if_you_leave_count_me_5c9aa8": "Si vous laissez « Me compter comme utilisateur » activé : un signal anonyme à la première ouverture d’Undertone et au plus un par semaine, avec un identifiant aléatoire, la version de l’app, la version de macOS et la langue. Désactivez-le dans la configuration ou les Réglages.",
  "to_check_what_leaves_your_51b290": "Pour vérifier ce qui sort de votre Mac, observez le trafic d’Undertone avec Little Snitch, LuLu ou Proxyman pendant un appel. Vous ne verrez que des connexions vers l’IA choisie, les outils connectés et, si vous l’avez laissé activé, le décompte anonyme hebdomadaire. Votre audio ne quitte jamais votre Mac ; seul du texte part vers votre IA.",
- "download_dmg_v1_12_0_e84326": "Télécharger le .dmg <span class=\"ver\">v1.12.0</span>"
+ "download_dmg_v1_12_0_e84326": "Télécharger le .dmg <span class=\"ver\">v1.12.0</span>",
+ "download_dmg_v1_13_0_355e4a": "Télécharger le .dmg <span class=\"ver\">v1.13.0</span>",
+ "pick_a_meeting_to_see_e701e3": "Choisissez une réunion pour voir ce qu’Undertone vous afficherait. Dans l’app, Accueil › Essayez une réunion d’exemple fait défiler un point d’équipe fictif dans le vrai panneau avant votre premier appel.",
+ "or_with_homebrew_brew_install_1c436a": "Ou avec Homebrew : <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
+ "updates_itself_ac2e05": "Se met à jour toute seule",
+ "feedback_c8d767": "Avis"
 }

@@ -411,5 +411,10 @@
  "usage_count_1b27e3": "Liczenie użycia",
  "if_you_leave_count_me_5c9aa8": "Jeśli zostawisz włączone „Licz mnie jako użytkownika”: jeden anonimowy sygnał przy pierwszym otwarciu Undertone i najwyżej jeden tygodniowo, z losowym ID, wersją aplikacji, wersją macOS i językiem. Wyłączysz to w konfiguracji lub w Ustawieniach.",
  "to_check_what_leaves_your_51b290": "Aby sprawdzić, co opuszcza twojego Maca, obserwuj ruch Undertone w Little Snitch, LuLu lub Proxyman podczas rozmowy. Zobaczysz tylko połączenia z wybraną AI, podłączonymi narzędziami i, jeśli zostawisz to włączone, cotygodniowe anonimowe zliczenie. Dźwięk nigdy nie opuszcza twojego Maca; do AI trafia tylko tekst.",
- "download_dmg_v1_12_0_e84326": "Pobierz .dmg <span class=\"ver\">v1.12.0</span>"
+ "download_dmg_v1_12_0_e84326": "Pobierz .dmg <span class=\"ver\">v1.12.0</span>",
+ "download_dmg_v1_13_0_355e4a": "Pobierz .dmg <span class=\"ver\">v1.13.0</span>",
+ "pick_a_meeting_to_see_e701e3": "Wybierz spotkanie i zobacz, co pokazałby ci Undertone. W aplikacji Start › Wypróbuj przykładowe spotkanie odtwarza zmyślony standup w prawdziwym panelu jeszcze przed pierwszą rozmową.",
+ "or_with_homebrew_brew_install_1c436a": "Lub przez Homebrew: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
+ "updates_itself_ac2e05": "Aktualizuje się sama",
+ "feedback_c8d767": "Opinie"
 }

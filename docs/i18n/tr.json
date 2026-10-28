@@ -411,5 +411,10 @@
  "usage_count_1b27e3": "Kullanım sayımı",
  "if_you_leave_count_me_5c9aa8": "“Beni kullanıcı olarak say” açık kalırsa: Undertone ilk açıldığında bir ve haftada en fazla bir anonim sinyal; rastgele bir kimlik, uygulama sürümü, macOS sürümü ve dil ile. Kurulumda veya Ayarlar’da kapatabilirsiniz.",
  "to_check_what_leaves_your_51b290": "Mac’inizden neyin çıktığını kontrol etmek için bir görüşme sırasında Undertone’un trafiğini Little Snitch, LuLu veya Proxyman ile izleyin. Yalnızca seçtiğiniz yapay zekâya, bağladığınız araçlara ve açık bıraktıysanız haftalık anonim sayıma giden bağlantıları görürsünüz. Sesiniz Mac’inizden asla çıkmaz; yapay zekânıza yalnızca metin gider.",
- "download_dmg_v1_12_0_e84326": ".dmg indir <span class=\"ver\">v1.12.0</span>"
+ "download_dmg_v1_12_0_e84326": ".dmg indir <span class=\"ver\">v1.12.0</span>",
+ "download_dmg_v1_13_0_355e4a": ".dmg indir <span class=\"ver\">v1.13.0</span>",
+ "pick_a_meeting_to_see_e701e3": "Undertone’un size ne göstereceğini görmek için bir toplantı seçin. Uygulamada Ana Sayfa › Örnek bir toplantıyı deneyin, ilk görüşmenizden önce uydurma bir standup’ı gerçek panelde oynatır.",
+ "or_with_homebrew_brew_install_1c436a": "Ya da Homebrew ile: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
+ "updates_itself_ac2e05": "Kendini günceller",
+ "feedback_c8d767": "Geri bildirim"
 }

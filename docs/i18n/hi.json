@@ -411,5 +411,10 @@
  "usage_count_1b27e3": "उपयोग गिनती",
  "if_you_leave_count_me_5c9aa8": "अगर आप “मुझे उपयोगकर्ता के रूप में गिनें” चालू रखते हैं: Undertone पहली बार खुलने पर एक गुमनाम संकेत और हफ़्ते में अधिकतम एक, जिसमें एक रैंडम ID, ऐप वर्शन, macOS वर्शन और भाषा होती है। इसे सेटअप या Settings में बंद करें।",
  "to_check_what_leaves_your_51b290": "आपके Mac से क्या बाहर जाता है, यह जाँचने के लिए कॉल के दौरान Little Snitch, LuLu या Proxyman से Undertone का ट्रैफ़िक देखें। आपको सिर्फ़ आपके चुने AI और आपके कनेक्ट किए टूल्स से कनेक्शन दिखेंगे। आपका ऑडियो कभी आपके Mac से बाहर नहीं जाता; सिर्फ़ टेक्स्ट आपके AI तक जाता है।. आपको सिर्फ़ आपके चुने AI, जोड़े गए टूल और, अगर चालू रखा हो, साप्ताहिक गुमनाम गिनती के कनेक्शन दिखेंगे। ",
- "download_dmg_v1_12_0_e84326": ".dmg डाउनलोड करें <span class=\"ver\">v1.12.0</span>"
+ "download_dmg_v1_12_0_e84326": ".dmg डाउनलोड करें <span class=\"ver\">v1.12.0</span>",
+ "download_dmg_v1_13_0_355e4a": ".dmg डाउनलोड करें <span class=\"ver\">v1.13.0</span>",
+ "pick_a_meeting_to_see_e701e3": "कोई मीटिंग चुनें और देखें कि Undertone आपको क्या दिखाएगा। ऐप में, होम › एक सैंपल मीटिंग आज़माएँ आपकी पहली कॉल से पहले असली पैनल में एक काल्पनिक स्टैंडअप चलाता है।",
+ "or_with_homebrew_brew_install_1c436a": "या Homebrew से: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
+ "updates_itself_ac2e05": "ख़ुद अपडेट होता है",
+ "feedback_c8d767": "फ़ीडबैक"
 }

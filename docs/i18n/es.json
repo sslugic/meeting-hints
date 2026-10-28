@@ -411,5 +411,10 @@
  "usage_count_1b27e3": "Recuento de uso",
  "if_you_leave_count_me_5c9aa8": "Si dejas activado «Cuéntame como usuario»: un aviso anónimo al abrir Undertone por primera vez y como mucho uno a la semana, con un ID aleatorio, la versión de la app, la versión de macOS y el idioma. Desactívalo en la configuración o en Ajustes.",
  "to_check_what_leaves_your_51b290": "Para comprobar qué sale de tu Mac, observa el tráfico de Undertone con Little Snitch, LuLu o Proxyman durante una llamada. Solo verás conexiones a la IA que elegiste, a las herramientas que conectaste y, si lo dejaste activado, el recuento anónimo semanal. Tu audio nunca sale de tu Mac; a tu IA solo le llega texto.",
- "download_dmg_v1_12_0_e84326": "Descargar .dmg <span class=\"ver\">v1.12.0</span>"
+ "download_dmg_v1_12_0_e84326": "Descargar .dmg <span class=\"ver\">v1.12.0</span>",
+ "download_dmg_v1_13_0_355e4a": "Descargar .dmg <span class=\"ver\">v1.13.0</span>",
+ "pick_a_meeting_to_see_e701e3": "Elige una reunión para ver lo que Undertone te mostraría. En la app, Inicio › Prueba una reunión de ejemplo reproduce una reunión diaria inventada en el panel real antes de tu primera llamada.",
+ "or_with_homebrew_brew_install_1c436a": "O con Homebrew: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
+ "updates_itself_ac2e05": "Se actualiza sola",
+ "feedback_c8d767": "Comentarios"
 }

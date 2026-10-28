@@ -411,5 +411,10 @@
  "usage_count_1b27e3": "Gebruikstelling",
  "if_you_leave_count_me_5c9aa8": "Als je ‘Tel mij als gebruiker’ aan laat: één anonieme ping bij de eerste keer openen van Undertone en hooguit één per week, met een willekeurige ID, de appversie, de macOS-versie en de taal. Zet het uit in de installatie of in Instellingen.",
  "to_check_what_leaves_your_51b290": "Wil je controleren wat je Mac verlaat? Bekijk het verkeer van Undertone tijdens een call met Little Snitch, LuLu of Proxyman. Je ziet alleen verbindingen met de AI die je koos, de tools die je koppelde en, als je het aan liet, de wekelijkse anonieme telling. Je audio verlaat je Mac nooit; alleen tekst gaat naar je AI.",
- "download_dmg_v1_12_0_e84326": "Download .dmg <span class=\"ver\">v1.12.0</span>"
+ "download_dmg_v1_12_0_e84326": "Download .dmg <span class=\"ver\">v1.12.0</span>",
+ "download_dmg_v1_13_0_355e4a": "Download .dmg <span class=\"ver\">v1.13.0</span>",
+ "pick_a_meeting_to_see_e701e3": "Kies een meeting en zie wat Undertone je zou laten zien. In de app speelt Home › Probeer een voorbeeldvergadering een verzonnen stand-up af in het echte paneel, nog voor je eerste gesprek.",
+ "or_with_homebrew_brew_install_1c436a": "Of met Homebrew: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
+ "updates_itself_ac2e05": "Werkt zichzelf bij",
+ "feedback_c8d767": "Feedback"
 }

@@ -411,5 +411,10 @@
  "usage_count_1b27e3": "Conteggio d’uso",
  "if_you_leave_count_me_5c9aa8": "Se lasci attivo «Contami come utente»: un ping anonimo alla prima apertura di Undertone e al massimo uno a settimana, con un ID casuale, la versione dell’app, la versione di macOS e la lingua. Puoi disattivarlo nella configurazione o nelle Impostazioni.",
  "to_check_what_leaves_your_51b290": "Per verificare cosa esce dal tuo Mac, osserva il traffico di Undertone con Little Snitch, LuLu o Proxyman durante una chiamata. Vedrai solo connessioni all’IA scelta, agli strumenti collegati e, se l’hai lasciato attivo, al conteggio anonimo settimanale. Il tuo audio non lascia mai il Mac; alla tua IA va solo testo.",
- "download_dmg_v1_12_0_e84326": "Scarica il .dmg <span class=\"ver\">v1.12.0</span>"
+ "download_dmg_v1_12_0_e84326": "Scarica il .dmg <span class=\"ver\">v1.12.0</span>",
+ "download_dmg_v1_13_0_355e4a": "Scarica il .dmg <span class=\"ver\">v1.13.0</span>",
+ "pick_a_meeting_to_see_e701e3": "Scegli una riunione per vedere cosa ti mostrerebbe Undertone. Nell’app, Home › Prova una riunione di esempio fa scorrere uno standup inventato nel pannello reale prima della tua prima chiamata.",
+ "or_with_homebrew_brew_install_1c436a": "Oppure con Homebrew: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
+ "updates_itself_ac2e05": "Si aggiorna da sola",
+ "feedback_c8d767": "Feedback"
 }

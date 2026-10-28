@@ -411,5 +411,10 @@
  "usage_count_1b27e3": "عدّ الاستخدام",
  "if_you_leave_count_me_5c9aa8": "إذا أبقيت «احسبني مستخدمًا» مفعّلًا: إشارة مجهولة واحدة عند فتح Undertone لأول مرة، وإشارة واحدة أسبوعيًا على الأكثر، بمعرّف عشوائي وإصدار التطبيق وإصدار macOS واللغة. أوقفه من الإعداد أو من الإعدادات.",
  "to_check_what_leaves_your_51b290": "لتتحقق مما يغادر جهاز Mac، راقب حركة بيانات Undertone باستخدام Little Snitch أو LuLu أو Proxyman أثناء مكالمة. لن ترى إلا اتصالات بالذكاء الاصطناعي الذي اخترته والأدوات التي ربطتها، والعدّ الأسبوعي المجهول إن أبقيته مفعّلًا. صوتك لا يغادر جهاز Mac أبدًا؛ النص وحده يذهب إلى الذكاء الاصطناعي.",
- "download_dmg_v1_12_0_e84326": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.12.0</span>"
+ "download_dmg_v1_12_0_e84326": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.12.0</span>",
+ "download_dmg_v1_13_0_355e4a": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.13.0</span>",
+ "pick_a_meeting_to_see_e701e3": "اختر اجتماعًا لترى ما سيعرضه لك Undertone. في التطبيق، يشغّل «الرئيسية › جرّب اجتماعًا تجريبيًا» اجتماعًا يوميًا خياليًا في اللوحة الحقيقية قبل أول مكالمة لك.",
+ "or_with_homebrew_brew_install_1c436a": "أو عبر Homebrew: <code translate=\"no\">brew install --cask sslugic/tap/undertone</code>",
+ "updates_itself_ac2e05": "يحدّث نفسه",
+ "feedback_c8d767": "ملاحظات"
 }
