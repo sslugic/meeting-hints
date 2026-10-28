@@ -2,11 +2,17 @@
 
 # Undertone
 
-**Your company's jargon, explained while it's being said.**
+**Know what everyone means, and what to say next.**
 
-Undertone is a macOS app that listens along to your calls. When a code name, acronym or internal project comes up, it explains it from your team's own Slack, Notion, Jira and other tools, in a small panel beside the call. Before a meeting it briefs you; afterwards you get the recap, your tasks, a follow-up draft and new terms to learn.
+Undertone is a macOS app that listens along to your calls, in a small panel beside the call:
 
-**Website and download:** https://getundertone.app
+- **During the call:** code names, acronyms and internal projects are explained the moment they come up, from your team's own Slack, Notion, Jira and other tools.
+- **When you're asked:** the facts and context you need come up as reminders, so you can answer in your own words.
+- **Before and after:** a briefing for the next meeting, then the recap, your tasks, a follow-up draft and new terms to learn.
+
+Speech is transcribed on your Mac. Work and personal meetings are kept apart, and you can try it on a made-up sample meeting before your first real call.
+
+**Website and download:** https://getundertone.app · or `brew install --cask sslugic/tap/undertone` (run `brew trust sslugic/tap` once first)
 
 - Free during the beta, with your own AI: an OpenAI, Anthropic or Gemini key, a local Ollama or LM Studio model, or your Claude Code or Cursor sign-in.
 - macOS 26 or later on Apple silicon. Signed and notarized by Apple.
