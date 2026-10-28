@@ -33,7 +33,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
 SOURCE = os.path.join(DOCS, "index.html")
 I18N = os.path.join(DOCS, "i18n")
-BASE_URL = "https://sslugic.github.io/undertone/"
+BASE_URL = "https://getundertone.app/"
 STORAGE_KEY = "undertone-lang"
 
 # (code, name in its own language, short label for the nav)
