@@ -423,5 +423,6 @@
  "sample_names_companies_and_tickets_69d2ae": "示例。姓名、公司和工单均为虚构。",
  "undertone_demo_video_e14940": "Undertone 演示视频",
  "if_you_leave_count_me_12e86d": "如果你保持“把我计为用户”开启：首次打开 Undertone 时发送一次匿名信号，之后每周最多一次，只包含随机 ID、App 版本、macOS 版本和语言。在设置向导或设置中关闭后，会删除已发送的内容。",
- "download_dmg_v1_13_1_3cdffa": "下载 .dmg <span class=\"ver\">v1.13.1</span>"
+ "download_dmg_v1_13_1_3cdffa": "下载 .dmg <span class=\"ver\">v1.13.1</span>",
+ "download_dmg_v1_13_2_69f976": "下载 .dmg <span class=\"ver\">v1.13.2</span>"
 }

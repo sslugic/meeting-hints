@@ -423,5 +423,6 @@
  "sample_names_companies_and_tickets_69d2ae": "예시입니다. 이름, 회사, 티켓은 가상입니다.",
  "undertone_demo_video_e14940": "Undertone 데모 영상",
  "if_you_leave_count_me_12e86d": "\"사용자로 집계\"를 켜 두면: Undertone을 처음 열 때 한 번, 이후 일주일에 최대 한 번 익명 신호를 보냅니다. 무작위 ID, 앱 버전, macOS 버전, 언어만 포함됩니다. 설정 과정이나 설정에서 끄면 보낸 내용이 삭제됩니다.",
- "download_dmg_v1_13_1_3cdffa": ".dmg 다운로드 <span class=\"ver\">v1.13.1</span>"
+ "download_dmg_v1_13_1_3cdffa": ".dmg 다운로드 <span class=\"ver\">v1.13.1</span>",
+ "download_dmg_v1_13_2_69f976": ".dmg 다운로드 <span class=\"ver\">v1.13.2</span>"
 }
