@@ -482,6 +482,20 @@
   .start p { color: var(--text-2); margin-top: 12px; }
   .film { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border-2); background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
   .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+  .askmock { max-width: 640px; margin: 0 auto; padding: 40px 36px 30px; border-radius: var(--r-lg); border: 1px solid var(--border); background: var(--surface-2); }
+  .askmock h3 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; font-size: 30px; letter-spacing: -.01em; margin: 0 0 22px; }
+  .askmock .box { border-radius: 16px; border: 1px solid rgba(129, 140, 248, .45); box-shadow: 0 0 22px rgba(129, 140, 248, .16); background: rgba(255, 255, 255, .03); padding: 14px 14px 12px 16px; }
+  .askmock .ph { color: var(--text-3); font-size: 15px; min-height: 38px; }
+  .askmock .row { display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: var(--text-2); }
+  .askmock .row .sp { flex: 1; }
+  .askmock .send { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; color: #fff; }
+  .askmock .rec { margin-top: 26px; font-size: 13.5px; color: var(--text-3); margin-bottom: 6px; }
+  .askmock ul { list-style: none; margin: 0; padding: 0; }
+  .askmock li { display: flex; align-items: center; gap: 12px; padding: 6px 4px; font-size: 15px; }
+  .askmock li i { width: 28px; height: 28px; border-radius: 7px; background: rgba(255, 255, 255, .06); display: grid; place-items: center; color: var(--text-3); font-style: normal; font-size: 13px; flex: none; }
+  .askmock li span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .askmock li small { color: var(--text-3); font-size: 13.5px; }
+  @media (max-width: 560px) { .askmock { padding: 26px 18px 20px; } .askmock h3 { font-size: 24px; } }
   .reqs { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 26px; }
   .brew { margin-top: 14px; font-size: 14px; color: var(--text-2); }
   .brew code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2px 7px; user-select: all; overflow-wrap: anywhere; }
@@ -608,7 +622,7 @@
       <h1>Понимайте, что имеют в виду все, — и что ответить.</h1>
       <p class="sub">Undertone слушает ваши звонки. Он объясняет кодовые названия и аббревиатуры, как только они звучат, подсказывает факты, когда вас о чём-то спрашивают, а после звонка даёт итоги, ваши задачи и брифинг к следующей встрече. Всё — из Slack, Notion и Jira вашей команды, с расшифровкой на вашем Mac.</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Скачать .dmg <span class="ver">v1.13.2</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Скачать .dmg <span class="ver">v1.14.0</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Релизы и issues</a>
       </div>
       <p class="fine">Бесплатно на время беты · macOS 26 или новее на Apple silicon</p>
@@ -924,7 +938,7 @@
         <div><dt>Пространства</dt><dd>Разделяйте команды и клиентов. Новые встречи раскладываются за вас, для остальных Undertone предлагает пространство, а каждый вид фильтруется по выбранному пространству.</dd></div>
         <div><dt>Разбор ответов</dt><dd>Ваша речь тоже расшифровывается, так что после звонка видно, что сработало и что подтянуть в следующий раз.</dd></div>
         <div><dt>Артефакты</dt><dd>Отчёты о статусе, презентации и интерактивные холсты, написанные по вашим встречам и источникам, с пробелами, помеченными [TBD]. Экспорт в Markdown или HTML.</dd></div>
-        <div><dt>Спросить</dt><dd>Общайтесь с одной встречей или со всеми сразу, прикладывая файлы. Ответы появляются по мере написания, а то, что вы рассказали, запоминается на будущее.</dd></div>
+        <div><dt>Спросить</dt><dd>Общайтесь с одной встречей или со всеми, прикрепляя файлы. Ответы появляются сразу, прошлые чаты ждут в «Недавних», а то, что вы рассказали, запоминается на будущее.</dd></div>
         <div><dt>Спросить во время звонка</dt><dd>Поле чата под подсказками отвечает по уже прозвучавшей части звонка, не отрывая вас от встречи.</dd></div>
         <div><dt>Люди</dt><dd>Все из ваших приглашений — с ролью и тем, над чем они работают, вашими общими встречами и тем, что вы им должны.</dd></div>
         <div><dt>Напоминания</dt><dd>«К пятнице» превращается в дату. Напоминание приходит в 9:00 за рабочий день до срока, а просроченные задачи краснеют.</dd></div>
@@ -1079,6 +1093,29 @@
           <p class="sample" style="padding:14px 0 0">Пример. Он всё равно проверяет, не появилось ли что-то новее сводки.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="block" id="ask">
+    <div class="wrap">
+      <div class="head">
+        <h2>Ask: спросите, как спросили бы коллегу</h2>
+        <p>Одно просторное поле для любого вопроса о встречах. Выберите одну встречу или все, прикрепите файлы и вернитесь к прошлым разговорам из «Недавних».</p>
+      </div>
+      <div class="askmock" role="img" aria-label="Пример стартового экрана Ask: приветствие, поле вопроса и список недавних чатов">
+        <h3>Привет, Алекс! Спросите что угодно</h3>
+        <div class="box">
+          <div class="ph">Что мы решили на этой неделе?</div>
+          <div class="row"><span>&#x1F4CE;&#xFE0E;</span><span>Все встречи ⌄</span><span class="sp"></span><span class="send">↑</span></div>
+        </div>
+        <div class="rec">Недавние</div>
+        <ul>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>О чём была моя последняя встреча?</span><small>6m</small></li>
+          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>Письмо по итогам созвона о планах на IV квартал</span><small>1d</small></li>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Кто отвечает за дашборд Kestrel?</span><small>2d</small></li>
+        </ul>
+      </div>
+      <p class="sample" style="padding:14px 0 0">Пример. Имена и встречи выдуманы.</p>
     </div>
   </section>
 
@@ -1307,7 +1344,7 @@
     <h2>Готовы к следующему звонку?</h2>
     <p>Установите, подключите ИИ и источники примерно за минуту — и присоединяйтесь к звонку. После него итоги, задачи и новые термины будут ждать вас на Главной.</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Скачать .dmg <span class="ver">v1.13.2</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Скачать .dmg <span class="ver">v1.14.0</span></a>
     </div>
     <p class="brew">Или через Homebrew: <code translate="no">brew install --cask sslugic/tap/undertone</code></p>
     <ul class="reqs">

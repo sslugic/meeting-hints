@@ -424,5 +424,21 @@
  "undertone_demo_video_e14940": "Undertone 示範影片",
  "if_you_leave_count_me_12e86d": "如果你保持「把我算作使用者」開啟：第一次打開 Undertone 時傳送一次匿名訊號，之後每週最多一次，只包含隨機 ID、App 版本、macOS 版本和語言。在設定流程或設定中關閉後，會刪除已傳送的內容。",
  "download_dmg_v1_13_1_3cdffa": "下載 .dmg <span class=\"ver\">v1.13.1</span>",
- "download_dmg_v1_13_2_69f976": "下載 .dmg <span class=\"ver\">v1.13.2</span>"
+ "download_dmg_v1_13_2_69f976": "下載 .dmg <span class=\"ver\">v1.13.2</span>",
+ "ask_like_you_d_ask_b6df10": "Ask，像問同事一樣",
+ "one_roomy_box_for_any_be6d7f": "一個寬敞的輸入框，回答關於會議的任何問題。選擇一場會議或全部，加入檔案，並從「最近項目」繼續先前的對話。",
+ "hi_alex_ask_anything_3e00b8": "你好 Alex，有問題儘管問",
+ "what_did_we_decide_this_e48809": "我們這週決定了什麼？",
+ "all_meetings_92e240": "所有會議 ⌄",
+ "recents_843801": "最近項目",
+ "what_was_my_most_recent_ddbf2a": "我最近一次會議在講什麼？",
+ "follow_up_email_for_the_b21a16": "第四季規劃會議的後續郵件",
+ "who_owns_the_kestrel_dashboard_8aa794": "誰負責 Kestrel 儀表板？",
+ "sample_names_and_meetings_are_2833cc": "範例。姓名與會議皆為虛構。",
+ "sample_ask_start_screen_a_e06f7f": "Ask 開始畫面範例：問候語、提問框和最近的對話列表",
+ "chat_with_one_meeting_or_058b33": "可以針對一場會議或全部會議聊天，並附上檔案。回答即時呈現，先前的對話保留在「最近項目」中，你告訴它的內容會記住，下次使用。",
+ "1d_11a275": "1d",
+ "2d_864018": "2d",
+ "6m_845b34": "6m",
+ "download_dmg_v1_14_0_dcdd7c": "下載 .dmg <span class=\"ver\">v1.14.0</span>"
 }

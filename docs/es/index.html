@@ -482,6 +482,20 @@
   .start p { color: var(--text-2); margin-top: 12px; }
   .film { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border-2); background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
   .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+  .askmock { max-width: 640px; margin: 0 auto; padding: 40px 36px 30px; border-radius: var(--r-lg); border: 1px solid var(--border); background: var(--surface-2); }
+  .askmock h3 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; font-size: 30px; letter-spacing: -.01em; margin: 0 0 22px; }
+  .askmock .box { border-radius: 16px; border: 1px solid rgba(129, 140, 248, .45); box-shadow: 0 0 22px rgba(129, 140, 248, .16); background: rgba(255, 255, 255, .03); padding: 14px 14px 12px 16px; }
+  .askmock .ph { color: var(--text-3); font-size: 15px; min-height: 38px; }
+  .askmock .row { display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: var(--text-2); }
+  .askmock .row .sp { flex: 1; }
+  .askmock .send { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; color: #fff; }
+  .askmock .rec { margin-top: 26px; font-size: 13.5px; color: var(--text-3); margin-bottom: 6px; }
+  .askmock ul { list-style: none; margin: 0; padding: 0; }
+  .askmock li { display: flex; align-items: center; gap: 12px; padding: 6px 4px; font-size: 15px; }
+  .askmock li i { width: 28px; height: 28px; border-radius: 7px; background: rgba(255, 255, 255, .06); display: grid; place-items: center; color: var(--text-3); font-style: normal; font-size: 13px; flex: none; }
+  .askmock li span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .askmock li small { color: var(--text-3); font-size: 13.5px; }
+  @media (max-width: 560px) { .askmock { padding: 26px 18px 20px; } .askmock h3 { font-size: 24px; } }
   .reqs { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 26px; }
   .brew { margin-top: 14px; font-size: 14px; color: var(--text-2); }
   .brew code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2px 7px; user-select: all; overflow-wrap: anywhere; }
@@ -608,7 +622,7 @@
       <h1>Entiende lo que todos quieren decir, y qué responder.</h1>
       <p class="sub">Undertone escucha tus llamadas. Explica nombres en clave y siglas en cuanto aparecen, te trae los datos cuando te preguntan y, al terminar, te deja el resumen, tus tareas y una preparación para la siguiente llamada. Todo desde el Slack, Notion y Jira de tu equipo, transcrito en tu Mac.</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Descargar .dmg <span class="ver">v1.13.2</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Descargar .dmg <span class="ver">v1.14.0</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Versiones e incidencias</a>
       </div>
       <p class="fine">Gratis durante la beta · macOS 26 o posterior en Apple silicon</p>
@@ -924,7 +938,7 @@
         <div><dt>Espacios</dt><dd>Mantén separados equipos y clientes. Las reuniones nuevas se archivan solas, Undertone sugiere un espacio para el resto y todas las vistas se filtran por el espacio que elijas.</dd></div>
         <div><dt>Coaching de respuestas</dt><dd>Tu parte de la llamada también se transcribe, así que después ves qué funcionó y qué pulir la próxima vez.</dd></div>
         <div><dt>Artefactos</dt><dd>Informes de estado, presentaciones y lienzos interactivos, redactados a partir de tus reuniones y fuentes, con los huecos marcados como [TBD]. Exporta a Markdown o HTML.</dd></div>
-        <div><dt>Preguntar</dt><dd>Chatea con una reunión o con todas, con archivos adjuntos. Las respuestas llegan en tiempo real y lo que le cuentas se recuerda para la próxima vez.</dd></div>
+        <div><dt>Preguntar</dt><dd>Chatea con una reunión o con todas, con archivos adjuntos. Las respuestas llegan en directo, los chats anteriores te esperan en Recientes y lo que le cuentas se recuerda para la próxima vez.</dd></div>
         <div><dt>Pregunta en plena llamada</dt><dd>Un campo de chat bajo las pistas en directo responde a partir de lo dicho hasta ahora en la llamada, sin salir de la reunión.</dd></div>
         <div><dt>Personas</dt><dd>Todas las personas de tus invitaciones, con su rol y en qué trabajan, vuestras reuniones juntos y lo que les debes.</dd></div>
         <div><dt>Recordatorios</dt><dd>«Para el viernes» se convierte en una fecha. Recibes un recordatorio a las 9:00 del día laborable anterior y las tareas vencidas se ponen en rojo.</dd></div>
@@ -1079,6 +1093,29 @@
           <p class="sample" style="padding:14px 0 0">Ejemplo. Aun así, comprueba si hay algo más reciente desde el resumen.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="block" id="ask">
+    <div class="wrap">
+      <div class="head">
+        <h2>Pregunta como le preguntarías a un compañero</h2>
+        <p>Un cuadro amplio para cualquier pregunta sobre tus reuniones. Elige una reunión o todas, añade archivos y retoma conversaciones anteriores desde Recientes.</p>
+      </div>
+      <div class="askmock" role="img" aria-label="Pantalla de inicio de Ask de ejemplo: un saludo, el cuadro de pregunta y una lista de chats recientes">
+        <h3>Hola, Alex. Pregunta lo que quieras</h3>
+        <div class="box">
+          <div class="ph">¿Qué decidimos esta semana?</div>
+          <div class="row"><span>&#x1F4CE;&#xFE0E;</span><span>Todas las reuniones ⌄</span><span class="sp"></span><span class="send">↑</span></div>
+        </div>
+        <div class="rec">Recientes</div>
+        <ul>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>¿De qué trató mi última reunión?</span><small>6m</small></li>
+          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>Correo de seguimiento de la llamada de planificación del T4</span><small>1d</small></li>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>¿Quién es responsable del panel Kestrel?</span><small>2d</small></li>
+        </ul>
+      </div>
+      <p class="sample" style="padding:14px 0 0">Ejemplo. Los nombres y las reuniones son inventados.</p>
     </div>
   </section>
 
@@ -1307,7 +1344,7 @@
     <h2>¿Listo para tu próxima llamada?</h2>
     <p>Instala, conecta tu IA y tus fuentes en un minuto aproximadamente y únete a una llamada. Después, tu resumen, tus tareas y los términos nuevos te esperan en Inicio.</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Descargar .dmg <span class="ver">v1.13.2</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Descargar .dmg <span class="ver">v1.14.0</span></a>
     </div>
     <p class="brew">O con Homebrew: <code translate="no">brew install --cask sslugic/tap/undertone</code></p>
     <ul class="reqs">

@@ -482,6 +482,20 @@
   .start p { color: var(--text-2); margin-top: 12px; }
   .film { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border-2); background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
   .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+  .askmock { max-width: 640px; margin: 0 auto; padding: 40px 36px 30px; border-radius: var(--r-lg); border: 1px solid var(--border); background: var(--surface-2); }
+  .askmock h3 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; font-size: 30px; letter-spacing: -.01em; margin: 0 0 22px; }
+  .askmock .box { border-radius: 16px; border: 1px solid rgba(129, 140, 248, .45); box-shadow: 0 0 22px rgba(129, 140, 248, .16); background: rgba(255, 255, 255, .03); padding: 14px 14px 12px 16px; }
+  .askmock .ph { color: var(--text-3); font-size: 15px; min-height: 38px; }
+  .askmock .row { display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: var(--text-2); }
+  .askmock .row .sp { flex: 1; }
+  .askmock .send { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; color: #fff; }
+  .askmock .rec { margin-top: 26px; font-size: 13.5px; color: var(--text-3); margin-bottom: 6px; }
+  .askmock ul { list-style: none; margin: 0; padding: 0; }
+  .askmock li { display: flex; align-items: center; gap: 12px; padding: 6px 4px; font-size: 15px; }
+  .askmock li i { width: 28px; height: 28px; border-radius: 7px; background: rgba(255, 255, 255, .06); display: grid; place-items: center; color: var(--text-3); font-style: normal; font-size: 13px; flex: none; }
+  .askmock li span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .askmock li small { color: var(--text-3); font-size: 13.5px; }
+  @media (max-width: 560px) { .askmock { padding: 26px 18px 20px; } .askmock h3 { font-size: 24px; } }
   .reqs { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 26px; }
   .brew { margin-top: 14px; font-size: 14px; color: var(--text-2); }
   .brew code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2px 7px; user-select: all; overflow-wrap: anywhere; }
@@ -608,7 +622,7 @@
       <h1>Begrijp wat iedereen bedoelt, en wat je moet zeggen.</h1>
       <p class="sub">Undertone luistert mee met je gesprekken. Het legt codenamen en afkortingen uit zodra ze vallen, haalt de feiten erbij als jou iets gevraagd wordt en geeft je daarna de samenvatting, je taken en een briefing voor het volgende gesprek. Allemaal uit de Slack, Notion en Jira van je eigen team, omgezet in tekst op je Mac.</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.13.2</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.14.0</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Releases en issues</a>
       </div>
       <p class="fine">Gratis tijdens de bèta · macOS 26 of nieuwer op Apple silicon</p>
@@ -924,7 +938,7 @@
         <div><dt>Ruimtes</dt><dd>Houd teams en klanten gescheiden. Nieuwe meetings worden voor je ingedeeld, voor de rest stelt Undertone een ruimte voor, en elke weergave filtert op de ruimte die je kiest.</dd></div>
         <div><dt>Antwoordcoaching</dt><dd>Ook jouw kant van de call wordt getranscribeerd, zodat je na een call ziet wat overkwam en wat je de volgende keer strakker kunt doen.</dd></div>
         <div><dt>Artefacten</dt><dd>Statusrapporten, presentaties en interactieve canvassen, geschreven vanuit je meetings en bronnen, met gaten gemarkeerd als [TBD]. Exporteren naar Markdown of HTML.</dd></div>
-        <div><dt>Vragen</dt><dd>Chat met één meeting of met allemaal, met bijgevoegde bestanden. Antwoorden verschijnen live, en wat je vertelt, wordt onthouden voor de volgende keer.</dd></div>
+        <div><dt>Vragen</dt><dd>Chat met één vergadering of met alle, met bijlagen. Antwoorden verschijnen live, eerdere chats wachten in Recent, en wat je vertelt wordt onthouden voor de volgende keer.</dd></div>
         <div><dt>Vragen tijdens de call</dt><dd>Een chatveld onder de live hints antwoordt op basis van de call tot nu toe, zonder dat je de meeting verlaat.</dd></div>
         <div><dt>Mensen</dt><dd>Iedereen uit je uitnodigingen met hun rol en waar ze aan werken, je meetings samen en wat je ze nog verschuldigd bent.</dd></div>
         <div><dt>Herinneringen</dt><dd>‘Uiterlijk vrijdag’ wordt een datum. Een herinnering komt om 9:00 op de werkdag ervoor, en verlopen taken worden rood.</dd></div>
@@ -1079,6 +1093,29 @@
           <p class="sample" style="padding:14px 0 0">Voorbeeld. Het checkt nog steeds of er iets nieuwers is sinds de briefing.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="block" id="ask">
+    <div class="wrap">
+      <div class="head">
+        <h2>Ask, zoals je het een collega zou vragen</h2>
+        <p>Eén ruim vak voor elke vraag over je vergaderingen. Kies één vergadering of alle, voeg bestanden toe en ga verder met eerdere gesprekken via Recent.</p>
+      </div>
+      <div class="askmock" role="img" aria-label="Voorbeeld van het startscherm van Ask: een begroeting, het vraagvak en een lijst recente chats">
+        <h3>Hoi Alex, vraag maar raak</h3>
+        <div class="box">
+          <div class="ph">Wat hebben we deze week besloten?</div>
+          <div class="row"><span>&#x1F4CE;&#xFE0E;</span><span>Alle vergaderingen ⌄</span><span class="sp"></span><span class="send">↑</span></div>
+        </div>
+        <div class="rec">Recent</div>
+        <ul>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Waar ging mijn laatste vergadering over?</span><small>6m</small></li>
+          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>Follow-upmail voor het Q4-planningsgesprek</span><small>1d</small></li>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Wie is eigenaar van het Kestrel-dashboard?</span><small>2d</small></li>
+        </ul>
+      </div>
+      <p class="sample" style="padding:14px 0 0">Voorbeeld. Namen en vergaderingen zijn verzonnen.</p>
     </div>
   </section>
 
@@ -1307,7 +1344,7 @@
     <h2>Klaar voor je volgende call?</h2>
     <p>Installeer, koppel je AI en bronnen in ongeveer een minuut en neem deel aan een call. Daarna staan je samenvatting, taken en nieuwe termen klaar in Start.</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.13.2</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.14.0</span></a>
     </div>
     <p class="brew">Of met Homebrew: <code translate="no">brew install --cask sslugic/tap/undertone</code></p>
     <ul class="reqs">

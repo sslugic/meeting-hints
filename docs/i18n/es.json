@@ -424,5 +424,21 @@
  "undertone_demo_video_e14940": "Video de demostración de Undertone",
  "if_you_leave_count_me_12e86d": "Si dejas activado «Cuéntame como usuario»: un aviso anónimo al abrir Undertone por primera vez y como mucho uno a la semana, con un ID aleatorio, la versión de la app, la versión de macOS y el idioma. Al desactivarlo en la configuración inicial o en Ajustes se borra lo enviado.",
  "download_dmg_v1_13_1_3cdffa": "Descargar .dmg <span class=\"ver\">v1.13.1</span>",
- "download_dmg_v1_13_2_69f976": "Descargar .dmg <span class=\"ver\">v1.13.2</span>"
+ "download_dmg_v1_13_2_69f976": "Descargar .dmg <span class=\"ver\">v1.13.2</span>",
+ "ask_like_you_d_ask_b6df10": "Pregunta como le preguntarías a un compañero",
+ "one_roomy_box_for_any_be6d7f": "Un cuadro amplio para cualquier pregunta sobre tus reuniones. Elige una reunión o todas, añade archivos y retoma conversaciones anteriores desde Recientes.",
+ "hi_alex_ask_anything_3e00b8": "Hola, Alex. Pregunta lo que quieras",
+ "what_did_we_decide_this_e48809": "¿Qué decidimos esta semana?",
+ "all_meetings_92e240": "Todas las reuniones ⌄",
+ "recents_843801": "Recientes",
+ "what_was_my_most_recent_ddbf2a": "¿De qué trató mi última reunión?",
+ "follow_up_email_for_the_b21a16": "Correo de seguimiento de la llamada de planificación del T4",
+ "who_owns_the_kestrel_dashboard_8aa794": "¿Quién es responsable del panel Kestrel?",
+ "sample_names_and_meetings_are_2833cc": "Ejemplo. Los nombres y las reuniones son inventados.",
+ "sample_ask_start_screen_a_e06f7f": "Pantalla de inicio de Ask de ejemplo: un saludo, el cuadro de pregunta y una lista de chats recientes",
+ "chat_with_one_meeting_or_058b33": "Chatea con una reunión o con todas, con archivos adjuntos. Las respuestas llegan en directo, los chats anteriores te esperan en Recientes y lo que le cuentas se recuerda para la próxima vez.",
+ "1d_11a275": "1d",
+ "2d_864018": "2d",
+ "6m_845b34": "6m",
+ "download_dmg_v1_14_0_dcdd7c": "Descargar .dmg <span class=\"ver\">v1.14.0</span>"
 }

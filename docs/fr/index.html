@@ -482,6 +482,20 @@
   .start p { color: var(--text-2); margin-top: 12px; }
   .film { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border-2); background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
   .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+  .askmock { max-width: 640px; margin: 0 auto; padding: 40px 36px 30px; border-radius: var(--r-lg); border: 1px solid var(--border); background: var(--surface-2); }
+  .askmock h3 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; font-size: 30px; letter-spacing: -.01em; margin: 0 0 22px; }
+  .askmock .box { border-radius: 16px; border: 1px solid rgba(129, 140, 248, .45); box-shadow: 0 0 22px rgba(129, 140, 248, .16); background: rgba(255, 255, 255, .03); padding: 14px 14px 12px 16px; }
+  .askmock .ph { color: var(--text-3); font-size: 15px; min-height: 38px; }
+  .askmock .row { display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: var(--text-2); }
+  .askmock .row .sp { flex: 1; }
+  .askmock .send { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; color: #fff; }
+  .askmock .rec { margin-top: 26px; font-size: 13.5px; color: var(--text-3); margin-bottom: 6px; }
+  .askmock ul { list-style: none; margin: 0; padding: 0; }
+  .askmock li { display: flex; align-items: center; gap: 12px; padding: 6px 4px; font-size: 15px; }
+  .askmock li i { width: 28px; height: 28px; border-radius: 7px; background: rgba(255, 255, 255, .06); display: grid; place-items: center; color: var(--text-3); font-style: normal; font-size: 13px; flex: none; }
+  .askmock li span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .askmock li small { color: var(--text-3); font-size: 13.5px; }
+  @media (max-width: 560px) { .askmock { padding: 26px 18px 20px; } .askmock h3 { font-size: 24px; } }
   .reqs { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 26px; }
   .brew { margin-top: 14px; font-size: 14px; color: var(--text-2); }
   .brew code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2px 7px; user-select: all; overflow-wrap: anywhere; }
@@ -608,7 +622,7 @@
       <h1>Comprenez ce que chacun veut dire, et quoi répondre.</h1>
       <p class="sub">Undertone écoute vos appels. Il explique les noms de code et les acronymes dès qu’ils apparaissent, vous apporte les faits quand on vous interroge, puis vous remet le récapitulatif, vos tâches et un brief pour l’appel suivant. Le tout à partir du Slack, du Notion et du Jira de votre équipe, transcrit sur votre Mac.</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Télécharger le .dmg <span class="ver">v1.13.2</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Télécharger le .dmg <span class="ver">v1.14.0</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Versions et tickets</a>
       </div>
       <p class="fine">Gratuit pendant la bêta · macOS 26 ou version ultérieure sur puce Apple</p>
@@ -924,7 +938,7 @@
         <div><dt>Espaces</dt><dd>Séparez équipes et clients. Les nouvelles réunions sont classées pour vous, Undertone propose un espace pour les autres, et chaque vue se filtre sur l’espace choisi.</dd></div>
         <div><dt>Coaching des réponses</dt><dd>Votre côté de l’appel est aussi transcrit : après un appel, vous voyez ce qui a porté et ce qu’il faut resserrer la prochaine fois.</dd></div>
         <div><dt>Artefacts</dt><dd>Rapports d’avancement, présentations et canevas interactifs, rédigés à partir de vos réunions et de vos sources, avec les manques marqués [TBD]. Export en Markdown ou HTML.</dd></div>
-        <div><dt>Demander</dt><dd>Discutez avec une réunion ou toutes à la fois, fichiers joints compris. Les réponses s’affichent au fil de l’eau, et ce que vous lui dites est retenu pour la prochaine fois.</dd></div>
+        <div><dt>Demander</dt><dd>Discutez avec une réunion ou toutes, fichiers joints. Les réponses s’affichent en direct, les anciennes conversations attendent dans Récents, et ce que vous lui dites est retenu pour la prochaine fois.</dd></div>
         <div><dt>Demander en plein appel</dt><dd>Un champ de discussion sous les repères en direct répond à partir de l’appel en cours, sans quitter la réunion.</dd></div>
         <div><dt>Personnes</dt><dd>Toutes les personnes de vos invitations, avec leur rôle et leurs sujets, vos réunions en commun et ce que vous leur devez.</dd></div>
         <div><dt>Rappels</dt><dd>« D’ici vendredi » devient une date. Un rappel arrive à 9:00 le jour ouvré précédent, et les tâches en retard passent en rouge.</dd></div>
@@ -1079,6 +1093,29 @@
           <p class="sample" style="padding:14px 0 0">Exemple. Il vérifie quand même s’il y a du nouveau depuis la fiche.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="block" id="ask">
+    <div class="wrap">
+      <div class="head">
+        <h2>Ask, comme vous demanderiez à un collègue</h2>
+        <p>Une grande zone pour toute question sur vos réunions. Choisissez une réunion ou toutes, ajoutez des fichiers et reprenez d’anciennes conversations depuis Récents.</p>
+      </div>
+      <div class="askmock" role="img" aria-label="Exemple d’écran d’accueil d’Ask : une salutation, la zone de question et une liste de conversations récentes">
+        <h3>Bonjour Alex, posez votre question</h3>
+        <div class="box">
+          <div class="ph">Qu’avons-nous décidé cette semaine ?</div>
+          <div class="row"><span>&#x1F4CE;&#xFE0E;</span><span>Toutes les réunions ⌄</span><span class="sp"></span><span class="send">↑</span></div>
+        </div>
+        <div class="rec">Récents</div>
+        <ul>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>De quoi parlait ma dernière réunion ?</span><small>6m</small></li>
+          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>E-mail de suivi de l’appel de planification du T4</span><small>1d</small></li>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Qui est responsable du tableau de bord Kestrel ?</span><small>2d</small></li>
+        </ul>
+      </div>
+      <p class="sample" style="padding:14px 0 0">Exemple. Les noms et les réunions sont fictifs.</p>
     </div>
   </section>
 
@@ -1307,7 +1344,7 @@
     <h2>Prêt pour votre prochain appel ?</h2>
     <p>Installez, connectez votre IA et vos sources en une minute environ, puis rejoignez un appel. Ensuite, votre récap, vos tâches et les nouveaux termes vous attendent dans Accueil.</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Télécharger le .dmg <span class="ver">v1.13.2</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Télécharger le .dmg <span class="ver">v1.14.0</span></a>
     </div>
     <p class="brew">Ou avec Homebrew : <code translate="no">brew install --cask sslugic/tap/undertone</code></p>
     <ul class="reqs">

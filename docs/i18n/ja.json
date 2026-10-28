@@ -425,5 +425,21 @@
  "undertone_demo_video_e14940": "Undertone デモ動画",
  "if_you_leave_count_me_12e86d": "「ユーザーとしてカウントする」をオンのままにした場合：Undertone の初回起動時に 1 回、その後は週に 1 回まで匿名の通知を送ります。内容はランダムな ID、アプリのバージョン、macOS のバージョン、言語だけです。セットアップまたは設定でオフにすると、送信済みの内容は削除されます。",
  "download_dmg_v1_13_1_3cdffa": ".dmgをダウンロード <span class=\"ver\">v1.13.1</span>",
- "download_dmg_v1_13_2_69f976": ".dmgをダウンロード <span class=\"ver\">v1.13.2</span>"
+ "download_dmg_v1_13_2_69f976": ".dmgをダウンロード <span class=\"ver\">v1.13.2</span>",
+ "ask_like_you_d_ask_b6df10": "Ask：同僚に聞くように",
+ "one_roomy_box_for_any_be6d7f": "ミーティングに関するどんな質問にも使える大きな入力欄。1つのミーティングかすべてを選び、ファイルを添えて、以前の会話は「最近」から再開できます。",
+ "hi_alex_ask_anything_3e00b8": "こんにちは、アレックスさん。何でも聞いてください",
+ "what_did_we_decide_this_e48809": "今週は何を決めましたか？",
+ "all_meetings_92e240": "すべてのミーティング ⌄",
+ "recents_843801": "最近",
+ "what_was_my_most_recent_ddbf2a": "直近のミーティングは何についてでしたか？",
+ "follow_up_email_for_the_b21a16": "第4四半期計画会議のフォローアップメール",
+ "who_owns_the_kestrel_dashboard_8aa794": "Kestrel ダッシュボードの担当は誰ですか？",
+ "sample_names_and_meetings_are_2833cc": "サンプルです。名前とミーティングは架空のものです。",
+ "sample_ask_start_screen_a_e06f7f": "Ask のスタート画面のサンプル：あいさつ、質問欄、最近のチャット一覧",
+ "chat_with_one_meeting_or_058b33": "1つのミーティングまたはすべてと、ファイルを添えてチャットできます。回答はすぐに流れ、以前のチャットは「最近」に残り、伝えたことは次回のために覚えておきます。",
+ "1d_11a275": "1d",
+ "2d_864018": "2d",
+ "6m_845b34": "6m",
+ "download_dmg_v1_14_0_dcdd7c": ".dmgをダウンロード <span class=\"ver\">v1.14.0</span>"
 }

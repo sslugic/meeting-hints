@@ -424,5 +424,21 @@
  "undertone_demo_video_e14940": "Undertone 데모 영상",
  "if_you_leave_count_me_12e86d": "\"사용자로 집계\"를 켜 두면: Undertone을 처음 열 때 한 번, 이후 일주일에 최대 한 번 익명 신호를 보냅니다. 무작위 ID, 앱 버전, macOS 버전, 언어만 포함됩니다. 설정 과정이나 설정에서 끄면 보낸 내용이 삭제됩니다.",
  "download_dmg_v1_13_1_3cdffa": ".dmg 다운로드 <span class=\"ver\">v1.13.1</span>",
- "download_dmg_v1_13_2_69f976": ".dmg 다운로드 <span class=\"ver\">v1.13.2</span>"
+ "download_dmg_v1_13_2_69f976": ".dmg 다운로드 <span class=\"ver\">v1.13.2</span>",
+ "ask_like_you_d_ask_b6df10": "Ask, 동료에게 묻듯이",
+ "one_roomy_box_for_any_be6d7f": "회의에 관한 어떤 질문이든 넉넉한 입력창 하나로. 회의 하나 또는 전체를 고르고, 파일을 첨부하고, 최근 항목에서 이전 대화를 이어가세요.",
+ "hi_alex_ask_anything_3e00b8": "알렉스님, 무엇이든 물어보세요",
+ "what_did_we_decide_this_e48809": "이번 주에 무엇을 결정했나요?",
+ "all_meetings_92e240": "모든 회의 ⌄",
+ "recents_843801": "최근 항목",
+ "what_was_my_most_recent_ddbf2a": "가장 최근 회의는 무엇에 관한 것이었나요?",
+ "follow_up_email_for_the_b21a16": "4분기 계획 통화 후속 이메일",
+ "who_owns_the_kestrel_dashboard_8aa794": "Kestrel 대시보드 담당자는 누구인가요?",
+ "sample_names_and_meetings_are_2833cc": "예시입니다. 이름과 회의는 가상입니다.",
+ "sample_ask_start_screen_a_e06f7f": "Ask 시작 화면 예시: 인사말, 질문 입력창, 최근 채팅 목록",
+ "chat_with_one_meeting_or_058b33": "회의 하나 또는 전체와 파일을 첨부해 대화하세요. 답변은 바로 표시되고, 이전 채팅은 최근 항목에 남으며, 알려 준 내용은 다음을 위해 기억합니다.",
+ "1d_11a275": "1d",
+ "2d_864018": "2d",
+ "6m_845b34": "6m",
+ "download_dmg_v1_14_0_dcdd7c": ".dmg 다운로드 <span class=\"ver\">v1.14.0</span>"
 }
