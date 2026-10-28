@@ -327,7 +327,6 @@
  "get_amem_2ca17d": "amem’i al",
  "or_let_undertone_s_setup_497eb4": "Ya da Undertone kurulumunun yüklemesine izin verin. Node.js gerektirir. Mac’inizde kalır.",
  "private_by_design_3aaa9f": "Tasarımı gereği gizli",
- "no_undertone_server_no_account_590006": "Undertone sunucusu yok, hesap yok, gömülü anahtar yok. Görüşmeleriniz, anahtarlarınız ve toplantılarınız sizde kalır.",
  "audio_acdac2": "Ses",
  "the_call_and_your_mic_34f257": "Görüşme ve mikrofonunuz, Apple’ın SpeechAnalyzer’ı ile Mac’inizde metne dökülür. Asla yüklenmez.",
  "recaps_transcripts_tasks_the_glossary_303cd3": "Özetler, transkriptler, görevler, sözlük ve çıktılarınız yalnızca Mac’inizde saklanır.",
@@ -339,7 +338,6 @@
  "read_only_undertone_only_searches_df974e": "Salt okunur. Undertone yalnızca arar ve okur; gönderen, paylaşan, oluşturan veya düzenleyen araçlara asla izin verilmez.",
  "don_t_take_our_word_bef89d": "Sözümüze güvenmek zorunda değilsiniz",
  "undertone_is_closed_source_what_36ee17": "Undertone kapalı kaynaklıdır. GitHub’da herkese açık olanlar bu site, güvenlik notlarımız ve Undertone’un Mac’inizde tuttuğu her dosyanın biçimidir; böylece tam olarak neyi sakladığını görebilirsiniz.",
- "to_check_what_leaves_your_69f841": "Mac’inizden neyin çıktığını kontrol etmek için bir görüşme sırasında Undertone’un trafiğini Little Snitch, LuLu veya Proxyman ile izleyin. Yalnızca seçtiğiniz yapay zekâya ve bağladığınız araçlara giden bağlantıları görürsünüz. Sesiniz Mac’inizden asla çıkmaz; yapay zekânıza yalnızca metin gider.",
  "security_and_privacy_notes_what_1d0d35": "<a href=\"https://github.com/sslugic/undertone/blob/main/SECURITY.md\">Güvenlik ve gizlilik notları</a> · <a href=\"https://github.com/sslugic/undertone/blob/main/DATA.md\">Undertone neleri saklar</a>",
  "free_while_it_s_in_db7cc7": "Beta sürecinde ücretsiz",
  "available_now_bb374a": "Şimdi kullanılabilir",
@@ -409,5 +407,9 @@
  "undertone_know_what_everyone_means_a30b47": "Undertone — Herkesin ne demek istediğini ve ne söyleyeceğini bilin",
  "know_what_everyone_means_and_4974b8": "Herkesin ne demek istediğini ve ne söyleyeceğini bilin: Undertone görüşmelerinizdeki jargonu açıklar, size soru geldiğinde bilgileri getirir; özeti, görevlerinizi ve bir sonraki hazırlık notunu yazar.",
  "undertone_listens_along_to_your_e99562": "Undertone görüşmelerinizi dinler. Kod adlarını ve kısaltmaları geçtikleri anda açıklar, size bir şey sorulduğunda gereken bilgileri getirir; görüşmeden sonra da özeti, görevlerinizi ve bir sonraki görüşme için bir hazırlık notunu verir. Hepsi ekibinizin kendi Slack, Notion ve Jira’sından, Mac’inizde metne dökülerek.",
- "undertone_listens_along_to_your_f2a68e": "Undertone görüşmelerinizi dinler. Kod adlarını ve kısaltmaları geçtikleri anda açıklar, size bir şey sorulduğunda gereken bilgileri getirir; görüşmeden sonra da özeti, görevlerinizi ve bir sonraki görüşme için bir hazırlık notunu verir. Hepsi ekibinizin kendi Slack, Notion ve Jira’sından, Mac’inizde metne dökülerek."
+ "undertone_listens_along_to_your_f2a68e": "Undertone görüşmelerinizi dinler. Kod adlarını ve kısaltmaları geçtikleri anda açıklar, size bir şey sorulduğunda gereken bilgileri getirir; görüşmeden sonra da özeti, görevlerinizi ve bir sonraki görüşme için bir hazırlık notunu verir. Hepsi ekibinizin kendi Slack, Notion ve Jira’sından, Mac’inizde metne dökülerek.",
+ "no_account_and_no_bundled_37a26a": "Hesap yok, gömülü anahtar yok. Görüşmeleriniz, anahtarlarınız ve toplantılarınız sizde kalır; Undertone’un kendisine ulaşan tek şey kapatabileceğiniz anonim bir sayımdır.",
+ "usage_count_1b27e3": "Kullanım sayımı",
+ "if_you_leave_count_me_5c9aa8": "“Beni kullanıcı olarak say” açık kalırsa: Undertone ilk açıldığında bir ve haftada en fazla bir anonim sinyal; rastgele bir kimlik, uygulama sürümü, macOS sürümü ve dil ile. Kurulumda veya Ayarlar’da kapatabilirsiniz.",
+ "to_check_what_leaves_your_51b290": "Mac’inizden neyin çıktığını kontrol etmek için bir görüşme sırasında Undertone’un trafiğini Little Snitch, LuLu veya Proxyman ile izleyin. Yalnızca seçtiğiniz yapay zekâya, bağladığınız araçlara ve açık bıraktıysanız haftalık anonim sayıma giden bağlantıları görürsünüz. Sesiniz Mac’inizden asla çıkmaz; yapay zekânıza yalnızca metin gider."
 }

@@ -1235,19 +1235,20 @@
     <div class="wrap private">
       <div class="head">
         <h2>隐私为本</h2>
-        <p>没有 Undertone 服务器，无需账号，也不内置密钥。你的通话、密钥和会议都由你自己掌握。</p>
+        <p>无需账户，也没有内置密钥。你的通话、密钥和会议都留在你手里；Undertone 本身收到的只有一个可以关闭的匿名计数。</p>
       </div>
       <dl class="facts">
         <dt>音频</dt><dd>通话和你的麦克风音频在你的 Mac 上通过 Apple 的 SpeechAnalyzer 转写。绝不上传。</dd>
         <dt>会议</dt><dd>回顾、转写、任务、术语表和你的成果只存储在你的 Mac 上。</dd>
         <dt>日历</dt><dd>仅读取以显示接下来的安排。Undertone 从不创建或更改日程。</dd>
         <dt>AI</dt><dd>你自己的 OpenAI、Gemini 或 Anthropic 密钥，本地的 Ollama 或 LM Studio 模型，或你的 Cursor 或 Claude Code 登录。密钥保存在你的钥匙串中。</dd>
-        <dt>你的工具</dt><dd>只读。Undertone 只搜索和读取；发送、发布、创建或编辑类的工具一律不允许使用。</dd>
+        <dt>你的工具</dt><dd>只读。Undertone 只搜索和读取；发送、发布、创建或编辑类的工具一律不允许使用。</dd></div>
+        <div><dt>使用计数</dt><dd>如果你保持“把我计为用户”开启：首次打开 Undertone 时发送一次匿名信号，之后每周最多一次，只包含随机 ID、App 版本、macOS 版本和语言。可在设置向导或“设置”中关闭。</dd>
       </dl>
       <div class="verify">
         <h3>不必只听我们说</h3>
         <p>Undertone 是闭源软件。GitHub 上公开的是这个网站、我们的安全说明，以及 Undertone 在你 Mac 上保存的每种文件的格式，让你清楚知道它存了什么。</p>
-        <p>想检查哪些数据离开了你的 Mac，可以在通话期间用 Little Snitch、LuLu 或 Proxyman 监控 Undertone 的流量。你只会看到它连接你选择的 AI 和你连接的工具。你的音频从不离开你的 Mac；发给 AI 的只有文本。</p>
+        <p>想检查哪些数据离开了你的 Mac，可以在通话期间用 Little Snitch、LuLu 或 Proxyman 监控 Undertone 的流量。你只会看到连向你选择的 AI、你连接的工具，以及（如果保持开启）每周匿名计数的连接。你的音频从不离开你的 Mac；发给 AI 的只有文本。</p>
         <p><a href="https://github.com/sslugic/undertone/blob/main/SECURITY.md">安全与隐私说明</a> · <a href="https://github.com/sslugic/undertone/blob/main/DATA.md">Undertone 存储哪些内容</a></p>
       </div>
     </div>

@@ -327,7 +327,6 @@
  "get_amem_2ca17d": "Obtenir amem",
  "or_let_undertone_s_setup_497eb4": "Ou laissez la configuration d’Undertone l’installer. Nécessite Node.js. Reste sur votre Mac.",
  "private_by_design_3aaa9f": "Confidentiel par conception",
- "no_undertone_server_no_account_590006": "Pas de serveur Undertone, pas de compte, pas de clé fournie. Vos appels, vos clés et vos réunions restent chez vous.",
  "audio_acdac2": "Audio",
  "the_call_and_your_mic_34f257": "L’appel et votre micro sont transcrits sur votre Mac avec SpeechAnalyzer d’Apple. Jamais envoyés.",
  "recaps_transcripts_tasks_the_glossary_303cd3": "Récaps, transcriptions, tâches, glossaire et artefacts sont stockés uniquement sur votre Mac.",
@@ -339,7 +338,6 @@
  "read_only_undertone_only_searches_df974e": "Lecture seule. Undertone se contente de chercher et de lire ; les outils qui envoient, publient, créent ou modifient ne sont jamais autorisés.",
  "don_t_take_our_word_bef89d": "Ne nous croyez pas sur parole",
  "undertone_is_closed_source_what_36ee17": "Undertone est propriétaire. Ce qui est public sur GitHub, c’est ce site, nos notes de sécurité et le format de chaque fichier qu’Undertone conserve sur votre Mac, pour que vous voyiez exactement ce qu’il stocke.",
- "to_check_what_leaves_your_69f841": "Pour vérifier ce qui sort de votre Mac, observez le trafic d’Undertone avec Little Snitch, LuLu ou Proxyman pendant un appel. Vous ne verrez que des connexions vers l’IA choisie et les outils connectés. Votre audio ne quitte jamais votre Mac ; seul du texte part vers votre IA.",
  "security_and_privacy_notes_what_1d0d35": "<a href=\"https://github.com/sslugic/undertone/blob/main/SECURITY.md\">Notes de sécurité et de confidentialité</a> · <a href=\"https://github.com/sslugic/undertone/blob/main/DATA.md\">Ce qu’Undertone stocke</a>",
  "free_while_it_s_in_db7cc7": "Gratuit pendant la bêta",
  "available_now_bb374a": "Disponible",
@@ -409,5 +407,9 @@
  "undertone_know_what_everyone_means_a30b47": "Undertone — Comprenez ce que chacun veut dire, et quoi répondre",
  "know_what_everyone_means_and_4974b8": "Comprenez ce que chacun veut dire, et quoi répondre : Undertone explique le jargon de vos appels, vous apporte les faits quand on vous interroge et rédige le récapitulatif, vos tâches et votre prochain brief.",
  "undertone_listens_along_to_your_e99562": "Undertone écoute vos appels. Il explique les noms de code et les acronymes dès qu’ils apparaissent, vous apporte les faits quand on vous interroge, puis vous remet le récapitulatif, vos tâches et un brief pour l’appel suivant. Le tout à partir du Slack, du Notion et du Jira de votre équipe, transcrit sur votre Mac.",
- "undertone_listens_along_to_your_f2a68e": "Undertone écoute vos appels. Il explique les noms de code et les acronymes dès qu’ils apparaissent, vous apporte les faits quand on vous interroge, puis vous remet le récapitulatif, vos tâches et un brief pour l’appel suivant. Le tout à partir du Slack, du Notion et du Jira de votre équipe, transcrit sur votre Mac."
+ "undertone_listens_along_to_your_f2a68e": "Undertone écoute vos appels. Il explique les noms de code et les acronymes dès qu’ils apparaissent, vous apporte les faits quand on vous interroge, puis vous remet le récapitulatif, vos tâches et un brief pour l’appel suivant. Le tout à partir du Slack, du Notion et du Jira de votre équipe, transcrit sur votre Mac.",
+ "no_account_and_no_bundled_37a26a": "Pas de compte ni de clé fournie. Vos appels, clés et réunions restent chez vous ; la seule chose que reçoit Undertone est un décompte anonyme que vous pouvez désactiver.",
+ "usage_count_1b27e3": "Décompte d’utilisation",
+ "if_you_leave_count_me_5c9aa8": "Si vous laissez « Me compter comme utilisateur » activé : un signal anonyme à la première ouverture d’Undertone et au plus un par semaine, avec un identifiant aléatoire, la version de l’app, la version de macOS et la langue. Désactivez-le dans la configuration ou les Réglages.",
+ "to_check_what_leaves_your_51b290": "Pour vérifier ce qui sort de votre Mac, observez le trafic d’Undertone avec Little Snitch, LuLu ou Proxyman pendant un appel. Vous ne verrez que des connexions vers l’IA choisie, les outils connectés et, si vous l’avez laissé activé, le décompte anonyme hebdomadaire. Votre audio ne quitte jamais votre Mac ; seul du texte part vers votre IA."
 }

@@ -327,7 +327,6 @@
  "get_amem_2ca17d": "Obtener amem",
  "or_let_undertone_s_setup_497eb4": "O deja que la configuración de Undertone lo instale. Requiere Node.js. Se queda en tu Mac.",
  "private_by_design_3aaa9f": "Privado por diseño",
- "no_undertone_server_no_account_590006": "Sin servidor de Undertone, sin cuenta, sin clave incluida. Tus llamadas, claves y reuniones se quedan contigo.",
  "audio_acdac2": "Audio",
  "the_call_and_your_mic_34f257": "La llamada y tu micrófono se transcriben en tu Mac con SpeechAnalyzer de Apple. Nunca se suben.",
  "recaps_transcripts_tasks_the_glossary_303cd3": "Los resúmenes, transcripciones, tareas, el glosario y tus artefactos se guardan solo en tu Mac.",
@@ -339,7 +338,6 @@
  "read_only_undertone_only_searches_df974e": "Solo lectura. Undertone solo busca y lee; las herramientas que envían, publican, crean o editan nunca se permiten.",
  "don_t_take_our_word_bef89d": "No te fíes solo de nuestra palabra",
  "undertone_is_closed_source_what_36ee17": "Undertone es de código cerrado. Lo que es público en GitHub es este sitio, nuestras notas de seguridad y el formato de cada archivo que Undertone guarda en tu Mac, para que veas exactamente qué almacena.",
- "to_check_what_leaves_your_69f841": "Para comprobar qué sale de tu Mac, observa el tráfico de Undertone con Little Snitch, LuLu o Proxyman durante una llamada. Solo verás conexiones con la IA que elegiste y las herramientas que conectaste. Tu audio nunca sale de tu Mac; a tu IA solo le llega texto.",
  "security_and_privacy_notes_what_1d0d35": "<a href=\"https://github.com/sslugic/undertone/blob/main/SECURITY.md\">Notas de seguridad y privacidad</a> · <a href=\"https://github.com/sslugic/undertone/blob/main/DATA.md\">Qué almacena Undertone</a>",
  "free_while_it_s_in_db7cc7": "Gratis mientras esté en beta",
  "available_now_bb374a": "Disponible ahora",
@@ -409,5 +407,9 @@
  "undertone_know_what_everyone_means_a30b47": "Undertone — Entiende lo que todos quieren decir, y qué responder",
  "know_what_everyone_means_and_4974b8": "Entiende lo que todos quieren decir, y qué responder: Undertone explica la jerga de tus llamadas, te trae los datos cuando te preguntan y escribe el resumen, tus tareas y tu próxima preparación.",
  "undertone_listens_along_to_your_e99562": "Undertone escucha tus llamadas. Explica nombres en clave y siglas en cuanto aparecen, te trae los datos cuando te preguntan y, al terminar, te deja el resumen, tus tareas y una preparación para la siguiente llamada. Todo desde el Slack, Notion y Jira de tu equipo, transcrito en tu Mac.",
- "undertone_listens_along_to_your_f2a68e": "Undertone escucha tus llamadas. Explica nombres en clave y siglas en cuanto aparecen, te trae los datos cuando te preguntan y, al terminar, te deja el resumen, tus tareas y una preparación para la siguiente llamada. Todo desde el Slack, Notion y Jira de tu equipo, transcrito en tu Mac."
+ "undertone_listens_along_to_your_f2a68e": "Undertone escucha tus llamadas. Explica nombres en clave y siglas en cuanto aparecen, te trae los datos cuando te preguntan y, al terminar, te deja el resumen, tus tareas y una preparación para la siguiente llamada. Todo desde el Slack, Notion y Jira de tu equipo, transcrito en tu Mac.",
+ "no_account_and_no_bundled_37a26a": "Sin cuenta ni clave incluida. Tus llamadas, claves y reuniones se quedan contigo; lo único que recibe Undertone es un recuento anónimo que puedes desactivar.",
+ "usage_count_1b27e3": "Recuento de uso",
+ "if_you_leave_count_me_5c9aa8": "Si dejas activado «Cuéntame como usuario»: un aviso anónimo al abrir Undertone por primera vez y como mucho uno a la semana, con un ID aleatorio, la versión de la app, la versión de macOS y el idioma. Desactívalo en la configuración o en Ajustes.",
+ "to_check_what_leaves_your_51b290": "Para comprobar qué sale de tu Mac, observa el tráfico de Undertone con Little Snitch, LuLu o Proxyman durante una llamada. Solo verás conexiones a la IA que elegiste, a las herramientas que conectaste y, si lo dejaste activado, el recuento anónimo semanal. Tu audio nunca sale de tu Mac; a tu IA solo le llega texto."
 }

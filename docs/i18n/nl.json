@@ -327,7 +327,6 @@
  "get_amem_2ca17d": "amem downloaden",
  "or_let_undertone_s_setup_497eb4": "Of laat de installatie van Undertone het doen. Vereist Node.js. Blijft op je Mac.",
  "private_by_design_3aaa9f": "Privé vanaf de basis",
- "no_undertone_server_no_account_590006": "Geen Undertone-server, geen account, geen meegeleverde sleutel. Je calls, sleutels en meetings blijven bij jou.",
  "audio_acdac2": "Audio",
  "the_call_and_your_mic_34f257": "De call en je microfoon worden op je Mac getranscribeerd met SpeechAnalyzer van Apple. Nooit geüpload.",
  "recaps_transcripts_tasks_the_glossary_303cd3": "Samenvattingen, transcripten, taken, de woordenlijst en je artefacten worden alleen op je Mac opgeslagen.",
@@ -339,7 +338,6 @@
  "read_only_undertone_only_searches_df974e": "Alleen-lezen. Undertone zoekt en leest alleen; tools die versturen, posten, aanmaken of bewerken, worden nooit toegestaan.",
  "don_t_take_our_word_bef89d": "Geloof ons niet op ons woord",
  "undertone_is_closed_source_what_36ee17": "Undertone is closed source. Openbaar op GitHub staan deze site, onze beveiligingsnotities en het formaat van elk bestand dat Undertone op je Mac bewaart, zodat je precies ziet wat het opslaat.",
- "to_check_what_leaves_your_69f841": "Wil je controleren wat je Mac verlaat? Bekijk het verkeer van Undertone tijdens een call met Little Snitch, LuLu of Proxyman. Je ziet alleen verbindingen met de AI die je koos en de tools die je koppelde. Je audio verlaat je Mac nooit; alleen tekst gaat naar je AI.",
  "security_and_privacy_notes_what_1d0d35": "<a href=\"https://github.com/sslugic/undertone/blob/main/SECURITY.md\">Beveiliging en privacy</a> · <a href=\"https://github.com/sslugic/undertone/blob/main/DATA.md\">Wat Undertone opslaat</a>",
  "free_while_it_s_in_db7cc7": "Gratis zolang het in bèta is",
  "available_now_bb374a": "Nu beschikbaar",
@@ -409,5 +407,9 @@
  "undertone_know_what_everyone_means_a30b47": "Undertone — Begrijp wat iedereen bedoelt, en wat je moet zeggen",
  "know_what_everyone_means_and_4974b8": "Begrijp wat iedereen bedoelt, en wat je moet zeggen: Undertone legt het jargon in je gesprekken uit, haalt de feiten erbij als jou iets gevraagd wordt en schrijft de samenvatting, je taken en je volgende briefing.",
  "undertone_listens_along_to_your_e99562": "Undertone luistert mee met je gesprekken. Het legt codenamen en afkortingen uit zodra ze vallen, haalt de feiten erbij als jou iets gevraagd wordt en geeft je daarna de samenvatting, je taken en een briefing voor het volgende gesprek. Allemaal uit de Slack, Notion en Jira van je eigen team, omgezet in tekst op je Mac.",
- "undertone_listens_along_to_your_f2a68e": "Undertone luistert mee met je gesprekken. Het legt codenamen en afkortingen uit zodra ze vallen, haalt de feiten erbij als jou iets gevraagd wordt en geeft je daarna de samenvatting, je taken en een briefing voor het volgende gesprek. Allemaal uit de Slack, Notion en Jira van je eigen team, omgezet in tekst op je Mac."
+ "undertone_listens_along_to_your_f2a68e": "Undertone luistert mee met je gesprekken. Het legt codenamen en afkortingen uit zodra ze vallen, haalt de feiten erbij als jou iets gevraagd wordt en geeft je daarna de samenvatting, je taken en een briefing voor het volgende gesprek. Allemaal uit de Slack, Notion en Jira van je eigen team, omgezet in tekst op je Mac.",
+ "no_account_and_no_bundled_37a26a": "Geen account en geen meegeleverde sleutel. Je gesprekken, sleutels en vergaderingen blijven bij jou; het enige dat Undertone zelf ontvangt is een anonieme telling die je kunt uitzetten.",
+ "usage_count_1b27e3": "Gebruikstelling",
+ "if_you_leave_count_me_5c9aa8": "Als je ‘Tel mij als gebruiker’ aan laat: één anonieme ping bij de eerste keer openen van Undertone en hooguit één per week, met een willekeurige ID, de appversie, de macOS-versie en de taal. Zet het uit in de installatie of in Instellingen.",
+ "to_check_what_leaves_your_51b290": "Wil je controleren wat je Mac verlaat? Bekijk het verkeer van Undertone tijdens een call met Little Snitch, LuLu of Proxyman. Je ziet alleen verbindingen met de AI die je koos, de tools die je koppelde en, als je het aan liet, de wekelijkse anonieme telling. Je audio verlaat je Mac nooit; alleen tekst gaat naar je AI."
 }

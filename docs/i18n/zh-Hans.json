@@ -327,7 +327,6 @@
  "get_amem_2ca17d": "获取 amem",
  "or_let_undertone_s_setup_497eb4": "或者让 Undertone 的安装向导来安装。需要 Node.js。数据留在你的 Mac 上。",
  "private_by_design_3aaa9f": "隐私为本",
- "no_undertone_server_no_account_590006": "没有 Undertone 服务器，无需账号，也不内置密钥。你的通话、密钥和会议都由你自己掌握。",
  "audio_acdac2": "音频",
  "the_call_and_your_mic_34f257": "通话和你的麦克风音频在你的 Mac 上通过 Apple 的 SpeechAnalyzer 转写。绝不上传。",
  "recaps_transcripts_tasks_the_glossary_303cd3": "回顾、转写、任务、术语表和你的成果只存储在你的 Mac 上。",
@@ -339,7 +338,6 @@
  "read_only_undertone_only_searches_df974e": "只读。Undertone 只搜索和读取；发送、发布、创建或编辑类的工具一律不允许使用。",
  "don_t_take_our_word_bef89d": "不必只听我们说",
  "undertone_is_closed_source_what_36ee17": "Undertone 是闭源软件。GitHub 上公开的是这个网站、我们的安全说明，以及 Undertone 在你 Mac 上保存的每种文件的格式，让你清楚知道它存了什么。",
- "to_check_what_leaves_your_69f841": "想检查哪些数据离开了你的 Mac，可以在通话期间用 Little Snitch、LuLu 或 Proxyman 监控 Undertone 的流量。你只会看到它连接你选择的 AI 和你连接的工具。你的音频从不离开你的 Mac；发给 AI 的只有文本。",
  "security_and_privacy_notes_what_1d0d35": "<a href=\"https://github.com/sslugic/undertone/blob/main/SECURITY.md\">安全与隐私说明</a> · <a href=\"https://github.com/sslugic/undertone/blob/main/DATA.md\">Undertone 存储哪些内容</a>",
  "free_while_it_s_in_db7cc7": "测试期间免费",
  "available_now_bb374a": "现已推出",
@@ -409,5 +407,9 @@
  "undertone_know_what_everyone_means_a30b47": "Undertone — 听懂每个人的意思，也知道接下来该说什么",
  "know_what_everyone_means_and_4974b8": "听懂每个人的意思，也知道接下来该说什么：Undertone 解释通话中的行话，有人问你时给出事实，并写好总结、你的任务和下一份简报。",
  "undertone_listens_along_to_your_e99562": "Undertone 会陪你一起听通话。代号和缩写一出现就为你解释，有人问你问题时把相关事实摆在眼前，通话结束后再交给你总结、你的任务和下一场通话的简报。一切都来自你团队自己的 Slack、Notion 和 Jira，在你的 Mac 上转写。",
- "undertone_listens_along_to_your_f2a68e": "Undertone 会陪你一起听通话。代号和缩写一出现就为你解释，有人问你问题时把相关事实摆在眼前，通话结束后再交给你总结、你的任务和下一场通话的简报。一切都来自你团队自己的 Slack、Notion 和 Jira，在你的 Mac 上转写。"
+ "undertone_listens_along_to_your_f2a68e": "Undertone 会陪你一起听通话。代号和缩写一出现就为你解释，有人问你问题时把相关事实摆在眼前，通话结束后再交给你总结、你的任务和下一场通话的简报。一切都来自你团队自己的 Slack、Notion 和 Jira，在你的 Mac 上转写。",
+ "no_account_and_no_bundled_37a26a": "无需账户，也没有内置密钥。你的通话、密钥和会议都留在你手里；Undertone 本身收到的只有一个可以关闭的匿名计数。",
+ "usage_count_1b27e3": "使用计数",
+ "if_you_leave_count_me_5c9aa8": "如果你保持“把我计为用户”开启：首次打开 Undertone 时发送一次匿名信号，之后每周最多一次，只包含随机 ID、App 版本、macOS 版本和语言。可在设置向导或“设置”中关闭。",
+ "to_check_what_leaves_your_51b290": "想检查哪些数据离开了你的 Mac，可以在通话期间用 Little Snitch、LuLu 或 Proxyman 监控 Undertone 的流量。你只会看到连向你选择的 AI、你连接的工具，以及（如果保持开启）每周匿名计数的连接。你的音频从不离开你的 Mac；发给 AI 的只有文本。"
 }

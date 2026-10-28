@@ -327,7 +327,6 @@
  "get_amem_2ca17d": "amem 받기",
  "or_let_undertone_s_setup_497eb4": "또는 Undertone 설정 과정에서 설치하세요. Node.js가 필요해요. Mac 밖으로 나가지 않아요.",
  "private_by_design_3aaa9f": "설계부터 프라이빗하게",
- "no_undertone_server_no_account_590006": "Undertone 서버도, 계정도, 내장 키도 없어요. 통화, 키, 미팅은 내 곁에 그대로 남아요.",
  "audio_acdac2": "오디오",
  "the_call_and_your_mic_34f257": "통화와 마이크 음성은 Apple의 SpeechAnalyzer로 Mac에서 받아 적어요. 업로드되지 않아요.",
  "recaps_transcripts_tasks_the_glossary_303cd3": "요약, 녹취록, 할 일, 용어집, 아티팩트는 Mac에만 저장돼요.",
@@ -339,7 +338,6 @@
  "read_only_undertone_only_searches_df974e": "읽기 전용. Undertone은 검색하고 읽기만 해요. 보내기, 게시, 생성, 편집을 하는 도구는 절대 허용되지 않아요.",
  "don_t_take_our_word_bef89d": "우리 말만 믿지 마세요",
  "undertone_is_closed_source_what_36ee17": "Undertone은 비공개 소스예요. GitHub에 공개된 건 이 사이트, 보안 관련 문서, 그리고 Undertone이 Mac에 저장하는 모든 파일의 형식이에요. 무엇을 저장하는지 정확히 확인할 수 있어요.",
- "to_check_what_leaves_your_69f841": "Mac에서 무엇이 나가는지 확인하려면 통화 중 Little Snitch, LuLu, Proxyman으로 Undertone의 트래픽을 지켜보세요. 선택한 AI와 연결한 도구로 가는 연결만 보일 거예요. 오디오는 Mac 밖으로 나가지 않고, AI에는 텍스트만 전송돼요.",
  "security_and_privacy_notes_what_1d0d35": "<a href=\"https://github.com/sslugic/undertone/blob/main/SECURITY.md\">보안 및 개인정보 보호 문서</a> · <a href=\"https://github.com/sslugic/undertone/blob/main/DATA.md\">Undertone이 저장하는 것</a>",
  "free_while_it_s_in_db7cc7": "베타 기간에는 무료",
  "available_now_bb374a": "지금 이용 가능",
@@ -409,5 +407,9 @@
  "undertone_know_what_everyone_means_a30b47": "Undertone — 모두가 무슨 뜻으로 말하는지, 다음에 무엇을 말할지 알 수 있습니다",
  "know_what_everyone_means_and_4974b8": "모두가 무슨 뜻으로 말하는지, 다음에 무엇을 말할지: Undertone이 통화 속 용어를 설명하고, 질문을 받으면 사실을 보여 주며, 요약과 할 일, 다음 브리핑을 써 줍니다.",
  "undertone_listens_along_to_your_e99562": "Undertone은 통화를 함께 듣습니다. 코드명과 약어가 나오는 즉시 설명하고, 질문을 받으면 필요한 사실을 보여 주며, 통화가 끝나면 요약, 할 일, 다음 통화를 위한 브리핑을 건넵니다. 모두 팀의 Slack, Notion, Jira에서 가져오고, 받아쓰기는 Mac에서 이뤄집니다.",
- "undertone_listens_along_to_your_f2a68e": "Undertone은 통화를 함께 듣습니다. 코드명과 약어가 나오는 즉시 설명하고, 질문을 받으면 필요한 사실을 보여 주며, 통화가 끝나면 요약, 할 일, 다음 통화를 위한 브리핑을 건넵니다. 모두 팀의 Slack, Notion, Jira에서 가져오고, 받아쓰기는 Mac에서 이뤄집니다."
+ "undertone_listens_along_to_your_f2a68e": "Undertone은 통화를 함께 듣습니다. 코드명과 약어가 나오는 즉시 설명하고, 질문을 받으면 필요한 사실을 보여 주며, 통화가 끝나면 요약, 할 일, 다음 통화를 위한 브리핑을 건넵니다. 모두 팀의 Slack, Notion, Jira에서 가져오고, 받아쓰기는 Mac에서 이뤄집니다.",
+ "no_account_and_no_bundled_37a26a": "계정도, 기본 제공 키도 없습니다. 통화, 키, 회의는 사용자에게 남습니다. Undertone 자체가 받는 것은 끌 수 있는 익명 사용 집계뿐입니다.",
+ "usage_count_1b27e3": "사용 집계",
+ "if_you_leave_count_me_5c9aa8": "\"사용자로 집계\"를 켜 두면: Undertone을 처음 열 때 한 번, 이후 일주일에 최대 한 번 익명 신호를 보냅니다. 무작위 ID, 앱 버전, macOS 버전, 언어만 포함됩니다. 설정 과정이나 설정에서 끌 수 있습니다.",
+ "to_check_what_leaves_your_51b290": "Mac에서 무엇이 나가는지 확인하려면 통화 중 Little Snitch, LuLu, Proxyman으로 Undertone의 트래픽을 지켜보세요. 선택한 AI, 연결한 도구, 그리고 켜 둔 경우 주간 익명 집계로 가는 연결만 보입니다. 오디오는 Mac 밖으로 나가지 않고, AI에는 텍스트만 전송돼요."
 }

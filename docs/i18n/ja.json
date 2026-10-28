@@ -327,7 +327,6 @@
  "get_amem_2ca17d": "amemを入手",
  "or_let_undertone_s_setup_497eb4": "またはUndertoneのセットアップでインストール。Node.jsが必要です。データはMacの中にとどまります。",
  "private_by_design_3aaa9f": "設計からプライベート",
- "no_undertone_server_no_account_590006": "Undertoneのサーバーなし、アカウントなし、同梱のキーもなし。通話、キー、ミーティングはあなたの手元に。",
  "audio_acdac2": "音声",
  "the_call_and_your_mic_34f257": "通話とマイクの音声は、AppleのSpeechAnalyzerでMac上で文字起こしされます。アップロードはされません。",
  "recaps_transcripts_tasks_the_glossary_303cd3": "まとめ、文字起こし、タスク、用語集、アーティファクトは、Macの中にだけ保存されます。",
@@ -339,7 +338,6 @@
  "read_only_undertone_only_searches_df974e": "読み取り専用。Undertoneは検索と読み取りだけを行い、送信・投稿・作成・編集を行うツールは一切許可されません。",
  "don_t_take_our_word_bef89d": "私たちの言葉をうのみにせず",
  "undertone_is_closed_source_what_36ee17": "Undertoneはクローズドソースです。GitHubで公開しているのは、このサイト、セキュリティに関する説明、そしてUndertoneがMacに保存するすべてのファイルの形式。何が保存されるのかを正確に確認できます。",
- "to_check_what_leaves_your_69f841": "Macから何が送信されているかは、通話中にLittle Snitch、LuLu、ProxymanでUndertoneの通信を監視すれば確認できます。表示されるのは、選んだAIと接続したツールへの通信だけ。音声がMacから出ることはなく、AIに送られるのはテキストだけです。",
  "security_and_privacy_notes_what_1d0d35": "<a href=\"https://github.com/sslugic/undertone/blob/main/SECURITY.md\">セキュリティとプライバシーに関する説明</a> · <a href=\"https://github.com/sslugic/undertone/blob/main/DATA.md\">Undertoneが保存するもの</a>",
  "free_while_it_s_in_db7cc7": "ベータ期間中は無料",
  "available_now_bb374a": "提供中",
@@ -409,5 +407,9 @@
  "undertone_know_what_everyone_means_a30b47": "Undertone — みんなが何を言っているのか、次に何を言えばいいのかがわかる",
  "know_what_everyone_means_and_4974b8": "みんなが何を言っているのか、次に何を言えばいいのかがわかる。Undertone は通話の社内用語を説明し、質問されたら事実を出し、まとめ・タスク・次のブリーフィングを書きます。",
  "undertone_listens_along_to_your_e99562": "Undertone は通話を一緒に聞きます。コードネームや略語が出た瞬間に説明し、質問されたときには必要な事実を出し、通話のあとにはまとめ、あなたのタスク、次の通話のブリーフィングを用意します。すべてチームの Slack、Notion、Jira から。文字起こしは Mac の中で行います。",
- "undertone_listens_along_to_your_f2a68e": "Undertone は通話を一緒に聞きます。コードネームや略語が出た瞬間に説明し、質問されたときには必要な事実を出し、通話のあとにはまとめ、あなたのタスク、次の通話のブリーフィングを用意します。すべてチームの Slack、Notion、Jira から。文字起こしは Mac の中で行います。"
+ "undertone_listens_along_to_your_f2a68e": "Undertone は通話を一緒に聞きます。コードネームや略語が出た瞬間に説明し、質問されたときには必要な事実を出し、通話のあとにはまとめ、あなたのタスク、次の通話のブリーフィングを用意します。すべてチームの Slack、Notion、Jira から。文字起こしは Mac の中で行います。",
+ "no_account_and_no_bundled_37a26a": "アカウントも、同梱の API キーもありません。通話、キー、会議はあなたの手元に残ります。Undertone 自体が受け取るのは、オフにできる匿名の利用カウントだけです。",
+ "usage_count_1b27e3": "利用カウント",
+ "if_you_leave_count_me_5c9aa8": "「ユーザーとしてカウントする」をオンのままにした場合：Undertone の初回起動時に 1 回、その後は週に 1 回まで匿名の通知を送ります。内容はランダムな ID、アプリのバージョン、macOS のバージョン、言語だけです。セットアップか設定でオフにできます。",
+ "to_check_what_leaves_your_51b290": "Macから何が送信されているかは、通話中にLittle Snitch、LuLu、ProxymanでUndertoneの通信を監視すれば確認できます。見えるのは、選んだ AI と接続したツール、そしてオンのままなら週 1 回の匿名カウントへの接続だけです。音声がMacから出ることはなく、AIに送られるのはテキストだけです。"
 }

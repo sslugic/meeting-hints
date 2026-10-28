@@ -327,7 +327,6 @@
  "get_amem_2ca17d": "Pobierz amem",
  "or_let_undertone_s_setup_497eb4": "Albo pozwól, by konfiguracja Undertone ją zainstalowała. Wymaga Node.js. Zostaje na twoim Macu.",
  "private_by_design_3aaa9f": "Prywatny z założenia",
- "no_undertone_server_no_account_590006": "Bez serwera Undertone, bez konta, bez dołączonego klucza. Twoje rozmowy, klucze i spotkania zostają u ciebie.",
  "audio_acdac2": "Dźwięk",
  "the_call_and_your_mic_34f257": "Rozmowa i twój mikrofon są transkrybowane na twoim Macu przez SpeechAnalyzer od Apple. Nigdy nie są wysyłane.",
  "recaps_transcripts_tasks_the_glossary_303cd3": "Podsumowania, transkrypcje, zadania, słowniczek i twoje artefakty są przechowywane tylko na twoim Macu.",
@@ -339,7 +338,6 @@
  "read_only_undertone_only_searches_df974e": "Tylko do odczytu. Undertone wyłącznie wyszukuje i czyta; narzędzia, które wysyłają, publikują, tworzą lub edytują, nigdy nie są dopuszczone.",
  "don_t_take_our_word_bef89d": "Nie musisz wierzyć nam na słowo",
  "undertone_is_closed_source_what_36ee17": "Undertone ma zamknięty kod. Publicznie na GitHubie jest ta strona, nasze notatki o bezpieczeństwie i format każdego pliku, który Undertone trzyma na twoim Macu, więc widzisz dokładnie, co przechowuje.",
- "to_check_what_leaves_your_69f841": "Aby sprawdzić, co opuszcza twojego Maca, obserwuj ruch Undertone w Little Snitch, LuLu lub Proxyman podczas rozmowy. Zobaczysz tylko połączenia z wybraną AI i połączonymi narzędziami. Dźwięk nigdy nie opuszcza twojego Maca; do AI trafia tylko tekst.",
  "security_and_privacy_notes_what_1d0d35": "<a href=\"https://github.com/sslugic/undertone/blob/main/SECURITY.md\">Notatki o bezpieczeństwie i prywatności</a> · <a href=\"https://github.com/sslugic/undertone/blob/main/DATA.md\">Co przechowuje Undertone</a>",
  "free_while_it_s_in_db7cc7": "Za darmo, dopóki trwa beta",
  "available_now_bb374a": "Dostępne teraz",
@@ -409,5 +407,9 @@
  "undertone_know_what_everyone_means_a30b47": "Undertone — Rozumiej, co wszyscy mają na myśli, i co odpowiedzieć",
  "know_what_everyone_means_and_4974b8": "Rozumiej, co wszyscy mają na myśli, i co odpowiedzieć: Undertone wyjaśnia żargon w Twoich rozmowach, podsuwa fakty, gdy ktoś Cię pyta, i pisze podsumowanie, Twoje zadania i kolejny briefing.",
  "undertone_listens_along_to_your_e99562": "Undertone słucha Twoich rozmów. Wyjaśnia nazwy kodowe i skróty, gdy tylko padną, podsuwa fakty, gdy ktoś Cię o coś pyta, a po rozmowie daje Ci podsumowanie, Twoje zadania i briefing na kolejną rozmowę. Wszystko ze Slacka, Notion i Jiry Twojego zespołu, transkrybowane na Twoim Macu.",
- "undertone_listens_along_to_your_f2a68e": "Undertone słucha Twoich rozmów. Wyjaśnia nazwy kodowe i skróty, gdy tylko padną, podsuwa fakty, gdy ktoś Cię o coś pyta, a po rozmowie daje Ci podsumowanie, Twoje zadania i briefing na kolejną rozmowę. Wszystko ze Slacka, Notion i Jiry Twojego zespołu, transkrybowane na Twoim Macu."
+ "undertone_listens_along_to_your_f2a68e": "Undertone słucha Twoich rozmów. Wyjaśnia nazwy kodowe i skróty, gdy tylko padną, podsuwa fakty, gdy ktoś Cię o coś pyta, a po rozmowie daje Ci podsumowanie, Twoje zadania i briefing na kolejną rozmowę. Wszystko ze Slacka, Notion i Jiry Twojego zespołu, transkrybowane na Twoim Macu.",
+ "no_account_and_no_bundled_37a26a": "Bez konta i bez dołączonego klucza. Twoje rozmowy, klucze i spotkania zostają u Ciebie; jedyne, co Undertone otrzymuje, to anonimowe zliczenie, które możesz wyłączyć.",
+ "usage_count_1b27e3": "Liczenie użycia",
+ "if_you_leave_count_me_5c9aa8": "Jeśli zostawisz włączone „Licz mnie jako użytkownika”: jeden anonimowy sygnał przy pierwszym otwarciu Undertone i najwyżej jeden tygodniowo, z losowym ID, wersją aplikacji, wersją macOS i językiem. Wyłączysz to w konfiguracji lub w Ustawieniach.",
+ "to_check_what_leaves_your_51b290": "Aby sprawdzić, co opuszcza twojego Maca, obserwuj ruch Undertone w Little Snitch, LuLu lub Proxyman podczas rozmowy. Zobaczysz tylko połączenia z wybraną AI, podłączonymi narzędziami i, jeśli zostawisz to włączone, cotygodniowe anonimowe zliczenie. Dźwięk nigdy nie opuszcza twojego Maca; do AI trafia tylko tekst."
 }

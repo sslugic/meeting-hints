@@ -1235,19 +1235,20 @@
     <div class="wrap private">
       <div class="head">
         <h2>設計からプライベート</h2>
-        <p>Undertoneのサーバーなし、アカウントなし、同梱のキーもなし。通話、キー、ミーティングはあなたの手元に。</p>
+        <p>アカウントも、同梱の API キーもありません。通話、キー、会議はあなたの手元に残ります。Undertone 自体が受け取るのは、オフにできる匿名の利用カウントだけです。</p>
       </div>
       <dl class="facts">
         <dt>音声</dt><dd>通話とマイクの音声は、AppleのSpeechAnalyzerでMac上で文字起こしされます。アップロードはされません。</dd>
         <dt>ミーティング</dt><dd>まとめ、文字起こし、タスク、用語集、アーティファクトは、Macの中にだけ保存されます。</dd>
         <dt>カレンダー</dt><dd>次の予定を表示するために読み取ります。Undertoneがイベントを作成・変更することはありません。</dd>
         <dt>AI</dt><dd>自分のOpenAI、Gemini、Anthropicのキー、ローカルのOllamaやLM Studioのモデル、またはCursorやClaude Codeのサインイン。キーはキーチェーンに保存されます。</dd>
-        <dt>あなたのツール</dt><dd>読み取り専用。Undertoneは検索と読み取りだけを行い、送信・投稿・作成・編集を行うツールは一切許可されません。</dd>
+        <dt>あなたのツール</dt><dd>読み取り専用。Undertoneは検索と読み取りだけを行い、送信・投稿・作成・編集を行うツールは一切許可されません。</dd></div>
+        <div><dt>利用カウント</dt><dd>「ユーザーとしてカウントする」をオンのままにした場合：Undertone の初回起動時に 1 回、その後は週に 1 回まで匿名の通知を送ります。内容はランダムな ID、アプリのバージョン、macOS のバージョン、言語だけです。セットアップか設定でオフにできます。</dd>
       </dl>
       <div class="verify">
         <h3>私たちの言葉をうのみにせず</h3>
         <p>Undertoneはクローズドソースです。GitHubで公開しているのは、このサイト、セキュリティに関する説明、そしてUndertoneがMacに保存するすべてのファイルの形式。何が保存されるのかを正確に確認できます。</p>
-        <p>Macから何が送信されているかは、通話中にLittle Snitch、LuLu、ProxymanでUndertoneの通信を監視すれば確認できます。表示されるのは、選んだAIと接続したツールへの通信だけ。音声がMacから出ることはなく、AIに送られるのはテキストだけです。</p>
+        <p>Macから何が送信されているかは、通話中にLittle Snitch、LuLu、ProxymanでUndertoneの通信を監視すれば確認できます。見えるのは、選んだ AI と接続したツール、そしてオンのままなら週 1 回の匿名カウントへの接続だけです。音声がMacから出ることはなく、AIに送られるのはテキストだけです。</p>
         <p><a href="https://github.com/sslugic/undertone/blob/main/SECURITY.md">セキュリティとプライバシーに関する説明</a> · <a href="https://github.com/sslugic/undertone/blob/main/DATA.md">Undertoneが保存するもの</a></p>
       </div>
     </div>

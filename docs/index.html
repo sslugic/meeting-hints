@@ -1262,19 +1262,20 @@
     <div class="wrap private">
       <div class="head">
         <h2>Private by design</h2>
-        <p>No Undertone server, no account, no bundled key. Your calls, keys and meetings stay with you.</p>
+        <p>No account and no bundled key. Your calls, keys and meetings stay with you; the only thing Undertone itself receives is an anonymous count you can switch off.</p>
       </div>
       <dl class="facts">
         <dt>Audio</dt><dd>The call and your mic are transcribed on your Mac with Apple's SpeechAnalyzer. Never uploaded.</dd>
         <dt>Meetings</dt><dd>Recaps, transcripts, tasks, the glossary and your artifacts are stored only on your Mac.</dd>
         <dt>Calendar</dt><dd>Read to show what's next. Undertone never creates or changes events.</dd>
         <dt>AI</dt><dd>Your own OpenAI, Gemini or Anthropic key, a local Ollama or LM Studio model, or your Cursor or Claude Code sign-in. Keys stay in your Keychain.</dd>
-        <dt>Your tools</dt><dd>Read-only. Undertone only searches and reads; tools that send, post, create or edit are never allowed.</dd>
+        <dt>Your tools</dt><dd>Read-only. Undertone only searches and reads; tools that send, post, create or edit are never allowed.</dd></div>
+        <div><dt>Usage count</dt><dd>If you leave “Count me as a user” on: one anonymous ping when Undertone is first opened and at most one a week, with a random ID, the app version, macOS version and language. Switch it off in setup or Settings.</dd>
       </dl>
       <div class="verify">
         <h3>Don't take our word for it</h3>
         <p>Undertone is closed source. What's public on GitHub is this site, our security notes, and the format of every file Undertone keeps on your Mac, so you can see exactly what it stores.</p>
-        <p>To check what leaves your Mac, watch Undertone's traffic with Little Snitch, LuLu or Proxyman during a call. You'll only see connections to the AI you chose and the tools you connected. Your audio never leaves your Mac; only text goes to your AI.</p>
+        <p>To check what leaves your Mac, watch Undertone's traffic with Little Snitch, LuLu or Proxyman during a call. You'll only see connections to the AI you chose, the tools you connected and, if you left it on, the weekly anonymous count. Your audio never leaves your Mac; only text goes to your AI.</p>
         <p><a href="https://github.com/sslugic/undertone/blob/main/SECURITY.md">Security and privacy notes</a> · <a href="https://github.com/sslugic/undertone/blob/main/DATA.md">What Undertone stores</a></p>
       </div>
     </div>
