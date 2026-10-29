@@ -611,5 +611,6 @@
  "between_calls_context_on_your_436e8a": "Entre deux appels, le contexte de vos tâches ouvertes est rassemblé à l’avance, pour que les réponses arrivent vite",
  "turn_a_list_into_a_5381e0": "Transformez une liste en canevas à cocher",
  "practice_your_team_s_terms_165aad": "Entraînez-vous aux termes de votre équipe avec des quiz rapides jusqu’à les connaître",
- "add_amem_too_and_your_56fc5d": "Ajoutez aussi <a href=\"https://github.com/sslugic/amem\" translate=\"no\">amem</a>, et vos réunions partagent une seule mémoire avec Claude Code, Cursor et vos autres outils d’IA."
+ "add_amem_too_and_your_56fc5d": "Ajoutez aussi <a href=\"https://github.com/sslugic/amem\" translate=\"no\">amem</a>, et vos réunions partagent une seule mémoire avec Claude Code, Cursor et vos autres outils d’IA.",
+ "download_dmg_v1_18_3_1d8e42": "Télécharger le .dmg <span class=\"ver\">v1.18.3</span>"
 }

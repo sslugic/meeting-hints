@@ -611,5 +611,6 @@
  "between_calls_context_on_your_436e8a": "在通話空檔，會預先收集你未完成任務的背景，讓回答更快開始",
  "turn_a_list_into_a_5381e0": "把清單變成可以逐項勾選的畫布",
  "practice_your_team_s_terms_165aad": "用簡短的小測驗練習團隊術語，直到記住為止",
- "add_amem_too_and_your_56fc5d": "再加上 <a href=\"https://github.com/sslugic/amem\" translate=\"no\">amem</a>，你的會議就能與 Claude Code、Cursor 和其他 AI 工具共用同一份記憶。"
+ "add_amem_too_and_your_56fc5d": "再加上 <a href=\"https://github.com/sslugic/amem\" translate=\"no\">amem</a>，你的會議就能與 Claude Code、Cursor 和其他 AI 工具共用同一份記憶。",
+ "download_dmg_v1_18_3_1d8e42": "下載 .dmg <span class=\"ver\">v1.18.3</span>"
 }
