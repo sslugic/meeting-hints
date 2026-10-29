@@ -17,8 +17,9 @@ Dates are ISO 8601 strings. IDs are UUIDs. Formats for the main files are in [sc
 | `chat.json` | Your Ask conversation. |
 | `corrections.json` | Words you corrected ("Data dog" → "Datadog"), used to fix later transcripts. |
 | `profile.json` | Your name, role and the terms you marked as known. |
+| `quiz.json` | Glossary practice: for each term, how often you answered and got it right, your current streak and when you last practised. |
 | `background.txt` | Background you added for answer mode, such as a résumé or notes. |
-| `context-pack.json` | Terms and notes gathered just before a call, for live hints. |
+| `context-pack.json` | Terms and notes gathered for a call (a few minutes before it when it's on your calendar), for live hints. |
 | `sources.json`, `mcp-servers.json` | The tools you connected: names, addresses, available tools and whether each is on. No tokens; those are in the Keychain. |
 | `attachments/` | Text taken from files you added to Ask, and resized copies of images you added. |
 | `events.log` | A plain-text log of what Undertone did and when (calls detected, hints, lookups, errors). |

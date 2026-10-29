@@ -586,5 +586,7 @@
  "when_it_does_search_it_0516e0": "検索するときは複数のソースを同時に調べ、見つからなければ言い換えて再検索し、14秒以内に終了",
  "each_answer_shows_where_it_0ea29b": "各回答に、どこで見つかったかをステップごとに表示",
  "download_dmg_v1_16_0_d1d3fc": ".dmgをダウンロード <span class=\"ver\">v1.16.0</span>",
- "download_dmg_v1_16_1_f75cc2": ".dmgをダウンロード <span class=\"ver\">v1.16.1</span>"
+ "download_dmg_v1_16_1_f75cc2": ".dmgをダウンロード <span class=\"ver\">v1.16.1</span>",
+ "download_dmg_v1_17_0_8fe4fe": ".dmgをダウンロード <span class=\"ver\">v1.17.0</span>",
+ "every_term_from_every_meeting_384a47": "すべてのミーティングのすべての用語を、あなたの会社での意味とともに。知っている用語はワンクリックでマーク。「詳細」を押すと、ソースを掘り下げて背後にいる人やリンクを探します。 練習では残りの用語をクイズで確認できます。選択式か、自分の言葉で説明すると AI が一致度を採点します。"
 }

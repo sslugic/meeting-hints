@@ -585,5 +585,7 @@
  "when_it_does_search_it_0516e0": "需要搜索时，它会同时查找多个来源，搜不到就换个说法再搜，并在 14 秒内结束",
  "each_answer_shows_where_it_0ea29b": "每个回答都会逐步显示出处",
  "download_dmg_v1_16_0_d1d3fc": "下载 .dmg <span class=\"ver\">v1.16.0</span>",
- "download_dmg_v1_16_1_f75cc2": "下载 .dmg <span class=\"ver\">v1.16.1</span>"
+ "download_dmg_v1_16_1_f75cc2": "下载 .dmg <span class=\"ver\">v1.16.1</span>",
+ "download_dmg_v1_17_0_8fe4fe": "下载 .dmg <span class=\"ver\">v1.17.0</span>",
+ "every_term_from_every_meeting_384a47": "每场会议里的每个术语，以及它在你公司里的含义。一键标记已认识的词；“更多”会深入你的资料来源，找出背后的人和链接。「练习」会就其余术语考考你：选择题，或用自己的话解释，由你的 AI 给匹配度打分。"
 }

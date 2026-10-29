@@ -586,5 +586,7 @@
  "when_it_does_search_it_0516e0": "Gdy już szuka, sprawdza kilka źródeł naraz, przeformułowuje wyszukiwanie, które nic nie dało, i kończy w ciągu 14 sekund",
  "each_answer_shows_where_it_0ea29b": "Każda odpowiedź pokazuje krok po kroku, gdzie ją znaleziono",
  "download_dmg_v1_16_0_d1d3fc": "Pobierz .dmg <span class=\"ver\">v1.16.0</span>",
- "download_dmg_v1_16_1_f75cc2": "Pobierz .dmg <span class=\"ver\">v1.16.1</span>"
+ "download_dmg_v1_16_1_f75cc2": "Pobierz .dmg <span class=\"ver\">v1.16.1</span>",
+ "download_dmg_v1_17_0_8fe4fe": "Pobierz .dmg <span class=\"ver\">v1.17.0</span>",
+ "every_term_from_every_meeting_384a47": "Każdy termin z każdego spotkania z tym, co znaczy w twojej firmie. Oznacz znane jednym kliknięciem; Więcej przeszukuje twoje źródła w poszukiwaniu osób i linków, które za nim stoją. Ćwiczenia sprawdzają resztę: test wyboru albo wyjaśnij termin własnymi słowami, a Twoja AI oceni, na ile się zgadza."
 }

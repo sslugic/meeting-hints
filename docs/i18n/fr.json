@@ -585,5 +585,7 @@
  "when_it_does_search_it_0516e0": "Quand il cherche, il interroge plusieurs sources à la fois, reformule une recherche qui ne donne rien et s’arrête en 14 secondes maximum",
  "each_answer_shows_where_it_0ea29b": "Chaque réponse indique où elle a été trouvée, étape par étape",
  "download_dmg_v1_16_0_d1d3fc": "Télécharger le .dmg <span class=\"ver\">v1.16.0</span>",
- "download_dmg_v1_16_1_f75cc2": "Télécharger le .dmg <span class=\"ver\">v1.16.1</span>"
+ "download_dmg_v1_16_1_f75cc2": "Télécharger le .dmg <span class=\"ver\">v1.16.1</span>",
+ "download_dmg_v1_17_0_8fe4fe": "Télécharger le .dmg <span class=\"ver\">v1.17.0</span>",
+ "every_term_from_every_meeting_384a47": "Chaque terme de chaque réunion, avec ce qu’il signifie dans votre entreprise. Marquez ceux que vous connaissez en un clic ; Plus fouille vos sources pour trouver les personnes et les liens derrière. Entraînement vous interroge sur le reste : QCM, ou expliquez-le avec vos mots et votre IA note la correspondance."
 }

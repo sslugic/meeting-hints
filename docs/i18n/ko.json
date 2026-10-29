@@ -585,5 +585,7 @@
  "when_it_does_search_it_0516e0": "검색할 때는 여러 소스를 한 번에 확인하고, 결과가 없으면 검색어를 바꿔 다시 찾으며, 14초 안에 마쳐요",
  "each_answer_shows_where_it_0ea29b": "각 답변이 어디에서 찾았는지 단계별로 보여 줘요",
  "download_dmg_v1_16_0_d1d3fc": ".dmg 다운로드 <span class=\"ver\">v1.16.0</span>",
- "download_dmg_v1_16_1_f75cc2": ".dmg 다운로드 <span class=\"ver\">v1.16.1</span>"
+ "download_dmg_v1_16_1_f75cc2": ".dmg 다운로드 <span class=\"ver\">v1.16.1</span>",
+ "download_dmg_v1_17_0_8fe4fe": ".dmg 다운로드 <span class=\"ver\">v1.17.0</span>",
+ "every_term_from_every_meeting_384a47": "모든 미팅의 모든 용어를 우리 회사에서의 의미와 함께. 아는 용어는 클릭 한 번으로 표시하고, ‘더 보기’를 누르면 소스를 뒤져 관련된 사람과 링크를 찾아 줘요. 연습에서 나머지 용어를 퀴즈로 풀어 보세요. 객관식으로 풀거나, 직접 설명하면 AI가 얼마나 맞는지 점수를 매깁니다."
 }
