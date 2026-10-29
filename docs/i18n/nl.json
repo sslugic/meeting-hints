@@ -581,5 +581,9 @@
  "ai_tools_cd7070": "AI-tools",
  "your_meetings_in_your_ai_2b7bb9": "Je vergaderingen, in je AI-tools",
  "undertone_is_also_an_mcp_d702b4": "Undertone is ook een MCP-server, dus elke AI-app met MCP-ondersteuning kan met je vergaderingen, taken en woordenlijst werken. Via Instellingen voeg je het met één klik toe aan Claude, Claude Code of Cursor; voor andere apps kopieer je de instellingen hieronder. Alleen-lezen, en het blijft op je Mac.",
- "download_dmg_v1_15_3_b832ea": "Download .dmg <span class=\"ver\">v1.15.3</span>"
+ "download_dmg_v1_15_3_b832ea": "Download .dmg <span class=\"ver\">v1.15.3</span>",
+ "fifteen_minutes_before_a_meeting_14d86f": "Een kwartier voor een meeting schrijft Undertone een briefing voor je en tikt je vijf minuten van tevoren op de schouder, en het verzamelt de context van de meeting uit je bronnen zodat de call daarmee begint. Als de meeting klaar is, staat de follow-up voor iedereen al klaar om in e-mail of Slack te plakken.",
+ "when_it_does_search_it_0516e0": "Als het wel zoekt, doorzoekt het meerdere bronnen tegelijk, herformuleert het een zoekopdracht zonder resultaat en stopt het binnen 14 seconden",
+ "each_answer_shows_where_it_0ea29b": "Elk antwoord laat stap voor stap zien waar het gevonden is",
+ "download_dmg_v1_16_0_d1d3fc": "Download .dmg <span class=\"ver\">v1.16.0</span>"
 }

@@ -580,5 +580,9 @@
  "ai_tools_cd7070": "Strumenti di IA",
  "your_meetings_in_your_ai_2b7bb9": "Le tue riunioni, nei tuoi strumenti di IA",
  "undertone_is_also_an_mcp_d702b4": "Undertone è anche un server MCP, quindi qualsiasi app di IA che supporta MCP può lavorare con riunioni, attività e glossario. Le Impostazioni lo aggiungono a Claude, Claude Code o Cursor con un clic; per altre app, copia la configurazione qui sotto. Sola lettura, e resta sul tuo Mac.",
- "download_dmg_v1_15_3_b832ea": "Scarica il .dmg <span class=\"ver\">v1.15.3</span>"
+ "download_dmg_v1_15_3_b832ea": "Scarica il .dmg <span class=\"ver\">v1.15.3</span>",
+ "fifteen_minutes_before_a_meeting_14d86f": "Quindici minuti prima di una riunione, Undertone ti scrive un briefing e ti dà un colpetto sulla spalla cinque minuti prima, e raccoglie il contesto della riunione dalle tue fonti così la chiamata parte già con quello. Quando finisce, il follow-up per tutti è già pronto in bozza, da incollare in un’email o su Slack.",
+ "when_it_does_search_it_0516e0": "Quando cerca, consulta più fonti contemporaneamente, riformula una ricerca che non trova nulla e si ferma entro 14 secondi",
+ "each_answer_shows_where_it_0ea29b": "Ogni risposta mostra dove è stata trovata, passo dopo passo",
+ "download_dmg_v1_16_0_d1d3fc": "Scarica il .dmg <span class=\"ver\">v1.16.0</span>"
 }

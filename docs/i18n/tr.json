@@ -581,5 +581,9 @@
  "ai_tools_cd7070": "Yapay zekâ araçları",
  "your_meetings_in_your_ai_2b7bb9": "Toplantılarınız, yapay zekâ araçlarınızda",
  "undertone_is_also_an_mcp_d702b4": "Undertone aynı zamanda bir MCP sunucusudur; MCP destekleyen her yapay zekâ uygulaması toplantılarınız, görevleriniz ve sözlüğünüzle çalışabilir. Ayarlar onu tek tıkla Claude, Claude Code veya Cursor'a ekler; diğer uygulamalar için aşağıdaki ayarları kopyalayın. Salt okunur ve Mac'inizde kalır.",
- "download_dmg_v1_15_3_b832ea": ".dmg indir <span class=\"ver\">v1.15.3</span>"
+ "download_dmg_v1_15_3_b832ea": ".dmg indir <span class=\"ver\">v1.15.3</span>",
+ "fifteen_minutes_before_a_meeting_14d86f": "Toplantıdan on beş dakika önce Undertone size bir brifing yazar ve beş dakika kala omzunuza dokunur; ayrıca görüşme bu bağlamla başlasın diye toplantının bağlamını kaynaklarınızdan toplar. Toplantı bittiğinde herkes için takip mesajı hazır olur; e-postaya ya da Slack’e yapıştırmanız yeter.",
+ "when_it_does_search_it_0516e0": "Arama yaptığında aynı anda birkaç kaynağa bakar, sonuç vermeyen bir aramayı yeniden ifade eder ve en geç 14 saniyede durur",
+ "each_answer_shows_where_it_0ea29b": "Her yanıt nerede bulunduğunu adım adım gösterir",
+ "download_dmg_v1_16_0_d1d3fc": ".dmg indir <span class=\"ver\">v1.16.0</span>"
 }
