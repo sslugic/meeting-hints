@@ -574,5 +574,7 @@
  "free_credits_for_about_five_8b0b75": "最初は約5回分の通話に使える無料クレジット、AIキーは不要",
  "or_your_own_openai_anthropic_a1fa0e": "または自分のOpenAI、Anthropic、Geminiのキー、ローカルのOllamaやLM Studioのモデル、またはClaude CodeやCursorのサインイン",
  "install_start_with_free_credits_7d6475": "インストールしたら、無料クレジットで始めるかAIを接続し、ソースを追加して通話に参加するだけ。終わったら、まとめ、タスク、新しい用語がホームで待っています。",
- "free_credits_your_own_ai_b691b9": "無料クレジット、自分のAIキー、またはローカルモデル"
+ "free_credits_your_own_ai_b691b9": "無料クレジット、自分のAIキー、またはローカルモデル",
+ "download_dmg_v1_15_1_b21aff": ".dmgをダウンロード <span class=\"ver\">v1.15.1</span>",
+ "undertone_always_keeps_its_own_94e199": "Undertone は会議の記憶を常に自分で保持します。Claude Code、Cursor、その他の AI ツールが共有する Mac 上のメモリ amem を追加すると、Undertone は両方をまとめて検索します。セットアップで提案され、自動でインストールされます。"
 }

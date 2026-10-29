@@ -574,5 +574,7 @@
  "free_credits_for_about_five_8b0b75": "Darmowe kredyty na około pięć rozmów na start, bez klucza AI",
  "or_your_own_openai_anthropic_a1fa0e": "Albo Twój własny klucz OpenAI, Anthropic lub Gemini, lokalny model w Ollama lub LM Studio albo logowanie przez Claude Code lub Cursor",
  "install_start_with_free_credits_7d6475": "Zainstaluj, zacznij z darmowymi kredytami lub połącz AI, dodaj źródła, a potem dołącz do rozmowy. Po wszystkim podsumowanie, zadania i nowe terminy czekają na ekranie Start.",
- "free_credits_your_own_ai_b691b9": "Darmowe kredyty, własny klucz AI lub lokalny model"
+ "free_credits_your_own_ai_b691b9": "Darmowe kredyty, własny klucz AI lub lokalny model",
+ "download_dmg_v1_15_1_b21aff": "Pobierz .dmg <span class=\"ver\">v1.15.1</span>",
+ "undertone_always_keeps_its_own_94e199": "Undertone zawsze prowadzi własną pamięć Twoich spotkań. Dodaj amem, pamięć na Twoim Macu, którą współdzielą Claude Code, Cursor i inne narzędzia AI, a Undertone przeszuka obie naraz. Konfiguracja zaproponuje go i zainstaluje za Ciebie."
 }

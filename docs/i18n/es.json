@@ -573,5 +573,7 @@
  "free_credits_for_about_five_8b0b75": "Créditos gratis para unas cinco llamadas al empezar, sin clave de IA",
  "or_your_own_openai_anthropic_a1fa0e": "O tu propia clave de OpenAI, Anthropic o Gemini, un modelo local de Ollama o LM Studio, o tu sesión de Claude Code o Cursor",
  "install_start_with_free_credits_7d6475": "Instala, empieza con créditos gratis o conecta tu IA, añade tus fuentes y únete a una llamada. Después, tu resumen, tus tareas y los términos nuevos te esperan en Inicio.",
- "free_credits_your_own_ai_b691b9": "Créditos gratis, tu propia clave de IA o un modelo local"
+ "free_credits_your_own_ai_b691b9": "Créditos gratis, tu propia clave de IA o un modelo local",
+ "download_dmg_v1_15_1_b21aff": "Descargar .dmg <span class=\"ver\">v1.15.1</span>",
+ "undertone_always_keeps_its_own_94e199": "Undertone siempre guarda su propia memoria de tus reuniones. Añade amem, la memoria de tu Mac que comparten Claude Code, Cursor y tus otras herramientas de IA, y Undertone buscará en ambas a la vez. La configuración te lo ofrece y lo instala por ti."
 }

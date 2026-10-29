@@ -574,5 +574,7 @@
  "free_credits_for_about_five_8b0b75": "Gratis credits voor ongeveer vijf calls om te beginnen, geen AI-sleutel nodig",
  "or_your_own_openai_anthropic_a1fa0e": "Of je eigen OpenAI-, Anthropic- of Gemini-sleutel, een lokaal Ollama- of LM Studio-model, of je login bij Claude Code of Cursor",
  "install_start_with_free_credits_7d6475": "Installeer, start met gratis credits of koppel je AI, voeg je bronnen toe en neem deel aan een call. Daarna staan je samenvatting, taken en nieuwe termen klaar in Start.",
- "free_credits_your_own_ai_b691b9": "Gratis credits, eigen AI-sleutel of lokaal model"
+ "free_credits_your_own_ai_b691b9": "Gratis credits, eigen AI-sleutel of lokaal model",
+ "download_dmg_v1_15_1_b21aff": "Download .dmg <span class=\"ver\">v1.15.1</span>",
+ "undertone_always_keeps_its_own_94e199": "Undertone houdt altijd een eigen geheugen van je vergaderingen bij. Voeg amem toe, het geheugen op je Mac dat Claude Code, Cursor en je andere AI-tools delen, en Undertone doorzoekt ze allebei samen. De installatie biedt het aan en installeert het voor je."
 }

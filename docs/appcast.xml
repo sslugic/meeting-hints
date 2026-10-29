@@ -5,6 +5,15 @@
     <link>https://getundertone.app/appcast.xml</link>
     <language>en</language>
     <item>
+      <title>Undertone 1.15.1</title>
+      <pubDate>Thu, 29 Oct 2026 01:30:59 +0000</pubDate>
+      <sparkle:version>1.15.1</sparkle:version>
+      <sparkle:shortVersionString>1.15.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://github.com/sslugic/undertone/releases/tag/v1.15.1</sparkle:releaseNotesLink>
+      <enclosure url="https://github.com/sslugic/undertone/releases/download/v1.15.1/Undertone.dmg" type="application/octet-stream" sparkle:edSignature="f38y/7ucwShCdCcSz/zen3TJZR1k7my0nbiPTkgN0EE8XVoaF5JhnUXNkCi7dCb98Fug9djLtposDzuSWRZgCw==" length="5744507" />
+    </item>
+    <item>
       <title>Undertone 1.15.0</title>
       <pubDate>Thu, 29 Oct 2026 01:08:57 +0000</pubDate>
       <sparkle:version>1.15.0</sparkle:version>

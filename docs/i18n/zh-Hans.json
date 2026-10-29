@@ -573,5 +573,7 @@
  "free_credits_for_about_five_8b0b75": "起步赠送约够五次通话的免费积分，无需 AI 密钥",
  "or_your_own_openai_anthropic_a1fa0e": "或你自己的 OpenAI、Anthropic 或 Gemini 密钥，本地的 Ollama 或 LM Studio 模型，或你的 Claude Code 或 Cursor 登录",
  "install_start_with_free_credits_7d6475": "安装后，用免费积分开始或连接你的 AI，添加资料来源，然后加入通话。结束后，你的回顾、任务和新术语都在主页等着你。",
- "free_credits_your_own_ai_b691b9": "免费积分、你自己的 AI 密钥或本地模型"
+ "free_credits_your_own_ai_b691b9": "免费积分、你自己的 AI 密钥或本地模型",
+ "download_dmg_v1_15_1_b21aff": "下载 .dmg <span class=\"ver\">v1.15.1</span>",
+ "undertone_always_keeps_its_own_94e199": "Undertone 始终保留自己关于你会议的记忆。添加 amem——你 Mac 上由 Claude Code、Cursor 和其他 AI 工具共享的记忆，Undertone 就会同时搜索两者。设置时会推荐并为你安装。"
 }

@@ -574,5 +574,7 @@
  "free_credits_for_about_five_8b0b75": "Başlangıç için yaklaşık beş görüşmelik ücretsiz kredi, yapay zekâ anahtarı gerekmez",
  "or_your_own_openai_anthropic_a1fa0e": "Ya da kendi OpenAI, Anthropic veya Gemini anahtarınız, yerel bir Ollama ya da LM Studio modeli veya Claude Code ya da Cursor oturumunuz",
  "install_start_with_free_credits_7d6475": "Yükleyin, ücretsiz kredilerle başlayın ya da yapay zekânızı bağlayın, kaynaklarınızı ekleyin, ardından bir görüşmeye katılın. Sonrasında özetiniz, görevleriniz ve yeni terimler Ana Sayfa’da sizi bekliyor olacak.",
- "free_credits_your_own_ai_b691b9": "Ücretsiz krediler, kendi yapay zekâ anahtarınız veya yerel model"
+ "free_credits_your_own_ai_b691b9": "Ücretsiz krediler, kendi yapay zekâ anahtarınız veya yerel model",
+ "download_dmg_v1_15_1_b21aff": ".dmg indir <span class=\"ver\">v1.15.1</span>",
+ "undertone_always_keeps_its_own_94e199": "Undertone toplantılarınızın kendi belleğini her zaman tutar. Claude Code, Cursor ve diğer yapay zekâ araçlarınızın paylaştığı Mac'inizdeki bellek olan amem'i ekleyin; Undertone ikisinde birlikte arar. Kurulum bunu önerir ve sizin için yükler."
 }

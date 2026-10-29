@@ -573,5 +573,7 @@
  "free_credits_for_about_five_8b0b75": "رصيد مجاني يكفي لنحو خمس مكالمات للبدء، دون الحاجة إلى مفتاح ذكاء اصطناعي",
  "or_your_own_openai_anthropic_a1fa0e": "أو مفتاحك الخاص من OpenAI أو Anthropic أو Gemini، أو نموذج محلي عبر Ollama أو LM Studio، أو تسجيل دخولك في Claude Code أو Cursor",
  "install_start_with_free_credits_7d6475": "ثبّت التطبيق، وابدأ بالرصيد المجاني أو اربط ذكاءك الاصطناعي، وأضف مصادرك، ثم انضم إلى مكالمة. بعدها، يكون ملخصك ومهامك ومصطلحاتك الجديدة بانتظارك في الرئيسية.",
- "free_credits_your_own_ai_b691b9": "رصيد مجاني، أو مفتاح ذكاء اصطناعي خاص، أو نموذج محلي"
+ "free_credits_your_own_ai_b691b9": "رصيد مجاني، أو مفتاح ذكاء اصطناعي خاص، أو نموذج محلي",
+ "download_dmg_v1_15_1_b21aff": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.15.1</span>",
+ "undertone_always_keeps_its_own_94e199": "يحتفظ Undertone دائمًا بذاكرته الخاصة عن اجتماعاتك. أضف amem، الذاكرة على جهاز Mac التي يتشاركها Claude Code وCursor وأدوات الذكاء الاصطناعي الأخرى لديك، وسيبحث Undertone في الاثنتين معًا. يعرضه عليك الإعداد ويثبّته لك."
 }

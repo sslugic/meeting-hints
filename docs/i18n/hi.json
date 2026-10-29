@@ -573,5 +573,7 @@
  "free_credits_for_about_five_8b0b75": "शुरुआत में लगभग पाँच कॉल के लिए मुफ़्त क्रेडिट, AI कुंजी की ज़रूरत नहीं",
  "or_your_own_openai_anthropic_a1fa0e": "या आपकी अपनी OpenAI, Anthropic या Gemini API की, लोकल Ollama या LM Studio मॉडल, या आपका Claude Code या Cursor साइन-इन",
  "install_start_with_free_credits_7d6475": "इंस्टॉल करें, मुफ़्त क्रेडिट से शुरू करें या अपना AI कनेक्ट करें, अपने सोर्सेज़ जोड़ें, फिर कॉल जॉइन करें। उसके बाद, आपका रीकैप, टास्क और नए टर्म होम पर आपका इंतज़ार कर रहे होंगे।",
- "free_credits_your_own_ai_b691b9": "मुफ़्त क्रेडिट, आपकी अपनी AI API की या लोकल मॉडल"
+ "free_credits_your_own_ai_b691b9": "मुफ़्त क्रेडिट, आपकी अपनी AI API की या लोकल मॉडल",
+ "download_dmg_v1_15_1_b21aff": ".dmg डाउनलोड करें <span class=\"ver\">v1.15.1</span>",
+ "undertone_always_keeps_its_own_94e199": "Undertone हमेशा आपकी मीटिंग की अपनी मेमोरी रखता है. amem जोड़ें, आपके Mac की वह मेमोरी जिसे Claude Code, Cursor और आपके दूसरे AI टूल साझा करते हैं, और Undertone दोनों में एक साथ खोजेगा. सेटअप इसे सुझाता है और आपके लिए इंस्टॉल करता है."
 }
