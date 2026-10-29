@@ -77,7 +77,7 @@
   .brand img { width: 26px; height: 26px; }
   .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 2px 9px; background: var(--surface); }
   .nav-links { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--text-2); }
-  .nav-links > a:not(.btn) { padding: 6px 10px; border-radius: 8px; transition: color .15s, background-color .15s; }
+  .nav-links > a:not(.btn) { padding: 6px 10px; border-radius: 8px; white-space: nowrap; transition: color .15s, background-color .15s; }
   .nav-links > a:not(.btn):hover { color: var(--text); background: var(--surface); }
 
   /* Buttons */
@@ -329,6 +329,37 @@
   .dm-card .s { color: var(--text-3); }
   @media (max-width: 860px) { .dm { grid-template-columns: 1fr; } .dm-stage { min-height: 380px; } }
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
+  /* Use cases by industry: uc- prefix keeps these apart from the #try tabs and other globals */
+  .uc-tabs { display: flex; flex-wrap: wrap; gap: 4px; width: fit-content; max-width: 100%; margin-top: 40px; padding: 4px; border-radius: var(--r); border: 1px solid var(--border); background: var(--surface); }
+  .uc-tab { all: unset; box-sizing: border-box; cursor: pointer; padding: 8px 16px; border-radius: var(--r-sm); font-size: 14.5px; font-weight: 500; letter-spacing: -.01em; color: var(--text-2); text-align: center; transition: color .15s, background-color .15s; }
+  .uc-tab:hover { color: var(--text); background: rgba(255, 255, 255, .04); }
+  .uc-tab[aria-selected="true"] { color: var(--text); background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--border-2); }
+  .uc-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .uc-panel { margin-top: 20px; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.5fr); gap: 36px; align-items: start; }
+  .uc-panel[hidden] { display: none; }
+  .uc-panel:focus-visible { outline-offset: 6px; }
+  .uc-intro { padding-top: 8px; }
+  .uc-intro h3 { font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2; }
+  .uc-intro p { margin-top: 12px; color: var(--text-2); font-size: 16px; }
+  .uc-intro .uc-for { margin-top: 18px; font-size: 14px; color: var(--text-2); border-inline-start: 2px solid var(--accent); padding-inline-start: 12px; }
+  .uc-mock { border-radius: var(--r-lg); border: 1px solid rgba(255, 255, 255, .12); background: radial-gradient(120% 90% at 100% 0%, rgba(99, 102, 241, .14), transparent 60%), rgba(24, 25, 33, .62); box-shadow: 0 30px 80px -30px rgba(0, 0, 0, .7); padding: 16px 18px 18px; min-width: 0; }
+  .uc-mock .hud-head { padding: 0 0 14px; border: 0; }
+  .uc-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 14px; }
+  .uc-body .ctx:last-child, .uc-body .line:last-child { margin-bottom: 0; }
+  .uc-body .ctx .ticks { margin-top: 6px; }
+  .uc-body .ctx .ticks li { font-size: 13.5px; color: #D4D4D8; }
+  .uc-mock .sample { padding: 14px 0 0; }
+  .uc-panel.uc-play .ctx { animation: rise .5s var(--out) both; }
+  .uc-panel.uc-play .ctx:nth-child(3) { animation-delay: .1s; }
+  .uc-panel.uc-play .ctx:nth-child(4) { animation-delay: .2s; }
+  @media (max-width: 1080px) { .uc-body { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .uc-panel { grid-template-columns: 1fr; gap: 20px; } .uc-intro { padding-top: 0; } }
+  @media (max-width: 640px) {
+    .uc-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
+    .uc-tab { padding: 8px 6px; font-size: 13.5px; }
+    .uc-mock { padding: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .uc-panel.uc-play .ctx { animation: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
   .plans.one { grid-template-columns: minmax(0, 520px); }
@@ -505,7 +536,7 @@
 
   footer { margin-top: 80px; border-top: 1px solid var(--border); }
   footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 28px 0 44px; font-size: 14px; color: var(--text-3); }
-  footer nav { display: flex; gap: 20px; }
+  footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   footer a:hover { color: var(--text); }
 
   /* Language menu (nav and footer). The links are written by tools/i18n.py. */
@@ -606,6 +637,7 @@
     <a class="brand" href="#" translate="no"><img src="../assets/icon-256.png" alt="">Undertone <span class="pill">macOS</span></a>
     <nav class="nav-links" aria-label="Principal">
       <a href="#how">Como funciona</a>
+      <a href="#use-cases">Casos de uso</a>
       <a href="#features">Recursos</a>
       <a href="#claude">Claude</a>
       <a href="#pricing">Beta grátis</a>
@@ -754,6 +786,196 @@
           <p data-say><span class="who"><b>Presidência</b> · 09:31 · <em>para você</em></span>O que está impulsionando a <span class="term">retenção líquida de receita</span> neste trimestre?</p>
           <div data-ctx class="ctx answer"><div class="ct">Contexto para você <small>A presidência perguntou</small></div><p>O NRR foi de 108% para 112%, puxado por expansões enterprise: três contas adicionaram licenças.</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Apresentação do conselho do Q3</span></div>
         </template>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="use-cases">
+    <div class="wrap">
+      <div class="head">
+        <h2>Não é só para engenheiros</h2>
+        <p>Cada área tem a sua própria linguagem. Numa reunião de contrato, numa revisão de negócios ou numa reunião rápida da clínica, o Undertone explica o jargão com as anotações do seu próprio time e deixa o contexto pronto quando alguém se volta para você.</p>
+      </div>
+      <div class="uc-tabs" role="tablist" aria-label="Setores">
+        <button class="uc-tab" role="tab" id="uc-t-legal" aria-selected="true" aria-controls="uc-p-legal">Jurídico</button>
+        <button class="uc-tab" role="tab" id="uc-t-realty" aria-selected="false" aria-controls="uc-p-realty" tabindex="-1">Imobiliário</button>
+        <button class="uc-tab" role="tab" id="uc-t-health" aria-selected="false" aria-controls="uc-p-health" tabindex="-1">Saúde</button>
+        <button class="uc-tab" role="tab" id="uc-t-sales" aria-selected="false" aria-controls="uc-p-sales" tabindex="-1">Vendas</button>
+        <button class="uc-tab" role="tab" id="uc-t-mktg" aria-selected="false" aria-controls="uc-p-mktg" tabindex="-1">Marketing</button>
+        <button class="uc-tab" role="tab" id="uc-t-eng" aria-selected="false" aria-controls="uc-p-eng" tabindex="-1">Engenharia</button>
+      </div>
+
+      <div class="uc-panel" id="uc-p-legal" role="tabpanel" aria-labelledby="uc-t-legal" tabindex="0">
+        <div class="uc-intro">
+          <h3>Acompanhe o negócio, não só as palavras</h3>
+          <p>Reuniões de contrato são cheias de jargão: redlines, cláusulas MFN, limites e exceções, cada um com o histórico do próprio cliente por trás. O Undertone explica cada termo a partir do playbook do seu escritório e das anotações do caso, para você acompanhar desde a primeira reunião.</p>
+          <p class="uc-for">Para novos associados, paralegais e advogados internos.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Revisão do MSA da Fennick Freight</div><div class="hud-meta">14:05 · Ouvindo</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">Na reunião</div>
+              <div class="line"><span class="who"><b>Dana</b> · 14:05</span>O último <span class="term">redline</span> deles remove a nossa <span class="term">cláusula MFN</span> por completo.</div>
+              <div class="line"><span class="who"><b>Omar</b> · 14:06</span>E eles querem o <span class="term">limite de indenização</span> em duas vezes o valor anual.</div>
+              <div class="line to-you"><span class="who"><b>Dana</b> · 14:07 · <em>para você</em></span>Onde ficamos com o limite na última rodada?</div>
+            </div>
+            <div>
+              <div class="col-label">No seu painel</div>
+              <div class="ctx"><div class="ct">Redline <small>Provavelmente novo</small></div><p>A minuta marcada com as alterações da outra parte. Esta é a versão 4, enviada na segunda-feira.</p><span class="src"><img src="../assets/logos/gdrive.png" alt="" width="13" height="13">Drive · Fennick MSA v4</span></div>
+              <div class="ctx"><div class="ct">Cláusula MFN <small>Provavelmente novo</small></div><p>Nação mais favorecida: a Fennick recebe qualquer preço melhor que dermos a um cliente parecido. O seu playbook marca como inegociável.</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Playbook de contratos</span></div>
+              <div class="ctx answer"><div class="ct">Quando perguntarem a você <small>Contexto e lembretes</small></div><ul class="ticks sug"><li>Última rodada: o limite era de 12 meses de honorários</li><li>Ainda em aberto: a exceção para vazamentos de dados</li></ul><span class="src"><img src="../assets/logos/gdrive.png" alt="" width="13" height="13">Drive · Notas da reunião do MSA v3</span></div>
+            </div>
+          </div>
+          <p class="sample">Exemplo. Nomes, empresas e números são fictícios.</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-realty" role="tabpanel" aria-labelledby="uc-t-realty" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>Acompanhe a equipe do negócio</h3>
+          <p>Corretores, credores e compradores falam em cap rate, 1031 e condições suspensivas, e cada negócio tem os seus próprios prazos. O Undertone explica os termos e traz as datas das suas anotações do negócio, para nada escapar enquanto você ainda aprende a linguagem.</p>
+          <p class="uc-for">Para corretores iniciantes, coordenadores de transações e investidores de primeira viagem.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Revisão da proposta da Alder Street</div><div class="hud-meta">11:20 · Ouvindo</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">Na reunião</div>
+              <div class="line"><span class="who"><b>Rosa</b> · 11:20</span>Por esse preço, o <span class="term">cap rate</span> fica em torno de 6,1%.</div>
+              <div class="line"><span class="who"><b>Ben</b> · 11:21</span>O comprador está fazendo uma <span class="term">1031 exchange</span>, então precisa fechar rápido.</div>
+              <div class="line to-you"><span class="who"><b>Rosa</b> · 11:22 · <em>para você</em></span>Quando vence a <span class="term">condição</span> de vistoria?</div>
+            </div>
+            <div>
+              <div class="col-label">No seu painel</div>
+              <div class="ctx"><div class="ct">Cap rate <small>Provavelmente novo</small></div><p>Receita operacional líquida dividida pelo preço. Os seus três últimos comparáveis na Alder Street fecharam entre 5,8% e 6,4%.</p><span class="src"><img src="../assets/logos/gdrive.png" alt="" width="13" height="13">Drive · Comparáveis da Alder Street</span></div>
+              <div class="ctx"><div class="ct">1031 exchange <small>Talvez novo</small></div><p>Uma troca com imposto diferido de um imóvel de investimento por outro, com prazos rígidos para indicar e comprar o substituto.</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Notas do comprador</span></div>
+              <div class="ctx answer"><div class="ct">Quando perguntarem a você <small>Contexto e lembretes</small></div><ul class="ticks sug"><li>A condição de vistoria vence na sexta-feira, 12 de junho</li><li>O laudo do telhado ainda não chegou</li></ul><span class="src"><img src="../assets/logos/gmail.png" alt="" width="13" height="13">Gmail · Contrato de compra assinado</span></div>
+            </div>
+          </div>
+          <p class="sample">Exemplo. Nomes, endereços e números são fictícios.</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-health" role="tabpanel" aria-labelledby="uc-t-health" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>Jargão clínico e de faturamento, explicado</h3>
+          <p>Reuniões da equipe de cuidado e de faturamento misturam termos clínicos com regras dos convênios: autorizações prévias, códigos CPT, fluxos do prontuário eletrônico. O Undertone explica tudo a partir das políticas e chamados da sua própria clínica, e transcreve a reunião no seu Mac.</p>
+          <p class="uc-for">Para novos profissionais clínicos, gerentes de clínica e equipes de faturamento.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Reunião rápida de operações da Riverbend Clinic</div><div class="hud-meta">08:40 · Ouvindo</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">Na reunião</div>
+              <div class="line"><span class="who"><b>Dr. Mehta</b> · 08:40</span>Três ressonâncias estão paradas esperando <span class="term">autorização prévia</span> de novo.</div>
+              <div class="line"><span class="who"><b>Lena</b> · 08:41</span>Duas delas foram enviadas com o <span class="term">código CPT</span> errado.</div>
+              <div class="line"><span class="who"><b>Dr. Mehta</b> · 08:42</span>Dá para sinalizar no <span class="term">EHR</span> antes de alguém agendar o exame?</div>
+            </div>
+            <div>
+              <div class="col-label">No seu painel</div>
+              <div class="ctx"><div class="ct">Autorização prévia <small>Provavelmente novo</small></div><p>O convênio precisa aprovar o exame antes do agendamento. O seu guia de convênios lista quais planos exigem isso.</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · Guia de convênios</span></div>
+              <div class="ctx"><div class="ct">Código CPT <small>Provavelmente novo</small></div><p>O código de faturamento de um procedimento. O chamado da Lena acompanha as duas cobranças de ressonância devolvidas na semana passada.</p><span class="src"><img src="../assets/logos/jira.png" alt="" width="13" height="13">Jira · REV-118</span></div>
+              <div class="ctx"><div class="ct">EHR <small>Talvez novo</small></div><p>Prontuário eletrônico do paciente. Aqui, é o sistema em que a recepção agenda exames e confere a cobertura.</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Guia da recepção</span></div>
+            </div>
+          </div>
+          <p class="sample">Exemplo. Nomes, clínicas e chamados são fictícios.</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-sales" role="tabpanel" aria-labelledby="uc-t-sales" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>Chegue pronto à revisão de negócios</h3>
+          <p>Reuniões de pipeline são cheias de frameworks e números: MEDDIC, champions, ARR, próximos passos. O Undertone explica tudo, puxa o histórico da conta do seu CRM e do Slack e deixa os fatos à sua frente quando o seu gestor perguntar.</p>
+          <p class="uc-for">Para novos executivos de contas, SDRs e engenheiros de vendas.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Revisão de pipeline</div><div class="hud-meta">16:00 · Ouvindo</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">Na reunião</div>
+              <div class="line"><span class="who"><b>Marcus</b> · 16:00</span>Vamos passar pelo <span class="term">MEDDIC</span> da Tallis Robotics.</div>
+              <div class="line to-you"><span class="who"><b>Marcus</b> · 16:01 · <em>para você</em></span>Quem é o nosso <span class="term">champion</span> lá, e qual é o <span class="term">ARR</span> da proposta?</div>
+            </div>
+            <div>
+              <div class="col-label">No seu painel</div>
+              <div class="ctx"><div class="ct">MEDDIC <small>Provavelmente novo</small></div><p>O checklist de negócios do time: Metrics, Economic buyer, Decision criteria, Decision process, Identify pain, Champion.</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Playbook de vendas</span></div>
+              <div class="ctx"><div class="ct">ARR <small>Talvez novo</small></div><p>Receita recorrente anual: quanto o contrato vale por ano.</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #sales-onboarding</span></div>
+              <div class="ctx answer"><div class="ct">Quando perguntarem a você <small>Contexto e lembretes</small></div><ul class="ticks sug"><li>Champion: Ana Ruiz, VP de Operações, que montou o piloto</li><li>Proposta: US$ 84.000 de ARR para 120 licenças</li><li>O decisor econômico ainda não participou de nenhuma reunião</li></ul><span class="src"><img src="../assets/logos/hubspot.png" alt="" width="13" height="13">HubSpot · Tallis Robotics</span></div>
+            </div>
+          </div>
+          <p class="sample">Exemplo. Nomes, empresas e números são fictícios.</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-mktg" role="tabpanel" aria-labelledby="uc-t-mktg" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>Fale a língua do funil desde o primeiro dia</h3>
+          <p>Reuniões de marketing pulam entre CAC, MQLs, janelas de atribuição e codinomes de campanhas. O Undertone explica cada um com as definições e os números do seu próprio time, para todos lerem o painel do mesmo jeito.</p>
+          <p class="uc-for">Para novos profissionais de marketing, agências parceiras e os fundadores a quem eles reportam.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Growth semanal</div><div class="hud-meta">10:30 · Ouvindo</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">Na reunião</div>
+              <div class="line"><span class="who"><b>Noor</b> · 10:30</span>O <span class="term">CAC</span> de mídia social paga subiu 18% desde o lançamento da Spring Bloom.</div>
+              <div class="line"><span class="who"><b>Jonah</b> · 10:31</span>Os <span class="term">MQLs</span> também subiram, mas também passamos para uma <span class="term">janela de atribuição</span> mais curta.</div>
+              <div class="line to-you"><span class="who"><b>Noor</b> · 10:32 · <em>para você</em></span>Como está a série de webinars em relação à meta?</div>
+            </div>
+            <div>
+              <div class="col-label">No seu painel</div>
+              <div class="ctx"><div class="ct">CAC <small>Provavelmente novo</small></div><p>Custo de aquisição de clientes: investimento dividido por novos clientes. O seu painel conta só os canais pagos.</p><span class="src"><img src="../assets/logos/hubspot.png" alt="" width="13" height="13">HubSpot · Painel de growth</span></div>
+              <div class="ctx"><div class="ct">Janela de atribuição <small>Provavelmente novo</small></div><p>Por quanto tempo depois de um clique um cadastro ainda conta para o anúncio. Mudou de 28 para 7 dias em 3 de março.</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #growth</span></div>
+              <div class="ctx answer"><div class="ct">Quando perguntarem a você <small>Contexto e lembretes</small></div><ul class="ticks sug"><li>310 de 400 inscrições até agora neste trimestre</li><li>A próxima sessão foi para o dia 21</li></ul><span class="src"><img src="../assets/logos/hubspot.png" alt="" width="13" height="13">HubSpot · Série de webinars</span></div>
+            </div>
+          </div>
+          <p class="sample">Exemplo. Nomes, campanhas e números são fictícios.</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-eng" role="tabpanel" aria-labelledby="uc-t-eng" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>Fluente no vocabulário do seu stack</h3>
+          <p>Reuniões de engenharia são cheias de nomes de serviços, termos de rollout e números de latência. O Undertone explica tudo a partir dos seus chamados, runbooks e canais, para você acompanhar o sync de release ou a revisão de incidente desde a primeira semana.</p>
+          <p class="uc-for">Para novos engenheiros, gerentes de produto e líderes de suporte.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Sync de release</div><div class="hud-meta">15:10 · Ouvindo</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">Na reunião</div>
+              <div class="line"><span class="who"><b>Sam</b> · 15:10</span>O <span class="term">canary</span> do checkout Larkspur está limpo até agora.</div>
+              <div class="line"><span class="who"><b>Kai</b> · 15:11</span>Mas o <span class="term">p99</span> foi de 340 para 410 milissegundos.</div>
+              <div class="line to-you"><span class="who"><b>Sam</b> · 15:12 · <em>para você</em></span>A nova página de preços está atrás de uma <span class="term">feature flag</span>?</div>
+            </div>
+            <div>
+              <div class="col-label">No seu painel</div>
+              <div class="ctx"><div class="ct">Canary <small>Provavelmente novo</small></div><p>Uma versão liberada primeiro para 5% do tráfego. O canary do checkout Larkspur começou às 14:30.</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #releases</span></div>
+              <div class="ctx"><div class="ct">p99 <small>Talvez novo</small></div><p>O tempo de resposta abaixo do qual ficam 99% das requisições. O seu alerta dispara em 450 milissegundos.</p><span class="src"><img src="../assets/logos/datadog.png" alt="" width="13" height="13">Datadog · Latência do checkout</span></div>
+              <div class="ctx answer"><div class="ct">Quando perguntarem a você <small>Contexto e lembretes</small></div><ul class="ticks sug"><li>A flag pricing-v2 controla a nova página; está ativa só para a equipe interna</li><li>Você disse ao Kai que compartilharia uma data de rollout até quinta-feira</li></ul><span class="src"><img src="../assets/logos/jira.png" alt="" width="13" height="13">Jira · WEB-532</span></div>
+            </div>
+          </div>
+          <p class="sample">Exemplo. Nomes, serviços e chamados são fictícios.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1240,6 +1462,39 @@
       && !(navigator.connection && navigator.connection.saveData);
     if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
+
+  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
+  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
+  (function () {
+    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
+      var c = t.content, ctx = c.querySelector("[data-ctx]");
+      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
+        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
+    });
+    var tabs = document.querySelectorAll(".tab");
+    var panel = document.getElementById("panel");
+    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function select(n, focus) {
+      var d = data[n];
+      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
+      if (focus) tabs[n].focus();
+      panel.setAttribute("aria-labelledby", "tab-" + n);
+      document.getElementById("d-title").textContent = d.title;
+      document.getElementById("d-meta").textContent = d.meta;
+      document.getElementById("d-say").innerHTML = d.say;
+      var ctx = document.getElementById("d-ctx");
+      ctx.className = d.ctxClass;
+      ctx.innerHTML = d.ctx;
+      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
+    }
+    tabs.forEach(function (t, n) {
+      t.addEventListener("click", function () { select(n); });
+      t.addEventListener("keydown", function (e) {
+        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
+        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
+      });
+    });
+  })();
 </script>
 <script>
 (() => {
@@ -1257,6 +1512,36 @@
   io.observe(dm);
   items.forEach(li => li.addEventListener('click', () => { clearTimeout(timer); show(n = +li.dataset.s); timer = setTimeout(tick, 5000); }));
 })();
+</script>
+<script>
+  // Use cases: one industry at a time. Arrow keys, Home and End move between tabs (roving tabindex).
+  (function () {
+    var tabs = [].slice.call(document.querySelectorAll(".uc-tab"));
+    if (!tabs.length) return;
+    function pick(t, focus) {
+      tabs.forEach(function (o) {
+        var on = o === t, p = document.getElementById(o.getAttribute("aria-controls"));
+        o.setAttribute("aria-selected", on ? "true" : "false");
+        o.tabIndex = on ? 0 : -1;
+        p.hidden = !on;
+        p.classList.toggle("uc-play", on);
+      });
+      if (focus) t.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener("click", function () { pick(t); });
+      t.addEventListener("keydown", function (e) {
+        var rtl = document.documentElement.dir === "rtl", n = tabs.length, j = null;
+        if (e.key === "ArrowRight") j = rtl ? i - 1 : i + 1;
+        else if (e.key === "ArrowLeft") j = rtl ? i + 1 : i - 1;
+        else if (e.key === "Home") j = 0;
+        else if (e.key === "End") j = n - 1;
+        if (j === null) return;
+        e.preventDefault();
+        pick(tabs[(j + n) % n], true);
+      });
+    });
+  })();
 </script>
 <script>
   // Language menu: remember a manual choice (the root page reads it before auto-detecting), close on Escape or outside click.

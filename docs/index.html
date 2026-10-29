@@ -103,7 +103,7 @@
   .brand img { width: 26px; height: 26px; }
   .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 2px 9px; background: var(--surface); }
   .nav-links { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--text-2); }
-  .nav-links > a:not(.btn) { padding: 6px 10px; border-radius: 8px; transition: color .15s, background-color .15s; }
+  .nav-links > a:not(.btn) { padding: 6px 10px; border-radius: 8px; white-space: nowrap; transition: color .15s, background-color .15s; }
   .nav-links > a:not(.btn):hover { color: var(--text); background: var(--surface); }
 
   /* Buttons */
@@ -355,6 +355,37 @@
   .dm-card .s { color: var(--text-3); }
   @media (max-width: 860px) { .dm { grid-template-columns: 1fr; } .dm-stage { min-height: 380px; } }
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
+  /* Use cases by industry: uc- prefix keeps these apart from the #try tabs and other globals */
+  .uc-tabs { display: flex; flex-wrap: wrap; gap: 4px; width: fit-content; max-width: 100%; margin-top: 40px; padding: 4px; border-radius: var(--r); border: 1px solid var(--border); background: var(--surface); }
+  .uc-tab { all: unset; box-sizing: border-box; cursor: pointer; padding: 8px 16px; border-radius: var(--r-sm); font-size: 14.5px; font-weight: 500; letter-spacing: -.01em; color: var(--text-2); text-align: center; transition: color .15s, background-color .15s; }
+  .uc-tab:hover { color: var(--text); background: rgba(255, 255, 255, .04); }
+  .uc-tab[aria-selected="true"] { color: var(--text); background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--border-2); }
+  .uc-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .uc-panel { margin-top: 20px; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.5fr); gap: 36px; align-items: start; }
+  .uc-panel[hidden] { display: none; }
+  .uc-panel:focus-visible { outline-offset: 6px; }
+  .uc-intro { padding-top: 8px; }
+  .uc-intro h3 { font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2; }
+  .uc-intro p { margin-top: 12px; color: var(--text-2); font-size: 16px; }
+  .uc-intro .uc-for { margin-top: 18px; font-size: 14px; color: var(--text-2); border-inline-start: 2px solid var(--accent); padding-inline-start: 12px; }
+  .uc-mock { border-radius: var(--r-lg); border: 1px solid rgba(255, 255, 255, .12); background: radial-gradient(120% 90% at 100% 0%, rgba(99, 102, 241, .14), transparent 60%), rgba(24, 25, 33, .62); box-shadow: 0 30px 80px -30px rgba(0, 0, 0, .7); padding: 16px 18px 18px; min-width: 0; }
+  .uc-mock .hud-head { padding: 0 0 14px; border: 0; }
+  .uc-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 14px; }
+  .uc-body .ctx:last-child, .uc-body .line:last-child { margin-bottom: 0; }
+  .uc-body .ctx .ticks { margin-top: 6px; }
+  .uc-body .ctx .ticks li { font-size: 13.5px; color: #D4D4D8; }
+  .uc-mock .sample { padding: 14px 0 0; }
+  .uc-panel.uc-play .ctx { animation: rise .5s var(--out) both; }
+  .uc-panel.uc-play .ctx:nth-child(3) { animation-delay: .1s; }
+  .uc-panel.uc-play .ctx:nth-child(4) { animation-delay: .2s; }
+  @media (max-width: 1080px) { .uc-body { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .uc-panel { grid-template-columns: 1fr; gap: 20px; } .uc-intro { padding-top: 0; } }
+  @media (max-width: 640px) {
+    .uc-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
+    .uc-tab { padding: 8px 6px; font-size: 13.5px; }
+    .uc-mock { padding: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .uc-panel.uc-play .ctx { animation: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
   .plans.one { grid-template-columns: minmax(0, 520px); }
@@ -531,7 +562,7 @@
 
   footer { margin-top: 80px; border-top: 1px solid var(--border); }
   footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 28px 0 44px; font-size: 14px; color: var(--text-3); }
-  footer nav { display: flex; gap: 20px; }
+  footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   footer a:hover { color: var(--text); }
 
   /* Language menu (nav and footer). The links are written by tools/i18n.py. */
@@ -632,6 +663,7 @@
     <a class="brand" href="#" translate="no"><img src="assets/icon-256.png" alt="">Undertone <span class="pill">macOS</span></a>
     <nav class="nav-links" aria-label="Main">
       <a href="#how">How it works</a>
+      <a href="#use-cases">Use cases</a>
       <a href="#features">Features</a>
       <a href="#claude">Claude</a>
       <a href="#pricing">Free beta</a>
@@ -781,6 +813,196 @@
           <p data-say><span class="who"><b>Chair</b> · 09:31 · <em>to you</em></span>What's driving <span class="term">net revenue retention</span> this quarter?</p>
           <div data-ctx class="ctx answer"><div class="ct">Context for you <small>The chair asked</small></div><p>NRR went from 108% to 112%, driven by enterprise expansions: three accounts added seats.</p><span class="src"><img src="assets/logos/notion.png" alt="" width="13" height="13">Notion · Q3 board deck</span></div>
         </template>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="use-cases">
+    <div class="wrap">
+      <div class="head">
+        <h2>Not just for engineers</h2>
+        <p>Every field has its own language. On a contract call, a deal review or a clinic huddle, Undertone explains the shorthand from your team's own notes, and has the context ready when someone turns to you.</p>
+      </div>
+      <div class="uc-tabs" role="tablist" aria-label="Industries">
+        <button class="uc-tab" role="tab" id="uc-t-legal" aria-selected="true" aria-controls="uc-p-legal">Legal</button>
+        <button class="uc-tab" role="tab" id="uc-t-realty" aria-selected="false" aria-controls="uc-p-realty" tabindex="-1">Real estate</button>
+        <button class="uc-tab" role="tab" id="uc-t-health" aria-selected="false" aria-controls="uc-p-health" tabindex="-1">Healthcare</button>
+        <button class="uc-tab" role="tab" id="uc-t-sales" aria-selected="false" aria-controls="uc-p-sales" tabindex="-1">Sales</button>
+        <button class="uc-tab" role="tab" id="uc-t-mktg" aria-selected="false" aria-controls="uc-p-mktg" tabindex="-1">Marketing</button>
+        <button class="uc-tab" role="tab" id="uc-t-eng" aria-selected="false" aria-controls="uc-p-eng" tabindex="-1">Engineering</button>
+      </div>
+
+      <div class="uc-panel" id="uc-p-legal" role="tabpanel" aria-labelledby="uc-t-legal" tabindex="0">
+        <div class="uc-intro">
+          <h3>Follow the deal, not just the words</h3>
+          <p>Contract calls run on shorthand: redlines, MFN clauses, caps and carve-outs, each with the client's own history behind it. Undertone explains every term from your firm's playbook and the matter's notes, so you keep up from the first call.</p>
+          <p class="uc-for">For new associates, paralegals and in-house counsel.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Fennick Freight MSA review</div><div class="hud-meta">14:05 · Listening</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">On the call</div>
+              <div class="line"><span class="who"><b>Dana</b> · 14:05</span>Their latest <span class="term">redline</span> strikes our <span class="term">MFN clause</span> entirely.</div>
+              <div class="line"><span class="who"><b>Omar</b> · 14:06</span>And they want the <span class="term">indemnity cap</span> at twice the annual fees.</div>
+              <div class="line to-you"><span class="who"><b>Dana</b> · 14:07 · <em>to you</em></span>Where did we land on the cap last round?</div>
+            </div>
+            <div>
+              <div class="col-label">In your panel</div>
+              <div class="ctx"><div class="ct">Redline <small>Likely new</small></div><p>The draft marked up with the other side's changes. This is version 4, sent Monday.</p><span class="src"><img src="assets/logos/gdrive.png" alt="" width="13" height="13">Drive · Fennick MSA v4</span></div>
+              <div class="ctx"><div class="ct">MFN clause <small>Likely new</small></div><p>Most-favoured nation: Fennick gets any better price we give a similar customer. Your playbook marks it as must-keep.</p><span class="src"><img src="assets/logos/notion.png" alt="" width="13" height="13">Notion · Contract playbook</span></div>
+              <div class="ctx answer"><div class="ct">When you're asked <small>Context and reminders</small></div><ul class="ticks sug"><li>Last round: the cap was 12 months of fees</li><li>Still open: the carve-out for data breaches</li></ul><span class="src"><img src="assets/logos/gdrive.png" alt="" width="13" height="13">Drive · MSA v3 call notes</span></div>
+            </div>
+          </div>
+          <p class="sample">Sample. Names, companies and figures are made up.</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-realty" role="tabpanel" aria-labelledby="uc-t-realty" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>Keep up with the deal team</h3>
+          <p>Brokers, lenders and buyers talk in cap rates, 1031s and contingencies, and every deal runs on its own deadlines. Undertone explains the terms and brings up the dates from your deal notes, so nothing slips while you're still learning the language.</p>
+          <p class="uc-for">For newer agents, transaction coordinators and first-time investors.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Alder Street offer review</div><div class="hud-meta">11:20 · Listening</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">On the call</div>
+              <div class="line"><span class="who"><b>Rosa</b> · 11:20</span>At this price the <span class="term">cap rate</span> comes out around 6.1%.</div>
+              <div class="line"><span class="who"><b>Ben</b> · 11:21</span>The buyer is doing a <span class="term">1031 exchange</span>, so they need to close fast.</div>
+              <div class="line to-you"><span class="who"><b>Rosa</b> · 11:22 · <em>to you</em></span>When does the inspection <span class="term">contingency</span> run out?</div>
+            </div>
+            <div>
+              <div class="col-label">In your panel</div>
+              <div class="ctx"><div class="ct">Cap rate <small>Likely new</small></div><p>Net operating income divided by the price. Your last three comps on Alder Street closed between 5.8% and 6.4%.</p><span class="src"><img src="assets/logos/gdrive.png" alt="" width="13" height="13">Drive · Alder Street comps</span></div>
+              <div class="ctx"><div class="ct">1031 exchange <small>Maybe new</small></div><p>A tax-deferred swap of one investment property for another, with strict deadlines to name and buy the replacement.</p><span class="src"><img src="assets/logos/notion.png" alt="" width="13" height="13">Notion · Buyer notes</span></div>
+              <div class="ctx answer"><div class="ct">When you're asked <small>Context and reminders</small></div><ul class="ticks sug"><li>The inspection contingency ends Friday, June 12</li><li>The roof report hasn't come back yet</li></ul><span class="src"><img src="assets/logos/gmail.png" alt="" width="13" height="13">Gmail · Signed purchase agreement</span></div>
+            </div>
+          </div>
+          <p class="sample">Sample. Names, addresses and figures are made up.</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-health" role="tabpanel" aria-labelledby="uc-t-health" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>Clinical and billing shorthand, explained</h3>
+          <p>Care-team and billing calls mix clinical terms with payer rules: prior auths, CPT codes, EHR workflows. Undertone explains them from your practice's own policies and tickets, and transcribes the call on your Mac.</p>
+          <p class="uc-for">For new clinicians, practice managers and billing staff.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Riverbend Clinic ops huddle</div><div class="hud-meta">08:40 · Listening</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">On the call</div>
+              <div class="line"><span class="who"><b>Dr. Mehta</b> · 08:40</span>Three MRIs are stuck waiting on <span class="term">prior auth</span> again.</div>
+              <div class="line"><span class="who"><b>Lena</b> · 08:41</span>Two of them went out under the wrong <span class="term">CPT code</span>.</div>
+              <div class="line"><span class="who"><b>Dr. Mehta</b> · 08:42</span>Can we flag it in the <span class="term">EHR</span> before anyone books the scan?</div>
+            </div>
+            <div>
+              <div class="col-label">In your panel</div>
+              <div class="ctx"><div class="ct">Prior auth <small>Likely new</small></div><p>Prior authorization: the insurer has to approve the scan before it's booked. Your payer guide lists which plans need it.</p><span class="src"><img src="assets/logos/confluence.png" alt="" width="13" height="13">Confluence · Payer guide</span></div>
+              <div class="ctx"><div class="ct">CPT code <small>Likely new</small></div><p>The billing code for a procedure. Lena's ticket tracks the two MRI claims sent back last week.</p><span class="src"><img src="assets/logos/jira.png" alt="" width="13" height="13">Jira · REV-118</span></div>
+              <div class="ctx"><div class="ct">EHR <small>Maybe new</small></div><p>Electronic health record. Here, the system where the front desk books scans and checks coverage.</p><span class="src"><img src="assets/logos/notion.png" alt="" width="13" height="13">Notion · Front desk guide</span></div>
+            </div>
+          </div>
+          <p class="sample">Sample. Names, clinics and tickets are made up.</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-sales" role="tabpanel" aria-labelledby="uc-t-sales" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>Walk into the deal review ready</h3>
+          <p>Pipeline calls are full of frameworks and numbers: MEDDIC, champions, ARR, next steps. Undertone explains them, pulls the account's history from your CRM and Slack, and has the facts in front of you when your manager asks.</p>
+          <p class="uc-for">For new account executives, SDRs and sales engineers.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Pipeline review</div><div class="hud-meta">16:00 · Listening</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">On the call</div>
+              <div class="line"><span class="who"><b>Marcus</b> · 16:00</span>Let's go through <span class="term">MEDDIC</span> for Tallis Robotics.</div>
+              <div class="line to-you"><span class="who"><b>Marcus</b> · 16:01 · <em>to you</em></span>Who's our <span class="term">champion</span> there, and what's the <span class="term">ARR</span> on the proposal?</div>
+            </div>
+            <div>
+              <div class="col-label">In your panel</div>
+              <div class="ctx"><div class="ct">MEDDIC <small>Likely new</small></div><p>The team's deal checklist: Metrics, Economic buyer, Decision criteria, Decision process, Identify pain, Champion.</p><span class="src"><img src="assets/logos/notion.png" alt="" width="13" height="13">Notion · Sales playbook</span></div>
+              <div class="ctx"><div class="ct">ARR <small>Maybe new</small></div><p>Annual recurring revenue: what the contract is worth each year.</p><span class="src"><img src="assets/logos/slack.png" alt="" width="13" height="13">Slack · #sales-onboarding</span></div>
+              <div class="ctx answer"><div class="ct">When you're asked <small>Context and reminders</small></div><ul class="ticks sug"><li>Champion: Ana Ruiz, VP of Operations, who set up the pilot</li><li>Proposal: $84,000 ARR for 120 seats</li><li>The economic buyer hasn't joined a call yet</li></ul><span class="src"><img src="assets/logos/hubspot.png" alt="" width="13" height="13">HubSpot · Tallis Robotics</span></div>
+            </div>
+          </div>
+          <p class="sample">Sample. Names, companies and figures are made up.</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-mktg" role="tabpanel" aria-labelledby="uc-t-mktg" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>Speak the funnel from day one</h3>
+          <p>Marketing syncs jump between CAC, MQLs, attribution windows and campaign code names. Undertone explains each one with your team's own definitions and numbers, so everyone reads the dashboard the same way.</p>
+          <p class="uc-for">For new marketers, agency partners and the founders they report to.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Growth weekly</div><div class="hud-meta">10:30 · Listening</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">On the call</div>
+              <div class="line"><span class="who"><b>Noor</b> · 10:30</span>Paid social <span class="term">CAC</span> is up 18% since Spring Bloom launched.</div>
+              <div class="line"><span class="who"><b>Jonah</b> · 10:31</span><span class="term">MQLs</span> are up too, but we also moved to a shorter <span class="term">attribution window</span>.</div>
+              <div class="line to-you"><span class="who"><b>Noor</b> · 10:32 · <em>to you</em></span>How's the webinar series tracking against target?</div>
+            </div>
+            <div>
+              <div class="col-label">In your panel</div>
+              <div class="ctx"><div class="ct">CAC <small>Likely new</small></div><p>Customer acquisition cost: spend divided by new customers. Your dashboard counts paid channels only.</p><span class="src"><img src="assets/logos/hubspot.png" alt="" width="13" height="13">HubSpot · Growth dashboard</span></div>
+              <div class="ctx"><div class="ct">Attribution window <small>Likely new</small></div><p>How long after a click a sign-up still counts toward the ad. Changed from 28 to 7 days on March 3.</p><span class="src"><img src="assets/logos/slack.png" alt="" width="13" height="13">Slack · #growth</span></div>
+              <div class="ctx answer"><div class="ct">When you're asked <small>Context and reminders</small></div><ul class="ticks sug"><li>310 of 400 registrations so far this quarter</li><li>The next session moved to the 21st</li></ul><span class="src"><img src="assets/logos/hubspot.png" alt="" width="13" height="13">HubSpot · Webinar series</span></div>
+            </div>
+          </div>
+          <p class="sample">Sample. Names, campaigns and figures are made up.</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-eng" role="tabpanel" aria-labelledby="uc-t-eng" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>Fluent in your stack's own words</h3>
+          <p>Engineering calls are dense with service names, rollout terms and latency numbers. Undertone explains them from your tickets, runbooks and channels, so you can follow the release sync or the incident review from your first week.</p>
+          <p class="uc-for">For new engineers, product managers and support leads.</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Release sync</div><div class="hud-meta">15:10 · Listening</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">On the call</div>
+              <div class="line"><span class="who"><b>Sam</b> · 15:10</span>The <span class="term">canary</span> for Larkspur checkout looks clean so far.</div>
+              <div class="line"><span class="who"><b>Kai</b> · 15:11</span><span class="term">p99</span> went from 340 to 410 milliseconds, though.</div>
+              <div class="line to-you"><span class="who"><b>Sam</b> · 15:12 · <em>to you</em></span>Is the new pricing page behind a <span class="term">feature flag</span>?</div>
+            </div>
+            <div>
+              <div class="col-label">In your panel</div>
+              <div class="ctx"><div class="ct">Canary <small>Likely new</small></div><p>A release sent to 5% of traffic first. Larkspur checkout's canary started at 14:30.</p><span class="src"><img src="assets/logos/slack.png" alt="" width="13" height="13">Slack · #releases</span></div>
+              <div class="ctx"><div class="ct">p99 <small>Maybe new</small></div><p>The response time 99% of requests stay under. Your alert fires at 450 milliseconds.</p><span class="src"><img src="assets/logos/datadog.png" alt="" width="13" height="13">Datadog · Checkout latency</span></div>
+              <div class="ctx answer"><div class="ct">When you're asked <small>Context and reminders</small></div><ul class="ticks sug"><li>The pricing-v2 flag controls the new page; it's on for staff only</li><li>You told Kai you'd share a rollout date by Thursday</li></ul><span class="src"><img src="assets/logos/jira.png" alt="" width="13" height="13">Jira · WEB-532</span></div>
+            </div>
+          </div>
+          <p class="sample">Sample. Names, services and tickets are made up.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1268,6 +1490,39 @@
       && !(navigator.connection && navigator.connection.saveData);
     if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
+
+  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
+  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
+  (function () {
+    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
+      var c = t.content, ctx = c.querySelector("[data-ctx]");
+      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
+        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
+    });
+    var tabs = document.querySelectorAll(".tab");
+    var panel = document.getElementById("panel");
+    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function select(n, focus) {
+      var d = data[n];
+      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
+      if (focus) tabs[n].focus();
+      panel.setAttribute("aria-labelledby", "tab-" + n);
+      document.getElementById("d-title").textContent = d.title;
+      document.getElementById("d-meta").textContent = d.meta;
+      document.getElementById("d-say").innerHTML = d.say;
+      var ctx = document.getElementById("d-ctx");
+      ctx.className = d.ctxClass;
+      ctx.innerHTML = d.ctx;
+      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
+    }
+    tabs.forEach(function (t, n) {
+      t.addEventListener("click", function () { select(n); });
+      t.addEventListener("keydown", function (e) {
+        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
+        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
+      });
+    });
+  })();
 </script>
 <script>
 (() => {
@@ -1285,6 +1540,36 @@
   io.observe(dm);
   items.forEach(li => li.addEventListener('click', () => { clearTimeout(timer); show(n = +li.dataset.s); timer = setTimeout(tick, 5000); }));
 })();
+</script>
+<script>
+  // Use cases: one industry at a time. Arrow keys, Home and End move between tabs (roving tabindex).
+  (function () {
+    var tabs = [].slice.call(document.querySelectorAll(".uc-tab"));
+    if (!tabs.length) return;
+    function pick(t, focus) {
+      tabs.forEach(function (o) {
+        var on = o === t, p = document.getElementById(o.getAttribute("aria-controls"));
+        o.setAttribute("aria-selected", on ? "true" : "false");
+        o.tabIndex = on ? 0 : -1;
+        p.hidden = !on;
+        p.classList.toggle("uc-play", on);
+      });
+      if (focus) t.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener("click", function () { pick(t); });
+      t.addEventListener("keydown", function (e) {
+        var rtl = document.documentElement.dir === "rtl", n = tabs.length, j = null;
+        if (e.key === "ArrowRight") j = rtl ? i - 1 : i + 1;
+        else if (e.key === "ArrowLeft") j = rtl ? i + 1 : i - 1;
+        else if (e.key === "Home") j = 0;
+        else if (e.key === "End") j = n - 1;
+        if (j === null) return;
+        e.preventDefault();
+        pick(tabs[(j + n) % n], true);
+      });
+    });
+  })();
 </script>
 <script>
   // Language menu: remember a manual choice (the root page reads it before auto-detecting), close on Escape or outside click.

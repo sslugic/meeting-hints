@@ -77,7 +77,7 @@
   .brand img { width: 26px; height: 26px; }
   .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 2px 9px; background: var(--surface); }
   .nav-links { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--text-2); }
-  .nav-links > a:not(.btn) { padding: 6px 10px; border-radius: 8px; transition: color .15s, background-color .15s; }
+  .nav-links > a:not(.btn) { padding: 6px 10px; border-radius: 8px; white-space: nowrap; transition: color .15s, background-color .15s; }
   .nav-links > a:not(.btn):hover { color: var(--text); background: var(--surface); }
 
   /* Buttons */
@@ -329,6 +329,37 @@
   .dm-card .s { color: var(--text-3); }
   @media (max-width: 860px) { .dm { grid-template-columns: 1fr; } .dm-stage { min-height: 380px; } }
   @media (prefers-reduced-motion: reduce) { .dm-steps li, .dm-spot, .dm-card, .dm-say mark { transition: none; } }
+  /* Use cases by industry: uc- prefix keeps these apart from the #try tabs and other globals */
+  .uc-tabs { display: flex; flex-wrap: wrap; gap: 4px; width: fit-content; max-width: 100%; margin-top: 40px; padding: 4px; border-radius: var(--r); border: 1px solid var(--border); background: var(--surface); }
+  .uc-tab { all: unset; box-sizing: border-box; cursor: pointer; padding: 8px 16px; border-radius: var(--r-sm); font-size: 14.5px; font-weight: 500; letter-spacing: -.01em; color: var(--text-2); text-align: center; transition: color .15s, background-color .15s; }
+  .uc-tab:hover { color: var(--text); background: rgba(255, 255, 255, .04); }
+  .uc-tab[aria-selected="true"] { color: var(--text); background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--border-2); }
+  .uc-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .uc-panel { margin-top: 20px; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.5fr); gap: 36px; align-items: start; }
+  .uc-panel[hidden] { display: none; }
+  .uc-panel:focus-visible { outline-offset: 6px; }
+  .uc-intro { padding-top: 8px; }
+  .uc-intro h3 { font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2; }
+  .uc-intro p { margin-top: 12px; color: var(--text-2); font-size: 16px; }
+  .uc-intro .uc-for { margin-top: 18px; font-size: 14px; color: var(--text-2); border-inline-start: 2px solid var(--accent); padding-inline-start: 12px; }
+  .uc-mock { border-radius: var(--r-lg); border: 1px solid rgba(255, 255, 255, .12); background: radial-gradient(120% 90% at 100% 0%, rgba(99, 102, 241, .14), transparent 60%), rgba(24, 25, 33, .62); box-shadow: 0 30px 80px -30px rgba(0, 0, 0, .7); padding: 16px 18px 18px; min-width: 0; }
+  .uc-mock .hud-head { padding: 0 0 14px; border: 0; }
+  .uc-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 14px; }
+  .uc-body .ctx:last-child, .uc-body .line:last-child { margin-bottom: 0; }
+  .uc-body .ctx .ticks { margin-top: 6px; }
+  .uc-body .ctx .ticks li { font-size: 13.5px; color: #D4D4D8; }
+  .uc-mock .sample { padding: 14px 0 0; }
+  .uc-panel.uc-play .ctx { animation: rise .5s var(--out) both; }
+  .uc-panel.uc-play .ctx:nth-child(3) { animation-delay: .1s; }
+  .uc-panel.uc-play .ctx:nth-child(4) { animation-delay: .2s; }
+  @media (max-width: 1080px) { .uc-body { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .uc-panel { grid-template-columns: 1fr; gap: 20px; } .uc-intro { padding-top: 0; } }
+  @media (max-width: 640px) {
+    .uc-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
+    .uc-tab { padding: 8px 6px; font-size: 13.5px; }
+    .uc-mock { padding: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .uc-panel.uc-play .ctx { animation: none; } }
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
   .plans.one { grid-template-columns: minmax(0, 520px); }
@@ -505,7 +536,7 @@
 
   footer { margin-top: 80px; border-top: 1px solid var(--border); }
   footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 28px 0 44px; font-size: 14px; color: var(--text-3); }
-  footer nav { display: flex; gap: 20px; }
+  footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   footer a:hover { color: var(--text); }
 
   /* Language menu (nav and footer). The links are written by tools/i18n.py. */
@@ -606,6 +637,7 @@
     <a class="brand" href="#" translate="no"><img src="../assets/icon-256.png" alt="">Undertone <span class="pill">macOS</span></a>
     <nav class="nav-links" aria-label="主导航">
       <a href="#how">工作原理</a>
+      <a href="#use-cases">使用场景</a>
       <a href="#features">功能</a>
       <a href="#claude">Claude</a>
       <a href="#pricing">免费测试版</a>
@@ -754,6 +786,196 @@
           <p data-say><span class="who"><b>主席</b> · 09:31 · <em>问你</em></span>本季度推动<span class="term">净收入留存率</span>的因素是什么？</p>
           <div data-ctx class="ctx answer"><div class="ct">给你的背景 <small>主席提问</small></div><p>NRR 从 108% 升至 112%，主要来自企业客户扩展：三个客户增加了席位。</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Q3 董事会汇报材料</span></div>
         </template>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="use-cases">
+    <div class="wrap">
+      <div class="head">
+        <h2>不只是给工程师用的</h2>
+        <p>每个行业都有自己的语言。无论是合同电话、交易复盘还是诊所晨会，Undertone 都会根据团队自己的笔记解释这些缩写和行话，并在有人问到你时备好相关背景。</p>
+      </div>
+      <div class="uc-tabs" role="tablist" aria-label="行业">
+        <button class="uc-tab" role="tab" id="uc-t-legal" aria-selected="true" aria-controls="uc-p-legal">法律</button>
+        <button class="uc-tab" role="tab" id="uc-t-realty" aria-selected="false" aria-controls="uc-p-realty" tabindex="-1">房地产</button>
+        <button class="uc-tab" role="tab" id="uc-t-health" aria-selected="false" aria-controls="uc-p-health" tabindex="-1">医疗</button>
+        <button class="uc-tab" role="tab" id="uc-t-sales" aria-selected="false" aria-controls="uc-p-sales" tabindex="-1">销售</button>
+        <button class="uc-tab" role="tab" id="uc-t-mktg" aria-selected="false" aria-controls="uc-p-mktg" tabindex="-1">市场营销</button>
+        <button class="uc-tab" role="tab" id="uc-t-eng" aria-selected="false" aria-controls="uc-p-eng" tabindex="-1">工程</button>
+      </div>
+
+      <div class="uc-panel" id="uc-p-legal" role="tabpanel" aria-labelledby="uc-t-legal" tabindex="0">
+        <div class="uc-intro">
+          <h3>跟上的不只是字面，而是整笔交易</h3>
+          <p>合同电话里满是行话：redline、MFN 条款、赔偿上限和例外条款，每一项背后都有客户自己的来龙去脉。Undertone 根据律所的谈判手册和案件笔记解释每个术语，让你从第一通电话起就跟得上。</p>
+          <p class="uc-for">适合新入职的律师、律师助理和企业法务。</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Fennick Freight MSA 审阅</div><div class="hud-meta">14:05 · 正在聆听</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">通话内容</div>
+              <div class="line"><span class="who"><b>Dana</b> · 14:05</span>对方最新的 <span class="term">redline</span> 把我们的 <span class="term">MFN 条款</span>整个删掉了。</div>
+              <div class="line"><span class="who"><b>Omar</b> · 14:06</span>他们还想把<span class="term">赔偿上限</span>定为年费的两倍。</div>
+              <div class="line to-you"><span class="who"><b>Dana</b> · 14:07 · <em>问你</em></span>上一轮我们把上限谈到多少了？</div>
+            </div>
+            <div>
+              <div class="col-label">你的面板</div>
+              <div class="ctx"><div class="ct">Redline <small>可能是新词</small></div><p>标注了对方修改的合同草稿。这是周一发来的第 4 版。</p><span class="src"><img src="../assets/logos/gdrive.png" alt="" width="13" height="13">Drive · Fennick MSA v4</span></div>
+              <div class="ctx"><div class="ct">MFN 条款 <small>可能是新词</small></div><p>最惠国条款：如果我们给类似客户更低的价格，Fennick 也能享受。谈判手册把它列为必须保留。</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · 合同谈判手册</span></div>
+              <div class="ctx answer"><div class="ct">被问到时 <small>背景与提醒</small></div><ul class="ticks sug"><li>上一轮：上限为 12 个月的费用</li><li>仍未定：数据泄露的例外条款</li></ul><span class="src"><img src="../assets/logos/gdrive.png" alt="" width="13" height="13">Drive · MSA v3 通话笔记</span></div>
+            </div>
+          </div>
+          <p class="sample">示例。人名、公司和数字均为虚构。</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-realty" role="tabpanel" aria-labelledby="uc-t-realty" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>跟上交易团队的节奏</h3>
+          <p>经纪人、贷款方和买方张口就是 cap rate、1031 和附加条件，每笔交易都有自己的截止日期。Undertone 解释这些术语，并从交易笔记里调出日期，让你在还在熟悉行话时也不会漏掉什么。</p>
+          <p class="uc-for">适合新经纪人、交易协调员和首次投资者。</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Alder Street 报价复盘</div><div class="hud-meta">11:20 · 正在聆听</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">通话内容</div>
+              <div class="line"><span class="who"><b>Rosa</b> · 11:20</span>按这个价格，<span class="term">cap rate</span> 大约是 6.1%。</div>
+              <div class="line"><span class="who"><b>Ben</b> · 11:21</span>买方在做 <span class="term">1031 exchange</span>，所以需要尽快成交。</div>
+              <div class="line to-you"><span class="who"><b>Rosa</b> · 11:22 · <em>问你</em></span>验房的 <span class="term">contingency</span> 什么时候到期？</div>
+            </div>
+            <div>
+              <div class="col-label">你的面板</div>
+              <div class="ctx"><div class="ct">Cap rate <small>可能是新词</small></div><p>净运营收入除以价格。Alder Street 最近三个可比物业的成交区间在 5.8% 到 6.4%。</p><span class="src"><img src="../assets/logos/gdrive.png" alt="" width="13" height="13">Drive · Alder Street 可比物业</span></div>
+              <div class="ctx"><div class="ct">1031 exchange <small>可能是新词</small></div><p>用一处投资物业置换另一处并递延缴税，指定和购入替代物业都有严格期限。</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · 买方笔记</span></div>
+              <div class="ctx answer"><div class="ct">被问到时 <small>背景与提醒</small></div><ul class="ticks sug"><li>验房附加条件于 6 月 12 日（周五）到期</li><li>屋顶检查报告还没回来</li></ul><span class="src"><img src="../assets/logos/gmail.png" alt="" width="13" height="13">Gmail · 已签署的购房合同</span></div>
+            </div>
+          </div>
+          <p class="sample">示例。人名、地址和数字均为虚构。</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-health" role="tabpanel" aria-labelledby="uc-t-health" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>临床和计费缩写，即时解释</h3>
+          <p>诊疗团队和计费电话里，临床术语和保险规则混在一起：prior auth、CPT 编码、EHR 流程。Undertone 根据诊所自己的制度和工单来解释，并在你的 Mac 上转写通话。</p>
+          <p class="uc-for">适合新入职的医护人员、诊所经理和计费人员。</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">Riverbend Clinic 运营晨会</div><div class="hud-meta">08:40 · 正在聆听</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">通话内容</div>
+              <div class="line"><span class="who"><b>Dr. Mehta</b> · 08:40</span>又有三个 MRI 卡在等 <span class="term">prior auth</span>。</div>
+              <div class="line"><span class="who"><b>Lena</b> · 08:41</span>其中两个用错了 <span class="term">CPT 编码</span>。</div>
+              <div class="line"><span class="who"><b>Dr. Mehta</b> · 08:42</span>能不能在预约检查前先在 <span class="term">EHR</span> 里标出来？</div>
+            </div>
+            <div>
+              <div class="col-label">你的面板</div>
+              <div class="ctx"><div class="ct">Prior auth <small>可能是新词</small></div><p>事先授权：检查预约前须经保险公司批准。哪些保险计划需要，见保险方指南。</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · 保险方指南</span></div>
+              <div class="ctx"><div class="ct">CPT 编码 <small>可能是新词</small></div><p>医疗项目的计费编码。上周被退回的两笔 MRI 理赔由 Lena 的工单跟进。</p><span class="src"><img src="../assets/logos/jira.png" alt="" width="13" height="13">Jira · REV-118</span></div>
+              <div class="ctx"><div class="ct">EHR <small>可能是新词</small></div><p>电子健康档案。这里指前台预约检查、核对保险的系统。</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · 前台指南</span></div>
+            </div>
+          </div>
+          <p class="sample">示例。人名、诊所和工单均为虚构。</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-sales" role="tabpanel" aria-labelledby="uc-t-sales" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>有备而来，参加交易复盘</h3>
+          <p>销售管道会议满是框架和数字：MEDDIC、内部支持者、ARR、下一步。Undertone 解释这些概念，从 CRM 和 Slack 调出客户历史，在经理问你时把事实摆在眼前。</p>
+          <p class="uc-for">适合新客户经理、SDR 和售前工程师。</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">销售管道复盘</div><div class="hud-meta">16:00 · 正在聆听</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">通话内容</div>
+              <div class="line"><span class="who"><b>Marcus</b> · 16:00</span>我们过一下 Tallis Robotics 的 <span class="term">MEDDIC</span>。</div>
+              <div class="line to-you"><span class="who"><b>Marcus</b> · 16:01 · <em>问你</em></span>那边我们的 <span class="term">champion</span> 是谁？方案的 <span class="term">ARR</span> 是多少？</div>
+            </div>
+            <div>
+              <div class="col-label">你的面板</div>
+              <div class="ctx"><div class="ct">MEDDIC <small>可能是新词</small></div><p>团队的交易检查清单：Metrics（指标）、Economic buyer（预算决策人）、Decision criteria（决策标准）、Decision process（决策流程）、Identify pain（识别痛点）、Champion（内部支持者）。</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · 销售手册</span></div>
+              <div class="ctx"><div class="ct">ARR <small>可能是新词</small></div><p>年度经常性收入：合同每年带来的金额。</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #sales-onboarding</span></div>
+              <div class="ctx answer"><div class="ct">被问到时 <small>背景与提醒</small></div><ul class="ticks sug"><li>Champion：运营副总裁 Ana Ruiz，试点就是她推动的</li><li>方案：120 个席位，ARR $84,000</li><li>预算决策人还没参加过任何通话</li></ul><span class="src"><img src="../assets/logos/hubspot.png" alt="" width="13" height="13">HubSpot · Tallis Robotics</span></div>
+            </div>
+          </div>
+          <p class="sample">示例。人名、公司和数字均为虚构。</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-mktg" role="tabpanel" aria-labelledby="uc-t-mktg" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>第一天就能聊转化漏斗</h3>
+          <p>市场例会在 CAC、MQL、归因窗口和活动代号之间来回切换。Undertone 用团队自己的定义和数据逐一解释，让每个人对仪表盘的理解保持一致。</p>
+          <p class="uc-for">适合新入职的营销人员、代理商合作伙伴，以及他们汇报的创始人。</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">增长周会</div><div class="hud-meta">10:30 · 正在聆听</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">通话内容</div>
+              <div class="line"><span class="who"><b>Noor</b> · 10:30</span>Spring Bloom 上线后，付费社交的 <span class="term">CAC</span> 涨了 18%。</div>
+              <div class="line"><span class="who"><b>Jonah</b> · 10:31</span><span class="term">MQL</span> 也涨了，但我们也把<span class="term">归因窗口</span>缩短了。</div>
+              <div class="line to-you"><span class="who"><b>Noor</b> · 10:32 · <em>问你</em></span>网络研讨会系列离目标还差多少？</div>
+            </div>
+            <div>
+              <div class="col-label">你的面板</div>
+              <div class="ctx"><div class="ct">CAC <small>可能是新词</small></div><p>获客成本：投放费用除以新客户数。这个仪表盘只统计付费渠道。</p><span class="src"><img src="../assets/logos/hubspot.png" alt="" width="13" height="13">HubSpot · 增长仪表盘</span></div>
+              <div class="ctx"><div class="ct">归因窗口 <small>可能是新词</small></div><p>点击广告后多长时间内的注册仍算作该广告的转化。3 月 3 日从 28 天改为 7 天。</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #growth</span></div>
+              <div class="ctx answer"><div class="ct">被问到时 <small>背景与提醒</small></div><ul class="ticks sug"><li>本季度已有 310 人报名，目标 400</li><li>下一场改到 21 日</li></ul><span class="src"><img src="../assets/logos/hubspot.png" alt="" width="13" height="13">HubSpot · 网络研讨会系列</span></div>
+            </div>
+          </div>
+          <p class="sample">示例。人名、活动和数字均为虚构。</p>
+        </div>
+      </div>
+
+      <div class="uc-panel" id="uc-p-eng" role="tabpanel" aria-labelledby="uc-t-eng" tabindex="0" hidden>
+        <div class="uc-intro">
+          <h3>听懂你们技术栈自己的话</h3>
+          <p>工程会议里密布着服务名、发布术语和延迟数据。Undertone 根据工单、运维手册和频道来解释，让你入职第一周就能跟上发布同步会和故障复盘。</p>
+          <p class="uc-for">适合新入职的工程师、产品经理和支持负责人。</p>
+        </div>
+        <div class="uc-mock">
+          <div class="hud-head">
+            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <div><div class="hud-title">发布同步会</div><div class="hud-meta">15:10 · 正在聆听</div></div>
+          </div>
+          <div class="uc-body">
+            <div>
+              <div class="col-label">通话内容</div>
+              <div class="line"><span class="who"><b>Sam</b> · 15:10</span>Larkspur checkout 的 <span class="term">canary</span> 目前一切正常。</div>
+              <div class="line"><span class="who"><b>Kai</b> · 15:11</span>不过 <span class="term">p99</span> 从 340 毫秒升到了 410 毫秒。</div>
+              <div class="line to-you"><span class="who"><b>Sam</b> · 15:12 · <em>问你</em></span>新的定价页面有 <span class="term">feature flag</span> 控制吗？</div>
+            </div>
+            <div>
+              <div class="col-label">你的面板</div>
+              <div class="ctx"><div class="ct">Canary <small>可能是新词</small></div><p>先只向 5% 的流量发布的版本。Larkspur checkout 的 canary 于 14:30 开始。</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #releases</span></div>
+              <div class="ctx"><div class="ct">p99 <small>可能是新词</small></div><p>99% 的请求都能在此时间内响应。告警阈值为 450 毫秒。</p><span class="src"><img src="../assets/logos/datadog.png" alt="" width="13" height="13">Datadog · Checkout 延迟</span></div>
+              <div class="ctx answer"><div class="ct">被问到时 <small>背景与提醒</small></div><ul class="ticks sug"><li>新页面由 pricing-v2 开关控制，目前只对员工开放</li><li>你答应过 Kai 周四前给出上线日期</li></ul><span class="src"><img src="../assets/logos/jira.png" alt="" width="13" height="13">Jira · WEB-532</span></div>
+            </div>
+          </div>
+          <p class="sample">示例。人名、服务和工单均为虚构。</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1240,6 +1462,39 @@
       && !(navigator.connection && navigator.connection.saveData);
     if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
+
+  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
+  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
+  (function () {
+    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
+      var c = t.content, ctx = c.querySelector("[data-ctx]");
+      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
+        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
+    });
+    var tabs = document.querySelectorAll(".tab");
+    var panel = document.getElementById("panel");
+    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function select(n, focus) {
+      var d = data[n];
+      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
+      if (focus) tabs[n].focus();
+      panel.setAttribute("aria-labelledby", "tab-" + n);
+      document.getElementById("d-title").textContent = d.title;
+      document.getElementById("d-meta").textContent = d.meta;
+      document.getElementById("d-say").innerHTML = d.say;
+      var ctx = document.getElementById("d-ctx");
+      ctx.className = d.ctxClass;
+      ctx.innerHTML = d.ctx;
+      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
+    }
+    tabs.forEach(function (t, n) {
+      t.addEventListener("click", function () { select(n); });
+      t.addEventListener("keydown", function (e) {
+        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
+        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
+      });
+    });
+  })();
 </script>
 <script>
 (() => {
@@ -1257,6 +1512,36 @@
   io.observe(dm);
   items.forEach(li => li.addEventListener('click', () => { clearTimeout(timer); show(n = +li.dataset.s); timer = setTimeout(tick, 5000); }));
 })();
+</script>
+<script>
+  // Use cases: one industry at a time. Arrow keys, Home and End move between tabs (roving tabindex).
+  (function () {
+    var tabs = [].slice.call(document.querySelectorAll(".uc-tab"));
+    if (!tabs.length) return;
+    function pick(t, focus) {
+      tabs.forEach(function (o) {
+        var on = o === t, p = document.getElementById(o.getAttribute("aria-controls"));
+        o.setAttribute("aria-selected", on ? "true" : "false");
+        o.tabIndex = on ? 0 : -1;
+        p.hidden = !on;
+        p.classList.toggle("uc-play", on);
+      });
+      if (focus) t.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener("click", function () { pick(t); });
+      t.addEventListener("keydown", function (e) {
+        var rtl = document.documentElement.dir === "rtl", n = tabs.length, j = null;
+        if (e.key === "ArrowRight") j = rtl ? i - 1 : i + 1;
+        else if (e.key === "ArrowLeft") j = rtl ? i + 1 : i - 1;
+        else if (e.key === "Home") j = 0;
+        else if (e.key === "End") j = n - 1;
+        if (j === null) return;
+        e.preventDefault();
+        pick(tabs[(j + n) % n], true);
+      });
+    });
+  })();
 </script>
 <script>
   // Language menu: remember a manual choice (the root page reads it before auto-detecting), close on Escape or outside click.
