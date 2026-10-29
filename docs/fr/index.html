@@ -308,12 +308,12 @@
   .sbtn:hover svg { color: var(--text); }
   .share-note { margin-top: 14px; min-height: 1.5em; font-size: 14px; color: var(--text-2); }
   /* Ad measurement consent: only shown to visitors from an ad */
-  .adconsent { position: fixed; z-index: 40; left: 50%; bottom: 20px; transform: translateX(-50%); width: min(560px, calc(100% - 32px)); display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 14px 16px; border-radius: var(--r-lg); border: 1px solid var(--border-2); background: rgba(19, 21, 29, .96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .7); }
-  .adconsent[hidden] { display: none; }
-  .adconsent p { font-size: 14px; color: var(--text-2); line-height: 1.45; }
-  .adconsent div { display: flex; gap: 8px; flex: none; }
-  .adconsent .btn { height: 36px; padding: 0 14px; font-size: 13.5px; }
-  @media (max-width: 560px) { .adconsent { flex-direction: column; align-items: stretch; } .adconsent div { justify-content: flex-end; } }
+  .visit-ask { position: fixed; z-index: 40; left: 50%; bottom: 20px; transform: translateX(-50%); width: min(560px, calc(100% - 32px)); display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 14px 16px; border-radius: var(--r-lg); border: 1px solid var(--border-2); background: rgba(19, 21, 29, .96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .7); }
+  .visit-ask[hidden] { display: none; }
+  .visit-ask p { font-size: 14px; color: var(--text-2); line-height: 1.45; }
+  .visit-ask div { display: flex; gap: 8px; flex: none; }
+  .visit-ask .btn { height: 36px; padding: 0 14px; font-size: 13.5px; }
+  @media (max-width: 560px) { .visit-ask { flex-direction: column; align-items: stretch; } .visit-ask div { justify-content: flex-end; } }
   /* Before, after and between calls: the points under each visual, two columns on wide screens */
   .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
   .outcomes li { font-size: 15.5px; color: #D4D4D8; }
@@ -1292,9 +1292,9 @@
     });
   })();
 </script>
-<div class="adconsent" role="dialog" aria-live="polite" aria-label="Mesure publicitaire" hidden>
+<div class="visit-ask" role="dialog" aria-live="polite" aria-label="Mesure" hidden>
   <p>Vous venez de l’une de nos publicités. Google Ads peut-il mesurer si cette visite mène à un téléchargement ? Rien d’autre n’est suivi.</p>
-  <div><button type="button" class="btn btn-ghost" data-consent="no">Non merci</button><button type="button" class="btn btn-light" data-consent="yes">Autoriser</button></div>
+  <div><button type="button" class="btn btn-ghost" data-answer="no">Non merci</button><button type="button" class="btn btn-light" data-answer="yes">Autoriser</button></div>
 </div>
 <script>
   // Google Ads conversion measurement, only for visitors who came from an ad (gclid in the link) and allowed it.
@@ -1325,15 +1325,15 @@
     });
     if (choice === "yes") { load(); return; }
     if (!fromAd || choice === "no") return;
-    var box = document.querySelector(".adconsent");
+    var box = document.querySelector(".visit-ask");
     if (!box) return;
     box.hidden = false;
     box.addEventListener("click", function (e) {
-      var b = e.target.closest("[data-consent]");
+      var b = e.target.closest("[data-answer]");
       if (!b) return;
-      store.set("undertone-ads", b.dataset.consent);
+      store.set("undertone-ads", b.dataset.answer);
       box.hidden = true;
-      if (b.dataset.consent === "yes") load();
+      if (b.dataset.answer === "yes") load();
     });
   })();
 </script>

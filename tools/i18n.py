@@ -110,7 +110,7 @@ def detect_block():
         var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
         for (var i = 0; i < prefs.length; i++) { var m = pick(prefs[i]); if (m) { target = m === "en" ? null : m; break; } }
       }
-      if (target) location.replace(target + "/" + location.hash);
+      if (target) location.replace(target + "/" + location.search + location.hash);
     } catch (e) {}
   })();
 </script>""" % (codes, STORAGE_KEY)
