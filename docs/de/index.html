@@ -307,6 +307,13 @@
   .sbtn:hover { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .24); }
   .sbtn:hover svg { color: var(--text); }
   .share-note { margin-top: 14px; min-height: 1.5em; font-size: 14px; color: var(--text-2); }
+  /* Ad measurement consent: only shown to visitors from an ad */
+  .adconsent { position: fixed; z-index: 40; left: 50%; bottom: 20px; transform: translateX(-50%); width: min(560px, calc(100% - 32px)); display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 14px 16px; border-radius: var(--r-lg); border: 1px solid var(--border-2); background: rgba(19, 21, 29, .96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .7); }
+  .adconsent[hidden] { display: none; }
+  .adconsent p { font-size: 14px; color: var(--text-2); line-height: 1.45; }
+  .adconsent div { display: flex; gap: 8px; flex: none; }
+  .adconsent .btn { height: 36px; padding: 0 14px; font-size: 13.5px; }
+  @media (max-width: 560px) { .adconsent { flex-direction: column; align-items: stretch; } .adconsent div { justify-content: flex-end; } }
   /* Before, after and between calls: the points under each visual, two columns on wide screens */
   .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
   .outcomes li { font-size: 15.5px; color: #D4D4D8; }
@@ -1119,6 +1126,7 @@
         <dt>KI</dt><dd>Dein eigener OpenAI-, Gemini- oder Anthropic-Key, ein lokales Ollama- oder LM Studio-Modell oder deine Anmeldung bei Cursor oder Claude Code. Keys bleiben in deinem Schlüsselbund.</dd>
         <dt>Gratis-Credits</dt><dd>Wenn du mit Gratis-Credits startest, laufen Anfragen über den Server von Undertone an Google Gemini. Gespeichert werden deine E-Mail-Adresse, dein Guthaben und Nutzungssummen, nie das Gesagte.</dd>
         <dt>Deine Tools</dt><dd>Schreibgeschützt. Undertone sucht und liest nur; Tools, die senden, posten, erstellen oder bearbeiten, sind nie erlaubt.</dd>
+        <dt>Diese Website</dt><dd>Keine Cookies, kein Tracking. Nur wenn du über eine unserer Anzeigen kommst und zustimmst, misst Google Ads, ob der Besuch zu einem Download geführt hat.</dd>
         <dt>Nutzungszählung</dt><dd>Wenn du „Als Nutzer zählen“ eingeschaltet lässt: ein anonymer Ping beim ersten Öffnen von Undertone und höchstens einer pro Woche, mit einer Zufalls-ID, der App-Version, der macOS-Version und der Sprache. Wird es bei der Einrichtung oder in den Einstellungen ausgeschaltet, wird alles Gesendete gelöscht.</dd>
       </dl>
       <div class="verify">
@@ -1281,6 +1289,51 @@
     box.querySelector('[data-net="instagram"]').addEventListener("click", function () {
       if (navigator.share) { navigator.share({ title: "Undertone", text: text, url: url }).catch(function () {}); return; }
       copy(function () { say(msg(".msg-insta", "Link copied.")); });
+    });
+  })();
+</script>
+<div class="adconsent" role="dialog" aria-live="polite" aria-label="Anzeigenmessung" hidden>
+  <p>Du kommst über eine unserer Anzeigen. Darf Google Ads messen, ob dieser Besuch zu einem Download führt? Sonst wird nichts erfasst.</p>
+  <div><button type="button" class="btn btn-ghost" data-consent="no">Nein danke</button><button type="button" class="btn btn-light" data-consent="yes">Erlauben</button></div>
+</div>
+<script>
+  // Google Ads conversion measurement, only for visitors who came from an ad (gclid in the link) and allowed it.
+  // Fill in the conversion ID (AW-…) and label from Google Ads › Goals › Conversions; while empty, nothing loads.
+  (function () {
+    var ADS = { id: "", label: "" };
+    if (!ADS.id) return;
+    var store = { get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+                  set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+    var fromAd = /[?&](gclid|gbraid|wbraid)=/.test(location.search);
+    var choice = store.get("undertone-ads");
+    var loaded = false;
+    function load() {
+      if (loaded) return; loaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag("consent", "default", { ad_storage: "granted", ad_user_data: "granted", ad_personalization: "denied", analytics_storage: "denied" });
+      gtag("js", new Date());
+      gtag("config", ADS.id);
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(ADS.id);
+      document.head.appendChild(s);
+    }
+    // A download only counts when measurement was allowed.
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="Undertone.dmg"]');
+      if (a && loaded && window.gtag) gtag("event", "conversion", { send_to: ADS.id + "/" + ADS.label, transport_type: "beacon" });
+    });
+    if (choice === "yes") { load(); return; }
+    if (!fromAd || choice === "no") return;
+    var box = document.querySelector(".adconsent");
+    if (!box) return;
+    box.hidden = false;
+    box.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-consent]");
+      if (!b) return;
+      store.set("undertone-ads", b.dataset.consent);
+      box.hidden = true;
+      if (b.dataset.consent === "yes") load();
     });
   })();
 </script>

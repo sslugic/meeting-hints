@@ -307,6 +307,13 @@
   .sbtn:hover { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .24); }
   .sbtn:hover svg { color: var(--text); }
   .share-note { margin-top: 14px; min-height: 1.5em; font-size: 14px; color: var(--text-2); }
+  /* Ad measurement consent: only shown to visitors from an ad */
+  .adconsent { position: fixed; z-index: 40; left: 50%; bottom: 20px; transform: translateX(-50%); width: min(560px, calc(100% - 32px)); display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 14px 16px; border-radius: var(--r-lg); border: 1px solid var(--border-2); background: rgba(19, 21, 29, .96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .7); }
+  .adconsent[hidden] { display: none; }
+  .adconsent p { font-size: 14px; color: var(--text-2); line-height: 1.45; }
+  .adconsent div { display: flex; gap: 8px; flex: none; }
+  .adconsent .btn { height: 36px; padding: 0 14px; font-size: 13.5px; }
+  @media (max-width: 560px) { .adconsent { flex-direction: column; align-items: stretch; } .adconsent div { justify-content: flex-end; } }
   /* Before, after and between calls: the points under each visual, two columns on wide screens */
   .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
   .outcomes li { font-size: 15.5px; color: #D4D4D8; }
@@ -1119,6 +1126,7 @@
         <dt>AI</dt><dd>Je eigen OpenAI-, Gemini- of Anthropic-sleutel, een lokaal Ollama- of LM Studio-model, of je login bij Cursor of Claude Code. Sleutels blijven in je Sleutelhanger.</dd>
         <dt>Gratis credits</dt><dd>Als je met gratis credits start, gaan verzoeken via de server van Undertone naar Google Gemini. Die bewaart je e-mailadres, je saldo en gebruikstotalen, nooit wat er gezegd is.</dd>
         <dt>Je tools</dt><dd>Alleen-lezen. Undertone zoekt en leest alleen; tools die versturen, posten, aanmaken of bewerken, worden nooit toegestaan.</dd>
+        <dt>Deze website</dt><dd>Geen cookies en geen tracking. Alleen als je via een van onze advertenties komt en het toestaat, meet Google Ads of het bezoek tot een download leidde.</dd>
         <dt>Gebruikstelling</dt><dd>Als je ‘Tel mij als gebruiker’ aan laat: één anonieme ping bij de eerste keer openen van Undertone en hooguit één per week, met een willekeurige ID, de appversie, de macOS-versie en de taal. Uitzetten bij de installatie of in Instellingen wist wat er is verstuurd.</dd>
       </dl>
       <div class="verify">
@@ -1281,6 +1289,51 @@
     box.querySelector('[data-net="instagram"]').addEventListener("click", function () {
       if (navigator.share) { navigator.share({ title: "Undertone", text: text, url: url }).catch(function () {}); return; }
       copy(function () { say(msg(".msg-insta", "Link copied.")); });
+    });
+  })();
+</script>
+<div class="adconsent" role="dialog" aria-live="polite" aria-label="Advertentiemeting" hidden>
+  <p>Je komt via een van onze advertenties. Mag Google Ads meten of dit bezoek tot een download leidt? Verder wordt niets gevolgd.</p>
+  <div><button type="button" class="btn btn-ghost" data-consent="no">Nee, bedankt</button><button type="button" class="btn btn-light" data-consent="yes">Toestaan</button></div>
+</div>
+<script>
+  // Google Ads conversion measurement, only for visitors who came from an ad (gclid in the link) and allowed it.
+  // Fill in the conversion ID (AW-…) and label from Google Ads › Goals › Conversions; while empty, nothing loads.
+  (function () {
+    var ADS = { id: "", label: "" };
+    if (!ADS.id) return;
+    var store = { get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+                  set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+    var fromAd = /[?&](gclid|gbraid|wbraid)=/.test(location.search);
+    var choice = store.get("undertone-ads");
+    var loaded = false;
+    function load() {
+      if (loaded) return; loaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag("consent", "default", { ad_storage: "granted", ad_user_data: "granted", ad_personalization: "denied", analytics_storage: "denied" });
+      gtag("js", new Date());
+      gtag("config", ADS.id);
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(ADS.id);
+      document.head.appendChild(s);
+    }
+    // A download only counts when measurement was allowed.
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="Undertone.dmg"]');
+      if (a && loaded && window.gtag) gtag("event", "conversion", { send_to: ADS.id + "/" + ADS.label, transport_type: "beacon" });
+    });
+    if (choice === "yes") { load(); return; }
+    if (!fromAd || choice === "no") return;
+    var box = document.querySelector(".adconsent");
+    if (!box) return;
+    box.hidden = false;
+    box.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-consent]");
+      if (!b) return;
+      store.set("undertone-ads", b.dataset.consent);
+      box.hidden = true;
+      if (b.dataset.consent === "yes") load();
     });
   })();
 </script>

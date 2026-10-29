@@ -277,6 +277,8 @@
  "if_you_start_with_free_bd13c0": "If you start with free credits, requests go through Undertone's server to Google Gemini. It keeps your email, your balance and usage totals, never what was said.",
  "your_tools_04309f": "Your tools",
  "read_only_undertone_only_searches_df974e": "Read-only. Undertone only searches and reads; tools that send, post, create or edit are never allowed.",
+ "this_website_36f800": "This website",
+ "no_cookies_and_no_tracking_d1558a": "No cookies and no tracking. Only if you arrive from one of our ads and allow it, Google Ads measures whether the visit led to a download.",
  "usage_count_1b27e3": "Usage count",
  "if_you_leave_count_me_12e86d": "If you leave “Count me as a user” on: one anonymous ping when Undertone is first opened and at most one a week, with a random ID, the app version, macOS version and language. Switching it off in setup or Settings deletes what was sent.",
  "don_t_take_our_word_bef89d": "Don't take our word for it",
@@ -319,5 +321,9 @@
  "project_f6f4da": "Project",
  "issues_30ce4c": "Issues",
  "feedback_c8d767": "Feedback",
- "press_ea683a": "Press"
+ "press_ea683a": "Press",
+ "ad_measurement_3c4094": "Ad measurement",
+ "you_came_here_from_one_271eb2": "You came here from one of our ads. May Google Ads measure whether this visit leads to a download? Nothing else is tracked.",
+ "no_thanks_6d745b": "No thanks",
+ "allow_3ad0e3": "Allow"
 }
