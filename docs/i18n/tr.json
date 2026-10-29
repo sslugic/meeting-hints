@@ -564,5 +564,15 @@
  "the_pricing_v2_flag_controls_d123b2": "pricing-v2 flag'i yeni sayfayı yönetiyor; yalnızca çalışanlar için açık",
  "you_told_kai_you_d_c03a40": "Kai'ye perşembeye kadar bir rollout tarihi paylaşacağınızı söylediniz",
  "jira_web_532_734515": "Jira · WEB-532",
- "sample_names_services_and_tickets_276dfa": "Örnek. İsimler, servisler ve kayıtlar uydurmadır."
+ "sample_names_services_and_tickets_276dfa": "Örnek. İsimler, servisler ve kayıtlar uydurmadır.",
+ "download_dmg_v1_15_0_99dd9a": ".dmg indir <span class=\"ver\">v1.15.0</span>",
+ "your_calls_keys_and_meetings_6ba803": "Görüşmeleriniz, anahtarlarınız ve toplantılarınız sizde kalır. Kendi yapay zekânızla Undertone’un kendisine ulaşan tek şey kapatabileceğiniz anonim bir sayımdır.",
+ "free_credits_29cb99": "Ücretsiz krediler",
+ "if_you_start_with_free_bd13c0": "Ücretsiz kredilerle başlarsanız istekler Undertone’un sunucusu üzerinden Google Gemini’ye gider. Sunucu e-postanızı, bakiyenizi ve kullanım toplamlarını saklar; söylenenleri asla saklamaz.",
+ "every_feature_on_this_page_4186b5": "Bu sayfadaki her şey beta süresince ücretsiz. Bizden ücretsiz kredilerle başlayın ya da zaten kullandığınız yapay zekâyı getirin ve Undertone’u birlikte şekillendirelim.",
+ "beta_free_credits_or_your_aa2e48": "Beta, ücretsiz krediler veya kendi yapay zekânız",
+ "free_credits_for_about_five_8b0b75": "Başlangıç için yaklaşık beş görüşmelik ücretsiz kredi, yapay zekâ anahtarı gerekmez",
+ "or_your_own_openai_anthropic_a1fa0e": "Ya da kendi OpenAI, Anthropic veya Gemini anahtarınız, yerel bir Ollama ya da LM Studio modeli veya Claude Code ya da Cursor oturumunuz",
+ "install_start_with_free_credits_7d6475": "Yükleyin, ücretsiz kredilerle başlayın ya da yapay zekânızı bağlayın, kaynaklarınızı ekleyin, ardından bir görüşmeye katılın. Sonrasında özetiniz, görevleriniz ve yeni terimler Ana Sayfa’da sizi bekliyor olacak.",
+ "free_credits_your_own_ai_b691b9": "Ücretsiz krediler, kendi yapay zekâ anahtarınız veya yerel model"
 }

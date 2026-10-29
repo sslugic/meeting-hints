@@ -683,7 +683,7 @@
       <h1>Know what everyone means, and what to say next.</h1>
       <p class="sub">Undertone listens along to your calls. It explains code names and acronyms the moment they come up, brings up the facts when you're asked, and afterwards hands you the recap, your tasks and a briefing for the next call. All from your team's own Slack, Notion and Jira, transcribed on your Mac.</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.14.1</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.15.0</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Releases and issues</a>
       </div>
       <p class="fine">Free during the beta · macOS 26 or later on Apple silicon</p>
@@ -1415,13 +1415,14 @@
     <div class="wrap private">
       <div class="head">
         <h2>Private by design</h2>
-        <p>No account and no bundled key. Your calls, keys and meetings stay with you; the only thing Undertone itself receives is an anonymous count you can switch off.</p>
+        <p>Your calls, keys and meetings stay with you. With your own AI, the only thing Undertone itself receives is an anonymous count you can switch off.</p>
       </div>
       <dl class="facts">
         <dt>Audio</dt><dd>The call and your mic are transcribed on your Mac with Apple's SpeechAnalyzer. Never uploaded.</dd>
         <dt>Meetings</dt><dd>Recaps, transcripts, tasks, the glossary and your artifacts are stored only on your Mac.</dd>
         <dt>Calendar</dt><dd>Read to show what's next. Undertone never creates or changes events.</dd>
         <dt>AI</dt><dd>Your own OpenAI, Gemini or Anthropic key, a local Ollama or LM Studio model, or your Cursor or Claude Code sign-in. Keys stay in your Keychain.</dd>
+        <dt>Free credits</dt><dd>If you start with free credits, requests go through Undertone's server to Google Gemini. It keeps your email, your balance and usage totals, never what was said.</dd>
         <dt>Your tools</dt><dd>Read-only. Undertone only searches and reads; tools that send, post, create or edit are never allowed.</dd></div>
         <div><dt>Usage count</dt><dd>If you leave “Count me as a user” on: one anonymous ping when Undertone is first opened and at most one a week, with a random ID, the app version, macOS version and language. Switching it off in setup or Settings deletes what was sent.</dd>
       </dl>
@@ -1438,17 +1439,18 @@
     <div class="wrap">
       <div class="head">
         <h2>Free while it's in beta</h2>
-        <p>Every feature on this page is free during the beta. Bring the AI you already use, and help shape what Undertone becomes.</p>
+        <p>Every feature on this page is free during the beta. Start with free credits on us, or bring the AI you already use, and help shape what Undertone becomes.</p>
       </div>
       <div class="plans one">
         <div class="plan now">
           <div class="when">Available now</div>
-          <h3>Beta, bring your own AI</h3>
+          <h3>Beta, free credits or your own AI</h3>
           <div class="price">$0</div>
           <p>Every feature on this page.</p>
           <ul>
+            <li>Free credits for about five calls to start, no AI key needed</li>
             <li>Calls transcribed on your Mac, never uploaded</li>
-            <li>Your own OpenAI, Anthropic or Gemini key, a local Ollama or LM Studio model, or your Claude Code or Cursor sign-in</li>
+            <li>Or your own OpenAI, Anthropic or Gemini key, a local Ollama or LM Studio model, or your Claude Code or Cursor sign-in</li>
             <li>Meetings, tasks and context kept as files on your Mac</li>
             <li>Slack, Notion, Jira, Linear and many more tools, read-only</li>
           </ul>
@@ -1460,13 +1462,13 @@
 
   <section class="wrap start">
     <h2>Ready for your next call?</h2>
-    <p>Install, connect your AI and sources in about a minute, then join a call. Afterwards, your recap, tasks and new terms are waiting on Home.</p>
+    <p>Install, start with free credits or connect your AI, add your sources, then join a call. Afterwards, your recap, tasks and new terms are waiting on Home.</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.14.1</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.15.0</span></a>
     </div>
     <p class="brew">Or with Homebrew: <code translate="no">brew install --cask sslugic/tap/undertone</code></p>
     <ul class="reqs">
-      <li>macOS 26 or later</li><li>Apple silicon</li><li>Your own AI key or local model</li><li>Optional: amem for memory</li><li>System audio and microphone permission</li><li>Updates itself</li>
+      <li>macOS 26 or later</li><li>Apple silicon</li><li>Free credits, your own AI key or a local model</li><li>Optional: amem for memory</li><li>System audio and microphone permission</li><li>Updates itself</li>
     </ul>
   </section>
 </main>

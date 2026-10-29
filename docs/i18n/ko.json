@@ -563,5 +563,15 @@
  "the_pricing_v2_flag_controls_d123b2": "새 페이지는 pricing-v2 플래그로 제어되며, 지금은 직원에게만 켜져 있어요",
  "you_told_kai_you_d_c03a40": "목요일까지 배포 날짜를 공유하겠다고 Kai에게 말했어요",
  "jira_web_532_734515": "Jira · WEB-532",
- "sample_names_services_and_tickets_276dfa": "샘플이에요. 이름, 서비스, 티켓은 가상이에요."
+ "sample_names_services_and_tickets_276dfa": "샘플이에요. 이름, 서비스, 티켓은 가상이에요.",
+ "download_dmg_v1_15_0_99dd9a": ".dmg 다운로드 <span class=\"ver\">v1.15.0</span>",
+ "your_calls_keys_and_meetings_6ba803": "통화, 키, 회의는 사용자에게 남습니다. 내 AI를 쓰면 Undertone 자체가 받는 것은 끌 수 있는 익명 사용 집계뿐입니다.",
+ "free_credits_29cb99": "무료 크레딧",
+ "if_you_start_with_free_bd13c0": "무료 크레딧으로 시작하면 요청은 Undertone 서버를 거쳐 Google Gemini로 전송됩니다. 이메일, 잔액, 사용량 합계만 보관하며 대화 내용은 절대 보관하지 않습니다.",
+ "every_feature_on_this_page_4186b5": "베타 기간에는 이 페이지의 모든 기능이 무료입니다. 저희가 드리는 무료 크레딧으로 시작하거나 이미 쓰는 AI를 그대로 쓰고, Undertone을 함께 만들어 주세요.",
+ "beta_free_credits_or_your_aa2e48": "베타, 무료 크레딧 또는 내 AI",
+ "free_credits_for_about_five_8b0b75": "처음에 통화 약 5회 분량의 무료 크레딧, AI 키 필요 없음",
+ "or_your_own_openai_anthropic_a1fa0e": "또는 내 OpenAI, Anthropic, Gemini 키, 로컬 Ollama나 LM Studio 모델, 또는 Claude Code나 Cursor 로그인",
+ "install_start_with_free_credits_7d6475": "설치하고 무료 크레딧으로 시작하거나 AI를 연결한 뒤, 소스를 추가하고 통화에 참여하세요. 끝나면 요약, 할 일, 새 용어가 홈에서 기다리고 있어요.",
+ "free_credits_your_own_ai_b691b9": "무료 크레딧, 내 AI 키 또는 로컬 모델"
 }

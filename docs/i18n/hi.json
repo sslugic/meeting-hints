@@ -563,5 +563,15 @@
  "the_pricing_v2_flag_controls_d123b2": "pricing-v2 फ़्लैग नए पेज को नियंत्रित करता है; यह सिर्फ़ स्टाफ़ के लिए चालू है",
  "you_told_kai_you_d_c03a40": "आपने Kai से गुरुवार तक रोलआउट की तारीख बताने का वादा किया था",
  "jira_web_532_734515": "Jira · WEB-532",
- "sample_names_services_and_tickets_276dfa": "सैंपल। नाम, सर्विसेज़ और टिकट काल्पनिक हैं।"
+ "sample_names_services_and_tickets_276dfa": "सैंपल। नाम, सर्विसेज़ और टिकट काल्पनिक हैं।",
+ "download_dmg_v1_15_0_99dd9a": ".dmg डाउनलोड करें <span class=\"ver\">v1.15.0</span>",
+ "your_calls_keys_and_meetings_6ba803": "आपकी कॉल, कुंजियाँ और मीटिंग आपके पास रहती हैं। अपने AI के साथ, Undertone को खुद सिर्फ़ एक गुमनाम गिनती मिलती है, जिसे आप बंद कर सकते हैं।",
+ "free_credits_29cb99": "मुफ़्त क्रेडिट",
+ "if_you_start_with_free_bd13c0": "अगर आप मुफ़्त क्रेडिट से शुरू करते हैं, तो अनुरोध Undertone के सर्वर से होकर Google Gemini तक जाते हैं। यह आपका ईमेल, बैलेंस और कुल उपयोग रखता है, कही गई बातें कभी नहीं।",
+ "every_feature_on_this_page_4186b5": "बीटा के दौरान इस पेज की हर सुविधा मुफ़्त है। हमारी ओर से मुफ़्त क्रेडिट से शुरू करें या अपना मौजूदा AI इस्तेमाल करें, और Undertone को आकार देने में मदद करें।",
+ "beta_free_credits_or_your_aa2e48": "बीटा, मुफ़्त क्रेडिट या अपना AI",
+ "free_credits_for_about_five_8b0b75": "शुरुआत में लगभग पाँच कॉल के लिए मुफ़्त क्रेडिट, AI कुंजी की ज़रूरत नहीं",
+ "or_your_own_openai_anthropic_a1fa0e": "या आपकी अपनी OpenAI, Anthropic या Gemini API की, लोकल Ollama या LM Studio मॉडल, या आपका Claude Code या Cursor साइन-इन",
+ "install_start_with_free_credits_7d6475": "इंस्टॉल करें, मुफ़्त क्रेडिट से शुरू करें या अपना AI कनेक्ट करें, अपने सोर्सेज़ जोड़ें, फिर कॉल जॉइन करें। उसके बाद, आपका रीकैप, टास्क और नए टर्म होम पर आपका इंतज़ार कर रहे होंगे।",
+ "free_credits_your_own_ai_b691b9": "मुफ़्त क्रेडिट, आपकी अपनी AI API की या लोकल मॉडल"
 }

@@ -564,5 +564,15 @@
  "the_pricing_v2_flag_controls_d123b2": "Das Flag pricing-v2 steuert die neue Seite; es ist nur für Mitarbeitende an",
  "you_told_kai_you_d_c03a40": "Du hast Kai bis Donnerstag ein Rollout-Datum zugesagt",
  "jira_web_532_734515": "Jira · WEB-532",
- "sample_names_services_and_tickets_276dfa": "Beispiel. Namen, Services und Tickets sind erfunden."
+ "sample_names_services_and_tickets_276dfa": "Beispiel. Namen, Services und Tickets sind erfunden.",
+ "download_dmg_v1_15_0_99dd9a": ".dmg laden <span class=\"ver\">v1.15.0</span>",
+ "your_calls_keys_and_meetings_6ba803": "Deine Calls, Schlüssel und Meetings bleiben bei dir. Mit deiner eigenen KI ist das Einzige, was Undertone selbst erhält, eine anonyme Zählung, die du abschalten kannst.",
+ "free_credits_29cb99": "Gratis-Credits",
+ "if_you_start_with_free_bd13c0": "Wenn du mit Gratis-Credits startest, laufen Anfragen über den Server von Undertone an Google Gemini. Gespeichert werden deine E-Mail-Adresse, dein Guthaben und Nutzungssummen, nie das Gesagte.",
+ "every_feature_on_this_page_4186b5": "Alles auf dieser Seite ist während der Beta kostenlos. Starte mit Gratis-Credits von uns oder nutze die KI, die du schon hast, und gestalte Undertone mit.",
+ "beta_free_credits_or_your_aa2e48": "Beta, mit Gratis-Credits oder deiner eigenen KI",
+ "free_credits_for_about_five_8b0b75": "Gratis-Credits für etwa fünf Calls zum Start, kein KI-Key nötig",
+ "or_your_own_openai_anthropic_a1fa0e": "Oder dein eigener OpenAI-, Anthropic- oder Gemini-Key, ein lokales Ollama- oder LM Studio-Modell oder deine Anmeldung bei Claude Code oder Cursor",
+ "install_start_with_free_credits_7d6475": "Installieren, mit Gratis-Credits starten oder deine KI verbinden, Quellen hinzufügen, dann einem Call beitreten. Danach warten Zusammenfassung, Aufgaben und neue Begriffe in Start.",
+ "free_credits_your_own_ai_b691b9": "Gratis-Credits, eigener KI-Key oder lokales Modell"
 }

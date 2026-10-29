@@ -564,5 +564,15 @@
  "the_pricing_v2_flag_controls_d123b2": "Flaga pricing-v2 steruje nową stroną; jest włączona tylko dla pracowników",
  "you_told_kai_you_d_c03a40": "Obiecałeś Kaiowi datę rolloutu do czwartku",
  "jira_web_532_734515": "Jira · WEB-532",
- "sample_names_services_and_tickets_276dfa": "Przykład. Osoby, usługi i zgłoszenia są zmyślone."
+ "sample_names_services_and_tickets_276dfa": "Przykład. Osoby, usługi i zgłoszenia są zmyślone.",
+ "download_dmg_v1_15_0_99dd9a": "Pobierz .dmg <span class=\"ver\">v1.15.0</span>",
+ "your_calls_keys_and_meetings_6ba803": "Twoje rozmowy, klucze i spotkania zostają u Ciebie. Z własną AI jedyne, co Undertone otrzymuje, to anonimowe zliczenie, które możesz wyłączyć.",
+ "free_credits_29cb99": "Darmowe kredyty",
+ "if_you_start_with_free_bd13c0": "Jeśli zaczniesz z darmowymi kredytami, zapytania trafiają przez serwer Undertone do Google Gemini. Przechowuje on Twój e-mail, saldo i sumy użycia, nigdy treść rozmów.",
+ "every_feature_on_this_page_4186b5": "Wszystko na tej stronie jest darmowe w czasie bety. Zacznij z darmowymi kredytami na nasz koszt albo korzystaj z AI, której już używasz, i pomóż kształtować Undertone.",
+ "beta_free_credits_or_your_aa2e48": "Beta, z darmowymi kredytami lub własną AI",
+ "free_credits_for_about_five_8b0b75": "Darmowe kredyty na około pięć rozmów na start, bez klucza AI",
+ "or_your_own_openai_anthropic_a1fa0e": "Albo Twój własny klucz OpenAI, Anthropic lub Gemini, lokalny model w Ollama lub LM Studio albo logowanie przez Claude Code lub Cursor",
+ "install_start_with_free_credits_7d6475": "Zainstaluj, zacznij z darmowymi kredytami lub połącz AI, dodaj źródła, a potem dołącz do rozmowy. Po wszystkim podsumowanie, zadania i nowe terminy czekają na ekranie Start.",
+ "free_credits_your_own_ai_b691b9": "Darmowe kredyty, własny klucz AI lub lokalny model"
 }

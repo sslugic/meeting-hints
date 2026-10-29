@@ -564,5 +564,15 @@
  "the_pricing_v2_flag_controls_d123b2": "De flag pricing-v2 stuurt de nieuwe pagina aan; hij staat alleen aan voor medewerkers",
  "you_told_kai_you_d_c03a40": "Je hebt Kai beloofd om donderdag een rolloutdatum te delen",
  "jira_web_532_734515": "Jira · WEB-532",
- "sample_names_services_and_tickets_276dfa": "Voorbeeld. Namen, services en tickets zijn verzonnen."
+ "sample_names_services_and_tickets_276dfa": "Voorbeeld. Namen, services en tickets zijn verzonnen.",
+ "download_dmg_v1_15_0_99dd9a": "Download .dmg <span class=\"ver\">v1.15.0</span>",
+ "your_calls_keys_and_meetings_6ba803": "Je gesprekken, sleutels en vergaderingen blijven bij jou. Met je eigen AI is het enige dat Undertone zelf ontvangt een anonieme telling die je kunt uitzetten.",
+ "free_credits_29cb99": "Gratis credits",
+ "if_you_start_with_free_bd13c0": "Als je met gratis credits start, gaan verzoeken via de server van Undertone naar Google Gemini. Die bewaart je e-mailadres, je saldo en gebruikstotalen, nooit wat er gezegd is.",
+ "every_feature_on_this_page_4186b5": "Alles op deze pagina is gratis tijdens de bèta. Start met gratis credits van ons of gebruik de AI die je al hebt, en help Undertone vorm te geven.",
+ "beta_free_credits_or_your_aa2e48": "Bèta, met gratis credits of je eigen AI",
+ "free_credits_for_about_five_8b0b75": "Gratis credits voor ongeveer vijf calls om te beginnen, geen AI-sleutel nodig",
+ "or_your_own_openai_anthropic_a1fa0e": "Of je eigen OpenAI-, Anthropic- of Gemini-sleutel, een lokaal Ollama- of LM Studio-model, of je login bij Claude Code of Cursor",
+ "install_start_with_free_credits_7d6475": "Installeer, start met gratis credits of koppel je AI, voeg je bronnen toe en neem deel aan een call. Daarna staan je samenvatting, taken en nieuwe termen klaar in Start.",
+ "free_credits_your_own_ai_b691b9": "Gratis credits, eigen AI-sleutel of lokaal model"
 }

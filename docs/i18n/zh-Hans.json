@@ -563,5 +563,15 @@
  "the_pricing_v2_flag_controls_d123b2": "新页面由 pricing-v2 开关控制，目前只对员工开放",
  "you_told_kai_you_d_c03a40": "你答应过 Kai 周四前给出上线日期",
  "jira_web_532_734515": "Jira · WEB-532",
- "sample_names_services_and_tickets_276dfa": "示例。人名、服务和工单均为虚构。"
+ "sample_names_services_and_tickets_276dfa": "示例。人名、服务和工单均为虚构。",
+ "download_dmg_v1_15_0_99dd9a": "下载 .dmg <span class=\"ver\">v1.15.0</span>",
+ "your_calls_keys_and_meetings_6ba803": "你的通话、密钥和会议都留在你手里。使用你自己的 AI 时，Undertone 本身收到的只有一个可以关闭的匿名计数。",
+ "free_credits_29cb99": "免费积分",
+ "if_you_start_with_free_bd13c0": "如果你从免费积分开始，请求会通过 Undertone 的服务器发送到 Google Gemini。服务器只保存你的邮箱、余额和用量总计，绝不保存说话内容。",
+ "every_feature_on_this_page_4186b5": "测试期间，本页所有功能都免费。先用我们送的免费积分开始，或用你已有的 AI，一起打造 Undertone。",
+ "beta_free_credits_or_your_aa2e48": "测试版，免费积分或自带 AI",
+ "free_credits_for_about_five_8b0b75": "起步赠送约够五次通话的免费积分，无需 AI 密钥",
+ "or_your_own_openai_anthropic_a1fa0e": "或你自己的 OpenAI、Anthropic 或 Gemini 密钥，本地的 Ollama 或 LM Studio 模型，或你的 Claude Code 或 Cursor 登录",
+ "install_start_with_free_credits_7d6475": "安装后，用免费积分开始或连接你的 AI，添加资料来源，然后加入通话。结束后，你的回顾、任务和新术语都在主页等着你。",
+ "free_credits_your_own_ai_b691b9": "免费积分、你自己的 AI 密钥或本地模型"
 }
