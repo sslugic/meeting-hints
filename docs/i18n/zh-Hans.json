@@ -579,5 +579,6 @@
  "download_dmg_v1_15_2_ace073": "下载 .dmg <span class=\"ver\">v1.15.2</span>",
  "ai_tools_cd7070": "AI 工具",
  "your_meetings_in_your_ai_2b7bb9": "在你的 AI 工具里使用你的会议",
- "undertone_is_also_an_mcp_d702b4": "Undertone 也是一个 MCP 服务器，任何支持 MCP 的 AI 应用都能使用你的会议、任务和术语表。在设置中一键添加到 Claude、Claude Code 或 Cursor；其他应用请复制下方的配置。只读，数据留在你的 Mac 上。"
+ "undertone_is_also_an_mcp_d702b4": "Undertone 也是一个 MCP 服务器，任何支持 MCP 的 AI 应用都能使用你的会议、任务和术语表。在设置中一键添加到 Claude、Claude Code 或 Cursor；其他应用请复制下方的配置。只读，数据留在你的 Mac 上。",
+ "download_dmg_v1_15_3_b832ea": "下载 .dmg <span class=\"ver\">v1.15.3</span>"
 }
