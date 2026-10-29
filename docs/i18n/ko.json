@@ -612,5 +612,10 @@
  "turn_a_list_into_a_5381e0": "목록을 체크해 나갈 수 있는 캔버스로 바꾸세요",
  "practice_your_team_s_terms_165aad": "팀 용어를 익힐 때까지 짧은 퀴즈로 연습하세요",
  "add_amem_too_and_your_56fc5d": "<a href=\"https://github.com/sslugic/amem\" translate=\"no\">amem</a>도 추가하면 미팅이 Claude Code, Cursor 등 다른 AI 도구와 하나의 메모리를 공유해요.",
- "download_dmg_v1_18_3_1d8e42": ".dmg 다운로드 <span class=\"ver\">v1.18.3</span>"
+ "download_dmg_v1_18_3_1d8e42": ".dmg 다운로드 <span class=\"ver\">v1.18.3</span>",
+ "stay_in_the_conversation_know_76b1b7": "대화에 집중하세요. 맥락은 알고 있으니까요.",
+ "undertone_stay_in_the_conversation_194bc5": "Undertone — 대화에 집중하고 맥락을 파악하세요",
+ "undertone_explains_acronyms_decodes_proj_eb17e9": "Undertone은 통화 중에 약어를 설명하고, 프로젝트 이름을 풀어 주고, 필요한 사실을 보여 줍니다. 팀의 Slack, Notion, Jira의 맥락을 바탕으로요. 통화가 끝나면 명확한 요약, 해야 할 후속 조치, 다음 회의 브리핑을 받아 보세요. 통화는 Mac에서 텍스트로 변환됩니다.",
+ "undertone_explains_acronyms_decodes_proj_963e17": "Undertone은 통화 중에 약어를 설명하고, 프로젝트 이름을 풀어 주고, 필요한 사실을 보여 줍니다. 팀의 Slack, Notion, Jira의 맥락을 바탕으로요. 통화가 끝나면 명확한 요약, 해야 할 후속 조치, 다음 회의 브리핑을 받아 보세요. 통화는 Mac에서 텍스트로 변환됩니다.",
+ "stay_in_the_conversation_know_b22e54": "대화에 집중하세요. 맥락은 알고 있으니까요. Undertone은 통화 중에 약어를 설명하고, 프로젝트 이름을 풀어 주고, 필요한 사실을 보여 줍니다. 팀의 Slack, Notion, Jira의 맥락을 바탕으로요. 통화가 끝나면 명확한 요약, 해야 할 후속 조치, 다음 회의 브리핑을 받아 보세요. 통화는 Mac에서 텍스트로 변환됩니다."
 }

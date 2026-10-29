@@ -613,5 +613,10 @@
  "turn_a_list_into_a_5381e0": "Bir listeyi işaretleyerek ilerleyebileceğiniz bir tuvale dönüştürün",
  "practice_your_team_s_terms_165aad": "Ekibinizin terimlerini, öğrenene kadar kısa testlerle çalışın",
  "add_amem_too_and_your_56fc5d": "<a href=\"https://github.com/sslugic/amem\" translate=\"no\">amem</a> da ekleyin; toplantılarınız Claude Code, Cursor ve diğer yapay zekâ araçlarınızla tek bir belleği paylaşsın.",
- "download_dmg_v1_18_3_1d8e42": ".dmg indir <span class=\"ver\">v1.18.3</span>"
+ "download_dmg_v1_18_3_1d8e42": ".dmg indir <span class=\"ver\">v1.18.3</span>",
+ "stay_in_the_conversation_know_76b1b7": "Konuşmada kal. Bağlamı bil.",
+ "undertone_stay_in_the_conversation_194bc5": "Undertone — konuşmada kal, bağlamı bil",
+ "undertone_explains_acronyms_decodes_proj_eb17e9": "Undertone, görüşmedeyken kısaltmaları açıklar, proje adlarını çözer ve ilgili bilgileri ekibinin Slack, Notion ve Jira'sındaki bağlamla önüne getirir. Sonrasında net bir özet, yapman gerekenler ve bir sonraki toplantı için bir brifing alırsın. Görüşmeler Mac'inde yazıya dökülür.",
+ "undertone_explains_acronyms_decodes_proj_963e17": "Undertone, görüşmedeyken kısaltmaları açıklar, proje adlarını çözer ve ilgili bilgileri ekibinin Slack, Notion ve Jira'sındaki bağlamla önüne getirir. Sonrasında net bir özet, yapman gerekenler ve bir sonraki toplantı için bir brifing alırsın. Görüşmeler Mac'inde yazıya dökülür.",
+ "stay_in_the_conversation_know_b22e54": "Konuşmada kal. Bağlamı bil. Undertone, görüşmedeyken kısaltmaları açıklar, proje adlarını çözer ve ilgili bilgileri ekibinin Slack, Notion ve Jira'sındaki bağlamla önüne getirir. Sonrasında net bir özet, yapman gerekenler ve bir sonraki toplantı için bir brifing alırsın. Görüşmeler Mac'inde yazıya dökülür."
 }

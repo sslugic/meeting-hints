@@ -612,5 +612,10 @@
  "turn_a_list_into_a_5381e0": "Convierte una lista en un lienzo que puedes ir marcando",
  "practice_your_team_s_terms_165aad": "Practica los términos de tu equipo con cuestionarios rápidos hasta que te los sepas",
  "add_amem_too_and_your_56fc5d": "Añade también <a href=\"https://github.com/sslugic/amem\" translate=\"no\">amem</a> y tus reuniones compartirán una sola memoria con Claude Code, Cursor y tus otras herramientas de IA.",
- "download_dmg_v1_18_3_1d8e42": "Descargar .dmg <span class=\"ver\">v1.18.3</span>"
+ "download_dmg_v1_18_3_1d8e42": "Descargar .dmg <span class=\"ver\">v1.18.3</span>",
+ "stay_in_the_conversation_know_76b1b7": "Sigue en la conversación. Con todo el contexto.",
+ "undertone_stay_in_the_conversation_194bc5": "Undertone — sigue en la conversación, con todo el contexto",
+ "undertone_explains_acronyms_decodes_proj_eb17e9": "Undertone explica siglas, descifra nombres de proyectos y te muestra los datos relevantes mientras estás en una llamada, con el contexto del Slack, Notion y Jira de tu equipo. Después, tienes un resumen claro, tus seguimientos y una preparación para la próxima reunión. Las llamadas se transcriben en tu Mac.",
+ "undertone_explains_acronyms_decodes_proj_963e17": "Undertone explica siglas, descifra nombres de proyectos y te muestra los datos relevantes mientras estás en una llamada, con el contexto del Slack, Notion y Jira de tu equipo. Después, tienes un resumen claro, tus seguimientos y una preparación para la próxima reunión. Las llamadas se transcriben en tu Mac.",
+ "stay_in_the_conversation_know_b22e54": "Sigue en la conversación. Con todo el contexto. Undertone explica siglas, descifra nombres de proyectos y te muestra los datos relevantes mientras estás en una llamada, con el contexto del Slack, Notion y Jira de tu equipo. Después, tienes un resumen claro, tus seguimientos y una preparación para la próxima reunión. Las llamadas se transcriben en tu Mac."
 }

@@ -612,5 +612,10 @@
  "turn_a_list_into_a_5381e0": "Trasforma un elenco in un canvas da spuntare",
  "practice_your_team_s_terms_165aad": "Esercitati con i termini del tuo team con quiz veloci finché non li conosci",
  "add_amem_too_and_your_56fc5d": "Aggiungi anche <a href=\"https://github.com/sslugic/amem\" translate=\"no\">amem</a>, e le tue riunioni condividono un’unica memoria con Claude Code, Cursor e gli altri tuoi strumenti di IA.",
- "download_dmg_v1_18_3_1d8e42": "Scarica il .dmg <span class=\"ver\">v1.18.3</span>"
+ "download_dmg_v1_18_3_1d8e42": "Scarica il .dmg <span class=\"ver\">v1.18.3</span>",
+ "stay_in_the_conversation_know_76b1b7": "Resta nella conversazione. Conosci il contesto.",
+ "undertone_stay_in_the_conversation_194bc5": "Undertone — resta nella conversazione, conosci il contesto",
+ "undertone_explains_acronyms_decodes_proj_eb17e9": "Undertone spiega gli acronimi, decifra i nomi dei progetti e ti mostra i fatti rilevanti mentre sei in chiamata, con il contesto da Slack, Notion e Jira del tuo team. Dopo, ricevi un riepilogo chiaro, i tuoi follow-up e un briefing per la riunione successiva. Le chiamate sono trascritte sul tuo Mac.",
+ "undertone_explains_acronyms_decodes_proj_963e17": "Undertone spiega gli acronimi, decifra i nomi dei progetti e ti mostra i fatti rilevanti mentre sei in chiamata, con il contesto da Slack, Notion e Jira del tuo team. Dopo, ricevi un riepilogo chiaro, i tuoi follow-up e un briefing per la riunione successiva. Le chiamate sono trascritte sul tuo Mac.",
+ "stay_in_the_conversation_know_b22e54": "Resta nella conversazione. Conosci il contesto. Undertone spiega gli acronimi, decifra i nomi dei progetti e ti mostra i fatti rilevanti mentre sei in chiamata, con il contesto da Slack, Notion e Jira del tuo team. Dopo, ricevi un riepilogo chiaro, i tuoi follow-up e un briefing per la riunione successiva. Le chiamate sono trascritte sul tuo Mac."
 }

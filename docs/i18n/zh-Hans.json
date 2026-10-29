@@ -612,5 +612,10 @@
  "turn_a_list_into_a_5381e0": "把清单变成可以逐项勾选的画布",
  "practice_your_team_s_terms_165aad": "用简短的小测验练习团队术语，直到记住为止",
  "add_amem_too_and_your_56fc5d": "再加上 <a href=\"https://github.com/sslugic/amem\" translate=\"no\">amem</a>，你的会议就能与 Claude Code、Cursor 和其他 AI 工具共享同一份记忆。",
- "download_dmg_v1_18_3_1d8e42": "下载 .dmg <span class=\"ver\">v1.18.3</span>"
+ "download_dmg_v1_18_3_1d8e42": "下载 .dmg <span class=\"ver\">v1.18.3</span>",
+ "stay_in_the_conversation_know_76b1b7": "专注于对话，掌握来龙去脉。",
+ "undertone_stay_in_the_conversation_194bc5": "Undertone — 专注于对话，掌握来龙去脉",
+ "undertone_explains_acronyms_decodes_proj_eb17e9": "通话时，Undertone 会解释缩写、解读项目名称并给出相关信息，依据来自你团队的 Slack、Notion 和 Jira。通话结束后，你会得到清晰的回顾、你的后续事项，以及下次会议的简报。通话在你的 Mac 上转录。",
+ "undertone_explains_acronyms_decodes_proj_963e17": "通话时，Undertone 会解释缩写、解读项目名称并给出相关信息，依据来自你团队的 Slack、Notion 和 Jira。通话结束后，你会得到清晰的回顾、你的后续事项，以及下次会议的简报。通话在你的 Mac 上转录。",
+ "stay_in_the_conversation_know_b22e54": "专注于对话，掌握来龙去脉。 通话时，Undertone 会解释缩写、解读项目名称并给出相关信息，依据来自你团队的 Slack、Notion 和 Jira。通话结束后，你会得到清晰的回顾、你的后续事项，以及下次会议的简报。通话在你的 Mac 上转录。"
 }
