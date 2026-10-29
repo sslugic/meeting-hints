@@ -1300,7 +1300,7 @@
   // Google Ads conversion measurement, only for visitors who came from an ad (gclid in the link) and allowed it.
   // Fill in the conversion ID (AW-…) and label from Google Ads › Goals › Conversions; while empty, nothing loads.
   (function () {
-    var ADS = { id: "", label: "" };
+    var ADS = { id: "AW-18544631199", label: "" };
     if (!ADS.id) return;
     var store = { get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
                   set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
@@ -1321,7 +1321,7 @@
     // A download only counts when measurement was allowed.
     document.addEventListener("click", function (e) {
       var a = e.target.closest && e.target.closest('a[href*="Undertone.dmg"]');
-      if (a && loaded && window.gtag) gtag("event", "conversion", { send_to: ADS.id + "/" + ADS.label, transport_type: "beacon" });
+      if (a && loaded && window.gtag && ADS.label) gtag("event", "conversion", { send_to: ADS.id + "/" + ADS.label, transport_type: "beacon" });
     });
     if (choice === "yes") { load(); return; }
     if (!fromAd || choice === "no") return;
