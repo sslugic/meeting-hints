@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Undertone Pro</title>
+<meta name="description" content="Undertone Pro: automatic briefings, research ahead, unlimited meeting prep and private AI included. Your meetings still never leave your Mac.">
+<meta property="og:title" content="Undertone Pro">
+<meta property="og:image" content="https://getundertone.app/assets/promo.png">
+<meta name="theme-color" content="#09090B">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="../assets/icon-256.png">
+<link rel="canonical" href="https://getundertone.app/pro/">
+<style>
+  :root {
+    --bg: #09090B;
+    --surface: rgba(255, 255, 255, .03);
+    --surface-2: #13151D;
+    --border: rgba(255, 255, 255, .08);
+    --border-2: rgba(255, 255, 255, .14);
+    --text: #F4F4F5;
+    --text-2: #A1A1AA;
+    --text-3: #8B8B94;
+    --accent: #818CF8;
+    --sans: Inter, -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+    --r: 12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font: 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 28px 0; }
+  header .wrap { display: flex; align-items: center; gap: 10px; }
+  header img { width: 28px; height: 28px; border-radius: 7px; }
+  header b { font-weight: 600; }
+  header nav { margin-left: auto; font-size: 14px; }
+  h1 { font-size: clamp(32px, 6vw, 44px); line-height: 1.1; letter-spacing: -.02em; margin: 32px 0 12px; }
+  .lede { color: var(--text-2); font-size: 18px; max-width: 620px; }
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 36px; }
+  .plan { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 22px; display: flex; flex-direction: column; }
+  .plan.pro { border-color: rgba(129, 140, 248, .5); background: rgba(129, 140, 248, .06); }
+  .plan h2 { font-size: 15px; font-weight: 600; color: var(--text-2); }
+  .price { font-size: 34px; font-weight: 600; letter-spacing: -.02em; margin: 8px 0 2px; }
+  .price small { font-size: 14px; font-weight: 400; color: var(--text-3); }
+  .note { color: var(--text-3); font-size: 14px; min-height: 22px; }
+  .plan ul { list-style: none; margin: 16px 0 20px; flex: 1; }
+  .plan li { padding: 5px 0 5px 22px; position: relative; color: var(--text-2); font-size: 15px; }
+  .plan li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  .plan li b { color: var(--text); font-weight: 600; }
+  .toggle { display: inline-flex; gap: 4px; padding: 4px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; margin-top: 28px; }
+  .toggle button { font: 500 14px var(--sans); color: var(--text-2); background: none; border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+  .toggle button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+  .btn { display: block; text-align: center; font: 600 15px var(--sans); border-radius: 10px; padding: 11px 16px; border: 1px solid var(--border-2); color: var(--text); background: var(--surface-2); cursor: pointer; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #0B0B12; }
+  .btn:hover { text-decoration: none; filter: brightness(1.08); }
+  .btn[disabled] { opacity: .55; cursor: default; filter: none; }
+  section { padding: 48px 0 0; }
+  h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); font-weight: 600; margin-bottom: 12px; }
+  dl.faq dt { font-weight: 600; margin-top: 16px; }
+  dl.faq dd { color: var(--text-2); }
+  footer { margin: 64px 0 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="../"><img src="../assets/icon-256.png" alt=""></a><b>Undertone</b><nav><a href="../">getundertone.app</a></nav></div></header>
+<main class="wrap">
+  <h1>Undertone Pro</h1>
+  <p class="lede">More done before and between your meetings. Your meetings still never leave your Mac.</p>
+
+  <div class="toggle" role="group" aria-label="Billing">
+    <button type="button" data-billing="annual" aria-pressed="true">Yearly</button>
+    <button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
+  </div>
+
+  <div class="plans">
+    <div class="plan">
+      <h2>Free</h2>
+      <div class="price">$0</div>
+      <div class="note">With any AI, including your own</div>
+      <ul>
+        <li>Live hints and answers during calls</li>
+        <li>Recaps, tasks, glossary and Ask</li>
+        <li>Briefings when you ask for one</li>
+        <li>3 meeting prep checks a week</li>
+      </ul>
+      <a class="btn" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">Download</a>
+    </div>
+    <div class="plan pro">
+      <h2>Pro</h2>
+      <div class="price"><span id="price">$10</span> <small id="per">/ month, billed yearly</small></div>
+      <div class="note" id="saving">Two months free</div>
+      <ul>
+        <li><b>Automatic briefings</b> before every meeting</li>
+        <li><b>Research ahead:</b> terms and people looked up in the background</li>
+        <li><b>Unlimited meeting prep</b> and study guides</li>
+        <li><b>Org chart import</b> from Rippling, Gusto, BambooHR and more</li>
+        <li><b>Private AI included:</b> monthly AI credits, nothing stored</li>
+      </ul>
+      <button class="btn primary" id="buy" type="button">Get Pro</button>
+    </div>
+  </div>
+
+  <section>
+    <h3>Questions</h3>
+    <dl class="faq">
+      <dt>Does Pro send my meetings anywhere?</dt>
+      <dd>No. Pro features run on your Mac like everything else. The license key holds only your email and when it ends, and Undertone checks it on your Mac.</dd>
+      <dt>What happens to the AI credits?</dt>
+      <dd>Each month of Pro adds AI credits for Undertone's server, which passes requests to Google Gemini and keeps only usage totals. Prefer your own AI? Keep using it; Pro works either way.</dd>
+      <dt>How do I add Pro to the app?</dt>
+      <dd>After checkout we email you a license key. Paste it in Profile &amp; Settings › General. Lost it? The same screen can email it again.</dd>
+      <dt>Can I cancel?</dt>
+      <dd>Any time. Pro keeps working until the end of the period you paid for. Payments are handled by Paddle, our reseller, which also handles invoices and sales tax.</dd>
+    </dl>
+  </section>
+</main>
+<footer class="wrap">Undertone · Made by Testera Labs · <a href="mailto:hello@getundertone.app">hello@getundertone.app</a></footer>
+
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+  // Fill in from Paddle (Developer tools › Authentication, and Catalog › Prices). These are public values, not secrets.
+  // Until the client token is set, the button says Pro is on its way.
+  var PADDLE = { token: "", environment: "production", prices: { annual: "", monthly: "" } };
+  var PRICES = { annual: ["$10", "/ month, billed yearly", "Two months free"], monthly: ["$12", "/ month", ""] };
+
+  var billing = "annual";
+  var buy = document.getElementById("buy");
+  function show() {
+    var p = PRICES[billing];
+    document.getElementById("price").textContent = p[0];
+    document.getElementById("per").textContent = p[1];
+    document.getElementById("saving").textContent = p[2];
+    document.querySelectorAll("[data-billing]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.billing === billing)); });
+  }
+  document.querySelectorAll("[data-billing]").forEach(function (b) {
+    b.addEventListener("click", function () { billing = b.dataset.billing; show(); });
+  });
+  show();
+
+  if (PADDLE.token && window.Paddle) {
+    if (PADDLE.environment === "sandbox") Paddle.Environment.set("sandbox");
+    Paddle.Initialize({ token: PADDLE.token });
+    buy.addEventListener("click", function () {
+      Paddle.Checkout.open({ items: [{ priceId: PADDLE.prices[billing], quantity: 1 }], settings: { theme: "dark" } });
+    });
+  } else {
+    buy.textContent = "Coming soon · free in the beta";
+    buy.disabled = true;
+  }
+</script>
+</body>
+</html>
