@@ -398,6 +398,7 @@
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
   .plans.one { grid-template-columns: minmax(0, 520px); }
+  .plans.two { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 880px; }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -675,7 +676,7 @@
       <a href="#before">फ़ीचर्स</a>
       <a href="#use-cases">उपयोग के उदाहरण</a>
       <a href="#privacy">प्राइवेसी</a>
-      <a href="#pricing">मुफ़्त बीटा</a>
+      <a href="#pricing">प्राइसिंग</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">चेंजलॉग</a>
       <details class="lang"><summary aria-label="भाषा"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span class="lang-cur" translate="no">HI</span><svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></summary><ul class="lang-menu" translate="no"><li><a href="../?lang=en" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a></li><li><a href="../nl/" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li><li><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li><li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li><li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi" data-lang="hi" aria-current="page">हिन्दी</a></li><li><a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li><li><a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li></ul></details>      <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg><span>डाउनलोड<span class="long"> macOS के लिए</span></span></a>
@@ -1141,23 +1142,37 @@
   <section class="block" id="pricing">
     <div class="wrap">
       <div class="head">
-        <h2>बीटा के दौरान मुफ़्त</h2>
-        <p>बीटा के दौरान इस पेज की हर सुविधा मुफ़्त है। हमारी ओर से मुफ़्त क्रेडिट से शुरू करें या अपना मौजूदा AI इस्तेमाल करें, और Undertone को आकार देने में मदद करें।</p>
+        <h2>इस्तेमाल मुफ़्त है। ज़्यादा चाहिए तो Pro।</h2>
+        <p>लाइव हिंट्स, रीकैप, टास्क और पूछें किसी भी AI के साथ मुफ़्त रहते हैं। Pro आपके लिए तैयारी कर देता है। Undertone के बीटा में रहने तक Pro की हर सुविधा मुफ़्त है।</p>
       </div>
-      <div class="plans one">
-        <div class="plan now">
-          <div class="when">अभी उपलब्ध</div>
-          <h3>बीटा, मुफ़्त क्रेडिट या अपना AI</h3>
+      <div class="plans two">
+        <div class="plan">
+          <div class="when">मुफ़्त</div>
+          <h3>Undertone</h3>
           <div class="price">$0</div>
-          <p>इस पेज का हर फ़ीचर।</p>
+          <p>शुरुआत के लिए मुफ़्त क्रेडिट के साथ, या वही AI जो आप पहले से इस्तेमाल करते हैं।</p>
           <ul>
-            <li>शुरुआत में लगभग पाँच कॉल के लिए मुफ़्त क्रेडिट, AI कुंजी की ज़रूरत नहीं</li>
-            <li>कॉल्स आपके Mac पर ट्रांसक्राइब, कभी अपलोड नहीं</li>
-            <li>या आपकी अपनी OpenAI, Anthropic या Gemini API की, लोकल Ollama या LM Studio मॉडल, या आपका Claude Code या Cursor साइन-इन</li>
-            <li>मीटिंग्स, टास्क और संदर्भ आपके Mac पर फ़ाइलों के रूप में</li>
-            <li>Slack, Notion, Jira, Linear और कई दूसरे टूल्स, रीड-ओनली</li>
+            <li>कॉल के दौरान लाइव हिंट्स और जवाब</li>
+            <li>रीकैप, टास्क, शब्दावली और पूछें</li>
+            <li>जब माँगें तब ब्रीफ़िंग</li>
+            <li>हर हफ़्ते 3 मीटिंग प्रेप चेक</li>
+            <li>आपकी अपनी OpenAI, Anthropic या Gemini कुंजी, लोकल मॉडल, या आपका Claude Code या Cursor साइन-इन</li>
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">डाउनलोड करें</a>
+        </div>
+        <div class="plan now">
+          <div class="when">बीटा के दौरान मुफ़्त</div>
+          <h3>Undertone Pro</h3>
+          <div class="price">$10 <small>/ माह, सालाना बिलिंग</small></div>
+          <p>या मासिक बिलिंग पर $12। कभी भी रद्द करें।</p>
+          <ul>
+            <li>हर मीटिंग से पहले अपने-आप ब्रीफ़िंग</li>
+            <li>शब्द और लोग पहले से खोजे हुए</li>
+            <li>असीमित मीटिंग प्रेप और स्टडी गाइड</li>
+            <li>Rippling, Gusto, BambooHR और अन्य से ऑर्ग चार्ट इंपोर्ट</li>
+            <li>प्राइवेट AI शामिल: मासिक क्रेडिट, कुछ भी स्टोर नहीं होता</li>
+          </ul>
+          <a class="btn btn-light" href="../pro/">Pro देखें</a>
         </div>
       </div>
     </div>

@@ -398,6 +398,7 @@
   /* Pricing */
   .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
   .plans.one { grid-template-columns: minmax(0, 520px); }
+  .plans.two { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 880px; }
   .plan { padding: 24px; border-radius: 16px; border: 1px solid var(--border-2); background: rgba(255,255,255,.025); display: flex; flex-direction: column; }
   .plan.now { border-color: rgba(129,140,248,.5); background: rgba(129,140,248,.06); }
   .plan h3 { font-size: 17px; margin: 0; }
@@ -675,7 +676,7 @@
       <a href="#before">Funzionalità</a>
       <a href="#use-cases">Casi d’uso</a>
       <a href="#privacy">Privacy</a>
-      <a href="#pricing">Beta gratuita</a>
+      <a href="#pricing">Prezzi</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">Novità</a>
       <details class="lang"><summary aria-label="Lingua"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span class="lang-cur" translate="no">IT</span><svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></summary><ul class="lang-menu" translate="no"><li><a href="../?lang=en" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it" aria-current="page">Italiano</a></li><li><a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a></li><li><a href="../nl/" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li><li><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li><li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li><li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li><li><a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li><li><a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li></ul></details>      <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg><span>Scarica<span class="long"> per macOS</span></span></a>
@@ -1141,23 +1142,37 @@
   <section class="block" id="pricing">
     <div class="wrap">
       <div class="head">
-        <h2>Gratis finché è in beta</h2>
-        <p>Tutte le funzioni di questa pagina sono gratuite durante la beta. Inizia con i crediti gratuiti offerti da noi o usa l’IA che hai già, e aiuta a dare forma a Undertone.</p>
+        <h2>Gratis da usare. Pro quando vuoi di più.</h2>
+        <p>Suggerimenti in diretta, riepiloghi, attività e Chiedi restano gratuiti con qualsiasi IA. Pro si occupa della preparazione al posto tuo. Tutto ciò che è in Pro è gratuito finché Undertone è in beta.</p>
       </div>
-      <div class="plans one">
-        <div class="plan now">
-          <div class="when">Disponibile ora</div>
-          <h3>Beta, con crediti gratuiti o la tua IA</h3>
+      <div class="plans two">
+        <div class="plan">
+          <div class="when">Gratis</div>
+          <h3>Undertone</h3>
           <div class="price">$0</div>
-          <p>Tutte le funzionalità di questa pagina.</p>
+          <p>Con crediti gratuiti per iniziare, o l’IA che già usi.</p>
           <ul>
-            <li>Crediti gratuiti per circa cinque chiamate all’inizio, senza chiave di IA</li>
-            <li>Chiamate trascritte sul tuo Mac, mai caricate</li>
-            <li>Oppure la tua chiave OpenAI, Anthropic o Gemini, un modello locale Ollama o LM Studio, oppure il tuo accesso a Claude Code o Cursor</li>
-            <li>Riunioni, attività e contesto conservati come file sul tuo Mac</li>
-            <li>Slack, Notion, Jira, Linear e molti altri strumenti, in sola lettura</li>
+            <li>Spunti e risposte in diretta durante le chiamate</li>
+            <li>Riepiloghi, attività, glossario e Chiedi</li>
+            <li>Briefing quando ne chiedi uno</li>
+            <li>3 controlli di preparazione riunione a settimana</li>
+            <li>La tua chiave OpenAI, Anthropic o Gemini, un modello locale, oppure il tuo accesso a Claude Code o Cursor</li>
           </ul>
           <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">Scarica</a>
+        </div>
+        <div class="plan now">
+          <div class="when">Gratis durante la beta</div>
+          <h3>Undertone Pro</h3>
+          <div class="price">$10 <small>/ mese, fatturati annualmente</small></div>
+          <p>Oppure $12 fatturati mensilmente. Disdici quando vuoi.</p>
+          <ul>
+            <li>Briefing automatici prima di ogni riunione</li>
+            <li>Termini e persone cercati in anticipo</li>
+            <li>Preparazione riunioni e guide di studio illimitate</li>
+            <li>Importazione dell’organigramma da Rippling, Gusto, BambooHR e altri</li>
+            <li>IA privata inclusa: crediti mensili, nulla viene archiviato</li>
+          </ul>
+          <a class="btn btn-light" href="../pro/">Scopri Pro</a>
         </div>
       </div>
     </div>
