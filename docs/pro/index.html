@@ -120,8 +120,8 @@
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 <script>
   // Fill in from Paddle (Developer tools › Authentication, and Catalog › Prices). These are public values, not secrets.
-  // Until the client token is set, the button says Pro is on its way.
-  var PADDLE = { token: "live_d099a405793321740092eb4a6e4", environment: "production", prices: { annual: "pri_01m64jkyc2n85byxmmdxxwr3zj", monthly: "pri_01m64jk9nkwz198brw5cpmphpp" } };
+  // Until Paddle has approved the site and the business (set open: true then), the button says Pro is on its way.
+  var PADDLE = { open: false, token: "live_d099a405793321740092eb4a6e4", environment: "production", prices: { annual: "pri_01m64jkyc2n85byxmmdxxwr3zj", monthly: "pri_01m64jk9nkwz198brw5cpmphpp" } };
   var PRICES = { annual: ["$10", "/ month, billed yearly", "Two months free"], monthly: ["$12", "/ month", ""] };
 
   var billing = "annual";
@@ -138,7 +138,7 @@
   });
   show();
 
-  if (PADDLE.token && window.Paddle) {
+  if (PADDLE.open && PADDLE.token && window.Paddle) {
     if (PADDLE.environment === "sandbox") Paddle.Environment.set("sandbox");
     Paddle.Initialize({ token: PADDLE.token });
     buy.addEventListener("click", function () {
