@@ -286,6 +286,27 @@
   .ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--dotc, #71717A); }
   .ticks.sug { --dotc: var(--accent); }
   .ticks.you { --dotc: #D4D4D8; }
+  /* Prep */
+  .ready { display: flex; gap: 14px; align-items: center; margin-bottom: 14px; }
+  .ready b { display: block; font-size: 16px; color: #F4F4F5; }
+  .ready span { font-size: 13.5px; color: var(--text-2); }
+  .ring { --p: 0; width: 52px; height: 52px; border-radius: 50%; flex: none; display: grid; place-items: center; background: conic-gradient(#34D399 calc(var(--p) * 1%), rgba(255, 255, 255, .1) 0); }
+  .ring span { width: 42px; height: 42px; border-radius: 50%; background: #17181f; display: grid; place-items: center; font-size: 12.5px; font-weight: 600; color: #F4F4F5; font-variant-numeric: tabular-nums; }
+  .rq { font-size: 15px; color: #F4F4F5; font-weight: 500; margin: 4px 0 10px; }
+  .opts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .opts span { font-size: 13.5px; color: #D4D4D8; border: 1px solid rgba(255, 255, 255, .12); border-radius: 9px; padding: 6px 11px; }
+  .opts span.ok { border-color: rgba(52, 211, 153, .6); background: rgba(52, 211, 153, .12); color: #F4F4F5; }
+  .pfoot { font-size: 14px; color: #E4E4E7; } .pfoot em { font-style: normal; color: var(--text-3); }
+  .pane .gh { font-size: 16px; font-weight: 600; color: #F4F4F5; margin-bottom: 8px; }
+  .pane .gh2 { font-size: 13px; font-weight: 600; color: var(--text-2); margin: 12px 0 2px; }
+  #prep .pane p:not(.sample):not(.gh):not(.gh2):not(.rq):not(.pfoot) { font-size: 14px; color: #E4E4E7; line-height: 1.55; }
+  /* Help us spread the word */
+  .share { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .sbtn { display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--border-2); background: var(--surface); color: var(--text); font: 500 14.5px/1 var(--sans); cursor: pointer; transition: background-color .15s, border-color .15s; }
+  .sbtn svg { width: 18px; height: 18px; color: var(--text-2); }
+  .sbtn:hover { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .24); }
+  .sbtn:hover svg { color: var(--text); }
+  .share-note { margin-top: 14px; min-height: 1.5em; font-size: 14px; color: var(--text-2); }
   /* Before, after and between calls: the points under each visual, two columns on wide screens */
   .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
   .outcomes li { font-size: 15.5px; color: #D4D4D8; }
@@ -661,7 +682,7 @@
       <h1>專注於對話，掌握來龍去脈。</h1>
       <p class="sub">通話時，Undertone 會解釋縮寫、解讀專案名稱並提供相關資訊，依據來自你團隊的 Slack、Notion 和 Jira。通話結束後，你會得到清楚的回顧、你的後續事項，以及下次會議的簡報。通話在你的 Mac 上轉錄。</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>下載 .dmg <span class="ver">v1.18.5</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>下載 .dmg <span class="ver">v1.18.6</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>版本發布與問題回報</a>
       </div>
       <p class="fine">Beta 期間免費 · 需要 macOS 26 或以上版本，搭載 Apple 晶片</p>
@@ -724,6 +745,8 @@
           <p>辨識縮寫、專案代號和衝著你來的問題，然後顯示一行說明；有問題丟給你時，則顯示你需要的事實。</p>
         </div>
       </div>
+      <p class="aside">只是旁聽？把面板縮小成一個小圓盤，有人說話時會泛起漣漪，需要時點一下即可。</p>
+      <p class="aside">在真實會議中實測：需要搜尋的問題約 14 秒就能回答（以前要 77 秒），簡報初稿只需 4 秒，同事卡片約 1 秒。</p>
     </div>
   </section>
 
@@ -745,6 +768,7 @@
         <div class="pane" role="img" aria-label="範例人物卡片，包含角色、工作和共同歷程">
           <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>資深工程師，平台團隊</span></div></div>
           <div class="pfacts">
+            <p><em>直屬主管</em> Jordan Lee，VP of Engineering <span style="color:var(--text-3)">[Rippling]</span></p>
             <p><em>負責</em> Keystone，也就是計費系統遷移 <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
             <p><em>與你一起</em>審閱回滾操作手冊 <span style="color:var(--text-3)">[Notion]</span></p>
             <p><em>上次</em>平台同步會議，週二：切換仍訂在 14 日</p>
@@ -754,9 +778,47 @@
         </div>
       </div>
       <ul class="ticks sug outcomes">
-        <li>點擊邀請中的任何人，查看對方的角色、在做什麼，以及你們之間還有哪些未完成的事</li>
+        <li>點擊邀請中的任何人，即可查看其角色、主管以及你們之間尚未完成的事項，資訊來自你的資料來源和組織圖或 HR 工具，如 Gusto、Deel、Rippling 或 BambooHR</li>
         <li>幾個來自簡報的快速問題，幫你確認是否已準備好</li>
         <li>會議開始前，會從你的資料來源收集會議背景，讓通話一開始就帶著這些資訊</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="prep">
+    <div class="wrap">
+      <div class="head">
+        <h2>確認是否準備就緒，並持續學習</h2>
+        <p>「準備」有專屬分頁。會議前，回答幾個根據簡報產生的快速問題，看看需要重讀什麼。其餘時間，練習團隊術語，直到牢牢記住。</p>
+      </div>
+      <div class="duo">
+        <div class="pane" role="img" aria-label="即將開始的會議的範例準備度檢查：5 題答對 4 題，有一個事實需要複習">
+          <div class="ready">
+            <div class="ring" style="--p:80"><span>80%</span></div>
+            <div><b>平台同步會議</b><span>25 分鐘後 · 準備度：5 題答對 4 題</span></div>
+          </div>
+          <p class="rq">讀取切換預計在什麼時候？</p>
+          <div class="opts"><span>7 日</span><span class="ok">14 日</span><span>下一個衝刺</span></div>
+          <p class="pfoot"><em>通話前複習：</em>誰負責回滾操作手冊 <span class="s">[Notion]</span></p>
+          <p class="sample" style="padding:10px 0 0">範例。問題根據你的簡報撰寫。</p>
+        </div>
+        <div class="pane" role="img" aria-label="根據使用者反覆答錯的術語撰寫的範例學習指南">
+          <p class="gh">你的學習指南</p>
+          <p>你記得系統的名稱，卻漏掉了它的特別之處。你在進步：關於 Keystone 用自己的話作答的得分從 45% 提升到 82%。</p>
+          <p class="gh2">重點</p>
+          <ul class="ticks sug">
+            <li><b>Lumen DPA</b>：分析服務商的資料協議。記住「30 天，僅限歐盟」。</li>
+            <li><b>Halyard</b>：結算服務，仍在使用舊的帳本結構。</li>
+          </ul>
+          <div class="chips"><span>整體 74%</span><span>12 輪</span><span>練習這些</span></div>
+          <p class="sample" style="padding:12px 0 0">範例。根據你練習時答錯的內容撰寫。</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>每份簡報五個問題，在你開口前就已備好；如果還沒準備好，告訴你該重讀什麼</li>
+        <li>練習術語：選出含義，或用自己的話解釋，由你的 AI 為吻合度評分</li>
+        <li>每一輪都會保留：你的分數、需要加強的術語和答錯的內容</li>
+        <li>根據你反覆答錯的內容撰寫學習指南，並附一輪只練這些術語的練習</li>
       </ul>
     </div>
   </section>
@@ -834,7 +896,7 @@
         <li>可以問某一場會議，也可以問全部，還能從「最近項目」接續之前的對話</li>
         <li>在通話空檔，會預先收集你未完成任務的背景，讓回答更快開始</li>
         <li>把清單變成可以逐項勾選的畫布</li>
-        <li>用簡短的小測驗練習團隊術語，直到記住為止</li>
+        <li>追問、把回答複製為文字或圖片，並評分：倒讚會影響之後的回答</li>
       </ul>
     </div>
   </section>
@@ -1093,11 +1155,33 @@
     </div>
   </section>
 
+  <section class="block" id="share">
+    <div class="wrap">
+      <div class="head">
+        <h2>幫我們推薦給更多人</h2>
+        <p>如果 Undertone 對你有幫助，請告訴同事或你的人脈。測試期間免費，每一次分享都很有幫助。</p>
+      </div>
+      <div class="share" data-url="https://getundertone.app/" data-text="Undertone explains your team's jargon live in calls, then writes the recap, your tasks and the next briefing. Free Mac app:">
+        <a class="sbtn" data-net="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgetundertone.app%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7.5 10.5v6M7.5 7.6v.1M11 16.5v-6m0 2.6c0-1.6 1-2.8 2.5-2.8s2.5 1 2.5 2.8v3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>LinkedIn</a>
+        <a class="sbtn" data-net="x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgetundertone.app%2F&amp;text=Undertone%20explains%20your%20team%27s%20jargon%20live%20in%20calls%2C%20then%20writes%20the%20recap%2C%20your%20tasks%20and%20the%20next%20briefing.%20Free%20Mac%20app%3A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>X</a>
+        <a class="sbtn" data-net="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgetundertone.app%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13.2 21v-7.2h2.3l.4-2.7h-2.7V9.4c0-.8.3-1.3 1.4-1.3h1.4V5.7a17 17 0 0 0-2.1-.1c-2 0-3.4 1.2-3.4 3.5v2h-2.3v2.7h2.3V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Facebook</a>
+        <a class="sbtn" data-net="reddit" href="https://www.reddit.com/submit?url=https%3A%2F%2Fgetundertone.app%2F&amp;title=Undertone%3A%20your%20team%27s%20jargon%20explained%20live%20in%20calls%20%28free%20Mac%20app%29" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="14" rx="8" ry="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9.2" cy="13.6" r="1.1" fill="currentColor"/><circle cx="14.8" cy="13.6" r="1.1" fill="currentColor"/><path d="M9.5 16.4c1.5 1 3.5 1 5 0M12 8.5l1.2-4.6 3.6.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18.3" cy="5.2" r="1.4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Reddit</a>
+        <a class="sbtn" data-net="hn" href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fgetundertone.app%2F&amp;t=Undertone%3A%20your%20team%27s%20jargon%20explained%20live%20in%20calls" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 7l4 5.5L16 7M12 12.5V17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Hacker News</a>
+        <button class="sbtn" type="button" data-net="instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>Instagram</button>
+        <a class="sbtn" data-net="email" href="mailto:?subject=Undertone%3A%20worth%20a%20look&amp;body=Undertone%20explains%20your%20team%27s%20jargon%20live%20in%20calls%2C%20then%20writes%20the%20recap%2C%20your%20tasks%20and%20the%20next%20briefing.%20Free%20Mac%20app%3A%20https%3A%2F%2Fgetundertone.app%2F"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>電子郵件</a>
+        <button class="sbtn" type="button" data-net="copy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="lbl">複製連結</span></button>
+      </div>
+      <p class="share-note" role="status" aria-live="polite"></p>
+      <span class="msg-copied" hidden>連結已複製。</span>
+      <span class="msg-insta" hidden>連結已複製。Instagram 的貼文不支援連結：請貼到你的個人簡介或限時動態的連結貼紙中。</span>
+    </div>
+  </section>
+
   <section class="wrap start">
     <h2>準備好迎接下一通通話了嗎？</h2>
     <p>安裝後，用免費點數開始或連接你的 AI，加入資料來源，然後加入通話。結束後，你的回顧、任務和新術語都在首頁等著你。</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>下載 .dmg <span class="ver">v1.18.5</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>下載 .dmg <span class="ver">v1.18.6</span></a>
     </div>
     <p class="brew">或使用 Homebrew： <code translate="no">brew install --cask sslugic/tap/undertone</code></p>
     <ul class="reqs">
@@ -1177,6 +1261,27 @@
     }
     fit();
     window.addEventListener("resize", fit);
+  })();
+</script>
+<script>
+  // Help us spread the word: copy the link; Instagram has no share link, so phones get the share sheet and
+  // desktops get the link copied with a note.
+  (function () {
+    var box = document.querySelector(".share");
+    if (!box) return;
+    var url = box.dataset.url, text = box.dataset.text, note = document.querySelector(".share-note");
+    function msg(cls, fallback) { var el = document.querySelector(cls); return el ? el.textContent : fallback; }
+    function say(msg) { if (note) note.textContent = msg; }
+    function copy(done) {
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(done, function () { say(url); });
+    }
+    box.querySelector('[data-net="copy"]').addEventListener("click", function () {
+      copy(function () { say(msg(".msg-copied", "Link copied.")); });
+    });
+    box.querySelector('[data-net="instagram"]').addEventListener("click", function () {
+      if (navigator.share) { navigator.share({ title: "Undertone", text: text, url: url }).catch(function () {}); return; }
+      copy(function () { say(msg(".msg-insta", "Link copied.")); });
+    });
   })();
 </script>
 </body>

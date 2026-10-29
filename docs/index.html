@@ -312,6 +312,27 @@
   .ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--dotc, #71717A); }
   .ticks.sug { --dotc: var(--accent); }
   .ticks.you { --dotc: #D4D4D8; }
+  /* Prep */
+  .ready { display: flex; gap: 14px; align-items: center; margin-bottom: 14px; }
+  .ready b { display: block; font-size: 16px; color: #F4F4F5; }
+  .ready span { font-size: 13.5px; color: var(--text-2); }
+  .ring { --p: 0; width: 52px; height: 52px; border-radius: 50%; flex: none; display: grid; place-items: center; background: conic-gradient(#34D399 calc(var(--p) * 1%), rgba(255, 255, 255, .1) 0); }
+  .ring span { width: 42px; height: 42px; border-radius: 50%; background: #17181f; display: grid; place-items: center; font-size: 12.5px; font-weight: 600; color: #F4F4F5; font-variant-numeric: tabular-nums; }
+  .rq { font-size: 15px; color: #F4F4F5; font-weight: 500; margin: 4px 0 10px; }
+  .opts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .opts span { font-size: 13.5px; color: #D4D4D8; border: 1px solid rgba(255, 255, 255, .12); border-radius: 9px; padding: 6px 11px; }
+  .opts span.ok { border-color: rgba(52, 211, 153, .6); background: rgba(52, 211, 153, .12); color: #F4F4F5; }
+  .pfoot { font-size: 14px; color: #E4E4E7; } .pfoot em { font-style: normal; color: var(--text-3); }
+  .pane .gh { font-size: 16px; font-weight: 600; color: #F4F4F5; margin-bottom: 8px; }
+  .pane .gh2 { font-size: 13px; font-weight: 600; color: var(--text-2); margin: 12px 0 2px; }
+  #prep .pane p:not(.sample):not(.gh):not(.gh2):not(.rq):not(.pfoot) { font-size: 14px; color: #E4E4E7; line-height: 1.55; }
+  /* Help us spread the word */
+  .share { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .sbtn { display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--border-2); background: var(--surface); color: var(--text); font: 500 14.5px/1 var(--sans); cursor: pointer; transition: background-color .15s, border-color .15s; }
+  .sbtn svg { width: 18px; height: 18px; color: var(--text-2); }
+  .sbtn:hover { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .24); }
+  .sbtn:hover svg { color: var(--text); }
+  .share-note { margin-top: 14px; min-height: 1.5em; font-size: 14px; color: var(--text-2); }
   /* Before, after and between calls: the points under each visual, two columns on wide screens */
   .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
   .outcomes li { font-size: 15.5px; color: #D4D4D8; }
@@ -688,7 +709,7 @@
       <h1>Stay in the conversation. Know the context.</h1>
       <p class="sub">Undertone explains acronyms, decodes project names and surfaces relevant facts while you're on a call, using context from your team's Slack, Notion and Jira. Afterwards, get a clear recap, your follow-ups and a briefing for the next meeting. Calls are transcribed on your Mac.</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.18.5</span></a>
+        <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.18.6</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Releases and issues</a>
       </div>
       <p class="fine">Free during the beta · macOS 26 or later on Apple silicon</p>
@@ -751,6 +772,8 @@
           <p>Spots acronyms, code names and questions aimed at you, then shows a one-line explanation, or the facts you'll need when a question is aimed at you.</p>
         </div>
       </div>
+      <p class="aside">Only listening in? Minimize the panel to a small disc that ripples while people talk, and click it when you need it.</p>
+      <p class="aside">Timed on real meetings: a question that needs a search is answered in about 14 seconds (it took 77), a briefing's first draft takes 4 seconds, and a colleague's card about 1.</p>
     </div>
   </section>
 
@@ -772,6 +795,7 @@
         <div class="pane" role="img" aria-label="Sample person card with role, work and shared history">
           <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>Staff engineer, Platform</span></div></div>
           <div class="pfacts">
+            <p><em>Reports to</em> Jordan Lee, VP of Engineering <span style="color:var(--text-3)">[Rippling]</span></p>
             <p><em>Works on</em> Keystone, the billing-stack migration <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
             <p><em>With you</em> reviewing the rollback runbook <span style="color:var(--text-3)">[Notion]</span></p>
             <p><em>Last time</em> Platform sync, Tuesday: cutover stays on the 14th</p>
@@ -781,9 +805,47 @@
         </div>
       </div>
       <ul class="ticks sug outcomes">
-        <li>Click anyone on the invite to see their role, what they work on and what's open between you</li>
+        <li>Click anyone on the invite to see their role, their manager and what's open between you, from your sources and your org chart or HR tool, like Gusto, Deel, Rippling or BambooHR</li>
         <li>A few quick questions from the briefing check you're ready</li>
         <li>The meeting's context is gathered from your sources just before it starts, so the call begins with it</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="prep">
+    <div class="wrap">
+      <div class="head">
+        <h2>Check you're ready, and keep learning</h2>
+        <p>Prep has its own tab. Before a meeting, answer a few quick questions from its briefing and see what to reread. In between, practice your team's terms until they stick.</p>
+      </div>
+      <div class="duo">
+        <div class="pane" role="img" aria-label="Sample readiness check for an upcoming meeting: 4 of 5 right, with one fact to go over">
+          <div class="ready">
+            <div class="ring" style="--p:80"><span>80%</span></div>
+            <div><b>Platform sync</b><span>in 25 min · Ready: 4 of 5 right</span></div>
+          </div>
+          <p class="rq">When is the read cutover planned?</p>
+          <div class="opts"><span>The 7th</span><span class="ok">The 14th</span><span>Next sprint</span></div>
+          <p class="pfoot"><em>Go over before the call:</em> who owns the rollback runbook <span class="s">[Notion]</span></p>
+          <p class="sample" style="padding:10px 0 0">Sample. Questions are written from your briefing.</p>
+        </div>
+        <div class="pane" role="img" aria-label="Sample study guide written from the terms the user keeps missing">
+          <p class="gh">Your study guide</p>
+          <p>You remember what a system is called but leave out what makes it specific. You're improving: own-words answers on Keystone went from 45% to 82%.</p>
+          <p class="gh2">Focus on</p>
+          <ul class="ticks sug">
+            <li><b>Lumen DPA</b>: the analytics vendor's data agreement. Remember “30 days, EU only”.</li>
+            <li><b>Halyard</b>: the settlement service, still on the old ledger schema.</li>
+          </ul>
+          <div class="chips"><span>Overall 74%</span><span>12 rounds</span><span>Practice these</span></div>
+          <p class="sample" style="padding:12px 0 0">Sample. Written from what you got wrong in practice.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Five questions from each briefing, ready before you ask, and what to reread if you're not there yet</li>
+        <li>Practice your terms: pick the meaning, or explain it in your own words and your AI scores the match</li>
+        <li>Every round is kept: your score, the terms to work on and what you missed</li>
+        <li>A study guide written from what you keep getting wrong, with a round on just those terms</li>
       </ul>
     </div>
   </section>
@@ -861,7 +923,7 @@
         <li>Ask about one meeting or all of them, and pick up earlier chats from Recents</li>
         <li>Between calls, context on your open tasks is gathered ahead, so answers start fast</li>
         <li>Turn a list into a canvas you can tick off</li>
-        <li>Practice your team's terms with quick quizzes until you know them</li>
+        <li>Say more, copy an answer as text or an image, and rate it: a thumbs down shapes the next answers</li>
       </ul>
     </div>
   </section>
@@ -1120,11 +1182,33 @@
     </div>
   </section>
 
+  <section class="block" id="share">
+    <div class="wrap">
+      <div class="head">
+        <h2>Help us spread the word</h2>
+        <p>If Undertone helps you, tell a colleague or your network. It's free during the beta, and every share helps.</p>
+      </div>
+      <div class="share" data-url="https://getundertone.app/" data-text="Undertone explains your team's jargon live in calls, then writes the recap, your tasks and the next briefing. Free Mac app:">
+        <a class="sbtn" data-net="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgetundertone.app%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7.5 10.5v6M7.5 7.6v.1M11 16.5v-6m0 2.6c0-1.6 1-2.8 2.5-2.8s2.5 1 2.5 2.8v3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>LinkedIn</a>
+        <a class="sbtn" data-net="x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgetundertone.app%2F&amp;text=Undertone%20explains%20your%20team%27s%20jargon%20live%20in%20calls%2C%20then%20writes%20the%20recap%2C%20your%20tasks%20and%20the%20next%20briefing.%20Free%20Mac%20app%3A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>X</a>
+        <a class="sbtn" data-net="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgetundertone.app%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13.2 21v-7.2h2.3l.4-2.7h-2.7V9.4c0-.8.3-1.3 1.4-1.3h1.4V5.7a17 17 0 0 0-2.1-.1c-2 0-3.4 1.2-3.4 3.5v2h-2.3v2.7h2.3V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Facebook</a>
+        <a class="sbtn" data-net="reddit" href="https://www.reddit.com/submit?url=https%3A%2F%2Fgetundertone.app%2F&amp;title=Undertone%3A%20your%20team%27s%20jargon%20explained%20live%20in%20calls%20%28free%20Mac%20app%29" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="14" rx="8" ry="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9.2" cy="13.6" r="1.1" fill="currentColor"/><circle cx="14.8" cy="13.6" r="1.1" fill="currentColor"/><path d="M9.5 16.4c1.5 1 3.5 1 5 0M12 8.5l1.2-4.6 3.6.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18.3" cy="5.2" r="1.4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Reddit</a>
+        <a class="sbtn" data-net="hn" href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fgetundertone.app%2F&amp;t=Undertone%3A%20your%20team%27s%20jargon%20explained%20live%20in%20calls" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 7l4 5.5L16 7M12 12.5V17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Hacker News</a>
+        <button class="sbtn" type="button" data-net="instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>Instagram</button>
+        <a class="sbtn" data-net="email" href="mailto:?subject=Undertone%3A%20worth%20a%20look&amp;body=Undertone%20explains%20your%20team%27s%20jargon%20live%20in%20calls%2C%20then%20writes%20the%20recap%2C%20your%20tasks%20and%20the%20next%20briefing.%20Free%20Mac%20app%3A%20https%3A%2F%2Fgetundertone.app%2F"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Email</a>
+        <button class="sbtn" type="button" data-net="copy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="lbl">Copy link</span></button>
+      </div>
+      <p class="share-note" role="status" aria-live="polite"></p>
+      <span class="msg-copied" hidden>Link copied.</span>
+      <span class="msg-insta" hidden>Link copied. Instagram doesn't take links in posts: paste it in your bio or a story link sticker.</span>
+    </div>
+  </section>
+
   <section class="wrap start">
     <h2>Ready for your next call?</h2>
     <p>Install, start with free credits or connect your AI, add your sources, then join a call. Afterwards, your recap, tasks and new terms are waiting on Home.</p>
     <div class="ctas">
-      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.18.5</span></a>
+      <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.18.6</span></a>
     </div>
     <p class="brew">Or with Homebrew: <code translate="no">brew install --cask sslugic/tap/undertone</code></p>
     <ul class="reqs">
@@ -1205,6 +1289,27 @@
     }
     fit();
     window.addEventListener("resize", fit);
+  })();
+</script>
+<script>
+  // Help us spread the word: copy the link; Instagram has no share link, so phones get the share sheet and
+  // desktops get the link copied with a note.
+  (function () {
+    var box = document.querySelector(".share");
+    if (!box) return;
+    var url = box.dataset.url, text = box.dataset.text, note = document.querySelector(".share-note");
+    function msg(cls, fallback) { var el = document.querySelector(cls); return el ? el.textContent : fallback; }
+    function say(msg) { if (note) note.textContent = msg; }
+    function copy(done) {
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(done, function () { say(url); });
+    }
+    box.querySelector('[data-net="copy"]').addEventListener("click", function () {
+      copy(function () { say(msg(".msg-copied", "Link copied.")); });
+    });
+    box.querySelector('[data-net="instagram"]').addEventListener("click", function () {
+      if (navigator.share) { navigator.share({ title: "Undertone", text: text, url: url }).catch(function () {}); return; }
+      copy(function () { say(msg(".msg-insta", "Link copied.")); });
+    });
   })();
 </script>
 </body>

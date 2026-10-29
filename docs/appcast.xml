@@ -5,6 +5,15 @@
     <link>https://getundertone.app/appcast.xml</link>
     <language>en</language>
     <item>
+      <title>Undertone 1.18.6</title>
+      <pubDate>Thu, 29 Oct 2026 16:30:43 +0000</pubDate>
+      <sparkle:version>1.18.6</sparkle:version>
+      <sparkle:shortVersionString>1.18.6</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://github.com/sslugic/undertone/releases/tag/v1.18.6</sparkle:releaseNotesLink>
+      <enclosure url="https://github.com/sslugic/undertone/releases/download/v1.18.6/Undertone.dmg" type="application/octet-stream" sparkle:edSignature="HJmkXpok0Lgy64/AFeYCSeLHwMbPMJgVE7VtcTqemhVMawTlsq5WJzcI2YKuGIL+DACoJVx4Nn2y7BQQcq25CA==" length="6571920" />
+    </item>
+    <item>
       <title>Undertone 1.18.5</title>
       <pubDate>Thu, 29 Oct 2026 16:11:56 +0000</pubDate>
       <sparkle:version>1.18.5</sparkle:version>
@@ -84,15 +93,6 @@
       <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://github.com/sslugic/undertone/releases/tag/v1.16.1</sparkle:releaseNotesLink>
       <enclosure url="https://github.com/sslugic/undertone/releases/download/v1.16.1/Undertone.dmg" type="application/octet-stream" sparkle:edSignature="onm14ul7D9dXo5XSSbD9Jc6yfwHP9ULnKbzXAq3ACjJYm2MU1KEKz7Z5699dDQrKd0l0Fhs7eEfqguBC1QpICg==" length="5883150" />
-    </item>
-    <item>
-      <title>Undertone 1.16.0</title>
-      <pubDate>Thu, 29 Oct 2026 11:31:44 +0000</pubDate>
-      <sparkle:version>1.16.0</sparkle:version>
-      <sparkle:shortVersionString>1.16.0</sparkle:shortVersionString>
-      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-      <sparkle:releaseNotesLink>https://github.com/sslugic/undertone/releases/tag/v1.16.0</sparkle:releaseNotesLink>
-      <enclosure url="https://github.com/sslugic/undertone/releases/download/v1.16.0/Undertone.dmg" type="application/octet-stream" sparkle:edSignature="ro1ALf4o/uh+kadDRZcbnQo6DsNYTMhU029g8Ll1l/+Bk4Yxwhpq8gIyvnRMgTPv9CBo1TwUss1TFuvOK9p3Dg==" length="5866172" />
     </item>
   </channel>
 </rss>
