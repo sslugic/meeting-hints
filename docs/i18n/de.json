@@ -585,5 +585,6 @@
  "fifteen_minutes_before_a_meeting_14d86f": "Fünfzehn Minuten vor einem Meeting schreibt dir Undertone ein Briefing und tippt dir fünf Minuten vorher auf die Schulter, und es sammelt den Kontext des Meetings aus deinen Quellen, damit der Call damit beginnt. Ist es vorbei, ist das Follow-up für alle schon entworfen, bereit zum Einfügen in E-Mail oder Slack.",
  "when_it_does_search_it_0516e0": "Wenn es doch sucht, prüft es mehrere Quellen gleichzeitig, formuliert eine erfolglose Suche um und ist nach spätestens 14 Sekunden fertig",
  "each_answer_shows_where_it_0ea29b": "Jede Antwort zeigt Schritt für Schritt, wo sie gefunden wurde",
- "download_dmg_v1_16_0_d1d3fc": ".dmg laden <span class=\"ver\">v1.16.0</span>"
+ "download_dmg_v1_16_0_d1d3fc": ".dmg laden <span class=\"ver\">v1.16.0</span>",
+ "download_dmg_v1_16_1_f75cc2": ".dmg laden <span class=\"ver\">v1.16.1</span>"
 }

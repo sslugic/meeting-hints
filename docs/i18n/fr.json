@@ -584,5 +584,6 @@
  "fifteen_minutes_before_a_meeting_14d86f": "Quinze minutes avant une réunion, Undertone vous rédige un briefing et vous fait signe cinq minutes avant, et il rassemble le contexte de la réunion depuis vos sources pour que l’appel commence avec. À la fin, le suivi pour tout le monde est déjà rédigé, prêt à coller dans un e-mail ou Slack.",
  "when_it_does_search_it_0516e0": "Quand il cherche, il interroge plusieurs sources à la fois, reformule une recherche qui ne donne rien et s’arrête en 14 secondes maximum",
  "each_answer_shows_where_it_0ea29b": "Chaque réponse indique où elle a été trouvée, étape par étape",
- "download_dmg_v1_16_0_d1d3fc": "Télécharger le .dmg <span class=\"ver\">v1.16.0</span>"
+ "download_dmg_v1_16_0_d1d3fc": "Télécharger le .dmg <span class=\"ver\">v1.16.0</span>",
+ "download_dmg_v1_16_1_f75cc2": "Télécharger le .dmg <span class=\"ver\">v1.16.1</span>"
 }

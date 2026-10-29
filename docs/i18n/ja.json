@@ -585,5 +585,6 @@
  "fifteen_minutes_before_a_meeting_14d86f": "ミーティングの15分前にUndertoneがブリーフィングを用意し、5分前にそっとお知らせ。さらにソースからミーティングの関連情報を集めておくので、通話をその情報とともに始められます。終わったときには、全員へのフォローアップがすでに下書きされていて、メールやSlackにそのまま貼り付けられます。",
  "when_it_does_search_it_0516e0": "検索するときは複数のソースを同時に調べ、見つからなければ言い換えて再検索し、14秒以内に終了",
  "each_answer_shows_where_it_0ea29b": "各回答に、どこで見つかったかをステップごとに表示",
- "download_dmg_v1_16_0_d1d3fc": ".dmgをダウンロード <span class=\"ver\">v1.16.0</span>"
+ "download_dmg_v1_16_0_d1d3fc": ".dmgをダウンロード <span class=\"ver\">v1.16.0</span>",
+ "download_dmg_v1_16_1_f75cc2": ".dmgをダウンロード <span class=\"ver\">v1.16.1</span>"
 }

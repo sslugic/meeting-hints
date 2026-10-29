@@ -584,5 +584,6 @@
  "fifteen_minutes_before_a_meeting_14d86f": "会议开始前十五分钟，Undertone 会为你写好简报，并在开始前五分钟提醒你，还会从你的来源收集会议背景，让通话一开始就有这些信息。会议结束时，发给所有人的跟进消息已经起草好，可直接粘贴到邮件或 Slack。",
  "when_it_does_search_it_0516e0": "需要搜索时，它会同时查找多个来源，搜不到就换个说法再搜，并在 14 秒内结束",
  "each_answer_shows_where_it_0ea29b": "每个回答都会逐步显示出处",
- "download_dmg_v1_16_0_d1d3fc": "下载 .dmg <span class=\"ver\">v1.16.0</span>"
+ "download_dmg_v1_16_0_d1d3fc": "下载 .dmg <span class=\"ver\">v1.16.0</span>",
+ "download_dmg_v1_16_1_f75cc2": "下载 .dmg <span class=\"ver\">v1.16.1</span>"
 }

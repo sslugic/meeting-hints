@@ -585,5 +585,6 @@
  "fifteen_minutes_before_a_meeting_14d86f": "Piętnaście minut przed spotkaniem Undertone pisze ci briefing, a pięć minut przed klepie cię w ramię, i zbiera kontekst spotkania z twoich źródeł, żeby rozmowa zaczęła się z nim. Gdy się skończy, follow-up dla wszystkich jest już gotowy do wklejenia w e-mail lub Slacka.",
  "when_it_does_search_it_0516e0": "Gdy już szuka, sprawdza kilka źródeł naraz, przeformułowuje wyszukiwanie, które nic nie dało, i kończy w ciągu 14 sekund",
  "each_answer_shows_where_it_0ea29b": "Każda odpowiedź pokazuje krok po kroku, gdzie ją znaleziono",
- "download_dmg_v1_16_0_d1d3fc": "Pobierz .dmg <span class=\"ver\">v1.16.0</span>"
+ "download_dmg_v1_16_0_d1d3fc": "Pobierz .dmg <span class=\"ver\">v1.16.0</span>",
+ "download_dmg_v1_16_1_f75cc2": "Pobierz .dmg <span class=\"ver\">v1.16.1</span>"
 }

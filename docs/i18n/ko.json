@@ -584,5 +584,6 @@
  "fifteen_minutes_before_a_meeting_14d86f": "미팅 15분 전에 Undertone이 브리핑을 작성하고, 5분 전에 살짝 알려 줘요. 소스에서 미팅 맥락도 모아 두어 통화를 그 맥락과 함께 시작할 수 있어요. 미팅이 끝나면 모두에게 보낼 후속 메시지가 이미 초안으로 준비되어 있어 이메일이나 Slack에 바로 붙여 넣을 수 있어요.",
  "when_it_does_search_it_0516e0": "검색할 때는 여러 소스를 한 번에 확인하고, 결과가 없으면 검색어를 바꿔 다시 찾으며, 14초 안에 마쳐요",
  "each_answer_shows_where_it_0ea29b": "각 답변이 어디에서 찾았는지 단계별로 보여 줘요",
- "download_dmg_v1_16_0_d1d3fc": ".dmg 다운로드 <span class=\"ver\">v1.16.0</span>"
+ "download_dmg_v1_16_0_d1d3fc": ".dmg 다운로드 <span class=\"ver\">v1.16.0</span>",
+ "download_dmg_v1_16_1_f75cc2": ".dmg 다운로드 <span class=\"ver\">v1.16.1</span>"
 }
