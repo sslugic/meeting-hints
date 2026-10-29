@@ -575,5 +575,6 @@
  "install_start_with_free_credits_7d6475": "설치하고 무료 크레딧으로 시작하거나 AI를 연결한 뒤, 소스를 추가하고 통화에 참여하세요. 끝나면 요약, 할 일, 새 용어가 홈에서 기다리고 있어요.",
  "free_credits_your_own_ai_b691b9": "무료 크레딧, 내 AI 키 또는 로컬 모델",
  "download_dmg_v1_15_1_b21aff": ".dmg 다운로드 <span class=\"ver\">v1.15.1</span>",
- "undertone_always_keeps_its_own_94e199": "Undertone은 회의에 대한 자체 메모리를 항상 유지합니다. Claude Code, Cursor 및 다른 AI 도구가 함께 쓰는 Mac의 메모리 amem을 추가하면 Undertone이 두 메모리를 함께 검색합니다. 설정 과정에서 제안하고 대신 설치해 드립니다."
+ "undertone_always_keeps_its_own_94e199": "Undertone은 회의에 대한 자체 메모리를 항상 유지합니다. Claude Code, Cursor 및 다른 AI 도구가 함께 쓰는 Mac의 메모리 amem을 추가하면 Undertone이 두 메모리를 함께 검색합니다. 설정 과정에서 제안하고 대신 설치해 드립니다.",
+ "download_dmg_v1_15_2_ace073": ".dmg 다운로드 <span class=\"ver\">v1.15.2</span>"
 }

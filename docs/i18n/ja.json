@@ -576,5 +576,6 @@
  "install_start_with_free_credits_7d6475": "インストールしたら、無料クレジットで始めるかAIを接続し、ソースを追加して通話に参加するだけ。終わったら、まとめ、タスク、新しい用語がホームで待っています。",
  "free_credits_your_own_ai_b691b9": "無料クレジット、自分のAIキー、またはローカルモデル",
  "download_dmg_v1_15_1_b21aff": ".dmgをダウンロード <span class=\"ver\">v1.15.1</span>",
- "undertone_always_keeps_its_own_94e199": "Undertone は会議の記憶を常に自分で保持します。Claude Code、Cursor、その他の AI ツールが共有する Mac 上のメモリ amem を追加すると、Undertone は両方をまとめて検索します。セットアップで提案され、自動でインストールされます。"
+ "undertone_always_keeps_its_own_94e199": "Undertone は会議の記憶を常に自分で保持します。Claude Code、Cursor、その他の AI ツールが共有する Mac 上のメモリ amem を追加すると、Undertone は両方をまとめて検索します。セットアップで提案され、自動でインストールされます。",
+ "download_dmg_v1_15_2_ace073": ".dmgをダウンロード <span class=\"ver\">v1.15.2</span>"
 }
