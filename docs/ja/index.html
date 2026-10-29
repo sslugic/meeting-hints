@@ -286,6 +286,13 @@
   .ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--dotc, #71717A); }
   .ticks.sug { --dotc: var(--accent); }
   .ticks.you { --dotc: #D4D4D8; }
+  /* Before, after and between calls: the points under each visual, two columns on wide screens */
+  .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
+  .outcomes li { font-size: 15.5px; color: #D4D4D8; }
+  @media (max-width: 720px) { .outcomes { grid-template-columns: 1fr; } }
+  .aside { margin-top: 22px; color: var(--text-2); font-size: 15px; }
+  .aside a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border-2); text-underline-offset: 3px; }
+  .aside a:hover { text-decoration-color: var(--text); }
   .q { font-size: 15px; font-weight: 600; letter-spacing: -.01em; line-height: 1.45; margin-top: 4px; }
   .part { border-inline-start: 2px solid var(--partc); padding-inline-start: 12px; margin-top: 16px; }
   .part.sug { --partc: var(--accent); }
@@ -637,11 +644,10 @@
     <a class="brand" href="#" translate="no"><img src="../assets/icon-256.png" alt="">Undertone <span class="pill">macOS</span></a>
     <nav class="nav-links" aria-label="メイン">
       <a href="#how">仕組み</a>
+      <a href="#before">機能</a>
       <a href="#use-cases">活用例</a>
-      <a href="#features">機能</a>
-      <a href="#claude">AI ツール</a>
-      <a href="#pricing">無料ベータ</a>
       <a href="#privacy">プライバシー</a>
+      <a href="#pricing">無料ベータ</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">更新履歴</a>
       <details class="lang"><summary aria-label="言語"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span class="lang-cur" translate="no">JA</span><svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></summary><ul class="lang-menu" translate="no"><li><a href="../?lang=en" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a></li><li><a href="../nl/" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li><li><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li><li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li><li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li><li><a href="../ja/" hreflang="ja" lang="ja" data-lang="ja" aria-current="page">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li><li><a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li></ul></details>      <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg><span>ダウンロード<span class="long">（macOS版）</span></span></a>
@@ -652,9 +658,8 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="status"><span class="dot" aria-hidden="true"></span>macOS向けライブ会議インテリジェンス</span>
       <h1>みんなが何を言っているのか、次に何を言えばいいのかがわかる。</h1>
-      <p class="sub">Undertone は通話を一緒に聞きます。コードネームや略語が出た瞬間に説明し、質問されたときには必要な事実を出し、通話のあとにはまとめ、あなたのタスク、次の通話のブリーフィングを用意します。すべてチームの Slack、Notion、Jira から。文字起こしは Mac の中で行います。</p>
+      <p class="sub">Undertone は通話を一緒に聞き、コードネームや略語が出た瞬間に、チーム自身の Slack、Notion、Jira をもとに説明します。通話のあとには、まとめ、タスク、次のブリーフィングが用意されています。文字起こしは Mac の中で。</p>
       <div class="ctas">
         <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>.dmgをダウンロード <span class="ver">v1.18.2</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>リリースとIssue</a>
@@ -668,34 +673,6 @@
       </video>
     </div>
     <p class="sample hero-note">サンプルです。名前・会社・チケットは架空のものです。音楽はミュートを解除してお聴きください。</p>
-  </section>
-
-  <section class="block" id="demo">
-    <div class="wrap">
-      <div class="head">
-        <h2>話されているうちに、3ステップで</h2>
-        <p>Undertoneは通話をMac上で文字起こしし、あなたが知らなそうな名前を拾い出して、チーム自身のツールをもとに解説します。</p>
-      </div>
-      <div class="dm" data-step="1" aria-label="アニメーションのサンプル：通話中の質問、Undertoneが見つけた用語、表示されるヒント">
-        <ol class="dm-steps">
-          <li class="on" data-s="1"><b>ステップ1</b><span>通話はMac上で文字起こし</span></li>
-          <li data-s="2"><b>ステップ2</b><span>Undertoneが知らなそうな言葉を見つける</span></li>
-          <li data-s="3"><b>ステップ3</b><span>ヒントがソースをもとに解説</span></li>
-        </ol>
-        <div class="dm-stage">
-          <p class="dm-say"><span class="who">Priya · 10:14 · ライブ</span>「待って、3月のインシデントのあと、<mark>Project Odin</mark>ってレガシーの<mark>V2 webhook</mark>から移行したんだっけ？」</p>
-          <div class="dm-spot" aria-hidden="true"><span>Project Odin · おそらく初見</span><span>V2 webhook · おそらく初見</span></div>
-          <div class="dm-card">
-            <h3>Project Odin <small>ワークスペースから</small></h3>
-            <ul>
-              <li>通知パイプラインの刷新。3月の障害を受けて、4月2日にV2 webhookから移行済み <span class="s">[Slack #eng-infra]</span></li>
-              <li>V2 webhookは非推奨で、6月30日に停止。社内の2つのサービスがまだ呼び出している <span class="s">[Jira ENG-1402]</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="sample" style="padding:14px 0 0">サンプルです。名前、チャンネル、チケットは架空のものです。</p>
-    </div>
   </section>
 
   <section class="block" id="why">
@@ -750,43 +727,115 @@
     </div>
   </section>
 
-  <section class="block" id="try">
+  <section class="block" id="before">
     <div class="wrap">
       <div class="head">
-        <h2>サンプルのミーティングで試す</h2>
-        <p>ミーティングを選んで、Undertoneに何が表示されるか確かめてください。アプリでは「ホーム › サンプル会議を試す」で、最初の通話の前に架空のスタンドアップを実際のパネルで再生できます。</p>
+        <h2>参加者を知ったうえで会議へ</h2>
+        <p>ミーティングの15分前に、Undertone が過去のミーティング、タスク、ソースからブリーフィングを書きます。誰が来るのか、何が未解決のままか、あなたが何を対応すべきか。</p>
       </div>
-      <div class="demo">
-        <div class="tabs" role="tablist" aria-label="サンプルミーティング">
-          <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>エンジニアリング定例</b><span>リリースプロセスの略語</span></button>
-          <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>営業引き継ぎ</b><span>契約用語</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>取締役会Q&amp;A</b><span>あなたへの質問</span></button>
+      <div class="duo">
+        <div class="pane bf" role="img" aria-label="次のミーティングの通知とブリーフィングのサンプル">
+          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>プラットフォーム定例まであと5分</b><span>Maya：スタッフエンジニア、Keystone担当</span></div><time>今</time></div>
+          <p><b>参加者：</b>Maya、プラットフォームチームのスタッフエンジニア。Devはリリース管理を担当。Samは今回が初参加。</p>
+          <p><b>前回：</b>書き込みは新しい請求基盤に移行済み。読み取りの切り替えは14日に設定 <span class="s">[Jira INFRA-311]</span>。</p>
+          <p><b>対応すること：</b>Sam向けの切り替え計画、金曜期限。</p>
+          <p><b>想定される質問：</b>「ロールバックはリハーサル済み？」 はい、ステージングで2回 <span class="s">[Notion: Keystone rollback]</span>。</p>
+          <p class="sample" style="padding:6px 0 0">サンプルです。ミーティング、タスク、ソースをもとに作成。</p>
         </div>
-        <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
-          <div class="hud-head">
-            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-            <div><div class="hud-title" id="d-title">エンジニアリング定例</div><div class="hud-meta" id="d-meta">10:12 · 聞き取り中</div></div>
+        <div class="pane" role="img" aria-label="役割、担当業務、これまでのやり取りを示す人物カードのサンプル">
+          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>プラットフォームチーム、スタッフエンジニア</span></div></div>
+          <div class="pfacts">
+            <p><em>担当</em> Keystone（請求基盤の移行） <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
+            <p><em>あなたと</em> ロールバック手順書をレビュー中 <span style="color:var(--text-3)">[Notion]</span></p>
+            <p><em>前回</em> プラットフォーム定例（火曜）：切り替えは14日のまま</p>
           </div>
-          <p class="say" id="d-say"><span class="who"><b>Dev</b> · 10:12</span>木曜にKeystoneが<span class="term">CAB</span>を通ったらマージします。</p>
-          <div class="ctx" id="d-ctx"><div class="ct">CAB <small>おそらく初見</small></div><p>変更諮問委員会（Change Advisory Board）：本番環境への変更を承認する木曜のレビュー。</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · リリースプロセス</span></div>
-          <p class="sample">サンプルのシナリオです。企業、人物、数値は架空のものです。</p>
+          <div class="chips"><span>一緒に出たミーティング6件</span><span>Mayaへの対応タスク1件</span></div>
+          <p class="sample" style="padding:14px 0 0">サンプルです。名前とプロジェクトは架空のものです。</p>
         </div>
-        <template class="demo-data">
-          <div data-title>エンジニアリング定例</div><div data-meta>10:12 · 聞き取り中</div>
-          <p data-say><span class="who"><b>Dev</b> · 10:12</span>木曜にKeystoneが<span class="term">CAB</span>を通ったらマージします。</p>
-          <div data-ctx class="ctx"><div class="ct">CAB <small>おそらく初見</small></div><p>変更諮問委員会（Change Advisory Board）：本番環境への変更を承認する木曜のレビュー。</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · リリースプロセス</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>営業引き継ぎ</div><div data-meta>15:40 · 聞き取り中</div>
-          <p data-say><span class="who"><b>Priya</b> · 15:40</span>Northwindがカスタムの<span class="term">DPA</span>に署名したので、保持期間に上限があります。</p>
-          <div data-ctx class="ctx"><div class="ct">DPA <small>初見かも</small></div><p>データ処理契約（Data Processing Agreement）。Northwind版はデータの保持期間を30日に制限。</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #deal-northwind</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>取締役会Q&amp;A</div><div data-meta>09:31 · 聞き取り中</div>
-          <p data-say><span class="who"><b>議長</b> · 09:31 · <em>あなたへ</em></span>今四半期の<span class="term">売上維持率</span>を押し上げている要因は？</p>
-          <div data-ctx class="ctx answer"><div class="ct">参考コンテキスト <small>議長からの質問</small></div><p>NRRは108%から112%に上昇。エンタープライズの拡大によるもので、3社がシートを追加。</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Q3取締役会資料</span></div>
-        </template>
       </div>
+      <ul class="ticks sug outcomes">
+        <li>招待されている人をクリックすると、その人の役割、担当している仕事、あなたとの間で未解決のことがわかります</li>
+        <li>ブリーフィングからのちょっとした質問で、準備ができているか確認できます</li>
+        <li>ミーティングのコンテキストは開始直前にソースから集められるので、通話はそれを踏まえて始まります</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="after">
+    <div class="wrap">
+      <div class="head">
+        <h2>次に何をすべきかがわかる</h2>
+        <p>通話が終わると、まとめとタスクがホームで待っていて、全員向けのフォローアップもすでに下書きされています。</p>
+      </div>
+      <div class="app" role="img" aria-label="Undertoneのホームウインドウ。次のミーティング、タスク、覚えたい用語、回答コーチングをサンプルデータで表示">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>プラットフォームチーム</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>ホーム</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>ミーティング</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>タスク</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>用語集</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>質問</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>アーティファクト</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">おはようございます、Alexさん</div>
+          <p class="date">10月28日 水曜日 · プラットフォームチーム</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">次の予定 <small>カレンダー</small></div>
+              <div class="row"><span class="t">10:00</span><span class="grow">プラットフォーム定例<span class="sub2">Maya、Dev、Sam · 関連ミーティング2件 · 未完了のタスク1件</span></span><span class="mini">準備</span></div>
+              <div class="row"><span class="t">14:30</span><span class="grow">Northwind更新<span class="sub2">Priya、Jordan · 関連ミーティング1件</span></span><span class="mini">準備</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">あなたのタスク <small>未完了2件</small></div>
+              <div class="row"><span class="box"></span><span class="grow">SamにKeystoneの読み取り切り替え計画を送る<span class="sub2">プラットフォーム定例 · 金曜期限 · <span class="hi">高</span></span></span></div>
+              <div class="row"><span class="box"></span><span class="grow">木曜のCAB枠を確定する<span class="sub2">エンジニアリング定例</span></span></div>
+              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">Q3のNRRの数字を議長に共有する</span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">覚えたい用語 <small>用語集</small></div>
+              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">新しい請求基盤へのQ3移行。インフラチームが主導。</span></span></div>
+              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">データ処理契約（Data Processing Agreement）。Northwind版は保持期間の上限が30日。</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">回答コーチング <small>プラットフォーム定例</small></div>
+              <div class="row"><span class="grow">「Keystoneの状況を手短に教えてもらえますか？」<span class="sub2">日付から話し、次にリスクをひとつ。14日の切り替えの話が最後になっていました。</span></span><span class="verdict">OK</span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">サンプルデータです。名前、プロジェクト、ミーティングは架空のものです。</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>あなた自身のタスクだけを、口にした期日と、前の営業日のリマインダーつきで</li>
+        <li>フォローアップのメールや Slack メッセージを、貼り付けるだけの状態で。Undertone が何かを送信することはありません。</li>
+        <li>受けた質問にどう答えたか、どう話したかのスコア</li>
+        <li>タスクのスタートを押すと、「質問」がミーティング、メモリ、ソースをもとに下書きします</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="between">
+    <div class="wrap">
+      <div class="head">
+        <h2>話された内容を見つける</h2>
+        <p>同僚に聞くようにミーティングについて質問できます。回答はミーティングとチームのツールから、出典つきで返ってきます。</p>
+      </div>
+      <div class="askmock" role="img" aria-label="Ask のスタート画面のサンプル：あいさつ、質問欄、最近のチャット一覧">
+        <h3>こんにちは、アレックスさん。何でも聞いてください</h3>
+        <div class="am-box">
+          <div class="am-ph">今週は何を決めましたか？</div>
+          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>すべてのミーティング ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
+        </div>
+        <div class="am-rec">最近</div>
+        <ul>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>直近のミーティングは何についてでしたか？</span><small>6m</small></li>
+          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>第4四半期計画会議のフォローアップメール</span><small>1d</small></li>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Kestrel ダッシュボードの担当は誰ですか？</span><small>2d</small></li>
+        </ul>
+      </div>
+      <p class="sample" style="padding:14px 0 0">サンプルです。名前とミーティングは架空のものです。</p>
+      <ul class="ticks sug outcomes">
+        <li>1つのミーティングについても、すべてについても質問でき、以前のチャットは「最近」から再開できます</li>
+        <li>通話の合間に、未完了タスクのコンテキストが先に集められるので、すぐに回答が始まります</li>
+        <li>リストを、チェックしていけるキャンバスに</li>
+        <li>チームの用語を、覚えるまで短いクイズで練習</li>
+      </ul>
     </div>
   </section>
 
@@ -980,376 +1029,6 @@
     </div>
   </section>
 
-  <section class="block" id="features">
-    <div class="wrap">
-      <div class="head">
-        <h2>通話のあとも、働き続ける</h2>
-        <p>ほかのMacアプリと同じようにUndertoneを開けば、今週のすべてがそこに。次の予定、やるべきこと、聞いたけれど知らなかったこと。</p>
-      </div>
-
-      <div class="app" role="img" aria-label="Undertoneのホームウインドウ。次のミーティング、タスク、覚えたい用語、回答コーチングをサンプルデータで表示">
-        <aside class="app-side" aria-hidden="true">
-          <div class="lights"><i></i><i></i><i></i></div>
-          <div class="space"><span><i></i>プラットフォームチーム</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
-          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>ホーム</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>ミーティング</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>タスク</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>用語集</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>質問</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>アーティファクト</li></ul>
-        </aside>
-        <div class="app-main" aria-hidden="true">
-          <div class="hello">おはようございます、Alexさん</div>
-          <p class="date">10月28日 水曜日 · プラットフォームチーム</p>
-          <div class="cards">
-            <div class="card">
-              <div class="h4">次の予定 <small>カレンダー</small></div>
-              <div class="row"><span class="t">10:00</span><span class="grow">プラットフォーム定例<span class="sub2">Maya、Dev、Sam · 関連ミーティング2件 · 未完了のタスク1件</span></span><span class="mini">準備</span></div>
-              <div class="row"><span class="t">14:30</span><span class="grow">Northwind更新<span class="sub2">Priya、Jordan · 関連ミーティング1件</span></span><span class="mini">準備</span></div>
-            </div>
-            <div class="card">
-              <div class="h4">あなたのタスク <small>未完了2件</small></div>
-              <div class="row"><span class="box"></span><span class="grow">SamにKeystoneの読み取り切り替え計画を送る<span class="sub2">プラットフォーム定例 · 金曜期限 · <span class="hi">高</span></span></span></div>
-              <div class="row"><span class="box"></span><span class="grow">木曜のCAB枠を確定する<span class="sub2">エンジニアリング定例</span></span></div>
-              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">Q3のNRRの数字を議長に共有する</span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">覚えたい用語 <small>用語集</small></div>
-              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">新しい請求基盤へのQ3移行。インフラチームが主導。</span></span></div>
-              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">データ処理契約（Data Processing Agreement）。Northwind版は保持期間の上限が30日。</span></span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">回答コーチング <small>プラットフォーム定例</small></div>
-              <div class="row"><span class="grow">「Keystoneの状況を手短に教えてもらえますか？」<span class="sub2">日付から話し、次にリスクをひとつ。14日の切り替えの話が最後になっていました。</span></span><span class="verdict">OK</span></div>
-            </div>
-          </div>
-          <p class="sample" style="padding:14px 0 0">サンプルデータです。名前、プロジェクト、ミーティングは架空のものです。</p>
-        </div>
-      </div>
-
-      <dl class="features">
-        <div><dt>ホーム</dt><dd>Macのカレンダーから今日のミーティング、未完了のタスク、覚えたい用語、回答の出来ばえ。各ミーティングの前にはブリーフィングが届きます。</dd></div>
-        <div><dt>タスク</dt><dd>通話ごとに、あなたの仕事だけを。約束したこと、聞かれたこと、フォローアップすべき質問。「未着手」「進行中」「レビュー中」「完了」へと進めていけます。</dd></div>
-        <div><dt>用語集</dt><dd>すべてのミーティングのすべての用語を、あなたの会社での意味とともに。知っている用語はワンクリックでマーク。「詳細」を押すと、ソースを掘り下げて背後にいる人やリンクを探します。</dd></div>
-        <div><dt>準備</dt><dd>ミーティングの前に、ブリーフィングから出る数問で準備ができているか確認できます。合間には用語を練習：選択式か、自分の言葉で説明すると AI が一致度を採点します。履歴を残し、よく間違えるところをまとめた学習ガイドを作成します。</dd></div>
-        <div><dt>スペース</dt><dd>チームやクライアントを分けて管理。新しいミーティングは自動で振り分けられ、それ以外はUndertoneがスペースを提案。どの画面も選んだスペースで絞り込まれます。</dd></div>
-        <div><dt>回答コーチング</dt><dd>あなたの発言も文字起こしされるので、通話のあとで、何が伝わったか、次に何を磨くべきかがわかります。</dd></div>
-        <div><dt>アーティファクト</dt><dd>ステータスレポート、スライド資料、インタラクティブなキャンバス。ミーティングとソースから作成し、不明な箇所は[TBD]と明示。MarkdownやHTMLに書き出せます。</dd></div>
-        <div><dt>質問</dt><dd>1つのミーティングまたはすべてと、ファイルを添えてチャットできます。回答はすぐに流れ、以前のチャットは「最近」に残り、伝えたことは次回のために覚えておきます。</dd></div>
-        <div><dt>通話中に質問</dt><dd>ライブヒントの下にあるチャット欄が、それまでの通話内容から答えます。ミーティングを離れる必要はありません。</dd></div>
-        <div><dt>人物</dt><dd>招待に含まれる全員を、役割、担当していること、一緒に出たミーティング、あなたが対応すべきこととともに。</dd></div>
-        <div><dt>リマインダー</dt><dd>「金曜までに」が日付になります。前営業日の9:00にリマインダーが届き、期限切れのタスクは赤く表示されます。</dd></div>
-        <div><dt>用語集ガイド</dt><dd>チームの用語集を、新メンバー向けの共有できるガイドに。HTMLやMarkdownでそのまま書き出せます。</dd></div>
-        <div><dt>修正と翻訳</dt><dd>聞き間違えた単語を右クリックすると、Undertoneが修正し、次からはその単語を聞き取れるようにします。どの部分でも19言語に翻訳できます。</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="block" id="around">
-    <div class="wrap">
-      <div class="head">
-        <h2>通話の前も、あとも</h2>
-        <p>ミーティングの15分前にUndertoneがブリーフィングを用意し、5分前にそっとお知らせ。さらにソースからミーティングの関連情報を集めておくので、通話をその情報とともに始められます。終わったときには、全員へのフォローアップがすでに下書きされていて、メールやSlackにそのまま貼り付けられます。</p>
-      </div>
-      <div class="duo">
-        <div class="pane bf" role="img" aria-label="次のミーティングの通知とブリーフィングのサンプル">
-          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>プラットフォーム定例まであと5分</b><span>Maya：スタッフエンジニア、Keystone担当</span></div><time>今</time></div>
-          <p><b>参加者：</b>Maya、プラットフォームチームのスタッフエンジニア。Devはリリース管理を担当。Samは今回が初参加。</p>
-          <p><b>前回：</b>書き込みは新しい請求基盤に移行済み。読み取りの切り替えは14日に設定 <span class="s">[Jira INFRA-311]</span>。</p>
-          <p><b>対応すること：</b>Sam向けの切り替え計画、金曜期限。</p>
-          <p><b>想定される質問：</b>「ロールバックはリハーサル済み？」 はい、ステージングで2回 <span class="s">[Notion: Keystone rollback]</span>。</p>
-          <p class="sample" style="padding:6px 0 0">サンプルです。ミーティング、タスク、ソースをもとに作成。</p>
-        </div>
-        <div class="pane" role="img" aria-label="ミーティング後に下書きされたフォローアップメッセージのサンプル">
-          <div class="fu-top"><div class="label" style="margin:0">フォローアップ</div><span class="segs"><i>メール</i><i class="on">Slack</i></span></div>
-          <div class="fu">皆さん、ありがとうございました。今日のプラットフォーム定例を簡単にまとめます：<ul><li>読み取りの切り替えは14日のまま</li><li>Devが木曜のCAB枠を予約</li><li>金曜までにSamに切り替え計画を送ります</li></ul><br>未決：14日の前に2回目の負荷テストは必要？</div>
-          <p style="font-size:13px;color:var(--text-3);margin-top:12px">編集して、コピーして、送るのはあなた自身。 <span class="connect" style="margin:0;margin-inline-start:6px">コピー</span></p>
-          <p class="sample" style="padding:10px 0 0">サンプルです。Undertoneが何かを送信することはありません。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="people">
-    <div class="wrap">
-      <div class="head">
-        <h2>同席している人を知る</h2>
-        <p>名前も社内用語のひとつ。ミーティングの誰かをクリックすれば、役割、担当していること、一緒に出たミーティング、あなたが対応すべきことを、あなた自身のソースから調べて表示します。</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="役割、担当業務、これまでのやり取りを示す人物カードのサンプル">
-          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>プラットフォームチーム、スタッフエンジニア</span></div></div>
-          <div class="pfacts">
-            <p><em>担当</em> Keystone（請求基盤の移行） <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
-            <p><em>あなたと</em> ロールバック手順書をレビュー中 <span style="color:var(--text-3)">[Notion]</span></p>
-            <p><em>前回</em> プラットフォーム定例（火曜）：切り替えは14日のまま</p>
-          </div>
-          <div class="chips"><span>一緒に出たミーティング6件</span><span>Mayaへの対応タスク1件</span></div>
-          <p class="sample" style="padding:14px 0 0">サンプルです。名前とプロジェクトは架空のものです。</p>
-        </div>
-        <div class="pane" role="img" aria-label="期限とリマインダー付きのタスクリストのサンプル">
-          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>金曜期限：Samに切り替え計画を送る</b><span>プラットフォーム定例で、やると言ったタスクです。</span></div><time>9:00</time></div>
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">SamにKeystoneの切り替え計画を送る<small>10月30日(金) · 「金曜までに」と発言</small></span></li>
-            <li><span class="st"></span><span class="grow">Q3のNRRの数字を議長に共有する<small>来週 · 取締役会Q&amp;A</small></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">サンプルです。口にした期限は日付になり、前営業日にリマインダーが届きます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="coaching">
-    <div class="wrap">
-      <div class="head">
-        <h2>自分の伝わり方を知る</h2>
-        <p>通話のたびに、向けられた質問にどう答えたか、そしてどう話したか（発言時間、話す速さ、つなぎ言葉）をひとつのスコアに。面接なら、次の選考に備えるための率直なフィードバックを。</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="面接スコアのサンプル：100点中78点、次に進む可能性大、改善点つき">
-          <div class="score-top">
-            <div class="ring" aria-hidden="true"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="31" fill="none" stroke="rgba(129,140,248,.18)" stroke-width="7"/><circle cx="36" cy="36" r="31" fill="none" stroke="#818CF8" stroke-width="7" stroke-linecap="round" stroke-dasharray="151.9 194.8"/></svg><b>78<small>/100</small></b></div>
-            <div><div class="sc-title">面接スコア</div><span class="tag">次に進む可能性大</span></div>
-          </div>
-          <p>変化の中でのリーダーシップについて、明確で具体的なエピソード。アーキテクチャの回答は、相手がトレードオフを求めていたのに一般論にとどまりました。</p>
-          <div class="label">改善点</div>
-          <ul class="ticks"><li>決定から話し、そのあとに背景を</li><li>自分ならどのトレードオフを選ぶか、理由とともにひとつ挙げる</li></ul>
-          <p class="sample" style="padding:14px 0 0">サンプルです。面接以外のミーティングには、ミーティングスコア（とても良い、良い、改善の余地あり、不十分）が付きます。</p>
-        </div>
-        <div class="pane" role="img" aria-label="手元にあったコンテキストと、実際の発言を並べた質問のサンプル">
-          <div class="label" style="margin-top:0">質問されたこと</div>
-          <div class="q">「すべての情報がそろわないまま決断しなければならなかった経験を教えてください。」</div>
-          <div class="part sug">
-            <div class="label">手元にあったコンテキスト</div>
-            <div class="lead">メモより：2週間前倒しになったv1のローンチ</div>
-            <ul class="ticks sug"><li>当時足りなかったもの：2週間分の猶予</li><li>決定：エクスポートなしでv1を出荷</li><li>結果：予定どおり出荷、エクスポートは1か月後</li></ul>
-          </div>
-          <div class="part you">
-            <div class="label">あなたの発言</div>
-            <ul class="ticks you"><li>当時、チームを毎日リリースする体制に切り替えました。</li><li>ボトルネックを見つけて、押し切りました。</li></ul>
-          </div>
-          <p class="sample" style="padding:14px 0 0">サンプルです。あなたの発言は、Macのマイクから取得します。</p>
-        </div>
-      </div>
-      <div class="metrics" role="img" aria-label="話し方の統計サンプル：発言の割合、話す速さ、つなぎ言葉、最長の連続発言、した質問の数">
-        <div><b>41%</b><span>発言の割合</span></div>
-        <div><b>152</b><span>語/分</span></div>
-        <div><b>2.1</b><span>つなぎ言葉/分</span></div>
-        <div><b>1:48</b><span>最長の連続発言</span></div>
-        <div><b>4</b><span>した質問</span></div>
-      </div>
-      <p class="sample" style="padding:12px 0 0">サンプルです。話し方は、通話のあなたの側をもとにMac上で測定します。</p>
-    </div>
-  </section>
-
-  <section class="block" id="tasks">
-    <div class="wrap">
-      <div class="head">
-        <h2>スタートを押せば、作業が始まる</h2>
-        <p>ミーティングから生まれたタスクには、すべてスタートボタンがあります。「質問」がミーティング、メモリ、ソースをもとに作業を引き継いで結果を下書きし、見つからないことだけを尋ねます。</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="未着手・進行中・レビュー中のステータスとスタートボタンがあるタスクリストのサンプル">
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">SamにKeystoneの切り替え計画を送る<small>進行中 · 金曜期限</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st rev"></span><span class="grow">Q3プラットフォーム更新の下書き<small>レビュー中</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st"></span><span class="grow">木曜のCAB枠を確定する<small>未着手 · エンジニアリング定例</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">サンプルです。完了したタスクは「完了済み」に移り、いつでも再開できます。</p>
-        </div>
-        <div class="pane" role="img" aria-label="タスクに取り組み、Notionの接続を求める「質問」チャットのサンプル">
-          <div class="chat-me">「SamにKeystoneの切り替え計画を送る」の作業を開始</div>
-          <div class="chat-ai"><b>Sam向けの下書き：</b>先週、書き込みを新しい請求基盤に移行しました。読み取りの切り替えは14日に予定しており、ロールバックはステージングでリハーサル済みです<span class="caret" aria-hidden="true"></span><br><br>ロールバック手順書はNotionにありますが、Notionはまだ接続されていません。</div>
-          <span class="connect"><img src="../assets/logos/notion.png" alt="" width="14" height="14">Notionを接続</span>
-          <p class="sample" style="padding:14px 0 0">サンプルです。回答は書かれるそばからストリーミング表示されます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ready">
-    <div class="wrap">
-      <div class="head">
-        <h2>聞く前から用意されているコンテキスト</h2>
-        <p>通話の合間に1時間ごと、Undertoneは接続済みのソース全体から未完了のタスクと最近のミーティングについて下調べし、出典つきの短いブリーフを保持します。スタートを押したり詳細を尋ねたりすると、何分も検索するのではなく、すでに把握していることから回答が始まります。</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="各タスクにコンテキスト準備完了のマークとバックグラウンドコンテキストの状態が表示されるタスクリストのサンプル">
-          <ul class="board">
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">SamにKeystoneの切り替え計画を送る<small>コンテキスト準備完了 · Slack、Jira、Notion</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Q3プラットフォーム更新の下書き<small>コンテキスト準備完了 · Confluence、Granola</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">エンジニアリング定例（火曜）<small>コンテキスト準備完了 · フォローアップ3件を検出</small></span></li>
-          </ul>
-          <div class="idx"><span><b>バックグラウンドコンテキスト</b> · ブリーフ8件準備完了 · 12分前に更新</span><span class="connect" style="margin:0;white-space:nowrap;flex:none">今すぐ実行</span></div>
-          <p class="sample" style="padding:14px 0 0">サンプルです。通話中は一時停止し、あなた自身のAIを使います。</p>
-        </div>
-        <div class="pane" role="img" aria-label="準備済みのコンテキストから始まり、数秒で答える「質問」の返信サンプル">
-          <div class="chat-me">Keystoneの切り替えタスクについて詳しく教えて</div>
-          <div class="fast"><span class="dot"></span>準備済みのコンテキストから12秒で回答</div>
-          <div class="chat-ai"><b>送信済み：</b>切り替え計画は今朝SlackでSamに送られています [Slack DM]。<br><br><b>未完了：</b>14日の読み取り切り替えはCAB枠待ち [Jira KEY-212]。ロールバック手順書は最終レビューが必要です [Notion: Keystone rollback]。</div>
-          <p class="sample" style="padding:14px 0 0">サンプルです。ブリーフ以降に新しい情報がないかも確認します。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ask">
-    <div class="wrap">
-      <div class="head">
-        <h2>Ask：同僚に聞くように</h2>
-        <p>ミーティングに関するどんな質問にも使える大きな入力欄。1つのミーティングかすべてを選び、ファイルを添えて、以前の会話は「最近」から再開できます。</p>
-      </div>
-      <div class="askmock" role="img" aria-label="Ask のスタート画面のサンプル：あいさつ、質問欄、最近のチャット一覧">
-        <h3>こんにちは、アレックスさん。何でも聞いてください</h3>
-        <div class="am-box">
-          <div class="am-ph">今週は何を決めましたか？</div>
-          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>すべてのミーティング ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
-        </div>
-        <div class="am-rec">最近</div>
-        <ul>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>直近のミーティングは何についてでしたか？</span><small>6m</small></li>
-          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>第4四半期計画会議のフォローアップメール</span><small>1d</small></li>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Kestrel ダッシュボードの担当は誰ですか？</span><small>2d</small></li>
-        </ul>
-      </div>
-      <p class="sample" style="padding:14px 0 0">サンプルです。名前とミーティングは架空のものです。</p>
-    </div>
-  </section>
-
-  <section class="block" id="canvas">
-    <div class="wrap">
-      <div class="head">
-        <h2>回答をキャンバスに</h2>
-        <p>「質問」がこなすべきリストを返してきたら、「キャンバスにしますか？」に「はい」と答えるだけ。アーティファクトの中のインタラクティブなページになります。チェックできるチェックリスト、折りたためるセクション、進捗のカウント。作業はそのつど保存されます。</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="セクション、チェックボックス、手順で整理され、キャンバス化を提案する「質問」の返信サンプル">
-          <div class="chat-me">切り替え前に完了が必要なKeystoneのチケットは？</div>
-          <div class="chat-ai"><b>進行中4件、ブロック中1件、未決定2件。</b></div>
-          <div class="label">進行中</div>
-          <ul class="ticks"><li>請求書の読み取りを新しい請求基盤へ移行</li><li>昨年分の請求書をバックフィル</li></ul>
-          <div class="label">ブロック中</div>
-          <ul class="ticks"><li>負荷テストはステージングの更新待ち</li></ul>
-          <p style="font-size:13px;color:var(--text-3);margin-top:14px">キャンバスにしますか？ <span class="connect" style="margin:0;margin-inline-start:6px">キャンバスを作成</span></p>
-        </div>
-        <div class="pane cv" role="img" aria-label="キャンバスのサンプル：グループごとの進捗つきチェックリスト">
-          <h3>Keystone切り替えチェックリスト</h3>
-          <div class="meta">エンジニアリング定例より · 7件中3件完了</div>
-          <div class="grp"><div class="gh">進行中 <span>4件中2件</span></div>
-            <ul><li class="on"><i></i>請求書の読み取りを新しい請求基盤へ移行</li><li class="on"><i></i>昨年分の請求書をバックフィル</li><li><i></i>ステージングでロールバックをリハーサル</li><li><i></i>オンコール手順書を更新</li></ul></div>
-          <div class="grp"><div class="gh">ブロック中 <span>1件中1件</span></div>
-            <ul><li class="on"><i></i>負荷テストはステージングの更新待ち</li></ul></div>
-          <div class="grp shut"><div class="gh">未決定 <span>残り2件</span></div></div>
-          <p class="sample" style="padding:14px 0 0">サンプルです。キャンバスは隔離された環境で動作します。インターネット接続なし、外部からの読み込みもなし。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="speed">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>数秒で回答</h2>
-          <p>Undertoneはすでに知っていることから高速モデルで答え、それで足りないときだけツールを検索します。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>通話中の回答カードは、バックグラウンドのブリーフとメモリを活用</li>
-          <li>検索するときは複数のソースを同時に調べ、見つからなければ言い換えて再検索し、14秒以内に終了</li>
-          <li>各回答に、どこで見つかったかをステップごとに表示</li>
-          <li>繰り返し出てくるトピックや人についてのブリーフを、質問ごとにマッチング</li>
-          <li>ソース同士が食い違うときは、最新のものを優先</li>
-          <li>返信が止まったら、待たせずに高速モデルへ引き継ぎ</li>
-        </ul>
-      </div>
-      <div class="bars" aria-label="Undertone独自のベンチマークで測定">
-        <div>
-          <h4>「質問」、最初の言葉が出るまで <small>中央値</small></h4>
-          <div class="bar"><span>以前</span><i style="--w:100%"></i><b>12.7秒</b></div>
-          <div class="bar new"><span>現在</span><i style="--w:35%"></i><b>4.5秒</b></div>
-        </div>
-        <div>
-          <h4>ライブ回答、返信全体 <small>中央値</small></h4>
-          <div class="bar"><span>以前</span><i style="--w:100%"></i><b>16.5秒</b></div>
-          <div class="bar new"><span>現在</span><i style="--w:31%"></i><b>5.1秒</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="paste">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>そのまま貼れる回答</h2>
-          <p>「質問」は、頼んだものから答えます。下書きはコピーしてそのまま使える 1 つのメッセージで届き、足りないものはその下に書かれます。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Slack やメール用のおすすめ下書きを 1 つ、専用のコピーボタン付きで</li>
-          <li>足りないリンクや確認できなかったことは下書きの下に書かれ、中には入りません</li>
-          <li>チャットのテキストを選んでコピーや翻訳ができ、入力欄では翻訳で置き換えられます</li>
-          <li>最初の翻訳時に、テキストがどの AI に送られるかを表示します</li>
-        </ul>
-      </div>
-      <div class="paste" aria-label="「質問」の回答例">
-        <h4>おすすめのメッセージ</h4>
-        <div class="draft">
-          <div class="bar"><b>そのままコピー可</b><span class="btn-copy">コピー</span></div>
-          <p translate="no">*Keystone update*
-• Billing writes moved to the new stack last week
-• The read cutover is planned for the 14th</p>
-        </div>
-        <div class="missing">不足：切り替えチェックリストのリンクが見つからなかったため、メッセージには入っていません。</div>
-        <div class="tpop">
-          <div class="row"><b>翻訳</b><span class="pick" translate="no">Español</span></div>
-          <p translate="no">El cambio de lectura está previsto para el día 14</p>
-          <div class="acts"><span>翻訳をコピー</span><span class="primary">選択部分を置き換え</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>仕事は仕事のまま</h2>
-          <p>Undertone は仕事の会議と個人の会議を見分けます。ウェビナーや個人のカレンダーの通話は、仕事のツールに触れず一般的な知識で解説します。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>カレンダーごとに「仕事」か「個人」を設定できます。会社のアカウントは最初から「仕事」です</li>
-          <li>個人の会議は仕事のツールやメモリを使わず、まとめも amem に保存しません</li>
-          <li>ヒントパネルで、どの会議も「仕事」と「個人」を切り替えられます</li>
-          <li>聞くだけのウェビナーでも、Comet、Vivaldi、Opera などのブラウザでも自動で始まります</li>
-          <li>質問が誰へのものかを示します。あなた、名前の出た別の人、または全員</li>
-          <li>途切れて再開した通話は、新しい会議ではなく同じ会議の続きになります</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="カレンダー設定の例">
-        <h4>カレンダー</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">仕事</i><i>個人</i></span></div>
-        <div class="acct"><span>個人の Gmail</span><span class="seg"><i>仕事</i><i class="on">個人</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>仕事</i><i class="on">個人</i></span></div>
-        <span class="chip">個人の会議 · 個人のカレンダー</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="languages">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>あなたの言語で</h2>
-          <p>Undertone は 17 言語に対応しました。Mac の言語に合わせて表示され、設定で別の言語も選べます。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>ヒント、回答、まとめはあなたの言語で書かれます。会議の用語は話されたままです</li>
-          <li>19 の言語と方言の会議を Mac 上で文字起こしします</li>
-          <li>Google、iCloud、Outlook のすべてのアカウントから、使うカレンダーを選べます</li>
-          <li>アラビア語の右から左へのレイアウト</li>
-          <li>Google カレンダーが接続されていれば「次の予定」は直接読み込むので、名前が変わった会議やキャンセルされた会議が残りません</li>
-        </ul>
-      </div>
-      <div class="langs" translate="no" aria-label="Undertone の対応言語"><span lang="en">English</span><span lang="es">Español</span><span lang="fr">Français</span><span lang="de">Deutsch</span><span lang="it">Italiano</span><span lang="pt-BR">Português (Brasil)</span><span lang="nl">Nederlands</span><span lang="pl">Polski</span><span lang="tr">Türkçe</span><span lang="ru">Русский</span><span lang="uk">Українська</span><span lang="ar">العربية</span><span lang="hi">हिन्दी</span><span lang="ja">日本語</span><span lang="ko">한국어</span><span lang="zh-Hans">简体中文</span><span lang="zh-Hant">繁體中文</span></div>
-      <script>(function(){var l=document.documentElement.lang;document.querySelectorAll(".langs span").forEach(function(e){if(e.lang===l)e.classList.add("on")})})();</script>
-    </div>
-  </section>
-
   <section class="block" id="claude">
     <div class="wrap claude">
       <div class="head">
@@ -1361,29 +1040,7 @@
   <span class="k">"command"</span>: "/Applications/Undertone.app/Contents/MacOS/Undertone",
   <span class="k">"args"</span>: ["--mcp"]
 }</pre>
-    </div>
-  </section>
-
-  <section class="block" id="amem">
-    <div class="wrap amem">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>amemと組み合わせればさらに便利</h2>
-          <p>Undertone は会議の記憶を常に自分で保持します。Claude Code、Cursor、その他の AI ツールが共有する Mac 上のメモリ amem を追加すると、Undertone は両方をまとめて検索します。セットアップで提案され、自動でインストールされます。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Claude CodeやCursorで取り組んだことが、次の通話のコンテキストに</li>
-          <li>すべてのミーティングのまとめが、あとからAIツールで参照可能に</li>
-          <li>Undertoneに伝えたことは、ずっと記憶されます</li>
-        </ul>
-      </div>
-      <div>
-        <pre class="code" aria-label="amemをインストール" translate="no">npx @iamem/amem setup</pre>
-        <div class="ctas">
-          <a class="btn btn-ghost" href="https://getamem.com/">amemを入手</a>
-        </div>
-        <p class="note">またはUndertoneのセットアップでインストール。Node.jsが必要です。データはMacの中にとどまります。</p>
-      </div>
+      <p class="aside"><a href="https://github.com/sslugic/amem" translate="no">amem</a> も追加すれば、ミーティングの記憶を Claude Code、Cursor、そのほかの AI ツールと共有できます。</p>
     </div>
   </section>
 
@@ -1467,56 +1124,6 @@
       && !(navigator.connection && navigator.connection.saveData);
     if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
-
-  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
-  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
-  (function () {
-    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
-      var c = t.content, ctx = c.querySelector("[data-ctx]");
-      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
-        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
-    });
-    var tabs = document.querySelectorAll(".tab");
-    var panel = document.getElementById("panel");
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function select(n, focus) {
-      var d = data[n];
-      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
-      if (focus) tabs[n].focus();
-      panel.setAttribute("aria-labelledby", "tab-" + n);
-      document.getElementById("d-title").textContent = d.title;
-      document.getElementById("d-meta").textContent = d.meta;
-      document.getElementById("d-say").innerHTML = d.say;
-      var ctx = document.getElementById("d-ctx");
-      ctx.className = d.ctxClass;
-      ctx.innerHTML = d.ctx;
-      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
-    }
-    tabs.forEach(function (t, n) {
-      t.addEventListener("click", function () { select(n); });
-      t.addEventListener("keydown", function (e) {
-        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
-        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
-      });
-    });
-  })();
-</script>
-<script>
-(() => {
-  const dm = document.querySelector('.dm');
-  if (!dm) return;
-  const items = dm.querySelectorAll('.dm-steps li');
-  const show = n => { dm.dataset.step = n; items.forEach(li => li.classList.toggle('on', +li.dataset.s === n)); };
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { show(3); return; }
-  let n = 1, timer;
-  const tick = () => { n = n % 3 + 1; show(n); timer = setTimeout(tick, n === 3 ? 4200 : 2200); };
-  const io = new IntersectionObserver(([e]) => {
-    clearTimeout(timer);
-    if (e.isIntersecting) { show(n = 1); timer = setTimeout(tick, 2200); }
-  });
-  io.observe(dm);
-  items.forEach(li => li.addEventListener('click', () => { clearTimeout(timer); show(n = +li.dataset.s); timer = setTimeout(tick, 5000); }));
-})();
 </script>
 <script>
   // Use cases: one industry at a time. Arrow keys, Home and End move between tabs (roving tabindex).

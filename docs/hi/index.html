@@ -286,6 +286,13 @@
   .ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--dotc, #71717A); }
   .ticks.sug { --dotc: var(--accent); }
   .ticks.you { --dotc: #D4D4D8; }
+  /* Before, after and between calls: the points under each visual, two columns on wide screens */
+  .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
+  .outcomes li { font-size: 15.5px; color: #D4D4D8; }
+  @media (max-width: 720px) { .outcomes { grid-template-columns: 1fr; } }
+  .aside { margin-top: 22px; color: var(--text-2); font-size: 15px; }
+  .aside a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border-2); text-underline-offset: 3px; }
+  .aside a:hover { text-decoration-color: var(--text); }
   .q { font-size: 15px; font-weight: 600; letter-spacing: -.01em; line-height: 1.45; margin-top: 4px; }
   .part { border-inline-start: 2px solid var(--partc); padding-inline-start: 12px; margin-top: 16px; }
   .part.sug { --partc: var(--accent); }
@@ -637,11 +644,10 @@
     <a class="brand" href="#" translate="no"><img src="../assets/icon-256.png" alt="">Undertone <span class="pill">macOS</span></a>
     <nav class="nav-links" aria-label="मुख्य नेविगेशन">
       <a href="#how">यह कैसे काम करता है</a>
+      <a href="#before">फ़ीचर्स</a>
       <a href="#use-cases">उपयोग के उदाहरण</a>
-      <a href="#features">फ़ीचर्स</a>
-      <a href="#claude">AI टूल</a>
-      <a href="#pricing">मुफ़्त बीटा</a>
       <a href="#privacy">प्राइवेसी</a>
+      <a href="#pricing">मुफ़्त बीटा</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">चेंजलॉग</a>
       <details class="lang"><summary aria-label="भाषा"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span class="lang-cur" translate="no">HI</span><svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></summary><ul class="lang-menu" translate="no"><li><a href="../?lang=en" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a></li><li><a href="../nl/" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li><li><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li><li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li><li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi" data-lang="hi" aria-current="page">हिन्दी</a></li><li><a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li><li><a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li></ul></details>      <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg><span>डाउनलोड<span class="long"> macOS के लिए</span></span></a>
@@ -652,9 +658,8 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="status"><span class="dot" aria-hidden="true"></span>macOS के लिए लाइव मीटिंग इंटेलिजेंस</span>
       <h1>समझें कि सब क्या कह रहे हैं, और आगे क्या कहना है।</h1>
-      <p class="sub">Undertone आपकी कॉल साथ में सुनता है। कोड नाम और संक्षिप्त शब्द आते ही समझाता है, आपसे सवाल पूछे जाने पर ज़रूरी तथ्य सामने रखता है, और कॉल के बाद सारांश, आपके काम और अगली कॉल की ब्रीफ़िंग देता है। सब आपकी टीम के अपने Slack, Notion और Jira से, आपके Mac पर ट्रांसक्राइब होकर।</p>
+      <p class="sub">Undertone आपकी कॉल साथ में सुनता है और कोड नाम व संक्षिप्त शब्द आते ही समझाता है, आपकी टीम के अपने Slack, Notion और Jira से। कॉल के बाद आपका सारांश, काम और अगली ब्रीफ़िंग तैयार मिलते हैं। ट्रांसक्रिप्शन आपके Mac पर।</p>
       <div class="ctas">
         <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>.dmg डाउनलोड करें <span class="ver">v1.18.2</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>रिलीज़ और इश्यूज़</a>
@@ -668,34 +673,6 @@
       </video>
     </div>
     <p class="sample hero-note">नमूना। नाम, कंपनियाँ और टिकट काल्पनिक हैं। संगीत के लिए आवाज़ चालू करें।</p>
-  </section>
-
-  <section class="block" id="demo">
-    <div class="wrap">
-      <div class="head">
-        <h2>तीन स्टेप, बात चलते-चलते</h2>
-        <p>Undertone आपके Mac पर कॉल को ट्रांसक्राइब करता है, उन नामों को चुनता है जिन्हें आप शायद नहीं जानते, और उन्हें आपकी अपनी टीम के टूल्स से समझाता है।</p>
-      </div>
-      <div class="dm" data-step="1" aria-label="एनिमेटेड सैंपल: कॉल में एक सवाल, Undertone के पकड़े गए टर्म, और उसका दिखाया हिंट">
-        <ol class="dm-steps">
-          <li class="on" data-s="1"><b>स्टेप 1</b><span>कॉल आपके Mac पर ट्रांसक्राइब होती है</span></li>
-          <li data-s="2"><b>स्टेप 2</b><span>Undertone पकड़ता है जो आप शायद नहीं जानते</span></li>
-          <li data-s="3"><b>स्टेप 3</b><span>एक हिंट आपके सोर्सेज़ से उसे समझाता है</span></li>
-        </ol>
-        <div class="dm-stage">
-          <p class="dm-say"><span class="who">Priya · 10:14 · लाइव</span>“रुको, क्या मार्च वाली घटना के बाद हमने <mark>Project Odin</mark> को पुराने <mark>V2 webhook</mark> से हटा दिया था?”</p>
-          <div class="dm-spot" aria-hidden="true"><span>Project Odin · संभवतः नया</span><span>V2 webhook · संभवतः नया</span></div>
-          <div class="dm-card">
-            <h3>Project Odin <small>आपके वर्कस्पेस से</small></h3>
-            <ul>
-              <li>नोटिफ़िकेशन पाइपलाइन की री-राइट। मार्च के आउटेज के बाद, 2 अप्रैल को यह V2 webhook से हट गई <span class="s">[Slack #eng-infra]</span></li>
-              <li>V2 webhook डिप्रिकेटेड है और 30 जून को बंद हो जाएगा; दो इंटरनल सर्विसेज़ अब भी इसे कॉल करती हैं <span class="s">[Jira ENG-1402]</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="sample" style="padding:14px 0 0">सैंपल। नाम, चैनल और टिकट काल्पनिक हैं।</p>
-    </div>
   </section>
 
   <section class="block" id="why">
@@ -750,43 +727,115 @@
     </div>
   </section>
 
-  <section class="block" id="try">
+  <section class="block" id="before">
     <div class="wrap">
       <div class="head">
-        <h2>सैंपल मीटिंग पर आज़माएँ</h2>
-        <p>कोई मीटिंग चुनें और देखें कि Undertone आपको क्या दिखाएगा। ऐप में, होम › एक सैंपल मीटिंग आज़माएँ आपकी पहली कॉल से पहले असली पैनल में एक काल्पनिक स्टैंडअप चलाता है।</p>
+        <h2>कमरे में सबको जानते हुए जाएँ</h2>
+        <p>मीटिंग से पंद्रह मिनट पहले Undertone आपकी पिछली मीटिंग्स, कामों और सोर्सेज़ से आपके लिए ब्रीफ़िंग लिखता है: कौन आ रहा है, क्या अधूरा रह गया था और आपको क्या देना है।</p>
       </div>
-      <div class="demo">
-        <div class="tabs" role="tablist" aria-label="सैंपल मीटिंग्स">
-          <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>इंजीनियरिंग सिंक</b><span>रिलीज़ प्रोसेस का एक एक्रोनिम</span></button>
-          <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>सेल्स हैंडओवर</b><span>कॉन्ट्रैक्ट का एक टर्म</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>बोर्ड Q&amp;A</b><span>आपसे एक सवाल</span></button>
+      <div class="duo">
+        <div class="pane bf" role="img" aria-label="आने वाली मीटिंग के लिए सैंपल नोटिफ़िकेशन और ब्रीफ़िंग">
+          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>प्लेटफ़ॉर्म सिंक 5 मिनट में</b><span>Maya: स्टाफ़ इंजीनियर, Keystone की ओनर</span></div><time>अभी</time></div>
+          <p><b>कौन:</b> Maya, प्लेटफ़ॉर्म टीम में स्टाफ़ इंजीनियर। Dev रिलीज़ मैनेजमेंट संभालते हैं। Sam पहली बार जुड़ रहे हैं।</p>
+          <p><b>पिछली बार:</b> राइट्स नए बिलिंग स्टैक पर शिफ़्ट हुए; रीड कटओवर 14 तारीख़ को तय है <span class="s">[Jira INFRA-311]</span>।</p>
+          <p><b>आपको देना है:</b> Sam के लिए कटओवर प्लान, शुक्रवार तक।</p>
+          <p><b>इसके लिए तैयार रहें:</b> “क्या रोलबैक की रिहर्सल हुई है?” हाँ, स्टेजिंग पर दो बार <span class="s">[Notion: Keystone rollback]</span>।</p>
+          <p class="sample" style="padding:6px 0 0">सैंपल। आपकी मीटिंग्स, टास्क और सोर्सेज़ से लिखा गया।</p>
         </div>
-        <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
-          <div class="hud-head">
-            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-            <div><div class="hud-title" id="d-title">इंजीनियरिंग सिंक</div><div class="hud-meta" id="d-meta">10:12 · सुन रहा है</div></div>
+        <div class="pane" role="img" aria-label="भूमिका, काम और साझा इतिहास के साथ सैंपल पर्सन कार्ड">
+          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>स्टाफ़ इंजीनियर, प्लेटफ़ॉर्म</span></div></div>
+          <div class="pfacts">
+            <p><em>काम</em> Keystone, बिलिंग-स्टैक माइग्रेशन <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
+            <p><em>आपके साथ</em> रोलबैक रनबुक की समीक्षा <span style="color:var(--text-3)">[Notion]</span></p>
+            <p><em>पिछली बार</em> प्लेटफ़ॉर्म सिंक, मंगलवार: कटओवर 14 तारीख़ पर ही रहेगा</p>
           </div>
-          <p class="say" id="d-say"><span class="who"><b>Dev</b> · 10:12</span>गुरुवार को Keystone के <span class="term">CAB</span> से पास होते ही हम मर्ज कर देंगे।</p>
-          <div class="ctx" id="d-ctx"><div class="ct">CAB <small>संभवतः नया</small></div><p>Change Advisory Board: गुरुवार की समीक्षा जो प्रोडक्शन बदलावों को मंज़ूरी देती है।</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · रिलीज़ प्रोसेस</span></div>
-          <p class="sample">सैंपल परिदृश्य। कंपनियाँ, लोग और आँकड़े काल्पनिक हैं।</p>
+          <div class="chips"><span>साथ में 6 मीटिंग्स</span><span>Maya के लिए आपका 1 टास्क बाकी</span></div>
+          <p class="sample" style="padding:14px 0 0">सैंपल। नाम और प्रोजेक्ट काल्पनिक हैं।</p>
         </div>
-        <template class="demo-data">
-          <div data-title>इंजीनियरिंग सिंक</div><div data-meta>10:12 · सुन रहा है</div>
-          <p data-say><span class="who"><b>Dev</b> · 10:12</span>गुरुवार को Keystone के <span class="term">CAB</span> से पास होते ही हम मर्ज कर देंगे।</p>
-          <div data-ctx class="ctx"><div class="ct">CAB <small>संभवतः नया</small></div><p>Change Advisory Board: गुरुवार की समीक्षा जो प्रोडक्शन बदलावों को मंज़ूरी देती है।</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · रिलीज़ प्रोसेस</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>सेल्स हैंडओवर</div><div data-meta>15:40 · सुन रहा है</div>
-          <p data-say><span class="who"><b>Priya</b> · 15:40</span>Northwind ने कस्टम <span class="term">DPA</span> साइन कर दिया, इसलिए रिटेंशन सीमित है।</p>
-          <div data-ctx class="ctx"><div class="ct">DPA <small>शायद नया</small></div><p>डेटा प्रोसेसिंग एग्रीमेंट। Northwind का वर्शन डेटा रिटेंशन को 30 दिनों तक सीमित करता है।</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #deal-northwind</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>बोर्ड Q&amp;A</div><div data-meta>09:31 · सुन रहा है</div>
-          <p data-say><span class="who"><b>अध्यक्ष</b> · 09:31 · <em>आपसे</em></span>इस तिमाही <span class="term">नेट रेवेन्यू रिटेंशन</span> को क्या आगे बढ़ा रहा है?</p>
-          <div data-ctx class="ctx answer"><div class="ct">आपके लिए संदर्भ <small>अध्यक्ष ने पूछा</small></div><p>NRR 108% से बढ़कर 112% हुआ, एंटरप्राइज़ विस्तार की वजह से: तीन अकाउंट्स ने सीटें जोड़ीं।</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Q3 बोर्ड डेक</span></div>
-        </template>
       </div>
+      <ul class="ticks sug outcomes">
+        <li>इनवाइट में किसी पर भी क्लिक करके देखें कि उनकी भूमिका क्या है, वे किस पर काम करते हैं और आपके बीच क्या बाकी है</li>
+        <li>ब्रीफ़िंग से कुछ छोटे सवाल जाँचते हैं कि आप तैयार हैं</li>
+        <li>मीटिंग शुरू होने से ठीक पहले आपके सोर्सेज़ से उसका संदर्भ जुटा लिया जाता है, ताकि कॉल उसी के साथ शुरू हो</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="after">
+    <div class="wrap">
+      <div class="head">
+        <h2>जानें आगे क्या होगा</h2>
+        <p>कॉल खत्म होते ही रीकैप और आपके काम होम पर इंतज़ार करते हैं, और सबके लिए फ़ॉलो-अप पहले से ड्राफ़्ट होता है।</p>
+      </div>
+      <div class="app" role="img" aria-label="सैंपल डेटा के साथ Undertone की होम विंडो, जिसमें आने वाली मीटिंग्स, आपके टास्क, सीखने लायक शब्द और जवाब कोचिंग है">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>प्लेटफ़ॉर्म टीम</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>होम</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>मीटिंग्स</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>टास्क</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>शब्दावली</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>पूछें</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>आर्टिफ़ैक्ट्स</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">सुप्रभात, Alex</div>
+          <p class="date">बुधवार, 28 अक्टूबर · प्लेटफ़ॉर्म टीम</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">आगे क्या है <small>कैलेंडर</small></div>
+              <div class="row"><span class="t">10:00</span><span class="grow">प्लेटफ़ॉर्म सिंक<span class="sub2">Maya, Dev, Sam · 2 संबंधित मीटिंग्स · 1 खुला टास्क</span></span><span class="mini">तैयारी</span></div>
+              <div class="row"><span class="t">14:30</span><span class="grow">Northwind रिन्यूअल<span class="sub2">Priya, Jordan · 1 संबंधित मीटिंग</span></span><span class="mini">तैयारी</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">आपके टास्क <small>2 खुले</small></div>
+              <div class="row"><span class="box"></span><span class="grow">Sam को Keystone रीड-कटओवर प्लान भेजें<span class="sub2">प्लेटफ़ॉर्म सिंक · शुक्रवार तक · <span class="hi">हाई</span></span></span></div>
+              <div class="row"><span class="box"></span><span class="grow">गुरुवार के लिए CAB स्लॉट कन्फ़र्म करें<span class="sub2">इंजीनियरिंग सिंक</span></span></div>
+              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">अध्यक्ष के साथ Q3 के NRR आँकड़े शेयर करें</span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">सीखने लायक शब्द <small>शब्दावली</small></div>
+              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">Q3 में नए बिलिंग स्टैक पर माइग्रेशन, Infra के नेतृत्व में।</span></span></div>
+              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">डेटा प्रोसेसिंग एग्रीमेंट। Northwind का वर्शन रिटेंशन को 30 दिनों तक सीमित करता है।</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">जवाब कोचिंग <small>प्लेटफ़ॉर्म सिंक</small></div>
+              <div class="row"><span class="grow">“क्या आप Keystone पर एक छोटा-सा स्टेटस दे सकते हैं?”<span class="sub2">तारीख़ से शुरू करें, फिर वह एक जोखिम। 14 तारीख़ का कटओवर सबसे आख़िर में आया।</span></span><span class="verdict">ठीक है</span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">सैंपल डेटा। नाम, प्रोजेक्ट और मीटिंग्स काल्पनिक हैं।</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>सिर्फ़ आपके अपने काम, उन तारीख़ों के साथ जो आपने बोलकर कहीं, और एक कामकाजी दिन पहले रिमाइंडर</li>
+        <li>फ़ॉलो-अप ईमेल या Slack संदेश, पेस्ट करने के लिए तैयार। Undertone कभी कुछ नहीं भेजता।</li>
+        <li>आपसे पूछे गए सवालों के जवाब और आपके बोलने के तरीके पर एक स्कोर</li>
+        <li>किसी काम पर स्टार्ट दबाएँ, और “पूछें” मीटिंग, आपकी मेमोरी और आपके सोर्सेज़ से उसका ड्राफ़्ट बना देता है</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="between">
+    <div class="wrap">
+      <div class="head">
+        <h2>जो कहा गया, उसे ढूँढें</h2>
+        <p>अपनी मीटिंग्स के बारे में वैसे ही पूछें जैसे किसी साथी से पूछते हैं। जवाब आपकी मीटिंग्स और टीम के टूल्स से आते हैं, उनके सोर्स के साथ।</p>
+      </div>
+      <div class="askmock" role="img" aria-label="Ask की शुरुआती स्क्रीन का नमूना: अभिवादन, सवाल का बॉक्स और हाल की चैट की सूची">
+        <h3>नमस्ते एलेक्स, कुछ भी पूछें</h3>
+        <div class="am-box">
+          <div class="am-ph">इस हफ़्ते हमने क्या तय किया?</div>
+          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>सभी मीटिंग ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
+        </div>
+        <div class="am-rec">हाल के</div>
+        <ul>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>मेरी पिछली मीटिंग किस बारे में थी?</span><small>6m</small></li>
+          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>Q4 प्लानिंग कॉल के लिए फ़ॉलो-अप ईमेल</span><small>1d</small></li>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Kestrel डैशबोर्ड का ज़िम्मेदार कौन है?</span><small>2d</small></li>
+        </ul>
+      </div>
+      <p class="sample" style="padding:14px 0 0">नमूना। नाम और मीटिंग काल्पनिक हैं।</p>
+      <ul class="ticks sug outcomes">
+        <li>एक मीटिंग या सभी के बारे में पूछें, और “हाल के” से पुरानी चैट फिर से शुरू करें</li>
+        <li>कॉल्स के बीच आपके खुले कामों का संदर्भ पहले से जुटा लिया जाता है, ताकि जवाब जल्दी आएँ</li>
+        <li>किसी सूची को ऐसे कैनवस में बदलें जिस पर आप टिक लगा सकें</li>
+        <li>अपनी टीम के शब्दों का छोटे क्विज़ से तब तक अभ्यास करें जब तक वे याद न हो जाएँ</li>
+      </ul>
     </div>
   </section>
 
@@ -980,376 +1029,6 @@
     </div>
   </section>
 
-  <section class="block" id="features">
-    <div class="wrap">
-      <div class="head">
-        <h2>कॉल के बाद भी काम जारी</h2>
-        <p>Undertone को किसी भी Mac ऐप की तरह खोलें, आपका हफ़्ता तैयार मिलेगा: आगे क्या है, आपको क्या देना है, और क्या सुना पर जानते नहीं थे।</p>
-      </div>
-
-      <div class="app" role="img" aria-label="सैंपल डेटा के साथ Undertone की होम विंडो, जिसमें आने वाली मीटिंग्स, आपके टास्क, सीखने लायक शब्द और जवाब कोचिंग है">
-        <aside class="app-side" aria-hidden="true">
-          <div class="lights"><i></i><i></i><i></i></div>
-          <div class="space"><span><i></i>प्लेटफ़ॉर्म टीम</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
-          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>होम</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>मीटिंग्स</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>टास्क</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>शब्दावली</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>पूछें</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>आर्टिफ़ैक्ट्स</li></ul>
-        </aside>
-        <div class="app-main" aria-hidden="true">
-          <div class="hello">सुप्रभात, Alex</div>
-          <p class="date">बुधवार, 28 अक्टूबर · प्लेटफ़ॉर्म टीम</p>
-          <div class="cards">
-            <div class="card">
-              <div class="h4">आगे क्या है <small>कैलेंडर</small></div>
-              <div class="row"><span class="t">10:00</span><span class="grow">प्लेटफ़ॉर्म सिंक<span class="sub2">Maya, Dev, Sam · 2 संबंधित मीटिंग्स · 1 खुला टास्क</span></span><span class="mini">तैयारी</span></div>
-              <div class="row"><span class="t">14:30</span><span class="grow">Northwind रिन्यूअल<span class="sub2">Priya, Jordan · 1 संबंधित मीटिंग</span></span><span class="mini">तैयारी</span></div>
-            </div>
-            <div class="card">
-              <div class="h4">आपके टास्क <small>2 खुले</small></div>
-              <div class="row"><span class="box"></span><span class="grow">Sam को Keystone रीड-कटओवर प्लान भेजें<span class="sub2">प्लेटफ़ॉर्म सिंक · शुक्रवार तक · <span class="hi">हाई</span></span></span></div>
-              <div class="row"><span class="box"></span><span class="grow">गुरुवार के लिए CAB स्लॉट कन्फ़र्म करें<span class="sub2">इंजीनियरिंग सिंक</span></span></div>
-              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">अध्यक्ष के साथ Q3 के NRR आँकड़े शेयर करें</span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">सीखने लायक शब्द <small>शब्दावली</small></div>
-              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">Q3 में नए बिलिंग स्टैक पर माइग्रेशन, Infra के नेतृत्व में।</span></span></div>
-              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">डेटा प्रोसेसिंग एग्रीमेंट। Northwind का वर्शन रिटेंशन को 30 दिनों तक सीमित करता है।</span></span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">जवाब कोचिंग <small>प्लेटफ़ॉर्म सिंक</small></div>
-              <div class="row"><span class="grow">“क्या आप Keystone पर एक छोटा-सा स्टेटस दे सकते हैं?”<span class="sub2">तारीख़ से शुरू करें, फिर वह एक जोखिम। 14 तारीख़ का कटओवर सबसे आख़िर में आया।</span></span><span class="verdict">ठीक है</span></div>
-            </div>
-          </div>
-          <p class="sample" style="padding:14px 0 0">सैंपल डेटा। नाम, प्रोजेक्ट और मीटिंग्स काल्पनिक हैं।</p>
-        </div>
-      </div>
-
-      <dl class="features">
-        <div><dt>होम</dt><dd>आपके Mac के कैलेंडर से आज की मीटिंग्स, आपके खुले टास्क, सीखने लायक शब्द और आपके जवाब कैसे रहे। हर मीटिंग से पहले एक ब्रीफ़िंग आती है।</dd></div>
-        <div><dt>टास्क</dt><dd>हर कॉल के बाद, सिर्फ़ आपका काम: आपने क्या वादा किया, आपसे क्या पूछा गया, और किन सवालों पर फ़ॉलो-अप करना है। इन्हें ‘करना है’ से ‘जारी’, ‘रिव्यू में’ और ‘पूरा’ तक ले जाएँ।</dd></div>
-        <div><dt>शब्दावली</dt><dd>हर मीटिंग का हर टर्म, साथ में आपकी कंपनी में उसका मतलब। जो आप जानते हैं उन्हें एक क्लिक में मार्क करें; ‘और’ आपके सोर्सेज़ में उसके पीछे के लोगों और लिंक्स को खोज निकालता है।</dd></div>
-        <div><dt>तैयारी</dt><dd>मीटिंग से पहले, उसकी ब्रीफ़िंग से कुछ सवालों के साथ जांचें कि आप तैयार हैं। बीच में, अपने शब्दों का अभ्यास करें: बहुविकल्पीय, या अपने शब्दों में समझाएं और आपका AI मिलान का स्कोर देता है। यह आपका इतिहास रखता है और जो आप बार-बार चूकते हैं उस पर अध्ययन गाइड लिखता है।</dd></div>
-        <div><dt>स्पेसेज़</dt><dd>टीमों और क्लाइंट्स को अलग रखें। नई मीटिंग्स अपने आप सही जगह फ़ाइल हो जाती हैं, बाकी के लिए Undertone स्पेस सुझाता है, और हर व्यू आपके चुने स्पेस के हिसाब से फ़िल्टर होता है।</dd></div>
-        <div><dt>जवाब कोचिंग</dt><dd>कॉल में आपकी तरफ़ की बात भी ट्रांसक्राइब होती है, ताकि कॉल के बाद आप देख सकें कि क्या असर कर गया और अगली बार क्या कसना है।</dd></div>
-        <div><dt>आर्टिफ़ैक्ट्स</dt><dd>स्टेटस रिपोर्ट, स्लाइड डेक और इंटरैक्टिव कैनवस, आपकी मीटिंग्स और सोर्सेज़ से लिखे गए, कमियों पर [TBD] के निशान के साथ। Markdown या HTML में एक्सपोर्ट करें।</dd></div>
-        <div><dt>पूछें</dt><dd>एक मीटिंग या सभी से, फ़ाइलें जोड़कर चैट करें। जवाब तुरंत आते हैं, पुरानी चैट 'हाल के' में रहती हैं, और आपकी बताई बातें अगली बार के लिए याद रहती हैं।</dd></div>
-        <div><dt>कॉल के बीच पूछें</dt><dd>लाइव हिंट्स के नीचे एक चैट फ़ील्ड अब तक की कॉल के आधार पर जवाब देता है, मीटिंग छोड़े बिना।</dd></div>
-        <div><dt>लोग</dt><dd>आपके इनवाइट्स में शामिल हर व्यक्ति, उनकी भूमिका और वे किस पर काम करते हैं, आपकी साथ की मीटिंग्स और आपको उन्हें क्या देना है।</dd></div>
-        <div><dt>रिमाइंडर</dt><dd>“शुक्रवार तक” एक तारीख़ बन जाता है। पिछले वर्किंग डे पर 9:00 बजे रिमाइंडर आता है, और ओवरड्यू टास्क लाल हो जाते हैं।</dd></div>
-        <div><dt>शब्दावली गाइड</dt><dd>टीम की शब्दावली को नए जुड़ने वालों के लिए शेयर करने लायक गाइड में बदलें, HTML या Markdown में एक्सपोर्ट के लिए तैयार।</dd></div>
-        <div><dt>सुधारें और अनुवाद करें</dt><dd>गलत सुने गए शब्द पर राइट-क्लिक करें, Undertone उसे ठीक करता है और अगली बार उस पर ध्यान देता है। किसी भी हिस्से का 19 भाषाओं में अनुवाद करें।</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="block" id="around">
-    <div class="wrap">
-      <div class="head">
-        <h2>कॉल से पहले, और उसके बाद</h2>
-        <p>मीटिंग से पंद्रह मिनट पहले, Undertone आपके लिए एक ब्रीफ़िंग लिखता है और पाँच मिनट पहले आपको याद दिलाता है, और आपके सोर्स से मीटिंग का संदर्भ जुटाता है ताकि कॉल उसी के साथ शुरू हो। मीटिंग खत्म होते ही, सबके लिए फ़ॉलो-अप का ड्राफ़्ट तैयार रहता है, ईमेल या Slack में पेस्ट करने के लिए।</p>
-      </div>
-      <div class="duo">
-        <div class="pane bf" role="img" aria-label="आने वाली मीटिंग के लिए सैंपल नोटिफ़िकेशन और ब्रीफ़िंग">
-          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>प्लेटफ़ॉर्म सिंक 5 मिनट में</b><span>Maya: स्टाफ़ इंजीनियर, Keystone की ओनर</span></div><time>अभी</time></div>
-          <p><b>कौन:</b> Maya, प्लेटफ़ॉर्म टीम में स्टाफ़ इंजीनियर। Dev रिलीज़ मैनेजमेंट संभालते हैं। Sam पहली बार जुड़ रहे हैं।</p>
-          <p><b>पिछली बार:</b> राइट्स नए बिलिंग स्टैक पर शिफ़्ट हुए; रीड कटओवर 14 तारीख़ को तय है <span class="s">[Jira INFRA-311]</span>।</p>
-          <p><b>आपको देना है:</b> Sam के लिए कटओवर प्लान, शुक्रवार तक।</p>
-          <p><b>इसके लिए तैयार रहें:</b> “क्या रोलबैक की रिहर्सल हुई है?” हाँ, स्टेजिंग पर दो बार <span class="s">[Notion: Keystone rollback]</span>।</p>
-          <p class="sample" style="padding:6px 0 0">सैंपल। आपकी मीटिंग्स, टास्क और सोर्सेज़ से लिखा गया।</p>
-        </div>
-        <div class="pane" role="img" aria-label="मीटिंग के बाद ड्राफ़्ट किया गया सैंपल फ़ॉलो-अप मैसेज">
-          <div class="fu-top"><div class="label" style="margin:0">फ़ॉलो-अप</div><span class="segs"><i>ईमेल</i><i class="on">Slack</i></span></div>
-          <div class="fu">सभी का शुक्रिया, आज के प्लेटफ़ॉर्म सिंक का छोटा-सा रीकैप:<ul><li>रीड कटओवर 14 तारीख़ पर ही रहेगा</li><li>Dev गुरुवार के लिए CAB स्लॉट बुक करेंगे</li><li>शुक्रवार तक Sam को कटओवर प्लान भेजना मेरी ज़िम्मेदारी</li></ul><br>खुला सवाल: क्या 14 तारीख़ से पहले दूसरा लोड टेस्ट चाहिए?</div>
-          <p style="font-size:13px;color:var(--text-3);margin-top:12px">इसे एडिट करें, कॉपी करें, खुद भेजें। <span class="connect" style="margin:0;margin-inline-start:6px">कॉपी</span></p>
-          <p class="sample" style="padding:10px 0 0">सैंपल। Undertone कभी कुछ नहीं भेजता।</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="people">
-    <div class="wrap">
-      <div class="head">
-        <h2>जानें कि कमरे में कौन है</h2>
-        <p>नाम भी जार्गन होते हैं। मीटिंग में किसी पर भी क्लिक करें और देखें उनकी भूमिका, वे किस पर काम करते हैं, आपकी साथ की मीटिंग्स और आपको उन्हें क्या देना है, आपके अपने सोर्सेज़ से।</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="भूमिका, काम और साझा इतिहास के साथ सैंपल पर्सन कार्ड">
-          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>स्टाफ़ इंजीनियर, प्लेटफ़ॉर्म</span></div></div>
-          <div class="pfacts">
-            <p><em>काम</em> Keystone, बिलिंग-स्टैक माइग्रेशन <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
-            <p><em>आपके साथ</em> रोलबैक रनबुक की समीक्षा <span style="color:var(--text-3)">[Notion]</span></p>
-            <p><em>पिछली बार</em> प्लेटफ़ॉर्म सिंक, मंगलवार: कटओवर 14 तारीख़ पर ही रहेगा</p>
-          </div>
-          <div class="chips"><span>साथ में 6 मीटिंग्स</span><span>Maya के लिए आपका 1 टास्क बाकी</span></div>
-          <p class="sample" style="padding:14px 0 0">सैंपल। नाम और प्रोजेक्ट काल्पनिक हैं।</p>
-        </div>
-        <div class="pane" role="img" aria-label="ड्यू डेट और रिमाइंडर के साथ सैंपल टास्क लिस्ट">
-          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>शुक्रवार तक: Sam को कटओवर प्लान भेजें</b><span>आपने प्लेटफ़ॉर्म सिंक में कहा था कि आप यह करेंगे।</span></div><time>9:00</time></div>
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">Sam को Keystone कटओवर प्लान भेजें<small>शुक्र, 30 अक्टूबर · कहा था “शुक्रवार तक”</small></span></li>
-            <li><span class="st"></span><span class="grow">अध्यक्ष के साथ Q3 के NRR आँकड़े शेयर करें<small>अगले हफ़्ते · बोर्ड Q&amp;A</small></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">सैंपल। जो डेडलाइन आप बोलकर बताते हैं, वे तारीख़ बन जाती हैं, और पिछले वर्किंग डे पर रिमाइंडर आता है।</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="coaching">
-    <div class="wrap">
-      <div class="head">
-        <h2>जानें कि आप कैसे लगे</h2>
-        <p>हर कॉल के बाद, एक स्कोर: आपसे पूछे गए सवालों के जवाब आपने कैसे दिए, और आप कैसे बोले: बोलने का समय, रफ़्तार और फ़िलर शब्द। इंटरव्यू के लिए, अगले राउंड की तैयारी के लिए ईमानदार फ़ीडबैक।</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="सैंपल इंटरव्यू स्कोर: 100 में से 78, आगे बढ़ने की संभावना, साथ में क्या सुधारना है">
-          <div class="score-top">
-            <div class="ring" aria-hidden="true"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="31" fill="none" stroke="rgba(129,140,248,.18)" stroke-width="7"/><circle cx="36" cy="36" r="31" fill="none" stroke="#818CF8" stroke-width="7" stroke-linecap="round" stroke-dasharray="151.9 194.8"/></svg><b>78<small>/100</small></b></div>
-            <div><div class="sc-title">इंटरव्यू स्कोर</div><span class="tag">आगे बढ़ने की संभावना</span></div>
-          </div>
-          <p>बदलाव के दौर में नेतृत्व पर साफ़, ठोस कहानियाँ। आर्किटेक्चर वाला जवाब सामान्य रहा, जबकि वे ट्रेड-ऑफ़ सुनना चाहते थे।</p>
-          <div class="label">सुधार के लिए</div>
-          <ul class="ticks"><li>पहले फ़ैसला बताएँ, फिर संदर्भ</li><li>एक ट्रेड-ऑफ़ बताएँ जो आप करेंगे, और क्यों</li></ul>
-          <p class="sample" style="padding:14px 0 0">सैंपल। जो मीटिंग्स इंटरव्यू नहीं हैं, उन्हें मीटिंग स्कोर मिलता है: बेहतरीन, अच्छा, बेहतर हो सकता था या कमज़ोर।</p>
-        </div>
-        <div class="pane" role="img" aria-label="सैंपल सवाल, जिसमें आपके पास मौजूद संदर्भ और आपकी कही बात साथ-साथ दिखती है">
-          <div class="label" style="margin-top:0">आपसे पूछा गया</div>
-          <div class="q">“कोई ऐसा समय बताइए जब आपको पूरी जानकारी के बिना फ़ैसला करना पड़ा।”</div>
-          <div class="part sug">
-            <div class="label">आपके पास जो संदर्भ था</div>
-            <div class="lead">आपके नोट्स से: v1 लॉन्च जो दो हफ़्ते पहले खिसक गया</div>
-            <ul class="ticks sug"><li>उस समय क्या कम था: दो हफ़्ते का समय</li><li>फ़ैसला: v1 को एक्सपोर्ट के बिना शिप करना</li><li>नतीजा: समय पर, एक्सपोर्ट एक महीने बाद</li></ul>
-          </div>
-          <div class="part you">
-            <div class="label">आपने क्या कहा</div>
-            <ul class="ticks you"><li>उस समय हम टीम को डेली रिलीज़ पर ले आए।</li><li>मैंने बॉटलनेक ढूँढे और काम पूरा करवाया।</li></ul>
-          </div>
-          <p class="sample" style="padding:14px 0 0">सैंपल। आपकी तरफ़ की बात आपके माइक्रोफ़ोन से आती है, आपके Mac पर।</p>
-        </div>
-      </div>
-      <div class="metrics" role="img" aria-label="सैंपल बोलने के आँकड़े: बातचीत में हिस्सा, रफ़्तार, फ़िलर शब्द, सबसे लंबा हिस्सा और पूछे गए सवाल">
-        <div><b>41%</b><span>बातचीत में हिस्सा</span></div>
-        <div><b>152</b><span>शब्द प्रति मिनट</span></div>
-        <div><b>2.1</b><span>फ़िलर प्रति मिनट</span></div>
-        <div><b>1:48</b><span>सबसे लंबा हिस्सा</span></div>
-        <div><b>4</b><span>पूछे गए सवाल</span></div>
-      </div>
-      <p class="sample" style="padding:12px 0 0">सैंपल। आप कैसे बोले, यह आपके Mac पर कॉल में आपकी तरफ़ की बात से मापा जाता है।</p>
-    </div>
-  </section>
-
-  <section class="block" id="tasks">
-    <div class="wrap">
-      <div class="head">
-        <h2>स्टार्ट दबाएँ, और काम शुरू</h2>
-        <p>आपकी मीटिंग्स के हर टास्क पर एक स्टार्ट बटन है। “पूछें” उसे मीटिंग, आपकी मेमोरी और आपके सोर्सेज़ के साथ उठाता है, नतीजे का ड्राफ़्ट बनाता है, और सिर्फ़ वही पूछता है जो उसे नहीं मिलता।</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="करना है, जारी और रिव्यू में स्टेटस और स्टार्ट बटन वाली सैंपल टास्क लिस्ट">
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">Sam को Keystone कटओवर प्लान भेजें<small>जारी · शुक्रवार तक</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st rev"></span><span class="grow">Q3 प्लेटफ़ॉर्म अपडेट ड्राफ़्ट करें<small>रिव्यू में</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st"></span><span class="grow">गुरुवार के लिए CAB स्लॉट कन्फ़र्म करें<small>करना है · इंजीनियरिंग सिंक</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">सैंपल। पूरे हुए टास्क ‘पूरे हुए’ में चले जाते हैं, दोबारा खोलने के लिए तैयार।</p>
-        </div>
-        <div class="pane" role="img" aria-label="सैंपल “पूछें” चैट, जो एक टास्क पर काम कर रही है और Notion कनेक्ट करने को कह रही है">
-          <div class="chat-me">“Sam को Keystone कटओवर प्लान भेजें” पर काम शुरू करें</div>
-          <div class="chat-ai"><b>Sam के लिए ड्राफ़्ट:</b> राइट्स पिछले हफ़्ते नए बिलिंग स्टैक पर शिफ़्ट हो गए; रीड कटओवर 14 तारीख़ को तय है, और स्टेजिंग पर रोलबैक की रिहर्सल हो चुकी है<span class="caret" aria-hidden="true"></span><br><br>रोलबैक रनबुक Notion में है, जो अभी कनेक्ट नहीं है।</div>
-          <span class="connect"><img src="../assets/logos/notion.png" alt="" width="14" height="14">Notion कनेक्ट करें</span>
-          <p class="sample" style="padding:14px 0 0">सैंपल। जवाब लिखे जाते-जाते स्ट्रीम होते हैं।</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ready">
-    <div class="wrap">
-      <div class="head">
-        <h2>संदर्भ जो आपके पूछने से पहले तैयार है</h2>
-        <p>हर घंटे, कॉल्स के बीच, Undertone आपके कनेक्टेड सोर्सेज़ में आपके खुले टास्क और हाल की मीटिंग्स के बारे में पढ़ता है और सोर्स के साथ एक छोटा ब्रीफ़ तैयार रखता है। जब आप स्टार्ट दबाते हैं या डिटेल्स माँगते हैं, तो जवाब मिनटों की खोज के बजाय उससे शुरू होता है जो उसे पहले से पता है।</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="सैंपल टास्क लिस्ट, जिसमें हर टास्क पर संदर्भ-तैयार का निशान है, साथ में बैकग्राउंड संदर्भ का स्टेटस">
-          <ul class="board">
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Sam को Keystone कटओवर प्लान भेजें<small>संदर्भ तैयार · Slack, Jira, Notion</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Q3 प्लेटफ़ॉर्म अपडेट ड्राफ़्ट करें<small>संदर्भ तैयार · Confluence, Granola</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">इंजीनियरिंग सिंक, मंगलवार<small>संदर्भ तैयार · 3 फ़ॉलो-अप मिले</small></span></li>
-          </ul>
-          <div class="idx"><span><b>बैकग्राउंड संदर्भ</b> · 8 ब्रीफ़ तैयार · 12 मिनट पहले अपडेट</span><span class="connect" style="margin:0;white-space:nowrap;flex:none">अभी चलाएँ</span></div>
-          <p class="sample" style="padding:14px 0 0">सैंपल। यह कॉल्स के दौरान रुक जाता है और आपका अपना AI इस्तेमाल करता है।</p>
-        </div>
-        <div class="pane" role="img" aria-label="सैंपल “पूछें” जवाब, जो पहले से तैयार संदर्भ से शुरू होकर सेकंडों में जवाब देता है">
-          <div class="chat-me">Keystone कटओवर टास्क के बारे में और डिटेल्स दें</div>
-          <div class="fast"><span class="dot"></span>पहले से तैयार संदर्भ से 12 सेकंड में जवाब</div>
-          <div class="chat-ai"><b>पहले ही भेजा जा चुका:</b> कटओवर प्लान आज सुबह Slack पर Sam को भेजा गया [Slack DM]।<br><br><b>अब भी खुला:</b> 14 तारीख़ का रीड कटओवर CAB स्लॉट का इंतज़ार कर रहा है [Jira KEY-212], और रोलबैक रनबुक को एक आख़िरी रिव्यू चाहिए [Notion: Keystone rollback]।</div>
-          <p class="sample" style="padding:14px 0 0">सैंपल। ब्रीफ़ के बाद आई किसी भी नई चीज़ की यह फिर भी जाँच करता है।</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ask">
-    <div class="wrap">
-      <div class="head">
-        <h2>Ask, जैसे किसी साथी से पूछते हैं</h2>
-        <p>आपकी मीटिंग के बारे में किसी भी सवाल के लिए एक बड़ा बॉक्स। एक मीटिंग या सभी चुनें, फ़ाइलें जोड़ें, और हाल की बातचीत को 'हाल के' से फिर शुरू करें।</p>
-      </div>
-      <div class="askmock" role="img" aria-label="Ask की शुरुआती स्क्रीन का नमूना: अभिवादन, सवाल का बॉक्स और हाल की चैट की सूची">
-        <h3>नमस्ते एलेक्स, कुछ भी पूछें</h3>
-        <div class="am-box">
-          <div class="am-ph">इस हफ़्ते हमने क्या तय किया?</div>
-          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>सभी मीटिंग ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
-        </div>
-        <div class="am-rec">हाल के</div>
-        <ul>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>मेरी पिछली मीटिंग किस बारे में थी?</span><small>6m</small></li>
-          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>Q4 प्लानिंग कॉल के लिए फ़ॉलो-अप ईमेल</span><small>1d</small></li>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Kestrel डैशबोर्ड का ज़िम्मेदार कौन है?</span><small>2d</small></li>
-        </ul>
-      </div>
-      <p class="sample" style="padding:14px 0 0">नमूना। नाम और मीटिंग काल्पनिक हैं।</p>
-    </div>
-  </section>
-
-  <section class="block" id="canvas">
-    <div class="wrap">
-      <div class="head">
-        <h2>जवाब को कैनवस में बदलें</h2>
-        <p>जब “पूछें” आपको काम करने के लिए एक लिस्ट दे, तो “इसे कैनवस में बदलें?” पर हाँ कहें और यह आपके आर्टिफ़ैक्ट्स में एक इंटरैक्टिव पेज बन जाती है: टिक करने लायक चेकलिस्ट, फ़ोल्ड होने वाले सेक्शन, गिनती रखने वाली प्रोग्रेस, सब कुछ साथ-साथ सेव।</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="सेक्शन, चेकबॉक्स और स्टेप्स वाला सैंपल “पूछें” जवाब, जो कैनवस बनाने की पेशकश करता है">
-          <div class="chat-me">कटओवर से पहले Keystone के कौन-से टिकट अभी पूरे होने बाकी हैं?</div>
-          <div class="chat-ai"><b>4 जारी, 1 ब्लॉक्ड, 2 पर फ़ैसला बाकी।</b></div>
-          <div class="label">जारी</div>
-          <ul class="ticks"><li>इनवॉइस रीड्स को नए बिलिंग स्टैक पर ले जाएँ</li><li>पिछले साल के इनवॉइस बैकफ़िल करें</li></ul>
-          <div class="label">ब्लॉक्ड</div>
-          <ul class="ticks"><li>लोड टेस्ट स्टेजिंग रिफ़्रेश का इंतज़ार कर रहा है</li></ul>
-          <p style="font-size:13px;color:var(--text-3);margin-top:14px">इसे कैनवस में बदलें? <span class="connect" style="margin:0;margin-inline-start:6px">कैनवस बनाएँ</span></p>
-        </div>
-        <div class="pane cv" role="img" aria-label="सैंपल कैनवस: हर ग्रुप की प्रोग्रेस के साथ एक चेकलिस्ट">
-          <h3>Keystone कटओवर चेकलिस्ट</h3>
-          <div class="meta">इंजीनियरिंग सिंक से · 7 में से 3 पूरे</div>
-          <div class="grp"><div class="gh">जारी <span>4 में से 2</span></div>
-            <ul><li class="on"><i></i>इनवॉइस रीड्स को नए बिलिंग स्टैक पर ले जाएँ</li><li class="on"><i></i>पिछले साल के इनवॉइस बैकफ़िल करें</li><li><i></i>स्टेजिंग पर रोलबैक की रिहर्सल करें</li><li><i></i>ऑन-कॉल रनबुक अपडेट करें</li></ul></div>
-          <div class="grp"><div class="gh">ब्लॉक्ड <span>1 में से 1</span></div>
-            <ul><li class="on"><i></i>लोड टेस्ट स्टेजिंग रिफ़्रेश का इंतज़ार कर रहा है</li></ul></div>
-          <div class="grp shut"><div class="gh">फ़ैसला बाकी <span>2 खुले</span></div></div>
-          <p class="sample" style="padding:14px 0 0">सैंपल। कैनवस पूरी तरह अलग-थलग चलते हैं: न इंटरनेट, न बाहर से कुछ लोड होता है।</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="speed">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>सेकंडों में जवाब</h2>
-          <p>Undertone एक तेज़ मॉडल के साथ उससे जवाब देता है जो उसे पहले से पता है, और आपके टूल्स में तभी खोजता है जब वह काफ़ी न हो।</p>
-        </div>
-        <ul class="ticks sug">
-          <li>कॉल के दौरान जवाब कार्ड बैकग्राउंड ब्रीफ़ और आपकी मेमोरी से मदद लेते हैं</li>
-          <li>जब यह खोजता है, तो एक साथ कई सोर्स देखता है, कुछ न मिलने पर खोज को दूसरे शब्दों में दोहराता है, और 14 सेकंड के भीतर रुक जाता है</li>
-          <li>हर जवाब कदम-दर-कदम दिखाता है कि वह कहाँ मिला</li>
-          <li>बार-बार आने वाले विषयों और लोगों पर ब्रीफ़, हर सवाल से मिलाए गए</li>
-          <li>जब सोर्सेज़ में मतभेद हो, तो सबसे नया जीतता है</li>
-          <li>अटका हुआ जवाब आपको इंतज़ार कराने के बजाय तेज़ मॉडल को सौंप दिया जाता है</li>
-        </ul>
-      </div>
-      <div class="bars" aria-label="Undertone के अपने बेंचमार्क से मापा गया">
-        <div>
-          <h4>“पूछें”, पहले शब्दों तक का समय <small>मीडियन</small></h4>
-          <div class="bar"><span>पहले</span><i style="--w:100%"></i><b>12.7 सेकंड</b></div>
-          <div class="bar new"><span>अब</span><i style="--w:35%"></i><b>4.5 सेकंड</b></div>
-        </div>
-        <div>
-          <h4>लाइव जवाब, पूरा जवाब <small>मीडियन</small></h4>
-          <div class="bar"><span>पहले</span><i style="--w:100%"></i><b>16.5 सेकंड</b></div>
-          <div class="bar new"><span>अब</span><i style="--w:31%"></i><b>5.1 सेकंड</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="paste">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>पेस्ट करने लायक जवाब</h2>
-          <p>पूछें अब वही पहले देता है जो आपने माँगा। ड्राफ़्ट एक ही संदेश के रूप में आता है, कॉपी के लिए तैयार, और जो कमी है वह नीचे लिखा होता है।</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Slack या ईमेल के लिए एक सुझाया गया ड्राफ़्ट, अपने कॉपी बटन के साथ</li>
-          <li>छूटे लिंक और जो जाँचा नहीं जा सका, वह ड्राफ़्ट के नीचे लिखा होता है, उसके अंदर कभी नहीं</li>
-          <li>चैट में कोई भी टेक्स्ट चुनकर कॉपी या अनुवाद करें; संदेश बॉक्स में उसे अनुवाद से बदलें</li>
-          <li>पहला अनुवाद बताता है कि टेक्स्ट किस AI को जाता है</li>
-        </ul>
-      </div>
-      <div class="paste" aria-label="पूछें में एक उदाहरण जवाब">
-        <h4>सुझाया गया संदेश</h4>
-        <div class="draft">
-          <div class="bar"><b>कॉपी के लिए तैयार</b><span class="btn-copy">कॉपी करें</span></div>
-          <p translate="no">*Keystone update*
-• Billing writes moved to the new stack last week
-• The read cutover is planned for the 14th</p>
-        </div>
-        <div class="missing">कमी: कटओवर चेकलिस्ट का लिंक नहीं मिला, इसलिए वह संदेश में नहीं है।</div>
-        <div class="tpop">
-          <div class="row"><b>अनुवाद करें</b><span class="pick" translate="no">Español</span></div>
-          <p translate="no">El cambio de lectura está previsto para el día 14</p>
-          <div class="acts"><span>अनुवाद कॉपी करें</span><span class="primary">चयन बदलें</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>काम, काम की जगह</h2>
-          <p>Undertone काम की मीटिंग और निजी मीटिंग को अलग पहचानता है। निजी कैलेंडर का वेबिनार या कॉल सामान्य जानकारी से समझाया जाता है, आपके काम के टूल छुए बिना।</p>
-        </div>
-        <ul class="ticks sug">
-          <li>हर कैलेंडर को काम या निजी चिह्नित करें; कंपनी खाते काम से शुरू होते हैं</li>
-          <li>निजी मीटिंग आपके काम के टूल और मेमोरी का इस्तेमाल नहीं करतीं, और उनके सारांश amem में नहीं जाते</li>
-          <li>संकेत पैनल से किसी भी मीटिंग को काम और निजी के बीच बदलें</li>
-          <li>जिन वेबिनार को आप सिर्फ़ सुनते हैं उनमें, और Comet, Vivaldi, Opera जैसे और ब्राउज़र में अपने आप शुरू होता है</li>
-          <li>बताता है कि सवाल किससे पूछा गया: आपसे, नाम लेकर किसी और से, या सभी से</li>
-          <li>कटकर फिर जुड़ने वाली कॉल नई मीटिंग नहीं, उसी मीटिंग का हिस्सा बनती है</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="कैलेंडर सेटिंग्स का उदाहरण">
-        <h4>कैलेंडर</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">काम</i><i>निजी</i></span></div>
-        <div class="acct"><span>निजी Gmail</span><span class="seg"><i>काम</i><i class="on">निजी</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>काम</i><i class="on">निजी</i></span></div>
-        <span class="chip">निजी मीटिंग · निजी कैलेंडर पर</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="languages">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>आपकी भाषा बोलता है</h2>
-          <p>Undertone 17 भाषाओं में उपलब्ध है। यह आपके Mac की भाषा अपनाता है, और आप Settings में कोई और भाषा चुन सकते हैं।</p>
-        </div>
-        <ul class="ticks sug">
-          <li>संकेत, जवाब और सारांश आपकी भाषा में लिखे जाते हैं; मीटिंग के शब्द वैसे ही रहते हैं जैसे बोले गए</li>
-          <li>19 भाषाओं और बोलियों में से किसी में भी हुई मीटिंग आपके Mac पर ट्रांसक्राइब होती है</li>
-          <li>अपने सभी Google, iCloud और Outlook खातों में से चुनें कि कौन-से कैलेंडर इस्तेमाल हों</li>
-          <li>अरबी के लिए दाएँ-से-बाएँ लेआउट</li>
-          <li>जुड़ा होने पर "आगे" सीधे Google Calendar पढ़ता है, ताकि नाम बदली या रद्द की गई मीटिंग अटकी न रहें</li>
-        </ul>
-      </div>
-      <div class="langs" translate="no" aria-label="भाषाएँ जिनमें Undertone उपलब्ध है"><span lang="en">English</span><span lang="es">Español</span><span lang="fr">Français</span><span lang="de">Deutsch</span><span lang="it">Italiano</span><span lang="pt-BR">Português (Brasil)</span><span lang="nl">Nederlands</span><span lang="pl">Polski</span><span lang="tr">Türkçe</span><span lang="ru">Русский</span><span lang="uk">Українська</span><span lang="ar">العربية</span><span lang="hi">हिन्दी</span><span lang="ja">日本語</span><span lang="ko">한국어</span><span lang="zh-Hans">简体中文</span><span lang="zh-Hant">繁體中文</span></div>
-      <script>(function(){var l=document.documentElement.lang;document.querySelectorAll(".langs span").forEach(function(e){if(e.lang===l)e.classList.add("on")})})();</script>
-    </div>
-  </section>
-
   <section class="block" id="claude">
     <div class="wrap claude">
       <div class="head">
@@ -1361,29 +1040,7 @@
   <span class="k">"command"</span>: "/Applications/Undertone.app/Contents/MacOS/Undertone",
   <span class="k">"args"</span>: ["--mcp"]
 }</pre>
-    </div>
-  </section>
-
-  <section class="block" id="amem">
-    <div class="wrap amem">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>amem के साथ और भी बेहतर</h2>
-          <p>Undertone हमेशा आपकी मीटिंग की अपनी मेमोरी रखता है. amem जोड़ें, आपके Mac की वह मेमोरी जिसे Claude Code, Cursor और आपके दूसरे AI टूल साझा करते हैं, और Undertone दोनों में एक साथ खोजेगा. सेटअप इसे सुझाता है और आपके लिए इंस्टॉल करता है.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>आपने Claude Code या Cursor में जिस पर काम किया, वह आपकी अगली कॉल में संदर्भ बनता है</li>
-          <li>हर मीटिंग का रीकैप बाद में आपके AI टूल्स में मौजूद रहता है</li>
-          <li>आप Undertone को जो बताते हैं, वह हमेशा के लिए याद रहता है</li>
-        </ul>
-      </div>
-      <div>
-        <pre class="code" aria-label="amem इंस्टॉल करें" translate="no">npx @iamem/amem setup</pre>
-        <div class="ctas">
-          <a class="btn btn-ghost" href="https://getamem.com/">amem पाएँ</a>
-        </div>
-        <p class="note">या Undertone के सेटअप को इसे इंस्टॉल करने दें। Node.js ज़रूरी है। आपके Mac पर ही रहता है।</p>
-      </div>
+      <p class="aside"><a href="https://github.com/sslugic/amem" translate="no">amem</a> भी जोड़ें, और आपकी मीटिंग्स Claude Code, Cursor और आपके दूसरे AI टूल्स के साथ एक ही मेमोरी साझा करेंगी।</p>
     </div>
   </section>
 
@@ -1467,56 +1124,6 @@
       && !(navigator.connection && navigator.connection.saveData);
     if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
-
-  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
-  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
-  (function () {
-    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
-      var c = t.content, ctx = c.querySelector("[data-ctx]");
-      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
-        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
-    });
-    var tabs = document.querySelectorAll(".tab");
-    var panel = document.getElementById("panel");
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function select(n, focus) {
-      var d = data[n];
-      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
-      if (focus) tabs[n].focus();
-      panel.setAttribute("aria-labelledby", "tab-" + n);
-      document.getElementById("d-title").textContent = d.title;
-      document.getElementById("d-meta").textContent = d.meta;
-      document.getElementById("d-say").innerHTML = d.say;
-      var ctx = document.getElementById("d-ctx");
-      ctx.className = d.ctxClass;
-      ctx.innerHTML = d.ctx;
-      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
-    }
-    tabs.forEach(function (t, n) {
-      t.addEventListener("click", function () { select(n); });
-      t.addEventListener("keydown", function (e) {
-        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
-        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
-      });
-    });
-  })();
-</script>
-<script>
-(() => {
-  const dm = document.querySelector('.dm');
-  if (!dm) return;
-  const items = dm.querySelectorAll('.dm-steps li');
-  const show = n => { dm.dataset.step = n; items.forEach(li => li.classList.toggle('on', +li.dataset.s === n)); };
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { show(3); return; }
-  let n = 1, timer;
-  const tick = () => { n = n % 3 + 1; show(n); timer = setTimeout(tick, n === 3 ? 4200 : 2200); };
-  const io = new IntersectionObserver(([e]) => {
-    clearTimeout(timer);
-    if (e.isIntersecting) { show(n = 1); timer = setTimeout(tick, 2200); }
-  });
-  io.observe(dm);
-  items.forEach(li => li.addEventListener('click', () => { clearTimeout(timer); show(n = +li.dataset.s); timer = setTimeout(tick, 5000); }));
-})();
 </script>
 <script>
   // Use cases: one industry at a time. Arrow keys, Home and End move between tabs (roving tabindex).

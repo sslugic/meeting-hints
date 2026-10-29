@@ -286,6 +286,13 @@
   .ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--dotc, #71717A); }
   .ticks.sug { --dotc: var(--accent); }
   .ticks.you { --dotc: #D4D4D8; }
+  /* Before, after and between calls: the points under each visual, two columns on wide screens */
+  .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
+  .outcomes li { font-size: 15.5px; color: #D4D4D8; }
+  @media (max-width: 720px) { .outcomes { grid-template-columns: 1fr; } }
+  .aside { margin-top: 22px; color: var(--text-2); font-size: 15px; }
+  .aside a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border-2); text-underline-offset: 3px; }
+  .aside a:hover { text-decoration-color: var(--text); }
   .q { font-size: 15px; font-weight: 600; letter-spacing: -.01em; line-height: 1.45; margin-top: 4px; }
   .part { border-inline-start: 2px solid var(--partc); padding-inline-start: 12px; margin-top: 16px; }
   .part.sug { --partc: var(--accent); }
@@ -637,11 +644,10 @@
     <a class="brand" href="#" translate="no"><img src="../assets/icon-256.png" alt="">Undertone <span class="pill">macOS</span></a>
     <nav class="nav-links" aria-label="Hoofdmenu">
       <a href="#how">Hoe het werkt</a>
+      <a href="#before">Functies</a>
       <a href="#use-cases">Toepassingen</a>
-      <a href="#features">Functies</a>
-      <a href="#claude">AI-tools</a>
-      <a href="#pricing">Gratis bèta</a>
       <a href="#privacy">Privacy</a>
+      <a href="#pricing">Gratis bèta</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">Changelog</a>
       <details class="lang"><summary aria-label="Taal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span class="lang-cur" translate="no">NL</span><svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></summary><ul class="lang-menu" translate="no"><li><a href="../?lang=en" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a></li><li><a href="../nl/" hreflang="nl" lang="nl" data-lang="nl" aria-current="page">Nederlands</a></li><li><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li><li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li><li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li><li><a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li><li><a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li></ul></details>      <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg><span>Downloaden<span class="long"> voor macOS</span></span></a>
@@ -652,9 +658,8 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="status"><span class="dot" aria-hidden="true"></span>Live meetingintelligentie voor macOS</span>
       <h1>Begrijp wat iedereen bedoelt, en wat je moet zeggen.</h1>
-      <p class="sub">Undertone luistert mee met je gesprekken. Het legt codenamen en afkortingen uit zodra ze vallen, haalt de feiten erbij als jou iets gevraagd wordt en geeft je daarna de samenvatting, je taken en een briefing voor het volgende gesprek. Allemaal uit de Slack, Notion en Jira van je eigen team, omgezet in tekst op je Mac.</p>
+      <p class="sub">Undertone luistert mee met je gesprekken en legt codenamen en afkortingen uit zodra ze vallen, op basis van de eigen Slack, Notion en Jira van je team. Daarna liggen je samenvatting, taken en volgende briefing klaar. Omgezet in tekst op je Mac.</p>
       <div class="ctas">
         <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.18.2</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Releases en issues</a>
@@ -668,34 +673,6 @@
       </video>
     </div>
     <p class="sample hero-note">Voorbeeld. Namen, bedrijven en tickets zijn verzonnen. Zet het geluid aan voor de muziek.</p>
-  </section>
-
-  <section class="block" id="demo">
-    <div class="wrap">
-      <div class="head">
-        <h2>Drie stappen, terwijl er nog gepraat wordt</h2>
-        <p>Undertone transcribeert de call op je Mac, pikt de namen eruit die je waarschijnlijk niet kent en legt ze uit vanuit de tools van je eigen team.</p>
-      </div>
-      <div class="dm" data-step="1" aria-label="Geanimeerd voorbeeld: een vraag in een call, de termen die Undertone oppikt en de hint die het toont">
-        <ol class="dm-steps">
-          <li class="on" data-s="1"><b>Stap 1</b><span>De call wordt op je Mac getranscribeerd</span></li>
-          <li data-s="2"><b>Stap 2</b><span>Undertone ziet wat je misschien niet kent</span></li>
-          <li data-s="3"><b>Stap 3</b><span>Een hint legt het uit vanuit je bronnen</span></li>
-        </ol>
-        <div class="dm-stage">
-          <p class="dm-say"><span class="who">Priya · 10:14 · live</span>‘Wacht, hebben we <mark>Project Odin</mark> na het incident in maart van de oude <mark>V2 webhook</mark> af gehaald?’</p>
-          <div class="dm-spot" aria-hidden="true"><span>Project Odin · waarschijnlijk nieuw</span><span>V2 webhook · waarschijnlijk nieuw</span></div>
-          <div class="dm-card">
-            <h3>Project Odin <small>Uit je workspace</small></h3>
-            <ul>
-              <li>De herbouw van de notificatiepipeline. Op 2 april, na de storing in maart, van de V2 webhook af gehaald <span class="s">[Slack #eng-infra]</span></li>
-              <li>De V2 webhook is verouderd en gaat op 30 juni uit; twee interne services roepen hem nog aan <span class="s">[Jira ENG-1402]</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="sample" style="padding:14px 0 0">Voorbeeld. Namen, kanalen en tickets zijn verzonnen.</p>
-    </div>
   </section>
 
   <section class="block" id="why">
@@ -750,43 +727,115 @@
     </div>
   </section>
 
-  <section class="block" id="try">
+  <section class="block" id="before">
     <div class="wrap">
       <div class="head">
-        <h2>Probeer het met een voorbeeldmeeting</h2>
-        <p>Kies een meeting en zie wat Undertone je zou laten zien. In de app speelt Home › Probeer een voorbeeldvergadering een verzonnen stand-up af in het echte paneel, nog voor je eerste gesprek.</p>
+        <h2>Stap binnen en ken de mensen aan tafel</h2>
+        <p>Een kwartier voor een meeting schrijft Undertone een briefing voor je op basis van je eerdere meetings, taken en bronnen: wie er komt, wat nog openstaat en wat jij nog moet doen.</p>
       </div>
-      <div class="demo">
-        <div class="tabs" role="tablist" aria-label="Voorbeeldmeetings">
-          <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>Engineering-sync</b><span>Een afkorting uit het releaseproces</span></button>
-          <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>Sales-overdracht</b><span>Een contractterm</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Board-Q&amp;A</b><span>Een vraag voor jou</span></button>
+      <div class="duo">
+        <div class="pane bf" role="img" aria-label="Voorbeeldmelding en briefing voor een komende meeting">
+          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>Platform-sync over 5 min</b><span>Maya: Staff engineer, eigenaar van Keystone</span></div><time>nu</time></div>
+          <p><b>Wie:</b> Maya, Staff engineer bij Platform. Dev leidt releasemanagement. Sam is voor het eerst bij.</p>
+          <p><b>Vorige keer:</b> writes verhuisd naar de nieuwe billingstack; de read-cutover staat op de 14e <span class="s">[Jira INFRA-311]</span>.</p>
+          <p><b>Jij moet nog:</b> het cutoverplan voor Sam, deadline vrijdag.</p>
+          <p><b>Wees voorbereid op:</b> ‘Is de rollback geoefend?’ Ja, twee keer op staging <span class="s">[Notion: Keystone rollback]</span>.</p>
+          <p class="sample" style="padding:6px 0 0">Voorbeeld. Geschreven vanuit je meetings, taken en bronnen.</p>
         </div>
-        <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
-          <div class="hud-head">
-            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-            <div><div class="hud-title" id="d-title">Engineering-sync</div><div class="hud-meta" id="d-meta">10:12 · Luistert</div></div>
+        <div class="pane" role="img" aria-label="Voorbeeld van een persoonskaart met rol, werk en gedeelde geschiedenis">
+          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>Staff engineer, Platform</span></div></div>
+          <div class="pfacts">
+            <p><em>Werkt aan</em> Keystone, de migratie van de billingstack <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
+            <p><em>Met jou</em> review van het rollback-runbook <span style="color:var(--text-3)">[Notion]</span></p>
+            <p><em>Vorige keer</em> Platform-sync, dinsdag: cutover blijft op de 14e</p>
           </div>
-          <p class="say" id="d-say"><span class="who"><b>Dev</b> · 10:12</span>We mergen zodra Keystone donderdag door de <span class="term">CAB</span> is.</p>
-          <div class="ctx" id="d-ctx"><div class="ct">CAB <small>Waarschijnlijk nieuw</small></div><p>Change Advisory Board: de review op donderdag die productiewijzigingen goedkeurt.</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · Releaseproces</span></div>
-          <p class="sample">Voorbeeldscenario’s. Bedrijven, personen en cijfers zijn verzonnen.</p>
+          <div class="chips"><span>6 meetings samen</span><span>Je bent Maya 1 taak verschuldigd</span></div>
+          <p class="sample" style="padding:14px 0 0">Voorbeeld. Namen en projecten zijn verzonnen.</p>
         </div>
-        <template class="demo-data">
-          <div data-title>Engineering-sync</div><div data-meta>10:12 · Luistert</div>
-          <p data-say><span class="who"><b>Dev</b> · 10:12</span>We mergen zodra Keystone donderdag door de <span class="term">CAB</span> is.</p>
-          <div data-ctx class="ctx"><div class="ct">CAB <small>Waarschijnlijk nieuw</small></div><p>Change Advisory Board: de review op donderdag die productiewijzigingen goedkeurt.</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · Releaseproces</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>Sales-overdracht</div><div data-meta>15:40 · Luistert</div>
-          <p data-say><span class="who"><b>Priya</b> · 15:40</span>Northwind heeft de aangepaste <span class="term">DPA</span> getekend, dus de bewaartermijn is begrensd.</p>
-          <div data-ctx class="ctx"><div class="ct">DPA <small>Misschien nieuw</small></div><p>Data Processing Agreement (verwerkersovereenkomst). De versie van Northwind beperkt de bewaartermijn van data tot 30 dagen.</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #deal-northwind</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>Board-Q&amp;A</div><div data-meta>09:31 · Luistert</div>
-          <p data-say><span class="who"><b>Voorzitter</b> · 09:31 · <em>aan jou</em></span>Wat drijft de <span class="term">net revenue retention</span> dit kwartaal?</p>
-          <div data-ctx class="ctx answer"><div class="ct">Context voor jou <small>De voorzitter vroeg</small></div><p>NRR ging van 108% naar 112%, gedreven door enterprise-uitbreidingen: drie accounts namen extra seats.</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Q3-boarddeck</span></div>
-        </template>
       </div>
+      <ul class="ticks sug outcomes">
+        <li>Klik op iemand in de uitnodiging om te zien wat hun rol is, waar ze aan werken en wat er tussen jullie openstaat</li>
+        <li>Een paar snelle vragen uit de briefing checken of je er klaar voor bent</li>
+        <li>De context van de meeting wordt vlak voor de start uit je bronnen verzameld, zodat het gesprek er meteen mee begint</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="after">
+    <div class="wrap">
+      <div class="head">
+        <h2>Weet wat er nu gebeurt</h2>
+        <p>Als het gesprek afloopt, liggen de samenvatting en je taken klaar op Start, en de follow-up voor iedereen is al opgesteld.</p>
+      </div>
+      <div class="app" role="img" aria-label="Het Start-venster van Undertone met komende meetings, je taken, nieuwe termen en antwoordcoaching, met voorbeelddata">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Platformteam</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Start</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Meetings</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>Taken</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Woordenlijst</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Vragen</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Artefacten</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Goedemorgen, Alex</div>
+          <p class="date">woensdag 28 oktober · Platformteam</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">Hierna <small>Agenda</small></div>
+              <div class="row"><span class="t">10:00</span><span class="grow">Platform-sync<span class="sub2">Maya, Dev, Sam · 2 gerelateerde meetings · 1 open taak</span></span><span class="mini">Voorbereiden</span></div>
+              <div class="row"><span class="t">14:30</span><span class="grow">Northwind-verlenging<span class="sub2">Priya, Jordan · 1 gerelateerde meeting</span></span><span class="mini">Voorbereiden</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Je taken <small>2 open</small></div>
+              <div class="row"><span class="box"></span><span class="grow">Sam het Keystone-read-cutoverplan sturen<span class="sub2">Platform-sync · deadline vrijdag · <span class="hi">Hoog</span></span></span></div>
+              <div class="row"><span class="box"></span><span class="grow">CAB-slot voor donderdag bevestigen<span class="sub2">Engineering-sync</span></span></div>
+              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">Q3-NRR-cijfers delen met de voorzitter</span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Nieuwe termen <small>Woordenlijst</small></div>
+              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">De Q3-migratie naar de nieuwe billingstack, geleid door Infra.</span></span></div>
+              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">Data Processing Agreement (verwerkersovereenkomst). De versie van Northwind beperkt de bewaartermijn tot 30 dagen.</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Antwoordcoaching <small>Platform-sync</small></div>
+              <div class="row"><span class="grow">‘Kun je ons snel de status van Keystone geven?’<span class="sub2">Begin met de datum, dan het ene risico. De cutover op de 14e kwam als laatste.</span></span><span class="verdict">Oké</span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Voorbeelddata. Namen, projecten en meetings zijn verzonnen.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Alleen je eigen taken, met de datums die je hardop noemde en een herinnering op de werkdag ervoor</li>
+        <li>Een follow-upmail of Slack-bericht, klaar om te plakken. Undertone verstuurt nooit iets.</li>
+        <li>Een score voor hoe je de vragen aan jou beantwoordde en hoe je sprak</li>
+        <li>Druk op start bij een taak en Vragen stelt hem op uit de meeting, je geheugen en je bronnen</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="between">
+    <div class="wrap">
+      <div class="head">
+        <h2>Vind terug wat er gezegd is</h2>
+        <p>Vraag naar je meetings zoals je het een collega zou vragen. Antwoorden komen uit je meetings en de tools van je team, met hun bronnen.</p>
+      </div>
+      <div class="askmock" role="img" aria-label="Voorbeeld van het startscherm van Ask: een begroeting, het vraagvak en een lijst recente chats">
+        <h3>Hoi Alex, vraag maar raak</h3>
+        <div class="am-box">
+          <div class="am-ph">Wat hebben we deze week besloten?</div>
+          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>Alle vergaderingen ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
+        </div>
+        <div class="am-rec">Recent</div>
+        <ul>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Waar ging mijn laatste vergadering over?</span><small>6m</small></li>
+          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>Follow-upmail voor het Q4-planningsgesprek</span><small>1d</small></li>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Wie is eigenaar van het Kestrel-dashboard?</span><small>2d</small></li>
+        </ul>
+      </div>
+      <p class="sample" style="padding:14px 0 0">Voorbeeld. Namen en vergaderingen zijn verzonnen.</p>
+      <ul class="ticks sug outcomes">
+        <li>Vraag naar één meeting of allemaal, en ga verder met eerdere chats via Recent</li>
+        <li>Tussen gesprekken door wordt de context van je open taken alvast verzameld, zodat antwoorden snel beginnen</li>
+        <li>Maak van een lijst een canvas om af te vinken</li>
+        <li>Oefen de termen van je team met korte quizzen tot je ze kent</li>
+      </ul>
     </div>
   </section>
 
@@ -980,376 +1029,6 @@
     </div>
   </section>
 
-  <section class="block" id="features">
-    <div class="wrap">
-      <div class="head">
-        <h2>Na de call werkt het door</h2>
-        <p>Open Undertone zoals elke Mac-app en je week staat klaar: wat eraan komt, wat je nog moet doen en wat je hoorde maar niet wist.</p>
-      </div>
-
-      <div class="app" role="img" aria-label="Het Start-venster van Undertone met komende meetings, je taken, nieuwe termen en antwoordcoaching, met voorbeelddata">
-        <aside class="app-side" aria-hidden="true">
-          <div class="lights"><i></i><i></i><i></i></div>
-          <div class="space"><span><i></i>Platformteam</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
-          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Start</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Meetings</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>Taken</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Woordenlijst</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Vragen</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Artefacten</li></ul>
-        </aside>
-        <div class="app-main" aria-hidden="true">
-          <div class="hello">Goedemorgen, Alex</div>
-          <p class="date">woensdag 28 oktober · Platformteam</p>
-          <div class="cards">
-            <div class="card">
-              <div class="h4">Hierna <small>Agenda</small></div>
-              <div class="row"><span class="t">10:00</span><span class="grow">Platform-sync<span class="sub2">Maya, Dev, Sam · 2 gerelateerde meetings · 1 open taak</span></span><span class="mini">Voorbereiden</span></div>
-              <div class="row"><span class="t">14:30</span><span class="grow">Northwind-verlenging<span class="sub2">Priya, Jordan · 1 gerelateerde meeting</span></span><span class="mini">Voorbereiden</span></div>
-            </div>
-            <div class="card">
-              <div class="h4">Je taken <small>2 open</small></div>
-              <div class="row"><span class="box"></span><span class="grow">Sam het Keystone-read-cutoverplan sturen<span class="sub2">Platform-sync · deadline vrijdag · <span class="hi">Hoog</span></span></span></div>
-              <div class="row"><span class="box"></span><span class="grow">CAB-slot voor donderdag bevestigen<span class="sub2">Engineering-sync</span></span></div>
-              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">Q3-NRR-cijfers delen met de voorzitter</span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">Nieuwe termen <small>Woordenlijst</small></div>
-              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">De Q3-migratie naar de nieuwe billingstack, geleid door Infra.</span></span></div>
-              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">Data Processing Agreement (verwerkersovereenkomst). De versie van Northwind beperkt de bewaartermijn tot 30 dagen.</span></span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">Antwoordcoaching <small>Platform-sync</small></div>
-              <div class="row"><span class="grow">‘Kun je ons snel de status van Keystone geven?’<span class="sub2">Begin met de datum, dan het ene risico. De cutover op de 14e kwam als laatste.</span></span><span class="verdict">Oké</span></div>
-            </div>
-          </div>
-          <p class="sample" style="padding:14px 0 0">Voorbeelddata. Namen, projecten en meetings zijn verzonnen.</p>
-        </div>
-      </div>
-
-      <dl class="features">
-        <div><dt>Start</dt><dd>De meetings van vandaag uit de Agenda van je Mac, je open taken, nieuwe termen en hoe je antwoorden gingen. Vóór elke meeting krijg je een briefing.</dd></div>
-        <div><dt>Taken</dt><dd>Na elke call alleen jouw werk: wat je beloofde, wat je gevraagd werd en vragen om op terug te komen. Verplaats ze door Te doen, Bezig, In review en Klaar.</dd></div>
-        <div><dt>Woordenlijst</dt><dd>Elke term uit elke meeting, met wat hij bij jouw bedrijf betekent. Markeer met één klik wat je al kent; Meer doorzoekt je bronnen naar de mensen en links erachter.</dd></div>
-        <div><dt>Voorbereiden</dt><dd>Controleer voor een meeting met een paar vragen uit de briefing of je er klaar voor bent. Oefen tussendoor je termen: meerkeuze, of leg ze uit in je eigen woorden en je AI geeft een score voor hoe goed het klopt. Het houdt je geschiedenis bij en schrijft een studiegids over wat je steeds mist.</dd></div>
-        <div><dt>Ruimtes</dt><dd>Houd teams en klanten gescheiden. Nieuwe meetings worden voor je ingedeeld, voor de rest stelt Undertone een ruimte voor, en elke weergave filtert op de ruimte die je kiest.</dd></div>
-        <div><dt>Antwoordcoaching</dt><dd>Ook jouw kant van de call wordt getranscribeerd, zodat je na een call ziet wat overkwam en wat je de volgende keer strakker kunt doen.</dd></div>
-        <div><dt>Artefacten</dt><dd>Statusrapporten, presentaties en interactieve canvassen, geschreven vanuit je meetings en bronnen, met gaten gemarkeerd als [TBD]. Exporteren naar Markdown of HTML.</dd></div>
-        <div><dt>Vragen</dt><dd>Chat met één vergadering of met alle, met bijlagen. Antwoorden verschijnen live, eerdere chats wachten in Recent, en wat je vertelt wordt onthouden voor de volgende keer.</dd></div>
-        <div><dt>Vragen tijdens de call</dt><dd>Een chatveld onder de live hints antwoordt op basis van de call tot nu toe, zonder dat je de meeting verlaat.</dd></div>
-        <div><dt>Mensen</dt><dd>Iedereen uit je uitnodigingen met hun rol en waar ze aan werken, je meetings samen en wat je ze nog verschuldigd bent.</dd></div>
-        <div><dt>Herinneringen</dt><dd>‘Uiterlijk vrijdag’ wordt een datum. Een herinnering komt om 9:00 op de werkdag ervoor, en verlopen taken worden rood.</dd></div>
-        <div><dt>Woordenlijstgids</dt><dd>Maak van de woordenlijst van een team een deelbare gids voor nieuwe collega’s, klaar om te exporteren als HTML of Markdown.</dd></div>
-        <div><dt>Corrigeren en vertalen</dt><dd>Klik met de rechtermuisknop op een verkeerd verstaan woord en Undertone verbetert het en let er de volgende keer op. Vertaal elke passage in 19 talen.</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="block" id="around">
-    <div class="wrap">
-      <div class="head">
-        <h2>Vóór de call, en erna</h2>
-        <p>Een kwartier voor een meeting schrijft Undertone een briefing voor je en tikt je vijf minuten van tevoren op de schouder, en het verzamelt de context van de meeting uit je bronnen zodat de call daarmee begint. Als de meeting klaar is, staat de follow-up voor iedereen al klaar om in e-mail of Slack te plakken.</p>
-      </div>
-      <div class="duo">
-        <div class="pane bf" role="img" aria-label="Voorbeeldmelding en briefing voor een komende meeting">
-          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>Platform-sync over 5 min</b><span>Maya: Staff engineer, eigenaar van Keystone</span></div><time>nu</time></div>
-          <p><b>Wie:</b> Maya, Staff engineer bij Platform. Dev leidt releasemanagement. Sam is voor het eerst bij.</p>
-          <p><b>Vorige keer:</b> writes verhuisd naar de nieuwe billingstack; de read-cutover staat op de 14e <span class="s">[Jira INFRA-311]</span>.</p>
-          <p><b>Jij moet nog:</b> het cutoverplan voor Sam, deadline vrijdag.</p>
-          <p><b>Wees voorbereid op:</b> ‘Is de rollback geoefend?’ Ja, twee keer op staging <span class="s">[Notion: Keystone rollback]</span>.</p>
-          <p class="sample" style="padding:6px 0 0">Voorbeeld. Geschreven vanuit je meetings, taken en bronnen.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Voorbeeld-follow-up, opgesteld na de meeting">
-          <div class="fu-top"><div class="label" style="margin:0">Follow-up</div><span class="segs"><i>E-mail</i><i class="on">Slack</i></span></div>
-          <div class="fu">Bedankt allemaal, korte samenvatting van de Platform-sync van vandaag:<ul><li>Read-cutover blijft op de 14e</li><li>Dev boekt het CAB-slot voor donderdag</li><li>Ik stuur Sam uiterlijk vrijdag het cutoverplan</li></ul><br>Open: hebben we vóór de 14e een tweede loadtest nodig?</div>
-          <p style="font-size:13px;color:var(--text-3);margin-top:12px">Bewerk het, kopieer het, verstuur het zelf. <span class="connect" style="margin:0;margin-inline-start:6px">Kopieer</span></p>
-          <p class="sample" style="padding:10px 0 0">Voorbeeld. Undertone verstuurt nooit iets.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="people">
-    <div class="wrap">
-      <div class="head">
-        <h2>Weet wie er aan tafel zit</h2>
-        <p>Namen zijn ook jargon. Klik op iemand in een meeting voor hun rol, waar ze aan werken, je meetings samen en wat je ze nog verschuldigd bent, opgezocht in je eigen bronnen.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Voorbeeld van een persoonskaart met rol, werk en gedeelde geschiedenis">
-          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>Staff engineer, Platform</span></div></div>
-          <div class="pfacts">
-            <p><em>Werkt aan</em> Keystone, de migratie van de billingstack <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
-            <p><em>Met jou</em> review van het rollback-runbook <span style="color:var(--text-3)">[Notion]</span></p>
-            <p><em>Vorige keer</em> Platform-sync, dinsdag: cutover blijft op de 14e</p>
-          </div>
-          <div class="chips"><span>6 meetings samen</span><span>Je bent Maya 1 taak verschuldigd</span></div>
-          <p class="sample" style="padding:14px 0 0">Voorbeeld. Namen en projecten zijn verzonnen.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Voorbeeld van een takenlijst met deadlines en een herinnering">
-          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>Deadline vrijdag: Sam het cutoverplan sturen</b><span>Dit zei je toe in de Platform-sync.</span></div><time>9:00</time></div>
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">Sam het Keystone-cutoverplan sturen<small>vr 30 okt · gezegd: ‘uiterlijk vrijdag’</small></span></li>
-            <li><span class="st"></span><span class="grow">Q3-NRR-cijfers delen met de voorzitter<small>Volgende week · Board-Q&amp;A</small></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">Voorbeeld. Deadlines die je hardop noemt worden datums, met een herinnering op de werkdag ervoor.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="coaching">
-    <div class="wrap">
-      <div class="head">
-        <h2>Weet hoe je overkwam</h2>
-        <p>Na elke call één score voor hoe je de vragen aan jou beantwoordde, en hoe je sprak: spreektijd, tempo en stopwoorden. Bij sollicitatiegesprekken eerlijke feedback om je op de volgende ronde voor te bereiden.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Voorbeeld van een sollicitatiescore: 78 van 100, gaat waarschijnlijk door, met verbeterpunten">
-          <div class="score-top">
-            <div class="ring" aria-hidden="true"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="31" fill="none" stroke="rgba(129,140,248,.18)" stroke-width="7"/><circle cx="36" cy="36" r="31" fill="none" stroke="#818CF8" stroke-width="7" stroke-linecap="round" stroke-dasharray="151.9 194.8"/></svg><b>78<small>/100</small></b></div>
-            <div><div class="sc-title">Sollicitatiescore</div><span class="tag">Gaat waarschijnlijk door</span></div>
-          </div>
-          <p>Heldere, concrete verhalen over leidinggeven in tijden van verandering. Het architectuurantwoord bleef algemeen waar ze afwegingen wilden horen.</p>
-          <div class="label">Verbeterpunten</div>
-          <ul class="ticks"><li>Begin met de beslissing, dan de context</li><li>Noem één afweging die je zou maken, en waarom</li></ul>
-          <p class="sample" style="padding:14px 0 0">Voorbeeld. Meetings die geen sollicitatiegesprek zijn, krijgen een meetingscore: uitstekend, goed, kan beter of zwak.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Voorbeeldvraag met de context die je had naast wat je zei">
-          <div class="label" style="margin-top:0">Je kreeg de vraag</div>
-          <div class="q">‘Vertel over een moment waarop je moest beslissen zonder alle informatie.’</div>
-          <div class="part sug">
-            <div class="label">Context die je had</div>
-            <div class="lead">Uit je notities: de v1-lancering die twee weken naar voren werd gehaald</div>
-            <ul class="ticks sug"><li>Wat toen ontbrak: twee weken speelruimte</li><li>Beslissing: v1 zonder export uitbrengen</li><li>Resultaat: op tijd, export een maand later</li></ul>
-          </div>
-          <div class="part you">
-            <div class="label">Wat je zei</div>
-            <ul class="ticks you"><li>We zijn met het team toen overgestapt op dagelijkse releases.</li><li>Ik vond de knelpunten en zette door.</li></ul>
-          </div>
-          <p class="sample" style="padding:14px 0 0">Voorbeeld. Jouw kant komt van je microfoon, op je Mac.</p>
-        </div>
-      </div>
-      <div class="metrics" role="img" aria-label="Voorbeeld van spreekstatistieken: aandeel in het gesprek, tempo, stopwoorden, langste stuk en gestelde vragen">
-        <div><b>41%</b><span>van het gesprek</span></div>
-        <div><b>152</b><span>woorden per minuut</span></div>
-        <div><b>2.1</b><span>stopwoorden per minuut</span></div>
-        <div><b>1:48</b><span>langste stuk</span></div>
-        <div><b>4</b><span>gestelde vragen</span></div>
-      </div>
-      <p class="sample" style="padding:12px 0 0">Voorbeeld. Hoe je sprak wordt op je Mac gemeten aan jouw kant van de call.</p>
-    </div>
-  </section>
-
-  <section class="block" id="tasks">
-    <div class="wrap">
-      <div class="head">
-        <h2>Druk op start, en het werk begint</h2>
-        <p>Elke taak uit je meetings heeft een startknop. Vragen pakt hem op met de meeting, je geheugen en je bronnen, stelt het resultaat op en vraagt alleen wat het niet kan vinden.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Voorbeeld van een takenlijst met de statussen Te doen, Bezig en In review, en startknoppen">
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">Sam het Keystone-cutoverplan sturen<small>Bezig · deadline vrijdag</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st rev"></span><span class="grow">Q3-platformupdate opstellen<small>In review</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st"></span><span class="grow">CAB-slot voor donderdag bevestigen<small>Te doen · Engineering-sync</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">Voorbeeld. Afgeronde taken gaan naar Voltooid, klaar om te heropenen.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Voorbeeldchat in Vragen die aan een taak werkt en vraagt om Notion te koppelen">
-          <div class="chat-me">Begin aan ‘Sam het Keystone-cutoverplan sturen’</div>
-          <div class="chat-ai"><b>Concept voor Sam:</b> Writes zijn vorige week naar de nieuwe billingstack verhuisd; de read-cutover staat gepland voor de 14e, met de rollback geoefend op staging<span class="caret" aria-hidden="true"></span><br><br>Het rollback-runbook staat in Notion, dat nog niet gekoppeld is.</div>
-          <span class="connect"><img src="../assets/logos/notion.png" alt="" width="14" height="14">Notion koppelen</span>
-          <p class="sample" style="padding:14px 0 0">Voorbeeld. Antwoorden verschijnen terwijl ze geschreven worden.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ready">
-    <div class="wrap">
-      <div class="head">
-        <h2>Context die klaarstaat voordat je het vraagt</h2>
-        <p>Elk uur, tussen calls door, leest Undertone zich in op je open taken en recente meetings in je gekoppelde bronnen en houdt een korte briefing met bronnen bij. Druk je op start of vraag je om details, dan begint het antwoord bij wat het al weet in plaats van bij minutenlang zoeken.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Voorbeeld van een takenlijst waarin elke taak een context-klaar-markering toont, met de status van achtergrondcontext">
-          <ul class="board">
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Sam het Keystone-cutoverplan sturen<small>Context klaar · Slack, Jira, Notion</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Q3-platformupdate opstellen<small>Context klaar · Confluence, Granola</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Engineering-sync, dinsdag<small>Context klaar · 3 follow-ups gevonden</small></span></li>
-          </ul>
-          <div class="idx"><span><b>Achtergrondcontext</b> · 8 briefings klaar · 12 min geleden bijgewerkt</span><span class="connect" style="margin:0;white-space:nowrap;flex:none">Nu uitvoeren</span></div>
-          <p class="sample" style="padding:14px 0 0">Voorbeeld. Pauzeert tijdens calls en gebruikt je eigen AI.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Voorbeeldantwoord in Vragen dat vanuit voorbereide context begint en binnen seconden antwoordt">
-          <div class="chat-me">Geef me meer details over de Keystone-cutovertaak</div>
-          <div class="fast"><span class="dot"></span>Binnen 12 seconden beantwoord vanuit voorbereide context</div>
-          <div class="chat-ai"><b>Al verstuurd:</b> het cutoverplan ging vanochtend via Slack naar Sam [Slack DM].<br><br><b>Nog open:</b> de read-cutover op de 14e wacht op het CAB-slot [Jira KEY-212], en het rollback-runbook heeft nog een laatste review nodig [Notion: Keystone rollback].</div>
-          <p class="sample" style="padding:14px 0 0">Voorbeeld. Het checkt nog steeds of er iets nieuwers is sinds de briefing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ask">
-    <div class="wrap">
-      <div class="head">
-        <h2>Ask, zoals je het een collega zou vragen</h2>
-        <p>Eén ruim vak voor elke vraag over je vergaderingen. Kies één vergadering of alle, voeg bestanden toe en ga verder met eerdere gesprekken via Recent.</p>
-      </div>
-      <div class="askmock" role="img" aria-label="Voorbeeld van het startscherm van Ask: een begroeting, het vraagvak en een lijst recente chats">
-        <h3>Hoi Alex, vraag maar raak</h3>
-        <div class="am-box">
-          <div class="am-ph">Wat hebben we deze week besloten?</div>
-          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>Alle vergaderingen ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
-        </div>
-        <div class="am-rec">Recent</div>
-        <ul>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Waar ging mijn laatste vergadering over?</span><small>6m</small></li>
-          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>Follow-upmail voor het Q4-planningsgesprek</span><small>1d</small></li>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Wie is eigenaar van het Kestrel-dashboard?</span><small>2d</small></li>
-        </ul>
-      </div>
-      <p class="sample" style="padding:14px 0 0">Voorbeeld. Namen en vergaderingen zijn verzonnen.</p>
-    </div>
-  </section>
-
-  <section class="block" id="canvas">
-    <div class="wrap">
-      <div class="head">
-        <h2>Maak van een antwoord een canvas</h2>
-        <p>Geeft Vragen je een lijst om af te werken, zeg dan ja op ‘Hier een canvas van maken?’ en het wordt een interactieve pagina in je Artefacten: checklists om af te vinken, secties die inklappen, voortgang die bijhoudt, gaandeweg opgeslagen.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Voorbeeldantwoord in Vragen met secties, selectievakjes en stappen, dat aanbiedt er een canvas van te maken">
-          <div class="chat-me">Welke Keystone-tickets moeten nog landen vóór de cutover?</div>
-          <div class="chat-ai"><b>4 bezig, 1 geblokkeerd, 2 nog te beslissen.</b></div>
-          <div class="label">Bezig</div>
-          <ul class="ticks"><li>Invoice-reads naar de nieuwe billingstack verhuizen</li><li>Facturen van vorig jaar backfillen</li></ul>
-          <div class="label">Geblokkeerd</div>
-          <ul class="ticks"><li>Loadtest wacht op de stagingverversing</li></ul>
-          <p style="font-size:13px;color:var(--text-3);margin-top:14px">Hier een canvas van maken? <span class="connect" style="margin:0;margin-inline-start:6px">Canvas maken</span></p>
-        </div>
-        <div class="pane cv" role="img" aria-label="Voorbeeldcanvas: een checklist met voortgang per groep">
-          <h3>Checklist Keystone-cutover</h3>
-          <div class="meta">Uit de Engineering-sync · 3 van 7 klaar</div>
-          <div class="grp"><div class="gh">Bezig <span>2 van 4</span></div>
-            <ul><li class="on"><i></i>Invoice-reads naar de nieuwe billingstack verhuizen</li><li class="on"><i></i>Facturen van vorig jaar backfillen</li><li><i></i>Rollback oefenen op staging</li><li><i></i>Het on-call-runbook bijwerken</li></ul></div>
-          <div class="grp"><div class="gh">Geblokkeerd <span>1 van 1</span></div>
-            <ul><li class="on"><i></i>Loadtest wacht op de stagingverversing</li></ul></div>
-          <div class="grp shut"><div class="gh">Nog te beslissen <span>2 open</span></div></div>
-          <p class="sample" style="padding:14px 0 0">Voorbeeld. Canvassen draaien afgeschermd: geen internet, niets van buitenaf geladen.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="speed">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Antwoorden in seconden</h2>
-          <p>Undertone antwoordt met een snel model vanuit wat het al weet, en doorzoekt je tools alleen als dat niet genoeg is.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Antwoordkaarten tijdens een call putten uit achtergrondbriefings en je geheugen</li>
-          <li>Als het wel zoekt, doorzoekt het meerdere bronnen tegelijk, herformuleert het een zoekopdracht zonder resultaat en stopt het binnen 14 seconden</li>
-          <li>Elk antwoord laat stap voor stap zien waar het gevonden is</li>
-          <li>Briefings over de onderwerpen en mensen die steeds terugkomen, gekoppeld aan elke vraag</li>
-          <li>Spreken bronnen elkaar tegen, dan wint de nieuwste</li>
-          <li>Een vastgelopen antwoord wordt overgenomen door het snelle model, in plaats van dat je moet wachten</li>
-        </ul>
-      </div>
-      <div class="bars" aria-label="Gemeten met Undertones eigen benchmark">
-        <div>
-          <h4>Vragen, tijd tot eerste woorden <small>mediaan</small></h4>
-          <div class="bar"><span>Eerst</span><i style="--w:100%"></i><b>12,7 s</b></div>
-          <div class="bar new"><span>Nu</span><i style="--w:35%"></i><b>4,5 s</b></div>
-        </div>
-        <div>
-          <h4>Live antwoorden, volledig antwoord <small>mediaan</small></h4>
-          <div class="bar"><span>Eerst</span><i style="--w:100%"></i><b>16,5 s</b></div>
-          <div class="bar new"><span>Nu</span><i style="--w:31%"></i><b>5,1 s</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="paste">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Antwoorden om te plakken</h2>
-          <p>Vragen begint met wat je vroeg. Een concept komt als één bericht, klaar om te kopiëren, met wat ontbreekt eronder.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Eén aanbevolen concept voor Slack of e-mail, met een eigen Kopieer-knop</li>
-          <li>Ontbrekende links en wat niet geverifieerd is staan onder het concept, nooit erin</li>
-          <li>Selecteer tekst in de chat om die te kopiëren of te vertalen; in het berichtveld vervang je hem door de vertaling</li>
-          <li>De eerste vertaling vertelt je naar welke AI de tekst gaat</li>
-        </ul>
-      </div>
-      <div class="paste" aria-label="Voorbeeldantwoord in Vragen">
-        <h4>Aanbevolen bericht</h4>
-        <div class="draft">
-          <div class="bar"><b>Klaar om te kopiëren</b><span class="btn-copy">Kopieer</span></div>
-          <p translate="no">*Keystone update*
-• Billing writes moved to the new stack last week
-• The read cutover is planned for the 14th</p>
-        </div>
-        <div class="missing">Ontbreekt: de link naar de checklist voor de overstap is niet gevonden, dus die staat niet in het bericht.</div>
-        <div class="tpop">
-          <div class="row"><b>Vertaal</b><span class="pick" translate="no">Español</span></div>
-          <p translate="no">El cambio de lectura está previsto para el día 14</p>
-          <div class="acts"><span>Vertaling kopiëren</span><span class="primary">Selectie vervangen</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Werk blijft werk</h2>
-          <p>Undertone houdt werkvergaderingen en persoonlijke uit elkaar. Een webinar of een gesprek uit je persoonlijke agenda wordt met algemene kennis uitgelegd, zonder je werktools aan te raken.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Markeer elke agenda als Werk of Persoonlijk; bedrijfsaccounts beginnen als Werk</li>
-          <li>Persoonlijke vergaderingen gebruiken je werktools en geheugen niet, en hun samenvattingen blijven buiten amem</li>
-          <li>Zet elke vergadering in het hintpaneel om tussen Werk en Persoonlijk</li>
-          <li>Start vanzelf bij webinars waar je alleen naar luistert, en in meer browsers zoals Comet, Vivaldi en Opera</li>
-          <li>Laat zien voor wie een vraag was: jij, iemand anders bij naam of de hele zaal</li>
-          <li>Een gesprek dat wegvalt en terugkomt gaat verder in dezelfde vergadering in plaats van een nieuwe</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="Voorbeeld van agenda-instellingen">
-        <h4>Agenda’s</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Werk</i><i>Persoonlijk</i></span></div>
-        <div class="acct"><span>Persoonlijke Gmail</span><span class="seg"><i>Werk</i><i class="on">Persoonlijk</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Werk</i><i class="on">Persoonlijk</i></span></div>
-        <span class="chip">Persoonlijke vergadering · in een persoonlijke agenda</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="languages">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Spreekt jouw taal</h2>
-          <p>Undertone is er in 17 talen. Het volgt de taal van je Mac, en in Instellingen kun je een andere kiezen.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Hints, antwoorden en samenvattingen worden in jouw taal geschreven; termen uit de vergadering blijven zoals ze gezegd zijn</li>
-          <li>Vergaderingen in een van 19 talen en varianten worden op je Mac getranscribeerd</li>
-          <li>Kies welke agenda’s je gebruikt, over al je Google-, iCloud- en Outlook-accounts</li>
-          <li>Rechts-naar-links-weergave voor Arabisch</li>
-          <li>“Hierna” leest Google Agenda direct als die gekoppeld is, zodat hernoemde of geannuleerde vergaderingen niet blijven hangen</li>
-        </ul>
-      </div>
-      <div class="langs" translate="no" aria-label="Talen waarin Undertone beschikbaar is"><span lang="en">English</span><span lang="es">Español</span><span lang="fr">Français</span><span lang="de">Deutsch</span><span lang="it">Italiano</span><span lang="pt-BR">Português (Brasil)</span><span lang="nl">Nederlands</span><span lang="pl">Polski</span><span lang="tr">Türkçe</span><span lang="ru">Русский</span><span lang="uk">Українська</span><span lang="ar">العربية</span><span lang="hi">हिन्दी</span><span lang="ja">日本語</span><span lang="ko">한국어</span><span lang="zh-Hans">简体中文</span><span lang="zh-Hant">繁體中文</span></div>
-      <script>(function(){var l=document.documentElement.lang;document.querySelectorAll(".langs span").forEach(function(e){if(e.lang===l)e.classList.add("on")})})();</script>
-    </div>
-  </section>
-
   <section class="block" id="claude">
     <div class="wrap claude">
       <div class="head">
@@ -1361,29 +1040,7 @@
   <span class="k">"command"</span>: "/Applications/Undertone.app/Contents/MacOS/Undertone",
   <span class="k">"args"</span>: ["--mcp"]
 }</pre>
-    </div>
-  </section>
-
-  <section class="block" id="amem">
-    <div class="wrap amem">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Nog beter met amem</h2>
-          <p>Undertone houdt altijd een eigen geheugen van je vergaderingen bij. Voeg amem toe, het geheugen op je Mac dat Claude Code, Cursor en je andere AI-tools delen, en Undertone doorzoekt ze allebei samen. De installatie biedt het aan en installeert het voor je.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Waar je met Claude Code of Cursor aan werkte, is context in je volgende call</li>
-          <li>Elke meetingsamenvatting staat daarna in je AI-tools</li>
-          <li>Wat je Undertone vertelt, wordt voorgoed onthouden</li>
-        </ul>
-      </div>
-      <div>
-        <pre class="code" aria-label="amem installeren" translate="no">npx @iamem/amem setup</pre>
-        <div class="ctas">
-          <a class="btn btn-ghost" href="https://getamem.com/">amem downloaden</a>
-        </div>
-        <p class="note">Of laat de installatie van Undertone het doen. Vereist Node.js. Blijft op je Mac.</p>
-      </div>
+      <p class="aside">Voeg ook <a href="https://github.com/sslugic/amem" translate="no">amem</a> toe, en je meetings delen één geheugen met Claude Code, Cursor en je andere AI-tools.</p>
     </div>
   </section>
 
@@ -1467,56 +1124,6 @@
       && !(navigator.connection && navigator.connection.saveData);
     if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
-
-  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
-  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
-  (function () {
-    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
-      var c = t.content, ctx = c.querySelector("[data-ctx]");
-      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
-        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
-    });
-    var tabs = document.querySelectorAll(".tab");
-    var panel = document.getElementById("panel");
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function select(n, focus) {
-      var d = data[n];
-      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
-      if (focus) tabs[n].focus();
-      panel.setAttribute("aria-labelledby", "tab-" + n);
-      document.getElementById("d-title").textContent = d.title;
-      document.getElementById("d-meta").textContent = d.meta;
-      document.getElementById("d-say").innerHTML = d.say;
-      var ctx = document.getElementById("d-ctx");
-      ctx.className = d.ctxClass;
-      ctx.innerHTML = d.ctx;
-      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
-    }
-    tabs.forEach(function (t, n) {
-      t.addEventListener("click", function () { select(n); });
-      t.addEventListener("keydown", function (e) {
-        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
-        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
-      });
-    });
-  })();
-</script>
-<script>
-(() => {
-  const dm = document.querySelector('.dm');
-  if (!dm) return;
-  const items = dm.querySelectorAll('.dm-steps li');
-  const show = n => { dm.dataset.step = n; items.forEach(li => li.classList.toggle('on', +li.dataset.s === n)); };
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { show(3); return; }
-  let n = 1, timer;
-  const tick = () => { n = n % 3 + 1; show(n); timer = setTimeout(tick, n === 3 ? 4200 : 2200); };
-  const io = new IntersectionObserver(([e]) => {
-    clearTimeout(timer);
-    if (e.isIntersecting) { show(n = 1); timer = setTimeout(tick, 2200); }
-  });
-  io.observe(dm);
-  items.forEach(li => li.addEventListener('click', () => { clearTimeout(timer); show(n = +li.dataset.s); timer = setTimeout(tick, 5000); }));
-})();
 </script>
 <script>
   // Use cases: one industry at a time. Arrow keys, Home and End move between tabs (roving tabindex).

@@ -286,6 +286,13 @@
   .ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--dotc, #71717A); }
   .ticks.sug { --dotc: var(--accent); }
   .ticks.you { --dotc: #D4D4D8; }
+  /* Before, after and between calls: the points under each visual, two columns on wide screens */
+  .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
+  .outcomes li { font-size: 15.5px; color: #D4D4D8; }
+  @media (max-width: 720px) { .outcomes { grid-template-columns: 1fr; } }
+  .aside { margin-top: 22px; color: var(--text-2); font-size: 15px; }
+  .aside a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border-2); text-underline-offset: 3px; }
+  .aside a:hover { text-decoration-color: var(--text); }
   .q { font-size: 15px; font-weight: 600; letter-spacing: -.01em; line-height: 1.45; margin-top: 4px; }
   .part { border-inline-start: 2px solid var(--partc); padding-inline-start: 12px; margin-top: 16px; }
   .part.sug { --partc: var(--accent); }
@@ -637,11 +644,10 @@
     <a class="brand" href="#" translate="no"><img src="../assets/icon-256.png" alt="">Undertone <span class="pill">macOS</span></a>
     <nav class="nav-links" aria-label="主要導覽">
       <a href="#how">運作方式</a>
+      <a href="#before">功能</a>
       <a href="#use-cases">使用情境</a>
-      <a href="#features">功能</a>
-      <a href="#claude">AI 工具</a>
-      <a href="#pricing">免費測試版</a>
       <a href="#privacy">隱私權</a>
+      <a href="#pricing">免費測試版</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">更新紀錄</a>
       <details class="lang"><summary aria-label="語言"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span class="lang-cur" translate="no">繁體</span><svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></summary><ul class="lang-menu" translate="no"><li><a href="../?lang=en" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a></li><li><a href="../nl/" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li><li><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li><li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li><li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li><li><a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li><li><a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant" aria-current="page">繁體中文</a></li></ul></details>      <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg><span>下載<span class="long">macOS 版</span></span></a>
@@ -652,9 +658,8 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="status"><span class="dot" aria-hidden="true"></span>macOS 即時會議助理</span>
       <h1>聽懂每個人的意思，也知道接下來該說什麼。</h1>
-      <p class="sub">Undertone 會陪你一起聽通話。代號和縮寫一出現就為你解釋，有人問你問題時把相關事實擺在眼前，通話結束後再交給你摘要、你的任務和下一場通話的簡報。一切都來自你團隊自己的 Slack、Notion 和 Jira，在你的 Mac 上轉寫。</p>
+      <p class="sub">Undertone 會陪你一起聽通話，代號和縮寫一出現就為你解釋，依據的是你團隊自己的 Slack、Notion 和 Jira。通話結束後，摘要、任務和下一份簡報都已備妥。在你的 Mac 上轉寫。</p>
       <div class="ctas">
         <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>下載 .dmg <span class="ver">v1.18.2</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>版本發布與問題回報</a>
@@ -668,34 +673,6 @@
       </video>
     </div>
     <p class="sample hero-note">範例。姓名、公司與工單皆為虛構。取消靜音即可聽到音樂。</p>
-  </section>
-
-  <section class="block" id="demo">
-    <div class="wrap">
-      <div class="head">
-        <h2>三個步驟，在話還沒說完時完成</h2>
-        <p>Undertone 在你的 Mac 上轉寫通話，挑出你可能不認識的名稱，再根據你團隊自己的工具加以解釋。</p>
-      </div>
-      <div class="dm" data-step="1" aria-label="動畫範例：通話中的一個問題、Undertone 找出的術語，以及它顯示的提示">
-        <ol class="dm-steps">
-          <li class="on" data-s="1"><b>步驟 1</b><span>通話在你的 Mac 上轉寫</span></li>
-          <li data-s="2"><b>步驟 2</b><span>Undertone 找出你可能不懂的內容</span></li>
-          <li data-s="3"><b>步驟 3</b><span>提示根據你的資料來源加以解釋</span></li>
-        </ol>
-        <div class="dm-stage">
-          <p class="dm-say"><span class="who">Priya · 10:14 · 即時</span>「等等，三月那次事故之後，我們有把 <mark>Project Odin</mark> 從舊的 <mark>V2 webhook</mark> 遷走嗎？」</p>
-          <div class="dm-spot" aria-hidden="true"><span>Project Odin · 可能是新詞</span><span>V2 webhook · 可能是新詞</span></div>
-          <div class="dm-card">
-            <h3>Project Odin <small>來自你的工作區</small></h3>
-            <ul>
-              <li>通知管線的重寫專案。三月故障後，已在 4 月 2 日遷離 V2 webhook <span class="s">[Slack #eng-infra]</span></li>
-              <li>V2 webhook 已淘汰，將於 6 月 30 日關閉；目前仍有兩個內部服務在呼叫它 <span class="s">[Jira ENG-1402]</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="sample" style="padding:14px 0 0">範例。人名、頻道和工單皆為虛構。</p>
-    </div>
   </section>
 
   <section class="block" id="why">
@@ -750,43 +727,115 @@
     </div>
   </section>
 
-  <section class="block" id="try">
+  <section class="block" id="before">
     <div class="wrap">
       <div class="head">
-        <h2>用範例會議試試看</h2>
-        <p>選一場會議，看看 Undertone 會為你顯示什麼。在 App 中，「首頁 › 試用範例會議」會在你第一次通話前，用真實面板播放一段虛構的站立會議。</p>
+        <h2>進門前就了解在場的人</h2>
+        <p>會議開始前十五分鐘，Undertone 會根據你過去的會議、任務和資料來源為你寫一份簡報：誰會來、哪些事還懸而未決、你欠著什麼。</p>
       </div>
-      <div class="demo">
-        <div class="tabs" role="tablist" aria-label="範例會議">
-          <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>工程同步會議</b><span>一個發布流程縮寫</span></button>
-          <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>業務交接</b><span>一個合約術語</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>董事會問答</b><span>問你的問題</span></button>
+      <div class="duo">
+        <div class="pane bf" role="img" aria-label="即將開始的會議的範例通知和會前簡報">
+          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>平台同步會議將在 5 分鐘後開始</b><span>Maya：資深工程師，負責 Keystone</span></div><time>現在</time></div>
+          <p><b>與會者：</b>Maya，平台團隊資深工程師。Dev 負責版本發布管理。Sam 第一次參加。</p>
+          <p><b>上次：</b>寫入已遷移到新計費系統；讀取切換訂在 14 日 <span class="s">[Jira INFRA-311]</span>。</p>
+          <p><b>你欠的：</b>給 Sam 的切換計畫，週五到期。</p>
+          <p><b>準備好回答：</b>「回滾演練過了嗎？」演練過，在預備環境演練了兩次 <span class="s">[Notion: Keystone rollback]</span>。</p>
+          <p class="sample" style="padding:6px 0 0">範例。根據你的會議、任務和資料來源撰寫。</p>
         </div>
-        <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
-          <div class="hud-head">
-            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-            <div><div class="hud-title" id="d-title">工程同步會議</div><div class="hud-meta" id="d-meta">10:12 · 正在聆聽</div></div>
+        <div class="pane" role="img" aria-label="範例人物卡片，包含角色、工作和共同歷程">
+          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>資深工程師，平台團隊</span></div></div>
+          <div class="pfacts">
+            <p><em>負責</em> Keystone，也就是計費系統遷移 <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
+            <p><em>與你一起</em>審閱回滾操作手冊 <span style="color:var(--text-3)">[Notion]</span></p>
+            <p><em>上次</em>平台同步會議，週二：切換仍訂在 14 日</p>
           </div>
-          <p class="say" id="d-say"><span class="who"><b>Dev</b> · 10:12</span>等 Keystone 週四通過 <span class="term">CAB</span> 後我們就合併。</p>
-          <div class="ctx" id="d-ctx"><div class="ct">CAB <small>可能是新詞</small></div><p>變更諮詢委員會（Change Advisory Board）：每週四核准正式環境變更的審查會議。</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · 發布流程</span></div>
-          <p class="sample">範例情境。公司、人名和數據皆為虛構。</p>
+          <div class="chips"><span>一起開過 6 場會</span><span>你欠 Maya 1 項任務</span></div>
+          <p class="sample" style="padding:14px 0 0">範例。人名和專案皆為虛構。</p>
         </div>
-        <template class="demo-data">
-          <div data-title>工程同步會議</div><div data-meta>10:12 · 正在聆聽</div>
-          <p data-say><span class="who"><b>Dev</b> · 10:12</span>等 Keystone 週四通過 <span class="term">CAB</span> 後我們就合併。</p>
-          <div data-ctx class="ctx"><div class="ct">CAB <small>可能是新詞</small></div><p>變更諮詢委員會（Change Advisory Board）：每週四核准正式環境變更的審查會議。</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · 發布流程</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>業務交接</div><div data-meta>15:40 · 正在聆聽</div>
-          <p data-say><span class="who"><b>Priya</b> · 15:40</span>Northwind 簽了客製版 <span class="term">DPA</span>，所以資料保留期有上限。</p>
-          <div data-ctx class="ctx"><div class="ct">DPA <small>可能是新詞</small></div><p>資料處理協議。Northwind 的版本將資料保留期限制為 30 天。</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #deal-northwind</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>董事會問答</div><div data-meta>09:31 · 正在聆聽</div>
-          <p data-say><span class="who"><b>主席</b> · 09:31 · <em>問你</em></span>這一季推動<span class="term">淨收入留存率</span>的因素是什麼？</p>
-          <div data-ctx class="ctx answer"><div class="ct">給你的背景 <small>主席提問</small></div><p>NRR 從 108% 提升到 112%，主要來自企業客戶擴充：三個客戶增加了席次。</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Q3 董事會簡報</span></div>
-        </template>
       </div>
+      <ul class="ticks sug outcomes">
+        <li>點擊邀請中的任何人，查看對方的角色、在做什麼，以及你們之間還有哪些未完成的事</li>
+        <li>幾個來自簡報的快速問題，幫你確認是否已準備好</li>
+        <li>會議開始前，會從你的資料來源收集會議背景，讓通話一開始就帶著這些資訊</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="after">
+    <div class="wrap">
+      <div class="head">
+        <h2>知道接下來要做什麼</h2>
+        <p>通話結束時，摘要和你的任務已在首頁等你，發給所有人的後續訊息也已擬好。</p>
+      </div>
+      <div class="app" role="img" aria-label="Undertone 的首頁視窗，顯示即將開始的會議、你的任務、待學詞彙和回答指導（範例資料）">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>平台團隊</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>首頁</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>會議</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>任務</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>詞彙表</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>提問</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>成果</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">早安，Alex</div>
+          <p class="date">10月28日 星期三 · 平台團隊</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">接下來 <small>行事曆</small></div>
+              <div class="row"><span class="t">10:00</span><span class="grow">平台同步會議<span class="sub2">Maya、Dev、Sam · 2 場相關會議 · 1 項未完成任務</span></span><span class="mini">準備</span></div>
+              <div class="row"><span class="t">14:30</span><span class="grow">Northwind 續約<span class="sub2">Priya、Jordan · 1 場相關會議</span></span><span class="mini">準備</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">你的任務 <small>2 項未完成</small></div>
+              <div class="row"><span class="box"></span><span class="grow">把 Keystone 讀取切換計畫寄給 Sam<span class="sub2">平台同步會議 · 週五到期 · <span class="hi">高</span></span></span></div>
+              <div class="row"><span class="box"></span><span class="grow">確認週四的 CAB 時段<span class="sub2">工程同步會議</span></span></div>
+              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">向主席分享 Q3 NRR 數據</span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">待學詞彙 <small>詞彙表</small></div>
+              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">Q3 遷移到新計費系統的專案，由 Infra 主導。</span></span></div>
+              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">資料處理協議。Northwind 的版本將資料保留期限制為 30 天。</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">回答指導 <small>平台同步會議</small></div>
+              <div class="row"><span class="grow">「可以簡單說一下 Keystone 的進度嗎？」<span class="sub2">先講日期，再講那個風險。14 日的切換被放到最後才說。</span></span><span class="verdict">好</span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">範例資料。人名、專案和會議皆為虛構。</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>只有你自己的任務，帶上你親口說出的日期，並在前一個工作日提醒你</li>
+        <li>一封後續追蹤郵件或 Slack 訊息，可直接貼上。Undertone 從不替你傳送任何內容。</li>
+        <li>為你如何回答別人問你的問題、以及你的表達方式評分</li>
+        <li>在任務上點開始，「提問」就會根據會議、你的記憶和資料來源擬稿</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="between">
+    <div class="wrap">
+      <div class="head">
+        <h2>找到說過的話</h2>
+        <p>像問同事一樣詢問你的會議。答案來自你的會議和團隊的工具，並附上來源。</p>
+      </div>
+      <div class="askmock" role="img" aria-label="Ask 開始畫面範例：問候語、提問框和最近的對話列表">
+        <h3>你好 Alex，有問題儘管問</h3>
+        <div class="am-box">
+          <div class="am-ph">我們這週決定了什麼？</div>
+          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>所有會議 ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
+        </div>
+        <div class="am-rec">最近項目</div>
+        <ul>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>我最近一次會議在講什麼？</span><small>6m</small></li>
+          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>第四季規劃會議的後續郵件</span><small>1d</small></li>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>誰負責 Kestrel 儀表板？</span><small>2d</small></li>
+        </ul>
+      </div>
+      <p class="sample" style="padding:14px 0 0">範例。姓名與會議皆為虛構。</p>
+      <ul class="ticks sug outcomes">
+        <li>可以問某一場會議，也可以問全部，還能從「最近項目」接續之前的對話</li>
+        <li>在通話空檔，會預先收集你未完成任務的背景，讓回答更快開始</li>
+        <li>把清單變成可以逐項勾選的畫布</li>
+        <li>用簡短的小測驗練習團隊術語，直到記住為止</li>
+      </ul>
     </div>
   </section>
 
@@ -980,376 +1029,6 @@
     </div>
   </section>
 
-  <section class="block" id="features">
-    <div class="wrap">
-      <div class="head">
-        <h2>通話結束，它仍在工作</h2>
-        <p>像開啟任何 Mac App 一樣開啟 Undertone，你的一週已經準備好：接下來有什麼、你欠著什麼，以及你聽到但不了解的內容。</p>
-      </div>
-
-      <div class="app" role="img" aria-label="Undertone 的首頁視窗，顯示即將開始的會議、你的任務、待學詞彙和回答指導（範例資料）">
-        <aside class="app-side" aria-hidden="true">
-          <div class="lights"><i></i><i></i><i></i></div>
-          <div class="space"><span><i></i>平台團隊</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
-          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>首頁</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>會議</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>任務</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>詞彙表</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>提問</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>成果</li></ul>
-        </aside>
-        <div class="app-main" aria-hidden="true">
-          <div class="hello">早安，Alex</div>
-          <p class="date">10月28日 星期三 · 平台團隊</p>
-          <div class="cards">
-            <div class="card">
-              <div class="h4">接下來 <small>行事曆</small></div>
-              <div class="row"><span class="t">10:00</span><span class="grow">平台同步會議<span class="sub2">Maya、Dev、Sam · 2 場相關會議 · 1 項未完成任務</span></span><span class="mini">準備</span></div>
-              <div class="row"><span class="t">14:30</span><span class="grow">Northwind 續約<span class="sub2">Priya、Jordan · 1 場相關會議</span></span><span class="mini">準備</span></div>
-            </div>
-            <div class="card">
-              <div class="h4">你的任務 <small>2 項未完成</small></div>
-              <div class="row"><span class="box"></span><span class="grow">把 Keystone 讀取切換計畫寄給 Sam<span class="sub2">平台同步會議 · 週五到期 · <span class="hi">高</span></span></span></div>
-              <div class="row"><span class="box"></span><span class="grow">確認週四的 CAB 時段<span class="sub2">工程同步會議</span></span></div>
-              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">向主席分享 Q3 NRR 數據</span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">待學詞彙 <small>詞彙表</small></div>
-              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">Q3 遷移到新計費系統的專案，由 Infra 主導。</span></span></div>
-              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">資料處理協議。Northwind 的版本將資料保留期限制為 30 天。</span></span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">回答指導 <small>平台同步會議</small></div>
-              <div class="row"><span class="grow">「可以簡單說一下 Keystone 的進度嗎？」<span class="sub2">先講日期，再講那個風險。14 日的切換被放到最後才說。</span></span><span class="verdict">好</span></div>
-            </div>
-          </div>
-          <p class="sample" style="padding:14px 0 0">範例資料。人名、專案和會議皆為虛構。</p>
-        </div>
-      </div>
-
-      <dl class="features">
-        <div><dt>首頁</dt><dd>來自 Mac 行事曆的今日會議、你的未完成任務、待學詞彙，以及你的回答表現。每場會議前都會送上一份會前簡報。</dd></div>
-        <div><dt>任務</dt><dd>每次通話後，只列出你自己的事：你答應的、別人問你的，以及需要追蹤的問題。可以在待辦、進行中、審閱中和已完成之間推進。</dd></div>
-        <div><dt>詞彙表</dt><dd>每場會議裡的每個術語，以及它在你公司裡的意思。一鍵標記已認識的詞；「更多」會深入你的資料來源，找出背後的人和連結。</dd></div>
-        <div><dt>準備</dt><dd>開會前，用幾道來自簡報的問題檢查自己是否準備好。平時練習術語：選擇題，或用自己的話解釋，由你的 AI 為吻合度評分。它會保留你的紀錄，並針對你常錯的地方寫出學習指南。</dd></div>
-        <div><dt>空間</dt><dd>把不同團隊和客戶分開。新會議會自動歸檔，其餘的由 Undertone 建議所屬空間，每個畫面都會依你選擇的空間篩選。</dd></div>
-        <div><dt>回答指導</dt><dd>你這一方的發言也會被轉寫，通話結束後你就能看到哪些話說到位了，下次哪裡要更精簡。</dd></div>
-        <div><dt>成果</dt><dd>狀態報告、簡報和互動式畫布，根據你的會議和資料來源撰寫，缺少的內容會標記為 [TBD]。可匯出為 Markdown 或 HTML。</dd></div>
-        <div><dt>提問</dt><dd>可以針對一場會議或全部會議聊天，並附上檔案。回答即時呈現，先前的對話保留在「最近項目」中，你告訴它的內容會記住，下次使用。</dd></div>
-        <div><dt>通話中提問</dt><dd>即時提示下方的聊天欄位會根據目前的通話內容回答，不必離開會議。</dd></div>
-        <div><dt>人員</dt><dd>會議邀請中的每個人：他們的角色和負責的工作、你們一起開過的會，以及你欠他們的事。</dd></div>
-        <div><dt>提醒事項</dt><dd>「週五前」會變成具體日期。提醒會在前一個工作天 9:00 送達，逾期任務會變成紅色。</dd></div>
-        <div><dt>詞彙指南</dt><dd>把團隊的詞彙表變成可分享的新人指南，可匯出為 HTML 或 Markdown。</dd></div>
-        <div><dt>修正與翻譯</dt><dd>在聽錯的字詞上按右鍵，Undertone 會修正它，下次也會特別留意。任何段落都能翻譯成 19 種語言。</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="block" id="around">
-    <div class="wrap">
-      <div class="head">
-        <h2>通話前，通話後</h2>
-        <p>會議開始前十五分鐘，Undertone 會為你寫好會前簡報，並在開始前五分鐘提醒你，還會從你的來源收集會議背景，讓通話一開始就有這些資訊。會議結束時，給所有人的後續訊息已經擬好，可以直接貼到電子郵件或 Slack。</p>
-      </div>
-      <div class="duo">
-        <div class="pane bf" role="img" aria-label="即將開始的會議的範例通知和會前簡報">
-          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>平台同步會議將在 5 分鐘後開始</b><span>Maya：資深工程師，負責 Keystone</span></div><time>現在</time></div>
-          <p><b>與會者：</b>Maya，平台團隊資深工程師。Dev 負責版本發布管理。Sam 第一次參加。</p>
-          <p><b>上次：</b>寫入已遷移到新計費系統；讀取切換訂在 14 日 <span class="s">[Jira INFRA-311]</span>。</p>
-          <p><b>你欠的：</b>給 Sam 的切換計畫，週五到期。</p>
-          <p><b>準備好回答：</b>「回滾演練過了嗎？」演練過，在預備環境演練了兩次 <span class="s">[Notion: Keystone rollback]</span>。</p>
-          <p class="sample" style="padding:6px 0 0">範例。根據你的會議、任務和資料來源撰寫。</p>
-        </div>
-        <div class="pane" role="img" aria-label="會後擬好的範例後續訊息">
-          <div class="fu-top"><div class="label" style="margin:0">後續追蹤</div><span class="segs"><i>電子郵件</i><i class="on">Slack</i></span></div>
-          <div class="fu">謝謝大家，簡單回顧一下今天的平台同步會議：<ul><li>讀取切換仍訂在 14 日</li><li>Dev 預約週四的 CAB 時段</li><li>我會在週五前把切換計畫寄給 Sam</li></ul><br>待定：14 日前是否需要再做一次負載測試？</div>
-          <p style="font-size:13px;color:var(--text-3);margin-top:12px">編輯、拷貝，由你親自傳送。<span class="connect" style="margin:0;margin-inline-start:6px">拷貝</span></p>
-          <p class="sample" style="padding:10px 0 0">範例。Undertone 從不替你傳送任何內容。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="people">
-    <div class="wrap">
-      <div class="head">
-        <h2>認識在場的人</h2>
-        <p>人名也是一種行話。點一下會議中的任何人，就能查看對方的角色、負責的工作、你們一起開過的會以及你欠對方的事，資訊都來自你自己的資料來源。</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="範例人物卡片，包含角色、工作和共同歷程">
-          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>資深工程師，平台團隊</span></div></div>
-          <div class="pfacts">
-            <p><em>負責</em> Keystone，也就是計費系統遷移 <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
-            <p><em>與你一起</em>審閱回滾操作手冊 <span style="color:var(--text-3)">[Notion]</span></p>
-            <p><em>上次</em>平台同步會議，週二：切換仍訂在 14 日</p>
-          </div>
-          <div class="chips"><span>一起開過 6 場會</span><span>你欠 Maya 1 項任務</span></div>
-          <p class="sample" style="padding:14px 0 0">範例。人名和專案皆為虛構。</p>
-        </div>
-        <div class="pane" role="img" aria-label="附到期日和提醒的範例任務列表">
-          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>週五到期：把切換計畫寄給 Sam</b><span>你在平台同步會議上說過會做這件事。</span></div><time>9:00</time></div>
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">把 Keystone 切換計畫寄給 Sam<small>10月30日（週五）· 你說的是「週五前」</small></span></li>
-            <li><span class="st"></span><span class="grow">向主席分享 Q3 NRR 數據<small>下週 · 董事會問答</small></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">範例。你說出口的期限會變成日期，並在前一個工作天提醒你。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="coaching">
-    <div class="wrap">
-      <div class="head">
-        <h2>了解你的表現</h2>
-        <p>每次通話後，都會給出一個評分，衡量你如何回答別人提出的問題，以及你的表達方式：發言時間、語速和贅詞。面試結束後，你會得到坦率的意見回饋，為下一輪做準備。</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="範例面試評分：78 分（滿分 100），可望進入下一輪，並附上待改進之處">
-          <div class="score-top">
-            <div class="ring" aria-hidden="true"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="31" fill="none" stroke="rgba(129,140,248,.18)" stroke-width="7"/><circle cx="36" cy="36" r="31" fill="none" stroke="#818CF8" stroke-width="7" stroke-linecap="round" stroke-dasharray="151.9 194.8"/></svg><b>78<small>/100</small></b></div>
-            <div><div class="sc-title">面試評分</div><span class="tag">可望進入下一輪</span></div>
-          </div>
-          <p>關於帶領團隊因應變化的故事清楚具體。架構問題的回答停留在籠統層面，而對方想聽的是取捨。</p>
-          <div class="label">待改進</div>
-          <ul class="ticks"><li>先講決定，再講背景</li><li>說出一個你會做的取捨及原因</li></ul>
-          <p class="sample" style="padding:14px 0 0">範例。非面試的會議會得到會議評分：優秀、良好、有待加強或不佳。</p>
-        </div>
-        <div class="pane" role="img" aria-label="範例問題，將你當時掌握的背景與你說的話並排顯示">
-          <div class="label" style="margin-top:0">你被問到</div>
-          <div class="q">「談談你在資訊不完整的情況下做決定的經驗。」</div>
-          <div class="part sug">
-            <div class="label">你當時掌握的背景</div>
-            <div class="lead">來自你的筆記：提前兩週的 v1 發布</div>
-            <ul class="ticks sug"><li>當時缺的：兩週的緩衝時間</li><li>決定：v1 先不含匯出功能推出</li><li>結果：準時推出，匯出功能一個月後上線</li></ul>
-          </div>
-          <div class="part you">
-            <div class="label">你說的話</div>
-            <ul class="ticks you"><li>當時我們讓團隊改成每日發布。</li><li>我找出瓶頸，然後硬推過去。</li></ul>
-          </div>
-          <p class="sample" style="padding:14px 0 0">範例。你這一方的內容來自你的麥克風，在你的 Mac 上處理。</p>
-        </div>
-      </div>
-      <div class="metrics" role="img" aria-label="範例發言統計：發言比例、語速、贅詞、最長連續發言和提問數">
-        <div><b>41%</b><span>發言比例</span></div>
-        <div><b>152</b><span>每分鐘字數</span></div>
-        <div><b>2.1</b><span>每分鐘贅詞</span></div>
-        <div><b>1:48</b><span>最長連續發言</span></div>
-        <div><b>4</b><span>提問數</span></div>
-      </div>
-      <p class="sample" style="padding:12px 0 0">範例。表達方式根據你這一方的通話，在你的 Mac 上測量。</p>
-    </div>
-  </section>
-
-  <section class="block" id="tasks">
-    <div class="wrap">
-      <div class="head">
-        <h2>按下開始，工作隨即展開</h2>
-        <p>會議中產生的每項任務都有一個開始按鈕。「提問」會結合會議、你的記憶和資料來源接手任務，擬好成果，只在找不到資訊時才問你。</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="範例任務列表，包含待辦、進行中和審閱中狀態以及開始按鈕">
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">把 Keystone 切換計畫寄給 Sam<small>進行中 · 週五到期</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st rev"></span><span class="grow">草擬 Q3 平台更新<small>審閱中</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st"></span><span class="grow">確認週四的 CAB 時段<small>待辦 · 工程同步會議</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">範例。完成的任務會移到「已完成」，隨時可以重新開啟。</p>
-        </div>
-        <div class="pane" role="img" aria-label="範例「提問」對話：正在處理任務，並要求連接 Notion">
-          <div class="chat-me">開始處理「把 Keystone 切換計畫寄給 Sam」</div>
-          <div class="chat-ai"><b>給 Sam 的草稿：</b>寫入已在上週遷移到新計費系統；讀取切換預計在 14 日進行，回滾已在預備環境演練過<span class="caret" aria-hidden="true"></span><br><br>回滾操作手冊在 Notion 裡，但 Notion 還沒有連接。</div>
-          <span class="connect"><img src="../assets/logos/notion.png" alt="" width="14" height="14">連接 Notion</span>
-          <p class="sample" style="padding:14px 0 0">範例。回答會邊生成邊顯示。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ready">
-    <div class="wrap">
-      <div class="head">
-        <h2>你還沒問，背景已就緒</h2>
-        <p>每隔一小時，在通話之間的空檔，Undertone 會在你連接的資料來源中研讀你的未完成任務和近期會議，並整理一份附出處的簡短摘要。當你按下開始或詢問細節時，回答會從它已掌握的資訊出發，而不必花好幾分鐘搜尋。</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="範例任務列表，每項任務都顯示背景就緒標記，並附背景資訊狀態">
-          <ul class="board">
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">把 Keystone 切換計畫寄給 Sam<small>背景已就緒 · Slack、Jira、Notion</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">草擬 Q3 平台更新<small>背景已就緒 · Confluence、Granola</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">工程同步會議，週二<small>背景已就緒 · 找到 3 項後續事項</small></span></li>
-          </ul>
-          <div class="idx"><span><b>背景資訊</b> · 8 份摘要已就緒 · 12 分鐘前更新</span><span class="connect" style="margin:0;white-space:nowrap;flex:none">立即執行</span></div>
-          <p class="sample" style="padding:14px 0 0">範例。通話期間會暫停，並使用你自己的 AI。</p>
-        </div>
-        <div class="pane" role="img" aria-label="範例「提問」回覆：從預先準備的背景出發，幾秒內回答">
-          <div class="chat-me">告訴我 Keystone 切換任務的更多細節</div>
-          <div class="fast"><span class="dot"></span>根據預先準備的背景，12 秒內回答</div>
-          <div class="chat-ai"><b>已傳送：</b>切換計畫今天早上已透過 Slack 傳給 Sam [Slack DM]。<br><br><b>仍待處理：</b>14 日的讀取切換在等 CAB 時段 [Jira KEY-212]，回滾操作手冊還需要最後審閱一次 [Notion: Keystone rollback]。</div>
-          <p class="sample" style="padding:14px 0 0">範例。它仍會檢查摘要產生後是否有更新的內容。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ask">
-    <div class="wrap">
-      <div class="head">
-        <h2>Ask，像問同事一樣</h2>
-        <p>一個寬敞的輸入框，回答關於會議的任何問題。選擇一場會議或全部，加入檔案，並從「最近項目」繼續先前的對話。</p>
-      </div>
-      <div class="askmock" role="img" aria-label="Ask 開始畫面範例：問候語、提問框和最近的對話列表">
-        <h3>你好 Alex，有問題儘管問</h3>
-        <div class="am-box">
-          <div class="am-ph">我們這週決定了什麼？</div>
-          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>所有會議 ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
-        </div>
-        <div class="am-rec">最近項目</div>
-        <ul>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>我最近一次會議在講什麼？</span><small>6m</small></li>
-          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>第四季規劃會議的後續郵件</span><small>1d</small></li>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>誰負責 Kestrel 儀表板？</span><small>2d</small></li>
-        </ul>
-      </div>
-      <p class="sample" style="padding:14px 0 0">範例。姓名與會議皆為虛構。</p>
-    </div>
-  </section>
-
-  <section class="block" id="canvas">
-    <div class="wrap">
-      <div class="head">
-        <h2>把回答變成畫布</h2>
-        <p>當「提問」給你一份待處理的清單時，對「要變成畫布嗎？」回答是，它就會成為「成果」中的互動式頁面：可以勾選的檢查清單、可以收合的段落、自動計數的進度，邊用邊儲存。</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="範例「提問」回覆：包含段落、核取方塊和步驟，並提供製作畫布的選項">
-          <div class="chat-me">切換前還有哪些 Keystone 工單需要完成？</div>
-          <div class="chat-ai"><b>4 項進行中，1 項受阻，2 項待定。</b></div>
-          <div class="label">進行中</div>
-          <ul class="ticks"><li>將發票讀取遷移到新計費系統</li><li>回填去年的發票</li></ul>
-          <div class="label">受阻</div>
-          <ul class="ticks"><li>負載測試在等預備環境更新</li></ul>
-          <p style="font-size:13px;color:var(--text-3);margin-top:14px">要變成畫布嗎？<span class="connect" style="margin:0;margin-inline-start:6px">製作畫布</span></p>
-        </div>
-        <div class="pane cv" role="img" aria-label="範例畫布：依群組顯示進度的檢查清單">
-          <h3>Keystone 切換檢查清單</h3>
-          <div class="meta">來自工程同步會議 · 已完成 3/7</div>
-          <div class="grp"><div class="gh">進行中 <span>2/4</span></div>
-            <ul><li class="on"><i></i>將發票讀取遷移到新計費系統</li><li class="on"><i></i>回填去年的發票</li><li><i></i>在預備環境演練回滾</li><li><i></i>更新值班操作手冊</li></ul></div>
-          <div class="grp"><div class="gh">受阻 <span>1/1</span></div>
-            <ul><li class="on"><i></i>負載測試在等預備環境更新</li></ul></div>
-          <div class="grp shut"><div class="gh">待定 <span>2 項未決</span></div></div>
-          <p class="sample" style="padding:14px 0 0">範例。畫布在隔離環境中執行：不連網路，也不從外部載入任何內容。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="speed">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>秒速回答</h2>
-          <p>Undertone 會先用快速模型根據已掌握的資訊回答，只有不夠時才搜尋你的工具。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>通話中的回答卡片會參考背景摘要和你的記憶</li>
-          <li>需要搜尋時，它會同時查找多個來源，搜不到就換個說法再搜，並在 14 秒內結束</li>
-          <li>每個回答都會逐步顯示出處</li>
-          <li>針對反覆出現的話題和人物產生摘要，並與每個問題配對</li>
-          <li>資料來源說法不一時，以最新的為準</li>
-          <li>回覆卡住時會轉交給快速模型，不讓你乾等</li>
-        </ul>
-      </div>
-      <div class="bars" aria-label="以 Undertone 自己的基準測試測得">
-        <div>
-          <h4>提問，首字出現時間 <small>中位數</small></h4>
-          <div class="bar"><span>之前</span><i style="--w:100%"></i><b>12.7 秒</b></div>
-          <div class="bar new"><span>現在</span><i style="--w:35%"></i><b>4.5 秒</b></div>
-        </div>
-        <div>
-          <h4>即時回答，完整回覆 <small>中位數</small></h4>
-          <div class="bar"><span>之前</span><i style="--w:100%"></i><b>16.5 秒</b></div>
-          <div class="bar new"><span>現在</span><i style="--w:31%"></i><b>5.1 秒</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="paste">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>可直接貼上的回答</h2>
-          <p>提問會先給出你要的東西。草稿以一則可直接拷貝的訊息呈現，缺少的內容列在下方。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>一則推薦草稿，適用於 Slack 或電子郵件，附有自己的拷貝按鈕</li>
-          <li>缺少的連結和未經查證的內容列在草稿下方，絕不放進草稿</li>
-          <li>在聊天中選取任何文字即可拷貝或翻譯；在輸入框中還能用譯文取代</li>
-          <li>首次翻譯時會告訴你文字將傳送給哪個 AI</li>
-        </ul>
-      </div>
-      <div class="paste" aria-label="提問中的範例回答">
-        <h4>推薦訊息</h4>
-        <div class="draft">
-          <div class="bar"><b>可直接拷貝</b><span class="btn-copy">拷貝</span></div>
-          <p translate="no">*Keystone update*
-• Billing writes moved to the new stack last week
-• The read cutover is planned for the 14th</p>
-        </div>
-        <div class="missing">缺少：找不到切換檢查清單的連結，所以訊息中沒有它。</div>
-        <div class="tpop">
-          <div class="row"><b>翻譯</b><span class="pick" translate="no">Español</span></div>
-          <p translate="no">El cambio de lectura está previsto para el día 14</p>
-          <div class="acts"><span>拷貝譯文</span><span class="primary">取代所選內容</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>工作歸工作</h2>
-          <p>Undertone 能區分工作會議和個人會議。網路研討會或個人行事曆上的通話會用常識解釋，不碰你的工作工具。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>把每個行事曆標為「工作」或「個人」；公司帳號預設為「工作」</li>
-          <li>個人會議不使用你的工作工具和記憶，會議摘要也不會存入 amem</li>
-          <li>在提示面板中隨時把會議在「工作」和「個人」之間切換</li>
-          <li>只收聽的網路研討會也會自動開始，並支援 Comet、Vivaldi、Opera 等更多瀏覽器</li>
-          <li>標明問題是問誰的：你、被點名的其他人，還是所有人</li>
-          <li>中斷後恢復的通話會接續同一場會議，而不是另開一場</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="行事曆設定範例">
-        <h4>行事曆</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">工作</i><i>個人</i></span></div>
-        <div class="acct"><span>個人 Gmail</span><span class="seg"><i>工作</i><i class="on">個人</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>工作</i><i class="on">個人</i></span></div>
-        <span class="chip">個人會議 · 在個人行事曆上</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="languages">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>說你的語言</h2>
-          <p>Undertone 現已支援 17 種語言。它會跟隨你的 Mac 語言，你也可以在設定中選擇其他語言。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>提示、回答和摘要會用你的語言撰寫；會議中的術語保持原樣</li>
-          <li>以 19 種語言和方言進行的會議都能在你的 Mac 上轉寫</li>
-          <li>從你所有的 Google、iCloud 和 Outlook 帳號中選擇要使用的行事曆</li>
-          <li>阿拉伯文由右至左的版面</li>
-          <li>連接 Google 日曆後，「即將開始」會直接讀取它，改名或取消的會議不會殘留</li>
-        </ul>
-      </div>
-      <div class="langs" translate="no" aria-label="Undertone 支援的語言"><span lang="en">English</span><span lang="es">Español</span><span lang="fr">Français</span><span lang="de">Deutsch</span><span lang="it">Italiano</span><span lang="pt-BR">Português (Brasil)</span><span lang="nl">Nederlands</span><span lang="pl">Polski</span><span lang="tr">Türkçe</span><span lang="ru">Русский</span><span lang="uk">Українська</span><span lang="ar">العربية</span><span lang="hi">हिन्दी</span><span lang="ja">日本語</span><span lang="ko">한국어</span><span lang="zh-Hans">简体中文</span><span lang="zh-Hant">繁體中文</span></div>
-      <script>(function(){var l=document.documentElement.lang;document.querySelectorAll(".langs span").forEach(function(e){if(e.lang===l)e.classList.add("on")})})();</script>
-    </div>
-  </section>
-
   <section class="block" id="claude">
     <div class="wrap claude">
       <div class="head">
@@ -1361,29 +1040,7 @@
   <span class="k">"command"</span>: "/Applications/Undertone.app/Contents/MacOS/Undertone",
   <span class="k">"args"</span>: ["--mcp"]
 }</pre>
-    </div>
-  </section>
-
-  <section class="block" id="amem">
-    <div class="wrap amem">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>搭配 amem 更好用</h2>
-          <p>Undertone 一律保留自己關於你會議的記憶。加入 amem——你 Mac 上由 Claude Code、Cursor 和其他 AI 工具共用的記憶，Undertone 就會同時搜尋兩者。設定時會推薦並為你安裝。</p>
-        </div>
-        <ul class="ticks sug">
-          <li>你在 Claude Code 或 Cursor 中做過的事，會成為下一通通話的背景</li>
-          <li>每次會議回顧事後都能在你的 AI 工具中找到</li>
-          <li>你告訴 Undertone 的內容會被永久記住</li>
-        </ul>
-      </div>
-      <div>
-        <pre class="code" aria-label="安裝 amem" translate="no">npx @iamem/amem setup</pre>
-        <div class="ctas">
-          <a class="btn btn-ghost" href="https://getamem.com/">取得 amem</a>
-        </div>
-        <p class="note">或讓 Undertone 的設定流程幫你安裝。需要 Node.js。資料留在你的 Mac 上。</p>
-      </div>
+      <p class="aside">再加上 <a href="https://github.com/sslugic/amem" translate="no">amem</a>，你的會議就能與 Claude Code、Cursor 和其他 AI 工具共用同一份記憶。</p>
     </div>
   </section>
 
@@ -1467,56 +1124,6 @@
       && !(navigator.connection && navigator.connection.saveData);
     if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
-
-  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
-  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
-  (function () {
-    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
-      var c = t.content, ctx = c.querySelector("[data-ctx]");
-      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
-        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
-    });
-    var tabs = document.querySelectorAll(".tab");
-    var panel = document.getElementById("panel");
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function select(n, focus) {
-      var d = data[n];
-      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
-      if (focus) tabs[n].focus();
-      panel.setAttribute("aria-labelledby", "tab-" + n);
-      document.getElementById("d-title").textContent = d.title;
-      document.getElementById("d-meta").textContent = d.meta;
-      document.getElementById("d-say").innerHTML = d.say;
-      var ctx = document.getElementById("d-ctx");
-      ctx.className = d.ctxClass;
-      ctx.innerHTML = d.ctx;
-      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
-    }
-    tabs.forEach(function (t, n) {
-      t.addEventListener("click", function () { select(n); });
-      t.addEventListener("keydown", function (e) {
-        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
-        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
-      });
-    });
-  })();
-</script>
-<script>
-(() => {
-  const dm = document.querySelector('.dm');
-  if (!dm) return;
-  const items = dm.querySelectorAll('.dm-steps li');
-  const show = n => { dm.dataset.step = n; items.forEach(li => li.classList.toggle('on', +li.dataset.s === n)); };
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { show(3); return; }
-  let n = 1, timer;
-  const tick = () => { n = n % 3 + 1; show(n); timer = setTimeout(tick, n === 3 ? 4200 : 2200); };
-  const io = new IntersectionObserver(([e]) => {
-    clearTimeout(timer);
-    if (e.isIntersecting) { show(n = 1); timer = setTimeout(tick, 2200); }
-  });
-  io.observe(dm);
-  items.forEach(li => li.addEventListener('click', () => { clearTimeout(timer); show(n = +li.dataset.s); timer = setTimeout(tick, 5000); }));
-})();
 </script>
 <script>
   // Use cases: one industry at a time. Arrow keys, Home and End move between tabs (roving tabindex).

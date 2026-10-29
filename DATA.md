@@ -20,6 +20,7 @@ Dates are ISO 8601 strings. IDs are UUIDs. Formats for the main files are in [sc
 | `quiz.json` | Glossary practice: for each term, how often you answered and got it right, your current streak, when you last practised and what your last wrong answer left out. |
 | `quiz-history.json` | Your last 200 practice and meeting prep rounds: when, which mode or meeting, and each answer (right or not, % match, what was missed). |
 | `study-guide.json` | The last study guide Undertone wrote from that history, and the terms it focused on. |
+| `org.json` | An org chart you imported or attached in Ask: names, titles, emails, teams, locations and managers, as in your HR export. Delete it to remove it. |
 | `background.txt` | Background you added for answer mode, such as a résumé or notes. |
 | `context-pack.json` | Terms and notes gathered for a call (a few minutes before it when it's on your calendar), for live hints. |
 | `sources.json`, `mcp-servers.json` | The tools you connected: names, addresses, available tools and whether each is on. No tokens; those are in the Keychain. |

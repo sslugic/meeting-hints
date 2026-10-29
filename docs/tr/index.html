@@ -286,6 +286,13 @@
   .ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--dotc, #71717A); }
   .ticks.sug { --dotc: var(--accent); }
   .ticks.you { --dotc: #D4D4D8; }
+  /* Before, after and between calls: the points under each visual, two columns on wide screens */
+  .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
+  .outcomes li { font-size: 15.5px; color: #D4D4D8; }
+  @media (max-width: 720px) { .outcomes { grid-template-columns: 1fr; } }
+  .aside { margin-top: 22px; color: var(--text-2); font-size: 15px; }
+  .aside a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border-2); text-underline-offset: 3px; }
+  .aside a:hover { text-decoration-color: var(--text); }
   .q { font-size: 15px; font-weight: 600; letter-spacing: -.01em; line-height: 1.45; margin-top: 4px; }
   .part { border-inline-start: 2px solid var(--partc); padding-inline-start: 12px; margin-top: 16px; }
   .part.sug { --partc: var(--accent); }
@@ -637,11 +644,10 @@
     <a class="brand" href="#" translate="no"><img src="../assets/icon-256.png" alt="">Undertone <span class="pill">macOS</span></a>
     <nav class="nav-links" aria-label="Ana içerik">
       <a href="#how">Nasıl çalışır</a>
+      <a href="#before">Özellikler</a>
       <a href="#use-cases">Kullanım alanları</a>
-      <a href="#features">Özellikler</a>
-      <a href="#claude">Yapay zekâ araçları</a>
-      <a href="#pricing">Ücretsiz beta</a>
       <a href="#privacy">Gizlilik</a>
+      <a href="#pricing">Ücretsiz beta</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">Değişiklikler</a>
       <details class="lang"><summary aria-label="Dil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span class="lang-cur" translate="no">TR</span><svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></summary><ul class="lang-menu" translate="no"><li><a href="../?lang=en" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a></li><li><a href="../nl/" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li><li><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li><li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr" aria-current="page">Türkçe</a></li><li><a href="../ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li><li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li><li><a href="../ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li><li><a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li></ul></details>      <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg><span>İndir<span class="long"> · macOS</span></span></a>
@@ -652,9 +658,8 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="status"><span class="dot" aria-hidden="true"></span>macOS için canlı toplantı zekâsı</span>
       <h1>Herkesin ne demek istediğini ve ne söyleyeceğini bilin.</h1>
-      <p class="sub">Undertone görüşmelerinizi dinler. Kod adlarını ve kısaltmaları geçtikleri anda açıklar, size bir şey sorulduğunda gereken bilgileri getirir; görüşmeden sonra da özeti, görevlerinizi ve bir sonraki görüşme için bir hazırlık notunu verir. Hepsi ekibinizin kendi Slack, Notion ve Jira’sından, Mac’inizde metne dökülerek.</p>
+      <p class="sub">Undertone görüşmelerinizi dinler ve kod adlarıyla kısaltmaları, ekibinizin kendi Slack, Notion ve Jira’sından yararlanarak geçtikleri anda açıklar. Sonrasında özetiniz, görevleriniz ve bir sonraki hazırlık notunuz hazır bekler. Mac’inizde metne dökülür.</p>
       <div class="ctas">
         <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>.dmg indir <span class="ver">v1.18.2</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Sürümler ve sorunlar</a>
@@ -668,34 +673,6 @@
       </video>
     </div>
     <p class="sample hero-note">Örnek. İsimler, şirketler ve kayıtlar uydurmadır. Müzik için sesi açın.</p>
-  </section>
-
-  <section class="block" id="demo">
-    <div class="wrap">
-      <div class="head">
-        <h2>Daha konuşulurken, üç adımda</h2>
-        <p>Undertone görüşmeyi Mac’inizde metne döker, muhtemelen bilmediğiniz adları seçer ve bunları ekibinizin kendi araçlarından yararlanarak açıklar.</p>
-      </div>
-      <div class="dm" data-step="1" aria-label="Animasyonlu örnek: görüşmede bir soru, Undertone’un yakaladığı terimler ve gösterdiği ipucu">
-        <ol class="dm-steps">
-          <li class="on" data-s="1"><b>1. Adım</b><span>Görüşme Mac’inizde metne dökülür</span></li>
-          <li data-s="2"><b>2. Adım</b><span>Undertone bilmiyor olabileceklerinizi yakalar</span></li>
-          <li data-s="3"><b>3. Adım</b><span>Bir ipucu bunu kaynaklarınızdan açıklar</span></li>
-        </ol>
-        <div class="dm-stage">
-          <p class="dm-say"><span class="who">Priya · 10:14 · canlı</span>“Bir dakika, Mart’taki olaydan sonra <mark>Project Odin</mark>’i eski <mark>V2 webhook</mark>’tan taşımış mıydık?”</p>
-          <div class="dm-spot" aria-hidden="true"><span>Project Odin · muhtemelen yeni</span><span>V2 webhook · muhtemelen yeni</span></div>
-          <div class="dm-card">
-            <h3>Project Odin <small>Çalışma alanınızdan</small></h3>
-            <ul>
-              <li>Bildirim hattının yeniden yazımı. Mart’taki kesintinin ardından 2 Nisan’da V2 webhook’tan taşındı <span class="s">[Slack #eng-infra]</span></li>
-              <li>V2 webhook kullanımdan kaldırıldı ve 30 Haziran’da kapanıyor; iki iç servis hâlâ onu çağırıyor <span class="s">[Jira ENG-1402]</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="sample" style="padding:14px 0 0">Örnek. İsimler, kanallar ve kayıtlar uydurmadır.</p>
-    </div>
   </section>
 
   <section class="block" id="why">
@@ -750,43 +727,115 @@
     </div>
   </section>
 
-  <section class="block" id="try">
+  <section class="block" id="before">
     <div class="wrap">
       <div class="head">
-        <h2>Örnek bir toplantıda deneyin</h2>
-        <p>Undertone’un size ne göstereceğini görmek için bir toplantı seçin. Uygulamada Ana Sayfa › Örnek bir toplantıyı deneyin, ilk görüşmenizden önce uydurma bir standup’ı gerçek panelde oynatır.</p>
+        <h2>Toplantıya kimin olduğunu bilerek girin</h2>
+        <p>Undertone, toplantıdan on beş dakika önce geçmiş toplantılarınızdan, görevlerinizden ve kaynaklarınızdan size bir brifing yazar: kimler geliyor, neler açık kaldı ve size düşenler neler.</p>
       </div>
-      <div class="demo">
-        <div class="tabs" role="tablist" aria-label="Örnek toplantılar">
-          <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>Mühendislik toplantısı</b><span>Bir sürüm süreci kısaltması</span></button>
-          <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>Satış devri</b><span>Bir sözleşme terimi</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Yönetim kurulu Q&amp;A</b><span>Size bir soru</span></button>
+      <div class="duo">
+        <div class="pane bf" role="img" aria-label="Yaklaşan bir toplantı için örnek bildirim ve brifing">
+          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>Platform toplantısı 5 dk sonra</b><span>Maya: Staff engineer, Keystone’un sahibi</span></div><time>şimdi</time></div>
+          <p><b>Kim:</b> Maya, Platform’da Staff engineer. Dev sürüm yönetimini yürütüyor. Sam ilk kez katılıyor.</p>
+          <p><b>Geçen sefer:</b> yazma işlemleri yeni faturalama altyapısına taşındı; okuma geçişi ayın 14’üne ayarlandı <span class="s">[Jira INFRA-311]</span>.</p>
+          <p><b>Borcunuz:</b> Sam için geçiş planı, son gün Cuma.</p>
+          <p><b>Hazırlıklı olun:</b> “Geri alma prova edildi mi?” Evet, staging’de iki kez <span class="s">[Notion: Keystone rollback]</span>.</p>
+          <p class="sample" style="padding:6px 0 0">Örnek. Toplantılarınızdan, görevlerinizden ve kaynaklarınızdan yazıldı.</p>
         </div>
-        <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
-          <div class="hud-head">
-            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-            <div><div class="hud-title" id="d-title">Mühendislik toplantısı</div><div class="hud-meta" id="d-meta">10:12 · Dinliyor</div></div>
+        <div class="pane" role="img" aria-label="Rol, iş ve ortak geçmişi gösteren örnek kişi kartı">
+          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>Staff engineer, Platform</span></div></div>
+          <div class="pfacts">
+            <p><em>Üzerinde çalıştığı</em> Keystone, faturalama altyapısı geçişi <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
+            <p><em>Sizinle</em> geri alma runbook’unu inceliyor <span style="color:var(--text-3)">[Notion]</span></p>
+            <p><em>Geçen sefer</em> Platform toplantısı, Salı: geçiş ayın 14’ünde kalıyor</p>
           </div>
-          <p class="say" id="d-say"><span class="who"><b>Dev</b> · 10:12</span>Keystone Perşembe günü <span class="term">CAB</span>’den geçince merge ederiz.</p>
-          <div class="ctx" id="d-ctx"><div class="ct">CAB <small>Muhtemelen yeni</small></div><p>Change Advisory Board: üretim değişikliklerini onaylayan Perşembe incelemesi.</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · Sürüm süreci</span></div>
-          <p class="sample">Örnek senaryolar. Şirketler, kişiler ve rakamlar uydurmadır.</p>
+          <div class="chips"><span>6 ortak toplantı</span><span>Maya’ya 1 görev borçlusunuz</span></div>
+          <p class="sample" style="padding:14px 0 0">Örnek. İsimler ve projeler uydurmadır.</p>
         </div>
-        <template class="demo-data">
-          <div data-title>Mühendislik toplantısı</div><div data-meta>10:12 · Dinliyor</div>
-          <p data-say><span class="who"><b>Dev</b> · 10:12</span>Keystone Perşembe günü <span class="term">CAB</span>’den geçince merge ederiz.</p>
-          <div data-ctx class="ctx"><div class="ct">CAB <small>Muhtemelen yeni</small></div><p>Change Advisory Board: üretim değişikliklerini onaylayan Perşembe incelemesi.</p><span class="src"><img src="../assets/logos/confluence.png" alt="" width="13" height="13">Confluence · Sürüm süreci</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>Satış devri</div><div data-meta>15:40 · Dinliyor</div>
-          <p data-say><span class="who"><b>Priya</b> · 15:40</span>Northwind özel <span class="term">DPA</span>’yı imzaladı, yani saklama süresi sınırlı.</p>
-          <div data-ctx class="ctx"><div class="ct">DPA <small>Belki yeni</small></div><p>Data Processing Agreement (veri işleme sözleşmesi). Northwind’in sürümü veri saklamayı 30 günle sınırlıyor.</p><span class="src"><img src="../assets/logos/slack.png" alt="" width="13" height="13">Slack · #deal-northwind</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>Yönetim kurulu Q&amp;A</div><div data-meta>09:31 · Dinliyor</div>
-          <p data-say><span class="who"><b>Başkan</b> · 09:31 · <em>size</em></span>Bu çeyrek <span class="term">net gelir tutma oranını</span> ne yükseltiyor?</p>
-          <div data-ctx class="ctx answer"><div class="ct">Sizin için bağlam <small>Başkan sordu</small></div><p>NRR %108’den %112’ye çıktı; kurumsal genişlemeler sayesinde: üç hesap koltuk ekledi.</p><span class="src"><img src="../assets/logos/notion.png" alt="" width="13" height="13">Notion · Q3 yönetim kurulu sunumu</span></div>
-        </template>
       </div>
+      <ul class="ticks sug outcomes">
+        <li>Davetteki herhangi birine tıklayarak rolünü, ne üzerinde çalıştığını ve aranızda açık kalanları görün</li>
+        <li>Brifingden birkaç kısa soru, hazır olup olmadığınızı kontrol eder</li>
+        <li>Toplantının bağlamı, başlamadan hemen önce kaynaklarınızdan toplanır; böylece görüşme bu bağlamla başlar</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="after">
+    <div class="wrap">
+      <div class="head">
+        <h2>Sırada ne olduğunu bilin</h2>
+        <p>Görüşme bittiğinde özet ve görevleriniz Ana Sayfa’da sizi bekler; herkes için takip mesajı da hazırlanmış olur.</p>
+      </div>
+      <div class="app" role="img" aria-label="Örnek verilerle; yaklaşan toplantılar, görevleriniz, öğrenilecek kelimeler ve yanıt koçluğuyla Undertone Ana Sayfa penceresi">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Platform ekibi</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Ana Sayfa</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Toplantılar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>Görevler</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Sözlük</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Sor</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Çıktılar</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Günaydın, Alex</div>
+          <p class="date">28 Ekim Çarşamba · Platform ekibi</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">Sırada <small>Takvim</small></div>
+              <div class="row"><span class="t">10:00</span><span class="grow">Platform toplantısı<span class="sub2">Maya, Dev, Sam · 2 ilgili toplantı · 1 açık görev</span></span><span class="mini">Hazırlan</span></div>
+              <div class="row"><span class="t">14:30</span><span class="grow">Northwind yenilemesi<span class="sub2">Priya, Jordan · 1 ilgili toplantı</span></span><span class="mini">Hazırlan</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Görevleriniz <small>2 açık</small></div>
+              <div class="row"><span class="box"></span><span class="grow">Keystone okuma geçişi planını Sam’e gönder<span class="sub2">Platform toplantısı · son gün Cuma · <span class="hi">Yüksek</span></span></span></div>
+              <div class="row"><span class="box"></span><span class="grow">Perşembe için CAB slotunu onayla<span class="sub2">Mühendislik toplantısı</span></span></div>
+              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">Q3 NRR rakamlarını başkanla paylaş</span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Öğrenilecek kelimeler <small>Sözlük</small></div>
+              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">Infra’nın yürüttüğü, yeni faturalama altyapısına Q3 geçişi.</span></span></div>
+              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">Data Processing Agreement (veri işleme sözleşmesi). Northwind’in sürümü saklama süresini 30 günle sınırlıyor.</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Yanıt koçluğu <small>Platform toplantısı</small></div>
+              <div class="row"><span class="grow">“Keystone’un durumunu kısaca anlatır mısınız?”<span class="sub2">Önce tarihi, sonra tek riski söyleyin. Ayın 14’ündeki geçiş en sona kaldı.</span></span><span class="verdict">Tamam</span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Örnek veriler. İsimler, projeler ve toplantılar uydurmadır.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Yalnızca kendi görevleriniz, yüksek sesle söylediğiniz tarihlerle ve bir önceki iş günü gelen bir hatırlatmayla</li>
+        <li>Yapıştırmaya hazır bir takip e-postası veya Slack mesajı. Undertone hiçbir şeyi kendisi göndermez.</li>
+        <li>Size yöneltilen soruları nasıl yanıtladığınıza ve nasıl konuştuğunuza dair bir puan</li>
+        <li>Bir görevde başlat’a basın, Sor da onu toplantıdan, belleğinizden ve kaynaklarınızdan yararlanarak taslağa döksün</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="between">
+    <div class="wrap">
+      <div class="head">
+        <h2>Söyleneni bulun</h2>
+        <p>Toplantılarınızı bir iş arkadaşınıza sorar gibi sorun. Yanıtlar toplantılarınızdan ve ekibinizin araçlarından, kaynaklarıyla birlikte gelir.</p>
+      </div>
+      <div class="askmock" role="img" aria-label="Örnek Ask başlangıç ekranı: bir selamlama, soru kutusu ve son sohbetlerin listesi">
+        <h3>Merhaba Alex, ne istersen sor</h3>
+        <div class="am-box">
+          <div class="am-ph">Bu hafta ne karar verdik?</div>
+          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>Tüm toplantılar ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
+        </div>
+        <div class="am-rec">Son kullanılanlar</div>
+        <ul>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Son toplantım ne hakkındaydı?</span><small>6m</small></li>
+          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>4. çeyrek planlama görüşmesi için takip e-postası</span><small>1d</small></li>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Kestrel panosundan kim sorumlu?</span><small>2d</small></li>
+        </ul>
+      </div>
+      <p class="sample" style="padding:14px 0 0">Örnek. İsimler ve toplantılar uydurmadır.</p>
+      <ul class="ticks sug outcomes">
+        <li>Tek bir toplantıyı ya da hepsini sorun, önceki sohbetlere Son kullanılanlar’dan devam edin</li>
+        <li>Görüşmeler arasında açık görevlerinizin bağlamı önceden toplanır, böylece yanıtlar hızlı başlar</li>
+        <li>Bir listeyi işaretleyerek ilerleyebileceğiniz bir tuvale dönüştürün</li>
+        <li>Ekibinizin terimlerini, öğrenene kadar kısa testlerle çalışın</li>
+      </ul>
     </div>
   </section>
 
@@ -980,376 +1029,6 @@
     </div>
   </section>
 
-  <section class="block" id="features">
-    <div class="wrap">
-      <div class="head">
-        <h2>Görüşmeden sonra da çalışmaya devam eder</h2>
-        <p>Undertone’u herhangi bir Mac uygulaması gibi açın, haftanız sizi bekliyor olsun: sırada ne var, neyi borçlusunuz, neyi duydunuz ama bilmiyordunuz.</p>
-      </div>
-
-      <div class="app" role="img" aria-label="Örnek verilerle; yaklaşan toplantılar, görevleriniz, öğrenilecek kelimeler ve yanıt koçluğuyla Undertone Ana Sayfa penceresi">
-        <aside class="app-side" aria-hidden="true">
-          <div class="lights"><i></i><i></i><i></i></div>
-          <div class="space"><span><i></i>Platform ekibi</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
-          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Ana Sayfa</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Toplantılar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>Görevler</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Sözlük</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Sor</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Çıktılar</li></ul>
-        </aside>
-        <div class="app-main" aria-hidden="true">
-          <div class="hello">Günaydın, Alex</div>
-          <p class="date">28 Ekim Çarşamba · Platform ekibi</p>
-          <div class="cards">
-            <div class="card">
-              <div class="h4">Sırada <small>Takvim</small></div>
-              <div class="row"><span class="t">10:00</span><span class="grow">Platform toplantısı<span class="sub2">Maya, Dev, Sam · 2 ilgili toplantı · 1 açık görev</span></span><span class="mini">Hazırlan</span></div>
-              <div class="row"><span class="t">14:30</span><span class="grow">Northwind yenilemesi<span class="sub2">Priya, Jordan · 1 ilgili toplantı</span></span><span class="mini">Hazırlan</span></div>
-            </div>
-            <div class="card">
-              <div class="h4">Görevleriniz <small>2 açık</small></div>
-              <div class="row"><span class="box"></span><span class="grow">Keystone okuma geçişi planını Sam’e gönder<span class="sub2">Platform toplantısı · son gün Cuma · <span class="hi">Yüksek</span></span></span></div>
-              <div class="row"><span class="box"></span><span class="grow">Perşembe için CAB slotunu onayla<span class="sub2">Mühendislik toplantısı</span></span></div>
-              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">Q3 NRR rakamlarını başkanla paylaş</span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">Öğrenilecek kelimeler <small>Sözlük</small></div>
-              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">Infra’nın yürüttüğü, yeni faturalama altyapısına Q3 geçişi.</span></span></div>
-              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">Data Processing Agreement (veri işleme sözleşmesi). Northwind’in sürümü saklama süresini 30 günle sınırlıyor.</span></span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">Yanıt koçluğu <small>Platform toplantısı</small></div>
-              <div class="row"><span class="grow">“Keystone’un durumunu kısaca anlatır mısınız?”<span class="sub2">Önce tarihi, sonra tek riski söyleyin. Ayın 14’ündeki geçiş en sona kaldı.</span></span><span class="verdict">Tamam</span></div>
-            </div>
-          </div>
-          <p class="sample" style="padding:14px 0 0">Örnek veriler. İsimler, projeler ve toplantılar uydurmadır.</p>
-        </div>
-      </div>
-
-      <dl class="features">
-        <div><dt>Ana Sayfa</dt><dd>Mac’inizin Takvim’inden bugünün toplantıları, açık görevleriniz, öğrenilecek kelimeler ve yanıtlarınızın nasıl geçtiği. Her toplantıdan önce bir brifing gelir.</dd></div>
-        <div><dt>Görevler</dt><dd>Her görüşmeden sonra yalnızca sizin işiniz: ne söz verdiniz, size ne soruldu ve takip edilecek sorular. Bunları yapılacak, sürüyor, incelemede ve bitti aşamalarından geçirin.</dd></div>
-        <div><dt>Sözlük</dt><dd>Her toplantıdaki her terim ve şirketinizde ne anlama geldiği. Bildiklerinizi tek tıkla işaretleyin; Daha Fazla, arkasındaki kişiler ve bağlantılar için kaynaklarınızı tarar.</dd></div>
-        <div><dt>Hazırlan</dt><dd>Toplantıdan önce brifingden birkaç soruyla hazır olup olmadığını kontrol et. Arada terimlerini çalış: çoktan seçmeli ya da kendi sözlerinle açıkla, yapay zekân ne kadar örtüştüğünü puanlar. Geçmişini saklar ve sürekli kaçırdıkların için bir çalışma rehberi yazar.</dd></div>
-        <div><dt>Alanlar</dt><dd>Ekipleri ve müşterileri ayrı tutun. Yeni toplantılar sizin yerinize dosyalanır, geri kalanı için Undertone bir alan önerir ve her görünüm seçtiğiniz alana göre filtrelenir.</dd></div>
-        <div><dt>Yanıt koçluğu</dt><dd>Görüşmedeki sizin tarafınız da metne dökülür; böylece görüşmeden sonra neyin karşılık bulduğunu ve bir dahaki sefere neyi toparlamanız gerektiğini görürsünüz.</dd></div>
-        <div><dt>Çıktılar</dt><dd>Durum raporları, sunumlar ve etkileşimli tuvaller; toplantılarınızdan ve kaynaklarınızdan yazılır, eksikler [TBD] ile işaretlenir. Markdown veya HTML olarak dışa aktarın.</dd></div>
-        <div><dt>Sor</dt><dd>Bir toplantıyla ya da hepsiyle, dosya ekleyerek sohbet et. Yanıtlar canlı gelir, önceki sohbetler Son Kullanılanlar’da bekler ve anlattıkların bir dahaki sefere hatırlanır.</dd></div>
-        <div><dt>Görüşme sırasında sorun</dt><dd>Canlı ipuçlarının altındaki sohbet alanı, toplantıdan çıkmadan, görüşmenin o ana kadarki kısmından yanıt verir.</dd></div>
-        <div><dt>Kişiler</dt><dd>Davetlerinizdeki herkes; rolleri, üzerinde çalıştıkları işler, birlikte yaptığınız toplantılar ve onlara borçlu olduklarınızla.</dd></div>
-        <div><dt>Anımsatıcılar</dt><dd>“Cumaya kadar” bir tarihe dönüşür. Bir önceki iş günü saat 9:00’da anımsatıcı gelir, süresi geçen görevler kırmızıya döner.</dd></div>
-        <div><dt>Sözlük rehberi</dt><dd>Bir ekibin sözlüğünü yeni katılanlar için paylaşılabilir bir rehbere dönüştürün; HTML veya Markdown olarak dışa aktarmaya hazır.</dd></div>
-        <div><dt>Düzelt ve çevir</dt><dd>Yanlış duyulan bir kelimeye sağ tıklayın; Undertone onu düzeltir ve bir dahaki sefere ona kulak kabartır. Herhangi bir bölümü 19 dile çevirin.</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="block" id="around">
-    <div class="wrap">
-      <div class="head">
-        <h2>Görüşmeden önce ve sonra</h2>
-        <p>Toplantıdan on beş dakika önce Undertone size bir brifing yazar ve beş dakika kala omzunuza dokunur; ayrıca görüşme bu bağlamla başlasın diye toplantının bağlamını kaynaklarınızdan toplar. Toplantı bittiğinde herkes için takip mesajı hazır olur; e-postaya ya da Slack’e yapıştırmanız yeter.</p>
-      </div>
-      <div class="duo">
-        <div class="pane bf" role="img" aria-label="Yaklaşan bir toplantı için örnek bildirim ve brifing">
-          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>Platform toplantısı 5 dk sonra</b><span>Maya: Staff engineer, Keystone’un sahibi</span></div><time>şimdi</time></div>
-          <p><b>Kim:</b> Maya, Platform’da Staff engineer. Dev sürüm yönetimini yürütüyor. Sam ilk kez katılıyor.</p>
-          <p><b>Geçen sefer:</b> yazma işlemleri yeni faturalama altyapısına taşındı; okuma geçişi ayın 14’üne ayarlandı <span class="s">[Jira INFRA-311]</span>.</p>
-          <p><b>Borcunuz:</b> Sam için geçiş planı, son gün Cuma.</p>
-          <p><b>Hazırlıklı olun:</b> “Geri alma prova edildi mi?” Evet, staging’de iki kez <span class="s">[Notion: Keystone rollback]</span>.</p>
-          <p class="sample" style="padding:6px 0 0">Örnek. Toplantılarınızdan, görevlerinizden ve kaynaklarınızdan yazıldı.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Toplantıdan sonra hazırlanan örnek takip mesajı">
-          <div class="fu-top"><div class="label" style="margin:0">Takip</div><span class="segs"><i>E-posta</i><i class="on">Slack</i></span></div>
-          <div class="fu">Herkese teşekkürler, bugünkü Platform toplantısının kısa özeti:<ul><li>Okuma geçişi ayın 14’ünde kalıyor</li><li>Dev, Perşembe için CAB slotunu ayırıyor</li><li>Geçiş planını Cumaya kadar Sam’e göndereceğim</li></ul><br>Açık: 14’ünden önce ikinci bir yük testine ihtiyacımız var mı?</div>
-          <p style="font-size:13px;color:var(--text-3);margin-top:12px">Düzenleyin, kopyalayın, kendiniz gönderin. <span class="connect" style="margin:0;margin-inline-start:6px">Kopyala</span></p>
-          <p class="sample" style="padding:10px 0 0">Örnek. Undertone hiçbir şey göndermez.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="people">
-    <div class="wrap">
-      <div class="head">
-        <h2>Odada kim var, bilin</h2>
-        <p>İsimler de jargondur. Toplantıdaki herhangi birine tıklayarak rolünü, üzerinde çalıştığı işleri, birlikte yaptığınız toplantıları ve ona borçlu olduklarınızı görün; hepsi kendi kaynaklarınızdan.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Rol, iş ve ortak geçmişi gösteren örnek kişi kartı">
-          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>Staff engineer, Platform</span></div></div>
-          <div class="pfacts">
-            <p><em>Üzerinde çalıştığı</em> Keystone, faturalama altyapısı geçişi <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
-            <p><em>Sizinle</em> geri alma runbook’unu inceliyor <span style="color:var(--text-3)">[Notion]</span></p>
-            <p><em>Geçen sefer</em> Platform toplantısı, Salı: geçiş ayın 14’ünde kalıyor</p>
-          </div>
-          <div class="chips"><span>6 ortak toplantı</span><span>Maya’ya 1 görev borçlusunuz</span></div>
-          <p class="sample" style="padding:14px 0 0">Örnek. İsimler ve projeler uydurmadır.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Son tarihleri ve bir anımsatıcıyı gösteren örnek görev listesi">
-          <div class="nt"><img src="../assets/icon-256.png" alt=""><div><b>Son gün Cuma: Geçiş planını Sam’e gönder</b><span>Bunu Platform toplantısında yapacağınızı söylediniz.</span></div><time>9:00</time></div>
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">Keystone geçiş planını Sam’e gönder<small>30 Eki Cum · “Cumaya kadar” denildi</small></span></li>
-            <li><span class="st"></span><span class="grow">Q3 NRR rakamlarını başkanla paylaş<small>Gelecek hafta · Yönetim kurulu Q&amp;A</small></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">Örnek. Yüksek sesle söylediğiniz son tarihler, bir önceki iş günü gelen bir anımsatıcıyla tarihe dönüşür.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="coaching">
-    <div class="wrap">
-      <div class="head">
-        <h2>Nasıl göründüğünüzü bilin</h2>
-        <p>Her görüşmeden sonra, size sorulan sorulara nasıl yanıt verdiğiniz ve nasıl konuştuğunuz için tek bir puan: konuşma süresi, tempo ve dolgu sözcükleri. Mülakatlarda bir sonraki tura hazırlanmanız için dürüst geri bildirim.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Örnek mülakat puanı: 100 üzerinden 78, büyük olasılıkla ilerleyecek, geliştirilecek noktalarla">
-          <div class="score-top">
-            <div class="ring" aria-hidden="true"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="31" fill="none" stroke="rgba(129,140,248,.18)" stroke-width="7"/><circle cx="36" cy="36" r="31" fill="none" stroke="#818CF8" stroke-width="7" stroke-linecap="round" stroke-dasharray="151.9 194.8"/></svg><b>78<small>/100</small></b></div>
-            <div><div class="sc-title">Mülakat puanı</div><span class="tag">Büyük olasılıkla ilerleyecek</span></div>
-          </div>
-          <p>Değişimi yönetmeye dair net, somut hikâyeler. Mimari yanıtı, ödünleşimlerin beklendiği yerde genel kaldı.</p>
-          <div class="label">Geliştirilecekler</div>
-          <ul class="ticks"><li>Önce kararla başlayın, sonra bağlamla</li><li>Yapacağınız bir ödünleşimi ve nedenini söyleyin</li></ul>
-          <p class="sample" style="padding:14px 0 0">Örnek. Mülakat olmayan toplantılar bir toplantı puanı alır: mükemmel, iyi, daha iyi olabilir ya da zayıf.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Elinizdeki bağlamı söyledikleriniz yanında gösteren örnek soru">
-          <div class="label" style="margin-top:0">Size soruldu</div>
-          <div class="q">“Tüm bilgilere sahip olmadan karar vermek zorunda kaldığınız bir anı anlatın.”</div>
-          <div class="part sug">
-            <div class="label">Elinizdeki bağlam</div>
-            <div class="lead">Notlarınızdan: iki hafta öne çekilen v1 lansmanı</div>
-            <ul class="ticks sug"><li>O an eksik olan: iki haftalık pay</li><li>Karar: v1’i dışa aktarma olmadan yayınlamak</li><li>Sonuç: zamanında, dışa aktarma bir ay sonra</li></ul>
-          </div>
-          <div class="part you">
-            <div class="label">Söyledikleriniz</div>
-            <ul class="ticks you"><li>O dönem ekibi günlük sürümlere geçirdik.</li><li>Darboğazları buldum ve işi sonuna kadar götürdüm.</li></ul>
-          </div>
-          <p class="sample" style="padding:14px 0 0">Örnek. Sizin tarafınız, Mac’inizde mikrofonunuzdan gelir.</p>
-        </div>
-      </div>
-      <div class="metrics" role="img" aria-label="Örnek konuşma istatistikleri: konuşma payı, tempo, dolgu sözcükleri, en uzun konuşma ve sorulan sorular">
-        <div><b>41%</b><span>konuşma payı</span></div>
-        <div><b>152</b><span>kelime/dakika</span></div>
-        <div><b>2.1</b><span>dolgu/dakika</span></div>
-        <div><b>1:48</b><span>en uzun konuşma</span></div>
-        <div><b>4</b><span>sorulan soru</span></div>
-      </div>
-      <p class="sample" style="padding:12px 0 0">Örnek. Nasıl konuştuğunuz, görüşmedeki sizin tarafınızdan Mac’inizde ölçülür.</p>
-    </div>
-  </section>
-
-  <section class="block" id="tasks">
-    <div class="wrap">
-      <div class="head">
-        <h2>Başlat’a basın, iş başlasın</h2>
-        <p>Toplantılarınızdan çıkan her görevin bir başlat düğmesi vardır. Sor, görevi toplantıyla, belleğinizle ve kaynaklarınızla birlikte ele alır, sonucun taslağını hazırlar ve yalnızca bulamadığını sorar.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Yapılacak, sürüyor ve incelemede durumları ile başlat düğmeleri olan örnek görev listesi">
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">Keystone geçiş planını Sam’e gönder<small>Sürüyor · son gün Cuma</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st rev"></span><span class="grow">Q3 platform güncellemesini hazırla<small>İncelemede</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st"></span><span class="grow">Perşembe için CAB slotunu onayla<small>Yapılacak · Mühendislik toplantısı</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">Örnek. Biten görevler Tamamlananlar’a geçer, yeniden açılmaya hazır.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Bir görev üzerinde çalışan ve Notion bağlantısı isteyen örnek Sor sohbeti">
-          <div class="chat-me">“Keystone geçiş planını Sam’e gönder” üzerinde çalışmaya başla</div>
-          <div class="chat-ai"><b>Sam için taslak:</b> Yazma işlemleri geçen hafta yeni faturalama altyapısına taşındı; okuma geçişi ayın 14’ü için planlandı, geri alma staging’de prova edildi<span class="caret" aria-hidden="true"></span><br><br>Geri alma runbook’u Notion’da duruyor ve Notion henüz bağlı değil.</div>
-          <span class="connect"><img src="../assets/logos/notion.png" alt="" width="14" height="14">Notion’u bağla</span>
-          <p class="sample" style="padding:14px 0 0">Örnek. Yanıtlar yazıldıkça akarak gelir.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ready">
-    <div class="wrap">
-      <div class="head">
-        <h2>Siz sormadan hazır olan bağlam</h2>
-        <p>Undertone her saat, görüşmelerin arasında, bağlı kaynaklarınızdaki açık görevlerinizi ve son toplantılarınızı okur ve kaynaklı, kısa bir özet tutar. Başlat’a bastığınızda ya da ayrıntı istediğinizde yanıt, dakikalarca aramak yerine zaten bildiklerinden başlar.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Her görevin bağlam hazır işareti gösterdiği, arka plan bağlam durumunu içeren örnek görev listesi">
-          <ul class="board">
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Keystone geçiş planını Sam’e gönder<small>Bağlam hazır · Slack, Jira, Notion</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Q3 platform güncellemesini hazırla<small>Bağlam hazır · Confluence, Granola</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Mühendislik toplantısı, Salı<small>Bağlam hazır · 3 takip bulundu</small></span></li>
-          </ul>
-          <div class="idx"><span><b>Arka plan bağlamı</b> · 8 özet hazır · 12 dk önce güncellendi</span><span class="connect" style="margin:0;white-space:nowrap;flex:none">Şimdi çalıştır</span></div>
-          <p class="sample" style="padding:14px 0 0">Örnek. Görüşmeler sırasında duraklar ve kendi yapay zekânızı kullanır.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Hazırlanmış bağlamdan başlayıp saniyeler içinde yanıt veren örnek Sor yanıtı">
-          <div class="chat-me">Keystone geçiş görevi hakkında daha fazla ayrıntı ver</div>
-          <div class="fast"><span class="dot"></span>Hazırlanmış bağlamdan 12 saniyede yanıtlandı</div>
-          <div class="chat-ai"><b>Zaten gönderildi:</b> geçiş planı bu sabah Slack’te Sam’e iletildi [Slack DM].<br><br><b>Hâlâ açık:</b> 14’ündeki okuma geçişi CAB slotunu bekliyor [Jira KEY-212] ve geri alma runbook’unun son bir incelemeye ihtiyacı var [Notion: Keystone rollback].</div>
-          <p class="sample" style="padding:14px 0 0">Örnek. Özetten bu yana daha yeni bir şey olup olmadığını yine de kontrol eder.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ask">
-    <div class="wrap">
-      <div class="head">
-        <h2>Ask: bir iş arkadaşına sorar gibi</h2>
-        <p>Toplantılarınla ilgili her soru için geniş bir kutu. Bir toplantı ya da hepsini seç, dosya ekle ve önceki sohbetlere Son Kullanılanlar’dan devam et.</p>
-      </div>
-      <div class="askmock" role="img" aria-label="Örnek Ask başlangıç ekranı: bir selamlama, soru kutusu ve son sohbetlerin listesi">
-        <h3>Merhaba Alex, ne istersen sor</h3>
-        <div class="am-box">
-          <div class="am-ph">Bu hafta ne karar verdik?</div>
-          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>Tüm toplantılar ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
-        </div>
-        <div class="am-rec">Son kullanılanlar</div>
-        <ul>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Son toplantım ne hakkındaydı?</span><small>6m</small></li>
-          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>4. çeyrek planlama görüşmesi için takip e-postası</span><small>1d</small></li>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Kestrel panosundan kim sorumlu?</span><small>2d</small></li>
-        </ul>
-      </div>
-      <p class="sample" style="padding:14px 0 0">Örnek. İsimler ve toplantılar uydurmadır.</p>
-    </div>
-  </section>
-
-  <section class="block" id="canvas">
-    <div class="wrap">
-      <div class="head">
-        <h2>Bir yanıtı tuvale dönüştürün</h2>
-        <p>Sor size üzerinden geçilecek bir liste verdiğinde “Bunu tuvale dönüştürelim mi?” sorusuna evet deyin; Çıktılar içinde etkileşimli bir sayfaya dönüşsün: işaretleyebileceğiniz kontrol listeleri, katlanan bölümler, sayan bir ilerleme göstergesi ve siz çalıştıkça kayıt.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Bölümler, onay kutuları ve adımlarla biçimlendirilmiş, tuval oluşturmayı öneren örnek Sor yanıtı">
-          <div class="chat-me">Geçişten önce hangi Keystone kayıtlarının hâlâ tamamlanması gerekiyor?</div>
-          <div class="chat-ai"><b>4 sürüyor, 1 engellendi, 2 karar bekliyor.</b></div>
-          <div class="label">Sürüyor</div>
-          <ul class="ticks"><li>Fatura okumalarını yeni faturalama altyapısına taşı</li><li>Geçen yılın faturalarını geriye dönük doldur</li></ul>
-          <div class="label">Engellendi</div>
-          <ul class="ticks"><li>Yük testi staging yenilemesini bekliyor</li></ul>
-          <p style="font-size:13px;color:var(--text-3);margin-top:14px">Bunu tuvale dönüştürelim mi? <span class="connect" style="margin:0;margin-inline-start:6px">Tuval oluştur</span></p>
-        </div>
-        <div class="pane cv" role="img" aria-label="Örnek tuval: grup başına ilerleme gösteren bir kontrol listesi">
-          <h3>Keystone geçişi kontrol listesi</h3>
-          <div class="meta">Mühendislik toplantısından · 7’de 3 tamamlandı</div>
-          <div class="grp"><div class="gh">Sürüyor <span>4’te 2</span></div>
-            <ul><li class="on"><i></i>Fatura okumalarını yeni faturalama altyapısına taşı</li><li class="on"><i></i>Geçen yılın faturalarını geriye dönük doldur</li><li><i></i>Geri almayı staging’de prova et</li><li><i></i>Nöbet runbook’unu güncelle</li></ul></div>
-          <div class="grp"><div class="gh">Engellendi <span>1’de 1</span></div>
-            <ul><li class="on"><i></i>Yük testi staging yenilemesini bekliyor</li></ul></div>
-          <div class="grp shut"><div class="gh">Karar bekliyor <span>2 açık</span></div></div>
-          <p class="sample" style="padding:14px 0 0">Örnek. Tuvaller yalıtılmış çalışır: internet yok, dışarıdan hiçbir şey yüklenmez.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="speed">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Saniyeler içinde yanıtlar</h2>
-          <p>Undertone, zaten bildiklerinden hızlı bir modelle yanıt verir ve yalnızca bu yetmediğinde araçlarınızda arama yapar.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Görüşme sırasındaki yanıt kartları arka plan özetlerinden ve belleğinizden yararlanır</li>
-          <li>Arama yaptığında aynı anda birkaç kaynağa bakar, sonuç vermeyen bir aramayı yeniden ifade eder ve en geç 14 saniyede durur</li>
-          <li>Her yanıt nerede bulunduğunu adım adım gösterir</li>
-          <li>Sürekli gündeme gelen konular ve kişiler hakkında, her soruyla eşleşen özetler</li>
-          <li>Kaynaklar çeliştiğinde en yenisi kazanır</li>
-          <li>Takılan bir yanıt sizi bekletmek yerine hızlı modele devredilir</li>
-        </ul>
-      </div>
-      <div class="bars" aria-label="Undertone’un kendi kıyaslama testiyle ölçüldü">
-        <div>
-          <h4>Sor, ilk kelimelere kadar geçen süre <small>medyan</small></h4>
-          <div class="bar"><span>Önce</span><i style="--w:100%"></i><b>12,7 sn</b></div>
-          <div class="bar new"><span>Şimdi</span><i style="--w:35%"></i><b>4,5 sn</b></div>
-        </div>
-        <div>
-          <h4>Canlı yanıtlar, tam yanıt <small>medyan</small></h4>
-          <div class="bar"><span>Önce</span><i style="--w:100%"></i><b>16,5 sn</b></div>
-          <div class="bar new"><span>Şimdi</span><i style="--w:31%"></i><b>5,1 sn</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="paste">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Yapıştırmaya hazır yanıtlar</h2>
-          <p>Sor, istediğinle başlar. Taslak, kopyalamaya hazır tek bir mesaj olarak gelir; eksikler altında listelenir.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Slack veya e-posta için tek bir önerilen taslak, kendi Kopyala düğmesiyle</li>
-          <li>Eksik bağlantılar ve doğrulanamayanlar taslağın altında listelenir, asla içinde değil</li>
-          <li>Sohbetteki herhangi bir metni seçip kopyalayın ya da çevirin; mesaj kutusunda onu çeviriyle değiştirin</li>
-          <li>İlk çeviri, metnin hangi yapay zekâya gittiğini söyler</li>
-        </ul>
-      </div>
-      <div class="paste" aria-label="Sor’da örnek yanıt">
-        <h4>Önerilen mesaj</h4>
-        <div class="draft">
-          <div class="bar"><b>Kopyalamaya hazır</b><span class="btn-copy">Kopyala</span></div>
-          <p translate="no">*Keystone update*
-• Billing writes moved to the new stack last week
-• The read cutover is planned for the 14th</p>
-        </div>
-        <div class="missing">Eksik: geçiş kontrol listesinin bağlantısı bulunamadı, bu yüzden mesajda yok.</div>
-        <div class="tpop">
-          <div class="row"><b>Çevir</b><span class="pick" translate="no">Español</span></div>
-          <p translate="no">El cambio de lectura está previsto para el día 14</p>
-          <div class="acts"><span>Çeviriyi kopyala</span><span class="primary">Seçimi değiştir</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>İş işte kalır</h2>
-          <p>Undertone iş toplantılarını kişisel olanlardan ayırır. Bir web semineri ya da kişisel takviminizdeki bir görüşme, iş araçlarınıza dokunmadan genel bilgiyle açıklanır.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Her takvimi İş veya Kişisel olarak işaretleyin; şirket hesapları İş olarak başlar</li>
-          <li>Kişisel toplantılar iş araçlarınızı ve belleğinizi kullanmaz, özetleri de amem’e gitmez</li>
-          <li>Herhangi bir toplantıyı ipuçları panelinden İş ile Kişisel arasında değiştirin</li>
-          <li>Yalnızca dinlediğiniz web seminerlerinde ve Comet, Vivaldi, Opera gibi daha fazla tarayıcıda kendiliğinden başlar</li>
-          <li>Bir sorunun kime sorulduğunu söyler: size, adıyla başka birine ya da herkese</li>
-          <li>Kopup geri gelen bir görüşme yeni bir toplantı değil, aynı toplantının devamı olur</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="Örnek takvim ayarları">
-        <h4>Takvimler</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">İş</i><i>Kişisel</i></span></div>
-        <div class="acct"><span>Kişisel Gmail</span><span class="seg"><i>İş</i><i class="on">Kişisel</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>İş</i><i class="on">Kişisel</i></span></div>
-        <span class="chip">Kişisel toplantı · kişisel bir takvimde</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="languages">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Senin dilini konuşur</h2>
-          <p>Undertone 17 dilde. Mac’inin dilini izler, Ayarlar’dan başka bir dil de seçebilirsin.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>İpuçları, yanıtlar ve özetler senin dilinde yazılır; toplantıdaki terimler söylendiği gibi kalır</li>
-          <li>19 dil ve lehçeden herhangi birinde yapılan toplantılar Mac’inde metne dökülür</li>
-          <li>Tüm Google, iCloud ve Outlook hesaplarındaki hangi takvimlerin kullanılacağını seç</li>
-          <li>Arapça için sağdan sola düzen</li>
-          <li>“Sıradaki”, bağlıysa Google Takvim’i doğrudan okur; adı değişen ya da iptal edilen toplantılar listede kalmaz</li>
-        </ul>
-      </div>
-      <div class="langs" translate="no" aria-label="Undertone’un sunulduğu diller"><span lang="en">English</span><span lang="es">Español</span><span lang="fr">Français</span><span lang="de">Deutsch</span><span lang="it">Italiano</span><span lang="pt-BR">Português (Brasil)</span><span lang="nl">Nederlands</span><span lang="pl">Polski</span><span lang="tr">Türkçe</span><span lang="ru">Русский</span><span lang="uk">Українська</span><span lang="ar">العربية</span><span lang="hi">हिन्दी</span><span lang="ja">日本語</span><span lang="ko">한국어</span><span lang="zh-Hans">简体中文</span><span lang="zh-Hant">繁體中文</span></div>
-      <script>(function(){var l=document.documentElement.lang;document.querySelectorAll(".langs span").forEach(function(e){if(e.lang===l)e.classList.add("on")})})();</script>
-    </div>
-  </section>
-
   <section class="block" id="claude">
     <div class="wrap claude">
       <div class="head">
@@ -1361,29 +1040,7 @@
   <span class="k">"command"</span>: "/Applications/Undertone.app/Contents/MacOS/Undertone",
   <span class="k">"args"</span>: ["--mcp"]
 }</pre>
-    </div>
-  </section>
-
-  <section class="block" id="amem">
-    <div class="wrap amem">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>amem ile daha da iyi</h2>
-          <p>Undertone toplantılarınızın kendi belleğini her zaman tutar. Claude Code, Cursor ve diğer yapay zekâ araçlarınızın paylaştığı Mac'inizdeki bellek olan amem'i ekleyin; Undertone ikisinde birlikte arar. Kurulum bunu önerir ve sizin için yükler.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Claude Code veya Cursor ile üzerinde çalıştıklarınız, bir sonraki görüşmenizde bağlam olur</li>
-          <li>Her toplantı özeti sonrasında yapay zekâ araçlarınızda hazır olur</li>
-          <li>Undertone’a söyledikleriniz kalıcı olarak hatırlanır</li>
-        </ul>
-      </div>
-      <div>
-        <pre class="code" aria-label="amem’i yükle" translate="no">npx @iamem/amem setup</pre>
-        <div class="ctas">
-          <a class="btn btn-ghost" href="https://getamem.com/">amem’i al</a>
-        </div>
-        <p class="note">Ya da Undertone kurulumunun yüklemesine izin verin. Node.js gerektirir. Mac’inizde kalır.</p>
-      </div>
+      <p class="aside"><a href="https://github.com/sslugic/amem" translate="no">amem</a> da ekleyin; toplantılarınız Claude Code, Cursor ve diğer yapay zekâ araçlarınızla tek bir belleği paylaşsın.</p>
     </div>
   </section>
 
@@ -1467,56 +1124,6 @@
       && !(navigator.connection && navigator.connection.saveData);
     if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
-
-  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
-  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
-  (function () {
-    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
-      var c = t.content, ctx = c.querySelector("[data-ctx]");
-      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
-        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
-    });
-    var tabs = document.querySelectorAll(".tab");
-    var panel = document.getElementById("panel");
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function select(n, focus) {
-      var d = data[n];
-      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
-      if (focus) tabs[n].focus();
-      panel.setAttribute("aria-labelledby", "tab-" + n);
-      document.getElementById("d-title").textContent = d.title;
-      document.getElementById("d-meta").textContent = d.meta;
-      document.getElementById("d-say").innerHTML = d.say;
-      var ctx = document.getElementById("d-ctx");
-      ctx.className = d.ctxClass;
-      ctx.innerHTML = d.ctx;
-      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
-    }
-    tabs.forEach(function (t, n) {
-      t.addEventListener("click", function () { select(n); });
-      t.addEventListener("keydown", function (e) {
-        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
-        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
-      });
-    });
-  })();
-</script>
-<script>
-(() => {
-  const dm = document.querySelector('.dm');
-  if (!dm) return;
-  const items = dm.querySelectorAll('.dm-steps li');
-  const show = n => { dm.dataset.step = n; items.forEach(li => li.classList.toggle('on', +li.dataset.s === n)); };
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { show(3); return; }
-  let n = 1, timer;
-  const tick = () => { n = n % 3 + 1; show(n); timer = setTimeout(tick, n === 3 ? 4200 : 2200); };
-  const io = new IntersectionObserver(([e]) => {
-    clearTimeout(timer);
-    if (e.isIntersecting) { show(n = 1); timer = setTimeout(tick, 2200); }
-  });
-  io.observe(dm);
-  items.forEach(li => li.addEventListener('click', () => { clearTimeout(timer); show(n = +li.dataset.s); timer = setTimeout(tick, 5000); }));
-})();
 </script>
 <script>
   // Use cases: one industry at a time. Arrow keys, Home and End move between tabs (roving tabindex).

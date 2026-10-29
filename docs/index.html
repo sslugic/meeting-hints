@@ -312,6 +312,13 @@
   .ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--dotc, #71717A); }
   .ticks.sug { --dotc: var(--accent); }
   .ticks.you { --dotc: #D4D4D8; }
+  /* Before, after and between calls: the points under each visual, two columns on wide screens */
+  .outcomes { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; max-width: 940px; }
+  .outcomes li { font-size: 15.5px; color: #D4D4D8; }
+  @media (max-width: 720px) { .outcomes { grid-template-columns: 1fr; } }
+  .aside { margin-top: 22px; color: var(--text-2); font-size: 15px; }
+  .aside a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border-2); text-underline-offset: 3px; }
+  .aside a:hover { text-decoration-color: var(--text); }
   .q { font-size: 15px; font-weight: 600; letter-spacing: -.01em; line-height: 1.45; margin-top: 4px; }
   .part { border-inline-start: 2px solid var(--partc); padding-inline-start: 12px; margin-top: 16px; }
   .part.sug { --partc: var(--accent); }
@@ -663,11 +670,10 @@
     <a class="brand" href="#" translate="no"><img src="assets/icon-256.png" alt="">Undertone <span class="pill">macOS</span></a>
     <nav class="nav-links" aria-label="Main">
       <a href="#how">How it works</a>
+      <a href="#before">Features</a>
       <a href="#use-cases">Use cases</a>
-      <a href="#features">Features</a>
-      <a href="#claude">AI tools</a>
-      <a href="#pricing">Free beta</a>
       <a href="#privacy">Privacy</a>
+      <a href="#pricing">Free beta</a>
       <a class="opt" href="https://github.com/sslugic/undertone">GitHub</a>
       <a class="opt" href="https://github.com/sslugic/undertone/releases">Changelog</a>
       <!--i18n:menu-nav--><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span class="lang-cur" translate="no">EN</span><svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></summary><ul class="lang-menu" translate="no"><li><a href="./?lang=en" hreflang="en" lang="en" data-lang="en" aria-current="page">English</a></li><li><a href="es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a></li><li><a href="nl/" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li><li><a href="pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li><li><a href="tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="uk/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li><li><a href="ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li><li><a href="ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="zh-Hans/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li><li><a href="zh-Hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li></ul></details><!--/i18n:menu-nav-->
@@ -679,9 +685,8 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="status"><span class="dot" aria-hidden="true"></span>Live meeting intelligence for macOS</span>
       <h1>Know what everyone means, and what to say next.</h1>
-      <p class="sub">Undertone listens along to your calls. It explains code names and acronyms the moment they come up, brings up the facts when you're asked, and afterwards hands you the recap, your tasks and a briefing for the next call. All from your team's own Slack, Notion and Jira, transcribed on your Mac.</p>
+      <p class="sub">Undertone listens along to your calls and explains code names and acronyms the moment they come up, from your team's own Slack, Notion and Jira. Afterwards, your recap, tasks and next briefing are waiting. Transcribed on your Mac.</p>
       <div class="ctas">
         <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.18.2</span></a>
         <a class="btn btn-ghost btn-lg" href="https://github.com/sslugic/undertone"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Releases and issues</a>
@@ -695,34 +700,6 @@
       </video>
     </div>
     <p class="sample hero-note">Sample. Names, companies and tickets are made up. Unmute for music.</p>
-  </section>
-
-  <section class="block" id="demo">
-    <div class="wrap">
-      <div class="head">
-        <h2>Three steps, while it's still being said</h2>
-        <p>Undertone transcribes the call on your Mac, picks out the names you probably don't know, and explains them from your own team's tools.</p>
-      </div>
-      <div class="dm" data-step="1" aria-label="Animated sample: a question in a call, the terms Undertone spots, and the hint it shows">
-        <ol class="dm-steps">
-          <li class="on" data-s="1"><b>Step 1</b><span>The call is transcribed on your Mac</span></li>
-          <li data-s="2"><b>Step 2</b><span>Undertone spots what you might not know</span></li>
-          <li data-s="3"><b>Step 3</b><span>A hint explains it from your sources</span></li>
-        </ol>
-        <div class="dm-stage">
-          <p class="dm-say"><span class="who">Priya · 10:14 · live</span>“Wait, did we migrate <mark>Project Odin</mark> off the legacy <mark>V2 webhook</mark> after the March incident?”</p>
-          <div class="dm-spot" aria-hidden="true"><span>Project Odin · likely new</span><span>V2 webhook · likely new</span></div>
-          <div class="dm-card">
-            <h3>Project Odin <small>From your workspace</small></h3>
-            <ul>
-              <li>The notifications pipeline rewrite. It moved off the V2 webhook on April 2, after the March outage <span class="s">[Slack #eng-infra]</span></li>
-              <li>The V2 webhook is deprecated and turns off June 30; two internal services still call it <span class="s">[Jira ENG-1402]</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="sample" style="padding:14px 0 0">Sample. Names, channels and tickets are made up.</p>
-    </div>
   </section>
 
   <section class="block" id="why">
@@ -777,43 +754,115 @@
     </div>
   </section>
 
-  <section class="block" id="try">
+  <section class="block" id="before">
     <div class="wrap">
       <div class="head">
-        <h2>Try it on a sample meeting</h2>
-        <p>Pick a meeting to see what Undertone would show you. In the app, Home › Try a sample meeting plays a made-up standup through the real panel before your first call.</p>
+        <h2>Walk in knowing the room</h2>
+        <p>Fifteen minutes before a meeting, Undertone writes you a briefing from your past meetings, tasks and sources: who's coming, what was left open and what you owe.</p>
       </div>
-      <div class="demo">
-        <div class="tabs" role="tablist" aria-label="Sample meetings">
-          <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel" data-i="0"><b>Engineering sync</b><span>A release process acronym</span></button>
-          <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel" data-i="1" tabindex="-1"><b>Sales handover</b><span>A contract term</span></button>
-          <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel" data-i="2" tabindex="-1"><b>Board Q&amp;A</b><span>A question for you</span></button>
+      <div class="duo">
+        <div class="pane bf" role="img" aria-label="Sample notification and briefing for an upcoming meeting">
+          <div class="nt"><img src="assets/icon-256.png" alt=""><div><b>Platform sync in 5 min</b><span>Maya: Staff engineer, owns Keystone</span></div><time>now</time></div>
+          <p><b>Who:</b> Maya, Staff engineer on Platform. Dev runs release management. Sam is joining for the first time.</p>
+          <p><b>Last time:</b> writes moved to the new billing stack; the read cutover is set for the 14th <span class="s">[Jira INFRA-311]</span>.</p>
+          <p><b>You owe:</b> the cutover plan for Sam, due Friday.</p>
+          <p><b>Be ready for:</b> “Is rollback rehearsed?” Yes, twice on staging <span class="s">[Notion: Keystone rollback]</span>.</p>
+          <p class="sample" style="padding:6px 0 0">Sample. Written from your meetings, tasks and sources.</p>
         </div>
-        <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
-          <div class="hud-head">
-            <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-            <div><div class="hud-title" id="d-title">Engineering sync</div><div class="hud-meta" id="d-meta">10:12 · Listening</div></div>
+        <div class="pane" role="img" aria-label="Sample person card with role, work and shared history">
+          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>Staff engineer, Platform</span></div></div>
+          <div class="pfacts">
+            <p><em>Works on</em> Keystone, the billing-stack migration <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
+            <p><em>With you</em> reviewing the rollback runbook <span style="color:var(--text-3)">[Notion]</span></p>
+            <p><em>Last time</em> Platform sync, Tuesday: cutover stays on the 14th</p>
           </div>
-          <p class="say" id="d-say"><span class="who"><b>Dev</b> · 10:12</span>We'll merge once Keystone clears <span class="term">CAB</span> on Thursday.</p>
-          <div class="ctx" id="d-ctx"><div class="ct">CAB <small>Likely new</small></div><p>Change Advisory Board: the Thursday review that approves production changes.</p><span class="src"><img src="assets/logos/confluence.png" alt="" width="13" height="13">Confluence · Release process</span></div>
-          <p class="sample">Sample scenarios. Companies, people and figures are made up.</p>
+          <div class="chips"><span>6 meetings together</span><span>You owe Maya 1 task</span></div>
+          <p class="sample" style="padding:14px 0 0">Sample. Names and projects are made up.</p>
         </div>
-        <template class="demo-data">
-          <div data-title>Engineering sync</div><div data-meta>10:12 · Listening</div>
-          <p data-say><span class="who"><b>Dev</b> · 10:12</span>We'll merge once Keystone clears <span class="term">CAB</span> on Thursday.</p>
-          <div data-ctx class="ctx"><div class="ct">CAB <small>Likely new</small></div><p>Change Advisory Board: the Thursday review that approves production changes.</p><span class="src"><img src="assets/logos/confluence.png" alt="" width="13" height="13">Confluence · Release process</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>Sales handover</div><div data-meta>15:40 · Listening</div>
-          <p data-say><span class="who"><b>Priya</b> · 15:40</span>Northwind signed the custom <span class="term">DPA</span>, so retention is capped.</p>
-          <div data-ctx class="ctx"><div class="ct">DPA <small>Maybe new</small></div><p>Data Processing Agreement. Northwind's version limits data retention to 30 days.</p><span class="src"><img src="assets/logos/slack.png" alt="" width="13" height="13">Slack · #deal-northwind</span></div>
-        </template>
-        <template class="demo-data">
-          <div data-title>Board Q&amp;A</div><div data-meta>09:31 · Listening</div>
-          <p data-say><span class="who"><b>Chair</b> · 09:31 · <em>to you</em></span>What's driving <span class="term">net revenue retention</span> this quarter?</p>
-          <div data-ctx class="ctx answer"><div class="ct">Context for you <small>The chair asked</small></div><p>NRR went from 108% to 112%, driven by enterprise expansions: three accounts added seats.</p><span class="src"><img src="assets/logos/notion.png" alt="" width="13" height="13">Notion · Q3 board deck</span></div>
-        </template>
       </div>
+      <ul class="ticks sug outcomes">
+        <li>Click anyone on the invite to see their role, what they work on and what's open between you</li>
+        <li>A few quick questions from the briefing check you're ready</li>
+        <li>The meeting's context is gathered from your sources just before it starts, so the call begins with it</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="after">
+    <div class="wrap">
+      <div class="head">
+        <h2>Know what happens next</h2>
+        <p>When the call ends, the recap and your tasks are waiting on Home, and the follow-up for everyone is already drafted.</p>
+      </div>
+      <div class="app" role="img" aria-label="Undertone's Home window with upcoming meetings, your tasks, words to learn and answer coaching, using sample data">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Platform team</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Home</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Meetings</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>Tasks</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Glossary</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Ask</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Artifacts</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Good morning, Alex</div>
+          <p class="date">Wednesday, October 28 · Platform team</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">Up next <small>Calendar</small></div>
+              <div class="row"><span class="t">10:00</span><span class="grow">Platform sync<span class="sub2">Maya, Dev, Sam · 2 related meetings · 1 open task</span></span><span class="mini">Prep</span></div>
+              <div class="row"><span class="t">14:30</span><span class="grow">Northwind renewal<span class="sub2">Priya, Jordan · 1 related meeting</span></span><span class="mini">Prep</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Your tasks <small>2 open</small></div>
+              <div class="row"><span class="box"></span><span class="grow">Send Sam the Keystone read-cutover plan<span class="sub2">Platform sync · due Friday · <span class="hi">High</span></span></span></div>
+              <div class="row"><span class="box"></span><span class="grow">Confirm the CAB slot for Thursday<span class="sub2">Engineering sync</span></span></div>
+              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">Share Q3 NRR numbers with the chair</span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Words to learn <small>Glossary</small></div>
+              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">The Q3 migration to the new billing stack, led by Infra.</span></span></div>
+              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">Data Processing Agreement. Northwind's version caps retention at 30 days.</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Answer coaching <small>Platform sync</small></div>
+              <div class="row"><span class="grow">“Can you give us a quick status on Keystone?”<span class="sub2">Lead with the date, then the one risk. The cutover on the 14th came last.</span></span><span class="verdict">Okay</span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Sample data. Names, projects and meetings are made up.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Only your own tasks, with the dates you said out loud and a reminder the working day before</li>
+        <li>A follow-up email or Slack message, ready to paste. Undertone never sends anything.</li>
+        <li>A score for how you answered the questions put to you, and how you spoke</li>
+        <li>Press start on a task, and Ask drafts it from the meeting, your memory and your sources</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="between">
+    <div class="wrap">
+      <div class="head">
+        <h2>Find what was said</h2>
+        <p>Ask about your meetings like you'd ask a colleague. Answers come from your meetings and your team's tools, with their sources.</p>
+      </div>
+      <div class="askmock" role="img" aria-label="Sample Ask start screen: a greeting, the question box and a list of recent chats">
+        <h3>Hi Alex, ask anything</h3>
+        <div class="am-box">
+          <div class="am-ph">What did we decide this week?</div>
+          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>All meetings ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
+        </div>
+        <div class="am-rec">Recents</div>
+        <ul>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>What was my most recent meeting about?</span><small>6m</small></li>
+          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>Follow-up email for the Q4 planning call</span><small>1d</small></li>
+          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Who owns the Kestrel dashboard?</span><small>2d</small></li>
+        </ul>
+      </div>
+      <p class="sample" style="padding:14px 0 0">Sample. Names and meetings are made up.</p>
+      <ul class="ticks sug outcomes">
+        <li>Ask about one meeting or all of them, and pick up earlier chats from Recents</li>
+        <li>Between calls, context on your open tasks is gathered ahead, so answers start fast</li>
+        <li>Turn a list into a canvas you can tick off</li>
+        <li>Practice your team's terms with quick quizzes until you know them</li>
+      </ul>
     </div>
   </section>
 
@@ -1007,376 +1056,6 @@
     </div>
   </section>
 
-  <section class="block" id="features">
-    <div class="wrap">
-      <div class="head">
-        <h2>After the call, it keeps working</h2>
-        <p>Open Undertone like any Mac app and your week is waiting: what's next, what you owe, and what you heard but didn't know.</p>
-      </div>
-
-      <div class="app" role="img" aria-label="Undertone's Home window with upcoming meetings, your tasks, words to learn and answer coaching, using sample data">
-        <aside class="app-side" aria-hidden="true">
-          <div class="lights"><i></i><i></i><i></i></div>
-          <div class="space"><span><i></i>Platform team</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
-          <ul class="app-nav"><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Home</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Meetings</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h11M9 12h11M9 17h11M4 7l1 1 2-2M4 12l1 1 2-2M4 17l1 1 2-2"/></svg>Tasks</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Glossary</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Ask</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Artifacts</li></ul>
-        </aside>
-        <div class="app-main" aria-hidden="true">
-          <div class="hello">Good morning, Alex</div>
-          <p class="date">Wednesday, October 28 · Platform team</p>
-          <div class="cards">
-            <div class="card">
-              <div class="h4">Up next <small>Calendar</small></div>
-              <div class="row"><span class="t">10:00</span><span class="grow">Platform sync<span class="sub2">Maya, Dev, Sam · 2 related meetings · 1 open task</span></span><span class="mini">Prep</span></div>
-              <div class="row"><span class="t">14:30</span><span class="grow">Northwind renewal<span class="sub2">Priya, Jordan · 1 related meeting</span></span><span class="mini">Prep</span></div>
-            </div>
-            <div class="card">
-              <div class="h4">Your tasks <small>2 open</small></div>
-              <div class="row"><span class="box"></span><span class="grow">Send Sam the Keystone read-cutover plan<span class="sub2">Platform sync · due Friday · <span class="hi">High</span></span></span></div>
-              <div class="row"><span class="box"></span><span class="grow">Confirm the CAB slot for Thursday<span class="sub2">Engineering sync</span></span></div>
-              <div class="row done"><span class="box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span><span class="grow">Share Q3 NRR numbers with the chair</span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">Words to learn <small>Glossary</small></div>
-              <div class="row"><span class="grow"><b>Keystone</b> ×3<span class="sub2">The Q3 migration to the new billing stack, led by Infra.</span></span></div>
-              <div class="row"><span class="grow"><b>DPA</b><span class="sub2">Data Processing Agreement. Northwind's version caps retention at 30 days.</span></span></div>
-            </div>
-            <div class="card opt">
-              <div class="h4">Answer coaching <small>Platform sync</small></div>
-              <div class="row"><span class="grow">“Can you give us a quick status on Keystone?”<span class="sub2">Lead with the date, then the one risk. The cutover on the 14th came last.</span></span><span class="verdict">Okay</span></div>
-            </div>
-          </div>
-          <p class="sample" style="padding:14px 0 0">Sample data. Names, projects and meetings are made up.</p>
-        </div>
-      </div>
-
-      <dl class="features">
-        <div><dt>Home</dt><dd>Today's meetings from your Mac's Calendar, your open tasks, words to learn and how your answers went. A briefing arrives before each meeting.</dd></div>
-        <div><dt>Tasks</dt><dd>After each call, only your work: what you promised, what you were asked, and questions to follow up. Move them through to do, in progress, in review and done.</dd></div>
-        <div><dt>Glossary</dt><dd>Every term from every meeting with what it means at your company. Mark the ones you know in one click; More digs through your sources for the people and links behind it.</dd></div>
-        <div><dt>Prep</dt><dd>Before a meeting, check you're ready with a few questions from its briefing. In between, practice your terms: multiple choice, or explain them in your own words and your AI scores the match. It keeps your history and writes a study guide on what you keep missing.</dd></div>
-        <div><dt>Spaces</dt><dd>Keep teams and clients apart. New meetings are filed for you, Undertone suggests a space for the rest, and every view filters to the space you pick.</dd></div>
-        <div><dt>Answer coaching</dt><dd>Your side of the call is transcribed too, so after a call you see what landed and what to tighten next time.</dd></div>
-        <div><dt>Artifacts</dt><dd>Status reports, slide decks and interactive canvases, written from your meetings and sources with gaps marked [TBD]. Export to Markdown or HTML.</dd></div>
-        <div><dt>Ask</dt><dd>Chat with one meeting or all of them, with files attached. Answers stream in, earlier chats wait in Recents, and what you tell it is remembered for next time.</dd></div>
-        <div><dt>Ask mid-call</dt><dd>A chat field under the live hints answers from the call so far, without leaving the meeting.</dd></div>
-        <div><dt>People</dt><dd>Everyone from your invites with their role and what they work on, your meetings together and what you owe them.</dd></div>
-        <div><dt>Reminders</dt><dd>“By Friday” becomes a date. A reminder lands at 9:00 the working day before, and overdue tasks turn red.</dd></div>
-        <div><dt>Glossary guide</dt><dd>Turn a team's glossary into a shareable guide for new joiners, ready to export as HTML or Markdown.</dd></div>
-        <div><dt>Fix and translate</dt><dd>Right-click a misheard word and Undertone corrects it and listens for it next time. Translate any passage into 19 languages.</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="block" id="around">
-    <div class="wrap">
-      <div class="head">
-        <h2>Before the call, and after it</h2>
-        <p>Fifteen minutes before a meeting, Undertone writes you a briefing and taps you on the shoulder five minutes out, and it gathers the meeting's context from your sources so the call starts with it. When it ends, the follow-up for everyone is already drafted, ready to paste into email or Slack.</p>
-      </div>
-      <div class="duo">
-        <div class="pane bf" role="img" aria-label="Sample notification and briefing for an upcoming meeting">
-          <div class="nt"><img src="assets/icon-256.png" alt=""><div><b>Platform sync in 5 min</b><span>Maya: Staff engineer, owns Keystone</span></div><time>now</time></div>
-          <p><b>Who:</b> Maya, Staff engineer on Platform. Dev runs release management. Sam is joining for the first time.</p>
-          <p><b>Last time:</b> writes moved to the new billing stack; the read cutover is set for the 14th <span class="s">[Jira INFRA-311]</span>.</p>
-          <p><b>You owe:</b> the cutover plan for Sam, due Friday.</p>
-          <p><b>Be ready for:</b> “Is rollback rehearsed?” Yes, twice on staging <span class="s">[Notion: Keystone rollback]</span>.</p>
-          <p class="sample" style="padding:6px 0 0">Sample. Written from your meetings, tasks and sources.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Sample follow-up message drafted after the meeting">
-          <div class="fu-top"><div class="label" style="margin:0">Follow-up</div><span class="segs"><i>Email</i><i class="on">Slack</i></span></div>
-          <div class="fu">Thanks all, quick recap of today's Platform sync:<ul><li>Read cutover stays on the 14th</li><li>Dev books the CAB slot for Thursday</li><li>I'll send Sam the cutover plan by Friday</li></ul><br>Open: do we need a second load test before the 14th?</div>
-          <p style="font-size:13px;color:var(--text-3);margin-top:12px">Edit it, copy it, send it yourself. <span class="connect" style="margin:0;margin-inline-start:6px">Copy</span></p>
-          <p class="sample" style="padding:10px 0 0">Sample. Undertone never sends anything.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="people">
-    <div class="wrap">
-      <div class="head">
-        <h2>Know who's in the room</h2>
-        <p>Names are jargon too. Click anyone on a meeting to see their role, what they work on, your meetings together and what you owe them, looked up in your own sources.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Sample person card with role, work and shared history">
-          <div class="person"><div class="av">MC</div><div><b>Maya Chen</b><span>Staff engineer, Platform</span></div></div>
-          <div class="pfacts">
-            <p><em>Works on</em> Keystone, the billing-stack migration <span style="color:var(--text-3)">[Jira INFRA-311]</span></p>
-            <p><em>With you</em> reviewing the rollback runbook <span style="color:var(--text-3)">[Notion]</span></p>
-            <p><em>Last time</em> Platform sync, Tuesday: cutover stays on the 14th</p>
-          </div>
-          <div class="chips"><span>6 meetings together</span><span>You owe Maya 1 task</span></div>
-          <p class="sample" style="padding:14px 0 0">Sample. Names and projects are made up.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Sample task list with due dates and a reminder">
-          <div class="nt"><img src="assets/icon-256.png" alt=""><div><b>Due Friday: Send Sam the cutover plan</b><span>You said you'd do this in Platform sync.</span></div><time>9:00</time></div>
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">Send Sam the Keystone cutover plan<small>Fri, Oct 30 · said “by Friday”</small></span></li>
-            <li><span class="st"></span><span class="grow">Share Q3 NRR numbers with the chair<small>Next week · Board Q&amp;A</small></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">Sample. Deadlines you say out loud become dates, with a reminder the working day before.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="coaching">
-    <div class="wrap">
-      <div class="head">
-        <h2>Know how you came across</h2>
-        <p>After every call, one score for how you answered the questions put to you, and how you spoke: talk time, pace and filler words. For interviews, honest feedback to prepare for the next round.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Sample interview score: 78 out of 100, likely to move forward, with what to improve">
-          <div class="score-top">
-            <div class="ring" aria-hidden="true"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="31" fill="none" stroke="rgba(129,140,248,.18)" stroke-width="7"/><circle cx="36" cy="36" r="31" fill="none" stroke="#818CF8" stroke-width="7" stroke-linecap="round" stroke-dasharray="151.9 194.8"/></svg><b>78<small>/100</small></b></div>
-            <div><div class="sc-title">Interview score</div><span class="tag">Likely to move forward</span></div>
-          </div>
-          <p>Clear, specific stories on leading through change. The architecture answer stayed general where they wanted trade-offs.</p>
-          <div class="label">To improve</div>
-          <ul class="ticks"><li>Open with the decision, then the context</li><li>Name one trade-off you'd make and why</li></ul>
-          <p class="sample" style="padding:14px 0 0">Sample. Meetings that aren't interviews get a meeting score: excellent, good, could be better or poor.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Sample question showing the context you had next to what you said">
-          <div class="label" style="margin-top:0">You were asked</div>
-          <div class="q">“Tell me about a time you had to decide without all the information.”</div>
-          <div class="part sug">
-            <div class="label">Context you had</div>
-            <div class="lead">From your notes: the v1 launch that moved up two weeks</div>
-            <ul class="ticks sug"><li>Missing at the time: two weeks of runway</li><li>Decision: ship v1 without export</li><li>Result: on time, export a month later</li></ul>
-          </div>
-          <div class="part you">
-            <div class="label">What you said</div>
-            <ul class="ticks you"><li>We moved the team to daily releases at the time.</li><li>I found the bottlenecks and pushed through it.</li></ul>
-          </div>
-          <p class="sample" style="padding:14px 0 0">Sample. Your side comes from your microphone, on your Mac.</p>
-        </div>
-      </div>
-      <div class="metrics" role="img" aria-label="Sample speaking stats: share of talking, pace, filler words, longest stretch and questions asked">
-        <div><b>41%</b><span>of the talking</span></div>
-        <div><b>152</b><span>words a minute</span></div>
-        <div><b>2.1</b><span>fillers a minute</span></div>
-        <div><b>1:48</b><span>longest stretch</span></div>
-        <div><b>4</b><span>questions asked</span></div>
-      </div>
-      <p class="sample" style="padding:12px 0 0">Sample. How you spoke is measured on your Mac from your side of the call.</p>
-    </div>
-  </section>
-
-  <section class="block" id="tasks">
-    <div class="wrap">
-      <div class="head">
-        <h2>Press start, and the work begins</h2>
-        <p>Every task from your meetings has a start button. Ask picks it up with the meeting, your memory and your sources, drafts the result, and asks only what it can't find.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Sample task list with to do, in progress and in review statuses and start buttons">
-          <ul class="board">
-            <li><span class="st prog"></span><span class="grow">Send Sam the Keystone cutover plan<small>In progress · due Friday</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st rev"></span><span class="grow">Draft the Q3 platform update<small>In review</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-            <li><span class="st"></span><span class="grow">Confirm the CAB slot for Thursday<small>To do · Engineering sync</small></span><span class="play"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M1 0l9 5-9 5z"/></svg></span></li>
-          </ul>
-          <p class="sample" style="padding:14px 0 0">Sample. Finished tasks move to Completed, ready to reopen.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Sample Ask chat working on a task and asking to connect Notion">
-          <div class="chat-me">Start working on “Send Sam the Keystone cutover plan”</div>
-          <div class="chat-ai"><b>Draft for Sam:</b> Writes moved to the new billing stack last week; the read cutover is planned for the 14th, with rollback rehearsed on staging<span class="caret" aria-hidden="true"></span><br><br>The rollback runbook lives in Notion, which isn't connected yet.</div>
-          <span class="connect"><img src="assets/logos/notion.png" alt="" width="14" height="14">Connect Notion</span>
-          <p class="sample" style="padding:14px 0 0">Sample. Answers stream in as they're written.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ready">
-    <div class="wrap">
-      <div class="head">
-        <h2>Context that's ready before you ask</h2>
-        <p>Every hour, between calls, Undertone reads up on your open tasks and recent meetings across your connected sources and keeps a short, sourced brief. When you press start or ask for details, the answer begins from what it already knows instead of minutes of searching.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Sample task list where each task shows a context-ready mark, with background context status">
-          <ul class="board">
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Send Sam the Keystone cutover plan<small>Context ready · Slack, Jira, Notion</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Draft the Q3 platform update<small>Context ready · Confluence, Granola</small></span></li>
-            <li><svg class="bolt" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.5 1 3 9h4.2L6.5 15 13 7H8.8z"/></svg><span class="grow">Engineering sync, Tuesday<small>Context ready · 3 follow-ups found</small></span></li>
-          </ul>
-          <div class="idx"><span><b>Background context</b> · 8 briefs ready · updated 12 min ago</span><span class="connect" style="margin:0;white-space:nowrap;flex:none">Run now</span></div>
-          <p class="sample" style="padding:14px 0 0">Sample. It pauses during calls and uses your own AI.</p>
-        </div>
-        <div class="pane" role="img" aria-label="Sample Ask reply that starts from prepared context and answers in seconds">
-          <div class="chat-me">Give me more details on the Keystone cutover task</div>
-          <div class="fast"><span class="dot"></span>Answered in 12 seconds from prepared context</div>
-          <div class="chat-ai"><b>Already sent:</b> the cutover plan went to Sam on Slack this morning [Slack DM].<br><br><b>Still open:</b> the read cutover on the 14th waits on the CAB slot [Jira KEY-212], and the rollback runbook needs a last review [Notion: Keystone rollback].</div>
-          <p class="sample" style="padding:14px 0 0">Sample. It still checks for anything newer since the brief.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="ask">
-    <div class="wrap">
-      <div class="head">
-        <h2>Ask, like you'd ask a colleague</h2>
-        <p>One roomy box for any question about your meetings. Pick one meeting or all of them, add files, and pick up earlier conversations from Recents.</p>
-      </div>
-      <div class="askmock" role="img" aria-label="Sample Ask start screen: a greeting, the question box and a list of recent chats">
-        <h3>Hi Alex, ask anything</h3>
-        <div class="am-box">
-          <div class="am-ph">What did we decide this week?</div>
-          <div class="am-row"><span>&#x1F4CE;&#xFE0E;</span><span>All meetings ⌄</span><span class="am-sp"></span><span class="am-send">↑</span></div>
-        </div>
-        <div class="am-rec">Recents</div>
-        <ul>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>What was my most recent meeting about?</span><small>6m</small></li>
-          <li><i aria-hidden="true">&#x1F5CE;&#xFE0E;</i><span>Follow-up email for the Q4 planning call</span><small>1d</small></li>
-          <li><i aria-hidden="true">&#x1F5E8;&#xFE0E;</i><span>Who owns the Kestrel dashboard?</span><small>2d</small></li>
-        </ul>
-      </div>
-      <p class="sample" style="padding:14px 0 0">Sample. Names and meetings are made up.</p>
-    </div>
-  </section>
-
-  <section class="block" id="canvas">
-    <div class="wrap">
-      <div class="head">
-        <h2>Turn an answer into a canvas</h2>
-        <p>When Ask gives you a list to work through, say yes to “Turn this into a canvas?” and it becomes an interactive page in your Artifacts: checklists you can tick, sections that fold, progress that keeps count, saved as you go.</p>
-      </div>
-      <div class="duo">
-        <div class="pane" role="img" aria-label="Sample Ask reply formatted with sections, checkboxes and steps, offering to make a canvas">
-          <div class="chat-me">Which Keystone tickets still need to land before cutover?</div>
-          <div class="chat-ai"><b>4 in progress, 1 blocked, 2 still to decide.</b></div>
-          <div class="label">In progress</div>
-          <ul class="ticks"><li>Move invoice reads to the new billing stack</li><li>Backfill last year's invoices</li></ul>
-          <div class="label">Blocked</div>
-          <ul class="ticks"><li>Load test waits on the staging refresh</li></ul>
-          <p style="font-size:13px;color:var(--text-3);margin-top:14px">Turn this into a canvas? <span class="connect" style="margin:0;margin-inline-start:6px">Make canvas</span></p>
-        </div>
-        <div class="pane cv" role="img" aria-label="Sample canvas: a checklist with progress per group">
-          <h3>Keystone cutover checklist</h3>
-          <div class="meta">From Engineering sync · 3 of 7 done</div>
-          <div class="grp"><div class="gh">In progress <span>2 of 4</span></div>
-            <ul><li class="on"><i></i>Move invoice reads to the new billing stack</li><li class="on"><i></i>Backfill last year's invoices</li><li><i></i>Rehearse rollback on staging</li><li><i></i>Update the on-call runbook</li></ul></div>
-          <div class="grp"><div class="gh">Blocked <span>1 of 1</span></div>
-            <ul><li class="on"><i></i>Load test waits on the staging refresh</li></ul></div>
-          <div class="grp shut"><div class="gh">Still to decide <span>2 open</span></div></div>
-          <p class="sample" style="padding:14px 0 0">Sample. Canvases run sealed off: no internet, nothing loaded from outside.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="speed">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Answers in seconds</h2>
-          <p>Undertone answers from what it already knows with a fast model, and only searches your tools when that isn't enough.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Answer cards during a call draw on background briefs and your memory</li>
-          <li>When it does search, it checks several sources at once, rewords a search that finds nothing, and stops within 14 seconds</li>
-          <li>Each answer shows where it was found, step by step</li>
-          <li>Briefs on the topics and people that keep coming up, matched to each question</li>
-          <li>When sources disagree, the newest one wins</li>
-          <li>A stalled reply hands over to the fast model instead of leaving you waiting</li>
-        </ul>
-      </div>
-      <div class="bars" aria-label="Measured with Undertone's own benchmark">
-        <div>
-          <h4>Ask, time to first words <small>median</small></h4>
-          <div class="bar"><span>Before</span><i style="--w:100%"></i><b>12.7 s</b></div>
-          <div class="bar new"><span>Now</span><i style="--w:35%"></i><b>4.5 s</b></div>
-        </div>
-        <div>
-          <h4>Live answers, full reply <small>median</small></h4>
-          <div class="bar"><span>Before</span><i style="--w:100%"></i><b>16.5 s</b></div>
-          <div class="bar new"><span>Now</span><i style="--w:31%"></i><b>5.1 s</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="paste">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Answers you can paste</h2>
-          <p>Ask leads with what you asked for. A draft comes as one message, ready to copy, with anything missing listed underneath.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>One recommended draft for Slack or email, with its own Copy button</li>
-          <li>Missing links and anything unverified are listed under the draft, never inside it</li>
-          <li>Select any text in the chat to copy or translate it; in the message box, replace it with the translation</li>
-          <li>The first translation tells you which AI the text goes to</li>
-        </ul>
-      </div>
-      <div class="paste" aria-label="Sample answer in Ask">
-        <h4>Recommended message</h4>
-        <div class="draft">
-          <div class="bar"><b>Copy-ready</b><span class="btn-copy">Copy</span></div>
-          <p translate="no">*Keystone update*
-• Billing writes moved to the new stack last week
-• The read cutover is planned for the 14th</p>
-        </div>
-        <div class="missing">Missing: the cutover checklist link wasn't found, so it isn't in the message.</div>
-        <div class="tpop">
-          <div class="row"><b>Translate</b><span class="pick" translate="no">Español</span></div>
-          <p translate="no">El cambio de lectura está previsto para el día 14</p>
-          <div class="acts"><span>Copy translation</span><span class="primary">Replace selection</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="work-personal">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Work stays work</h2>
-          <p>Undertone tells work meetings from personal ones. A webinar or a call on your personal calendar is explained from general knowledge, without touching your work tools.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Mark each calendar Work or Personal; company accounts start as Work</li>
-          <li>Personal meetings skip your work tools and memory, and their recaps stay out of amem</li>
-          <li>Switch any meeting between Work and Personal from the hints panel</li>
-          <li>Starts on its own for webinars you only listen to, and in more browsers like Comet, Vivaldi and Opera</li>
-          <li>Says who a question was for: you, someone else by name, or the whole room</li>
-          <li>A call that drops and comes back continues the same meeting instead of starting a new one</li>
-        </ul>
-      </div>
-      <div class="kinds" aria-label="Sample calendar settings">
-        <h4>Calendars</h4>
-        <div class="acct"><span translate="no">you@company.com</span><span class="seg"><i class="on">Work</i><i>Personal</i></span></div>
-        <div class="acct"><span>Personal Gmail</span><span class="seg"><i>Work</i><i class="on">Personal</i></span></div>
-        <div class="acct"><span translate="no">iCloud</span><span class="seg"><i>Work</i><i class="on">Personal</i></span></div>
-        <span class="chip">Personal meeting · on a personal calendar</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="languages">
-    <div class="wrap speed">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Speaks your language</h2>
-          <p>Undertone comes in 17 languages. It follows your Mac's language, and you can pick another in Settings.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>Hints, answers and recaps are written in your language; terms from the meeting stay as they were said</li>
-          <li>Meetings held in any of 19 languages and dialects are transcribed on your Mac</li>
-          <li>Choose which calendars to use, across all your Google, iCloud and Outlook accounts</li>
-          <li>Right-to-left layout for Arabic</li>
-          <li>Up next reads Google Calendar directly when it's connected, so renamed or cancelled meetings don't linger</li>
-        </ul>
-      </div>
-      <div class="langs" translate="no" aria-label="Languages Undertone comes in"><span lang="en">English</span><span lang="es">Español</span><span lang="fr">Français</span><span lang="de">Deutsch</span><span lang="it">Italiano</span><span lang="pt-BR">Português (Brasil)</span><span lang="nl">Nederlands</span><span lang="pl">Polski</span><span lang="tr">Türkçe</span><span lang="ru">Русский</span><span lang="uk">Українська</span><span lang="ar">العربية</span><span lang="hi">हिन्दी</span><span lang="ja">日本語</span><span lang="ko">한국어</span><span lang="zh-Hans">简体中文</span><span lang="zh-Hant">繁體中文</span></div>
-      <script>(function(){var l=document.documentElement.lang;document.querySelectorAll(".langs span").forEach(function(e){if(e.lang===l)e.classList.add("on")})})();</script>
-    </div>
-  </section>
-
   <section class="block" id="claude">
     <div class="wrap claude">
       <div class="head">
@@ -1388,29 +1067,7 @@
   <span class="k">"command"</span>: "/Applications/Undertone.app/Contents/MacOS/Undertone",
   <span class="k">"args"</span>: ["--mcp"]
 }</pre>
-    </div>
-  </section>
-
-  <section class="block" id="amem">
-    <div class="wrap amem">
-      <div>
-        <div class="head" style="max-width:none">
-          <h2>Even better with amem</h2>
-          <p>Undertone always keeps its own memory of your meetings. Add amem, the memory on your Mac that Claude Code, Cursor and your other AI tools share, and Undertone searches both together. Setup offers it and installs it for you.</p>
-        </div>
-        <ul class="ticks sug">
-          <li>What you worked on with Claude Code or Cursor is context in your next call</li>
-          <li>Every meeting recap is there in your AI tools afterwards</li>
-          <li>What you tell Undertone is remembered for good</li>
-        </ul>
-      </div>
-      <div>
-        <pre class="code" aria-label="Install amem" translate="no">npx @iamem/amem setup</pre>
-        <div class="ctas">
-          <a class="btn btn-ghost" href="https://getamem.com/">Get amem</a>
-        </div>
-        <p class="note">Or let Undertone's setup install it. Needs Node.js. Stays on your Mac.</p>
-      </div>
+      <p class="aside">Add <a href="https://github.com/sslugic/amem" translate="no">amem</a> too, and your meetings share one memory with Claude Code, Cursor and your other AI tools.</p>
     </div>
   </section>
 
@@ -1495,56 +1152,6 @@
       && !(navigator.connection && navigator.connection.saveData);
     if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
   })();
-
-  // Sample meeting tabs: each replays one line, spotlights its term and shows the sourced context.
-  // The copy for each tab lives in the <template class="demo-data"> blocks so it can be translated.
-  (function () {
-    var data = Array.prototype.map.call(document.querySelectorAll("template.demo-data"), function (t) {
-      var c = t.content, ctx = c.querySelector("[data-ctx]");
-      return { title: c.querySelector("[data-title]").textContent, meta: c.querySelector("[data-meta]").textContent,
-        say: c.querySelector("[data-say]").innerHTML, ctxClass: ctx.className, ctx: ctx.innerHTML };
-    });
-    var tabs = document.querySelectorAll(".tab");
-    var panel = document.getElementById("panel");
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function select(n, focus) {
-      var d = data[n];
-      tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === n); t.tabIndex = k === n ? 0 : -1; });
-      if (focus) tabs[n].focus();
-      panel.setAttribute("aria-labelledby", "tab-" + n);
-      document.getElementById("d-title").textContent = d.title;
-      document.getElementById("d-meta").textContent = d.meta;
-      document.getElementById("d-say").innerHTML = d.say;
-      var ctx = document.getElementById("d-ctx");
-      ctx.className = d.ctxClass;
-      ctx.innerHTML = d.ctx;
-      if (!still) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
-    }
-    tabs.forEach(function (t, n) {
-      t.addEventListener("click", function () { select(n); });
-      t.addEventListener("keydown", function (e) {
-        var k = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
-        if (k) { e.preventDefault(); select((n + k + tabs.length) % tabs.length, true); }
-      });
-    });
-  })();
-</script>
-<script>
-(() => {
-  const dm = document.querySelector('.dm');
-  if (!dm) return;
-  const items = dm.querySelectorAll('.dm-steps li');
-  const show = n => { dm.dataset.step = n; items.forEach(li => li.classList.toggle('on', +li.dataset.s === n)); };
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { show(3); return; }
-  let n = 1, timer;
-  const tick = () => { n = n % 3 + 1; show(n); timer = setTimeout(tick, n === 3 ? 4200 : 2200); };
-  const io = new IntersectionObserver(([e]) => {
-    clearTimeout(timer);
-    if (e.isIntersecting) { show(n = 1); timer = setTimeout(tick, 2200); }
-  });
-  io.observe(dm);
-  items.forEach(li => li.addEventListener('click', () => { clearTimeout(timer); show(n = +li.dataset.s); timer = setTimeout(tick, 5000); }));
-})();
 </script>
 <script>
   // Use cases: one industry at a time. Arrow keys, Home and End move between tabs (roving tabindex).
