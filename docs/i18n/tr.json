@@ -577,5 +577,8 @@
  "free_credits_your_own_ai_b691b9": "Ücretsiz krediler, kendi yapay zekâ anahtarınız veya yerel model",
  "download_dmg_v1_15_1_b21aff": ".dmg indir <span class=\"ver\">v1.15.1</span>",
  "undertone_always_keeps_its_own_94e199": "Undertone toplantılarınızın kendi belleğini her zaman tutar. Claude Code, Cursor ve diğer yapay zekâ araçlarınızın paylaştığı Mac'inizdeki bellek olan amem'i ekleyin; Undertone ikisinde birlikte arar. Kurulum bunu önerir ve sizin için yükler.",
- "download_dmg_v1_15_2_ace073": ".dmg indir <span class=\"ver\">v1.15.2</span>"
+ "download_dmg_v1_15_2_ace073": ".dmg indir <span class=\"ver\">v1.15.2</span>",
+ "ai_tools_cd7070": "Yapay zekâ araçları",
+ "your_meetings_in_your_ai_2b7bb9": "Toplantılarınız, yapay zekâ araçlarınızda",
+ "undertone_is_also_an_mcp_d702b4": "Undertone aynı zamanda bir MCP sunucusudur; MCP destekleyen her yapay zekâ uygulaması toplantılarınız, görevleriniz ve sözlüğünüzle çalışabilir. Ayarlar onu tek tıkla Claude, Claude Code veya Cursor'a ekler; diğer uygulamalar için aşağıdaki ayarları kopyalayın. Salt okunur ve Mac'inizde kalır."
 }

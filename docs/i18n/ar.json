@@ -576,5 +576,8 @@
  "free_credits_your_own_ai_b691b9": "رصيد مجاني، أو مفتاح ذكاء اصطناعي خاص، أو نموذج محلي",
  "download_dmg_v1_15_1_b21aff": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.15.1</span>",
  "undertone_always_keeps_its_own_94e199": "يحتفظ Undertone دائمًا بذاكرته الخاصة عن اجتماعاتك. أضف amem، الذاكرة على جهاز Mac التي يتشاركها Claude Code وCursor وأدوات الذكاء الاصطناعي الأخرى لديك، وسيبحث Undertone في الاثنتين معًا. يعرضه عليك الإعداد ويثبّته لك.",
- "download_dmg_v1_15_2_ace073": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.15.2</span>"
+ "download_dmg_v1_15_2_ace073": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.15.2</span>",
+ "ai_tools_cd7070": "أدوات الذكاء الاصطناعي",
+ "your_meetings_in_your_ai_2b7bb9": "اجتماعاتك داخل أدوات الذكاء الاصطناعي لديك",
+ "undertone_is_also_an_mcp_d702b4": "Undertone هو أيضًا خادم MCP، لذا يمكن لأي تطبيق ذكاء اصطناعي يدعم MCP العمل مع اجتماعاتك ومهامك ومسرد مصطلحاتك. تضيفه الإعدادات إلى Claude أو Claude Code أو Cursor بنقرة واحدة؛ وللتطبيقات الأخرى انسخ الإعدادات أدناه. للقراءة فقط، ويبقى كل شيء على جهاز Mac."
 }

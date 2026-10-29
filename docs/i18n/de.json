@@ -577,5 +577,8 @@
  "free_credits_your_own_ai_b691b9": "Gratis-Credits, eigener KI-Key oder lokales Modell",
  "download_dmg_v1_15_1_b21aff": ".dmg laden <span class=\"ver\">v1.15.1</span>",
  "undertone_always_keeps_its_own_94e199": "Undertone behält immer sein eigenes Gedächtnis deiner Meetings. Füge amem hinzu, das Gedächtnis auf deinem Mac, das Claude Code, Cursor und deine anderen KI-Tools teilen, und Undertone durchsucht beide zusammen. Die Einrichtung bietet es an und installiert es für dich.",
- "download_dmg_v1_15_2_ace073": ".dmg laden <span class=\"ver\">v1.15.2</span>"
+ "download_dmg_v1_15_2_ace073": ".dmg laden <span class=\"ver\">v1.15.2</span>",
+ "ai_tools_cd7070": "KI-Tools",
+ "your_meetings_in_your_ai_2b7bb9": "Deine Meetings, in deinen KI-Tools",
+ "undertone_is_also_an_mcp_d702b4": "Undertone ist auch ein MCP-Server, also kann jede KI-App mit MCP-Unterstützung mit deinen Meetings, Aufgaben und deinem Glossar arbeiten. In den Einstellungen fügst du es mit einem Klick zu Claude, Claude Code oder Cursor hinzu; für andere Apps kopierst du die Einstellungen unten. Nur lesend, und alles bleibt auf deinem Mac."
 }

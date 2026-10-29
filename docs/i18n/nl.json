@@ -577,5 +577,8 @@
  "free_credits_your_own_ai_b691b9": "Gratis credits, eigen AI-sleutel of lokaal model",
  "download_dmg_v1_15_1_b21aff": "Download .dmg <span class=\"ver\">v1.15.1</span>",
  "undertone_always_keeps_its_own_94e199": "Undertone houdt altijd een eigen geheugen van je vergaderingen bij. Voeg amem toe, het geheugen op je Mac dat Claude Code, Cursor en je andere AI-tools delen, en Undertone doorzoekt ze allebei samen. De installatie biedt het aan en installeert het voor je.",
- "download_dmg_v1_15_2_ace073": "Download .dmg <span class=\"ver\">v1.15.2</span>"
+ "download_dmg_v1_15_2_ace073": "Download .dmg <span class=\"ver\">v1.15.2</span>",
+ "ai_tools_cd7070": "AI-tools",
+ "your_meetings_in_your_ai_2b7bb9": "Je vergaderingen, in je AI-tools",
+ "undertone_is_also_an_mcp_d702b4": "Undertone is ook een MCP-server, dus elke AI-app met MCP-ondersteuning kan met je vergaderingen, taken en woordenlijst werken. Via Instellingen voeg je het met één klik toe aan Claude, Claude Code of Cursor; voor andere apps kopieer je de instellingen hieronder. Alleen-lezen, en het blijft op je Mac."
 }

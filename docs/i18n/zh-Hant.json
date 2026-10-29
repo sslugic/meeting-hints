@@ -576,5 +576,8 @@
  "free_credits_your_own_ai_b691b9": "免費點數、你自己的 AI 金鑰或本機模型",
  "download_dmg_v1_15_1_b21aff": "下載 .dmg <span class=\"ver\">v1.15.1</span>",
  "undertone_always_keeps_its_own_94e199": "Undertone 一律保留自己關於你會議的記憶。加入 amem——你 Mac 上由 Claude Code、Cursor 和其他 AI 工具共用的記憶，Undertone 就會同時搜尋兩者。設定時會推薦並為你安裝。",
- "download_dmg_v1_15_2_ace073": "下載 .dmg <span class=\"ver\">v1.15.2</span>"
+ "download_dmg_v1_15_2_ace073": "下載 .dmg <span class=\"ver\">v1.15.2</span>",
+ "ai_tools_cd7070": "AI 工具",
+ "your_meetings_in_your_ai_2b7bb9": "在你的 AI 工具裡使用你的會議",
+ "undertone_is_also_an_mcp_d702b4": "Undertone 也是一個 MCP 伺服器，任何支援 MCP 的 AI App 都能使用你的會議、任務和詞彙表。在設定中一鍵加入 Claude、Claude Code 或 Cursor；其他 App 請拷貝下方的設定。唯讀，資料留在你的 Mac 上。"
 }

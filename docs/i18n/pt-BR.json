@@ -576,5 +576,8 @@
  "free_credits_your_own_ai_b691b9": "Créditos gratuitos, sua própria chave de IA ou um modelo local",
  "download_dmg_v1_15_1_b21aff": "Baixar .dmg <span class=\"ver\">v1.15.1</span>",
  "undertone_always_keeps_its_own_94e199": "O Undertone sempre mantém sua própria memória das suas reuniões. Adicione o amem, a memória no seu Mac que o Claude Code, o Cursor e suas outras ferramentas de IA compartilham, e o Undertone pesquisa as duas juntas. A configuração oferece e instala para você.",
- "download_dmg_v1_15_2_ace073": "Baixar .dmg <span class=\"ver\">v1.15.2</span>"
+ "download_dmg_v1_15_2_ace073": "Baixar .dmg <span class=\"ver\">v1.15.2</span>",
+ "ai_tools_cd7070": "Ferramentas de IA",
+ "your_meetings_in_your_ai_2b7bb9": "Suas reuniões, nas suas ferramentas de IA",
+ "undertone_is_also_an_mcp_d702b4": "O Undertone também é um servidor MCP, então qualquer app de IA compatível com MCP pode trabalhar com suas reuniões, tarefas e glossário. Os Ajustes o adicionam ao Claude, Claude Code ou Cursor com um clique; para outros apps, copie a configuração abaixo. Somente leitura, e fica no seu Mac."
 }
