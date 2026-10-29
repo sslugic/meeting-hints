@@ -618,5 +618,6 @@
  "undertone_explains_acronyms_decodes_proj_eb17e9": "Undertone은 통화 중에 약어를 설명하고, 프로젝트 이름을 풀어 주고, 필요한 사실을 보여 줍니다. 팀의 Slack, Notion, Jira의 맥락을 바탕으로요. 통화가 끝나면 명확한 요약, 해야 할 후속 조치, 다음 회의 브리핑을 받아 보세요. 통화는 Mac에서 텍스트로 변환됩니다.",
  "undertone_explains_acronyms_decodes_proj_963e17": "Undertone은 통화 중에 약어를 설명하고, 프로젝트 이름을 풀어 주고, 필요한 사실을 보여 줍니다. 팀의 Slack, Notion, Jira의 맥락을 바탕으로요. 통화가 끝나면 명확한 요약, 해야 할 후속 조치, 다음 회의 브리핑을 받아 보세요. 통화는 Mac에서 텍스트로 변환됩니다.",
  "stay_in_the_conversation_know_b22e54": "대화에 집중하세요. 맥락은 알고 있으니까요. Undertone은 통화 중에 약어를 설명하고, 프로젝트 이름을 풀어 주고, 필요한 사실을 보여 줍니다. 팀의 Slack, Notion, Jira의 맥락을 바탕으로요. 통화가 끝나면 명확한 요약, 해야 할 후속 조치, 다음 회의 브리핑을 받아 보세요. 통화는 Mac에서 텍스트로 변환됩니다.",
- "undertone_made_by_testera_labs_3cbc51": "Undertone · 제작: <a href=\"https://testera.io\">Testera Labs</a>"
+ "undertone_made_by_testera_labs_3cbc51": "Undertone · 제작: <a href=\"https://testera.io\">Testera Labs</a>",
+ "download_dmg_v1_18_4_fef6fb": ".dmg 다운로드 <span class=\"ver\">v1.18.4</span>"
 }
