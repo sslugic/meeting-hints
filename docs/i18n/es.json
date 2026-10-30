@@ -675,7 +675,6 @@
  "pro_66d0c5": "Pro",
  "terms_a55a27": "Términos",
  "refunds_be32ad": "Reembolsos",
- "download_dmg_v1_18_20_0979f0": "Descargar .dmg <span class=\"ver\">v1.18.20</span>",
  "pricing_a0d9bb": "Precios",
  "free_to_use_pro_when_62c439": "Gratis para usar. Pro cuando quieras más.",
  "live_hints_recaps_tasks_and_a0fef6": "Las pistas en vivo, los resúmenes, las tareas y Preguntar siguen siendo gratis con cualquier IA. Pro se encarga de la preparación por ti. Todo lo de Pro es gratis mientras Undertone esté en beta.",
@@ -698,5 +697,7 @@
  "see_pro_5594ff": "Ver Pro",
  "the_last_30_days_of_bd1743": "Los últimos 30 días de reuniones y chats",
  "learns_from_each_day_and_fa6dd3": "Aprende de cada día y afina las pistas de mañana",
- "full_history_search_and_ask_48f471": "Historial completo: busca y pregunta sobre cada reunión"
+ "full_history_search_and_ask_48f471": "Historial completo: busca y pregunta sobre cada reunión",
+ "download_dmg_v1_19_0_b05ac3": "Descargar .dmg <span class=\"ver\">v1.19.0</span>",
+ "syncs_your_meetings_and_memory_26bab0": "Sincroniza tus reuniones y memoria entre tus Mac"
 }

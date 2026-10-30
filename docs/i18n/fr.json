@@ -675,7 +675,6 @@
  "pro_66d0c5": "Pro",
  "terms_a55a27": "Conditions",
  "refunds_be32ad": "Remboursements",
- "download_dmg_v1_18_20_0979f0": "Télécharger le .dmg <span class=\"ver\">v1.18.20</span>",
  "pricing_a0d9bb": "Tarifs",
  "free_to_use_pro_when_62c439": "Gratuit à l’usage. Pro quand vous voulez plus.",
  "live_hints_recaps_tasks_and_a0fef6": "Les repères en direct, les récaps, les tâches et Demander restent gratuits avec n’importe quelle IA. Pro fait la préparation pour vous. Tout ce qui est dans Pro est gratuit pendant la bêta d’Undertone.",
@@ -698,5 +697,7 @@
  "see_pro_5594ff": "Voir Pro",
  "the_last_30_days_of_bd1743": "Les 30 derniers jours de réunions et de discussions",
  "learns_from_each_day_and_fa6dd3": "Apprend de chaque journée et affine les indices du lendemain",
- "full_history_search_and_ask_48f471": "Historique complet : recherchez et interrogez chaque réunion"
+ "full_history_search_and_ask_48f471": "Historique complet : recherchez et interrogez chaque réunion",
+ "download_dmg_v1_19_0_b05ac3": "Télécharger le .dmg <span class=\"ver\">v1.19.0</span>",
+ "syncs_your_meetings_and_memory_26bab0": "Synchronise vos réunions et votre mémoire sur tous vos Mac"
 }

@@ -676,7 +676,6 @@
  "pro_66d0c5": "Pro",
  "terms_a55a27": "Voorwaarden",
  "refunds_be32ad": "Terugbetalingen",
- "download_dmg_v1_18_20_0979f0": "Download .dmg <span class=\"ver\">v1.18.20</span>",
  "pricing_a0d9bb": "Prijzen",
  "free_to_use_pro_when_62c439": "Gratis te gebruiken. Pro als je meer wilt.",
  "live_hints_recaps_tasks_and_a0fef6": "Live hints, samenvattingen, taken en Vragen blijven gratis met elke AI. Pro doet de voorbereiding voor je. Alles in Pro is gratis zolang Undertone in bèta is.",
@@ -699,5 +698,7 @@
  "see_pro_5594ff": "Bekijk Pro",
  "the_last_30_days_of_bd1743": "De laatste 30 dagen aan vergaderingen en chats",
  "learns_from_each_day_and_fa6dd3": "Leert van elke dag en scherpt de hints van morgen aan",
- "full_history_search_and_ask_48f471": "Volledige geschiedenis: doorzoek en bevraag elke vergadering"
+ "full_history_search_and_ask_48f471": "Volledige geschiedenis: doorzoek en bevraag elke vergadering",
+ "download_dmg_v1_19_0_b05ac3": "Download .dmg <span class=\"ver\">v1.19.0</span>",
+ "syncs_your_meetings_and_memory_26bab0": "Synchroniseert je vergaderingen en geheugen op al je Macs"
 }
