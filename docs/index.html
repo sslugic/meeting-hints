@@ -700,6 +700,7 @@
     <nav class="nav-links" aria-label="Main">
       <a href="#how">How it works</a>
       <a href="#before">Features</a>
+      <a href="#team">Teams</a>
       <a href="#use-cases">Use cases</a>
       <a href="#privacy">Privacy</a>
       <a href="#pricing">Pricing</a>
@@ -724,7 +725,7 @@
     </div>
 
     <div class="film hero-film" id="video">
-      <video controls playsinline loop preload="metadata" poster="assets/demo-poster.jpg" aria-label="Undertone demo video: a made-up team standup, from the briefing before the call to the recap after it">
+      <video controls playsinline loop preload="metadata" poster="assets/demo-poster.jpg" aria-label="Undertone demo video: a made-up team standup, from the briefing before the call to the recap after it, then the team page and an onboarding guide">
         <source src="assets/demo.mp4" type="video/mp4">
       </video>
     </div>
@@ -932,6 +933,57 @@
         <li>Between calls, context on your open tasks is gathered ahead, so answers start fast</li>
         <li>Turn a list into a canvas you can tick off</li>
         <li>Say more, copy an answer as text or an image, and rate it: a thumbs down shapes the next answers</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="team">
+    <div class="wrap">
+      <div class="head">
+        <h2>Bring your team along</h2>
+        <p>Share a recap with your team and talk it through: comments, @mentions and action items assigned to the right person. Nothing leaves your Mac until you share it.</p>
+      </div>
+      <div class="app" role="img" aria-label="Undertone's Team page with notifications, onboarding guides, shared notes, people and the team glossary, using sample data">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Home</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Meetings</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Glossary</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5M18 19a5 5 0 0 0-3-4.6"/></svg>Team</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Northwind Labs</div>
+          <p class="date">6 members · 6 notes shared this week · 7 team terms</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">Needs you <small>1 unread</small></div>
+              <div class="row"><span class="box"></span><span class="grow">Confirm the cutover date with finance by Thursday<span class="sub2">From “Halyard cutover review” · assigned by Priya</span></span></div>
+              <div class="row"><span class="grow"><b>Priya</b> mentioned you on “Halyard cutover review”<span class="sub2">@Maya can you confirm the date with finance?</span></span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Onboarding guides <small>Write a guide…</small></div>
+              <div class="row"><span class="grow"><b>Welcome to Northwind Labs</b><span class="sub2">Who's who, the words you'll hear, your first week · shared by link</span></span></div>
+              <div class="row"><span class="grow"><b>Sales onboarding</b><span class="sub2">How we run renewals and who owns each merchant</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Shared notes <small>All</small></div>
+              <div class="row"><span class="grow">Halyard cutover review<span class="sub2">Shared by Priya · 3 hours ago</span></span></div>
+              <div class="row"><span class="grow">Customer call: Fernhill renewal<span class="sub2">Shared by Sam · yesterday</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Team glossary <small>7 terms</small></div>
+              <div class="row"><span class="grow"><b>Halyard</b><span class="sub2">The new double-entry ledger replacing Keelson.</span></span></div>
+              <div class="row"><span class="grow"><b>Drift</b><span class="sub2">Differences the reconciliation report finds between the ledgers.</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Sample data. Names, projects and meetings are made up.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Onboarding guides written by AI from your team's glossary, shared recaps and org chart. Edit, share with the team, or send a link to a new hire.</li>
+        <li>A team glossary, so hints explain your words the same way for everyone and transcription spells them right</li>
+        <li>Who's who from your org chart, and the meetings coming up with teammates</li>
+        <li>Mac notifications for mentions, comments and assignments, each one yours to turn off</li>
+        <li>Post shared recaps to Slack, or turn action items into Linear or Jira issues automatically</li>
+        <li>Sign in with Google, Microsoft or your company's SSO. Each account is its own workspace: work and personal never mix.</li>
       </ul>
     </div>
   </section>
@@ -1169,10 +1221,10 @@
   <section class="block" id="pricing">
     <div class="wrap">
       <div class="head">
-        <h2>Free to use. Pro when you want more.</h2>
-        <p>Live hints, recaps, tasks and Ask stay free with any AI. Pro does the prep for you. Everything in Pro is free while Undertone is in beta.</p>
+        <h2>Free to use. Pro when you want more. Business for your team.</h2>
+        <p>Live hints, recaps, tasks and Ask stay free with any AI. Pro does the prep for you. Business brings your team in. Everything is free while Undertone is in beta.</p>
       </div>
-      <div class="plans two">
+      <div class="plans">
         <div class="plan">
           <div class="when">Free</div>
           <h3>Undertone</h3>
@@ -1204,6 +1256,22 @@
             <li>Private AI included: monthly credits, nothing stored</li>
           </ul>
           <a class="btn btn-light" href="pro/">See Pro</a>
+        </div>
+        <div class="plan">
+          <div class="when">Free during the beta</div>
+          <h3>Undertone Business</h3>
+          <div class="price">$20 <small>/ person / month, billed yearly</small></div>
+          <p>Or $24 billed monthly. From 3 people.</p>
+          <ul>
+            <li>Everything in Pro, for every member</li>
+            <li>Share recaps with your team, or by link</li>
+            <li>Comments, @mentions and assigned action items</li>
+            <li>Team glossary everyone's hints use</li>
+            <li>AI-written onboarding guides for new teammates</li>
+            <li>Slack, Linear, Jira and HubSpot automations</li>
+            <li>Single sign-on with Okta, Entra or Google Workspace</li>
+          </ul>
+          <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">Start a team</a>
         </div>
       </div>
     </div>

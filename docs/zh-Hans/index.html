@@ -674,6 +674,7 @@
     <nav class="nav-links" aria-label="主导航">
       <a href="#how">工作原理</a>
       <a href="#before">功能</a>
+      <a href="#team">团队</a>
       <a href="#use-cases">使用场景</a>
       <a href="#privacy">隐私</a>
       <a href="#pricing">定价</a>
@@ -697,7 +698,7 @@
     </div>
 
     <div class="film hero-film" id="video">
-      <video controls playsinline loop preload="metadata" poster="../assets/demo-poster.jpg" aria-label="Undertone 演示视频：一场虚构的团队站会，从通话前的简报到通话后的回顾">
+      <video controls playsinline loop preload="metadata" poster="../assets/demo-poster.jpg" aria-label="Undertone 演示视频：一场虚构的团队站会，从通话前的简报到通话后的摘要，然后是“团队”页面和一份入职指南">
         <source src="../assets/demo.mp4" type="video/mp4">
       </video>
     </div>
@@ -905,6 +906,57 @@
         <li>在通话间隙，会提前收集你未完成任务的背景，让回答更快开始</li>
         <li>把清单变成可以逐项勾选的画布</li>
         <li>追问、把回答复制为文本或图片，并评分：点踩会影响之后的回答</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="team">
+    <div class="wrap">
+      <div class="head">
+        <h2>让团队一起来</h2>
+        <p>把摘要分享给团队并展开讨论：评论、@提及，以及分配给合适的人的行动项。在你分享之前，什么都不会离开你的 Mac。</p>
+      </div>
+      <div class="app" role="img" aria-label="Undertone 的“团队”页面，含通知、入职指南、共享笔记、成员和团队术语表，使用示例数据">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>主页</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>会议</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>术语表</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5M18 19a5 5 0 0 0-3-4.6"/></svg>团队</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Northwind Labs</div>
+          <p class="date">6 位成员 · 本周共享 6 篇笔记 · 7 个团队术语</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">待你处理 <small>1 条未读</small></div>
+              <div class="row"><span class="box"></span><span class="grow">周四前与财务确认切换日期<span class="sub2">来自“Halyard cutover review” · 由 Priya 分配</span></span></div>
+              <div class="row"><span class="grow"><b>Priya</b> 在“Halyard cutover review”中提及了你<span class="sub2">@Maya 能和财务确认一下日期吗？</span></span></div>
+            </div>
+            <div class="card">
+              <div class="h4">入职指南 <small>撰写指南…</small></div>
+              <div class="row"><span class="grow"><b>Welcome to Northwind Labs</b><span class="sub2">谁负责什么、你会听到的词、你的第一周 · 已通过链接分享</span></span></div>
+              <div class="row"><span class="grow"><b>销售入职</b><span class="sub2">我们如何做续约，以及每个商户由谁负责</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">共享笔记 <small>全部</small></div>
+              <div class="row"><span class="grow">Halyard cutover review<span class="sub2">Priya 分享 · 3 小时前</span></span></div>
+              <div class="row"><span class="grow">客户通话：Fernhill 续约<span class="sub2">Sam 分享 · 昨天</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">团队术语表 <small>7 个术语</small></div>
+              <div class="row"><span class="grow"><b>Halyard</b><span class="sub2">取代 Keelson 的新复式记账总账。</span></span></div>
+              <div class="row"><span class="grow"><b>差异</b><span class="sub2">对账报告在两本账之间发现的差异。</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">示例数据。人名、项目和会议均为虚构。</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>AI 根据团队术语表、共享摘要和组织架构图撰写的入职指南。可编辑、分享给团队，或把链接发给新同事。</li>
+        <li>团队术语表，让提示对每个人以同样方式解释你们的用语，转录也能写对</li>
+        <li>根据组织架构图了解谁负责什么，以及即将与队友开的会</li>
+        <li>提及、评论和分配的 Mac 通知，每一种都可以关闭</li>
+        <li>自动把共享摘要发到 Slack，或把行动项变成 Linear 或 Jira 问题</li>
+        <li>用 Google、Microsoft 或公司的 SSO 登录。每个账户都是独立的工作区：工作和个人互不混杂。</li>
       </ul>
     </div>
   </section>
@@ -1142,10 +1194,10 @@
   <section class="block" id="pricing">
     <div class="wrap">
       <div class="head">
-        <h2>免费使用。想要更多，选 Pro。</h2>
-        <p>实时提示、回顾、任务和提问，搭配任何 AI 都保持免费。Pro 替你做好准备。Undertone 测试期间，Pro 的全部功能免费。</p>
+        <h2>免费使用。想要更多就用 Pro。团队就用 Business。</h2>
+        <p>实时提示、摘要、任务和 Ask 搭配任何 AI 都免费。Pro 帮你做好准备。Business 让团队一起用。测试期间全部免费。</p>
       </div>
-      <div class="plans two">
+      <div class="plans">
         <div class="plan">
           <div class="when">免费</div>
           <h3>Undertone</h3>
@@ -1177,6 +1229,22 @@
             <li>内置私有 AI：每月积分，不存储任何内容</li>
           </ul>
           <a class="btn btn-light" href="../pro/">了解 Pro</a>
+        </div>
+        <div class="plan">
+          <div class="when">测试期间免费</div>
+          <h3>Undertone Business</h3>
+          <div class="price">$20 <small>/ 人 / 月，按年计费</small></div>
+          <p>按月计费为 $24。3 人起。</p>
+          <ul>
+            <li>Pro 的全部功能，每位成员都有</li>
+            <li>与团队或通过链接分享摘要</li>
+            <li>评论、@提及和分配的行动项</li>
+            <li>所有人的提示都会使用的团队术语表</li>
+            <li>AI 为新同事撰写的入职指南</li>
+            <li>Slack、Linear、Jira 和 HubSpot 自动化</li>
+            <li>通过 Okta、Entra 或 Google Workspace 单点登录</li>
+          </ul>
+          <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">创建团队</a>
         </div>
       </div>
     </div>

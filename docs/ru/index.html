@@ -674,6 +674,7 @@
     <nav class="nav-links" aria-label="Основное меню">
       <a href="#how">Как это работает</a>
       <a href="#before">Возможности</a>
+      <a href="#team">Команды</a>
       <a href="#use-cases">Сценарии</a>
       <a href="#privacy">Приватность</a>
       <a href="#pricing">Тарифы</a>
@@ -697,7 +698,7 @@
     </div>
 
     <div class="film hero-film" id="video">
-      <video controls playsinline loop preload="metadata" poster="../assets/demo-poster.jpg" aria-label="Демонстрационное видео Undertone: выдуманная планёрка, от брифинга до итогов">
+      <video controls playsinline loop preload="metadata" poster="../assets/demo-poster.jpg" aria-label="Демо-видео Undertone: выдуманная планёрка команды, от брифинга перед звонком до резюме после него, затем страница «Команда» и руководство для новичков">
         <source src="../assets/demo.mp4" type="video/mp4">
       </video>
     </div>
@@ -905,6 +906,57 @@
         <li>Между звонками контекст ваших открытых задач собирается заранее, поэтому ответы приходят быстро</li>
         <li>Превратите список в холст, где можно отмечать пункты</li>
         <li>Попросите подробнее, скопируйте ответ как текст или картинку и оцените его: дизлайк влияет на следующие ответы</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="team">
+    <div class="wrap">
+      <div class="head">
+        <h2>Подключите команду</h2>
+        <p>Поделитесь резюме с командой и обсудите его: комментарии, @упоминания и задачи для нужного человека. Ничего не покидает ваш Mac, пока вы не поделитесь.</p>
+      </div>
+      <div class="app" role="img" aria-label="Страница «Команда» в Undertone с уведомлениями, руководствами для новичков, общими заметками, людьми и глоссарием команды, на примере">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Главная</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Встречи</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Глоссарий</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5M18 19a5 5 0 0 0-3-4.6"/></svg>Команда</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Northwind Labs</div>
+          <p class="date">6 участников · 6 заметок за неделю · 7 терминов команды</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">Ждут вас <small>1 непрочитанное</small></div>
+              <div class="row"><span class="box"></span><span class="grow">Согласовать дату перехода с финансами до четверга<span class="sub2">Из «Halyard cutover review» · назначила Priya</span></span></div>
+              <div class="row"><span class="grow"><b>Priya</b> упомянула вас в «Halyard cutover review»<span class="sub2">@Maya подтвердишь дату с финансами?</span></span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Руководства для новичков <small>Написать руководство…</small></div>
+              <div class="row"><span class="grow"><b>Welcome to Northwind Labs</b><span class="sub2">Кто есть кто, слова, которые вы услышите, первая неделя · по ссылке</span></span></div>
+              <div class="row"><span class="grow"><b>Онбординг в продажах</b><span class="sub2">Как мы ведём продления и кто отвечает за каждого мерчанта</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Общие заметки <small>Все</small></div>
+              <div class="row"><span class="grow">Halyard cutover review<span class="sub2">Поделилась Priya · 3 часа назад</span></span></div>
+              <div class="row"><span class="grow">Звонок с клиентом: продление Fernhill<span class="sub2">Поделился Sam · вчера</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Глоссарий команды <small>7 терминов</small></div>
+              <div class="row"><span class="grow"><b>Halyard</b><span class="sub2">Новая книга двойной записи вместо Keelson.</span></span></div>
+              <div class="row"><span class="grow"><b>Расхождение</b><span class="sub2">Различия между книгами, которые находит отчёт сверки.</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Пример данных. Имена, проекты и встречи вымышлены.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Руководства для новичков, которые ИИ пишет по глоссарию, общим резюме и оргструктуре. Правьте, делитесь с командой или отправьте ссылку новому сотруднику.</li>
+        <li>Глоссарий команды, чтобы подсказки объясняли ваши термины всем одинаково, а расшифровка писала их правильно</li>
+        <li>Кто есть кто по оргструктуре, и ближайшие встречи с коллегами</li>
+        <li>Уведомления Mac об упоминаниях, комментариях и назначениях, каждое можно отключить</li>
+        <li>Публикуйте общие резюме в Slack или превращайте задачи в задачи Linear или Jira автоматически</li>
+        <li>Входите через Google, Microsoft или SSO компании. Каждый аккаунт — своё пространство: работа и личное не смешиваются.</li>
       </ul>
     </div>
   </section>
@@ -1142,10 +1194,10 @@
   <section class="block" id="pricing">
     <div class="wrap">
       <div class="head">
-        <h2>Пользуйтесь бесплатно. Pro, когда нужно больше.</h2>
-        <p>Подсказки в реальном времени, итоги, задачи и «Спросить» остаются бесплатными с любым ИИ. Pro берёт подготовку на себя. Всё в Pro бесплатно, пока Undertone в бете.</p>
+        <h2>Бесплатно. Pro — когда нужно больше. Business — для команды.</h2>
+        <p>Подсказки в реальном времени, резюме, задачи и Ask бесплатны с любым ИИ. Pro готовит вас к встречам. Business подключает команду. Пока идёт бета, всё бесплатно.</p>
       </div>
-      <div class="plans two">
+      <div class="plans">
         <div class="plan">
           <div class="when">Бесплатно</div>
           <h3>Undertone</h3>
@@ -1177,6 +1229,22 @@
             <li>Приватный ИИ в составе: ежемесячные кредиты, ничего не хранится</li>
           </ul>
           <a class="btn btn-light" href="../pro/">Узнать о Pro</a>
+        </div>
+        <div class="plan">
+          <div class="when">Бесплатно во время беты</div>
+          <h3>Undertone Business</h3>
+          <div class="price">$20 <small>/ человек / месяц, при оплате за год</small></div>
+          <p>Или $24 при помесячной оплате. От 3 человек.</p>
+          <ul>
+            <li>Всё из Pro для каждого участника</li>
+            <li>Делитесь резюме с командой или по ссылке</li>
+            <li>Комментарии, @упоминания и назначенные задачи</li>
+            <li>Глоссарий команды для подсказок всех участников</li>
+            <li>Руководства для новичков, написанные ИИ</li>
+            <li>Автоматизации со Slack, Linear, Jira и HubSpot</li>
+            <li>Единый вход через Okta, Entra или Google Workspace</li>
+          </ul>
+          <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">Создать команду</a>
         </div>
       </div>
     </div>

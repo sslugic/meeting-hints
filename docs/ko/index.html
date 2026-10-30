@@ -674,6 +674,7 @@
     <nav class="nav-links" aria-label="메인">
       <a href="#how">작동 방식</a>
       <a href="#before">기능</a>
+      <a href="#team">팀</a>
       <a href="#use-cases">활용 사례</a>
       <a href="#privacy">프라이버시</a>
       <a href="#pricing">요금</a>
@@ -697,7 +698,7 @@
     </div>
 
     <div class="film hero-film" id="video">
-      <video controls playsinline loop preload="metadata" poster="../assets/demo-poster.jpg" aria-label="Undertone 데모 영상: 통화 전 브리핑부터 통화 후 요약까지, 가상의 팀 스탠드업">
+      <video controls playsinline loop preload="metadata" poster="../assets/demo-poster.jpg" aria-label="Undertone 데모 영상: 가상의 팀 스탠드업, 통화 전 브리핑부터 통화 후 요약까지, 그리고 팀 페이지와 온보딩 가이드">
         <source src="../assets/demo.mp4" type="video/mp4">
       </video>
     </div>
@@ -905,6 +906,57 @@
         <li>통화 사이에 열린 할 일의 맥락을 미리 모아 두어, 답이 빠르게 시작돼요</li>
         <li>목록을 체크해 나갈 수 있는 캔버스로 바꾸세요</li>
         <li>더 자세히 묻고, 답변을 텍스트나 이미지로 복사하고, 평가하세요: 싫어요는 다음 답변에 반영됩니다</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="team">
+    <div class="wrap">
+      <div class="head">
+        <h2>팀과 함께하세요</h2>
+        <p>요약을 팀과 공유하고 함께 이야기하세요. 댓글, @멘션, 알맞은 사람에게 배정한 액션 아이템. 공유하기 전까지는 아무것도 Mac 밖으로 나가지 않습니다.</p>
+      </div>
+      <div class="app" role="img" aria-label="알림, 온보딩 가이드, 공유 노트, 사람, 팀 용어집이 있는 Undertone 팀 페이지 예시">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>홈</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>미팅</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>용어집</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5M18 19a5 5 0 0 0-3-4.6"/></svg>팀</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Northwind Labs</div>
+          <p class="date">멤버 6명 · 이번 주 공유된 노트 6개 · 팀 용어 7개</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">확인 필요 <small>읽지 않음 1개</small></div>
+              <div class="row"><span class="box"></span><span class="grow">목요일까지 재무팀과 전환 날짜 확인하기<span class="sub2">“Halyard cutover review”에서 · Priya가 배정</span></span></div>
+              <div class="row"><span class="grow"><b>Priya</b> 님이 “Halyard cutover review”에서 회원님을 멘션했습니다<span class="sub2">@Maya 재무팀과 날짜 확인해 줄 수 있어요?</span></span></div>
+            </div>
+            <div class="card">
+              <div class="h4">온보딩 가이드 <small>가이드 작성…</small></div>
+              <div class="row"><span class="grow"><b>Welcome to Northwind Labs</b><span class="sub2">누가 누구인지, 자주 듣게 될 말, 첫 주 · 링크로 공유됨</span></span></div>
+              <div class="row"><span class="grow"><b>영업 온보딩</b><span class="sub2">갱신을 진행하는 방법과 가맹점별 담당자</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">공유 노트 <small>전체</small></div>
+              <div class="row"><span class="grow">Halyard cutover review<span class="sub2">Priya 님이 공유 · 3시간 전</span></span></div>
+              <div class="row"><span class="grow">고객 통화: Fernhill 갱신<span class="sub2">Sam 님이 공유 · 어제</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">팀 용어집 <small>용어 7개</small></div>
+              <div class="row"><span class="grow"><b>Halyard</b><span class="sub2">Keelson을 대체하는 새 복식부기 원장.</span></span></div>
+              <div class="row"><span class="grow"><b>차이</b><span class="sub2">대사 보고서가 두 원장 사이에서 찾아낸 차이.</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">샘플 데이터예요. 이름, 프로젝트, 미팅은 가상이에요.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>팀 용어집, 공유된 요약, 조직도로 AI가 작성하는 온보딩 가이드. 편집해서 팀과 공유하거나 새 입사자에게 링크를 보내세요.</li>
+        <li>힌트가 용어를 모두에게 똑같이 설명하고 전사도 올바르게 표기하도록 돕는 팀 용어집</li>
+        <li>조직도로 보는 누가 누구인지, 그리고 팀원과의 예정된 회의</li>
+        <li>멘션, 댓글, 배정에 대한 Mac 알림. 각각 끌 수 있습니다</li>
+        <li>공유된 요약을 Slack에 자동으로 올리거나 액션 아이템을 Linear 또는 Jira 이슈로 만드세요</li>
+        <li>Google, Microsoft 또는 회사 SSO로 로그인하세요. 계정마다 별도 워크스페이스라 업무와 개인이 섞이지 않습니다.</li>
       </ul>
     </div>
   </section>
@@ -1142,10 +1194,10 @@
   <section class="block" id="pricing">
     <div class="wrap">
       <div class="head">
-        <h2>무료로 쓰세요. 더 필요하면 Pro.</h2>
-        <p>실시간 힌트, 요약, 할 일, 질문은 어떤 AI를 쓰든 계속 무료예요. Pro는 준비를 대신해 줘요. Undertone이 베타인 동안에는 Pro의 모든 기능이 무료예요.</p>
+        <h2>무료로 사용하세요. 더 필요하면 Pro. 팀에는 Business.</h2>
+        <p>실시간 힌트, 요약, 할 일, Ask는 어떤 AI로든 무료입니다. Pro는 준비를 대신해 줍니다. Business는 팀을 함께하게 합니다. 베타 기간에는 모두 무료입니다.</p>
       </div>
-      <div class="plans two">
+      <div class="plans">
         <div class="plan">
           <div class="when">무료</div>
           <h3>Undertone</h3>
@@ -1177,6 +1229,22 @@
             <li>프라이빗 AI 포함: 매월 크레딧 제공, 아무것도 저장하지 않음</li>
           </ul>
           <a class="btn btn-light" href="../pro/">Pro 보기</a>
+        </div>
+        <div class="plan">
+          <div class="when">베타 기간 무료</div>
+          <h3>Undertone Business</h3>
+          <div class="price">$20 <small>/ 1인 / 월, 연간 결제</small></div>
+          <p>월간 결제 시 $24. 3명부터.</p>
+          <ul>
+            <li>모든 멤버에게 Pro의 모든 기능</li>
+            <li>요약을 팀 또는 링크로 공유</li>
+            <li>댓글, @멘션, 배정된 액션 아이템</li>
+            <li>모두의 힌트가 사용하는 팀 용어집</li>
+            <li>새 팀원을 위해 AI가 작성하는 온보딩 가이드</li>
+            <li>Slack, Linear, Jira, HubSpot 자동화</li>
+            <li>Okta, Entra, Google Workspace로 싱글 사인온</li>
+          </ul>
+          <a class="btn btn-light" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg">팀 시작하기</a>
         </div>
       </div>
     </div>
