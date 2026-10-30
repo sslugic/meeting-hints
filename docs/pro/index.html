@@ -56,6 +56,9 @@
   .btn:hover { text-decoration: none; filter: brightness(1.08); }
   .btn[disabled] { opacity: .55; cursor: default; filter: none; }
   section { padding: 48px 0 0; }
+  .section-note { color: var(--text-2); max-width: 620px; margin-bottom: 4px; }
+  .packs { margin-top: 18px; }
+  .packs .plan ul { margin: 10px 0 18px; }
   h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); font-weight: 600; margin-bottom: 12px; }
   dl.faq dt { font-weight: 600; margin-top: 16px; }
   dl.faq dd { color: var(--text-2); }
@@ -101,6 +104,12 @@
     </div>
   </div>
 
+  <section id="credits">
+    <h3>Credit packs</h3>
+    <p class="section-note">Undertone's built-in AI without a subscription: buy credits once and use them for calls, recaps and Ask. Check out with the email you use for credits in Undertone and they're added to that account.</p>
+    <div class="plans packs" id="packs"></div>
+  </section>
+
   <section>
     <h3>Questions</h3>
     <dl class="faq">
@@ -108,6 +117,8 @@
       <dd>No. Pro features run on your Mac like everything else. The license key holds only your email and when it ends, and Undertone checks it on your Mac.</dd>
       <dt>What happens to the AI credits?</dt>
       <dd>Each month of Pro adds AI credits for Undertone's server, which passes requests to Google Gemini and keeps only usage totals. Prefer your own AI? Keep using it; Pro works either way.</dd>
+      <dt>How far does a credit go?</dt>
+      <dd>About 20 credits cover a one-hour call; Ask and recaps use a little too. Using your own AI instead costs no credits at all.</dd>
       <dt>How do I add Pro to the app?</dt>
       <dd>After checkout we email you a license key. Paste it in Profile &amp; Settings › General. Lost it? The same screen can email it again.</dd>
       <dt>Can I cancel?</dt>
@@ -122,6 +133,16 @@
   // Fill in from Paddle (Developer tools › Authentication, and Catalog › Prices). These are public values, not secrets.
   var PADDLE = { open: true, token: "live_d099a405793321740092eb4a6e4", environment: "production", prices: { annual: "pri_01m64jkyc2n85byxmmdxxwr3zj", monthly: "pri_01m64jk9nkwz198brw5cpmphpp" } };
   var PRICES = { annual: ["$10", "/ month, billed yearly", "Two months free"], monthly: ["$12", "/ month", ""] };
+  // One-time credit packs: the same Paddle price IDs as CREDIT_PACKS in the credits Worker's wrangler.toml.
+  // Replace the pri_PACK_* placeholders with the real price IDs from Paddle › Catalog; until then the buttons stay off.
+  var CREDIT_PACKS = [
+    { price: "pri_01m6541e7h0b9tgcsk5p4jt5qp", usd: 10, credits: 500 },
+    { price: "pri_01m6541zbegkd6sh5qqf2jp20c", usd: 25, credits: 1300 },
+    { price: "pri_01m65427gq6r1rx74zphs880v5", usd: 50, credits: 2800 }
+  ];
+  // The app links here as #buy=credits&email=… so checkout starts with the account's email filled in.
+  var link = new URLSearchParams(location.hash.slice(1));
+  var buyerEmail = link.get("email") || undefined;
 
   var billing = "annual";
   var buy = document.getElementById("buy");
@@ -137,16 +158,36 @@
   });
   show();
 
-  if (PADDLE.open && PADDLE.token && window.Paddle) {
+  var paddleReady = PADDLE.open && PADDLE.token && window.Paddle;
+  function checkout(priceId, email) {
+    Paddle.Checkout.open({ items: [{ priceId: priceId, quantity: 1 }], customer: email ? { email: email } : undefined, settings: { theme: "dark" } });
+  }
+  if (paddleReady) {
     if (PADDLE.environment === "sandbox") Paddle.Environment.set("sandbox");
     Paddle.Initialize({ token: PADDLE.token });
-    buy.addEventListener("click", function () {
-      Paddle.Checkout.open({ items: [{ priceId: PADDLE.prices[billing], quantity: 1 }], settings: { theme: "dark" } });
-    });
+    buy.addEventListener("click", function () { checkout(PADDLE.prices[billing]); });
   } else {
     buy.textContent = "Coming soon · free in the beta";
     buy.disabled = true;
   }
+
+  var packs = document.getElementById("packs");
+  CREDIT_PACKS.forEach(function (pack) {
+    var card = document.createElement("div");
+    card.className = "plan";
+    var hours = Math.round(pack.credits / 20);
+    card.innerHTML = '<h2></h2><div class="price"></div><ul><li></li></ul><button class="btn" type="button"></button>';
+    card.querySelector("h2").textContent = pack.credits.toLocaleString("en-US") + " credits";
+    card.querySelector(".price").textContent = "$" + pack.usd;
+    card.querySelector("li").textContent = "About " + hours + " hours of calls";
+    var button = card.querySelector("button");
+    var live = paddleReady && !/^pri_PACK_/.test(pack.price);
+    button.textContent = live ? "Buy credits" : "Coming soon";
+    button.disabled = !live;
+    if (live) button.addEventListener("click", function () { checkout(pack.price, buyerEmail); });
+    packs.appendChild(card);
+  });
+  if (link.get("buy") === "credits") document.getElementById("credits").scrollIntoView();
 </script>
 </body>
 </html>
