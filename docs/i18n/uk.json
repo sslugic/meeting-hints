@@ -676,7 +676,7 @@
  "pro_66d0c5": "Pro",
  "terms_a55a27": "Умови",
  "refunds_be32ad": "Повернення коштів",
- "download_dmg_v1_18_19_ba3df9": "Завантажити .dmg <span class=\"ver\">v1.18.19</span>",
+ "download_dmg_v1_18_20_0979f0": "Завантажити .dmg <span class=\"ver\">v1.18.20</span>",
  "pricing_a0d9bb": "Ціни",
  "free_to_use_pro_when_62c439": "Користуйтеся безкоштовно. Pro, коли потрібно більше.",
  "live_hints_recaps_tasks_and_a0fef6": "Підказки наживо, підсумки, завдання та «Запитати» залишаються безкоштовними з будь-яким ШІ. Pro бере підготовку на себе. Усе в Pro безкоштовне, поки Undertone в бета-версії.",
@@ -696,5 +696,8 @@
  "unlimited_meeting_prep_and_study_18ac48": "Необмежена підготовка до зустрічей і навчальні посібники",
  "org_chart_import_from_rippling_f75049": "Імпорт оргструктури з Rippling, Gusto, BambooHR та інших",
  "private_ai_included_monthly_credits_38120f": "Приватний ШІ в комплекті: щомісячні кредити, нічого не зберігається",
- "see_pro_5594ff": "Дізнатися про Pro"
+ "see_pro_5594ff": "Дізнатися про Pro",
+ "the_last_30_days_of_bd1743": "Зустрічі й чати за останні 30 днів",
+ "learns_from_each_day_and_fa6dd3": "Вчиться щодня й покращує підказки на завтра",
+ "full_history_search_and_ask_48f471": "Повна історія: пошук і запитання щодо будь-якої зустрічі"
 }

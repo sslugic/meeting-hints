@@ -676,7 +676,7 @@
  "pro_66d0c5": "Pro",
  "terms_a55a27": "AGB",
  "refunds_be32ad": "Rückerstattung",
- "download_dmg_v1_18_19_ba3df9": ".dmg laden <span class=\"ver\">v1.18.19</span>",
+ "download_dmg_v1_18_20_0979f0": ".dmg laden <span class=\"ver\">v1.18.20</span>",
  "pricing_a0d9bb": "Preise",
  "free_to_use_pro_when_62c439": "Kostenlos nutzbar. Pro, wenn du mehr willst.",
  "live_hints_recaps_tasks_and_a0fef6": "Live-Hinweise, Zusammenfassungen, Aufgaben und Fragen bleiben mit jeder KI kostenlos. Pro übernimmt die Vorbereitung für dich. Alles in Pro ist kostenlos, solange Undertone in der Beta ist.",
@@ -696,5 +696,8 @@
  "unlimited_meeting_prep_and_study_18ac48": "Unbegrenzte Meeting-Vorbereitung und Lernleitfäden",
  "org_chart_import_from_rippling_f75049": "Org-Chart-Import aus Rippling, Gusto, BambooHR und mehr",
  "private_ai_included_monthly_credits_38120f": "Private KI inklusive: monatliche Credits, nichts wird gespeichert",
- "see_pro_5594ff": "Pro ansehen"
+ "see_pro_5594ff": "Pro ansehen",
+ "the_last_30_days_of_bd1743": "Die letzten 30 Tage an Meetings und Chats",
+ "learns_from_each_day_and_fa6dd3": "Lernt aus jedem Tag und schärft die Hinweise für morgen",
+ "full_history_search_and_ask_48f471": "Vollständiger Verlauf: jedes Meeting durchsuchen und befragen"
 }

@@ -675,7 +675,7 @@
  "pro_66d0c5": "Pro",
  "terms_a55a27": "शर्तें",
  "refunds_be32ad": "रिफ़ंड",
- "download_dmg_v1_18_19_ba3df9": ".dmg डाउनलोड करें <span class=\"ver\">v1.18.19</span>",
+ "download_dmg_v1_18_20_0979f0": ".dmg डाउनलोड करें <span class=\"ver\">v1.18.20</span>",
  "pricing_a0d9bb": "प्राइसिंग",
  "free_to_use_pro_when_62c439": "इस्तेमाल मुफ़्त है। ज़्यादा चाहिए तो Pro।",
  "live_hints_recaps_tasks_and_a0fef6": "लाइव हिंट्स, रीकैप, टास्क और पूछें किसी भी AI के साथ मुफ़्त रहते हैं। Pro आपके लिए तैयारी कर देता है। Undertone के बीटा में रहने तक Pro की हर सुविधा मुफ़्त है।",
@@ -695,5 +695,8 @@
  "unlimited_meeting_prep_and_study_18ac48": "असीमित मीटिंग प्रेप और स्टडी गाइड",
  "org_chart_import_from_rippling_f75049": "Rippling, Gusto, BambooHR और अन्य से ऑर्ग चार्ट इंपोर्ट",
  "private_ai_included_monthly_credits_38120f": "प्राइवेट AI शामिल: मासिक क्रेडिट, कुछ भी स्टोर नहीं होता",
- "see_pro_5594ff": "Pro देखें"
+ "see_pro_5594ff": "Pro देखें",
+ "the_last_30_days_of_bd1743": "पिछले 30 दिनों की मीटिंग और चैट",
+ "learns_from_each_day_and_fa6dd3": "हर दिन से सीखता है और कल के संकेत बेहतर बनाता है",
+ "full_history_search_and_ask_48f471": "पूरा इतिहास: हर मीटिंग में खोजें और पूछें"
 }

@@ -675,7 +675,7 @@
  "pro_66d0c5": "Pro",
  "terms_a55a27": "條款",
  "refunds_be32ad": "退款",
- "download_dmg_v1_18_19_ba3df9": "下載 .dmg <span class=\"ver\">v1.18.19</span>",
+ "download_dmg_v1_18_20_0979f0": "下載 .dmg <span class=\"ver\">v1.18.20</span>",
  "pricing_a0d9bb": "定價",
  "free_to_use_pro_when_62c439": "免費使用。想要更多，選 Pro。",
  "live_hints_recaps_tasks_and_a0fef6": "即時提示、回顧、任務和提問，搭配任何 AI 都維持免費。Pro 幫你做好準備。Undertone 測試期間，Pro 的所有功能都免費。",
@@ -695,5 +695,8 @@
  "unlimited_meeting_prep_and_study_18ac48": "不限次數的會議準備和學習指南",
  "org_chart_import_from_rippling_f75049": "從 Rippling、Gusto、BambooHR 等匯入組織架構",
  "private_ai_included_monthly_credits_38120f": "內建私有 AI：每月點數，不儲存任何內容",
- "see_pro_5594ff": "了解 Pro"
+ "see_pro_5594ff": "了解 Pro",
+ "the_last_30_days_of_bd1743": "最近 30 天的會議和對話",
+ "learns_from_each_day_and_fa6dd3": "每天學習，讓明天的提示更準確",
+ "full_history_search_and_ask_48f471": "完整歷史：搜尋並詢問每一場會議"
 }

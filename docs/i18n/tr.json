@@ -676,7 +676,7 @@
  "pro_66d0c5": "Pro",
  "terms_a55a27": "Koşullar",
  "refunds_be32ad": "İadeler",
- "download_dmg_v1_18_19_ba3df9": ".dmg indir <span class=\"ver\">v1.18.19</span>",
+ "download_dmg_v1_18_20_0979f0": ".dmg indir <span class=\"ver\">v1.18.20</span>",
  "pricing_a0d9bb": "Fiyatlandırma",
  "free_to_use_pro_when_62c439": "Ücretsiz kullanın. Daha fazlası için Pro.",
  "live_hints_recaps_tasks_and_a0fef6": "Canlı ipuçları, özetler, görevler ve Sor, her yapay zekâyla ücretsiz kalır. Pro hazırlığı sizin yerinize yapar. Undertone betadayken Pro’daki her şey ücretsizdir.",
@@ -696,5 +696,8 @@
  "unlimited_meeting_prep_and_study_18ac48": "Sınırsız toplantı hazırlığı ve çalışma kılavuzları",
  "org_chart_import_from_rippling_f75049": "Rippling, Gusto, BambooHR ve daha fazlasından organizasyon şeması aktarımı",
  "private_ai_included_monthly_credits_38120f": "Gizli yapay zekâ dahil: aylık krediler, hiçbir şey saklanmaz",
- "see_pro_5594ff": "Pro’yu gör"
+ "see_pro_5594ff": "Pro’yu gör",
+ "the_last_30_days_of_bd1743": "Son 30 günün toplantıları ve sohbetleri",
+ "learns_from_each_day_and_fa6dd3": "Her günden öğrenir ve yarının ipuçlarını keskinleştirir",
+ "full_history_search_and_ask_48f471": "Tam geçmiş: her toplantıda ara ve sor"
 }

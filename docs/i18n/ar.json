@@ -675,7 +675,7 @@
  "pro_66d0c5": "Pro",
  "terms_a55a27": "الشروط",
  "refunds_be32ad": "الاسترداد",
- "download_dmg_v1_18_19_ba3df9": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.18.19</span>",
+ "download_dmg_v1_18_20_0979f0": "تنزيل ملف ⁦.dmg⁩ <span class=\"ver\">v1.18.20</span>",
  "pricing_a0d9bb": "الأسعار",
  "free_to_use_pro_when_62c439": "مجاني للاستخدام. وPro عندما تريد المزيد.",
  "live_hints_recaps_tasks_and_a0fef6": "التلميحات المباشرة والملخصات والمهام واسأل تبقى مجانية مع أي ذكاء اصطناعي. أما Pro فيتولى التحضير عنك. كل ما في Pro مجاني ما دام Undertone في النسخة التجريبية.",
@@ -695,5 +695,8 @@
  "unlimited_meeting_prep_and_study_18ac48": "تحضير اجتماعات وأدلة دراسة بلا حدود",
  "org_chart_import_from_rippling_f75049": "استيراد الهيكل التنظيمي من Rippling وGusto وBambooHR وغيرها",
  "private_ai_included_monthly_credits_38120f": "ذكاء اصطناعي خاص مضمّن: رصيد شهري، دون تخزين أي شيء",
- "see_pro_5594ff": "اطّلع على Pro"
+ "see_pro_5594ff": "اطّلع على Pro",
+ "the_last_30_days_of_bd1743": "آخر 30 يومًا من الاجتماعات والمحادثات",
+ "learns_from_each_day_and_fa6dd3": "يتعلم من كل يوم ويحسّن تلميحات الغد",
+ "full_history_search_and_ask_48f471": "السجل الكامل: ابحث واسأل عن كل اجتماع"
 }
