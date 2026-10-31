@@ -551,6 +551,11 @@
   .hero-film { max-width: 1120px; margin: 44px auto 0; }
   .hero-note { text-align: center; padding: 12px 0 0; }
   .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+  /* Phones in portrait get the vertical cut. */
+  @media (max-width: 600px) and (orientation: portrait) {
+    .hero-film { max-width: min(100%, 420px); }
+    .film video { aspect-ratio: 9 / 16; }
+  }
   .askmock { max-width: 640px; margin: 0 auto; padding: 40px 36px 30px; border-radius: var(--r-lg); border: 1px solid var(--border); background: var(--surface-2); }
   .askmock h3 { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; font-size: 30px; letter-spacing: -.01em; margin: 0 0 22px; }
   .askmock .am-box { border-radius: 16px; border: 1px solid rgba(129, 140, 248, .45); box-shadow: 0 0 22px rgba(129, 140, 248, .16); background: rgba(255, 255, 255, .03); padding: 14px 14px 12px 16px; }
@@ -698,11 +703,12 @@
     </div>
 
     <div class="film hero-film" id="video">
-      <video controls playsinline loop preload="metadata" poster="../assets/demo-poster.jpg" aria-label="Vídeo de demostración de Undertone: una reunión de equipo inventada, desde el resumen previo a la llamada hasta el resumen posterior, y después la página Equipo y una guía de bienvenida">
+      <video controls playsinline loop preload="metadata" poster="../assets/demo-poster.jpg" aria-label="Undertone en un minuto: términos explicados durante una llamada con las herramientas de tu equipo, una respuesta sugerida cuando te hacen una pregunta, el resumen y las tareas después, y la página del equipo con una guía de incorporación">
+        <source src="../assets/demo-vertical.mp4" type="video/mp4" media="(max-width: 600px) and (orientation: portrait)">
         <source src="../assets/demo.mp4" type="video/mp4">
       </video>
     </div>
-    <p class="sample hero-note">Ejemplo. Los nombres, empresas y tickets son inventados. Activa el sonido para oír la música.</p>
+    <p class="sample hero-note">Ejemplo. Los nombres, empresas y tickets son inventados. Activa el sonido para escuchar la narración.</p>
   </section>
 
   <section class="block" id="why">
@@ -1300,6 +1306,7 @@
   (function () {
     var v = document.querySelector(".hero-film video");
     if (!v) return;
+    if (matchMedia("(max-width: 600px) and (orientation: portrait)").matches) v.poster = "assets/demo-poster-vertical.jpg";
     var ok = matchMedia("(min-width: 820px) and (prefers-reduced-motion: no-preference)").matches
       && !(navigator.connection && navigator.connection.saveData);
     if (ok) { v.muted = true; v.preload = "auto"; v.play().catch(function () {}); }
