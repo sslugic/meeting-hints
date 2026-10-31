@@ -743,5 +743,10 @@
  "northwind_labs_93813d": "<i></i>Northwind Labs",
  "northwind_labs_912f91": "Northwind Labs",
  "welcome_to_northwind_labs_b6f93b": "Welcome to Northwind Labs",
- "undertone_demo_video_a_made_e50eec": "Undertone 示範影片：一場虛構的團隊站會，從通話前的簡報到通話後的摘要，接著是「團隊」頁面和一份新人指南"
+ "undertone_demo_video_a_made_e50eec": "Undertone 示範影片：一場虛構的團隊站會，從通話前的簡報到通話後的摘要，接著是「團隊」頁面和一份新人指南",
+ "your_calls_keys_and_meetings_2b54e4": "你的通話、金鑰和會議都留在你手裡。使用你自己的 AI 時，Undertone 本身只會收到可以關閉的匿名計數。",
+ "no_cookies_we_count_visits_f1c875": "沒有 Cookie。我們用 PostHog 統計造訪、語言切換和下載點擊，不使用 Cookie，也不蒐集任何能識別你的資訊；開啟「不要追蹤」（Do Not Track）時完全不統計。只有當你從我們的廣告進入並允許時，Google Ads 才會衡量這次造訪是否帶來了下載。",
+ "usage_stats_7b9e1a": "使用統計",
+ "if_you_leave_share_anonymous_5a977c": "如果你保持「分享匿名使用統計」開啟：會傳送 App 開啟、會議開始或結束（時長和通話 App）、摘要完成和錯誤等粗略事件，附帶隨機 ID 和 App 版本。絕不包含說話內容、會議標題、姓名、詞彙表詞條或金鑰。可在設定流程或設定中關閉。",
+ "to_check_what_leaves_your_589ed3": "若要查看有什麼離開了你的 Mac，請在通話期間用 Little Snitch、LuLu 或 Proxyman 觀察 Undertone 的網路流量。你只會看到與你選擇的 AI、你連接的工具，以及（若保持開啟）匿名計數的連線。你的音訊絕不會離開 Mac；只有文字會傳送給你的 AI。"
 }

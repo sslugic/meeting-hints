@@ -743,5 +743,10 @@
  "northwind_labs_93813d": "<i></i>Northwind Labs",
  "northwind_labs_912f91": "Northwind Labs",
  "welcome_to_northwind_labs_b6f93b": "Welcome to Northwind Labs",
- "undertone_demo_video_a_made_e50eec": "Video dimostrativo di Undertone: uno standup di team inventato, dal briefing prima della chiamata al riepilogo dopo, poi la pagina Team e una guida di onboarding"
+ "undertone_demo_video_a_made_e50eec": "Video dimostrativo di Undertone: uno standup di team inventato, dal briefing prima della chiamata al riepilogo dopo, poi la pagina Team e una guida di onboarding",
+ "your_calls_keys_and_meetings_2b54e4": "Le tue chiamate, chiavi e riunioni restano con te. Con la tua IA, l’unica cosa che Undertone riceve è un conteggio anonimo che puoi disattivare.",
+ "no_cookies_we_count_visits_f1c875": "Niente cookie. Contiamo visite, cambi di lingua e clic di download con PostHog, senza cookie né nulla che ti identifichi, e per niente se hai attivato Do Not Track. Solo se arrivi da una nostra inserzione e lo consenti, Google Ads misura se la visita ha portato a un download.",
+ "usage_stats_7b9e1a": "Statistiche d’uso",
+ "if_you_leave_share_anonymous_5a977c": "Se lasci attivo «Condividi statistiche d’uso anonime»: eventi generici come app aperta, riunione iniziata o terminata (la durata e l’app della chiamata), riepilogo scritto ed errori, con un ID casuale e la versione dell’app. Mai ciò che è stato detto, titoli delle riunioni, nomi, termini del glossario o chiavi. Disattivalo nella configurazione o nelle Impostazioni.",
+ "to_check_what_leaves_your_589ed3": "Per controllare cosa lascia il tuo Mac, osserva il traffico di Undertone durante una chiamata con Little Snitch, LuLu o Proxyman. Vedrai solo connessioni all’IA che hai scelto, agli strumenti che hai collegato e, se li hai lasciati attivi, ai conteggi anonimi. Il tuo audio non lascia mai il Mac; all’IA va solo il testo."
 }

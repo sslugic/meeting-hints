@@ -744,5 +744,10 @@
  "northwind_labs_93813d": "<i></i>Northwind Labs",
  "northwind_labs_912f91": "Northwind Labs",
  "welcome_to_northwind_labs_b6f93b": "Welcome to Northwind Labs",
- "undertone_demo_video_a_made_e50eec": "Demovideo van Undertone: een verzonnen teamstandup, van de briefing vóór het gesprek tot de samenvatting erna, daarna de Team-pagina en een onboardinggids"
+ "undertone_demo_video_a_made_e50eec": "Demovideo van Undertone: een verzonnen teamstandup, van de briefing vóór het gesprek tot de samenvatting erna, daarna de Team-pagina en een onboardinggids",
+ "your_calls_keys_and_meetings_2b54e4": "Je gesprekken, sleutels en meetings blijven bij jou. Met je eigen AI ontvangt Undertone zelf alleen anonieme tellingen die je kunt uitzetten.",
+ "no_cookies_we_count_visits_f1c875": "Geen cookies. We tellen bezoeken, taalwisselingen en downloadklikken met PostHog, zonder cookies of iets wat jou identificeert, en helemaal niet als Do Not Track aan staat. Alleen als je via een van onze advertenties binnenkomt en dat toestaat, meet Google Ads of het bezoek tot een download heeft geleid.",
+ "usage_stats_7b9e1a": "Gebruiksstatistieken",
+ "if_you_leave_share_anonymous_5a977c": "Als je ‘Anonieme gebruiksstatistieken delen’ aan laat: grove gebeurtenissen zoals app geopend, meeting gestart of beëindigd (de duur en de belapp), samenvatting geschreven en fouten, met een willekeurige ID en de appversie. Nooit wat er is gezegd, meetingtitels, namen, woordenlijsttermen of sleutels. Zet het uit bij de installatie of in Instellingen.",
+ "to_check_what_leaves_your_589ed3": "Om te controleren wat je Mac verlaat, bekijk je tijdens een gesprek het verkeer van Undertone met Little Snitch, LuLu of Proxyman. Je ziet alleen verbindingen met de AI die je koos, de tools die je koppelde en, als je ze aan liet, de anonieme tellingen. Je audio verlaat je Mac nooit; alleen tekst gaat naar je AI."
 }

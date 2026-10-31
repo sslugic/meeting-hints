@@ -1170,7 +1170,7 @@
     <div class="wrap private">
       <div class="head">
         <h2>隐私为本</h2>
-        <p>你的通话、密钥和会议都留在你手里。使用你自己的 AI 时，Undertone 本身收到的只有一个可以关闭的匿名计数。</p>
+        <p>你的通话、密钥和会议都留在你手里。使用你自己的 AI 时，Undertone 本身只会收到可以关闭的匿名计数。</p>
       </div>
       <dl class="facts">
         <dt>音频</dt><dd>通话和你的麦克风音频在你的 Mac 上通过 Apple 的 SpeechAnalyzer 转写。绝不上传。</dd>
@@ -1179,13 +1179,14 @@
         <dt>AI</dt><dd>你自己的 OpenAI、Gemini 或 Anthropic 密钥，本地的 Ollama 或 LM Studio 模型，或你的 Cursor 或 Claude Code 登录。密钥保存在你的钥匙串中。</dd>
         <dt>免费积分</dt><dd>如果你从免费积分开始，请求会通过 Undertone 的服务器发送到 Google Gemini。服务器只保存你的邮箱、余额和用量总计，绝不保存说话内容。</dd>
         <dt>你的工具</dt><dd>只读。Undertone 只搜索和读取；发送、发布、创建或编辑类的工具一律不允许使用。</dd>
-        <dt>本网站</dt><dd>没有 Cookie，也不跟踪。只有当你通过我们的广告访问并同意时，Google Ads 才会衡量这次访问是否带来了下载。</dd>
+        <dt>本网站</dt><dd>没有 Cookie。我们用 PostHog 统计访问、语言切换和下载点击，不使用 Cookie，也不收集任何能识别你的信息；开启“请勿跟踪”（Do Not Track）时完全不统计。只有当你从我们的广告进入并允许时，Google Ads 才会衡量这次访问是否带来了下载。</dd>
         <dt>使用计数</dt><dd>如果你保持“把我计为用户”开启：首次打开 Undertone 时发送一次匿名信号，之后每周最多一次，只包含随机 ID、App 版本、macOS 版本和语言。在设置向导或设置中关闭后，会删除已发送的内容。</dd>
+        <dt>使用统计</dt><dd>如果你保持“共享匿名使用统计”开启：会发送应用打开、会议开始或结束（时长和通话应用）、纪要生成和错误等粗略事件，附带随机 ID 和 App 版本。绝不包含说话内容、会议标题、姓名、术语表词条或密钥。可在设置向导或设置中关闭。</dd>
       </dl>
       <div class="verify">
         <h3>不必只听我们说</h3>
         <p>Undertone 是闭源软件。GitHub 上公开的是这个网站、我们的安全说明，以及 Undertone 在你 Mac 上保存的每种文件的格式，让你清楚知道它存了什么。</p>
-        <p>想检查哪些数据离开了你的 Mac，可以在通话期间用 Little Snitch、LuLu 或 Proxyman 监控 Undertone 的流量。你只会看到连向你选择的 AI、你连接的工具，以及（如果保持开启）每周匿名计数的连接。你的音频从不离开你的 Mac；发给 AI 的只有文本。</p>
+        <p>要查看有什么离开了你的 Mac，请在通话期间用 Little Snitch、LuLu 或 Proxyman 观察 Undertone 的网络流量。你只会看到与你选择的 AI、你连接的工具，以及（若保持开启）匿名计数的连接。你的音频绝不会离开 Mac；只有文本会发送给你的 AI。</p>
         <p><a href="https://github.com/sslugic/undertone/blob/main/SECURITY.md">安全与隐私说明</a> · <a href="https://github.com/sslugic/undertone/blob/main/DATA.md">Undertone 存储哪些内容</a></p>
       </div>
     </div>
@@ -1376,6 +1377,39 @@
     box.querySelector('[data-net="instagram"]').addEventListener("click", function () {
       if (navigator.share) { navigator.share({ title: "Undertone", text: text, url: url }).catch(function () {}); return; }
       copy(function () { say(msg(".msg-insta", "Link copied.")); });
+    });
+  })();
+</script>
+<script>
+  // Anonymous, cookieless product analytics (PostHog): page views, download clicks and language changes only.
+  // No cookies or storage, no autocapture or recordings, nothing with Do Not Track on. The key is PostHog's public project key.
+  (function () {
+    var PH = { key: "phc_CXAg4tHVGP7PUUpEacmPrqxbAALnYoa78zhfVUnBgqoH", host: "https://us.i.posthog.com" };
+    if (!PH.key || navigator.doNotTrack === "1" || window.doNotTrack === "1") return;
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset get_distinct_id".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init(PH.key, {
+      api_host: PH.host, defaults: "2025-05-24", cookieless_mode: "always", person_profiles: "identified_only",
+      autocapture: false, capture_pageview: true, capture_pageleave: false, capture_dead_clicks: false, capture_heatmaps: false,
+      rageclick: false, disable_session_recording: true, disable_surveys: true, respect_dnt: true, advanced_disable_flags: true,
+      // Page URLs are sent without their query string (ad click IDs and the like).
+      before_send: function (e) {
+        if (e && e.properties) ["$current_url", "$referrer"].forEach(function (k) { if (typeof e.properties[k] === "string") e.properties[k] = e.properties[k].split(/[?#]/)[0]; });
+        return e;
+      }
+    });
+    posthog.register({ site_lang: document.documentElement.lang });
+    function placement(a) {
+      var box = a.closest("header, footer, section");
+      return box ? (box.id || box.className.split(" ").pop() || box.tagName.toLowerCase()) : "page";
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a");
+      if (!a) return;
+      if (/Undertone\.dmg/.test(a.getAttribute("href") || "")) {
+        posthog.capture("download_clicked", { placement: placement(a) }, { transport: "sendBeacon" });
+      } else if (a.dataset.lang && a.closest(".lang-menu")) {
+        posthog.capture("language_switched", { to: a.dataset.lang, placement: placement(a) }, { transport: "sendBeacon" });
+      }
     });
   })();
 </script>

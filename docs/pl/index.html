@@ -1170,7 +1170,7 @@
     <div class="wrap private">
       <div class="head">
         <h2>Prywatny z założenia</h2>
-        <p>Twoje rozmowy, klucze i spotkania zostają u Ciebie. Z własną AI jedyne, co Undertone otrzymuje, to anonimowe zliczenie, które możesz wyłączyć.</p>
+        <p>Twoje rozmowy, klucze i spotkania zostają u ciebie. Z własną AI Undertone sam otrzymuje tylko anonimowe liczniki, które możesz wyłączyć.</p>
       </div>
       <dl class="facts">
         <dt>Dźwięk</dt><dd>Rozmowa i twój mikrofon są transkrybowane na twoim Macu przez SpeechAnalyzer od Apple. Nigdy nie są wysyłane.</dd>
@@ -1179,13 +1179,14 @@
         <dt>AI</dt><dd>Twój własny klucz OpenAI, Gemini lub Anthropic, lokalny model w Ollama lub LM Studio albo logowanie przez Cursor lub Claude Code. Klucze zostają w Pęku kluczy.</dd>
         <dt>Darmowe kredyty</dt><dd>Jeśli zaczniesz z darmowymi kredytami, zapytania trafiają przez serwer Undertone do Google Gemini. Przechowuje on Twój e-mail, saldo i sumy użycia, nigdy treść rozmów.</dd>
         <dt>Twoje narzędzia</dt><dd>Tylko do odczytu. Undertone wyłącznie wyszukuje i czyta; narzędzia, które wysyłają, publikują, tworzą lub edytują, nigdy nie są dopuszczone.</dd>
-        <dt>Ta strona</dt><dd>Bez plików cookie i śledzenia. Tylko jeśli trafisz tu z naszej reklamy i na to pozwolisz, Google Ads zmierzy, czy wizyta zakończyła się pobraniem.</dd>
+        <dt>Ta strona</dt><dd>Bez ciasteczek. Liczymy odwiedziny, zmiany języka i kliknięcia pobierania przez PostHog, bez ciasteczek i bez niczego, co cię identyfikuje, a wcale, gdy włączone jest Do Not Track. Tylko jeśli trafisz do nas z jednej z naszych reklam i na to zezwolisz, Google Ads mierzy, czy wizyta zakończyła się pobraniem.</dd>
         <dt>Liczenie użycia</dt><dd>Jeśli zostawisz włączone „Licz mnie jako użytkownika”: jeden anonimowy sygnał przy pierwszym otwarciu Undertone i najwyżej jeden tygodniowo, z losowym ID, wersją aplikacji, wersją macOS i językiem. Wyłączenie w konfiguracji lub Ustawieniach usuwa to, co zostało wysłane.</dd>
+        <dt>Statystyki użycia</dt><dd>Jeśli zostawisz włączone „Udostępniaj anonimowe statystyki użycia”: ogólne zdarzenia, takie jak otwarcie aplikacji, rozpoczęcie lub zakończenie spotkania (jego długość i aplikacja do rozmów), napisanie podsumowania i błędy, z losowym ID i wersją aplikacji. Nigdy tego, co powiedziano, tytułów spotkań, nazw, terminów ze słownika ani kluczy. Wyłączysz to w konfiguracji lub w Ustawieniach.</dd>
       </dl>
       <div class="verify">
         <h3>Nie musisz wierzyć nam na słowo</h3>
         <p>Undertone ma zamknięty kod. Publicznie na GitHubie jest ta strona, nasze notatki o bezpieczeństwie i format każdego pliku, który Undertone trzyma na twoim Macu, więc widzisz dokładnie, co przechowuje.</p>
-        <p>Aby sprawdzić, co opuszcza twojego Maca, obserwuj ruch Undertone w Little Snitch, LuLu lub Proxyman podczas rozmowy. Zobaczysz tylko połączenia z wybraną AI, podłączonymi narzędziami i, jeśli zostawisz to włączone, cotygodniowe anonimowe zliczenie. Dźwięk nigdy nie opuszcza twojego Maca; do AI trafia tylko tekst.</p>
+        <p>Aby sprawdzić, co opuszcza twojego Maca, obserwuj ruch Undertone podczas rozmowy w Little Snitch, LuLu lub Proxyman. Zobaczysz tylko połączenia z wybraną przez ciebie AI, z podłączonymi narzędziami i, jeśli je zostawiłeś, z anonimowymi licznikami. Twój dźwięk nigdy nie opuszcza Maca; do AI trafia tylko tekst.</p>
         <p><a href="https://github.com/sslugic/undertone/blob/main/SECURITY.md">Notatki o bezpieczeństwie i prywatności</a> · <a href="https://github.com/sslugic/undertone/blob/main/DATA.md">Co przechowuje Undertone</a></p>
       </div>
     </div>
@@ -1376,6 +1377,39 @@
     box.querySelector('[data-net="instagram"]').addEventListener("click", function () {
       if (navigator.share) { navigator.share({ title: "Undertone", text: text, url: url }).catch(function () {}); return; }
       copy(function () { say(msg(".msg-insta", "Link copied.")); });
+    });
+  })();
+</script>
+<script>
+  // Anonymous, cookieless product analytics (PostHog): page views, download clicks and language changes only.
+  // No cookies or storage, no autocapture or recordings, nothing with Do Not Track on. The key is PostHog's public project key.
+  (function () {
+    var PH = { key: "phc_CXAg4tHVGP7PUUpEacmPrqxbAALnYoa78zhfVUnBgqoH", host: "https://us.i.posthog.com" };
+    if (!PH.key || navigator.doNotTrack === "1" || window.doNotTrack === "1") return;
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset get_distinct_id".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init(PH.key, {
+      api_host: PH.host, defaults: "2025-05-24", cookieless_mode: "always", person_profiles: "identified_only",
+      autocapture: false, capture_pageview: true, capture_pageleave: false, capture_dead_clicks: false, capture_heatmaps: false,
+      rageclick: false, disable_session_recording: true, disable_surveys: true, respect_dnt: true, advanced_disable_flags: true,
+      // Page URLs are sent without their query string (ad click IDs and the like).
+      before_send: function (e) {
+        if (e && e.properties) ["$current_url", "$referrer"].forEach(function (k) { if (typeof e.properties[k] === "string") e.properties[k] = e.properties[k].split(/[?#]/)[0]; });
+        return e;
+      }
+    });
+    posthog.register({ site_lang: document.documentElement.lang });
+    function placement(a) {
+      var box = a.closest("header, footer, section");
+      return box ? (box.id || box.className.split(" ").pop() || box.tagName.toLowerCase()) : "page";
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a");
+      if (!a) return;
+      if (/Undertone\.dmg/.test(a.getAttribute("href") || "")) {
+        posthog.capture("download_clicked", { placement: placement(a) }, { transport: "sendBeacon" });
+      } else if (a.dataset.lang && a.closest(".lang-menu")) {
+        posthog.capture("language_switched", { to: a.dataset.lang, placement: placement(a) }, { transport: "sendBeacon" });
+      }
     });
   })();
 </script>
