@@ -751,5 +751,9 @@
  "if_you_leave_share_anonymous_5a977c": "Jeśli zostawisz włączone „Udostępniaj anonimowe statystyki użycia”: ogólne zdarzenia, takie jak otwarcie aplikacji, rozpoczęcie lub zakończenie spotkania (jego długość i aplikacja do rozmów), napisanie podsumowania i błędy, z losowym ID i wersją aplikacji. Nigdy tego, co powiedziano, tytułów spotkań, nazw, terminów ze słownika ani kluczy. Wyłączysz to w konfiguracji lub w Ustawieniach.",
  "to_check_what_leaves_your_589ed3": "Aby sprawdzić, co opuszcza twojego Maca, obserwuj ruch Undertone podczas rozmowy w Little Snitch, LuLu lub Proxyman. Zobaczysz tylko połączenia z wybraną przez ciebie AI, z podłączonymi narzędziami i, jeśli je zostawiłeś, z anonimowymi licznikami. Twój dźwięk nigdy nie opuszcza Maca; do AI trafia tylko tekst.",
  "undertone_in_one_minute_terms_ce7653": "Undertone w minutę: pojęcia wyjaśniane w trakcie rozmowy na podstawie narzędzi twojego zespołu, podpowiedź odpowiedzi, gdy ktoś zada ci pytanie, potem podsumowanie i zadania oraz strona zespołu z przewodnikiem wdrożeniowym",
- "sample_names_companies_and_tickets_766664": "Przykład. Imiona, firmy i zgłoszenia są zmyślone. Włącz dźwięk, aby usłyszeć narrację."
+ "sample_names_companies_and_tickets_766664": "Przykład. Imiona, firmy i zgłoszenia są zmyślone. Włącz dźwięk, aby usłyszeć narrację.",
+ "recipes_one_click_prompts_like_c8c995": "Przepisy: prompty na jedno kliknięcie, np. Podsumuj mój tydzień, Przygotowanie lejka czy Coachuj mnie. Zapisuj własne i udostępniaj je zespołowi.",
+ "customer_calls_your_meetings_with_864d6f": "Rozmowy z klientami: Twoje spotkania z innymi firmami, pogrupowane według firm, każda z własnym Ask i przepisami",
+ "team_analytics_for_admins_meetings_07f2b7": "Statystyki zespołu dla administratorów: spotkania w tygodniu, udostępnione podsumowania i kto jest aktywny. Liczby spotkań to tylko liczby i każdy może je wyłączyć.",
+ "team_analytics_and_shared_recipes_100322": "Statystyki zespołu i wspólne przepisy"
 }

@@ -750,5 +750,9 @@
  "if_you_leave_share_anonymous_5a977c": "如果你保持「分享匿名使用統計」開啟：會傳送 App 開啟、會議開始或結束（時長和通話 App）、摘要完成和錯誤等粗略事件，附帶隨機 ID 和 App 版本。絕不包含說話內容、會議標題、姓名、詞彙表詞條或金鑰。可在設定流程或設定中關閉。",
  "to_check_what_leaves_your_589ed3": "若要查看有什麼離開了你的 Mac，請在通話期間用 Little Snitch、LuLu 或 Proxyman 觀察 Undertone 的網路流量。你只會看到與你選擇的 AI、你連接的工具，以及（若保持開啟）匿名計數的連線。你的音訊絕不會離開 Mac；只有文字會傳送給你的 AI。",
  "undertone_in_one_minute_terms_ce7653": "一分鐘了解 Undertone：通話中依團隊自己的工具解釋術語，被提問時提供建議回答，通話後提供摘要與待辦事項，還有附入職指南的團隊頁面",
- "sample_names_companies_and_tickets_766664": "範例。姓名、公司與工單皆為虛構。開啟聲音即可聽到旁白。"
+ "sample_names_companies_and_tickets_766664": "範例。姓名、公司與工單皆為虛構。開啟聲音即可聽到旁白。",
+ "recipes_one_click_prompts_like_c8c995": "配方：一鍵執行的提示，例如「回顧我的一週」「銷售管道準備」或「給我教練建議」。儲存你自己的配方並與團隊分享。",
+ "customer_calls_your_meetings_with_864d6f": "客戶通話：你與其他公司的會議，依公司分組，每家公司都有自己的 Ask 和配方",
+ "team_analytics_for_admins_meetings_07f2b7": "給管理員的團隊分析：每週會議數、共享的摘要以及誰在活躍。會議數量只是數字，任何人都能關閉。",
+ "team_analytics_and_shared_recipes_100322": "團隊分析和共享配方"
 }

@@ -751,5 +751,9 @@
  "if_you_leave_share_anonymous_5a977c": "Wenn du „Anonyme Nutzungsstatistiken teilen“ eingeschaltet lässt: grobe Ereignisse wie App geöffnet, Meeting gestartet oder beendet (seine Dauer und die Anruf-App), Zusammenfassung geschrieben und Fehler, mit einer Zufalls-ID und der App-Version. Nie, was gesagt wurde, Meeting-Titel, Namen, Glossarbegriffe oder Schlüssel. Schalte es bei der Einrichtung oder in den Einstellungen aus.",
  "to_check_what_leaves_your_589ed3": "Um zu prüfen, was deinen Mac verlässt, beobachte den Datenverkehr von Undertone während eines Anrufs mit Little Snitch, LuLu oder Proxyman. Du siehst nur Verbindungen zur gewählten KI, zu den verbundenen Tools und, falls du sie eingeschaltet gelassen hast, die anonymen Zählungen. Dein Audio verlässt deinen Mac nie; nur Text geht an deine KI.",
  "undertone_in_one_minute_terms_ce7653": "Undertone in einer Minute: Begriffe, während eines Calls aus den Tools deines Teams erklärt, eine vorgeschlagene Antwort, wenn du etwas gefragt wirst, danach Zusammenfassung und Aufgaben, und die Team-Seite mit einem Onboarding-Leitfaden",
- "sample_names_companies_and_tickets_766664": "Beispiel. Namen, Firmen und Tickets sind erfunden. Ton einschalten, um die Erzählung zu hören."
+ "sample_names_companies_and_tickets_766664": "Beispiel. Namen, Firmen und Tickets sind erfunden. Ton einschalten, um die Erzählung zu hören.",
+ "recipes_one_click_prompts_like_c8c995": "Rezepte: Prompts mit einem Klick wie „Meine Woche zusammenfassen“, „Pipeline-Vorbereitung“ oder „Coache mich“. Speichere eigene und teile sie mit deinem Team.",
+ "customer_calls_your_meetings_with_864d6f": "Kundengespräche: deine Meetings mit anderen Firmen, nach Firma gruppiert, jede mit eigenem Ask und eigenen Rezepten",
+ "team_analytics_for_admins_meetings_07f2b7": "Team-Statistiken für Admins: Meetings pro Woche, geteilte Zusammenfassungen und wer aktiv ist. Meeting-Zahlen sind nur Zahlen, und jede Person kann sie abschalten.",
+ "team_analytics_and_shared_recipes_100322": "Team-Statistiken und geteilte Rezepte"
 }

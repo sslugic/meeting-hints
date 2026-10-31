@@ -750,5 +750,9 @@
  "if_you_leave_share_anonymous_5a977c": "Si dejas activado «Compartir estadísticas de uso anónimas»: eventos generales como app abierta, reunión iniciada o terminada (su duración y la app de la llamada), resumen escrito y errores, con un ID aleatorio y la versión de la app. Nunca lo que se dijo, títulos de reuniones, nombres, términos del glosario ni claves. Desactívalo en la configuración inicial o en Ajustes.",
  "to_check_what_leaves_your_589ed3": "Para comprobar qué sale de tu Mac, observa el tráfico de Undertone con Little Snitch, LuLu o Proxyman durante una llamada. Solo verás conexiones a la IA que elegiste, a las herramientas que conectaste y, si las dejaste activadas, a los recuentos anónimos. Tu audio nunca sale de tu Mac; solo el texto va a tu IA.",
  "undertone_in_one_minute_terms_ce7653": "Undertone en un minuto: términos explicados durante una llamada con las herramientas de tu equipo, una respuesta sugerida cuando te hacen una pregunta, el resumen y las tareas después, y la página del equipo con una guía de incorporación",
- "sample_names_companies_and_tickets_766664": "Ejemplo. Los nombres, empresas y tickets son inventados. Activa el sonido para escuchar la narración."
+ "sample_names_companies_and_tickets_766664": "Ejemplo. Los nombres, empresas y tickets son inventados. Activa el sonido para escuchar la narración.",
+ "recipes_one_click_prompts_like_c8c995": "Recetas: prompts de un clic como Resumen de mi semana, Preparar el pipeline o Coach personal. Guarda los tuyos y compártelos con tu equipo.",
+ "customer_calls_your_meetings_with_864d6f": "Llamadas con clientes: tus reuniones con otras empresas, agrupadas por empresa, cada una con su propio Ask y sus recetas",
+ "team_analytics_for_admins_meetings_07f2b7": "Analíticas del equipo para administradores: reuniones por semana, resúmenes compartidos y quién está activo. Las cifras de reuniones son solo números y cualquiera puede desactivarlas.",
+ "team_analytics_and_shared_recipes_100322": "Analíticas del equipo y recetas compartidas"
 }

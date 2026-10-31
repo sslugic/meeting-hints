@@ -751,5 +751,9 @@
  "if_you_leave_share_anonymous_5a977c": "“Anonim kullanım istatistiklerini paylaş” açık kalırsa: uygulama açıldı, toplantı başladı veya bitti (süresi ve arama uygulaması), özet yazıldı ve hatalar gibi genel olaylar; rastgele bir kimlik ve uygulama sürümü ile. Konuşulanlar, toplantı başlıkları, isimler, sözlük terimleri veya anahtarlar asla gönderilmez. Kurulumda veya Ayarlar’da kapatabilirsiniz.",
  "to_check_what_leaves_your_589ed3": "Mac’inizden nelerin çıktığını kontrol etmek için bir arama sırasında Undertone’un trafiğini Little Snitch, LuLu veya Proxyman ile izleyin. Yalnızca seçtiğiniz yapay zekâya, bağladığınız araçlara ve açık bıraktıysanız anonim sayımlara bağlantılar göreceksiniz. Sesiniz Mac’inizden asla çıkmaz; yapay zekânıza yalnızca metin gider.",
  "undertone_in_one_minute_terms_ce7653": "Bir dakikada Undertone: ekibinizin kendi araçlarından görüşme sırasında açıklanan terimler, size soru sorulduğunda önerilen yanıt, sonrasında özet ve görevler, ve işe alışma rehberiyle ekip sayfası",
- "sample_names_companies_and_tickets_766664": "Örnek. İsimler, şirketler ve kayıtlar uydurmadır. Anlatımı duymak için sesi açın."
+ "sample_names_companies_and_tickets_766664": "Örnek. İsimler, şirketler ve kayıtlar uydurmadır. Anlatımı duymak için sesi açın.",
+ "recipes_one_click_prompts_like_c8c995": "Tarifler: Haftamı özetle, Satış hattı hazırlığı veya Bana koçluk yap gibi tek tıklık istemler. Kendi tariflerini kaydet ve ekibinle paylaş.",
+ "customer_calls_your_meetings_with_864d6f": "Müşteri görüşmeleri: başka şirketlerle toplantıların, şirkete göre gruplanmış; her birinin kendi Ask'i ve tarifleri var",
+ "team_analytics_for_admins_meetings_07f2b7": "Yöneticiler için ekip analizi: haftalık toplantılar, paylaşılan özetler ve kimin aktif olduğu. Toplantı sayıları yalnızca sayıdır ve herkes kapatabilir.",
+ "team_analytics_and_shared_recipes_100322": "Ekip analizi ve paylaşılan tarifler"
 }

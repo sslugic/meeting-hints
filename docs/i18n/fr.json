@@ -750,5 +750,9 @@
  "if_you_leave_share_anonymous_5a977c": "Si vous laissez « Partager des statistiques d’utilisation anonymes » activé : des événements généraux comme app ouverte, réunion commencée ou terminée (sa durée et l’app d’appel), compte rendu rédigé et erreurs, avec un identifiant aléatoire et la version de l’app. Jamais ce qui a été dit, les titres de réunions, les noms, les termes du glossaire ni les clés. Désactivez-le dans la configuration ou les Réglages.",
  "to_check_what_leaves_your_589ed3": "Pour vérifier ce qui quitte votre Mac, surveillez le trafic d’Undertone pendant un appel avec Little Snitch, LuLu ou Proxyman. Vous ne verrez que des connexions vers l’IA choisie, les outils connectés et, si vous les avez laissés activés, les comptages anonymes. Votre audio ne quitte jamais votre Mac ; seul du texte part vers votre IA.",
  "undertone_in_one_minute_terms_ce7653": "Undertone en une minute : les termes expliqués pendant un appel à partir des outils de votre équipe, une réponse suggérée quand on vous pose une question, le compte rendu et les tâches ensuite, puis la page d'équipe avec un guide d'intégration",
- "sample_names_companies_and_tickets_766664": "Exemple. Les noms, entreprises et tickets sont fictifs. Activez le son pour entendre la narration."
+ "sample_names_companies_and_tickets_766664": "Exemple. Les noms, entreprises et tickets sont fictifs. Activez le son pour entendre la narration.",
+ "recipes_one_click_prompts_like_c8c995": "Recettes : des prompts en un clic comme Récap de ma semaine, Préparer le pipeline ou Coache-moi. Enregistrez les vôtres et partagez-les avec votre équipe.",
+ "customer_calls_your_meetings_with_864d6f": "Appels clients : vos réunions avec d’autres entreprises, regroupées par entreprise, chacune avec son Ask et ses recettes",
+ "team_analytics_for_admins_meetings_07f2b7": "Statistiques d’équipe pour les admins : réunions par semaine, récaps partagés et qui est actif. Le nombre de réunions n’est qu’un chiffre, et chacun peut le désactiver.",
+ "team_analytics_and_shared_recipes_100322": "Statistiques d’équipe et recettes partagées"
 }
