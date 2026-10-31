@@ -29,7 +29,7 @@
   body { background: var(--bg); color: var(--text); font: 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
   header { padding: 28px 0; }
   header .wrap { display: flex; align-items: center; gap: 10px; }
   header img { width: 28px; height: 28px; border-radius: 7px; }
@@ -37,7 +37,7 @@
   header nav { margin-left: auto; font-size: 14px; }
   h1 { font-size: clamp(32px, 6vw, 44px); line-height: 1.1; letter-spacing: -.02em; margin: 32px 0 12px; }
   .lede { color: var(--text-2); font-size: 18px; max-width: 620px; }
-  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 36px; }
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 36px; }
   .plan { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 22px; display: flex; flex-direction: column; }
   .plan.pro { border-color: rgba(129, 140, 248, .5); background: rgba(129, 140, 248, .06); }
   .plan h2 { font-size: 15px; font-weight: 600; color: var(--text-2); }
@@ -60,15 +60,12 @@
   .packs { margin-top: 18px; }
   .packs .plan ul { margin: 10px 0 18px; }
   h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); font-weight: 600; margin-bottom: 12px; }
-  .business { display: grid; grid-template-columns: 1.3fr 1fr; gap: 14px; margin-top: 18px; }
-  .business ul { margin: 0; }
-  .seats { display: flex; align-items: center; gap: 8px; margin: 14px 0 6px; }
+  .seats { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; }
   .seats label { color: var(--text-2); font-size: 14px; margin-right: auto; }
   .seats button { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--border-2); background: var(--surface-2); color: var(--text); font: 600 18px var(--sans); cursor: pointer; }
   .seats input { width: 64px; height: 34px; text-align: center; border-radius: 8px; border: 1px solid var(--border-2); background: var(--bg); color: var(--text); font: 600 16px var(--sans); }
-  .total { color: var(--text-3); font-size: 14px; margin-bottom: 16px; min-height: 22px; }
-  .team-note { color: var(--text-3); font-size: 13px; margin-top: 10px; }
-  @media (max-width: 640px) { .business { grid-template-columns: 1fr; } }
+  .total { color: var(--text-3); font-size: 14px; margin-bottom: 14px; min-height: 22px; }
+  .team-note { color: var(--text-3); font-size: 13px; margin: -6px 0 14px; }
   dl.faq dt { font-weight: 600; margin-top: 16px; }
   dl.faq dd { color: var(--text-2); }
   footer { margin: 64px 0 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; }
@@ -77,8 +74,8 @@
 <body>
 <header><div class="wrap"><a href="../"><img src="../assets/icon-256.png" alt=""></a><b>Undertone</b><nav><a href="../">getundertone.app</a></nav></div></header>
 <main class="wrap">
-  <h1>Undertone Pro</h1>
-  <p class="lede">More done before and between your meetings. Your meetings still never leave your Mac.</p>
+  <h1>Undertone Pro and Business</h1>
+  <p class="lede">More done before and between your meetings, for you or your whole team. Your meetings still never leave your Mac.</p>
 
   <div class="toggle" role="group" aria-label="Billing">
     <button type="button" data-billing="annual" aria-pressed="true">Yearly</button>
@@ -115,37 +112,29 @@
       </ul>
       <button class="btn primary" id="buy" type="button">Get Pro</button>
     </div>
-  </div>
-
-  <section id="business">
-    <h3>Undertone Business</h3>
-    <p class="section-note">Pro for everyone on your team, plus everything you share: recaps, comments, the team glossary, onboarding guides, automations and single sign-on. Priced per person, from 3 people.</p>
-    <div class="business">
-      <div class="plan">
-        <ul>
-          <li><b>Everything in Pro</b> for every seat, AI credits included</li>
-          <li><b>Share recaps</b> with your team or by link, with comments and @mentions</li>
-          <li><b>Assigned action items</b> and a team glossary everyone's hints use</li>
-          <li><b>Onboarding guides</b> the AI writes for new teammates</li>
-          <li><b>Slack, Linear, Jira and HubSpot</b> automations</li>
-          <li><b>Single sign-on</b> with Okta, Entra or Google Workspace</li>
-        </ul>
+    <div class="plan" id="business">
+      <h2>Business</h2>
+      <div class="price"><span id="biz-price">$20</span> <small id="biz-per">/ person / month, billed yearly</small></div>
+      <div class="note">For teams, from 3 people</div>
+      <ul>
+        <li><b>Everything in Pro</b> for every seat, AI credits included</li>
+        <li><b>Share recaps</b> with your team or by link, with comments and @mentions</li>
+        <li><b>Assigned action items</b> and a team glossary everyone's hints use</li>
+        <li><b>Onboarding guides</b> the AI writes for new teammates</li>
+        <li><b>Slack, Linear, Jira and HubSpot</b> automations</li>
+        <li><b>Single sign-on</b> with Okta, Entra or Google Workspace</li>
+      </ul>
+      <p class="team-note" id="team-note">Check out with the email you sign in to Undertone with. Business goes to the team you own, or the first one you create.</p>
+      <div class="seats">
+        <label for="seats">People</label>
+        <button type="button" id="seats-less" aria-label="Fewer people">−</button>
+        <input id="seats" type="number" inputmode="numeric" min="3" max="100" value="3">
+        <button type="button" id="seats-more" aria-label="More people">+</button>
       </div>
-      <div class="plan pro">
-        <h2>Business</h2>
-        <div class="price"><span id="biz-price">$20</span> <small id="biz-per">/ person / month, billed yearly</small></div>
-        <div class="seats">
-          <label for="seats">People</label>
-          <button type="button" id="seats-less" aria-label="Fewer people">−</button>
-          <input id="seats" type="number" inputmode="numeric" min="3" max="100" value="3">
-          <button type="button" id="seats-more" aria-label="More people">+</button>
-        </div>
-        <div class="total" id="biz-total"></div>
-        <button class="btn primary" id="buy-business" type="button">Start a team</button>
-        <p class="team-note" id="team-note">Check out with the email you sign in to Undertone with. Business goes to the team you own, or to the first one you create.</p>
-      </div>
+      <div class="total" id="biz-total"></div>
+      <button class="btn" id="buy-business" type="button">Start a team</button>
     </div>
-  </section>
+  </div>
 
   <section id="credits">
     <h3>Credit packs</h3>
