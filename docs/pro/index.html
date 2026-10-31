@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Undertone Pro</title>
+<title>Undertone Pro and Business</title>
 <meta name="description" content="Undertone Pro: automatic briefings, research ahead, unlimited meeting prep and private AI included. Your meetings still never leave your Mac.">
 <meta property="og:title" content="Undertone Pro">
 <meta property="og:image" content="https://getundertone.app/assets/promo.png">
@@ -60,6 +60,15 @@
   .packs { margin-top: 18px; }
   .packs .plan ul { margin: 10px 0 18px; }
   h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); font-weight: 600; margin-bottom: 12px; }
+  .business { display: grid; grid-template-columns: 1.3fr 1fr; gap: 14px; margin-top: 18px; }
+  .business ul { margin: 0; }
+  .seats { display: flex; align-items: center; gap: 8px; margin: 14px 0 6px; }
+  .seats label { color: var(--text-2); font-size: 14px; margin-right: auto; }
+  .seats button { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--border-2); background: var(--surface-2); color: var(--text); font: 600 18px var(--sans); cursor: pointer; }
+  .seats input { width: 64px; height: 34px; text-align: center; border-radius: 8px; border: 1px solid var(--border-2); background: var(--bg); color: var(--text); font: 600 16px var(--sans); }
+  .total { color: var(--text-3); font-size: 14px; margin-bottom: 16px; min-height: 22px; }
+  .team-note { color: var(--text-3); font-size: 13px; margin-top: 10px; }
+  @media (max-width: 640px) { .business { grid-template-columns: 1fr; } }
   dl.faq dt { font-weight: 600; margin-top: 16px; }
   dl.faq dd { color: var(--text-2); }
   footer { margin: 64px 0 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; }
@@ -108,6 +117,36 @@
     </div>
   </div>
 
+  <section id="business">
+    <h3>Undertone Business</h3>
+    <p class="section-note">Pro for everyone on your team, plus everything you share: recaps, comments, the team glossary, onboarding guides, automations and single sign-on. Priced per person, from 3 people.</p>
+    <div class="business">
+      <div class="plan">
+        <ul>
+          <li><b>Everything in Pro</b> for every seat, AI credits included</li>
+          <li><b>Share recaps</b> with your team or by link, with comments and @mentions</li>
+          <li><b>Assigned action items</b> and a team glossary everyone's hints use</li>
+          <li><b>Onboarding guides</b> the AI writes for new teammates</li>
+          <li><b>Slack, Linear, Jira and HubSpot</b> automations</li>
+          <li><b>Single sign-on</b> with Okta, Entra or Google Workspace</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <h2>Business</h2>
+        <div class="price"><span id="biz-price">$20</span> <small id="biz-per">/ person / month, billed yearly</small></div>
+        <div class="seats">
+          <label for="seats">People</label>
+          <button type="button" id="seats-less" aria-label="Fewer people">−</button>
+          <input id="seats" type="number" inputmode="numeric" min="3" max="100" value="3">
+          <button type="button" id="seats-more" aria-label="More people">+</button>
+        </div>
+        <div class="total" id="biz-total"></div>
+        <button class="btn primary" id="buy-business" type="button">Start a team</button>
+        <p class="team-note" id="team-note">Check out with the email you sign in to Undertone with. Business goes to the team you own, or to the first one you create.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="credits">
     <h3>Credit packs</h3>
     <p class="section-note">Undertone's built-in AI without a subscription: buy credits once and use them for calls, recaps and Ask. Check out with the email you use for credits in Undertone and they're added to that account.</p>
@@ -125,6 +164,8 @@
       <dd>About 20 credits cover a one-hour call; Ask and recaps use a little too. Using your own AI instead costs no credits at all.</dd>
       <dt>How do I add Pro to the app?</dt>
       <dd>After checkout we email you a license key. Paste it in Profile &amp; Settings › General. Lost it? The same screen can email it again.</dd>
+      <dt>How do seats work in Business?</dt>
+      <dd>Each seat is one person on your team. The owner and admins get seats first, then people in the order they joined, and each gets Pro in Undertone on their own. Add seats any time from the Team page in Undertone; you pay the difference for the rest of the period.</dd>
       <dt>Can I cancel?</dt>
       <dd>Any time. Pro keeps working until the end of the period you paid for. Payments are handled by Paddle, our reseller, which also handles invoices and sales tax.</dd>
     </dl>
@@ -137,6 +178,11 @@
   // Fill in from Paddle (Developer tools › Authentication, and Catalog › Prices). These are public values, not secrets.
   var PADDLE = { open: true, token: "live_d099a405793321740092eb4a6e4", environment: "production", prices: { annual: "pri_01m64jkyc2n85byxmmdxxwr3zj", monthly: "pri_01m64jk9nkwz198brw5cpmphpp" } };
   var PRICES = { annual: ["$10", "/ month, billed yearly", "Two months free"], monthly: ["$12", "/ month", ""] };
+  // Business, per person: the same price IDs as BUSINESS_PRICES in the credits Worker's wrangler.toml.
+  var BUSINESS = {
+    annual: { price: "pri_01m67g5cbqrrjswxwm1ag6vv0m", perMonth: 20, total: 240, per: "/ person / month, billed yearly", unit: "year" },
+    monthly: { price: "pri_01m67g4kyvvas6bc9e1v7hj0c4", perMonth: 24, total: 24, per: "/ person / month", unit: "month" }
+  };
   // One-time credit packs: the same Paddle price IDs as CREDIT_PACKS in the credits Worker's wrangler.toml.
   // Replace the pri_PACK_* placeholders with the real price IDs from Paddle › Catalog; until then the buttons stay off.
   var CREDIT_PACKS = [
@@ -144,7 +190,8 @@
     { price: "pri_01m6541zbegkd6sh5qqf2jp20c", usd: 25, credits: 1300 },
     { price: "pri_01m65427gq6r1rx74zphs880v5", usd: 50, credits: 2800 }
   ];
-  // The app links here as #buy=credits&email=… so checkout starts with the account's email filled in.
+  // The app links here as #buy=credits&email=… so checkout starts with the account's email filled in, and as
+  // #buy=business&workspace=…&seats=… so Business goes to that team.
   var link = new URLSearchParams(location.hash.slice(1));
   var buyerEmail = link.get("email") || undefined;
 
@@ -156,11 +203,28 @@
     document.getElementById("per").textContent = p[1];
     document.getElementById("saving").textContent = p[2];
     document.querySelectorAll("[data-billing]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.billing === billing)); });
+    showBusiness();
   }
   document.querySelectorAll("[data-billing]").forEach(function (b) {
     b.addEventListener("click", function () { billing = b.dataset.billing; show(); });
   });
+
+  var seatsInput = document.getElementById("seats");
+  var workspace = /^[0-9a-f]{16}$/.test(link.get("workspace") || "") ? link.get("workspace") : null;
+  if (link.get("seats")) seatsInput.value = link.get("seats");
+  function seats() { return Math.min(100, Math.max(3, Math.round(Number(seatsInput.value) || 3))); }
+  function showBusiness() {
+    var plan = BUSINESS[billing], n = seats();
+    document.getElementById("biz-price").textContent = "$" + plan.perMonth;
+    document.getElementById("biz-per").textContent = plan.per;
+    document.getElementById("biz-total").textContent = n + " people · $" + (n * plan.total).toLocaleString("en-US") + " a " + plan.unit + " before tax";
+  }
+  seatsInput.addEventListener("input", showBusiness);
+  seatsInput.addEventListener("change", function () { seatsInput.value = seats(); showBusiness(); });
+  document.getElementById("seats-less").addEventListener("click", function () { seatsInput.value = seats() - 1; seatsInput.value = seats(); showBusiness(); });
+  document.getElementById("seats-more").addEventListener("click", function () { seatsInput.value = seats() + 1; seatsInput.value = seats(); showBusiness(); });
   show();
+  if (workspace) document.getElementById("team-note").textContent = "Business goes to the team you started checkout from in Undertone.";
 
   var paddleReady = PADDLE.open && PADDLE.token && window.Paddle;
   function checkout(priceId, email) {
@@ -170,9 +234,18 @@
     if (PADDLE.environment === "sandbox") Paddle.Environment.set("sandbox");
     Paddle.Initialize({ token: PADDLE.token });
     buy.addEventListener("click", function () { checkout(PADDLE.prices[billing]); });
+    document.getElementById("buy-business").addEventListener("click", function () {
+      Paddle.Checkout.open({
+        items: [{ priceId: BUSINESS[billing].price, quantity: seats() }],
+        customer: buyerEmail ? { email: buyerEmail } : undefined,
+        customData: workspace ? { plan: "business", workspace: workspace } : { plan: "business" },
+        settings: { theme: "dark" }
+      });
+    });
   } else {
     buy.textContent = "Coming soon · free in the beta";
     buy.disabled = true;
+    document.getElementById("buy-business").disabled = true;
   }
 
   var packs = document.getElementById("packs");
@@ -192,6 +265,7 @@
     packs.appendChild(card);
   });
   if (link.get("buy") === "credits") document.getElementById("credits").scrollIntoView();
+  if (link.get("buy") === "business" || location.hash === "#business") document.getElementById("business").scrollIntoView();
 </script>
 </body>
 </html>
