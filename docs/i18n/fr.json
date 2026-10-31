@@ -699,7 +699,7 @@
  "learns_from_each_day_and_fa6dd3": "Apprend de chaque journée et affine les indices du lendemain",
  "full_history_search_and_ask_48f471": "Historique complet : recherchez et interrogez chaque réunion",
  "syncs_your_meetings_and_memory_26bab0": "Synchronise vos réunions et votre mémoire sur tous vos Mac",
- "download_dmg_v1_32_0_1442c8": "Télécharger le .dmg <span class=\"ver\">v1.32.0</span>",
+ "download_dmg_v1_32_1_383823": "Télécharger le .dmg <span class=\"ver\">v1.32.1</span>",
  "teams_cbfd44": "Équipes",
  "bring_your_team_along_7c53c9": "Embarquez votre équipe",
  "share_a_recap_with_your_d18010": "Partagez un résumé avec votre équipe et discutez-en : commentaires, @mentions et actions assignées à la bonne personne. Rien ne quitte votre Mac tant que vous ne le partagez pas.",
@@ -752,7 +752,7 @@
  "undertone_in_one_minute_terms_ce7653": "Undertone en une minute : les termes expliqués pendant un appel à partir des outils de votre équipe, une réponse suggérée quand on vous pose une question, le compte rendu et les tâches ensuite, puis la page d'équipe avec un guide d'intégration",
  "sample_names_companies_and_tickets_766664": "Exemple. Les noms, entreprises et tickets sont fictifs. Activez le son pour entendre la narration.",
  "recipes_one_click_prompts_like_c8c995": "Recettes : des prompts en un clic comme Récap de ma semaine, Préparer le pipeline ou Coache-moi. Enregistrez les vôtres et partagez-les avec votre équipe.",
- "customer_calls_your_meetings_with_864d6f": "Appels clients : vos réunions avec d’autres entreprises, regroupées par entreprise, chacune avec son Ask et ses recettes",
  "team_analytics_for_admins_meetings_07f2b7": "Statistiques d’équipe pour les admins : réunions par semaine, récaps partagés et qui est actif. Le nombre de réunions n’est qu’un chiffre, et chacun peut le désactiver.",
- "team_analytics_and_shared_recipes_100322": "Statistiques d’équipe et recettes partagées"
+ "team_analytics_and_shared_recipes_100322": "Statistiques d’équipe et recettes partagées",
+ "accounts_every_company_you_meet_3fb2d2": "Comptes : chaque entreprise que vous rencontrez, quand et à quelle fréquence vous échangez, et un clic pour préparer le prochain appel"
 }

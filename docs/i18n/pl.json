@@ -700,7 +700,7 @@
  "learns_from_each_day_and_fa6dd3": "Uczy się z każdego dnia i dopracowuje jutrzejsze podpowiedzi",
  "full_history_search_and_ask_48f471": "Pełna historia: przeszukuj każde spotkanie i pytaj o nie",
  "syncs_your_meetings_and_memory_26bab0": "Synchronizuje spotkania i pamięć między Twoimi Macami",
- "download_dmg_v1_32_0_1442c8": "Pobierz .dmg <span class=\"ver\">v1.32.0</span>",
+ "download_dmg_v1_32_1_383823": "Pobierz .dmg <span class=\"ver\">v1.32.1</span>",
  "teams_cbfd44": "Zespoły",
  "bring_your_team_along_7c53c9": "Zaproś swój zespół",
  "share_a_recap_with_your_d18010": "Udostępnij podsumowanie zespołowi i omówcie je: komentarze, @wzmianki i zadania przypisane właściwej osobie. Nic nie opuszcza Twojego Maca, dopóki tego nie udostępnisz.",
@@ -753,7 +753,7 @@
  "undertone_in_one_minute_terms_ce7653": "Undertone w minutę: pojęcia wyjaśniane w trakcie rozmowy na podstawie narzędzi twojego zespołu, podpowiedź odpowiedzi, gdy ktoś zada ci pytanie, potem podsumowanie i zadania oraz strona zespołu z przewodnikiem wdrożeniowym",
  "sample_names_companies_and_tickets_766664": "Przykład. Imiona, firmy i zgłoszenia są zmyślone. Włącz dźwięk, aby usłyszeć narrację.",
  "recipes_one_click_prompts_like_c8c995": "Przepisy: prompty na jedno kliknięcie, np. Podsumuj mój tydzień, Przygotowanie lejka czy Coachuj mnie. Zapisuj własne i udostępniaj je zespołowi.",
- "customer_calls_your_meetings_with_864d6f": "Rozmowy z klientami: Twoje spotkania z innymi firmami, pogrupowane według firm, każda z własnym Ask i przepisami",
  "team_analytics_for_admins_meetings_07f2b7": "Statystyki zespołu dla administratorów: spotkania w tygodniu, udostępnione podsumowania i kto jest aktywny. Liczby spotkań to tylko liczby i każdy może je wyłączyć.",
- "team_analytics_and_shared_recipes_100322": "Statystyki zespołu i wspólne przepisy"
+ "team_analytics_and_shared_recipes_100322": "Statystyki zespołu i wspólne przepisy",
+ "accounts_every_company_you_meet_3fb2d2": "Konta: każda firma, z którą się spotykasz, kiedy i jak często rozmawiacie, oraz jedno kliknięcie, by przygotować się do kolejnej rozmowy"
 }

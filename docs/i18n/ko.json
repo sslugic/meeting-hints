@@ -699,7 +699,7 @@
  "learns_from_each_day_and_fa6dd3": "매일 배우고 내일의 힌트를 다듬어요",
  "full_history_search_and_ask_48f471": "전체 기록: 모든 회의를 검색하고 질문",
  "syncs_your_meetings_and_memory_26bab0": "회의와 메모리를 모든 Mac에서 동기화",
- "download_dmg_v1_32_0_1442c8": ".dmg 다운로드 <span class=\"ver\">v1.32.0</span>",
+ "download_dmg_v1_32_1_383823": ".dmg 다운로드 <span class=\"ver\">v1.32.1</span>",
  "teams_cbfd44": "팀",
  "bring_your_team_along_7c53c9": "팀과 함께하세요",
  "share_a_recap_with_your_d18010": "요약을 팀과 공유하고 함께 이야기하세요. 댓글, @멘션, 알맞은 사람에게 배정한 액션 아이템. 공유하기 전까지는 아무것도 Mac 밖으로 나가지 않습니다.",
@@ -752,7 +752,7 @@
  "undertone_in_one_minute_terms_ce7653": "1분 만에 보는 Undertone: 통화 중 팀의 도구를 바탕으로 설명하는 용어, 질문을 받았을 때 제안하는 답변, 통화 후 요약과 할 일, 그리고 온보딩 가이드가 있는 팀 페이지",
  "sample_names_companies_and_tickets_766664": "샘플입니다. 이름, 회사, 티켓은 가상입니다. 소리를 켜면 내레이션을 들을 수 있습니다.",
  "recipes_one_click_prompts_like_c8c995": "레시피: '이번 주 요약', '파이프라인 준비', '코칭해 줘' 같은 원클릭 프롬프트. 나만의 레시피를 저장하고 팀과 공유하세요.",
- "customer_calls_your_meetings_with_864d6f": "고객 통화: 다른 회사와의 회의를 회사별로 묶고, 회사마다 Ask와 레시피를 쓸 수 있습니다",
  "team_analytics_for_admins_meetings_07f2b7": "관리자를 위한 팀 분석: 주별 회의 수, 공유된 요약, 활동 중인 사람. 회의 수는 숫자일 뿐이며 누구나 끌 수 있습니다.",
- "team_analytics_and_shared_recipes_100322": "팀 분석과 공유 레시피"
+ "team_analytics_and_shared_recipes_100322": "팀 분석과 공유 레시피",
+ "accounts_every_company_you_meet_3fb2d2": "계정: 만나는 모든 회사, 언제 얼마나 자주 이야기하는지, 그리고 클릭 한 번으로 다음 통화 준비"
 }
