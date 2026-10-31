@@ -263,6 +263,10 @@
   .row .hi { font-weight: 500; color: #FCA5A5; }
   .row b { font-weight: 600; color: var(--text); }
   .verdict { flex: none; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 0 8px; }
+  .verdict.v-strong { color: #4ade80; border-color: color-mix(in srgb, #4ade80 45%, transparent); }
+  .verdict.v-ok { color: #fbbf24; border-color: color-mix(in srgb, #fbbf24 45%, transparent); }
+  .verdict.v-miss { color: #f87171; border-color: color-mix(in srgb, #f87171 45%, transparent); }
+  .score { display: inline-block; min-width: 26px; text-align: center; font-weight: 600; color: var(--text); background: color-mix(in srgb, #4ade80 18%, transparent); border-radius: 6px; padding: 0 5px; margin-right: 4px; }
 
   .features { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; }
   .features div { border-top: 1px solid var(--border-2); padding: 18px 0 30px; }
@@ -679,6 +683,7 @@
     <nav class="nav-links" aria-label="Hoofdmenu">
       <a href="#how">Hoe het werkt</a>
       <a href="#before">Functies</a>
+      <a href="#sales">Sales &amp; CS</a>
       <a href="#team">Teams</a>
       <a href="#use-cases">Toepassingen</a>
       <a href="#privacy">Privacy</a>
@@ -883,6 +888,57 @@
         <li>Een follow-upmail of Slack-bericht, klaar om te plakken. Undertone verstuurt nooit iets.</li>
         <li>Een score voor hoe je de vragen aan jou beantwoordde en hoe je sprak</li>
         <li>Druk op start bij een taak en Vragen stelt hem op uit de meeting, je geheugen en je bronnen</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="sales">
+    <div class="wrap">
+      <div class="head">
+        <h2>Gemaakt voor sales en customer success</h2>
+        <p>Begin elk klantgesprek met kennis van het account en kom eruit met een score, eerlijke feedback en de follow-up al geschreven.</p>
+      </div>
+      <div class="app" role="img" aria-label="Undertones weergave van een klantgesprek: de score van het gesprek met feedback op elke klantvraag, en het bijbehorende account, met voorbeeldgegevens">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Start</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Meetings</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Accounts</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Vragen</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Verlenging Fernhill</div>
+          <p class="date">Gisteren · 34 min · Rosa Klein, Theo Brandt</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">Hoe het gesprek ging <small><span class="score">82</span> Goed</small></div>
+              <div class="row"><span class="grow">“Kunnen jullie de prijs evenaren die we elders kregen?”<span class="sub2">Volgende keer: begin met de uitrol in 30 dagen en het supportniveau voordat je over prijs praat.</span></span><span class="verdict v-ok">Oké</span></div>
+              <div class="row"><span class="grow">“Wanneer komt SSO?”<span class="sub2">Duidelijke datum en eigenaar, en je bood een gesprek met de productlead aan.</span></span><span class="verdict v-strong">Sterk</span></div>
+              <div class="row"><span class="grow">“Wie bellen we als de export stukgaat?”<span class="sub2">Niet beantwoord. Noem het supportkanaal en de reactietijd.</span></span><span class="verdict v-miss">Gemist</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Fernhill <small>Account</small></div>
+              <div class="row"><span class="grow"><b>Actief</b> · ongeveer elke 2 weken<span class="sub2">6 meetings sinds september · laatst gisteren</span></span></div>
+              <div class="row"><span class="grow">Openstaande beloftes<span class="sub2">SSO-planning sturen · support-SLA delen</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Follow-up <small>Opgesteld</small></div>
+              <div class="row"><span class="grow">Hoi Rosa, bedankt voor vandaag. Zoals beloofd: SSO komt op de 14e, en hier is onze support-SLA…<span class="sub2">Klaar om te plakken. Undertone verstuurt nooit iets.</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Recepten <small>Sales</small></div>
+              <div class="row"><span class="grow">Wekelijkse omzetreview<span class="sub2">Dealrisico’s en uitbreiding, in de woorden van de klant</span></span></div>
+              <div class="row"><span class="grow">Productfeedback verzamelen<span class="sub2">Verzoeken en klachten uit elk klantgesprek</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Voorbeeldgegevens. Namen, bedrijven en meetings zijn verzonnen.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Vóór het gesprek: een briefing met de geschiedenis van het account, openstaande beloftes en wie er is</li>
+        <li>Tijdens het gesprek: productnamen en jargon van de klant uitgelegd zodra ze vallen, en een voorgesteld antwoord als je overvallen wordt</li>
+        <li>Na het gesprek: een score voor hoe het ging, en feedback op elke klantvraag: wat aankwam, wat beter kan en een sterker antwoord voor de volgende keer</li>
+        <li>Accounts laat zien welke klanten actief zijn, afkoelen of stil zijn geworden, zodat geen verlenging erdoor glipt</li>
+        <li>Recepten voor het werk rond het gesprek: pipeline voorbereiden, wekelijkse omzetreview, klantgezondheid en productfeedback</li>
+        <li>Deel een gespreksverslag met je team, zodat de overdracht van sales naar customer success elke belofte nakomt</li>
       </ul>
     </div>
   </section>
@@ -1285,7 +1341,7 @@
 
   <section class="wrap start">
     <h2>Klaar voor je volgende call?</h2>
-    <p>Installeer, start met gratis credits of koppel je AI, voeg je bronnen toe en neem deel aan een call. Daarna staan je samenvatting, taken en nieuwe termen klaar in Start.</p>
+    <p>Installeer, en een voorbeeldmeeting en een korte checklist wijzen je de weg: koppel je agenda, stel je eerste vraag, nodig je team uit. Neem daarna deel aan een gesprek, en je samenvatting, taken en nieuwe termen staan klaar op Home.</p>
     <div class="ctas">
       <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.33.0</span></a>
     </div>

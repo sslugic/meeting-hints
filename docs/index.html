@@ -289,6 +289,10 @@
   .row .hi { font-weight: 500; color: #FCA5A5; }
   .row b { font-weight: 600; color: var(--text); }
   .verdict { flex: none; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 0 8px; }
+  .verdict.v-strong { color: #4ade80; border-color: color-mix(in srgb, #4ade80 45%, transparent); }
+  .verdict.v-ok { color: #fbbf24; border-color: color-mix(in srgb, #fbbf24 45%, transparent); }
+  .verdict.v-miss { color: #f87171; border-color: color-mix(in srgb, #f87171 45%, transparent); }
+  .score { display: inline-block; min-width: 26px; text-align: center; font-weight: 600; color: var(--text); background: color-mix(in srgb, #4ade80 18%, transparent); border-radius: 6px; padding: 0 5px; margin-right: 4px; }
 
   .features { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; }
   .features div { border-top: 1px solid var(--border-2); padding: 18px 0 30px; }
@@ -705,6 +709,7 @@
     <nav class="nav-links" aria-label="Main">
       <a href="#how">How it works</a>
       <a href="#before">Features</a>
+      <a href="#sales">Sales &amp; CS</a>
       <a href="#team">Teams</a>
       <a href="#use-cases">Use cases</a>
       <a href="#privacy">Privacy</a>
@@ -910,6 +915,57 @@
         <li>A follow-up email or Slack message, ready to paste. Undertone never sends anything.</li>
         <li>A score for how you answered the questions put to you, and how you spoke</li>
         <li>Press start on a task, and Ask drafts it from the meeting, your memory and your sources</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="sales">
+    <div class="wrap">
+      <div class="head">
+        <h2>Built for sales and customer success</h2>
+        <p>Walk into every customer call knowing the account, and come out with a score, honest feedback and the follow-up already written.</p>
+      </div>
+      <div class="app" role="img" aria-label="Undertone's view of a customer call: the call score with feedback on each customer question, and the account it belongs to, using sample data">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Home</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Meetings</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Accounts</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Ask</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Fernhill renewal</div>
+          <p class="date">Yesterday · 34 min · Rosa Klein, Theo Brandt</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">How the call went <small><span class="score">82</span> Good</small></div>
+              <div class="row"><span class="grow">“Can you match the price we were quoted elsewhere?”<span class="sub2">Next time: anchor on the 30-day rollout and the support tier before you talk price.</span></span><span class="verdict v-ok">Okay</span></div>
+              <div class="row"><span class="grow">“When does SSO ship?”<span class="sub2">Clear date and owner, and you offered a call with the product lead.</span></span><span class="verdict v-strong">Strong</span></div>
+              <div class="row"><span class="grow">“Who do we call if the export breaks?”<span class="sub2">Not answered. Name the support channel and the response time.</span></span><span class="verdict v-miss">Missed</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Fernhill <small>Account</small></div>
+              <div class="row"><span class="grow"><b>Active</b> · about every 2 weeks<span class="sub2">6 meetings since September · last met yesterday</span></span></div>
+              <div class="row"><span class="grow">Open promises<span class="sub2">Send the SSO timeline · share the support SLA</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Follow-up <small>Drafted</small></div>
+              <div class="row"><span class="grow">Hi Rosa, thanks for today. As promised: SSO ships on the 14th, and here's our support SLA…<span class="sub2">Ready to paste. Undertone never sends anything.</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Recipes <small>Sales</small></div>
+              <div class="row"><span class="grow">Weekly revenue review<span class="sub2">Deal risks and expansion, in the customer's words</span></span></div>
+              <div class="row"><span class="grow">Gather product feedback<span class="sub2">Requests and complaints from every customer call</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Sample data. Names, companies and meetings are made up.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Before the call: a brief with the account's history, open promises and who's in the room</li>
+        <li>During the call: the customer's product names and jargon explained as they're said, and a suggested answer when you're put on the spot</li>
+        <li>After the call: a score for how it went, and feedback on every question the customer asked: what landed, what to fix and a stronger answer for next time</li>
+        <li>Accounts shows which customers are active, cooling off or gone quiet, so no renewal slips by</li>
+        <li>Recipes for the work around the call: pipeline prep, weekly revenue review, customer health checks and product feedback</li>
+        <li>Share a call recap with your team, so handoffs from sales to customer success keep every promise</li>
       </ul>
     </div>
   </section>
@@ -1312,7 +1368,7 @@
 
   <section class="wrap start">
     <h2>Ready for your next call?</h2>
-    <p>Install, start with free credits or connect your AI, add your sources, then join a call. Afterwards, your recap, tasks and new terms are waiting on Home.</p>
+    <p>Install, and a sample meeting and a short checklist show you around: connect your calendar, ask your first question, invite your team. Then join a call, and your recap, tasks and new terms are waiting on Home.</p>
     <div class="ctas">
       <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Download .dmg <span class="ver">v1.33.0</span></a>
     </div>

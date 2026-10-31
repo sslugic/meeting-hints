@@ -263,6 +263,10 @@
   .row .hi { font-weight: 500; color: #FCA5A5; }
   .row b { font-weight: 600; color: var(--text); }
   .verdict { flex: none; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 0 8px; }
+  .verdict.v-strong { color: #4ade80; border-color: color-mix(in srgb, #4ade80 45%, transparent); }
+  .verdict.v-ok { color: #fbbf24; border-color: color-mix(in srgb, #fbbf24 45%, transparent); }
+  .verdict.v-miss { color: #f87171; border-color: color-mix(in srgb, #f87171 45%, transparent); }
+  .score { display: inline-block; min-width: 26px; text-align: center; font-weight: 600; color: var(--text); background: color-mix(in srgb, #4ade80 18%, transparent); border-radius: 6px; padding: 0 5px; margin-right: 4px; }
 
   .features { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; }
   .features div { border-top: 1px solid var(--border-2); padding: 18px 0 30px; }
@@ -679,6 +683,7 @@
     <nav class="nav-links" aria-label="Основное меню">
       <a href="#how">Как это работает</a>
       <a href="#before">Возможности</a>
+      <a href="#sales">Продажи и CS</a>
       <a href="#team">Команды</a>
       <a href="#use-cases">Сценарии</a>
       <a href="#privacy">Приватность</a>
@@ -883,6 +888,57 @@
         <li>Письмо или сообщение в Slack с итогами, готовое к вставке. Undertone никогда ничего не отправляет.</li>
         <li>Оценка того, как вы ответили на заданные вам вопросы и как говорили</li>
         <li>Нажмите «Старт» у задачи, и «Спросить» подготовит её черновик по встрече, вашей памяти и источникам</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="sales">
+    <div class="wrap">
+      <div class="head">
+        <h2>Для отделов продаж и customer success</h2>
+        <p>Приходите на каждый звонок с клиентом, зная аккаунт, и уходите с оценкой, честным разбором и уже готовым письмом.</p>
+      </div>
+      <div class="app" role="img" aria-label="Звонок с клиентом в Undertone: оценка звонка с разбором каждого вопроса клиента и аккаунт, к которому он относится, на примере данных">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Главная</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Встречи</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Аккаунты</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Спросить</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Продление Fernhill</div>
+          <p class="date">Вчера · 34 мин · Rosa Klein, Theo Brandt</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">Как прошёл звонок <small><span class="score">82</span> Хорошо</small></div>
+              <div class="row"><span class="grow">«Сможете дать такую же цену, как нам предложили в другом месте?»<span class="sub2">В следующий раз: сначала внедрение за 30 дней и уровень поддержки, потом цена.</span></span><span class="verdict v-ok">Нормально</span></div>
+              <div class="row"><span class="grow">«Когда появится SSO?»<span class="sub2">Чёткая дата и ответственный, плюс вы предложили созвон с руководителем продукта.</span></span><span class="verdict v-strong">Сильно</span></div>
+              <div class="row"><span class="grow">«Кому звонить, если сломается экспорт?»<span class="sub2">Без ответа. Назовите канал поддержки и время реакции.</span></span><span class="verdict v-miss">Пропущено</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Fernhill <small>Аккаунт</small></div>
+              <div class="row"><span class="grow"><b>Активный</b> · примерно раз в 2 недели<span class="sub2">6 встреч с сентября · последняя вчера</span></span></div>
+              <div class="row"><span class="grow">Открытые обещания<span class="sub2">Отправить сроки SSO · поделиться SLA поддержки</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Письмо <small>Готово</small></div>
+              <div class="row"><span class="grow">Здравствуйте, Rosa, спасибо за встречу. Как обещал: SSO будет 14-го, а вот наш SLA поддержки…<span class="sub2">Готово к вставке. Undertone ничего не отправляет сам.</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Рецепты <small>Продажи</small></div>
+              <div class="row"><span class="grow">Еженедельный обзор выручки<span class="sub2">Риски по сделкам и рост, словами клиента</span></span></div>
+              <div class="row"><span class="grow">Собрать отзывы о продукте<span class="sub2">Запросы и жалобы из каждого звонка с клиентами</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Пример. Имена, компании и встречи выдуманы.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>До звонка: бриф с историей аккаунта, открытыми обещаниями и участниками</li>
+        <li>Во время звонка: названия продуктов и жаргон клиента объясняются сразу, а если вас застали врасплох — подсказка ответа</li>
+        <li>После звонка: оценка того, как он прошёл, и разбор каждого вопроса клиента: что сработало, что исправить и более сильный ответ на будущее</li>
+        <li>Аккаунты показывают, какие клиенты активны, остывают или затихли, чтобы не упустить ни одного продления</li>
+        <li>Рецепты для работы вокруг звонка: подготовка пайплайна, еженедельный обзор выручки, здоровье клиента и отзывы о продукте</li>
+        <li>Поделитесь итогами звонка с командой, чтобы при передаче клиента из продаж в customer success сдержать каждое обещание</li>
       </ul>
     </div>
   </section>
@@ -1285,7 +1341,7 @@
 
   <section class="wrap start">
     <h2>Готовы к следующему звонку?</h2>
-    <p>Установите, начните с бесплатных кредитов или подключите свой ИИ, добавьте источники — и присоединяйтесь к звонку. После него итоги, задачи и новые термины будут ждать вас на Главной.</p>
+    <p>Установите, и пример встречи и короткий список всё покажут: подключите календарь, задайте первый вопрос, пригласите команду. Потом присоединитесь к звонку, и итоги, задачи и новые термины будут ждать на главной.</p>
     <div class="ctas">
       <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Скачать .dmg <span class="ver">v1.33.0</span></a>
     </div>

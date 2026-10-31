@@ -263,6 +263,10 @@
   .row .hi { font-weight: 500; color: #FCA5A5; }
   .row b { font-weight: 600; color: var(--text); }
   .verdict { flex: none; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 0 8px; }
+  .verdict.v-strong { color: #4ade80; border-color: color-mix(in srgb, #4ade80 45%, transparent); }
+  .verdict.v-ok { color: #fbbf24; border-color: color-mix(in srgb, #fbbf24 45%, transparent); }
+  .verdict.v-miss { color: #f87171; border-color: color-mix(in srgb, #f87171 45%, transparent); }
+  .score { display: inline-block; min-width: 26px; text-align: center; font-weight: 600; color: var(--text); background: color-mix(in srgb, #4ade80 18%, transparent); border-radius: 6px; padding: 0 5px; margin-right: 4px; }
 
   .features { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; }
   .features div { border-top: 1px solid var(--border-2); padding: 18px 0 30px; }
@@ -679,6 +683,7 @@
     <nav class="nav-links" aria-label="Treść główna">
       <a href="#how">Jak to działa</a>
       <a href="#before">Funkcje</a>
+      <a href="#sales">Sprzedaż i CS</a>
       <a href="#team">Zespoły</a>
       <a href="#use-cases">Zastosowania</a>
       <a href="#privacy">Prywatność</a>
@@ -883,6 +888,57 @@
         <li>E-mail lub wiadomość na Slacku z follow-upem, gotowe do wklejenia. Undertone nigdy niczego nie wysyła.</li>
         <li>Ocena tego, jak odpowiadałeś na zadane ci pytania i jak mówiłeś</li>
         <li>Naciśnij start przy zadaniu, a Zapytaj przygotuje je na podstawie spotkania, twojej pamięci i źródeł</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="sales">
+    <div class="wrap">
+      <div class="head">
+        <h2>Stworzony dla sprzedaży i customer success</h2>
+        <p>Wchodź na każdą rozmowę z klientem, znając konto, i wychodź z oceną, szczerym feedbackiem i gotowym follow-upem.</p>
+      </div>
+      <div class="app" role="img" aria-label="Widok rozmowy z klientem w Undertone: ocena rozmowy z feedbackiem do każdego pytania klienta i konto, do którego należy, na przykładowych danych">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Start</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Spotkania</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Konta</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Zapytaj</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Odnowienie Fernhill</div>
+          <p class="date">Wczoraj · 34 min · Rosa Klein, Theo Brandt</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">Jak poszła rozmowa <small><span class="score">82</span> Dobrze</small></div>
+              <div class="row"><span class="grow">„Możecie dopasować się do ceny, którą dostaliśmy gdzie indziej?”<span class="sub2">Następnym razem: zacznij od wdrożenia w 30 dni i poziomu wsparcia, zanim przejdziesz do ceny.</span></span><span class="verdict v-ok">OK</span></div>
+              <div class="row"><span class="grow">„Kiedy będzie SSO?”<span class="sub2">Jasna data i odpowiedzialna osoba, do tego propozycja rozmowy z liderem produktu.</span></span><span class="verdict v-strong">Mocno</span></div>
+              <div class="row"><span class="grow">„Do kogo dzwonić, gdy eksport się zepsuje?”<span class="sub2">Bez odpowiedzi. Podaj kanał wsparcia i czas reakcji.</span></span><span class="verdict v-miss">Pominięte</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Fernhill <small>Konto</small></div>
+              <div class="row"><span class="grow"><b>Aktywne</b> · mniej więcej co 2 tygodnie<span class="sub2">6 spotkań od września · ostatnie wczoraj</span></span></div>
+              <div class="row"><span class="grow">Otwarte obietnice<span class="sub2">Wysłać harmonogram SSO · udostępnić SLA wsparcia</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Follow-up <small>Gotowy</small></div>
+              <div class="row"><span class="grow">Cześć Rosa, dzięki za dziś. Zgodnie z obietnicą: SSO będzie 14., a oto nasze SLA wsparcia…<span class="sub2">Gotowe do wklejenia. Undertone nigdy niczego nie wysyła.</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Przepisy <small>Sprzedaż</small></div>
+              <div class="row"><span class="grow">Cotygodniowy przegląd przychodów<span class="sub2">Ryzyka i ekspansja, słowami klienta</span></span></div>
+              <div class="row"><span class="grow">Zbierz opinie o produkcie<span class="sub2">Prośby i skargi z każdej rozmowy z klientem</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Przykładowe dane. Imiona, firmy i spotkania są zmyślone.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Przed rozmową: brief z historią konta, otwartymi obietnicami i tym, kto będzie obecny</li>
+        <li>W trakcie rozmowy: nazwy produktów i żargon klienta wyjaśniane na bieżąco oraz podpowiedź odpowiedzi, gdy zostaniesz zaskoczony</li>
+        <li>Po rozmowie: ocena jej przebiegu i feedback do każdego pytania klienta: co zadziałało, co poprawić i lepsza odpowiedź na następny raz</li>
+        <li>Konta pokazują, którzy klienci są aktywni, stygną lub ucichli, więc żadne odnowienie nie umknie</li>
+        <li>Przepisy na pracę wokół rozmowy: przygotowanie pipeline’u, cotygodniowy przegląd przychodów, kondycja klienta i opinie o produkcie</li>
+        <li>Udostępnij podsumowanie rozmowy zespołowi, by przekazanie klienta ze sprzedaży do customer success dotrzymało każdej obietnicy</li>
       </ul>
     </div>
   </section>
@@ -1285,7 +1341,7 @@
 
   <section class="wrap start">
     <h2>Gotowy na następną rozmowę?</h2>
-    <p>Zainstaluj, zacznij z darmowymi kredytami lub połącz AI, dodaj źródła, a potem dołącz do rozmowy. Po wszystkim podsumowanie, zadania i nowe terminy czekają na ekranie Start.</p>
+    <p>Zainstaluj, a przykładowe spotkanie i krótka lista Cię oprowadzą: podłącz kalendarz, zadaj pierwsze pytanie, zaproś zespół. Potem dołącz do rozmowy, a podsumowanie, zadania i nowe pojęcia czekają na stronie głównej.</p>
     <div class="ctas">
       <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Pobierz .dmg <span class="ver">v1.33.0</span></a>
     </div>

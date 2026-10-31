@@ -263,6 +263,10 @@
   .row .hi { font-weight: 500; color: #FCA5A5; }
   .row b { font-weight: 600; color: var(--text); }
   .verdict { flex: none; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 0 8px; }
+  .verdict.v-strong { color: #4ade80; border-color: color-mix(in srgb, #4ade80 45%, transparent); }
+  .verdict.v-ok { color: #fbbf24; border-color: color-mix(in srgb, #fbbf24 45%, transparent); }
+  .verdict.v-miss { color: #f87171; border-color: color-mix(in srgb, #f87171 45%, transparent); }
+  .score { display: inline-block; min-width: 26px; text-align: center; font-weight: 600; color: var(--text); background: color-mix(in srgb, #4ade80 18%, transparent); border-radius: 6px; padding: 0 5px; margin-right: 4px; }
 
   .features { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; }
   .features div { border-top: 1px solid var(--border-2); padding: 18px 0 30px; }
@@ -679,6 +683,7 @@
     <nav class="nav-links" aria-label="Principal">
       <a href="#how">Cómo funciona</a>
       <a href="#before">Funciones</a>
+      <a href="#sales">Ventas y CS</a>
       <a href="#team">Equipos</a>
       <a href="#use-cases">Casos de uso</a>
       <a href="#privacy">Privacidad</a>
@@ -883,6 +888,57 @@
         <li>Un correo o mensaje de Slack de seguimiento, listo para pegar. Undertone nunca envía nada.</li>
         <li>Una puntuación de cómo respondiste a las preguntas que te hicieron y de cómo hablaste</li>
         <li>Pulsa empezar en una tarea y Preguntar la redacta a partir de la reunión, tu memoria y tus fuentes</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="sales">
+    <div class="wrap">
+      <div class="head">
+        <h2>Pensado para ventas y éxito del cliente</h2>
+        <p>Entra en cada llamada con un cliente conociendo la cuenta y sal con una puntuación, comentarios sinceros y el seguimiento ya redactado.</p>
+      </div>
+      <div class="app" role="img" aria-label="Vista de Undertone de una llamada con un cliente: la puntuación de la llamada con comentarios sobre cada pregunta del cliente y la cuenta a la que pertenece, con datos de ejemplo">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Inicio</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Reuniones</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Cuentas</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Preguntar</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Renovación de Fernhill</div>
+          <p class="date">Ayer · 34 min · Rosa Klein, Theo Brandt</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">Cómo fue la llamada <small><span class="score">82</span> Buena</small></div>
+              <div class="row"><span class="grow">“¿Pueden igualar el precio que nos ofrecieron en otro sitio?”<span class="sub2">La próxima vez: apóyate en el despliegue de 30 días y el nivel de soporte antes de hablar de precio.</span></span><span class="verdict v-ok">Vale</span></div>
+              <div class="row"><span class="grow">“¿Cuándo llega el SSO?”<span class="sub2">Fecha y responsable claros, y ofreciste una llamada con el líder de producto.</span></span><span class="verdict v-strong">Bien</span></div>
+              <div class="row"><span class="grow">“¿A quién llamamos si falla la exportación?”<span class="sub2">Sin responder. Indica el canal de soporte y el tiempo de respuesta.</span></span><span class="verdict v-miss">Sin responder</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Fernhill <small>Cuenta</small></div>
+              <div class="row"><span class="grow"><b>Activa</b> · cada 2 semanas aprox.<span class="sub2">6 reuniones desde septiembre · última ayer</span></span></div>
+              <div class="row"><span class="grow">Promesas pendientes<span class="sub2">Enviar el calendario del SSO · compartir el SLA de soporte</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Seguimiento <small>Redactado</small></div>
+              <div class="row"><span class="grow">Hola, Rosa: gracias por hoy. Como prometí, el SSO llega el día 14 y aquí tienes nuestro SLA de soporte…<span class="sub2">Listo para pegar. Undertone nunca envía nada.</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Recetas <small>Ventas</small></div>
+              <div class="row"><span class="grow">Revisión semanal de ingresos<span class="sub2">Riesgos y expansión, en palabras del cliente</span></span></div>
+              <div class="row"><span class="grow">Recopilar opiniones de producto<span class="sub2">Peticiones y quejas de cada llamada con clientes</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Datos de ejemplo. Los nombres, empresas y reuniones son inventados.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Antes de la llamada: un resumen con el historial de la cuenta, las promesas pendientes y quién estará</li>
+        <li>Durante la llamada: los nombres de producto y la jerga del cliente explicados al momento, y una respuesta sugerida cuando te pillan desprevenido</li>
+        <li>Después de la llamada: una puntuación de cómo fue y comentarios sobre cada pregunta del cliente: qué funcionó, qué corregir y una respuesta mejor para la próxima vez</li>
+        <li>Cuentas muestra qué clientes están activos, enfriándose o en silencio, para que no se escape ninguna renovación</li>
+        <li>Recetas para el trabajo alrededor de la llamada: preparar el pipeline, revisión semanal de ingresos, salud del cliente y opiniones de producto</li>
+        <li>Comparte el resumen de una llamada con tu equipo para que el traspaso de ventas a éxito del cliente cumpla cada promesa</li>
       </ul>
     </div>
   </section>
@@ -1285,7 +1341,7 @@
 
   <section class="wrap start">
     <h2>¿Listo para tu próxima llamada?</h2>
-    <p>Instala, empieza con créditos gratis o conecta tu IA, añade tus fuentes y únete a una llamada. Después, tu resumen, tus tareas y los términos nuevos te esperan en Inicio.</p>
+    <p>Instala, y una reunión de ejemplo y una lista breve te guían: conecta tu calendario, haz tu primera pregunta, invita a tu equipo. Luego únete a una llamada y tu resumen, tus tareas y los términos nuevos te esperan en Inicio.</p>
     <div class="ctas">
       <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Descargar .dmg <span class="ver">v1.33.0</span></a>
     </div>

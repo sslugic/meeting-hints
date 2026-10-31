@@ -263,6 +263,10 @@
   .row .hi { font-weight: 500; color: #FCA5A5; }
   .row b { font-weight: 600; color: var(--text); }
   .verdict { flex: none; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 0 8px; }
+  .verdict.v-strong { color: #4ade80; border-color: color-mix(in srgb, #4ade80 45%, transparent); }
+  .verdict.v-ok { color: #fbbf24; border-color: color-mix(in srgb, #fbbf24 45%, transparent); }
+  .verdict.v-miss { color: #f87171; border-color: color-mix(in srgb, #f87171 45%, transparent); }
+  .score { display: inline-block; min-width: 26px; text-align: center; font-weight: 600; color: var(--text); background: color-mix(in srgb, #4ade80 18%, transparent); border-radius: 6px; padding: 0 5px; margin-right: 4px; }
 
   .features { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; }
   .features div { border-top: 1px solid var(--border-2); padding: 18px 0 30px; }
@@ -679,6 +683,7 @@
     <nav class="nav-links" aria-label="メイン">
       <a href="#how">仕組み</a>
       <a href="#before">機能</a>
+      <a href="#sales">営業・CS</a>
       <a href="#team">チーム</a>
       <a href="#use-cases">活用例</a>
       <a href="#privacy">プライバシー</a>
@@ -883,6 +888,57 @@
         <li>フォローアップのメールや Slack メッセージを、貼り付けるだけの状態で。Undertone が何かを送信することはありません。</li>
         <li>受けた質問にどう答えたか、どう話したかのスコア</li>
         <li>タスクのスタートを押すと、「質問」がミーティング、メモリ、ソースをもとに下書きします</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="sales">
+    <div class="wrap">
+      <div class="head">
+        <h2>営業とカスタマーサクセスのために</h2>
+        <p>顧客との通話には毎回アカウントを把握して臨み、終われば評価と率直なフィードバック、書き上がったフォローアップが手元に。</p>
+      </div>
+      <div class="app" role="img" aria-label="Undertone での顧客通話の表示: 通話の評価と顧客の質問ごとのフィードバック、そして関連するアカウント(サンプルデータ)">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>ホーム</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>ミーティング</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>アカウント</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>質問</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Fernhill 契約更新</div>
+          <p class="date">昨日 · 34分 · Rosa Klein、Theo Brandt</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">通話の出来 <small><span class="score">82</span> 良い</small></div>
+              <div class="row"><span class="grow">「他社で提示された価格に合わせられますか?」<span class="sub2">次回は: 価格の話の前に、30日での導入とサポートプランを打ち出しましょう。</span></span><span class="verdict v-ok">OK</span></div>
+              <div class="row"><span class="grow">「SSO はいつ出ますか?」<span class="sub2">日付と担当が明確で、プロダクト責任者との通話も提案できました。</span></span><span class="verdict v-strong">とても良い</span></div>
+              <div class="row"><span class="grow">「エクスポートが壊れたら誰に連絡すれば?」<span class="sub2">未回答。サポート窓口と応答時間を伝えましょう。</span></span><span class="verdict v-miss">未回答</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Fernhill <small>アカウント</small></div>
+              <div class="row"><span class="grow"><b>アクティブ</b> · 約2週間ごと<span class="sub2">9月から6回の会議 · 最終は昨日</span></span></div>
+              <div class="row"><span class="grow">未対応の約束<span class="sub2">SSO のスケジュールを送る · サポート SLA を共有</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">フォローアップ <small>作成済み</small></div>
+              <div class="row"><span class="grow">Rosa さん、本日はありがとうございました。お約束どおり、SSO は14日にリリースします。サポート SLA はこちらです…<span class="sub2">貼り付けるだけ。Undertone が何かを送ることはありません。</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">レシピ <small>営業</small></div>
+              <div class="row"><span class="grow">週次の売上レビュー<span class="sub2">商談のリスクと拡大の機会を、顧客自身の言葉で</span></span></div>
+              <div class="row"><span class="grow">製品フィードバックを集める<span class="sub2">すべての顧客通話から要望と不満を</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">サンプルデータです。名前、会社、会議は架空のものです。</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>通話前: アカウントの経緯、未対応の約束、参加者をまとめたブリーフ</li>
+        <li>通話中: 顧客の製品名や専門用語をその場で説明し、答えに詰まったときは回答案を提示</li>
+        <li>通話後: 通話の出来の評価と、顧客の質問ごとのフィードバック。響いた点、直す点、次に使えるより良い答え</li>
+        <li>アカウントで、アクティブ・疎遠ぎみ・休眠中の顧客がひと目でわかり、更新を取りこぼしません</li>
+        <li>通話まわりの仕事に使えるレシピ: パイプライン準備、週次の売上レビュー、顧客ヘルスチェック、製品フィードバック</li>
+        <li>通話の要約をチームと共有すれば、営業からカスタマーサクセスへの引き継ぎでも約束を守れます</li>
       </ul>
     </div>
   </section>
@@ -1285,7 +1341,7 @@
 
   <section class="wrap start">
     <h2>次の通話の準備はできましたか？</h2>
-    <p>インストールしたら、無料クレジットで始めるかAIを接続し、ソースを追加して通話に参加するだけ。終わったら、まとめ、タスク、新しい用語がホームで待っています。</p>
+    <p>インストールすると、サンプル会議と短いチェックリストが案内します。カレンダーをつなぎ、最初の質問をし、チームを招待。あとは通話に参加すれば、要約、タスク、新しい用語がホームで待っています。</p>
     <div class="ctas">
       <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>.dmgをダウンロード <span class="ver">v1.33.0</span></a>
     </div>

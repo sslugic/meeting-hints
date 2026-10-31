@@ -263,6 +263,10 @@
   .row .hi { font-weight: 500; color: #FCA5A5; }
   .row b { font-weight: 600; color: var(--text); }
   .verdict { flex: none; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 0 8px; }
+  .verdict.v-strong { color: #4ade80; border-color: color-mix(in srgb, #4ade80 45%, transparent); }
+  .verdict.v-ok { color: #fbbf24; border-color: color-mix(in srgb, #fbbf24 45%, transparent); }
+  .verdict.v-miss { color: #f87171; border-color: color-mix(in srgb, #f87171 45%, transparent); }
+  .score { display: inline-block; min-width: 26px; text-align: center; font-weight: 600; color: var(--text); background: color-mix(in srgb, #4ade80 18%, transparent); border-radius: 6px; padding: 0 5px; margin-right: 4px; }
 
   .features { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; }
   .features div { border-top: 1px solid var(--border-2); padding: 18px 0 30px; }
@@ -679,6 +683,7 @@
     <nav class="nav-links" aria-label="Ana içerik">
       <a href="#how">Nasıl çalışır</a>
       <a href="#before">Özellikler</a>
+      <a href="#sales">Satış ve CS</a>
       <a href="#team">Ekipler</a>
       <a href="#use-cases">Kullanım alanları</a>
       <a href="#privacy">Gizlilik</a>
@@ -883,6 +888,57 @@
         <li>Yapıştırmaya hazır bir takip e-postası veya Slack mesajı. Undertone hiçbir şeyi kendisi göndermez.</li>
         <li>Size yöneltilen soruları nasıl yanıtladığınıza ve nasıl konuştuğunuza dair bir puan</li>
         <li>Bir görevde başlat’a basın, Sor da onu toplantıdan, belleğinizden ve kaynaklarınızdan yararlanarak taslağa döksün</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="sales">
+    <div class="wrap">
+      <div class="head">
+        <h2>Satış ve müşteri başarısı ekipleri için</h2>
+        <p>Her müşteri görüşmesine hesabı bilerek gir; bir puan, dürüst geri bildirim ve hazır takip mesajıyla çık.</p>
+      </div>
+      <div class="app" role="img" aria-label="Undertone’da bir müşteri görüşmesi: görüşme puanı, müşterinin her sorusuna geri bildirim ve bağlı olduğu hesap; örnek verilerle">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>Ana Sayfa</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>Toplantılar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Hesaplar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>Sor</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Fernhill yenilemesi</div>
+          <p class="date">Dün · 34 dk · Rosa Klein, Theo Brandt</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">Görüşme nasıl geçti <small><span class="score">82</span> İyi</small></div>
+              <div class="row"><span class="grow">“Başka yerden aldığımız fiyatı karşılayabilir misiniz?”<span class="sub2">Bir dahaki sefere: fiyata geçmeden önce 30 günlük kurulum ve destek paketini öne çıkar.</span></span><span class="verdict v-ok">Tamam</span></div>
+              <div class="row"><span class="grow">“SSO ne zaman geliyor?”<span class="sub2">Net tarih ve sorumlu verdin, ürün lideriyle görüşme de önerdin.</span></span><span class="verdict v-strong">Güçlü</span></div>
+              <div class="row"><span class="grow">“Dışa aktarma bozulursa kimi arayacağız?”<span class="sub2">Yanıtlanmadı. Destek kanalını ve yanıt süresini söyle.</span></span><span class="verdict v-miss">Kaçırıldı</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Fernhill <small>Hesap</small></div>
+              <div class="row"><span class="grow"><b>Aktif</b> · yaklaşık 2 haftada bir<span class="sub2">Eylülden beri 6 toplantı · en son dün</span></span></div>
+              <div class="row"><span class="grow">Açık sözler<span class="sub2">SSO takvimini gönder · destek SLA’sını paylaş</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Takip <small>Hazır</small></div>
+              <div class="row"><span class="grow">Merhaba Rosa, bugün için teşekkürler. Söz verdiğim gibi: SSO ayın 14’ünde geliyor, destek SLA’mız da burada…<span class="sub2">Yapıştırmaya hazır. Undertone hiçbir şey göndermez.</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">Tarifler <small>Satış</small></div>
+              <div class="row"><span class="grow">Haftalık gelir değerlendirmesi<span class="sub2">Anlaşma riskleri ve büyüme, müşterinin kendi sözleriyle</span></span></div>
+              <div class="row"><span class="grow">Ürün geri bildirimlerini topla<span class="sub2">Her müşteri görüşmesinden istekler ve şikâyetler</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">Örnek veriler. İsimler, şirketler ve toplantılar uydurmadır.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>Görüşmeden önce: hesabın geçmişi, açık sözler ve kimlerin katılacağıyla bir özet</li>
+        <li>Görüşme sırasında: müşterinin ürün adları ve jargonu söylendiği anda açıklanır, zor bir soruda önerilen bir yanıt gelir</li>
+        <li>Görüşmeden sonra: nasıl geçtiğine dair bir puan ve müşterinin her sorusuna geri bildirim: ne işe yaradı, neyi düzeltmeli ve bir dahaki sefere daha güçlü bir yanıt</li>
+        <li>Hesaplar hangi müşterilerin aktif olduğunu, soğuduğunu ya da sessizleştiğini gösterir; hiçbir yenileme gözden kaçmaz</li>
+        <li>Görüşme etrafındaki işler için tarifler: pipeline hazırlığı, haftalık gelir değerlendirmesi, müşteri sağlığı ve ürün geri bildirimi</li>
+        <li>Bir görüşme özetini ekibinle paylaş; satıştan müşteri başarısına devirde her söz tutulsun</li>
       </ul>
     </div>
   </section>
@@ -1285,7 +1341,7 @@
 
   <section class="wrap start">
     <h2>Bir sonraki görüşmenize hazır mısınız?</h2>
-    <p>Yükleyin, ücretsiz kredilerle başlayın ya da yapay zekânızı bağlayın, kaynaklarınızı ekleyin, ardından bir görüşmeye katılın. Sonrasında özetiniz, görevleriniz ve yeni terimler Ana Sayfa’da sizi bekliyor olacak.</p>
+    <p>Yükle; örnek bir toplantı ve kısa bir liste sana yolu gösterir: takvimini bağla, ilk sorunu sor, ekibini davet et. Sonra bir görüşmeye katıl; özetin, görevlerin ve yeni terimler Ana Sayfa’da seni bekler.</p>
     <div class="ctas">
       <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>.dmg indir <span class="ver">v1.33.0</span></a>
     </div>

@@ -263,6 +263,10 @@
   .row .hi { font-weight: 500; color: #FCA5A5; }
   .row b { font-weight: 600; color: var(--text); }
   .verdict { flex: none; font-size: 12px; font-weight: 500; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 0 8px; }
+  .verdict.v-strong { color: #4ade80; border-color: color-mix(in srgb, #4ade80 45%, transparent); }
+  .verdict.v-ok { color: #fbbf24; border-color: color-mix(in srgb, #fbbf24 45%, transparent); }
+  .verdict.v-miss { color: #f87171; border-color: color-mix(in srgb, #f87171 45%, transparent); }
+  .score { display: inline-block; min-width: 26px; text-align: center; font-weight: 600; color: var(--text); background: color-mix(in srgb, #4ade80 18%, transparent); border-radius: 6px; padding: 0 5px; margin-right: 4px; }
 
   .features { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; }
   .features div { border-top: 1px solid var(--border-2); padding: 18px 0 30px; }
@@ -679,6 +683,7 @@
     <nav class="nav-links" aria-label="메인">
       <a href="#how">작동 방식</a>
       <a href="#before">기능</a>
+      <a href="#sales">영업 및 CS</a>
       <a href="#team">팀</a>
       <a href="#use-cases">활용 사례</a>
       <a href="#privacy">프라이버시</a>
@@ -883,6 +888,57 @@
         <li>바로 붙여 넣을 수 있는 후속 이메일이나 Slack 메시지. Undertone은 아무것도 보내지 않아요.</li>
         <li>받은 질문에 어떻게 답했는지, 어떻게 말했는지에 대한 점수</li>
         <li>할 일에서 시작을 누르면 질문이 미팅, 메모리, 소스를 바탕으로 초안을 만들어요</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="sales">
+    <div class="wrap">
+      <div class="head">
+        <h2>영업과 고객 성공 팀을 위해</h2>
+        <p>모든 고객 통화에 계정을 파악한 채 들어가고, 점수와 솔직한 피드백, 이미 작성된 후속 메시지를 들고 나오세요.</p>
+      </div>
+      <div class="app" role="img" aria-label="Undertone의 고객 통화 화면: 통화 점수와 고객 질문별 피드백, 그리고 해당 계정(샘플 데이터)">
+        <aside class="app-side" aria-hidden="true">
+          <div class="lights"><i></i><i></i><i></i></div>
+          <div class="space"><span><i></i>Northwind Labs</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5l3 3 3-3"/></svg></div>
+          <ul class="app-nav"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/></svg>홈</li><li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>미팅</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>계정</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v9H9l-5 4z"/></svg>질문</li></ul>
+        </aside>
+        <div class="app-main" aria-hidden="true">
+          <div class="hello">Fernhill 갱신</div>
+          <p class="date">어제 · 34분 · Rosa Klein, Theo Brandt</p>
+          <div class="cards">
+            <div class="card">
+              <div class="h4">통화 결과 <small><span class="score">82</span> 좋음</small></div>
+              <div class="row"><span class="grow">“다른 곳에서 받은 가격에 맞춰 주실 수 있나요?”<span class="sub2">다음에는: 가격 이야기 전에 30일 도입과 지원 등급을 먼저 강조하세요.</span></span><span class="verdict v-ok">확인</span></div>
+              <div class="row"><span class="grow">“SSO는 언제 나오나요?”<span class="sub2">날짜와 담당자가 명확했고, 제품 책임자와의 통화도 제안했습니다.</span></span><span class="verdict v-strong">훌륭함</span></div>
+              <div class="row"><span class="grow">“내보내기가 고장 나면 누구에게 연락하죠?”<span class="sub2">답하지 못함. 지원 채널과 응답 시간을 알려 주세요.</span></span><span class="verdict v-miss">놓침</span></div>
+            </div>
+            <div class="card">
+              <div class="h4">Fernhill <small>계정</small></div>
+              <div class="row"><span class="grow"><b>활성</b> · 약 2주마다<span class="sub2">9월 이후 회의 6회 · 마지막은 어제</span></span></div>
+              <div class="row"><span class="grow">남은 약속<span class="sub2">SSO 일정 보내기 · 지원 SLA 공유</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">후속 메시지 <small>작성됨</small></div>
+              <div class="row"><span class="grow">Rosa님, 오늘 감사했습니다. 약속드린 대로 SSO는 14일에 나오고, 지원 SLA는 여기 있습니다…<span class="sub2">붙여 넣기만 하면 됩니다. Undertone은 아무것도 보내지 않습니다.</span></span></div>
+            </div>
+            <div class="card opt">
+              <div class="h4">레시피 <small>영업</small></div>
+              <div class="row"><span class="grow">주간 매출 리뷰<span class="sub2">거래 위험과 확장 기회를 고객의 말로</span></span></div>
+              <div class="row"><span class="grow">제품 피드백 모으기<span class="sub2">모든 고객 통화의 요청과 불만</span></span></div>
+            </div>
+          </div>
+          <p class="sample" style="padding:14px 0 0">샘플 데이터입니다. 이름, 회사, 회의는 지어낸 것입니다.</p>
+        </div>
+      </div>
+      <ul class="ticks sug outcomes">
+        <li>통화 전: 계정 이력, 남은 약속, 참석자를 담은 브리핑</li>
+        <li>통화 중: 고객의 제품명과 전문 용어를 말하는 즉시 설명하고, 답이 막힐 때는 답변을 제안</li>
+        <li>통화 후: 통화가 어땠는지 점수와 고객 질문별 피드백. 잘된 점, 고칠 점, 다음에 쓸 더 나은 답변</li>
+        <li>계정에서 활성, 뜸해지는 중, 휴면 고객을 한눈에 보고 갱신을 놓치지 마세요</li>
+        <li>통화 전후 업무를 위한 레시피: 파이프라인 준비, 주간 매출 리뷰, 고객 상태 점검, 제품 피드백</li>
+        <li>통화 요약을 팀과 공유해 영업에서 고객 성공으로 넘길 때도 모든 약속을 지키세요</li>
       </ul>
     </div>
   </section>
@@ -1285,7 +1341,7 @@
 
   <section class="wrap start">
     <h2>다음 통화, 준비됐나요?</h2>
-    <p>설치하고 무료 크레딧으로 시작하거나 AI를 연결한 뒤, 소스를 추가하고 통화에 참여하세요. 끝나면 요약, 할 일, 새 용어가 홈에서 기다리고 있어요.</p>
+    <p>설치하면 샘플 회의와 짧은 체크리스트가 안내합니다. 캘린더를 연결하고, 첫 질문을 하고, 팀을 초대하세요. 그다음 통화에 참여하면 요약, 할 일, 새 용어가 홈에서 기다립니다.</p>
     <div class="ctas">
       <a class="btn btn-light btn-lg" href="https://github.com/sslugic/undertone/releases/latest/download/Undertone.dmg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.29-.88-2.31-3.49zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>.dmg 다운로드 <span class="ver">v1.33.0</span></a>
     </div>
