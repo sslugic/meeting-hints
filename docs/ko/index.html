@@ -1170,7 +1170,7 @@
     <div class="wrap private">
       <div class="head">
         <h2>설계부터 프라이빗하게</h2>
-        <p>통화, 키, 회의는 사용자에게 남습니다. 내 AI를 쓰면 Undertone 자체가 받는 것은 끌 수 있는 익명 사용 집계뿐입니다.</p>
+        <p>통화, 키, 회의는 내 곁에 남습니다. 내 AI를 쓰면 Undertone이 직접 받는 것은 끌 수 있는 익명 집계뿐입니다.</p>
       </div>
       <dl class="facts">
         <dt>오디오</dt><dd>통화와 마이크 음성은 Apple의 SpeechAnalyzer로 Mac에서 받아 적어요. 업로드되지 않아요.</dd>
@@ -1179,13 +1179,14 @@
         <dt>AI</dt><dd>내 OpenAI, Gemini, Anthropic 키, 로컬 Ollama나 LM Studio 모델, 또는 Cursor나 Claude Code 로그인. 키는 키체인에 보관돼요.</dd>
         <dt>무료 크레딧</dt><dd>무료 크레딧으로 시작하면 요청은 Undertone 서버를 거쳐 Google Gemini로 전송됩니다. 이메일, 잔액, 사용량 합계만 보관하며 대화 내용은 절대 보관하지 않습니다.</dd>
         <dt>내 도구</dt><dd>읽기 전용. Undertone은 검색하고 읽기만 해요. 보내기, 게시, 생성, 편집을 하는 도구는 절대 허용되지 않아요.</dd>
-        <dt>이 웹사이트</dt><dd>쿠키도 추적도 없습니다. 광고를 통해 방문해 허용한 경우에만 Google Ads가 방문이 다운로드로 이어졌는지 측정합니다.</dd>
+        <dt>이 웹사이트</dt><dd>쿠키는 없습니다. PostHog로 방문, 언어 변경, 다운로드 클릭을 집계하며, 쿠키나 나를 식별할 수 있는 정보는 쓰지 않고, Do Not Track이 켜져 있으면 전혀 집계하지 않습니다. 광고를 통해 들어왔고 허용한 경우에만 Google Ads가 방문이 다운로드로 이어졌는지 측정합니다.</dd>
         <dt>사용 집계</dt><dd>"사용자로 집계"를 켜 두면: Undertone을 처음 열 때 한 번, 이후 일주일에 최대 한 번 익명 신호를 보냅니다. 무작위 ID, 앱 버전, macOS 버전, 언어만 포함됩니다. 설정 과정이나 설정에서 끄면 보낸 내용이 삭제됩니다.</dd>
+        <dt>사용 통계</dt><dd>"익명 사용 통계 공유"를 켜 두면: 앱 실행, 회의 시작·종료(길이와 통화 앱), 요약 작성, 오류 같은 대략적인 이벤트를 무작위 ID와 앱 버전과 함께 보냅니다. 말한 내용, 회의 제목, 이름, 용어집 항목, 키는 절대 보내지 않습니다. 설정 과정이나 설정에서 끌 수 있습니다.</dd>
       </dl>
       <div class="verify">
         <h3>우리 말만 믿지 마세요</h3>
         <p>Undertone은 비공개 소스예요. GitHub에 공개된 건 이 사이트, 보안 관련 문서, 그리고 Undertone이 Mac에 저장하는 모든 파일의 형식이에요. 무엇을 저장하는지 정확히 확인할 수 있어요.</p>
-        <p>Mac에서 무엇이 나가는지 확인하려면 통화 중 Little Snitch, LuLu, Proxyman으로 Undertone의 트래픽을 지켜보세요. 선택한 AI, 연결한 도구, 그리고 켜 둔 경우 주간 익명 집계로 가는 연결만 보입니다. 오디오는 Mac 밖으로 나가지 않고, AI에는 텍스트만 전송돼요.</p>
+        <p>Mac에서 무엇이 나가는지 확인하려면 통화 중에 Little Snitch, LuLu 또는 Proxyman으로 Undertone의 트래픽을 살펴보세요. 선택한 AI, 연결한 도구, 그리고 켜 둔 경우 익명 집계로 가는 연결만 보입니다. 오디오는 Mac 밖으로 나가지 않으며, AI에는 텍스트만 전달됩니다.</p>
         <p><a href="https://github.com/sslugic/undertone/blob/main/SECURITY.md">보안 및 개인정보 보호 문서</a> · <a href="https://github.com/sslugic/undertone/blob/main/DATA.md">Undertone이 저장하는 것</a></p>
       </div>
     </div>
@@ -1376,6 +1377,39 @@
     box.querySelector('[data-net="instagram"]').addEventListener("click", function () {
       if (navigator.share) { navigator.share({ title: "Undertone", text: text, url: url }).catch(function () {}); return; }
       copy(function () { say(msg(".msg-insta", "Link copied.")); });
+    });
+  })();
+</script>
+<script>
+  // Anonymous, cookieless product analytics (PostHog): page views, download clicks and language changes only.
+  // No cookies or storage, no autocapture or recordings, nothing with Do Not Track on. The key is PostHog's public project key.
+  (function () {
+    var PH = { key: "phc_CXAg4tHVGP7PUUpEacmPrqxbAALnYoa78zhfVUnBgqoH", host: "https://us.i.posthog.com" };
+    if (!PH.key || navigator.doNotTrack === "1" || window.doNotTrack === "1") return;
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset get_distinct_id".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init(PH.key, {
+      api_host: PH.host, defaults: "2025-05-24", cookieless_mode: "always", person_profiles: "identified_only",
+      autocapture: false, capture_pageview: true, capture_pageleave: false, capture_dead_clicks: false, capture_heatmaps: false,
+      rageclick: false, disable_session_recording: true, disable_surveys: true, respect_dnt: true, advanced_disable_flags: true,
+      // Page URLs are sent without their query string (ad click IDs and the like).
+      before_send: function (e) {
+        if (e && e.properties) ["$current_url", "$referrer"].forEach(function (k) { if (typeof e.properties[k] === "string") e.properties[k] = e.properties[k].split(/[?#]/)[0]; });
+        return e;
+      }
+    });
+    posthog.register({ site_lang: document.documentElement.lang });
+    function placement(a) {
+      var box = a.closest("header, footer, section");
+      return box ? (box.id || box.className.split(" ").pop() || box.tagName.toLowerCase()) : "page";
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a");
+      if (!a) return;
+      if (/Undertone\.dmg/.test(a.getAttribute("href") || "")) {
+        posthog.capture("download_clicked", { placement: placement(a) }, { transport: "sendBeacon" });
+      } else if (a.dataset.lang && a.closest(".lang-menu")) {
+        posthog.capture("language_switched", { to: a.dataset.lang, placement: placement(a) }, { transport: "sendBeacon" });
+      }
     });
   })();
 </script>

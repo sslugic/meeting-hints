@@ -1179,13 +1179,14 @@
         <dt>IA</dt><dd>Tu propia clave de OpenAI, Gemini o Anthropic, un modelo local de Ollama o LM Studio, o tu sesión de Cursor o Claude Code. Las claves se quedan en tu Llavero.</dd>
         <dt>Créditos gratis</dt><dd>Si empiezas con créditos gratis, las solicitudes pasan por el servidor de Undertone hasta Google Gemini. Guarda tu correo, tu saldo y los totales de uso, nunca lo que se dijo.</dd>
         <dt>Tus herramientas</dt><dd>Solo lectura. Undertone solo busca y lee; las herramientas que envían, publican, crean o editan nunca se permiten.</dd>
-        <dt>Este sitio web</dt><dd>Sin cookies ni seguimiento. Solo si llegas desde uno de nuestros anuncios y lo permites, Google Ads mide si la visita terminó en una descarga.</dd>
+        <dt>Este sitio web</dt><dd>Sin cookies. Contamos visitas, cambios de idioma y clics de descarga con PostHog, sin cookies ni nada que te identifique, y para nada si tienes activado No rastrear. Solo si llegas desde uno de nuestros anuncios y lo permites, Google Ads mide si la visita terminó en una descarga.</dd>
         <dt>Recuento de uso</dt><dd>Si dejas activado «Cuéntame como usuario»: un aviso anónimo al abrir Undertone por primera vez y como mucho uno a la semana, con un ID aleatorio, la versión de la app, la versión de macOS y el idioma. Al desactivarlo en la configuración inicial o en Ajustes se borra lo enviado.</dd>
+        <dt>Estadísticas de uso</dt><dd>Si dejas activado «Compartir estadísticas de uso anónimas»: eventos generales como app abierta, reunión iniciada o terminada (su duración y la app de la llamada), resumen escrito y errores, con un ID aleatorio y la versión de la app. Nunca lo que se dijo, títulos de reuniones, nombres, términos del glosario ni claves. Desactívalo en la configuración inicial o en Ajustes.</dd>
       </dl>
       <div class="verify">
         <h3>No te fíes solo de nuestra palabra</h3>
         <p>Undertone es de código cerrado. Lo que es público en GitHub es este sitio, nuestras notas de seguridad y el formato de cada archivo que Undertone guarda en tu Mac, para que veas exactamente qué almacena.</p>
-        <p>Para comprobar qué sale de tu Mac, observa el tráfico de Undertone con Little Snitch, LuLu o Proxyman durante una llamada. Solo verás conexiones a la IA que elegiste, a las herramientas que conectaste y, si lo dejaste activado, el recuento anónimo semanal. Tu audio nunca sale de tu Mac; a tu IA solo le llega texto.</p>
+        <p>Para comprobar qué sale de tu Mac, observa el tráfico de Undertone con Little Snitch, LuLu o Proxyman durante una llamada. Solo verás conexiones a la IA que elegiste, a las herramientas que conectaste y, si las dejaste activadas, a los recuentos anónimos. Tu audio nunca sale de tu Mac; solo el texto va a tu IA.</p>
         <p><a href="https://github.com/sslugic/undertone/blob/main/SECURITY.md">Notas de seguridad y privacidad</a> · <a href="https://github.com/sslugic/undertone/blob/main/DATA.md">Qué almacena Undertone</a></p>
       </div>
     </div>
@@ -1376,6 +1377,39 @@
     box.querySelector('[data-net="instagram"]').addEventListener("click", function () {
       if (navigator.share) { navigator.share({ title: "Undertone", text: text, url: url }).catch(function () {}); return; }
       copy(function () { say(msg(".msg-insta", "Link copied.")); });
+    });
+  })();
+</script>
+<script>
+  // Anonymous, cookieless product analytics (PostHog): page views, download clicks and language changes only.
+  // No cookies or storage, no autocapture or recordings, nothing with Do Not Track on. The key is PostHog's public project key.
+  (function () {
+    var PH = { key: "phc_CXAg4tHVGP7PUUpEacmPrqxbAALnYoa78zhfVUnBgqoH", host: "https://us.i.posthog.com" };
+    if (!PH.key || navigator.doNotTrack === "1" || window.doNotTrack === "1") return;
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset get_distinct_id".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init(PH.key, {
+      api_host: PH.host, defaults: "2025-05-24", cookieless_mode: "always", person_profiles: "identified_only",
+      autocapture: false, capture_pageview: true, capture_pageleave: false, capture_dead_clicks: false, capture_heatmaps: false,
+      rageclick: false, disable_session_recording: true, disable_surveys: true, respect_dnt: true, advanced_disable_flags: true,
+      // Page URLs are sent without their query string (ad click IDs and the like).
+      before_send: function (e) {
+        if (e && e.properties) ["$current_url", "$referrer"].forEach(function (k) { if (typeof e.properties[k] === "string") e.properties[k] = e.properties[k].split(/[?#]/)[0]; });
+        return e;
+      }
+    });
+    posthog.register({ site_lang: document.documentElement.lang });
+    function placement(a) {
+      var box = a.closest("header, footer, section");
+      return box ? (box.id || box.className.split(" ").pop() || box.tagName.toLowerCase()) : "page";
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a");
+      if (!a) return;
+      if (/Undertone\.dmg/.test(a.getAttribute("href") || "")) {
+        posthog.capture("download_clicked", { placement: placement(a) }, { transport: "sendBeacon" });
+      } else if (a.dataset.lang && a.closest(".lang-menu")) {
+        posthog.capture("language_switched", { to: a.dataset.lang, placement: placement(a) }, { transport: "sendBeacon" });
+      }
     });
   })();
 </script>

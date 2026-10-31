@@ -1170,7 +1170,7 @@
     <div class="wrap private">
       <div class="head">
         <h2>Confidentiel par conception</h2>
-        <p>Vos appels, clés et réunions restent chez vous. Avec votre propre IA, la seule chose que reçoit Undertone est un décompte anonyme que vous pouvez désactiver.</p>
+        <p>Vos appels, clés et réunions restent chez vous. Avec votre propre IA, la seule chose qu’Undertone reçoit lui-même, ce sont des comptages anonymes que vous pouvez désactiver.</p>
       </div>
       <dl class="facts">
         <dt>Audio</dt><dd>L’appel et votre micro sont transcrits sur votre Mac avec SpeechAnalyzer d’Apple. Jamais envoyés.</dd>
@@ -1179,13 +1179,14 @@
         <dt>IA</dt><dd>Votre propre clé OpenAI, Gemini ou Anthropic, un modèle local Ollama ou LM Studio, ou votre connexion Cursor ou Claude Code. Les clés restent dans votre trousseau.</dd>
         <dt>Crédits gratuits</dt><dd>Si vous commencez avec des crédits gratuits, les requêtes passent par le serveur d’Undertone vers Google Gemini. Il conserve votre e-mail, votre solde et vos totaux d’utilisation, jamais ce qui a été dit.</dd>
         <dt>Vos outils</dt><dd>Lecture seule. Undertone se contente de chercher et de lire ; les outils qui envoient, publient, créent ou modifient ne sont jamais autorisés.</dd>
-        <dt>Ce site</dt><dd>Ni cookies ni suivi. Seulement si vous arrivez depuis l’une de nos publicités et l’autorisez, Google Ads mesure si la visite a mené à un téléchargement.</dd>
+        <dt>Ce site</dt><dd>Pas de cookies. Nous comptons les visites, les changements de langue et les clics de téléchargement avec PostHog, sans cookies ni rien qui vous identifie, et pas du tout si « Ne pas suivre » est activé. Uniquement si vous arrivez depuis l’une de nos publicités et que vous l’autorisez, Google Ads mesure si la visite a mené à un téléchargement.</dd>
         <dt>Décompte d’utilisation</dt><dd>Si vous laissez « Me compter comme utilisateur » activé : un signal anonyme à la première ouverture d’Undertone et au plus un par semaine, avec un identifiant aléatoire, la version de l’app, la version de macOS et la langue. Le désactiver dans la configuration ou les Réglages supprime ce qui a été envoyé.</dd>
+        <dt>Statistiques d’utilisation</dt><dd>Si vous laissez « Partager des statistiques d’utilisation anonymes » activé : des événements généraux comme app ouverte, réunion commencée ou terminée (sa durée et l’app d’appel), compte rendu rédigé et erreurs, avec un identifiant aléatoire et la version de l’app. Jamais ce qui a été dit, les titres de réunions, les noms, les termes du glossaire ni les clés. Désactivez-le dans la configuration ou les Réglages.</dd>
       </dl>
       <div class="verify">
         <h3>Ne nous croyez pas sur parole</h3>
         <p>Undertone est propriétaire. Ce qui est public sur GitHub, c’est ce site, nos notes de sécurité et le format de chaque fichier qu’Undertone conserve sur votre Mac, pour que vous voyiez exactement ce qu’il stocke.</p>
-        <p>Pour vérifier ce qui sort de votre Mac, observez le trafic d’Undertone avec Little Snitch, LuLu ou Proxyman pendant un appel. Vous ne verrez que des connexions vers l’IA choisie, les outils connectés et, si vous l’avez laissé activé, le décompte anonyme hebdomadaire. Votre audio ne quitte jamais votre Mac ; seul du texte part vers votre IA.</p>
+        <p>Pour vérifier ce qui quitte votre Mac, surveillez le trafic d’Undertone pendant un appel avec Little Snitch, LuLu ou Proxyman. Vous ne verrez que des connexions vers l’IA choisie, les outils connectés et, si vous les avez laissés activés, les comptages anonymes. Votre audio ne quitte jamais votre Mac ; seul du texte part vers votre IA.</p>
         <p><a href="https://github.com/sslugic/undertone/blob/main/SECURITY.md">Notes de sécurité et de confidentialité</a> · <a href="https://github.com/sslugic/undertone/blob/main/DATA.md">Ce qu’Undertone stocke</a></p>
       </div>
     </div>
@@ -1376,6 +1377,39 @@
     box.querySelector('[data-net="instagram"]').addEventListener("click", function () {
       if (navigator.share) { navigator.share({ title: "Undertone", text: text, url: url }).catch(function () {}); return; }
       copy(function () { say(msg(".msg-insta", "Link copied.")); });
+    });
+  })();
+</script>
+<script>
+  // Anonymous, cookieless product analytics (PostHog): page views, download clicks and language changes only.
+  // No cookies or storage, no autocapture or recordings, nothing with Do Not Track on. The key is PostHog's public project key.
+  (function () {
+    var PH = { key: "phc_CXAg4tHVGP7PUUpEacmPrqxbAALnYoa78zhfVUnBgqoH", host: "https://us.i.posthog.com" };
+    if (!PH.key || navigator.doNotTrack === "1" || window.doNotTrack === "1") return;
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset get_distinct_id".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init(PH.key, {
+      api_host: PH.host, defaults: "2025-05-24", cookieless_mode: "always", person_profiles: "identified_only",
+      autocapture: false, capture_pageview: true, capture_pageleave: false, capture_dead_clicks: false, capture_heatmaps: false,
+      rageclick: false, disable_session_recording: true, disable_surveys: true, respect_dnt: true, advanced_disable_flags: true,
+      // Page URLs are sent without their query string (ad click IDs and the like).
+      before_send: function (e) {
+        if (e && e.properties) ["$current_url", "$referrer"].forEach(function (k) { if (typeof e.properties[k] === "string") e.properties[k] = e.properties[k].split(/[?#]/)[0]; });
+        return e;
+      }
+    });
+    posthog.register({ site_lang: document.documentElement.lang });
+    function placement(a) {
+      var box = a.closest("header, footer, section");
+      return box ? (box.id || box.className.split(" ").pop() || box.tagName.toLowerCase()) : "page";
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a");
+      if (!a) return;
+      if (/Undertone\.dmg/.test(a.getAttribute("href") || "")) {
+        posthog.capture("download_clicked", { placement: placement(a) }, { transport: "sendBeacon" });
+      } else if (a.dataset.lang && a.closest(".lang-menu")) {
+        posthog.capture("language_switched", { to: a.dataset.lang, placement: placement(a) }, { transport: "sendBeacon" });
+      }
     });
   })();
 </script>

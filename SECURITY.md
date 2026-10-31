@@ -20,6 +20,7 @@ Undertone connects only to:
 3. **Sign-in pages** for those tools, in your browser, when you connect one.
 4. **Updates.** Every few hours Undertone reads `getundertone.app/appcast.xml` to see if there's a new version, and downloads it from GitHub when there is.
 5. **The usage count, only if you leave it on.** "Count me as a user" sends a random ID, the app version, the macOS version and the interface language once at install and at most once a week to `stats.getundertone.app`. Turning it off deletes what was sent.
+6. **Usage stats, only if you leave them on.** "Share anonymous usage stats" sends coarse events to PostHog (`us.i.posthog.com`): app opened, setup steps, permissions granted or denied, meeting started or ended (its length and the call app, like Zoom), the AI provider's name, how many hints were shown or opened, recap written, and errors (their kind, never their text). Each carries a random ID, the app version, the macOS version and the language. Never what was said, meeting titles, attendee names, glossary terms, keys or tokens. Switch it off in setup or Settings › About.
 
 [amem](https://getamem.com/), if you install it, runs on your Mac.
 
