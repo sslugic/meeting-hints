@@ -700,7 +700,6 @@
  "learns_from_each_day_and_fa6dd3": "毎日から学び、翌日のヒントを磨きます",
  "full_history_search_and_ask_48f471": "全履歴：すべての会議を検索・質問",
  "syncs_your_meetings_and_memory_26bab0": "ミーティングとメモリをすべてのMacで同期",
- "download_dmg_v1_33_2_0aa147": ".dmgをダウンロード <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "チーム",
  "bring_your_team_along_7c53c9": "チームを巻き込もう",
  "share_a_recap_with_your_d18010": "要約をチームに共有して話し合いましょう。コメント、@メンション、適切な人へのアクション項目の割り当て。共有するまで何も Mac から出ません。",
@@ -784,5 +783,6 @@
  "recipes_for_the_work_around_701b3c": "通話まわりの仕事に使えるレシピ: パイプライン準備、週次の売上レビュー、顧客ヘルスチェック、製品フィードバック",
  "share_a_call_recap_with_35361e": "通話の要約をチームと共有すれば、営業からカスタマーサクセスへの引き継ぎでも約束を守れます",
  "install_and_a_sample_meeting_35c2a7": "インストールすると、サンプル会議と短いチェックリストが案内します。カレンダーをつなぎ、最初の質問をし、チームを招待。あとは通話に参加すれば、要約、タスク、新しい用語がホームで待っています。",
- "undertone_in_one_minute_terms_4c609c": "1分でわかるUndertone：通話中にチームのツールから用語を説明、質問されたときの回答候補、通話後の要約とタスク、顧客との通話のスコアとフィードバック、そしてオンボーディングガイド付きのチームページ"
+ "undertone_in_one_minute_terms_4c609c": "1分でわかるUndertone：通話中にチームのツールから用語を説明、質問されたときの回答候補、通話後の要約とタスク、顧客との通話のスコアとフィードバック、そしてオンボーディングガイド付きのチームページ",
+ "download_dmg_v1_33_3_28bd4e": ".dmgをダウンロード <span class=\"ver\">v1.33.3</span>"
 }

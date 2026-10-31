@@ -699,7 +699,6 @@
  "learns_from_each_day_and_fa6dd3": "Impara da ogni giornata e affina i suggerimenti di domani",
  "full_history_search_and_ask_48f471": "Cronologia completa: cerca e chiedi su ogni riunione",
  "syncs_your_meetings_and_memory_26bab0": "Sincronizza riunioni e memoria tra i tuoi Mac",
- "download_dmg_v1_33_2_0aa147": "Scarica il .dmg <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "Team",
  "bring_your_team_along_7c53c9": "Porta il tuo team",
  "share_a_recap_with_your_d18010": "Condividi un riepilogo con il team e parlatene: commenti, @menzioni e azioni assegnate alla persona giusta. Nulla lascia il tuo Mac finché non lo condividi.",
@@ -783,5 +782,6 @@
  "recipes_for_the_work_around_701b3c": "Ricette per il lavoro intorno alla chiamata: preparazione della pipeline, revisione settimanale dei ricavi, salute del cliente e feedback sul prodotto",
  "share_a_call_recap_with_35361e": "Condividi il riepilogo di una chiamata con il team, così il passaggio dalle vendite al customer success mantiene ogni promessa",
  "install_and_a_sample_meeting_35c2a7": "Installa, e una riunione di esempio e una breve checklist ti guidano: collega il calendario, fai la prima domanda, invita il team. Poi partecipa a una chiamata, e riepilogo, attività e nuovi termini ti aspettano nella Home.",
- "undertone_in_one_minute_terms_4c609c": "Undertone in un minuto: termini spiegati durante una chiamata dagli strumenti del tuo team, una risposta suggerita quando ti fanno una domanda, il riepilogo e le attività dopo, un punteggio e un feedback su una chiamata con un cliente, e la pagina del team con una guida all'onboarding"
+ "undertone_in_one_minute_terms_4c609c": "Undertone in un minuto: termini spiegati durante una chiamata dagli strumenti del tuo team, una risposta suggerita quando ti fanno una domanda, il riepilogo e le attività dopo, un punteggio e un feedback su una chiamata con un cliente, e la pagina del team con una guida all'onboarding",
+ "download_dmg_v1_33_3_28bd4e": "Scarica il .dmg <span class=\"ver\">v1.33.3</span>"
 }

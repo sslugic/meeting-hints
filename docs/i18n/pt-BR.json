@@ -699,7 +699,6 @@
  "learns_from_each_day_and_fa6dd3": "Aprende com cada dia e melhora as dicas de amanhã",
  "full_history_search_and_ask_48f471": "Histórico completo: pesquise e pergunte sobre cada reunião",
  "syncs_your_meetings_and_memory_26bab0": "Sincroniza suas reuniões e memória entre seus Macs",
- "download_dmg_v1_33_2_0aa147": "Baixar .dmg <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "Equipes",
  "bring_your_team_along_7c53c9": "Traga sua equipe",
  "share_a_recap_with_your_d18010": "Compartilhe um resumo com a equipe e conversem sobre ele: comentários, @menções e itens de ação atribuídos à pessoa certa. Nada sai do seu Mac até você compartilhar.",
@@ -783,5 +782,6 @@
  "recipes_for_the_work_around_701b3c": "Receitas para o trabalho em volta da chamada: preparação do pipeline, revisão semanal de receita, saúde do cliente e feedback de produto",
  "share_a_call_recap_with_35361e": "Compartilhe o resumo de uma chamada com seu time, para que a passagem de vendas para sucesso do cliente cumpra cada promessa",
  "install_and_a_sample_meeting_35c2a7": "Instale, e uma reunião de exemplo e uma lista curta mostram o caminho: conecte sua agenda, faça sua primeira pergunta, convide seu time. Depois entre em uma chamada, e seu resumo, tarefas e termos novos esperam por você no Início.",
- "undertone_in_one_minute_terms_4c609c": "Undertone em um minuto: termos explicados durante uma chamada a partir das ferramentas do seu time, uma resposta sugerida quando você recebe uma pergunta, o resumo e as tarefas depois, uma nota e feedback sobre uma chamada com cliente, e a página do time com um guia de onboarding"
+ "undertone_in_one_minute_terms_4c609c": "Undertone em um minuto: termos explicados durante uma chamada a partir das ferramentas do seu time, uma resposta sugerida quando você recebe uma pergunta, o resumo e as tarefas depois, uma nota e feedback sobre uma chamada com cliente, e a página do time com um guia de onboarding",
+ "download_dmg_v1_33_3_28bd4e": "Baixar .dmg <span class=\"ver\">v1.33.3</span>"
 }

@@ -699,7 +699,6 @@
  "learns_from_each_day_and_fa6dd3": "매일 배우고 내일의 힌트를 다듬어요",
  "full_history_search_and_ask_48f471": "전체 기록: 모든 회의를 검색하고 질문",
  "syncs_your_meetings_and_memory_26bab0": "회의와 메모리를 모든 Mac에서 동기화",
- "download_dmg_v1_33_2_0aa147": ".dmg 다운로드 <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "팀",
  "bring_your_team_along_7c53c9": "팀과 함께하세요",
  "share_a_recap_with_your_d18010": "요약을 팀과 공유하고 함께 이야기하세요. 댓글, @멘션, 알맞은 사람에게 배정한 액션 아이템. 공유하기 전까지는 아무것도 Mac 밖으로 나가지 않습니다.",
@@ -783,5 +782,6 @@
  "recipes_for_the_work_around_701b3c": "통화 전후 업무를 위한 레시피: 파이프라인 준비, 주간 매출 리뷰, 고객 상태 점검, 제품 피드백",
  "share_a_call_recap_with_35361e": "통화 요약을 팀과 공유해 영업에서 고객 성공으로 넘길 때도 모든 약속을 지키세요",
  "install_and_a_sample_meeting_35c2a7": "설치하면 샘플 회의와 짧은 체크리스트가 안내합니다. 캘린더를 연결하고, 첫 질문을 하고, 팀을 초대하세요. 그다음 통화에 참여하면 요약, 할 일, 새 용어가 홈에서 기다립니다.",
- "undertone_in_one_minute_terms_4c609c": "1분 만에 보는 Undertone: 통화 중 팀의 도구에서 찾아 설명하는 용어, 질문을 받았을 때 제안하는 답변, 통화 후 요약과 할 일, 고객 통화에 대한 점수와 피드백, 그리고 온보딩 가이드가 있는 팀 페이지"
+ "undertone_in_one_minute_terms_4c609c": "1분 만에 보는 Undertone: 통화 중 팀의 도구에서 찾아 설명하는 용어, 질문을 받았을 때 제안하는 답변, 통화 후 요약과 할 일, 고객 통화에 대한 점수와 피드백, 그리고 온보딩 가이드가 있는 팀 페이지",
+ "download_dmg_v1_33_3_28bd4e": ".dmg 다운로드 <span class=\"ver\">v1.33.3</span>"
 }

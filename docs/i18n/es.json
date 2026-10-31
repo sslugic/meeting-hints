@@ -699,7 +699,6 @@
  "learns_from_each_day_and_fa6dd3": "Aprende de cada día y afina las pistas de mañana",
  "full_history_search_and_ask_48f471": "Historial completo: busca y pregunta sobre cada reunión",
  "syncs_your_meetings_and_memory_26bab0": "Sincroniza tus reuniones y memoria entre tus Mac",
- "download_dmg_v1_33_2_0aa147": "Descargar .dmg <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "Equipos",
  "bring_your_team_along_7c53c9": "Trae a tu equipo",
  "share_a_recap_with_your_d18010": "Comparte un resumen con tu equipo y coméntalo: comentarios, @menciones y tareas asignadas a la persona adecuada. Nada sale de tu Mac hasta que lo compartes.",
@@ -783,5 +782,6 @@
  "recipes_for_the_work_around_701b3c": "Recetas para el trabajo alrededor de la llamada: preparar el pipeline, revisión semanal de ingresos, salud del cliente y opiniones de producto",
  "share_a_call_recap_with_35361e": "Comparte el resumen de una llamada con tu equipo para que el traspaso de ventas a éxito del cliente cumpla cada promesa",
  "install_and_a_sample_meeting_35c2a7": "Instala, y una reunión de ejemplo y una lista breve te guían: conecta tu calendario, haz tu primera pregunta, invita a tu equipo. Luego únete a una llamada y tu resumen, tus tareas y los términos nuevos te esperan en Inicio.",
- "undertone_in_one_minute_terms_4c609c": "Undertone en un minuto: términos explicados durante una llamada con las herramientas de tu equipo, una respuesta sugerida cuando te hacen una pregunta, el resumen y las tareas después, una puntuación y comentarios sobre una llamada con un cliente, y la página del equipo con una guía de incorporación"
+ "undertone_in_one_minute_terms_4c609c": "Undertone en un minuto: términos explicados durante una llamada con las herramientas de tu equipo, una respuesta sugerida cuando te hacen una pregunta, el resumen y las tareas después, una puntuación y comentarios sobre una llamada con un cliente, y la página del equipo con una guía de incorporación",
+ "download_dmg_v1_33_3_28bd4e": "Descargar .dmg <span class=\"ver\">v1.33.3</span>"
 }

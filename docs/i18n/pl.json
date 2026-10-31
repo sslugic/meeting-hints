@@ -700,7 +700,6 @@
  "learns_from_each_day_and_fa6dd3": "Uczy się z każdego dnia i dopracowuje jutrzejsze podpowiedzi",
  "full_history_search_and_ask_48f471": "Pełna historia: przeszukuj każde spotkanie i pytaj o nie",
  "syncs_your_meetings_and_memory_26bab0": "Synchronizuje spotkania i pamięć między Twoimi Macami",
- "download_dmg_v1_33_2_0aa147": "Pobierz .dmg <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "Zespoły",
  "bring_your_team_along_7c53c9": "Zaproś swój zespół",
  "share_a_recap_with_your_d18010": "Udostępnij podsumowanie zespołowi i omówcie je: komentarze, @wzmianki i zadania przypisane właściwej osobie. Nic nie opuszcza Twojego Maca, dopóki tego nie udostępnisz.",
@@ -784,5 +783,6 @@
  "recipes_for_the_work_around_701b3c": "Przepisy na pracę wokół rozmowy: przygotowanie pipeline’u, cotygodniowy przegląd przychodów, kondycja klienta i opinie o produkcie",
  "share_a_call_recap_with_35361e": "Udostępnij podsumowanie rozmowy zespołowi, by przekazanie klienta ze sprzedaży do customer success dotrzymało każdej obietnicy",
  "install_and_a_sample_meeting_35c2a7": "Zainstaluj, a przykładowe spotkanie i krótka lista Cię oprowadzą: podłącz kalendarz, zadaj pierwsze pytanie, zaproś zespół. Potem dołącz do rozmowy, a podsumowanie, zadania i nowe pojęcia czekają na stronie głównej.",
- "undertone_in_one_minute_terms_4c609c": "Undertone w minutę: terminy wyjaśniane w trakcie rozmowy na podstawie narzędzi Twojego zespołu, sugerowana odpowiedź, gdy padnie pytanie, podsumowanie i zadania po rozmowie, ocena i uwagi do rozmowy z klientem oraz strona zespołu z przewodnikiem wdrożeniowym"
+ "undertone_in_one_minute_terms_4c609c": "Undertone w minutę: terminy wyjaśniane w trakcie rozmowy na podstawie narzędzi Twojego zespołu, sugerowana odpowiedź, gdy padnie pytanie, podsumowanie i zadania po rozmowie, ocena i uwagi do rozmowy z klientem oraz strona zespołu z przewodnikiem wdrożeniowym",
+ "download_dmg_v1_33_3_28bd4e": "Pobierz .dmg <span class=\"ver\">v1.33.3</span>"
 }

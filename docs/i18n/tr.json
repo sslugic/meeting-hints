@@ -700,7 +700,6 @@
  "learns_from_each_day_and_fa6dd3": "Her günden öğrenir ve yarının ipuçlarını keskinleştirir",
  "full_history_search_and_ask_48f471": "Tam geçmiş: her toplantıda ara ve sor",
  "syncs_your_meetings_and_memory_26bab0": "Toplantılarınızı ve belleğinizi Mac'leriniz arasında eşzamanlar",
- "download_dmg_v1_33_2_0aa147": ".dmg indir <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "Ekipler",
  "bring_your_team_along_7c53c9": "Ekibini de getir",
  "share_a_recap_with_your_d18010": "Bir özeti ekibinle paylaş ve konuşun: yorumlar, @bahsetmeler ve doğru kişiye atanan aksiyonlar. Sen paylaşana kadar hiçbir şey Mac'inden çıkmaz.",
@@ -784,5 +783,6 @@
  "recipes_for_the_work_around_701b3c": "Görüşme etrafındaki işler için tarifler: pipeline hazırlığı, haftalık gelir değerlendirmesi, müşteri sağlığı ve ürün geri bildirimi",
  "share_a_call_recap_with_35361e": "Bir görüşme özetini ekibinle paylaş; satıştan müşteri başarısına devirde her söz tutulsun",
  "install_and_a_sample_meeting_35c2a7": "Yükle; örnek bir toplantı ve kısa bir liste sana yolu gösterir: takvimini bağla, ilk sorunu sor, ekibini davet et. Sonra bir görüşmeye katıl; özetin, görevlerin ve yeni terimler Ana Sayfa’da seni bekler.",
- "undertone_in_one_minute_terms_4c609c": "Bir dakikada Undertone: görüşme sırasında ekibinizin kendi araçlarından açıklanan terimler, size soru sorulduğunda önerilen bir yanıt, sonrasında özet ve görevler, bir müşteri görüşmesi için puan ve geri bildirim, ve uyum rehberli ekip sayfası"
+ "undertone_in_one_minute_terms_4c609c": "Bir dakikada Undertone: görüşme sırasında ekibinizin kendi araçlarından açıklanan terimler, size soru sorulduğunda önerilen bir yanıt, sonrasında özet ve görevler, bir müşteri görüşmesi için puan ve geri bildirim, ve uyum rehberli ekip sayfası",
+ "download_dmg_v1_33_3_28bd4e": ".dmg indir <span class=\"ver\">v1.33.3</span>"
 }

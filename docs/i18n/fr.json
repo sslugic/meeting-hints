@@ -699,7 +699,6 @@
  "learns_from_each_day_and_fa6dd3": "Apprend de chaque journée et affine les indices du lendemain",
  "full_history_search_and_ask_48f471": "Historique complet : recherchez et interrogez chaque réunion",
  "syncs_your_meetings_and_memory_26bab0": "Synchronise vos réunions et votre mémoire sur tous vos Mac",
- "download_dmg_v1_33_2_0aa147": "Télécharger le .dmg <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "Équipes",
  "bring_your_team_along_7c53c9": "Embarquez votre équipe",
  "share_a_recap_with_your_d18010": "Partagez un résumé avec votre équipe et discutez-en : commentaires, @mentions et actions assignées à la bonne personne. Rien ne quitte votre Mac tant que vous ne le partagez pas.",
@@ -783,5 +782,6 @@
  "recipes_for_the_work_around_701b3c": "Des recettes pour le travail autour de l’appel : préparation du pipeline, revue hebdomadaire du CA, santé client et retours produit",
  "share_a_call_recap_with_35361e": "Partagez le récap d’un appel avec votre équipe, pour que le passage des ventes au succès client tienne chaque promesse",
  "install_and_a_sample_meeting_35c2a7": "Installez, et une réunion d’exemple et une courte liste vous guident : connectez votre calendrier, posez votre première question, invitez votre équipe. Rejoignez ensuite un appel, et votre récap, vos tâches et les nouveaux termes vous attendent dans Accueil.",
- "undertone_in_one_minute_terms_4c609c": "Undertone en une minute : les termes expliqués pendant un appel à partir des outils de votre équipe, une réponse suggérée quand on vous pose une question, le compte rendu et les tâches ensuite, une note et des retours sur un appel client, et la page d'équipe avec un guide d'intégration"
+ "undertone_in_one_minute_terms_4c609c": "Undertone en une minute : les termes expliqués pendant un appel à partir des outils de votre équipe, une réponse suggérée quand on vous pose une question, le compte rendu et les tâches ensuite, une note et des retours sur un appel client, et la page d'équipe avec un guide d'intégration",
+ "download_dmg_v1_33_3_28bd4e": "Télécharger le .dmg <span class=\"ver\">v1.33.3</span>"
 }

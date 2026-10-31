@@ -699,7 +699,6 @@
  "learns_from_each_day_and_fa6dd3": "每天學習，讓明天的提示更準確",
  "full_history_search_and_ask_48f471": "完整歷史：搜尋並詢問每一場會議",
  "syncs_your_meetings_and_memory_26bab0": "在你的所有 Mac 間同步會議和記憶",
- "download_dmg_v1_33_2_0aa147": "下載 .dmg <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "團隊",
  "bring_your_team_along_7c53c9": "讓團隊一起加入",
  "share_a_recap_with_your_d18010": "把摘要分享給團隊並一起討論：留言、@提及，以及指派給合適的人的待辦事項。在你分享之前，什麼都不會離開你的 Mac。",
@@ -783,5 +782,6 @@
  "recipes_for_the_work_around_701b3c": "通話前後工作的配方：管道準備、每週營收回顧、客戶健康檢查和產品回饋",
  "share_a_call_recap_with_35361e": "與團隊分享通話摘要，讓從銷售到客戶成功的交接守住每個承諾",
  "install_and_a_sample_meeting_35c2a7": "安裝後，一場範例會議和一份簡短清單會帶你上手：連接行事曆、提出第一個問題、邀請團隊。接著加入通話，你的摘要、任務和新術語都會在首頁等你。",
- "undertone_in_one_minute_terms_4c609c": "一分鐘了解 Undertone：通話中根據團隊自己的工具解釋術語，被提問時給出建議回答，通話後的摘要和任務，客戶通話的評分和回饋，以及附入職指南的團隊頁面"
+ "undertone_in_one_minute_terms_4c609c": "一分鐘了解 Undertone：通話中根據團隊自己的工具解釋術語，被提問時給出建議回答，通話後的摘要和任務，客戶通話的評分和回饋，以及附入職指南的團隊頁面",
+ "download_dmg_v1_33_3_28bd4e": "下載 .dmg <span class=\"ver\">v1.33.3</span>"
 }
