@@ -699,7 +699,7 @@
  "learns_from_each_day_and_fa6dd3": "Aprende de cada día y afina las pistas de mañana",
  "full_history_search_and_ask_48f471": "Historial completo: busca y pregunta sobre cada reunión",
  "syncs_your_meetings_and_memory_26bab0": "Sincroniza tus reuniones y memoria entre tus Mac",
- "download_dmg_v1_33_1_fd33a6": "Descargar .dmg <span class=\"ver\">v1.33.1</span>",
+ "download_dmg_v1_33_2_0aa147": "Descargar .dmg <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "Equipos",
  "bring_your_team_along_7c53c9": "Trae a tu equipo",
  "share_a_recap_with_your_d18010": "Comparte un resumen con tu equipo y coméntalo: comentarios, @menciones y tareas asignadas a la persona adecuada. Nada sale de tu Mac hasta que lo compartes.",
@@ -749,7 +749,6 @@
  "usage_stats_7b9e1a": "Estadísticas de uso",
  "if_you_leave_share_anonymous_5a977c": "Si dejas activado «Compartir estadísticas de uso anónimas»: eventos generales como app abierta, reunión iniciada o terminada (su duración y la app de la llamada), resumen escrito y errores, con un ID aleatorio y la versión de la app. Nunca lo que se dijo, títulos de reuniones, nombres, términos del glosario ni claves. Desactívalo en la configuración inicial o en Ajustes.",
  "to_check_what_leaves_your_589ed3": "Para comprobar qué sale de tu Mac, observa el tráfico de Undertone con Little Snitch, LuLu o Proxyman durante una llamada. Solo verás conexiones a la IA que elegiste, a las herramientas que conectaste y, si las dejaste activadas, a los recuentos anónimos. Tu audio nunca sale de tu Mac; solo el texto va a tu IA.",
- "undertone_in_one_minute_terms_ce7653": "Undertone en un minuto: términos explicados durante una llamada con las herramientas de tu equipo, una respuesta sugerida cuando te hacen una pregunta, el resumen y las tareas después, y la página del equipo con una guía de incorporación",
  "sample_names_companies_and_tickets_766664": "Ejemplo. Los nombres, empresas y tickets son inventados. Activa el sonido para escuchar la narración.",
  "recipes_one_click_prompts_like_c8c995": "Recetas: prompts de un clic como Resumen de mi semana, Preparar el pipeline o Coach personal. Guarda los tuyos y compártelos con tu equipo.",
  "team_analytics_for_admins_meetings_07f2b7": "Analíticas del equipo para administradores: reuniones por semana, resúmenes compartidos y quién está activo. Las cifras de reuniones son solo números y cualquiera puede desactivarlas.",
@@ -783,5 +782,6 @@
  "accounts_shows_which_customers_are_c2384c": "Cuentas muestra qué clientes están activos, enfriándose o en silencio, para que no se escape ninguna renovación",
  "recipes_for_the_work_around_701b3c": "Recetas para el trabajo alrededor de la llamada: preparar el pipeline, revisión semanal de ingresos, salud del cliente y opiniones de producto",
  "share_a_call_recap_with_35361e": "Comparte el resumen de una llamada con tu equipo para que el traspaso de ventas a éxito del cliente cumpla cada promesa",
- "install_and_a_sample_meeting_35c2a7": "Instala, y una reunión de ejemplo y una lista breve te guían: conecta tu calendario, haz tu primera pregunta, invita a tu equipo. Luego únete a una llamada y tu resumen, tus tareas y los términos nuevos te esperan en Inicio."
+ "install_and_a_sample_meeting_35c2a7": "Instala, y una reunión de ejemplo y una lista breve te guían: conecta tu calendario, haz tu primera pregunta, invita a tu equipo. Luego únete a una llamada y tu resumen, tus tareas y los términos nuevos te esperan en Inicio.",
+ "undertone_in_one_minute_terms_4c609c": "Undertone en un minuto: términos explicados durante una llamada con las herramientas de tu equipo, una respuesta sugerida cuando te hacen una pregunta, el resumen y las tareas después, una puntuación y comentarios sobre una llamada con un cliente, y la página del equipo con una guía de incorporación"
 }

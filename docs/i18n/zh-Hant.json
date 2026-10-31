@@ -699,7 +699,7 @@
  "learns_from_each_day_and_fa6dd3": "每天學習，讓明天的提示更準確",
  "full_history_search_and_ask_48f471": "完整歷史：搜尋並詢問每一場會議",
  "syncs_your_meetings_and_memory_26bab0": "在你的所有 Mac 間同步會議和記憶",
- "download_dmg_v1_33_1_fd33a6": "下載 .dmg <span class=\"ver\">v1.33.1</span>",
+ "download_dmg_v1_33_2_0aa147": "下載 .dmg <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "團隊",
  "bring_your_team_along_7c53c9": "讓團隊一起加入",
  "share_a_recap_with_your_d18010": "把摘要分享給團隊並一起討論：留言、@提及，以及指派給合適的人的待辦事項。在你分享之前，什麼都不會離開你的 Mac。",
@@ -749,7 +749,6 @@
  "usage_stats_7b9e1a": "使用統計",
  "if_you_leave_share_anonymous_5a977c": "如果你保持「分享匿名使用統計」開啟：會傳送 App 開啟、會議開始或結束（時長和通話 App）、摘要完成和錯誤等粗略事件，附帶隨機 ID 和 App 版本。絕不包含說話內容、會議標題、姓名、詞彙表詞條或金鑰。可在設定流程或設定中關閉。",
  "to_check_what_leaves_your_589ed3": "若要查看有什麼離開了你的 Mac，請在通話期間用 Little Snitch、LuLu 或 Proxyman 觀察 Undertone 的網路流量。你只會看到與你選擇的 AI、你連接的工具，以及（若保持開啟）匿名計數的連線。你的音訊絕不會離開 Mac；只有文字會傳送給你的 AI。",
- "undertone_in_one_minute_terms_ce7653": "一分鐘了解 Undertone：通話中依團隊自己的工具解釋術語，被提問時提供建議回答，通話後提供摘要與待辦事項，還有附入職指南的團隊頁面",
  "sample_names_companies_and_tickets_766664": "範例。姓名、公司與工單皆為虛構。開啟聲音即可聽到旁白。",
  "recipes_one_click_prompts_like_c8c995": "配方：一鍵執行的提示，例如「回顧我的一週」「銷售管道準備」或「給我教練建議」。儲存你自己的配方並與團隊分享。",
  "team_analytics_for_admins_meetings_07f2b7": "給管理員的團隊分析：每週會議數、共享的摘要以及誰在活躍。會議數量只是數字，任何人都能關閉。",
@@ -783,5 +782,6 @@
  "accounts_shows_which_customers_are_c2384c": "客戶頁面顯示哪些客戶活躍、漸冷或沉寂，不錯過任何續約",
  "recipes_for_the_work_around_701b3c": "通話前後工作的配方：管道準備、每週營收回顧、客戶健康檢查和產品回饋",
  "share_a_call_recap_with_35361e": "與團隊分享通話摘要，讓從銷售到客戶成功的交接守住每個承諾",
- "install_and_a_sample_meeting_35c2a7": "安裝後，一場範例會議和一份簡短清單會帶你上手：連接行事曆、提出第一個問題、邀請團隊。接著加入通話，你的摘要、任務和新術語都會在首頁等你。"
+ "install_and_a_sample_meeting_35c2a7": "安裝後，一場範例會議和一份簡短清單會帶你上手：連接行事曆、提出第一個問題、邀請團隊。接著加入通話，你的摘要、任務和新術語都會在首頁等你。",
+ "undertone_in_one_minute_terms_4c609c": "一分鐘了解 Undertone：通話中根據團隊自己的工具解釋術語，被提問時給出建議回答，通話後的摘要和任務，客戶通話的評分和回饋，以及附入職指南的團隊頁面"
 }

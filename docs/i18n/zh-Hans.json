@@ -699,7 +699,7 @@
  "learns_from_each_day_and_fa6dd3": "每天学习，让明天的提示更准确",
  "full_history_search_and_ask_48f471": "完整历史：搜索和询问每一场会议",
  "syncs_your_meetings_and_memory_26bab0": "在你的所有 Mac 间同步会议和记忆",
- "download_dmg_v1_33_1_fd33a6": "下载 .dmg <span class=\"ver\">v1.33.1</span>",
+ "download_dmg_v1_33_2_0aa147": "下载 .dmg <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "团队",
  "bring_your_team_along_7c53c9": "让团队一起来",
  "share_a_recap_with_your_d18010": "把摘要分享给团队并展开讨论：评论、@提及，以及分配给合适的人的行动项。在你分享之前，什么都不会离开你的 Mac。",
@@ -749,7 +749,6 @@
  "usage_stats_7b9e1a": "使用统计",
  "if_you_leave_share_anonymous_5a977c": "如果你保持“共享匿名使用统计”开启：会发送应用打开、会议开始或结束（时长和通话应用）、纪要生成和错误等粗略事件，附带随机 ID 和 App 版本。绝不包含说话内容、会议标题、姓名、术语表词条或密钥。可在设置向导或设置中关闭。",
  "to_check_what_leaves_your_589ed3": "要查看有什么离开了你的 Mac，请在通话期间用 Little Snitch、LuLu 或 Proxyman 观察 Undertone 的网络流量。你只会看到与你选择的 AI、你连接的工具，以及（若保持开启）匿名计数的连接。你的音频绝不会离开 Mac；只有文本会发送给你的 AI。",
- "undertone_in_one_minute_terms_ce7653": "一分钟了解 Undertone：通话中根据团队自己的工具解释术语，被提问时给出建议回答，通话后提供总结和任务，还有带入职指南的团队页面",
  "sample_names_companies_and_tickets_766664": "示例。姓名、公司和工单均为虚构。打开声音即可听到旁白。",
  "recipes_one_click_prompts_like_c8c995": "配方：一键运行的提示，如“回顾我的一周”“销售管道准备”或“给我辅导”。保存你自己的配方并与团队分享。",
  "team_analytics_for_admins_meetings_07f2b7": "面向管理员的团队分析：每周会议数、共享的纪要以及谁在活跃。会议数量只是数字，任何人都可以关闭。",
@@ -783,5 +782,6 @@
  "accounts_shows_which_customers_are_c2384c": "客户页面显示哪些客户活跃、渐冷或沉寂，不错过任何续约",
  "recipes_for_the_work_around_701b3c": "通话前后工作的配方：管道准备、每周营收回顾、客户健康检查和产品反馈",
  "share_a_call_recap_with_35361e": "与团队共享通话摘要，让从销售到客户成功的交接守住每个承诺",
- "install_and_a_sample_meeting_35c2a7": "安装后，一场示例会议和一份简短清单会带你上手：连接日历、提出第一个问题、邀请团队。然后加入通话，你的摘要、任务和新术语都会在主页等你。"
+ "install_and_a_sample_meeting_35c2a7": "安装后，一场示例会议和一份简短清单会带你上手：连接日历、提出第一个问题、邀请团队。然后加入通话，你的摘要、任务和新术语都会在主页等你。",
+ "undertone_in_one_minute_terms_4c609c": "一分钟了解 Undertone：通话中根据团队自己的工具解释术语，被提问时给出建议回答，通话后的总结和任务，客户通话的评分和反馈，以及带入职指南的团队页面"
 }

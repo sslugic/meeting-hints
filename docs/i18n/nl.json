@@ -700,7 +700,7 @@
  "learns_from_each_day_and_fa6dd3": "Leert van elke dag en scherpt de hints van morgen aan",
  "full_history_search_and_ask_48f471": "Volledige geschiedenis: doorzoek en bevraag elke vergadering",
  "syncs_your_meetings_and_memory_26bab0": "Synchroniseert je vergaderingen en geheugen op al je Macs",
- "download_dmg_v1_33_1_fd33a6": "Download .dmg <span class=\"ver\">v1.33.1</span>",
+ "download_dmg_v1_33_2_0aa147": "Download .dmg <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "Teams",
  "bring_your_team_along_7c53c9": "Neem je team mee",
  "share_a_recap_with_your_d18010": "Deel een samenvatting met je team en bespreek hem: reacties, @vermeldingen en actiepunten voor de juiste persoon. Niets verlaat je Mac tot je het deelt.",
@@ -750,7 +750,6 @@
  "usage_stats_7b9e1a": "Gebruiksstatistieken",
  "if_you_leave_share_anonymous_5a977c": "Als je ‘Anonieme gebruiksstatistieken delen’ aan laat: grove gebeurtenissen zoals app geopend, meeting gestart of beëindigd (de duur en de belapp), samenvatting geschreven en fouten, met een willekeurige ID en de appversie. Nooit wat er is gezegd, meetingtitels, namen, woordenlijsttermen of sleutels. Zet het uit bij de installatie of in Instellingen.",
  "to_check_what_leaves_your_589ed3": "Om te controleren wat je Mac verlaat, bekijk je tijdens een gesprek het verkeer van Undertone met Little Snitch, LuLu of Proxyman. Je ziet alleen verbindingen met de AI die je koos, de tools die je koppelde en, als je ze aan liet, de anonieme tellingen. Je audio verlaat je Mac nooit; alleen tekst gaat naar je AI.",
- "undertone_in_one_minute_terms_ce7653": "Undertone in één minuut: termen uitgelegd tijdens een gesprek vanuit de tools van je team, een voorgesteld antwoord als je iets gevraagd wordt, daarna de samenvatting en taken, en de teampagina met een onboardinggids",
  "sample_names_companies_and_tickets_766664": "Voorbeeld. Namen, bedrijven en tickets zijn verzonnen. Zet het geluid aan om de voice-over te horen.",
  "recipes_one_click_prompts_like_c8c995": "Recepten: prompts met één klik, zoals Mijn week samenvatten, Pipeline voorbereiden of Coach me. Bewaar je eigen recepten en deel ze met je team.",
  "team_analytics_for_admins_meetings_07f2b7": "Teamstatistieken voor beheerders: vergaderingen per week, gedeelde samenvattingen en wie actief is. Vergaderaantallen zijn alleen getallen, en iedereen kan ze uitzetten.",
@@ -784,5 +783,6 @@
  "accounts_shows_which_customers_are_c2384c": "Accounts laat zien welke klanten actief zijn, afkoelen of stil zijn geworden, zodat geen verlenging erdoor glipt",
  "recipes_for_the_work_around_701b3c": "Recepten voor het werk rond het gesprek: pipeline voorbereiden, wekelijkse omzetreview, klantgezondheid en productfeedback",
  "share_a_call_recap_with_35361e": "Deel een gespreksverslag met je team, zodat de overdracht van sales naar customer success elke belofte nakomt",
- "install_and_a_sample_meeting_35c2a7": "Installeer, en een voorbeeldmeeting en een korte checklist wijzen je de weg: koppel je agenda, stel je eerste vraag, nodig je team uit. Neem daarna deel aan een gesprek, en je samenvatting, taken en nieuwe termen staan klaar op Home."
+ "install_and_a_sample_meeting_35c2a7": "Installeer, en een voorbeeldmeeting en een korte checklist wijzen je de weg: koppel je agenda, stel je eerste vraag, nodig je team uit. Neem daarna deel aan een gesprek, en je samenvatting, taken en nieuwe termen staan klaar op Home.",
+ "undertone_in_one_minute_terms_4c609c": "Undertone in één minuut: termen uitgelegd tijdens een gesprek vanuit de tools van je team, een voorgesteld antwoord als je een vraag krijgt, daarna de samenvatting en je taken, een score en feedback op een klantgesprek, en de teampagina met een onboardinggids"
 }

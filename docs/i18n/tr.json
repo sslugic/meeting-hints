@@ -700,7 +700,7 @@
  "learns_from_each_day_and_fa6dd3": "Her günden öğrenir ve yarının ipuçlarını keskinleştirir",
  "full_history_search_and_ask_48f471": "Tam geçmiş: her toplantıda ara ve sor",
  "syncs_your_meetings_and_memory_26bab0": "Toplantılarınızı ve belleğinizi Mac'leriniz arasında eşzamanlar",
- "download_dmg_v1_33_1_fd33a6": ".dmg indir <span class=\"ver\">v1.33.1</span>",
+ "download_dmg_v1_33_2_0aa147": ".dmg indir <span class=\"ver\">v1.33.2</span>",
  "teams_cbfd44": "Ekipler",
  "bring_your_team_along_7c53c9": "Ekibini de getir",
  "share_a_recap_with_your_d18010": "Bir özeti ekibinle paylaş ve konuşun: yorumlar, @bahsetmeler ve doğru kişiye atanan aksiyonlar. Sen paylaşana kadar hiçbir şey Mac'inden çıkmaz.",
@@ -750,7 +750,6 @@
  "usage_stats_7b9e1a": "Kullanım istatistikleri",
  "if_you_leave_share_anonymous_5a977c": "“Anonim kullanım istatistiklerini paylaş” açık kalırsa: uygulama açıldı, toplantı başladı veya bitti (süresi ve arama uygulaması), özet yazıldı ve hatalar gibi genel olaylar; rastgele bir kimlik ve uygulama sürümü ile. Konuşulanlar, toplantı başlıkları, isimler, sözlük terimleri veya anahtarlar asla gönderilmez. Kurulumda veya Ayarlar’da kapatabilirsiniz.",
  "to_check_what_leaves_your_589ed3": "Mac’inizden nelerin çıktığını kontrol etmek için bir arama sırasında Undertone’un trafiğini Little Snitch, LuLu veya Proxyman ile izleyin. Yalnızca seçtiğiniz yapay zekâya, bağladığınız araçlara ve açık bıraktıysanız anonim sayımlara bağlantılar göreceksiniz. Sesiniz Mac’inizden asla çıkmaz; yapay zekânıza yalnızca metin gider.",
- "undertone_in_one_minute_terms_ce7653": "Bir dakikada Undertone: ekibinizin kendi araçlarından görüşme sırasında açıklanan terimler, size soru sorulduğunda önerilen yanıt, sonrasında özet ve görevler, ve işe alışma rehberiyle ekip sayfası",
  "sample_names_companies_and_tickets_766664": "Örnek. İsimler, şirketler ve kayıtlar uydurmadır. Anlatımı duymak için sesi açın.",
  "recipes_one_click_prompts_like_c8c995": "Tarifler: Haftamı özetle, Satış hattı hazırlığı veya Bana koçluk yap gibi tek tıklık istemler. Kendi tariflerini kaydet ve ekibinle paylaş.",
  "team_analytics_for_admins_meetings_07f2b7": "Yöneticiler için ekip analizi: haftalık toplantılar, paylaşılan özetler ve kimin aktif olduğu. Toplantı sayıları yalnızca sayıdır ve herkes kapatabilir.",
@@ -784,5 +783,6 @@
  "accounts_shows_which_customers_are_c2384c": "Hesaplar hangi müşterilerin aktif olduğunu, soğuduğunu ya da sessizleştiğini gösterir; hiçbir yenileme gözden kaçmaz",
  "recipes_for_the_work_around_701b3c": "Görüşme etrafındaki işler için tarifler: pipeline hazırlığı, haftalık gelir değerlendirmesi, müşteri sağlığı ve ürün geri bildirimi",
  "share_a_call_recap_with_35361e": "Bir görüşme özetini ekibinle paylaş; satıştan müşteri başarısına devirde her söz tutulsun",
- "install_and_a_sample_meeting_35c2a7": "Yükle; örnek bir toplantı ve kısa bir liste sana yolu gösterir: takvimini bağla, ilk sorunu sor, ekibini davet et. Sonra bir görüşmeye katıl; özetin, görevlerin ve yeni terimler Ana Sayfa’da seni bekler."
+ "install_and_a_sample_meeting_35c2a7": "Yükle; örnek bir toplantı ve kısa bir liste sana yolu gösterir: takvimini bağla, ilk sorunu sor, ekibini davet et. Sonra bir görüşmeye katıl; özetin, görevlerin ve yeni terimler Ana Sayfa’da seni bekler.",
+ "undertone_in_one_minute_terms_4c609c": "Bir dakikada Undertone: görüşme sırasında ekibinizin kendi araçlarından açıklanan terimler, size soru sorulduğunda önerilen bir yanıt, sonrasında özet ve görevler, bir müşteri görüşmesi için puan ve geri bildirim, ve uyum rehberli ekip sayfası"
 }
